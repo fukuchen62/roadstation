@@ -4,7 +4,7 @@
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
-{{-- @section('title', 'トップページ') --}}
+@section('title', 'トップページ')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
@@ -13,7 +13,7 @@
 
 @section('key_visual')
     <p class="catchcopy koresae">これさえ見れば徳島で</p>
-    <p class="catchcopy sakanaga">魚が釣れるんじょ</p>
+    <p class="catchcopy sakanaga">道の駅を楽しめる</p>
 @endsection
 
 {{-- メイン --}}

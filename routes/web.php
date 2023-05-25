@@ -22,4 +22,4 @@ Route::get('/', function () {
  */
 Route::get('/', function () {
     return view('fronts/index');
-});
+})->name('home');
