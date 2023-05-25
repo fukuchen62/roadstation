@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * TOP Page
+ */
+Route::get('/', function () {
+    return view('fronts/index');
+});
