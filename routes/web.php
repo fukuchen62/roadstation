@@ -22,11 +22,7 @@ Route::get('/welcome', function () {
  */
 Route::get('/', function () {
     return view('fronts/index');
-})->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+})->name('top');
 
 Auth::routes();
 
