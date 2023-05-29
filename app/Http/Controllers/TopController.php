@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class TopController extends Controller
 {
-    //
+    public function indexView(Request $request)
+    {
+    }
 }
