@@ -25,6 +25,8 @@ Route::get('/', function () {
     return view('fronts/index');
 })->name('top');
 
+// Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('top');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

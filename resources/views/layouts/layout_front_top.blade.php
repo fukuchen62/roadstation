@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
 
     <!-- 共通のCSSファイル -->
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}"> --}}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/fstyle.css') }}">
 
     {{-- 独自のCSSファイルを読み込む --}}
     @yield('pageCss')
