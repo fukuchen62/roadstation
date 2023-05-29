@@ -28,3 +28,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/**
+ * 管理画面TOPへのルート情報
+ */
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'adminTop'])->name('admintop');
+
+/**
+ * 管理画面ログアウト
+ * 福島
+ */
+Route::get(
+    'admin/logout',
+    [App\Http\Controllers\AdminController::class, 'logout']
+)->name('logout');

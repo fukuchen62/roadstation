@@ -13,7 +13,6 @@
 
                 <a class="logout" href="{{ route('logout') }}">ログアウト</a>
             @else
-                {{-- header('{{ route('logout') }}'); --}}
                 return redirect()->route('admintop');
             @endif
 

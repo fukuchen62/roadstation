@@ -1,6 +1,6 @@
 @extends('layouts.layout_back')
 
-@section('title', '釣徳コンテンツ管理システム')
+@section('title', '道の駅管理システム')
 
 @section('subtitle', 'ダッシュボード')
 
@@ -27,7 +27,7 @@
                 <th>編集</th>
             </tr>
 
-            @foreach ($news_list as $key => $news)
+            {{-- @foreach ($news_list as $key => $news)
                 <tr>
                     <td>{{ $news->id }}</td>
                     <td>{{ $news->name }}</td>
@@ -36,7 +36,7 @@
                     <td class="dt">{{ $news->created_at }}</td>
                     <td class="edit"><a href="{{ route('newsupdate') }}?id={{ $news->id }}">編集</a></td>
                 </tr>
-            @endforeach
+            @endforeach --}}
         </table>
     </section>
 
@@ -53,7 +53,7 @@
                 <th>入門知識</th>
                 <th>周辺施設</th>
             </tr>
-            <tr>
+            {{-- <tr>
                 <td>{{ $counts['news_count'] }}</td>
                 <td>{{ $counts['fish_count'] }}</td>
                 <td>{{ $counts['spot_count'] }}</td>
@@ -62,7 +62,7 @@
                 <td>{{ $counts['excape_count'] }}</td>
                 <td>{{ $counts['knowledge_count'] }}</td>
                 <td>{{ $counts['facility_count'] }}</td>
-            </tr>
+            </tr> --}}
         </table>
     </section>
 @endsection

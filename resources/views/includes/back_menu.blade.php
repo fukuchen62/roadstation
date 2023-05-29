@@ -1,12 +1,13 @@
 <section class="g-nav">
     <ul class="menu-box">
         <li>メニュー</li>
-        <li><a href="{{ route('admintop') }}">Dashboard</a></li>
-        <li><a href="{{ route('fishshow') }}">魚</a></li>
-        <li><a href="{{ route('spotsshow') }}">スポット</a></li>
-        <li><a href="{{ route('shopsshow') }}">釣具屋</a></li>
-        <li><a href="{{ route('plansshow') }}">体験プラン</a></li>
-        <li><a href="{{ route('newsshow') }}">ニュース</a></li>
-        <li><a href="{{ route('knowledgeshow') }}">入門知識</a></li>
+        <li><a href="{{ route('admintop') }}">ダッシュボード</a></li>
+        <li><a href="{{ route('admintop') }}">道の駅登録</a></li>
+        <li><a href="{{ route('admintop') }}">特産品マスタ</a></li>
+        <li><a href="{{ route('admintop') }}">特産品登録</a></li>
+        <li><a href="{{ route('admintop') }}">アクティビティ</a></li>
+        <li><a href="{{ route('admintop') }}">ブログ記事</a></li>
+        <li><a href="{{ route('admintop') }}">ニュース</a></li>
+
     </ul>
 </section>
