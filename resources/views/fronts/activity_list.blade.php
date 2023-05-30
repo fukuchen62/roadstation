@@ -1,6 +1,6 @@
 @extends('layouts.layout_front')
 
-@section('title', '新着情報詳細ページ')
+@section('title', '体験一覧')
 
 @section('content')
 
