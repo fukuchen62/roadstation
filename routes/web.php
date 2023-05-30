@@ -120,7 +120,21 @@ Route::get(
 
 // *********** ブログテーブル ***********
 
+/**
+ *ブログ一覧を表示する
+ */
+Route::get(
+    'blog',
+    'App\Http\Controllers\BlogController@blogListSearch'
+)->name('bloglist');
 
+/**
+ *ブログ一覧を表示する
+ */
+Route::get(
+    'blog-detail',
+    'App\Http\Controllers\BlogController@blogMainView'
+)->name('blog');
 
 
 
