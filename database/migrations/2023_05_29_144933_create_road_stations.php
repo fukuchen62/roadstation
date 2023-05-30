@@ -52,7 +52,7 @@ return new class extends Migration
             // $table->timestamp('created_at');
             // $table->timestamp('updated_at');
             $table->timestamps();
-            // $table->timestamp('deleted_at');
+            $table->softDeletes('deleted_at');
         });
     }
 
