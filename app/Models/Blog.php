@@ -12,7 +12,11 @@ class Blog extends Model
     /**
      * カテゴリーとのリレーション
      */
-    public function blogCategory(){
-        return $this->hasOne(BlogCategory::class);
-    }
+    // public function blogCategory(){
+    //     return $this->hasOne(BlogCategory::class);
+    // }
+    public function blogCategory()
+{
+    return $this->hasOne('App\Models\BlogCategory');
+}
 }
