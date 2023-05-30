@@ -10,26 +10,68 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/station_detail.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>ロゴ</h1>
-        <nav></nav>
+        <!-- g-nav mobile -->
+        <div id="wrapper">
+            <div class="btn-gnavi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="global-navi">
+                <div class="hamburger-menu-list">
+                    <ul class="menu">
+                        <li><a href="../html/station_list.html">道の駅一覧
+                            </a></li>
+                        <li><a href="../html/station_area.html">エリア検索</a></li>
+                        <li><a href="../html/station_detail.html">詳細検索</a></li>
+                        <li><a href="../html/goods_list.html">特産品</a></li>
+                        <li><a href="../html/activity_list.html">体験</a></li>
+                        <li><a href="../html/blog_list.html">行ってみたんよ</a></li>
+                        <li><a href="../html/like.html">お気に入り</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- g-nav pc -->
+        <div class="nav-pc">
+            <h1><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></h1>
+
+            <ul>
+                <li><a href="../html/station_list.html">道の駅一覧
+                    </a></li>
+                <li><a href="../html/station_area.html">エリア検索</a></li>
+                <li><a href="../html/station_detail.html">詳細検索</a></li>
+                <li><a href="../html/goods_list.html">特産品</a></li>
+                <li><a href="../html/activity_list.html">体験</a></li>
+                <li><a href="../html/blog_list.html">行ってみたんよ</a></li>
+                <li><a href="../html/like.html">お気に入り</a></li>
+            </ul>
+        </div>
     </header>
-    <main>
-        <figure><img src="https://placehold.jp/1440x200.png" alt="お好きな道の駅を検索してください。"></figure>
-        <section>
-            <h2>詳細検索</h2>
-            <!-- value=""の設定を後でする。road_stationsのテーブル名と一緒？  -->
-            <form action="station_detail.blade.php" method="post">
-                <p>地域<br>
+
+    <div class="wrapper">
+        <main>
+            <figure><img src="https://placehold.jp/1440x200.png" alt="お好きな道の駅を検索してください。"></figure>
+            <section>
+                <h2>詳細検索</h2>
+                <!-- value=""の設定を後でする。road_stationsのテーブル名と一緒？  -->
+                <form action="station_detail.blade.php" method="post">
+                    <p>地域<br>
                     <label><input id="area_id" class="" type="checkbox" name="area" value="1">県東部</label>
                     <label><input id="area_id" class="" type="checkbox" name="area" value="2">県西部</label>
                     <label><input id="area_id" class="" type="checkbox" name="area" value="3">県南部</label>
                     <label><input id="area_id" class="" type="checkbox" name="area">全域</label>
                 </p>
 
-                <p>設備<br>
+                    <p>設備<br>
                     <label><input id="guide_icon" type="checkbox" name="detail" value="">観光案内</label>
                     <label><input id="shop_icon" type="checkbox" name="detail">ショップ</label>
                     <label><input id="lightmeal_icon" type="checkbox" name="detail">軽食・喫茶</label>
@@ -47,119 +89,131 @@
                     <label><input id="atm_icon" type="checkbox" name="detail">ATM</label>
                     <label><input id="museum_icon" type="checkbox" name="detail">美術館・博物館</label>
                 </p>
-                <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
-                <p><input class="btn-reset" type="reset" value="リセット">
+                    <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
+                    <p><input class="btn-reset" type="reset" value="リセット">
                     <input class="btn-search" type="submit" value="検索"></p>
-            </form>
+                </form>
 
-            <input id="gs" type="checkbox" name="facility" value="8">
-            <label for="gs">ガソリンスタンド</label>
-
-
-            <!-- 検索エリア -->
-            <!-- ボタン -->
-            <h3>検索結果（〇〇件）</h3>
+                <input id="gs" type="checkbox" name="facility" value="8">
+                <label for="gs">ガソリンスタンド</label>
 
 
-            <section>
-                <h4>道の駅〇〇〇〇〇〇〇</h4>
-                <dl>
-                    <dt>営業時間：</dt>
-                    <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
-                    <dt>〒777-0000</dt>
-                    <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
-                    <dt>設備：</dt>
-                    <dd>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <BR>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                    </dd>
-                </dl>
-                <a href="#">More</a>
+                <!-- 検索エリア -->
+                <!-- ボタン -->
+                <h3>検索結果（〇〇件）</h3>
+
+
+                <section>
+                    <h4>道の駅〇〇〇〇〇〇〇</h4>
+                    <dl>
+                        <dt>営業時間：</dt>
+                        <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
+                        <dt>〒777-0000</dt>
+                        <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
+                        <dt>設備：</dt>
+                        <dd>
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <BR>
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                        </dd>
+                    </dl>
+                    <a href="#">More</a>
+                </section>
+
+
+                <section>
+                    <h4>道の駅〇〇〇〇〇〇〇</h4>
+                    <dl>
+                        <dt>営業時間：</dt>
+                        <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
+                        <dt>〒777-0000</dt>
+                        <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
+                        <dt>設備：</dt>
+                        <dd>
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <BR>
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                        </dd>
+                    </dl>
+                    <a href="#">More</a>
+                </section>
+
+                <section>
+                    <h4>道の駅〇〇〇〇〇〇〇</h4>
+                    <dl>
+                        <dt>営業時間：</dt>
+                        <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
+                        <dt>〒777-0000</dt>
+                        <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
+                        <dt>設備：</dt>
+                        <dd>
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <BR>
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                            <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                        </dd>
+                    </dl>
+                    <a href="#">More</a>
+                </section>
+
+                <!-- あと３つ続く。修正し終わったら足す。 -->
             </section>
 
+        </main>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="../html/station_list.html">道の駅一覧</a></li>
+            <li><a href="../html/station_area.html">エリア検索</a></li>
+            <li><a href="../html/station_detail.html">詳細検索</a></li>
+            <li><a href="../html/goods_list.html">特産品</a></li>
+            <li><a href="../html/activity_list.html">体験</a></li>
+            <li><a href="../html/blog_list.html">行ってみたんよ</a></li>
+            <li><a href="../html/like.html">お気に入り</a></li>
+        </ul>
+    </footer>
 
-            <section>
-                <h4>道の駅〇〇〇〇〇〇〇</h4>
-                <dl>
-                    <dt>営業時間：</dt>
-                    <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
-                    <dt>〒777-0000</dt>
-                    <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
-                    <dt>設備：</dt>
-                    <dd>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <BR>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                    </dd>
-                </dl>
-                <a href="#">More</a>
-            </section>
-
-            <section>
-                <h4>道の駅〇〇〇〇〇〇〇</h4>
-                <dl>
-                    <dt>営業時間：</dt>
-                    <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
-                    <dt>〒777-0000</dt>
-                    <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
-                    <dt>設備：</dt>
-                    <dd>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <BR>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                    </dd>
-                </dl>
-                <a href="#">More</a>
-            </section>
-
-            <!-- あと３つ続く。修正し終わったら足す。 -->
-        </section>
-
-    </main>
-
-    <footer>フッター</footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
