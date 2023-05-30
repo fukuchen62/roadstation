@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+
+    /**
+     * カテゴリーとのリレーション
+     */
+    public function blogCategory(){
+        return $this->hasOne(BlogCategory::class);
+    }
 }
