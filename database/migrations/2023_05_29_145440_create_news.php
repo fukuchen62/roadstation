@@ -15,17 +15,17 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('category_id', 20);
-            $table->string('title', 32);
-            $table->string('station_list', 20);
-            $table->text('discription');
-            $table->string('picture', 200);
-            $table->string('remarks_column', 500);
-            $table->boolean('is_show');
-            $table->integer('user_id');
+            $table->string('category_id', 20)->nullable(false);
+            $table->string('title', 32)->nullable(false);
+            $table->string('station_list', 20)->nullable(true);
+            $table->text('discription')->nullable(true);
+            $table->string('picture', 200)->nullable(true);
+            $table->string('remarks_column', 500)->nullable(true);
+            $table->boolean('is_show')->nullable(false)->default(true);
+            $table->integer('user_id')->nullable(true);
             // $table->timestamp('created_at');
             $table->timestamps();
-            $table->softDeletes('deleted_at');
+            $table->softDeletes('deleted_at')->nullable(true);
 
             // $table->timestamp('deleted_at');
 

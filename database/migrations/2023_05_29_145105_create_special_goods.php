@@ -14,21 +14,21 @@ return new class extends Migration
     {
         Schema::create('special_goods', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('category_id');
-            $table->string('goods_name', 50);
-            $table->string('month', 30);
-            $table->string('season', 50);
-            $table->text('discription', 300);
-            $table->string('station_list', 20);
-            $table->string('picture', 200);
-            $table->string('price', 50);
-            $table->string('usage', 500);
-            $table->string('memo', 500);
-            $table->boolean('is_show');
+            $table->integer('category_id')->nullable(false);
+            $table->string('goods_name', 50)->nullable(false);
+            $table->string('month', 30)->nullable(true);
+            $table->string('season', 50)->nullable(true);
+            $table->text('discription', 300)->nullable(true);
+            $table->string('station_list', 20)->nullable(true);
+            $table->string('picture', 200)->nullable(true);
+            $table->string('price', 50)->nullable(true);
+            $table->string('usage', 500)->nullable(true);
+            $table->string('memo', 500)->nullable(true);
+            $table->boolean('is_show')->nullable(false)->default(true);
             // $table->timestamp('created_at');
             // $table->timestamp('updated_at');
             $table->timestamps();
-            $table->softDeletes('deleted_at');
+            $table->softDeletes('deleted_at')->nullable(true);
         });
     }
 

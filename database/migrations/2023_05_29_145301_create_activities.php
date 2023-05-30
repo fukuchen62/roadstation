@@ -15,22 +15,22 @@ return new class extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('activity_name', 50);
-            $table->string('discription', 300);
-            $table->string('business_hours', 200);
-            $table->string('price', 100);
-            $table->string('conditions', 500);
-            $table->integer('roadstation_id');
-            $table->integer('blog_id');
-            $table->string('picture1', 200);
-            $table->string('picture2', 200);
-            $table->string('picture3', 200);
-            $table->string('memo', 500);
-            $table->boolean('is_show');
+            $table->string('activity_name', 50)->nullable(false);
+            $table->string('discription', 300)->nullable(true);
+            $table->string('business_hours', 200)->nullable(true);
+            $table->string('price', 100)->nullable(true);
+            $table->string('conditions', 500)->nullable(true);
+            $table->integer('roadstation_id')->nullable(true);
+            $table->integer('blog_id')->nullable(true);
+            $table->string('picture1', 200)->nullable(true);
+            $table->string('picture2', 200)->nullable(true);
+            $table->string('picture3', 200)->nullable(true);
+            $table->string('memo', 500)->nullable(true);
+            $table->boolean('is_show')->nullable(false)->default(true);
 
             // $table->timestamp('created_at');
             $table->timestamps();
-            $table->softDeletes('deleted_at');
+            $table->softDeletes('deleted_at')->nullable(true);
         });
     }
 
