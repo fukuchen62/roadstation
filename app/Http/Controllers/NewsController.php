@@ -13,12 +13,14 @@ class NewsController extends Controller
 
     public function newsMainView(Request $request)
     {
-        $items = News::all();
+        // $items = News::all();
 
-        $data = [
-            'news' => $items,
-        ];
+        $road = DB::table('road_stations')->get();
 
-        return view('fronts.news', $data);
+        // $data = [
+        //     'news' => $items,
+        // ];
+
+        return view('fronts.news', $road);
     }
 }

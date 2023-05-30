@@ -11,14 +11,12 @@ class RoadstationController extends Controller
 {
     public function stationMainView(Request $request)
     {
-        // $items = News::all();
+        $items = RoadStation::where('id', 4)->get();
 
-        // $data = [
-        //     'boards' => $items,
-        // ];
+        $data = [
+            'road_stations' => $items,
+        ];
 
-        // return view('board.index', $data);
-
-        return view('fronts.station_detail');
+        return view('fronts.station_detail', $data);
     }
 }
