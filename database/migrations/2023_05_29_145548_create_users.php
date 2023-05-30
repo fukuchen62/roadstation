@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name', 40);
             $table->string('nickname', 40);
             $table->string('email', 250);
-            // $table->timestamp('email_verified_at');
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password', 100);
             $table->integer('authority');
             $table->string('remember_token', 100);
@@ -26,6 +26,8 @@ return new class extends Migration
             // $table->timestamp('created_at');
             // $table->timestamp('updated_at');
             $table->timestamps();
+            $table->softDeletes('deleted_at');
+
             // $table->timestamp('deleted_at');
         });
     }

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('road_stations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('stations_name', 20);
+            $table->string('stations_name', 50);
+            $table->string('ruby', 100);
             $table->integer('area_id');
             $table->string('catchphrase', 200);
             $table->text('review');
