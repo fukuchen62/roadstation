@@ -52,12 +52,13 @@ Route::get(
 
 // ---------------------- frontPage -----------------------
 
+
 /**
  *道の駅詳細ページを表示する
  */
 Route::get(
     'station-detail',
-    'App\Http\Controllers\RoadstationController@index'
+    'App\Http\Controllers\RoadstationController@stationMainView'
 )->name('roadstation');
 
 
@@ -66,13 +67,23 @@ Route::get(
  */
 Route::get(
     'specialty-goods',
-    'App\Http\Controllers\BoardController@index'
+    'App\Http\Controllers\BoardController@goodsMainView'
 )->name('goods');
+
 
 /**
  *体験特集一覧を表示する
  */
 Route::get(
     'activities',
-    'App\Http\Controllers\ActivityController@index'
+    'App\Http\Controllers\ActivityController@activityMainView'
 )->name('activity');
+
+
+/**
+ *新着情報一覧を表示する
+ */
+Route::get(
+    'news',
+    'App\Http\Controllers\NewsController@newsMainView'
+)->name('news');
