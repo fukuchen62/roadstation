@@ -8,7 +8,7 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-
+    <link rel="stylesheet" href="{{ asset('assets/css/goodsMainView.css')  }}">
 @endsection
 
 @section('key_visual')
@@ -20,7 +20,7 @@
 
     <section class="titlesection">
         <div class="titlesection__box">
-            <h1 class="pagetitle">ページタイトル</h1>
+            <h1 class="pagetitle">特産品のページ</h1>
         </div>
     </section>
 
@@ -29,15 +29,15 @@
         <h2 class="section__box--title ">第一セクション</h2>
 
         <div>
-            <h3>サブタイトル</h3>
+            <h3 style="color: red">コンテンツスペース</h3>
             <div>
                 <tbody>
             @foreach ($special_goods as $goods)
                 <tr>
-                    <td>{{ $special_goods->category_id }}</td>
-                    <td>{{ $special_goods->title }}</td>
-                    <td>{{ $special_goods->station_list }}</td>
-                    <td>{{ $special_goods->discription }}</td>
+                    <td>{{ $goods->category_id }}</td>
+                    <td>{{ $goods->title }}</td>
+                    <td>{{ $goods->station_list }}</td>
+                    <td>{{ $goods->discription }}</td>
                 </tr>
             @endforeach
         </tbody>
