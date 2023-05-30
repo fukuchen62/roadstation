@@ -77,7 +77,7 @@ Route::get(
 Route::get(
     'detail-search',
     'App\Http\Controllers\RoadstationController@stationDetailSearch'
-)->name('areasearch');
+)->name('ditailsearch');
 
 /**
  *道の駅詳細ページを表示する
