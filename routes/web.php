@@ -58,6 +58,7 @@ Route::get(
  */
 Route::get(
     'station-detail',
+    // こっちをアドレスに入れるんだよ。
     'App\Http\Controllers\RoadstationController@stationMainView'
 )->name('roadstation');
 
