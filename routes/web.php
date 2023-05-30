@@ -53,6 +53,32 @@ Route::get(
 // ---------------------- frontPage -----------------------
 
 
+// *********** 道の駅テーブル ***********
+
+/**
+ *道の駅一覧ページを表示する
+ */
+Route::get(
+    'station-list',
+    'App\Http\Controllers\RoadstationController@stationListView'
+)->name('stationlist');
+
+/**
+ *道の駅エリア検索ページを表示する
+ */
+Route::get(
+    'area-search',
+    'App\Http\Controllers\RoadstationController@stationAreaSearch'
+)->name('areasearch');
+
+/**
+ *道の駅詳細検索ページを表示する
+ */
+Route::get(
+    'detail-search',
+    'App\Http\Controllers\RoadstationController@stationDetailSearch'
+)->name('ditailsearch');
+
 /**
  *道の駅詳細ページを表示する
  */
@@ -63,6 +89,10 @@ Route::get(
 )->name('roadstation');
 
 
+
+
+// *********** 特産品系テーブル ***********
+
 /**
  *特産品特集一覧を表示する
  */
@@ -72,6 +102,11 @@ Route::get(
 )->name('goods');
 
 
+
+
+
+// *********** 体験テーブル ***********
+
 /**
  *体験特集一覧を表示する
  */
@@ -79,6 +114,32 @@ Route::get(
     'activities',
     'App\Http\Controllers\ActivityController@activityMainView'
 )->name('activity');
+
+
+
+
+// *********** ブログテーブル ***********
+
+/**
+ *ブログ一覧を表示する
+ */
+Route::get(
+    'blog',
+    'App\Http\Controllers\BlogController@blogListSearch'
+)->name('bloglist');
+
+/**
+ *ブログ詳細ページを表示する
+ */
+Route::get(
+    'blog-detail',
+    'App\Http\Controllers\BlogController@blogMainView'
+)->name('blog');
+
+
+
+
+// *********** 新着情報テーブル ***********
 
 
 /**
