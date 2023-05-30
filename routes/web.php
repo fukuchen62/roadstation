@@ -44,3 +44,35 @@ Route::get(
     'admin/logout',
     [App\Http\Controllers\AdminController::class, 'logout']
 )->name('logout');
+
+
+
+
+
+
+// ---------------------- frontPage -----------------------
+
+/**
+ *道の駅詳細ページを表示する
+ */
+Route::get(
+    'station-detail',
+    'App\Http\Controllers\RoadstationController@index'
+)->name('roadstation');
+
+
+/**
+ *特産品特集一覧を表示する
+ */
+Route::get(
+    'specialty-goods',
+    'App\Http\Controllers\BoardController@index'
+)->name('goods');
+
+/**
+ *体験特集一覧を表示する
+ */
+Route::get(
+    'activities',
+    'App\Http\Controllers\ActivityController@index'
+)->name('activity');
