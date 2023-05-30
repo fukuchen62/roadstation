@@ -27,7 +27,6 @@ return new class extends Migration
             $table->boolean('is_show');
             $table->boolean('is_highlight');
             $table->boolean('user_id');
-            // $table->timestamp('created_at');
             // $table->timestamp('updated_at');
             $table->timestamps();
             $table->softDeletes('deleted_at');

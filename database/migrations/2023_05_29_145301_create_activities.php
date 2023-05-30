@@ -29,12 +29,8 @@ return new class extends Migration
             $table->boolean('is_show');
 
             // $table->timestamp('created_at');
-            // $table->timestamp('updated_at');
             $table->timestamps();
             $table->softDeletes('deleted_at');
-
-            // $table->timestamp('deleted_at');
-
         });
     }
 
