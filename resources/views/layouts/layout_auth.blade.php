@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>釣っトク管理システム</title>
+    <title>阿波道の駅管理システム</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -37,7 +37,7 @@
         <div class="header container">
             <div class="header-logo">
                 <a href="{{ route('top') }}" target="_blank">
-                    <img src="{{ asset('assets/images/fishing_tokushima_logo.svg') }}" alt="ネコの画像" class="logo">
+                    <img src="{{ asset('assets/images/cat1.jpg') }}" alt="ネコの画像" class="logo">
                 </a>
                 <h1 class="page_title">阿波道の駅管理システム</h1>
             </div>
