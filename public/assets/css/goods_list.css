@@ -1,5 +1,30 @@
 @charset "utf-8";
 
-body{
+h2{
+    border: 1px solid #000;
+    border-radius: 50px;
+    width: 100px;
+    /* height: 60px; */
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
 
+.wrapper{
+    padding-top: 0px;
+}
+
+.goods{
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 320px; */
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.goods-photo{
+    max-width: 320px;
+    margin-bottom: 30px;
+}
+.goods-group{
+    padding-bottom: 30px;
 }

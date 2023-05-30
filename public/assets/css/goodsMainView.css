@@ -3,3 +3,66 @@
 h1 {
     color: purple;
 }
+
+h3 {
+    color: red;
+}
+
+.testspace {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.card {
+    background-color: ivory;
+    border: solid black 2px;
+    width: 30%;
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.dummyimg {
+    height: 100%;
+    width: 100%;
+    grid-area: areaA;
+}
+
+.cardContainer {
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 10% 40%;
+    grid-template-areas:
+        "areaA areaA areaA"
+        "areaB areaC areaD"
+        "areaE areaE areaE";
+}
+
+
+
+.category {
+    border: solid 1px black;
+}
+
+.goods_name {
+    border: solid 1px black;
+}
+
+.roadside_station {
+    border: solid 1px black;
+}
+
+.discription {
+    height: 100%;
+    grid-area: areaE;
+    margin-top: 30px;
+}

@@ -28,19 +28,34 @@
 
         <h2 class="section__box--title ">第一セクション</h2>
 
-        <div>
-            <h3 style="color: red">コンテンツスペース</h3>
-            <div>
-                <tbody>
+        <div class="testspace">
+            <h3>テストスペース</h3>
+            <div class="container">
+            <tbody>
             @foreach ($special_goods as $goods)
                 <tr>
-                    <td>{{ $goods->category_id }}</td>
-                    <td>{{ $goods->title }}</td>
-                    <td>{{ $goods->station_list }}</td>
-                    <td>{{ $goods->discription }}</td>
+                    <div class="card">
+                    <div class="cardContainer">
+                    <img src="{{ asset('assets/images/news_1_1_300×300.png')}}" alt="ダミー" class="dummyimg">
+
+
+                    <div class="category">
+                    <td>カテゴリーID：{{ $goods->category_id }}</td>
+                    </div>
+                    <div class="goods_name">
+                    <td>品名：{{ $goods->goods_name }}</td>
+                    </div>
+                    <div class="roadside_station">
+                    <td>道の駅ID：{{ $goods->station_list }}</td>
+                    </div>
+                    <div class="discription">
+                    <td>解説文：{{ $goods->discription }}</td>
+                    </div>
+                    </div><br><br>
+                    </div>
                 </tr>
             @endforeach
-        </tbody>
+            </tbody>
             </div>
         </div>
     </section>
