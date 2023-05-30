@@ -67,7 +67,7 @@ Route::get(
  */
 Route::get(
     'specialty-goods',
-    'App\Http\Controllers\BoardController@goodsMainView'
+    'App\Http\Controllers\GoodsController@goodsMainView'
 )->name('goods');
 
 
