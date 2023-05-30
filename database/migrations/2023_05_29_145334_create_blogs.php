@@ -15,21 +15,21 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('category_id');
-            $table->string('title', 50);
-            $table->string('user_name', 10);
-            $table->text('content');
-            $table->integer('roadstation_id');
-            $table->string('goods_id', 50);
-            $table->string('activity', 50);
-            $table->string('picture', 200);
-            $table->string('memo', 500);
-            $table->boolean('is_show');
-            $table->boolean('is_highlight');
-            $table->boolean('user_id');
+            $table->integer('category_id')->nullable(false);
+            $table->string('title', 50)->nullable(false);
+            $table->string('user_name', 10)->nullable(true);
+            $table->text('content')->nullable(true);
+            $table->integer('roadstation_id')->nullable(true);
+            $table->string('goods_id', 50)->nullable(true);
+            $table->string('activity', 50)->nullable(true);
+            $table->string('picture', 200)->nullable(true);
+            $table->string('memo', 500)->nullable(true);
+            $table->boolean('is_show')->nullable(false)->default(true);
+            $table->boolean('is_highlight')->nullable(false)->default(false);
+            $table->boolean('user_id')->nullable(true);
             // $table->timestamp('updated_at');
             $table->timestamps();
-            $table->softDeletes('deleted_at');
+            $table->softDeletes('deleted_at')->nullable(true);
 
             // $table->timestamp('deleted_at');
 
