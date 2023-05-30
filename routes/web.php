@@ -77,7 +77,7 @@ Route::get(
 Route::get(
     'detail-search',
     'App\Http\Controllers\RoadstationController@stationDetailSearch'
-)->name('areasearch');
+)->name('ditailsearch');
 
 /**
  *道の駅詳細ページを表示する
@@ -120,7 +120,21 @@ Route::get(
 
 // *********** ブログテーブル ***********
 
+/**
+ *ブログ一覧を表示する
+ */
+Route::get(
+    'blog',
+    'App\Http\Controllers\BlogController@blogListSearch'
+)->name('bloglist');
 
+/**
+ *ブログ詳細ページを表示する
+ */
+Route::get(
+    'blog-detail',
+    'App\Http\Controllers\BlogController@blogMainView'
+)->name('blog');
 
 
 
