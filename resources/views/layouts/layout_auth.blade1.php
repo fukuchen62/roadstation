@@ -39,7 +39,7 @@
                 <a href="{{ route('top') }}" target="_blank">
                     <img src="{{ asset('assets/images/fishing_tokushima_logo.svg') }}" alt="ネコの画像" class="logo">
                 </a>
-                <h1 class="page_title">阿波道の駅管理システム</h1>
+                <h1 class="page_title">釣っトク管理システム</h1>
             </div>
 
             <div class="login">

@@ -28,7 +28,7 @@ class AdminController extends Controller
     public function __construct()
     {
         // ログインチェック
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     public function adminTop()
