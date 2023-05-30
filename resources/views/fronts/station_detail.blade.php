@@ -20,13 +20,41 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            @foreach ($road_stations as $station)
+                <tr>
+                    {{ $station->stations_name }}
+                    {{ $station->ruby }}
+                    {{ $station->area_id }}
+                    {{ $station->catchphrase }}
+                    {{ $station->review }}
+                    {{ $station->discription }}
+                    {{ $station->zip_code }}
+                    {{ $station->address }}
+                    {{ $station->business_hours }}
+                    {{ $station->regular_holiday }}
+                    {{ $station->parking }}
+                    {{ $station->tel }}
+                    {{ $station->url }}
+                    {{ $station->sns }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->picture1 }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                    {{ $station->stations_name }}
+                </tr>
+            @endforeach
         </tbody>
 
     </table>
