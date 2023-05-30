@@ -129,7 +129,7 @@ Route::get(
 )->name('bloglist');
 
 /**
- *ブログ一覧を表示する
+ *ブログ詳細ページを表示する
  */
 Route::get(
     'blog-detail',
