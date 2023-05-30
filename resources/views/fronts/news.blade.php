@@ -20,13 +20,15 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            @foreach ($news as $new)
+                <tr>
+                    <td>{{ $new->category_id }}</td>
+                    <td>{{ $new->title }}</td>
+                    <td>{{ $new->station_list }}</td>
+                    <td>{{ $new->discription }}</td>
+                    {{-- <td>{{ $new->title }}</td> --}}
+                </tr>
+            @endforeach
         </tbody>
 
     </table>
