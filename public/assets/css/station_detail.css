@@ -1,2 +1,9 @@
 /* 詳細検索のCSS */
 @charset "utf-8";
+
+h2,
+h3,
+h4,
+.more {
+    text-align: center;
+}

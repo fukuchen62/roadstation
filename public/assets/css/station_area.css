@@ -1,2 +1,21 @@
 /* エリア検索のCSS */
 @charset "utf-8";
+
+h2,
+h3,
+h4,
+.more {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid;
+    width: 306px;
+    height: auto;
+}
+
+.more {
+    border: 1px solid;
+    width: 47px;
+    height: 30px;
+}
