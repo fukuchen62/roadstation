@@ -1,7 +1,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトル --}}
-@section('title', '新着情報詳細ページ')
+@section('title', 'くるくるなると')
 
 @section('content')
 
@@ -36,23 +36,33 @@
                     {{ $station->tel }}
                     {{ $station->url }}
                     {{ $station->sns }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
+                    {{ $station->map_url }}
+                    {{ $station->longitude }}
+                    {{ $station->latitude }}
                     {{ $station->picture1 }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
-                    {{ $station->stations_name }}
+                    {{ $station->picture2 }}
+                    {{ $station->picture3 }}
+                    {{ $station->atm_icon }}
+                    {{ $station->bed_icon }}
+                    {{ $station->restaurant_icon }}
+                    {{ $station->lightmeal_icon }}
+                    {{ $station->accommodation_icon }}
+                    {{ $station->spa_icon }}
+                    {{ $station->park_icon }}
+                    {{ $station->ev_icon }}
+                    {{ $station->lan_icon }}
+                    {{ $station->shower_icon }}
+                    {{ $station->guide_icon }}
+                    {{ $station->disability_icon }}
+                    {{ $station->shop_icon }}
+                    {{ $station->others_icon }}
+                    {{ $station->memo }}
+                    {{ $station->is_show }}
+                    {{ $station->created_at }}
+                    {{ $station->updated_at }}
+                    {{ $station->deleted_at }}
+
+
                 </tr>
             @endforeach
         </tbody>
