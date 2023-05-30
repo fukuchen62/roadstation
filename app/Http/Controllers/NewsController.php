@@ -7,19 +7,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\News;
 
+
 class NewsController extends Controller
 {
 
     public function newsMainView(Request $request)
     {
-        // $items = News::all();
+        $items = News::all();
 
-        // $data = [
-        //     'boards' => $items,
-        // ];
+        $data = [
+            'news' => $items,
+        ];
 
-        // return view('board.index', $data);
-
-        return view('fronts.news');
+        return view('fronts.news', $data);
     }
 }
