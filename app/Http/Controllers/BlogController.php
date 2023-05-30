@@ -58,4 +58,16 @@ class BlogController extends Controller
 
             return view('fronts.blog_list',$items);
         }
+
+        // public function index()
+        // {
+        //     $this->posts = new Post();
+    
+        //     $results = $this->posts->getUserNameById();
+    
+        //     return view('posts.index', compact(
+        //         'results',
+        //     ));
+        // }
+    
 }
