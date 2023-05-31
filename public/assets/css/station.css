@@ -1,2 +1,8 @@
 /* 各道の駅詳細CSS */
 @charset "utf-8";
+
+.kv {
+    max-width: 1200px;
+    height: 400px;
+    background-color: #ccc;
+}
