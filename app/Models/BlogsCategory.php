@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BlogCategory extends Model
+class BlogsCategory extends Model
 {
     /**
      * ブログのリレーション
      */
     public function blogs(){
-        return $this->hasMany(Brog::class);
+        return $this->hasone(Brog::class);
     }
 
     /**
@@ -20,5 +20,9 @@ class BlogCategory extends Model
     public function blogsIsShow(){
         return $this->blogs()
             ->where('is_show',1);
+    }
+
+    public function getName(){
+        return $this->category_name;
     }
 }

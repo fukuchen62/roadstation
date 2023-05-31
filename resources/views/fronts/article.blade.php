@@ -5,7 +5,7 @@
 @section('content')
 
 
-    public function show(Blogs $blog )
+    public function show(Blogsas as $blog )
     {
     <div>
         {{--  <h2>{{ $blog->title }}</h2>  --}}
