@@ -157,6 +157,7 @@ h2 {
 .goods-strapline {
     text-align: start;
     font-size: 14px;
+    line-height: 150%;
 
 }
 
@@ -217,11 +218,13 @@ h2 {
     color: black;
     text-align: center;
     font-size: 20px;
+    padding: 20px;
 }
 
 .activity-strapline {
     text-align: center;
     font-size: 14px;
+    line-height: 150%;
 }
 
 .activity-btn {
@@ -277,15 +280,15 @@ h2 {
     object-fit: cover;
 }
 
-.content-wrapper {
+.img-wrapper {
     padding: 8px 0;
 }
 
-.content-wrapper .heading {
+imgcontent-wrapper .heading {
     margin: 0 0 8px;
 }
 
-.content-wrapper .text {
+.img-wrapper .text {
     margin: 0;
     font-size: 14px;
 }
@@ -311,7 +314,7 @@ h2 {
 
 
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:1400px) {
 
     h2 {
         text-align: center;
@@ -339,7 +342,10 @@ h2 {
         border-radius: 50%;
         padding: 20px;
         margin-bottom: 30px;
-        width: 700px;
+        width: 800px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 30px;
 
     }
 
@@ -581,7 +587,7 @@ h2 {
     }
 
     .img-wrapper img {
-        width: 300px;
+        /* width: 300px; */
         height: 230px;
         /* padding-top: 30px; */
         padding-bottom: 30px;
@@ -589,15 +595,15 @@ h2 {
         text-align: center;
     }
 
-    .content-wrapper {
+    .img-wrapper {
         padding: 8px 0;
     }
 
-    .content-wrapper .heading {
+    .img-wrapper .heading {
         margin: 0 0 8px;
     }
 
-    .content-wrapper .text {
+    .img-wrapper .text {
         margin: 0;
         font-size: 14px;
     }
