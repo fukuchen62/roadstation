@@ -1,12 +1,7 @@
 @charset "utf-8";
 
-/* body{
-    max-width: 1440px;
-    margin: 0 auto;
-} */
-main {
-    /* width: 1440px; */
-    margin: 0 20px;
+html {
+    overflow-x: hidden;
 }
 
 section {
@@ -24,13 +19,9 @@ h2 {
     font-size: 20px;
 }
 
-.wrapper {
-    padding: 0px;
-}
-
 .goods {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 30px 20px;
     flex-wrap: wrap;
     text-align: center;
@@ -100,4 +91,15 @@ h2 {
     height: auto;
     text-align: center;
     margin: 0 auto;
+}
+
+/* PC(デスクトップサイズ) */
+@media screen and (min-width:900px) {
+    .goods {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px 20px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
 }
