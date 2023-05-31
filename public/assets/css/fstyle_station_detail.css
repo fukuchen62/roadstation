@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/*
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+about resetcss
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+*/
+
+
+/* リセットcssはフォルダ内に作成済み */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kiwi+Maru&display=swap');
+
+body {
+    font-family: 'Kiwi Maru', serif;
+}
+
+.header {
+    display: flex;
+}
+
+.header__logo {
+    width: 150px;
+    height: 100px;
+}
+
+.header ul.header__box {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #008C41;
+    color: #fff;
+}
+
+h1.pagetitle {
+    text-align: center;
+    margin: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.station_pic {
+    display: flex;
+    height: 400px;
+    background: url(../images/cat1.jpg) center center;
+    background-size: cover;
+}
+
+.station_pic p {
+    color: #fff;
+    font-size: 2.5rem;
+    align-items: center;
+    display: flex;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000,
+        -1px 1px 0 #000, 1px -1px 0 #000,
+        0px 1px 0 #000, 0-1px 0 #000,
+        -1px 0 0 #000, 1px 0 0 #000;
+}
+
+
+.discription {
+    width: 90%;
+    margin: 1.8rem auto;
+}
+
+.discription h2 {
+    font-size: 1.5rem;
+}
+
+.review {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 1.5rem auto;
+}
+
+.review {
+    height: 80%;
+}
+
+.review_img {
+    width: 300px;
+}
+
+.gray_box {
+    background-color: #a09d9d;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.gray_box::after {
+    content: "";
+
+}
