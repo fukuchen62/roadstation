@@ -11,12 +11,19 @@ class RoadstationController extends Controller
 {
     public function stationMainView(Request $request)
     {
-        $items = RoadStation::where('id', 4)->get();
+        // $items = RoadStation::all();
 
-        $data = [
-            'road_stations' => $items,
+        // $data = [
+        //     'road_stations' => $items,
+        // ];
+
+        $name = RoadStation::where('id', 4)->get();
+
+        $outName = [
+            'road_stations' => $name,
         ];
 
-        return view('fronts.station_detail', $data);
+        // return view('fronts.station_detail', $data, $outName);
+        return view('fronts.station_detail', $outName);
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,11 @@
     <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/blog_list.css">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
@@ -19,13 +22,15 @@
     <!-- フォント設定 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap"
+        rel="stylesheet">
 
     <!-- アイコンフォント -->
     <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 
-    <title>共通テンプレートのページ</title>
+    <title>blog一覧ページ</title>
 </head>
+
 <body>
     <header>
         <!-- g-nav mobile -->
@@ -77,8 +82,54 @@
     </header>
 
     <main class="wrapper">
+        <section class="blog-main">
+            <div class="blog-wrapper">
+                <div class="blog-card">
+                    <div class="img-wrapper">
+                        <img src="../storage/images/index.images/dmv.jpg" alt="no-img">
+                        <p>見出し</p>
+                        <p>テキスト</p>
+                        <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="img-wrapper">
+                        <img src="../storage/images/index.images/dmv.jpg" alt="no-img">
+                        <p>見出し</p>
+                        <p>テキスト</p>
+                        <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="img-wrapper">
+                        <img src="../storage/images/index.images/dmv.jpg" alt="no-img">
+                        <p>見出し</p>
+                        <p>テキスト</p>
+                        <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="img-wrapper">
+                        <img src="../storage/images/index.images/dmv.jpg" alt="no-img">
+                        <p>見出し</p>
+                        <p>テキスト</p>
+                        <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
+                    </div>
+                </div>
 
-        <!-- mainの中身に内容を記載する -->
+
+        </section>
+
+        <section class="side">
+            <h2>カテゴリー一覧</h2>
+            <ul>
+                <li>体験</li>
+                <li>特産品</li>
+                <li>グルメ</li>
+                <li>その他</li>
+            </ul>
+        </section>
+        </div>
 
     </main>
 
@@ -96,4 +147,5 @@
 
     <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
