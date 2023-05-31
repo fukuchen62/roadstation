@@ -11,8 +11,8 @@
             <h3>{{ $activity->activity_name }}</h3>
             <p>営業時間：{{ $activity->business_hours }}</p>
             <p>料 金：{{ $activity->price }}</p>
-            <p>利用条件：{{ $activity->conditions }}</p>
-            <p>解 説：{{ $activity->discription }}</p>
+            <p>利用条件：<?= htmlspecialchars_decode( $activity->conditions ); ?></p>
+            <p>解 説：<?= htmlspecialchars_decode( $activity->discription  ); ?></p>
         </div>
     @endforeach
 

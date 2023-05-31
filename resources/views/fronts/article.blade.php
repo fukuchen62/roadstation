@@ -1,6 +1,6 @@
 @extends('layouts.layout_front')
 
-@section('title', 'ブログ記事')
+@section('title', '{{ $blog->title }}')
 
 @section('content')
 
@@ -8,11 +8,11 @@
     public function show(Blogsas as $blog )
     {
     <div>
-        {{--  <h2>{{ $blog->title }}</h2>  --}}
+        <h2>{{ $blog->title }}</h2> 
         <p>{{ $blog->category_id }}</p>
         <p>記事制作者：{{ $blog->user_name }}</p>
-        <p>内 容：{{ $blog->content }}</p>
-        <p>道の駅詳細：{{ $blog->roadstation_id }}</p>
+        <p>内 容：<?= htmlspecialchars_decode( $blog->content ); ?></p>
+        <p>道の駅詳細：<?= htmlspecialchars_decode(  $blog->roadstation_id  ); ?></p>
         <p>特産品：{{ $blog->goods_id }}</p>
         <p>体験：{{ $blog->activity_id }}</p>
         {{--  <p>画像：{{ 画像ファイル }}</p>  --}}
