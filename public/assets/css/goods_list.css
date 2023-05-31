@@ -1,21 +1,20 @@
 @charset "utf-8";
 
-body{
+/* body{
     max-width: 1440px;
     margin: 0 auto;
-
-}
-main{
+} */
+main {
     /* width: 1440px; */
     margin: 0 20px;
 }
 
-section{
+section {
     margin: 0 auto;
     text-align: center;
 }
 
-h2{
+h2 {
     border: 1px solid #000;
     border-radius: 50px;
     width: 100px;
@@ -25,11 +24,11 @@ h2{
     font-size: 20px;
 }
 
-.wrapper{
+.wrapper {
     padding: 0px;
 }
 
-.goods{
+.goods {
     display: flex;
     justify-content: flex-start;
     gap: 30px 20px;
@@ -37,44 +36,45 @@ h2{
     text-align: center;
 }
 
-.goods-photo{
+.goods-photo {
     max-width: 150px;
     /* width: 90%; */
     margin-bottom: 10px;
 }
-.goods-group{
+
+.goods-group {
     /* padding-bottom: 30px; */
 }
 
-.detail-group{
+.detail-group {
     text-align: center;
 }
 
-.detail{
-width: 320px;
-height: 215px;
-margin-top: 20px;
+.detail {
+    width: 320px;
+    height: 215px;
+    margin-top: 20px;
 }
 
-.item-name{
-margin-top: 30px;
+.item-name {
+    margin-top: 30px;
 }
 
-.text{
+.text {
     text-align: left;
 }
 
-.item-text{
+.item-text {
     padding-top: 0;
     padding-bottom: 30px;
     text-align: left;
 }
 
-.buy-place{
-width: 160px;
+.buy-place {
+    width: 160px;
 }
 
-.roadstation-frame{
+.roadstation-frame {
     display: flex;
     justify-content: flex-start;
     gap: 30px 25px;
@@ -83,21 +83,21 @@ width: 160px;
 
 }
 
-.roadstation-name{
-border: 1px solid #000;
-border-radius: 50px;
+.roadstation-name {
+    border: 1px solid #000;
+    border-radius: 50px;
 }
 
 
 
-.blog-btn{
+.blog-btn {
     text-align: center;
-margin: 0 auto;
+    margin: 0 auto;
 }
 
-.blog-btn img{
-max-width: 320px;
-height: auto;
-text-align: center;
-margin: 0 auto;
+.blog-btn img {
+    max-width: 320px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
 }
