@@ -11,10 +11,12 @@ h4,
 
 h3 {
     font-size: 1.5rem;
+    padding-bottom: 1rem;
 }
 
-.kv {
+.kv img {
     margin: 0 auto;
+    width: 100%;
 }
 
 .area {
@@ -25,17 +27,32 @@ h3 {
     padding: 80px;
 }
 
+dt {
+    padding-top: 10px;
+}
+
+dd img {
+    padding: 2px 2px;
+}
+
+
+
+
 .card-list {
     display: flex;
 }
 
 .card {
     border: 1px solid;
-    max-width: 300px;
+    width: 300px;
     /* width: 306px; */
     height: auto;
     padding: 20px;
+    margin: 0 auto;
+    word-break: break-word;
 }
+
+
 
 .more {
     border: 1px solid;
