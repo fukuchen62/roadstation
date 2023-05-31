@@ -6,8 +6,13 @@ body{
 
 }
 main{
-    width: 320px;
+    /* width: 1440px; */
+    margin: 0 20px;
+}
+
+section{
     margin: 0 auto;
+    text-align: center;
 }
 
 h2{
@@ -15,7 +20,7 @@ h2{
     border-radius: 50px;
     width: 100px;
     /* height: 60px; */
-    margin: 0 auto 30px auto;
+    margin: 30px auto 30px auto;
     text-align: center;
     font-size: 20px;
 }
@@ -26,32 +31,43 @@ h2{
 
 .goods{
     display: flex;
-    justify-content: space-between;
-    /* max-width: 320px; */
+    justify-content: flex-start;
+    gap: 30px 20px;
     flex-wrap: wrap;
     text-align: center;
 }
 
 .goods-photo{
-    max-width: 120px;
-    margin-bottom: 30px;
+    max-width: 150px;
+    /* width: 90%; */
+    margin-bottom: 10px;
 }
 .goods-group{
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
+}
+
+.detail-group{
+    text-align: center;
 }
 
 .detail{
 width: 320px;
 height: 215px;
+margin-top: 20px;
 }
 
 .item-name{
 margin-top: 30px;
 }
 
+.text{
+    text-align: left;
+}
+
 .item-text{
     padding-top: 0;
     padding-bottom: 30px;
+    text-align: left;
 }
 
 .buy-place{
@@ -60,7 +76,8 @@ width: 160px;
 
 .roadstation-frame{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px 25px;
     flex-wrap: wrap;
     text-align: center;
 
@@ -71,7 +88,16 @@ border: 1px solid #000;
 border-radius: 50px;
 }
 
+
+
 .blog-btn{
+    text-align: center;
+margin: 0 auto;
+}
+
+.blog-btn img{
 max-width: 320px;
-height: 215px;
+height: auto;
+text-align: center;
+margin: 0 auto;
 }
