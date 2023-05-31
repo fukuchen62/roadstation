@@ -48,32 +48,39 @@ h3 {
 .detail_name {
     grid-area: areaB;
     text-align: center;
+    padding: 10px;
 }
 
 .detail_season {
     grid-area: areaC;
+    padding: 10px;
 }
 
 .detail_price {
     grid-area: areaD;
+    padding: 10px;
 }
 
 .detail_usage {
     grid-area: areaE;
+    padding: 10px;
 }
 
 .detail_discription {
     grid-area: areaF;
     margin-top: 20px;
+    padding: 10px;
 }
 
 .detail_sub {
     grid-area: areaG;
     text-align: center;
+    padding: 10px;
 }
 
 .station_list {
     grid-area: areaH;
+    padding: 10px;
 }
 
 .container {

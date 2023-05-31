@@ -34,7 +34,7 @@
                 <tr>
                     <div class="detail">
                     <div class="detailContainer">
-                    <img src="{{ asset('assets/images/news_1_1_300×300.png')}}" alt="ダミー" class="detailimg">
+                    <img src="{{ asset('storage/images/news_1_1_300×300.png')}}" alt="ダミー" class="detailimg">
 
 
                     <div class="detail_name">
@@ -69,7 +69,7 @@
                 <tr>
                     <div class="card">
                     <div class="cardContainer">
-                    <img src="{{ asset('assets/images/news_1_1_300×300.png')}}" alt="ダミー" class="dummyimg">
+                    <img src="{{ asset('storage/images/news_1_1_300×300.png')}}" alt="ダミー" class="dummyimg">
 
 
                     <div class="category">
