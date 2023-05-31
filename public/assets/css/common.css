@@ -57,6 +57,12 @@ header {
     align-items: flex-end;
 }
 
+.blog-btn img {
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
 /* nav_menu */
 .nav-pc {
     display: none;
