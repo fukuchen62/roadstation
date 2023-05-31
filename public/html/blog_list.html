@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,11 @@
     <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/blog_list.css">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
@@ -19,13 +22,15 @@
     <!-- フォント設定 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap"
+        rel="stylesheet">
 
     <!-- アイコンフォント -->
     <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 
-    <title>共通テンプレートのページ</title>
+    <title>blog一覧ページ</title>
 </head>
+
 <body>
     <header>
         <!-- g-nav mobile -->
@@ -77,8 +82,49 @@
     </header>
 
     <main class="wrapper">
+        <section class="blog">
+            <div class="blog-container">
+                <div class="blog-wrapper">
+                    <div class="img-wrapper">
+                        <img src="../storage/images/index.images/boat.jpg" alt="">
+                        <h3 class="heading">タイトルなどが、入ります。 </h3>
+                        <p class="text">みなさんは岐阜にはどういった観光スポットがあるかご存知ですか？岐阜は実は美濃地方と飛騨地方に
+                            分かれており、観光スポットや温泉、旅館が多くあるのは、飛騨地方です。そのため、岐阜に行こうと
+                            思ったときは、 まず飛騨地方で探してください。飛騨地方には高山、下呂温泉、白川郷（世界遺産）
+                            といった観光スポットが多くあります。高山は昔ながらの街並みが有名で、「さるぼぼ」という人形が
+                            おみやげの定番です。
+                            街には温泉、旅館もあり、下呂温泉につぐ温泉街として岐阜では有名です。下呂温泉については日本
+                            でも有数な温泉街として有名なので、聞いたことがある方も多いことでしょう。
+                            温泉街には昔ながらの旅館も多く、ゆっくりと過ごしたい方にはおすすめです。また白川郷は世界遺産
+                            にも登録された、合掌造りの家が並ぶ古い町です。雪国ならではの風景が見たい方にはおすすめです。
+                            このように、岐阜県では飛騨地方に多くの観光スポットや旅館があります。岐阜駅から約1～2時間で
+                            いけますので、興味のある方は是非ご参考ください。</p>
+                        <p class="date">〇月〇日　　　カテゴリ:<a href="">グルメ</a></p>
+                    </div>
+                </div>
 
-        <!-- mainの中身に内容を記載する -->
+                <div class="blog-wrapper">
+                    <div class="img-wrapper">
+                        <img src="../storage/images/index.images/boat.jpg" alt="">
+                        <h3 class="heading">タイトルなどが、入ります。 </h3>
+                        <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <p class="date"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sidebar">
+            <div class="category">
+                <h2 class="category-section">カテゴリー一覧</h2>
+                <ul class="category-title">
+                    <li><a href="">体験</a></li>
+                    <li><a href="">特産品</a></li>
+                    <li><a href="">グルメ</li>
+                    <li><a href="">その他</a></li>
+                </ul>
+            </div>
+        </section>
 
     </main>
 
@@ -96,4 +142,5 @@
 
     <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
