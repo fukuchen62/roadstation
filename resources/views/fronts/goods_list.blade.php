@@ -17,7 +17,6 @@
 
 {{-- メイン --}}
 @section('content')
-
     <section class="titlesection">
         <div class="titlesection__box">
             <h1 class="pagetitle">特産品のページ</h1>
@@ -30,6 +29,40 @@
 
         <div class="testspace">
             <h3>テストスペース</h3>
+            <tbody>
+            @foreach ($special_goods as $goods)
+                <tr>
+                    <div class="detail">
+                    <div class="detailContainer">
+                    <img src="{{ asset('assets/images/news_1_1_300×300.png')}}" alt="ダミー" class="detailimg">
+
+
+                    <div class="detail_name">
+                    <td>商品名　{{ $goods->goods_name }}</td>
+                    </div>
+                    <div class="detail_season">
+                    <td>旬の時期：{{ $goods->season }}</td>
+                    </div>
+                    <div class="detail_price">
+                    <td>参考価格：{{ $goods->price }}</td>
+                    </div>
+                    <div class="detail_usage">
+                    <td>利用方法：{{ $goods->usage }}</td>
+                    </div>
+                    <div class="detail_discription">
+                    <td>解説文：{{ $goods->discription }}</td>
+                    </div>
+                    <div class="detail_sub">買える道の駅</div>
+                    <div class="station_list">
+                    <td>買える道の駅名：{{ $goods->station_list }}</td>
+                    </div>
+                    </div><br><br>
+                    </div>
+                </tr>
+            @endforeach
+            </tbody>
+
+
             <div class="container">
             <tbody>
             @foreach ($special_goods as $goods)

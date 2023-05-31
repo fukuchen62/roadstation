@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
-use App\Models\BlogCategory;
+use App\Models\BlogsCategory;
 
 class BlogController extends Controller
 {
@@ -49,25 +49,25 @@ class BlogController extends Controller
     // }
 
 
-        public function categoryName(){
-            // $items = Blog::with(['blogCategory.blogs'])->get();
+        // public function categoryName(){
+        //     // $items = Blog::with(['blogCategory.blogs'])->get();
 
-            // $data = $items->blogCategory->blogs->category_name;
+        //     // $data = $items->blogCategory->blogs->category_name;
 
-            $items = Blog::all();
+        //     $items = Blog::all();
 
-            return view('fronts.blog_list',$items);
-        }
-
-        // public function index()
-        // {
-        //     $this->posts = new Post();
-    
-        //     $results = $this->posts->getUserNameById();
-    
-        //     return view('posts.index', compact(
-        //         'results',
-        //     ));
+        //     return view('fronts.blog_list',$items);
         // }
+
+        // public function categoryName()
+        // {
+        //     $this->blogs = new blog();
+    
+        //     $results = $this->blogs->getCategoryNameById();
+    
+        //     return view('fronts.blog_list', compact(
+        //         'blogs',
+        //     ));
+        //}
     
 }
