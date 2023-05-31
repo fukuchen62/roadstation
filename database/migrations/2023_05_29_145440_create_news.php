@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('station_list', 20)->nullable(true);
             $table->text('discription')->nullable(true);
             $table->string('picture', 200)->nullable(true);
-            $table->string('remarks_column', 500)->nullable(true);
+            $table->string('memo', 500)->nullable(true);
             $table->boolean('is_show')->nullable(false)->default(true);
             $table->integer('user_id')->nullable(true);
             // $table->timestamp('created_at');
