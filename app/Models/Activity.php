@@ -9,7 +9,7 @@ class Activity extends Model
 {
     //use HasFactory;
 
-        public function user()
+    public function activities()
     {
         return $this->belongsTo('App\Models\User');
     }

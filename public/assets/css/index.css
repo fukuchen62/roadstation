@@ -2,6 +2,287 @@
 
 h2 {
     text-align: center;
+    padding-bottom: 30px;
+}
+
+.news {
+    margin-bottom: 150px;
+    justify-content: center;
+    gap: 50px;
+    background-color: #ffff;
+    border-radius: 50%;
+
+
+}
+
+
+
+.news1 {
+    text-align: right;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.news-btn {
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: #B45A27;
+    color: #ffff;
+    width: 150px;
+    position: absolute;
+    top: 350px;
+    left: 120px;
+    margin-bottom: 150px;
+
+
+}
+
+.news-title {
+    text-align: end;
+}
+
+.news2 {
+    /* text-align: center;
+    margin: 0 auto; */
+    text-align: left;
+    line-height: 2rem;
+    font-size: 16px;
+
+}
+
+.tokusimamap {
+    margin: 0 auto;
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 150px;
+}
+
+.east {
+    position: absolute;
+    background-color: #ffff;
+    border-radius: 50%;
+    padding: 20px;
+    top: 550px;
+    left: 200px;
+}
+
+.west {
+    position: absolute;
+    background-color: #ffff;
+    border-radius: 50%;
+    padding: 20px;
+    top: 570px;
+    left: 80px;
+}
+
+.south {
+    position: absolute;
+    background-color: #ffff;
+    border-radius: 50%;
+    padding: 20px;
+    top: 630px;
+    left: 173px;
+}
+
+.station_detail {
+    text-align: center;
+    border-radius: 50px;
+    background-color: #B45A27;
+    color: #ffff;
+    font-size: 25px;
+    padding: 20px;
+    width: 150px;
+    margin: 0 auto;
+    position: absolute;
+    top: 780px;
+    left: 120px;
+    margin-bottom: 150px;
+}
+
+
+.goods-wrapper {
+    margin: 0 auto;
+    width: 100%;
+
+
+    margin-bottom: 150px;
+    justify-content: center;
+
+}
+
+.goods {
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    text-align: center;
+    margin-bottom: 50px;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+
+.goodsli {
+    width: 360px;
+    text-align: center;
+}
+
+.goods-1 {
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+
+.goods-2 {
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    background-color: #E99787;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+
+.goods-strapline {
+    text-align: center;
+    font-size: 14px;
+}
+
+.goods-btn {
+    text-align: center;
+    border-radius: 50px;
+    background-color: #FFFCEF;
+    color: #000000;
+    font-size: 20px;
+}
+
+
+
+.activity-wrapper {
+    margin: 0 auto;
+    width: 100%;
+
+
+    margin-bottom: 150px;
+    justify-content: center;
+
+}
+
+.activity {
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    text-align: center;
+    margin-bottom: 50px;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+
+.activity {
+    width: 360px;
+    text-align: center;
+}
+
+.activity-1 {
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+
+.activity-2 {
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    background-color: #E99787;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+
+.activity-strapline {
+    text-align: center;
+    font-size: 14px;
+}
+
+.activity-btn {
+    text-align: center;
+    border-radius: 50px;
+    background-color: #FFFCEF;
+    color: #000000;
+    font-size: 20px;
+}
+
+.blog-container {
+    width: 100%;
+    text-align: center;
+    justify-content: start;
+}
+
+
+.blog-wrapper {
+    width: 320px;
+    height: 400px;
+    padding: 8px;
+    border: 3px solid #1ca10a;
+    box-sizing: border-box;
+    border-radius: 20px;
+    justify-content: center;
+    margin: 30px auto;
+
+
+
+
+}
+
+.img-wrapper {
+    max-width: 250px;
+    height: 150px;
+    vertical-align: bottom;
+    border-radius: 20px;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.img-wrapper img {
+    width: 250px;
+    height: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    object-fit: cover;
+}
+
+.content-wrapper {
+    padding: 8px 0;
+}
+
+.content-wrapper .heading {
+    margin: 0 0 8px;
+}
+
+.content-wrapper .text {
+    margin: 0;
+    font-size: 14px;
+}
+
+.blog-btn {
+    text-align: center;
+
+}
+
+.blog-btn img {
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
 }
 
 
@@ -13,7 +294,13 @@ h2 {
 
 
 
-@media screen and (min-width:1440px) {
+
+@media screen and (min-width:900px) {
+
+    h2 {
+        text-align: center;
+        padding-bottom: 30px;
+    }
 
     .header__logo {
         width: 100px;
@@ -30,26 +317,58 @@ h2 {
 
     .news {
         display: flex;
-        margin-bottom: 150px;
+        justify-content: center;
+        gap: 50px;
+        background-color: #ffff;
+        border-radius: 50%;
+        margin-bottom: px;
 
     }
 
+
+
     .news1 {
+        /* text-align: center;
+        margin: 0 auto; */
+        text-align: right;
+        padding-top: 50px;
+    }
+
+    .news-btn {
         text-align: center;
-        margin: 0 auto;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        position: absolute;
+        top: 100px;
+        left: 535px;
+        margin-bottom: 150px;
+        font-size: 20px;
+    }
+
+    .news-title {
+        text-align: end;
     }
 
     .news2 {
-        text-align: center;
+        /* text-align: center;
+        margin: 0 auto; */
+        text-align: left;
+        line-height: 2rem;
+    }
+
+    .tokusimamap {
         margin: 0 auto;
+        max-width: 800px;
+        height: auto;
+        object-fit: cover;
+
 
     }
 
-    .tokusimatizu {
-        margin: 0 auto;
-        display: block;
+    .area {
+        margin-bottom: 150px;
     }
-
 
     .east {
         position: absolute;
@@ -83,11 +402,14 @@ h2 {
         border-radius: 50px;
         background-color: #B45A27;
         color: #ffff;
-        font-size: 25px;
+        font-size: 20px;
         padding: 20px;
         width: 300px;
         margin: 0 auto;
-        margin-bottom: 150px;
+        position: absolute;
+        top: 1075px;
+        left: 600px;
+
     }
 
     .goods-wrapper {
@@ -127,9 +449,22 @@ h2 {
         color: black;
         padding: 100px;
         line-height: 30px;
-        font-weight: bold;
         text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+    }
 
+    .goods-strapline {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .goods-btn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #FFFCEF;
+        color: #000000;
+        font-size: 20px;
     }
 
     .activity-wrapper {
@@ -164,12 +499,30 @@ h2 {
         width: 400px;
         height: 400px;
         border-radius: 50px;
-        background-color: #E99787;
+        background-color: #F6AE54;
         color: black;
         padding: 100px;
         line-height: 30px;
-        font-weight: bold;
         text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+
+    }
+
+    .activity-strapline {
+        text-align: center;
+        font-size: 20px;
+
+    }
+
+
+    .activity-btn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #FFFCEF;
+        color: #000000;
+        font-size: 20px;
+
 
     }
 
@@ -177,6 +530,7 @@ h2 {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        padding: 0 150px;
 
 
     }
@@ -193,15 +547,24 @@ h2 {
 
 
 
+
     }
 
-    .img-wrapper img {
+    .img-wrapper {
         width: 300px;
         height: 200px;
         vertical-align: bottom;
         border-radius: 20px;
+        margin: auto;
 
+    }
 
+    .img-wrapper img {
+        width: 300px;
+        height: 230px;
+        /* padding-top: 30px; */
+        padding-bottom: 30px;
+        object-fit: cover;
     }
 
     .content-wrapper {
@@ -215,6 +578,16 @@ h2 {
     .content-wrapper .text {
         margin: 0;
         font-size: 14px;
+    }
+
+    .blog-btn {
+        text-align: center;
+    }
+
+    .blog-btn img {
+        width: 600px;
+        height: auto;
+
     }
 
 }

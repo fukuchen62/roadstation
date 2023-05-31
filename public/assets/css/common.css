@@ -41,6 +41,22 @@ a:hover {
     color: #ccc;
 }
 
+
+header {
+    width: 100%;
+    height: 100px;
+    /* 確認用 */
+    background-color: #e6e6e6;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #732424;
+    border-radius: 50%;
+    align-items: flex-end;
+}
+
 /* nav_menu */
 .nav-pc {
     display: none;
