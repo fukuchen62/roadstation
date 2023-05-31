@@ -30,7 +30,7 @@ h2 {
 p {
     line-height: 1.5rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 }
 
 a {
