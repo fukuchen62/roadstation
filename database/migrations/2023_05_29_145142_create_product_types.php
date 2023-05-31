@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('product_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('category_id')->nullable(false);
+            $table->integer('goods_category_id')->nullable(false);
             $table->string('common_name', 50)->nullable(false);
             $table->string('season', 50)->nullable(true);
             $table->string('discription', 300)->nullable(true);

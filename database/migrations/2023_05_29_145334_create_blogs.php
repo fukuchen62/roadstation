@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('category_id')->nullable(false);
+            $table->integer('blog_category_id')->nullable(false);
             $table->string('title', 50)->nullable(false);
             $table->string('user_name', 10)->nullable(true);
             $table->text('content')->nullable(true);
-            $table->integer('roadstation_id')->nullable(true);
-            $table->string('goods_id', 50)->nullable(true);
+            $table->integer('road_station_id')->nullable(true);
+            $table->string('special_goods_id', 50)->nullable(true);
             $table->string('activity_id', 50)->nullable(true);
             $table->string('picture', 200)->nullable(true);
             $table->string('memo', 500)->nullable(true);
