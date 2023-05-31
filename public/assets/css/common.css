@@ -57,6 +57,12 @@ header {
     align-items: flex-end;
 }
 
+.blog-btn img {
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
 /* nav_menu */
 .nav-pc {
     display: none;
@@ -183,7 +189,6 @@ footer li {
         margin: 0 auto;
         max-width: 1200px;
         min-width: 320px;
-        padding: 100px;
     }
 
     /* nav-menu */

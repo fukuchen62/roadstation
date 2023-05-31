@@ -21,12 +21,12 @@ return new class extends Migration
             $table->text('content')->nullable(true);
             $table->integer('roadstation_id')->nullable(true);
             $table->string('goods_id', 50)->nullable(true);
-            $table->string('activity', 50)->nullable(true);
+            $table->string('activity_id', 50)->nullable(true);
             $table->string('picture', 200)->nullable(true);
             $table->string('memo', 500)->nullable(true);
             $table->boolean('is_show')->nullable(false)->default(true);
             $table->boolean('is_highlight')->nullable(false)->default(false);
-            $table->boolean('user_id')->nullable(true);
+            $table->integer('user_id')->nullable(true);
             // $table->timestamp('updated_at');
             $table->timestamps();
             $table->softDeletes('deleted_at')->nullable(true);
