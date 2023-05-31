@@ -15,13 +15,18 @@ class BlogCategory extends Model
     }
 
     /**
-     * 表示中のブログのみ
+     * 表示の値が1のブログのみ表示するメソッド
      */
     public function blogsIsShow(){
         return $this->blogs()
             ->where('is_show',1);
     }
 
+    /**
+     * 記事のカテゴリー名をビューに送るメソッド
+     *
+     * @return void
+     */
     public function getName(){
         return $this->category_name;
     }
