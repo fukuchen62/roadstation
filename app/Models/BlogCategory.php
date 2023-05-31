@@ -7,5 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogCategory extends Model
 {
-    use HasFactory;
+    /**
+     * ブログのリレーション
+     */
+    public function blogs(){
+        return $this->hasMany(Brog::class);
+    }
+
+    /**
+     * 表示中のブログのみ
+     */
+    public function blogsIsShow(){
+        return $this->blogs()
+            ->where('is_show',1);
+    }
 }
