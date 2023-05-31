@@ -49,6 +49,8 @@ header {
     background-color: #e6e6e6;
 }
 
+
+
 .icon {
     width: 30px;
     height: 30px;
@@ -175,6 +177,12 @@ footer li {
 
         /* 確認用 */
         background-color: #e6e6e6;
+    }
+
+    .sp-kv {
+        width: 100%;
+        height: 200px;
+        background-image: url(https://placehold.jp/1980x200.png);
     }
 
     .btn-gnavi {
