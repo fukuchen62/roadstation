@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('station_name', 50)->nullable(false);
             $table->string('ruby', 100)->nullable(true);
             $table->integer('area_id')->nullable(false);
-            $table->string('catchphrase', 200)->nullable(true);
-            $table->text('review')->nullable(true);
+            $table->string('catchphrase', 50)->nullable(true);
+            $table->string('review', 100)->nullable(true);
             $table->string('discription', 500)->nullable(true);
             $table->char('zip_code', 8)->nullable(true);
             $table->string('address', 100)->nullable(true);
