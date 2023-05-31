@@ -11,7 +11,7 @@
 
         <thead>
             <tr>
-                <th>カテゴリー</th>
+                {{-- <th>カテゴリー</th> --}}
                 <th>タイトル</th>
                 <th>道の駅ID</th>
                 <th>解説テキスト</th>
@@ -22,13 +22,17 @@
         <tbody>
             @foreach ($news as $new)
                 <tr>
-                    <td>{{ $new->category_id }}</td>
+                    {{-- <td>{{ $new->category_id }}</td> --}}
                     <td>{{ $new->title }}</td>
                     <td>{{ $new->station_list }}</td>
                     <td>{{ $new->discription }}</td>
-                    {{-- <td>{{ $new->title }}</td> --}}
+                    {{-- <td>
+                        <img src="{{ asset($new->title) }}" alt="">
+                    </td> --}}
                 </tr>
             @endforeach
         </tbody>
 
     </table>
+
+@endsection
