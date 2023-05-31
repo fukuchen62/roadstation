@@ -7,18 +7,30 @@
     <meta name="description" content="ページの紹介文">
     <!-- ファビコンの設定を入れる -->
     <title>道の駅詳細</title>
+
+    <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <!-- 未設定、common確認後で追加する。 -->
-    <link rel="stylesheet" href="station.css">
+
+    <!-- 独自CSS -->
+    <link rel="stylesheet" href="../assets/css/station.css">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <!-- アイコンフォント -->
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+
 </head>
 <body>
     <header>
         <!-- g-nav mobile -->
-        <div id="wrapper">
+        <nav id="wrapper">
             <div class="btn-gnavi">
                 <span></span>
                 <span></span>
@@ -28,196 +40,202 @@
             <nav id="global-navi">
                 <div class="hamburger-menu-list">
                     <ul class="menu">
-                        <li><a href="station_list.html">道の駅一覧</a></li>
-                        <li><a href="station_area.html">エリア検索</a></li>
-                        <li><a href="station_detail.html">詳細検索</a></li>
-                        <li><a href="goods_list.html">特産品</a></li>
-                        <li><a href="activity_list.html">体験</a></li>
-                        <li><a href="blog_list.html">行ってみたんよ</a></li>
-                        <li><a href="like.html">お気に入り</a></li>
+                        <li><a href="../html/station_list.html">道の駅一覧
+                            </a></li>
+                        <li><a href="../html/station_area.html">エリア検索</a></li>
+                        <li><a href="../html/station_detail.html">詳細検索</a></li>
+                        <li><a href="../html/goods_list.html">特産品</a></li>
+                        <li><a href="../html/activity_list.html">体験</a></li>
+                        <li><a href="../html/blog_list.html">行ってみたんよ</a></li>
+                        <li><a href="../html/like.html">お気に入り</a></li>
                     </ul>
                 </div>
             </nav>
-        </div>
+        </nav>
 
         <!-- g-nav pc -->
-        <div class="nav-pc">
-            <h1><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></h1>
+        <nav class="nav-pc">
+            <h1><a href="#"><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></a></h1>
 
             <ul>
-                <li><a href="station_list.html">道の駅一覧</a></li>
-                <li><a href="station_area.html">エリア検索</a></li>
-                <li><a href="station_detail.html">詳細検索</a></li>
-                <li><a href="goods_list.html">特産品</a></li>
-                <li><a href="activity_list.html">体験</a></li>
-                <li><a href="blog_list.html">行ってみたんよ</a></li>
-                <li><a href="like.html">お気に入り</a></li>
+                <li><a href="../html/station_list.html">道の駅一覧
+                    </a></li>
+                <li><a href="../html/station_area.html">エリア検索</a></li>
+                <li><a href="../html/station_detail.html">詳細検索</a></li>
+                <li><a href="../html/goods_list.html">特産品</a></li>
+                <li><a href="../html/activity_list.html">体験</a></li>
+                <li><a href="../html/blog_list.html">行ってみたんよ</a></li>
+                <li><a href="../html/like.html">お気に入り</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <div class="wrapper">
-        <main>
+
+    <main class="wrapper">
+
+        <section class="kv">
+
+        </section>
+
+        <section>
+            <h2>道の駅　くるくるなると</h2>
+            <p>皆んながくるくる、 笑顔になると”~ 鳴門の美味しさで、世界に愛と笑顔と元気を伝えたい〜</p>
+
+            <!-- スライドショー -->
+
+            <p>"鳴門の魅力を全国に発信すべく、 鳴門金時やれんこん 鳴門鯛など “地 域特産物”をテーマに、 農産物マルシェや名産グルメ、スイーツをお楽 しみいただけるショップ、 お食事処を展開するほか、 施設内には、鳴門 市を見渡せる屋上ジップラインや屋上デッキ、 周辺観光を楽しめるレン タサイクルも設置しております。
+            "</p>
+            <!-- 画像と文字を横に並べる。CSS -->
+            <img src="https://placehold.jp/200x204.png" width="200" height="204" alt="道の駅の感想を嬉しそうに喋る人物">
+            <p>四国の東の玄関口に位置する鳴門。明るく開放的な店内には鳴門の豊かな自然が生んだ特産物を使用したお食事や加工品も盛りだくさん。まさに「食のテーマパーク」です。また来たいと思えること間違いなし！</p>
 
             <section>
-                <h2>道の駅　〇〇〇〇〇〇〇〇〇〇</h2>
-                <p>キャッチフレーズ入れる（例:体験型食のテーマパーク）キャッチフレーズ入れる（例:体験型食のテーマパーク）キャッチフレーズ入れる（例:体験型食のテーマパーク）キャッチフレーズ入れる（例:体験型食のテーマパーク）</p>
-
-                <!-- スライドショー -->
-
-                <p>500文字。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。道の駅の紹介テキストです。</p>
-                <!-- 画像と文字を横に並べる。CSS -->
-                <img src="https://placehold.jp/200x204.png" width="200" height="204" alt="道の駅の感想を嬉しそうに喋る人物">
-                <p>100文字のコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメ</p>
-
+                <!-- 画像と文字を重ねる。CSS -->
+                <h2>グルメ</h2>
                 <section>
-                    <!-- 画像と文字を重ねる。CSS -->
-                    <h3>グルメ</h3>
-                    <section>
-                        <!-- 画像右と文字を横に並べる。CSS -->
-                        <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
-                        <h4>商品名〇〇〇</h4>
-                        <p>参考価格〇〇〇円</p>
-                        <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                        <!-- CSS。もっと見ると合わせる？ -->
-                        <a href="http://">【ブログ】行ってみたんよへ</a>
-                    </section>
-
-                    <section>
-                        <!-- 画像左と文字を横に並べる。CSS -->
-                        <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
-                        <h4>商品名〇〇〇</h4>
-                        <p>参考価格〇〇〇円</p>
-                        <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                        <!-- CSS。もっと見ると合わせる？ -->
-                        <a href="http://">【ブログ】行ってみたんよへ</a>
-                    </section>
-
-                    <section>
-                        <!-- 画像右と文字を横に並べる。CSS -->
-                        <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
-                        <h4>商品名〇〇〇</h4>
-                        <p>参考価格〇〇〇円</p>
-                        <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                        <!-- CSS。もっと見ると合わせる？ -->
-                        <a href="http://">【ブログ】行ってみたんよへ</a>
-                    </section>
-
-                    <section>
-                        <!-- 画像左と文字を横に並べる。CSS -->
-                        <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
-                        <h4>商品名〇〇〇</h4>
-                        <p>参考価格〇〇〇円</p>
-                        <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                        <!-- CSS。もっと見ると合わせる？ -->
-                        <a href="http://">【ブログ】行ってみたんよへ</a>
-                    </section>
-
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
+                    <h4>鳴門金時パンケーキ</h4>
+                    <p>1,210円</p>
+                    <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <!-- CSS。もっと見ると合わせる？ -->
+                    <a href="http://">【ブログ】行ってみたんよへ</a>
                 </section>
 
                 <section>
-                    <!-- 画像と文字を重ねる。CSS -->
-                    <h3>お土産</h3>
-                    <section>
-                        <!-- 画像右と文字を横に並べる。CSS -->
-                        <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各お土産の名前）">
-                        <h4>商品名〇〇〇</h4>
-                        <p>参考価格〇〇〇円</p>
-                        <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                        <!-- CSS。もっと見ると合わせる？ -->
-                        <a href="http://">【ブログ】行ってみたんよへ</a>
-                    </section>
-
-                    <section>
-                        <!-- 画像左と文字を横に並べる。CSS -->
-                        <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各お土産の名前）">
-                        <h4>商品名〇〇〇</h4>
-                        <p>参考価格〇〇〇円</p>
-                        <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                        <!-- CSS。もっと見ると合わせる？ -->
-                        <a href="http://">【ブログ】行ってみたんよへ</a>
-                    </section>
+                    <!-- 画像左と文字を横に並べる。CSS -->
+                    <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
+                    <h4>ぶりぶり丼</h4>
+                    <p>1,580円</p>
+                    <p>徳島県産を使用しております</p>
+                    <!-- CSS。もっと見ると合わせる？ -->
+                    <a href="http://">【ブログ】行ってみたんよへ</a>
                 </section>
 
                 <section>
-                    <!-- 画像と文字を重ねる。CSS -->
-                    <h3>体験</h3>
-                    <img src="https://placehold.jp/1000x400.png" width="1000" height="400" alt="美味しい〇〇〇（各グルメの名前）">
-                    <p>
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
+                    <h4>極細けんぴ</h4>
+                    <p>580円</p>
+                    <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <!-- CSS。もっと見ると合わせる？ -->
+                    <a href="http://">【ブログ】行ってみたんよへ</a>
+                </section>
+
+                <section>
+                    <!-- 画像左と文字を横に並べる。CSS -->
+                    <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各グルメの名前）">
+                    <h4>商品名〇〇〇</h4>
+                    <p>参考価格〇〇〇円</p>
+                    <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <!-- CSS。もっと見ると合わせる？ -->
+                    <a href="http://">【ブログ】行ってみたんよへ</a>
+                </section>
+
+            </section>
+
+            <section>
+                <!-- 画像と文字を重ねる。CSS -->
+                <h3>お土産</h3>
+                <section>
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各お土産の名前）">
+                    <h4>商品名〇〇〇</h4>
+                    <p>参考価格〇〇〇円</p>
+                    <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <!-- CSS。もっと見ると合わせる？ -->
+                    <a href="http://">【ブログ】行ってみたんよへ</a>
+                </section>
+
+                <section>
+                    <!-- 画像左と文字を横に並べる。CSS -->
+                    <img src="https://placehold.jp/530x500.png" width="530" height="500" alt="美味しい〇〇〇（各お土産の名前）">
+                    <h4>商品名〇〇〇</h4>
+                    <p>参考価格〇〇〇円</p>
+                    <p>300文字テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <!-- CSS。もっと見ると合わせる？ -->
+                    <a href="http://">【ブログ】行ってみたんよへ</a>
+                </section>
+            </section>
+
+            <section>
+                <!-- 画像と文字を重ねる。CSS -->
+                <h3>体験</h3>
+                <img src="https://placehold.jp/1000x400.png" width="1000" height="400" alt="美味しい〇〇〇（各グルメの名前）">
+                <p>
                     概要テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト概要テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト概要テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                 </p>
-                    <a href="#">
-                        <img src="https://placehold.jp/552x368.png" width="552" height="368" alt="体験ブログの記事">
-                    </a>
-                </section>
+                <a href="#">
+                    <img src="https://placehold.jp/552x368.png" width="552" height="368" alt="体験ブログの記事">
+                </a>
             </section>
+        </section>
 
-            <section>
-                <h3>基本情報</h3>
-                <h4>道の駅　○○○</h4>
-                <!-- dtとdd１セットのみdivでくくれる。１２０ｐ -->
-                <dl>
-                    <dt>〒777-0000</dt>
-                    <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
+        <section>
+            <h3>基本情報</h3>
+            <h4>道の駅　○○○</h4>
+            <!-- dtとdd１セットのみdivでくくれる。１２０ｐ -->
+            <dl>
+                <dt>〒777-0000</dt>
+                <dd>徳島市○○町○○丁目○ー○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
 
-                    <dt>TEL：</dt>
-                    <dd>088‐000‐0000</dd>
+                <dt>TEL：</dt>
+                <dd>088‐000‐0000</dd>
 
-                    <dt>公式URL：</dt>
-                    <dd>https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
+                <dt>公式URL：</dt>
+                <dd>https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
 
-                    <dt>SNS：</dt>
-                    <dd>https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
+                <dt>SNS：</dt>
+                <dd>https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○https://www.michinoeki.com○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
 
-                    <dt>営業時間：</dt>
-                    <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
+                <dt>営業時間：</dt>
+                <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time></dd>
 
-                    <dt>定休日：</dt>
-                    <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time>
-                    </dd>
+                <dt>定休日：</dt>
+                <dd><time>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</time>
+                </dd>
 
-                    <dt>駐車場：</dt>
-                    <dd>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
+                <dt>駐車場：</dt>
+                <dd>○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○</dd>
 
-                    <dt>設備：</dt>
-                    <dd>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <BR>
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                        <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
-                    </dd>
-                </dl>
+                <dt>設備：</dt>
+                <dd>
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <BR>
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                    <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
+                </dd>
+            </dl>
 
-                <p><strong>★お気に入りを押したらお気に入りページに登録されます！</strong></p>
-                <p><a href="#">登録する（マイクロコピー）</a></p>
+            <p><strong>★お気に入りを押したらお気に入りページに登録されます！</strong></p>
+            <p><a href="#">登録する（マイクロコピー）</a></p>
 
-                <!-- マップ。SPはw360h280 -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.533509598061!2d134.5772079762422!3d34.15827496212325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536fda4ddf71ff%3A0xc5ce5c88e1a48d83!2z6YGT44Gu6aeFIOOBj-OCi-OBj-OCi-OBquOCi-OBqA!5e0!3m2!1sja!2sjp!4v1685414674912!5m2!1sja!2sjp" width="1440" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="道の駅〇〇〇の地図" loading="lazy"></iframe>
-            </section>
-        </main>
-    </div>
+            <!-- マップ。SPはw360h280 -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.533509598061!2d134.5772079762422!3d34.15827496212325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536fda4ddf71ff%3A0xc5ce5c88e1a48d83!2z6YGT44Gu6aeFIOOBj-OCi-OBj-OCi-OBquOCi-OBqA!5e0!3m2!1sja!2sjp!4v1685414674912!5m2!1sja!2sjp" width="1440" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="道の駅〇〇〇の地図" loading="lazy"></iframe>
+        </section>
+    </main>
 
     <footer>
         <ul>
-            <li><a href="station_list.html">道の駅一覧</a></li>
-            <li><a href="station_area.html">エリア検索</a></li>
-            <li><a href="station_detail.html">詳細検索</a></li>
-            <li><a href="goods_list.html">特産品</a></li>
-            <li><a href="activity_list.html">体験</a></li>
-            <li><a href="blog_list.html">行ってみたんよ</a></li>
-            <li><a href="like.html">お気に入り</a></li>
+            <li><a href="../html/station_list.html">道の駅一覧</a></li>
+            <li><a href="../html/station_area.html">エリア検索</a></li>
+            <li><a href="../html/station_detail.html">詳細検索</a></li>
+            <li><a href="../html/goods_list.html">特産品</a></li>
+            <li><a href="../html/activity_list.html">体験</a></li>
+            <li><a href="../html/blog_list.html">行ってみたんよ</a></li>
+            <li><a href="../html/like.html">お気に入り</a></li>
         </ul>
     </footer>
 
