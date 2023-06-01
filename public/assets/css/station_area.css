@@ -22,6 +22,10 @@ h3 {
     padding-bottom: 2rem;
 }
 
+.search_results {
+    margin-bottom: 40px;
+}
+
 .kv img {
     margin: 0 auto;
     object-fit: cover;
@@ -37,7 +41,15 @@ h3 {
     gap: 40px;
     margin: 0 auto;
     padding: 80px;
+    justify-content: space-evenly;
+}
 
+.area>h3 {
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 20px;
+    color: #ffff;
+    background-color: #ccc;
 }
 
 dt {
