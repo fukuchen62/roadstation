@@ -74,13 +74,6 @@ h2 {
 
 }
 
-.roadstation-name {
-    border: 1px solid #000;
-    border-radius: 50px;
-}
-
-
-
 .blog-btn {
     text-align: center;
     margin: 0 auto;
@@ -90,7 +83,7 @@ h2 {
     max-width: 320px;
     height: auto;
     text-align: center;
-    margin: 0 auto;
+    margin: 30px auto 10px auto;
 }
 
 /* PC(デスクトップサイズ) */
