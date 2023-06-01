@@ -60,11 +60,6 @@ header {
     align-items: flex-end;
 }
 
-.blog-btn img {
-    max-width: 320px;
-    height: auto;
-    object-fit: cover;
-}
 
 /* nav_menu */
 .nav-pc {
@@ -151,6 +146,16 @@ header {
     transform: translate(-7px, -17px) rotate(-45deg);
 }
 
+.blog-btn {
+    text-align: center;
+}
+
+.blog-btn img {
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
 /* footer */
 footer {
     min-width: 320px;
@@ -171,6 +176,7 @@ footer li {
     margin: 0 auto;
     line-height: 2rem;
 }
+
 
 
 /* PC(デスクトップサイズ) */
@@ -230,6 +236,17 @@ footer li {
 
     .nav-pc li {
         font-size: 20px;
+    }
+
+    .blog-btn {
+        text-align: center;
+
+    }
+
+    .blog-btn img {
+        max-width: 700px;
+        height: auto;
+
     }
 
     footer li {

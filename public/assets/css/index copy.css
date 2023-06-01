@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+.wrapper {
+    padding: 0;
+    margin-top: 1000px;
+}
+
+.kv {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
 
 .news-title {
     margin-bottom: 30px;
@@ -33,41 +44,45 @@
     max-width: 360px;
     width: 100%;
     height: auto;
+}
 
+/* 徳島のエリアマップ */
+.map {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.map a {
+    position: absolute;
+    padding: 4%;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.east {
+    top: 30%;
+    left: 52%;
+}
+
+.west {
+    top: 35%;
+    left: 30%;
+}
+
+.south {
+    top: 55%;
+    left: 46%;
 }
 
 .area {
     text-align: center;
 }
 
-.east {
-    position: absolute;
-    background-color: #ffff;
-    border-radius: 50%;
-    padding: 20px;
-    top: 550px;
-    left: 200px;
+.area-map {
+    text-align: center;
 }
-
-.west {
-    position: absolute;
-    background-color: #ffff;
-    border-radius: 50%;
-    padding: 20px;
-    top: 565px;
-    left: 80px;
-}
-
-
-.south {
-    position: absolute;
-    background-color: #ffff;
-    border-radius: 50%;
-    padding: 20px;
-    top: 630px;
-    left: 173px;
-}
-
 
 .station_detail {
     text-align: center;
@@ -99,7 +114,6 @@
     align-items: center;
     height: 100%;
     text-align: center;
-
 }
 
 .goods {
@@ -291,7 +305,7 @@ imgcontent-wrapper .heading {
 
 .blog-btn {
     text-align: center;
-
+    margin-bottom: 5%;
 }
 
 .blog-btn img {
@@ -339,49 +353,31 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-
-
-
     .tokusimamap {
         margin: 0 auto;
         max-width: 761px;
         width: 100%;
         height: auto;
+    }
 
+    .east {
+        top: 30%;
+        left: 60%;
+    }
+
+    .west {
+        top: 40%;
+        left: 20%;
+    }
+
+    .south {
+        top: 60%;
+        left: 50%;
     }
 
     .area {
         text-align: center;
     }
-
-    .east {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 50%;
-        padding: 20px;
-        top: 580px;
-        left: 490px;
-    }
-
-    .west {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 50%;
-        padding: 20px;
-        top: 680px;
-        left: 200px;
-    }
-
-
-    .south {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 50%;
-        padding: 20px;
-        top: 850px;
-        left: 380px;
-    }
-
 
     .station_detail {
         text-align: center;
@@ -615,23 +611,10 @@ imgcontent-wrapper .heading {
         width: 80%;
     }
 
-    .blog-btn {
-        text-align: center;
-
-    }
-
-    .blog-btn img {
-        max-width: 320px;
-        height: auto;
-        object-fit: cover;
-    }
-
-
-
 }
 
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:901px) {
 
 
     .news-title {
@@ -679,36 +662,23 @@ imgcontent-wrapper .heading {
 
     }
 
-    .area {
-        text-align: center;
-    }
-
     .east {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 50%;
-        padding: 20px;
-        top: 580px;
-        left: 490px;
+        top: 30%;
+        left: 60%;
     }
 
     .west {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 50%;
-        padding: 20px;
-        top: 680px;
-        left: 200px;
+        top: 40%;
+        left: 20%;
     }
 
-
     .south {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 50%;
-        padding: 20px;
-        top: 850px;
-        left: 380px;
+        top: 60%;
+        left: 50%;
+    }
+
+    .area {
+        text-align: center;
     }
 
 
@@ -945,14 +915,11 @@ imgcontent-wrapper .heading {
 
     .blog-btn {
         text-align: center;
-
     }
 
     .blog-btn img {
         max-width: 700px;
         height: auto;
-
+        object-fit: cover;
     }
-
-
 }
