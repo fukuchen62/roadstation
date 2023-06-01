@@ -12,6 +12,9 @@ class BlogController extends Controller
     {
         // $items = Blog::all();
 
+        /**
+         * データから指定のidを基に記事を取得する処理
+         */
         $items = Blog::where('id', $request->id)
             ->get();
 
@@ -26,7 +29,7 @@ class BlogController extends Controller
     {
 
         /**
-         * 表示可能の記事からデータを取得する処理
+         * データから表示可能の記事を取得する処理
          */
         $items = Blog::where('is_show','1')->get();
 
@@ -37,12 +40,17 @@ class BlogController extends Controller
         return view('fronts.blog_list',$data);
     }
 
-    public function blogs(){
+    /**
+     * blogs_tableの全てのデータを配列にしてブログ記事に渡す処理
+     *
+     * @return void
+     */
+    // public function blogs(){
 
-        $blogs = App\blogs::all();
+    //     $blogs = App\blogs::all();
 
-        return view('article',compact('$blogs'));
-    }
+    //     return view('article',compact('$blogs'));
+    // }
 
     /**
      * ページネーションを表示する処理

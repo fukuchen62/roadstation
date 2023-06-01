@@ -26,7 +26,7 @@
                     {{-- <a href="{{ url('blog') }}?id={{ $blog_categories[1]->id }}">
                         体験
                     </a> --}}
-                    {{-- 上手くいかない場合、$url = route('routeName', ['id' => 1]); --}}
+                    {{-- 上手くいかない場合、$url = route('routeName', ['id' => 1]); または {{ $blog->blogCategory->getName() }}--}}
                 </li>
                 <li>
                     <a href="">
