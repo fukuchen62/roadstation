@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('area_id')->nullable(false);
             $table->string('catchphrase', 50)->nullable(true);
             $table->string('review', 100)->nullable(true);
+            $table->string('overview', 200)->nullable(true);
             $table->string('discription', 500)->nullable(true);
             $table->char('zip_code', 8)->nullable(true);
             $table->string('address', 100)->nullable(true);
