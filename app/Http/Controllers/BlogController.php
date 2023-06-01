@@ -10,7 +10,10 @@ class BlogController extends Controller
 {
         public function blogMainView(Request $request)
     {
-        $items = Blog::all();
+        // $items = Blog::all();
+
+        $items = Blog::where('id', $request->id)
+            ->get();
 
         $data = [
             'blogs' => $items,
@@ -21,11 +24,6 @@ class BlogController extends Controller
 
         public function blogListSearch(Request $request)
     {
-        // $items = Blog::all();
-        // $data = [
-        //     'blogs' => $items,
-        // ];
-        // return view('fronts.blog_list',$data);
 
         /**
          * 表示可能の記事からデータを取得する処理
@@ -45,5 +43,19 @@ class BlogController extends Controller
 
         return view('article',compact('$blogs'));
     }
+
+    /**
+     * ページネーションを表示する処理
+     *
+     * @param Request $request
+     * @return void
+     */
+    // public function page(Request $request)
+    // {
+
+    //     $items = Blog::simplePaginate(6);
+
+    //     return view('blog', ['items' => $items ]);
+    // }
     
 }

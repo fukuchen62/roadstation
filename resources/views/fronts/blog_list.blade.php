@@ -8,7 +8,7 @@
 
 
     @foreach ($blogs as $blog)
-        <a href="">
+        <a href="{{ url('blog-detail') }}?id={{ $blog->id }}">
             <h2>{{ $blog->title }}</h2>
             <p>内 容：{!! $blog->content !!}</p>
             {{-- <p>画像：</p>{{ roadstation/storage/app/ }}  --}}
@@ -23,7 +23,7 @@
         </h3>
             <ul>
                 <li>
-                    <a href="">
+                    {{-- <a href="{{ route('ルート名',['パラメータ名'=>'値']) }}"> --}}
                         体験
                     </a>
                 </li>
@@ -50,4 +50,5 @@
             </ul>
     </div>
 
+    {{-- {{ $items->links() }} --}}
 @endsection

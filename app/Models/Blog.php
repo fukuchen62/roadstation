@@ -34,4 +34,6 @@ class Blog extends Model
     public function getName(){
         return $this->title;
     }
+
+
 }
