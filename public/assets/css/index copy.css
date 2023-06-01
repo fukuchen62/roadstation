@@ -19,6 +19,12 @@
     background-size: cover;
 }
 
+.sp-h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 30%;
+}
+
 .news-title {
     margin-bottom: 30px;
 }
@@ -625,9 +631,36 @@ imgcontent-wrapper .heading {
 
 @media screen and (min-width:901px) {
 
+    .wrapper {
+        margin-top: 830px;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    #global-nav {
+        position: static;
+        top: -100px;
+        transition: all 0.6s ease 0s;
+    }
+
+    /* ヘッダーの固定 */
+    #global-nav.m_fixed {
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fffcef;
+        /* background-color: #fffcef; */
+        z-index: 999;
+    }
+
+
+
     .sp-h2 {
         color: #ffffff;
-        padding-top: 10%;
+        margin-top: 10%;
     }
 
     .news-title {
@@ -673,7 +706,7 @@ imgcontent-wrapper .heading {
     }
 
     .east {
-        top: 30%;
+        top: 20%;
         left: 57%;
     }
 
