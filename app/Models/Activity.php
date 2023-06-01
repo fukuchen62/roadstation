@@ -14,7 +14,10 @@ class Activity extends Model
     //     return $this->belongsTo('App\Models\User');
     // }
 
-        public function blogs(){
+    /**
+     * ブログモデルとリレーション
+     */
+    public function blog(){
 
         return $this->belongsTo('App\Models\Blog');
     }

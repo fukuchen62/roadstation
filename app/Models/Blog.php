@@ -19,13 +19,19 @@ class Blog extends Model
 
     protected $table = 'blogs';
     
+    /**
+     * アクティビティとリレーション
+     */
+    public function activity(){
+        return $this->hasone(activity::class);
+    }
+
         /**
-         * アクティビティとのリレーション
-         *
-         * @return void
-         */
-        public function activity(){
-            
-        return $this->hasone(Brog::class);
+     * 記事タイトルをビュー（アクティビティ）に送るメソッド
+     *
+     * @return void
+     */
+    public function getName(){
+        return $this->title;
     }
 }

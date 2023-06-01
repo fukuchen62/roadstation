@@ -25,11 +25,11 @@
 
 
     {{--  体験したブログ記事の表示部分  --}}
-    {{-- <h3>体験したブログ記事</h3>
-    @foreach ($blogs as $blog)
+    <h3>体験したブログ記事</h3>
+    @foreach ($activities as $activity)
         <ul>
-            <li><a href="">{{ $blog->blogCategory->getName() }}</a></li>
+            <li><a href="">{{ $activity->blog->getName() }}</a></li>
         </ul>
-    @endforeach --}}
+    @endforeach
 
 @endsection
