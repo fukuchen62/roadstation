@@ -17,44 +17,45 @@
 
 {{-- メイン --}}
 @section('content')
-
-    <section class="titlesection">
-        <div class="titlesection__box">
-            <h1 class="pagetitle">
-                @foreach ($road_stations as $val)
+    @foreach ($road_stations as $val)
+        <section class="titlesection">
+            <div class="titlesection__box">
+                <h1 class="pagetitle">
                     {{ $val->station_name }}
-                @endforeach
-
-            </h1>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="station_pic">
-            <p>
-                @foreach ($road_stations as $val)
-                    {{ $val->catchphrase }}
-                @endforeach
-            </p>
-        </div>
-        <div class="discription">
-            <h2>
-                @foreach ($road_stations as $val)
-                    {{ $val->discription }}
-                @endforeach
-            </h2>
-        </div>
-        <div class="review">
-            <img src="{{ asset('assets/images/cat1.jpg') }}" alt="human" class="review_img">
-            <div class="gray_box">
-                <p>
-                    @foreach ($road_stations as $val)
-                        {{ $val->review }}
-                    @endforeach
-                </p>
+                </h1>
             </div>
-    </section>
+        </section>
 
+        <section class="section">
+            <div class="station_img">
+                <img src="{{ asset('/storage/imgs/' . $val->picture1) }}" alt="トップ">
+                <div>
+                    <p class="catchphrase">
+                        {!! $val->catchphrase !!}
+                    </p>
+                </div>
+            </div>
+            <div class="discription">
+                <h2>
+                    {!! $val->discription !!}
+                </h2>
+            </div>
+            <div class="review">
+                <img src="{{ asset('assets/images/cat1.jpg') }}" alt="human" class="review_img">
+                <div class="gray_box">
+                    <p>
+                        {{ $val->review }}
+                    </p>
+                </div>
+                {{-- <img src="{{ asset('/storage/images/' . $goods->picture) }}" alt="ダミー" class="detailimg"> --}}
+                {{-- imgをsrcはasset('/storage/images/'で終わり、.$gg) --}}
+        </section>
+        <section class="basic">
+            <div class="">
+                <h2>基本情報</h2>
+            </div>
+        </section>
+    @endforeach
 @endsection
 
 {{-- 該当ページ専用JS --}}
