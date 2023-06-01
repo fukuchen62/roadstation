@@ -17,12 +17,5 @@ class Blog extends Model
         return $this->belongsTo('App\Models\BlogCategory');
     }
 
-
-    
-    // public function blogCategory()
-    // {
-    //     return $this->hasOne('App\Models\BlogCategory');
-
-    
-    // }
+    protected $table = 'blogs';
 }
