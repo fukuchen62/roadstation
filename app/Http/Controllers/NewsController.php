@@ -13,7 +13,15 @@ class NewsController extends Controller
 
     public function newsMainView(Request $request)
     {
-        $items = News::all();
+
+        // $id = $request->id;
+        // $items = News::find($id);
+
+        // $items = News::all();
+
+        $items = DB::table('news')
+            ->where('id', '=', 1)
+            ->get();
 
         $data = [
             'news' => $items,

@@ -39,35 +39,11 @@ class BlogController extends Controller
         return view('fronts.blog_list',$data);
     }
 
-        //リレーションの関数名を指定
-    //     public function blogList()
-    // {
-    //         $items = items()->blog()->id;
-    //         $blogCategories = BlogCategory::where('id',$items)->get();
+    public function blogs(){
 
-    //         return view('fronts.blog_list',compact('blogCategories'));
-    // }
+        $blogs = App\blogs::all();
 
-
-        // public function categoryName(){
-        //     // $items = Blog::with(['blogCategory.blogs'])->get();
-
-        //     // $data = $items->blogCategory->blogs->category_name;
-
-        //     $items = Blog::all();
-
-        //     return view('fronts.blog_list',$items);
-        // }
-
-        // public function categoryName()
-        // {
-        //     $this->blogs = new blog();
-    
-        //     $results = $this->blogs->getCategoryNameById();
-    
-        //     return view('fronts.blog_list', compact(
-        //         'blogs',
-        //     ));
-        //}
+        return view('article',compact('$blogs'));
+    }
     
 }
