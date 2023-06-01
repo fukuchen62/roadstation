@@ -23,7 +23,7 @@
         </h3>
             <ul>
                 <li>
-                    {{-- <a href="{{ route('ルート名',['パラメータ名'=>'値']) }}"> --}}
+                    {{-- <a href="{{ url('blog') }}?id={{ $blog_categories[1]->id }}"> --}}
                         体験
                     </a>
                 </li>
