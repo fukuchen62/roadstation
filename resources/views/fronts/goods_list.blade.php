@@ -34,27 +34,26 @@
                 <tr>
                     <div class="detail">
                     <div class="detailContainer">
-                    <img src="{{ asset('storage/images/news_1_1_300×300.png')}}" alt="ダミー" class="detailimg">
-
+                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" alt="ダミー" class="detailimg">
 
                     <div class="detail_name">
-                    <td>商品名　{{ $goods->goods_name }}</td>
+                    <td>商品名　{!! $goods->goods_name !!}
                     </div>
                     <div class="detail_season">
-                    <td>旬の時期：{{ $goods->season }}</td>
+                    <td>旬の時期　{!! $goods->season !!}</td>
                     </div>
                     <div class="detail_price">
-                    <td>参考価格：{{ $goods->price }}</td>
+                    <td>参考価格：{!! $goods->price !!}円</td>
                     </div>
                     <div class="detail_usage">
-                    <td>利用方法：{{ $goods->usage }}</td>
+                    <td>利用方法：{!! $goods->usage !!}</td>
                     </div>
                     <div class="detail_discription">
                     <td>解説文：{{ $goods->discription }}</td>
                     </div>
                     <div class="detail_sub">買える道の駅</div>
                     <div class="station_list">
-                    <td>買える道の駅名：{{ $goods->station_list }}</td>
+                    <td>買える道の駅名 <?= htmlspecialchars_decode($goods->station_list); ?></td>
                     </div>
                     </div><br><br>
                     </div>

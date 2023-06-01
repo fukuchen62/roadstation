@@ -1,8 +1,106 @@
 /* 各道の駅詳細CSS */
 @charset "utf-8";
 
+section {
+    margin-bottom: 2rem;
+}
+
+iframe {
+    width: clamp(300px, 80vw, 1200px);
+    height: 30vh;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Kiwi Maru', serif;
+}
+
 .kv {
     max-width: 1200px;
     height: 400px;
     background-color: #ccc;
+}
+
+/* 人物とコメントを横並びにする */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 道の駅グルメとお土産のエリア */
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.deco-h4::after {
+    display: block;
+    content: "";
+    width: 200px;
+    height: 0;
+    border-top: solid 1px #FFA22E;
+    margin-top: 0.5rem;
+}
+
+/* .commentary {
+    margin: 0 auto;
+    text-align: justify;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text {
+    /* padding: clamp(20px, 4vw, 30px) 0; */
+    padding: 2rem 0 1rem;
+    background-color: #ffffff;
+}
+
+/* ボタン */
+.blog-btn a {
+    display: inline-block;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    height: 47px;
+    width: 330px;
+}
+
+.icon-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    max-width: 300px;
+}
+
+
+
+
+
+@media screen and (min-width:901px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .commentary .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .container>.text {
+        flex: 2;
+    }
+
+    .container>.img {
+        flex: 1;
+    }
 }
