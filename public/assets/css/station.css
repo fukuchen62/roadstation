@@ -160,6 +160,7 @@ dd {
     grid-template-columns: repeat(8, 1fr);
     gap: 10px;
     max-width: 300px;
+    justify-items: center;
 }
 
 /* 星を黄色にする */
