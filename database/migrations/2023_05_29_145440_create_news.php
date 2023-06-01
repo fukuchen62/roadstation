@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('news_category_id', 20)->nullable(false);
             $table->string('title', 32)->nullable(false);
             $table->string('station_list', 20)->nullable(true);
+            $table->string('overview', 200)->nullable(true);
             $table->text('discription')->nullable(true);
             $table->string('picture', 200)->nullable(true);
             $table->string('memo', 500)->nullable(true);

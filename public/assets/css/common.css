@@ -14,6 +14,7 @@ body {
 .wrapper {
     margin: 0 auto;
     padding: 20px;
+
 }
 
 /* フォントサイズ */
@@ -157,6 +158,8 @@ footer {
 
     /* 確認用 */
     background-color: #d3ffe3;
+
+    clear: both;
 }
 
 footer ul {

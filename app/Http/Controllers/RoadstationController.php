@@ -17,7 +17,7 @@ class RoadstationController extends Controller
         //     'road_stations' => $items,
         // ];
 
-        $name = RoadStation::where('id', 4)->get();
+        $name = RoadStation::where('id', 1)->get();
 
         $outName = [
             'road_stations' => $name,
