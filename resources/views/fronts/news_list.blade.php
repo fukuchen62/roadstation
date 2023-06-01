@@ -7,7 +7,7 @@
     <style>
         main {
             margin: 50px;
-            display: flex;
+            overflow: hidden;
         }
 
         h1 {
@@ -22,39 +22,88 @@
             margin: 10px;
         }
 
-        .card {
-            margin: 30px;
-            width: 300px;
+        .cards {
+            /* display: flex; */
+            float: left;
+            width: 1200px;
             height: auto;
+        }
+
+        .card {
+            border: 1px solid #949393;
+            padding: 20px;
+            margin: 30px 5px;
+            width: 350px;
+            height: auto;
+
+            float: left;
         }
 
         img {
             width: 300px;
             height: 300px;
+            object-fit: contain;
+        }
+
+        .category {
+            float: right;
+        }
+
+        li {
+            padding: 5px;
         }
     </style>
 @endsection
 
 @section('content')
 
+
+
     <h1>新着情報詳細ページ</h1>
 
 
-    @foreach ($news as $new)
-        <div class="card">
+    <div class="cards">
 
-            <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+        @foreach ($news as $new)
+            <a href="{{ url('news-detail') }}?id={{ $new->id }}">
 
-            <h2>{{ $new->title }} </h2>
+                <div class="card">
 
-            <p>{!! $new->overview !!}</p>
+                    <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
 
-            <small>{{ $new->created_at }}</small>
-            <span>{{ $new->news_category_id }}</span>
+                    <h2>{{ $new->title }} </h2>
+
+                    <p>{!! $new->overview !!}</p>
+
+                    <small>{{ $new->created_at }}</small>
+
+                    <span>
+                        {{ $new->news_category_id }}
+                    </span>
 
 
-        </div>
-    @endforeach
+                </div>
+
+            </a>
+        @endforeach
+
+    </div>
+
+
+    <div class="category">
+
+        <h2>カテゴリー</h2>
+
+        <ul>
+            <a href="">
+                @foreach ($news_categories as $category)
+                    <li>{{ $category->category_name }}</li>
+                @endforeach
+            </a>
+        </ul>
+    </div>
+
+
 
 
 @endsection
