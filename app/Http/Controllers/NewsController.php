@@ -11,6 +11,21 @@ use App\Models\News;
 class NewsController extends Controller
 {
 
+    public function newsListView(Request $request)
+    {
+
+
+        $items = DB::table('news')
+            ->simplePaginate(5);
+
+        $data = [
+            'news' => $items,
+        ];
+
+        return view('fronts.news_list', $data);
+    }
+
+
     public function newsMainView(Request $request)
     {
 
