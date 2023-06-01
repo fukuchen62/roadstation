@@ -16,9 +16,6 @@
             <p>登録日時：{{ $blog->created_at }}</p>
             <p>カテゴリー名：{{ $blog->blogCategory->getName() }}</p>
         </a>
-        {{-- <td>{{ $result->id }}</td>
-    <td>{{ $result->name }}</td>
-    <td>{{ $result->post_name }}</td> --}}
     @endforeach
 
 @endsection

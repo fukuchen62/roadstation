@@ -18,4 +18,14 @@ class Blog extends Model
     }
 
     protected $table = 'blogs';
+    
+        /**
+         * アクティビティとのリレーション
+         *
+         * @return void
+         */
+        public function activity(){
+            
+        return $this->hasone(Brog::class);
+    }
 }

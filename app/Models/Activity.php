@@ -9,8 +9,15 @@ class Activity extends Model
 {
     //use HasFactory;
 
-    public function activities()
-    {
-        return $this->belongsTo('App\Models\User');
+    // public function activities()
+    // {
+    //     return $this->belongsTo('App\Models\User');
+    // }
+
+        public function blogs(){
+
+        return $this->belongsTo('App\Models\Blog');
     }
+
+    protected $table = 'activities';
 }
