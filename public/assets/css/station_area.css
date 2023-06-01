@@ -8,10 +8,18 @@ h4,
     text-align: center;
 }
 
+.card>img {
+    border-radius: 20px;
+}
+
+.erea_category {
+    margin: 0 auto;
+    margin-top: 250px;
+}
 
 h3 {
     font-size: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 .kv img {
@@ -20,6 +28,8 @@ h3 {
     position: absolute;
     width: 100%;
     height: 100px;
+    float: left;
+
 }
 
 .area {
@@ -27,6 +37,7 @@ h3 {
     gap: 40px;
     margin: 0 auto;
     padding: 80px;
+
 }
 
 dt {
@@ -52,6 +63,7 @@ dd img {
     margin: 0 auto;
     margin-bottom: 40px;
     word-break: break-word;
+    border-radius: 20px;
 }
 
 
@@ -60,6 +72,7 @@ dd img {
     padding: 5px 10px;
     display: inline-block;
     text-align: center;
+
 }
 
 
