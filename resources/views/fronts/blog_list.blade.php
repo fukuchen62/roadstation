@@ -23,9 +23,9 @@
         </h3>
             <ul>
                 <li>
-                    {{-- <a href="{{ url('blog') }}?id={{ $blog_categories[1]->id }}"> --}}
+                    {{-- <a href="{{ url('blog') }}?id={{ $blog_categories[1]->id }}">
                         体験
-                    </a>
+                    </a> --}}
                 </li>
                 <li>
                     <a href="">
