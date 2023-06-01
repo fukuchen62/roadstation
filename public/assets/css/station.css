@@ -5,14 +5,31 @@ section {
     margin-bottom: 2rem;
 }
 
+/* グーグルマップ */
 iframe {
     width: clamp(300px, 80vw, 1200px);
     height: 30vh;
+    margin-top: 1.25rem;
 }
 
+h3 {
+    font-size: 2rem;
+    font-family: 'Kiwi Maru',
+        serif;
+}
+
+
 h4 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Kiwi Maru', serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.width {
+    margin-bottom: 1.25rem;
 }
 
 .kv {
@@ -21,11 +38,38 @@ h4 {
     background-color: #ccc;
 }
 
-/* 人物とコメントを横並びにする */
+/* 人とコメント */
 .flex {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
+    width: clamp(320px, 100%, 1000px);
+}
+
+.speech {
+    position: relative;
+    display: inline-block;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 20px;
+    min-width: 120px;
+    max-width: 100%;
+    background: #ccc;
+}
+
+.speech:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #ccc;
+}
+
+.speech p {
+    margin: 0;
+    padding: 0;
 }
 
 /* 道の駅グルメとお土産のエリア */
@@ -38,26 +82,27 @@ h4 {
 .deco-h4::after {
     display: block;
     content: "";
-    width: 200px;
+    width: 70%;
     height: 0;
-    border-top: solid 1px #FFA22E;
+    border-top: solid 3px #1ca10a;
     margin-top: 0.5rem;
 }
 
-/* .commentary {
-    margin: 0 auto;
-    text-align: justify;
-} */
+.commentary {
+    margin-bottom: 3rem;
+}
 
 .container {
     display: flex;
     flex-direction: column;
+    margin: auto;
     gap: 20px;
 }
 
 .text {
     /* padding: clamp(20px, 4vw, 30px) 0; */
-    padding: 2rem 0 1rem;
+    padding: 2.5rem;
+
     background-color: #ffffff;
 }
 
@@ -75,6 +120,12 @@ h4 {
     width: 330px;
 }
 
+/* 基本情報の枠 */
+.item {
+    background-color: #ccc;
+}
+
+/* アイコンの幅調整 */
 .icon-wrapper {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
