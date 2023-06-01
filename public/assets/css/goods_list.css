@@ -67,11 +67,15 @@ h2 {
 
 .roadstation-frame {
     display: flex;
-    justify-content: flex-start;
-    gap: 30px 25px;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
     text-align: center;
 
+}
+
+.roadstation-name{
+width: 160px;
 }
 
 .blog-btn {
