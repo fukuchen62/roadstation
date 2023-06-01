@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('blog_category_id')->nullable(false);
             $table->string('title', 50)->nullable(false);
             $table->string('user_name', 10)->nullable(true);
+            $table->string('overview', 200)->nullable(true);
             $table->text('content')->nullable(true);
             $table->integer('road_station_id')->nullable(true);
             $table->string('special_goods_id', 50)->nullable(true);
