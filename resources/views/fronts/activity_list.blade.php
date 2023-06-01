@@ -19,9 +19,11 @@
 
     {{--  体験できる道の駅の表示部分  --}}
     <h3>体験できる道の駅</h3>
-    {{-- @foreach ($road_stations as $road_station)
-
-    @endforeach --}}
+    @foreach ($activities as $activity)
+        <ul>
+            <li><a href="">{{ $activity->roadstation->getName() }}</a></li>
+        </ul>
+    @endforeach
 
 
     {{--  体験したブログ記事の表示部分  --}}

@@ -22,5 +22,15 @@ class Activity extends Model
         return $this->belongsTo('App\Models\Blog');
     }
 
+    //protected $table = 'activities';
+
+    /**
+     * ロードステーションモデルとリレーション
+     */
+    public function roadStation(){
+
+        return $this->belongsTo('App\Models\RoadStation');
+    }
+
     protected $table = 'activities';
 }
