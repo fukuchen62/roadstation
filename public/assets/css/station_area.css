@@ -8,11 +8,51 @@ h4,
     text-align: center;
 }
 
+
+h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.kv img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.area {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+    padding: 80px;
+}
+
+dt {
+    padding-top: 10px;
+}
+
+dd img {
+    padding: 2px 2px;
+}
+
+
+
+
+.card-list {
+    display: flex;
+}
+
 .card {
     border: 1px solid;
-    width: 306px;
+    width: 300px;
+    /* width: 306px; */
     height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    word-break: break-word;
 }
+
+
 
 .more {
     border: 1px solid;

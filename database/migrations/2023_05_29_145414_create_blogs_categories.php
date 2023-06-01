@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs_categories', function (Blueprint $table) {
-            $table->integer('category_id');
+        Schema::create('blog_categories', function (Blueprint $table) {
+            $table->integer('id');
             $table->string('category_name', 10);
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('blogs_categories');
+        Schema::dropIfExists('blog_categories');
     }
 };

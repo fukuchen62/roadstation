@@ -15,20 +15,24 @@
                 <th>タイトル</th>
                 <th>道の駅ID</th>
                 <th>解説テキスト</th>
-                {{-- <th>画像ファイル</th> --}}
+                <th>画像ファイル</th>
             </tr>
         </thead>
 
         <tbody>
             @foreach ($news as $new)
                 <tr>
-                    <td>{{ $new->category_id }}</td>
+                    <td>{{ $new->news_category_id }}</td>
                     <td>{{ $new->title }}</td>
                     <td>{{ $new->station_list }}</td>
-                    <td>{{ $new->discription }}</td>
-                    {{-- <td>{{ $new->title }}</td> --}}
+                    <td>{!! $new->discription !!}</td>
+                    <td>
+                        <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+                    </td>
                 </tr>
             @endforeach
         </tbody>
 
     </table>
+
+@endsection

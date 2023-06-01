@@ -30,7 +30,7 @@ h2 {
 p {
     line-height: 1.5rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 }
 
 a {
@@ -48,6 +48,8 @@ header {
     /* 確認用 */
     background-color: #e6e6e6;
 }
+
+
 
 .icon {
     width: 30px;
@@ -79,6 +81,7 @@ header {
     background: #ffffff;
     box-sizing: border-box;
     opacity: 0.9;
+    z-index: 100;
 }
 
 #wrapper nav ul li {
@@ -96,7 +99,7 @@ header {
     right: 20px;
     width: 30px;
     height: 24px;
-    z-index: 3;
+    z-index: 200;
     box-sizing: border-box;
     cursor: pointer;
     -webkit-transition: all 400ms;
@@ -174,6 +177,12 @@ footer li {
 
         /* 確認用 */
         background-color: #e6e6e6;
+    }
+
+    .sp-kv {
+        width: 100%;
+        height: 200px;
+        background-image: url(https://placehold.jp/1980x200.png);
     }
 
     .btn-gnavi {

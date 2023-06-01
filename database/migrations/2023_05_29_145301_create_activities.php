@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('business_hours', 200)->nullable(true);
             $table->string('price', 100)->nullable(true);
             $table->string('conditions', 500)->nullable(true);
-            $table->integer('roadstation_id')->nullable(true);
+            $table->integer('road_station_id')->nullable(true);
             $table->integer('blog_id')->nullable(true);
             $table->string('picture1', 200)->nullable(true);
             $table->string('picture2', 200)->nullable(true);
