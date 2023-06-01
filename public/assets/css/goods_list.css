@@ -67,19 +67,16 @@ h2 {
 
 .roadstation-frame {
     display: flex;
-    justify-content: flex-start;
-    gap: 30px 25px;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
     text-align: center;
 
 }
 
-.roadstation-name {
-    border: 1px solid #000;
-    border-radius: 50px;
+.roadstation-name{
+width: 160px;
 }
-
-
 
 .blog-btn {
     text-align: center;
@@ -90,7 +87,7 @@ h2 {
     max-width: 320px;
     height: auto;
     text-align: center;
-    margin: 0 auto;
+    margin: 30px auto 10px auto;
 }
 
 /* PC(デスクトップサイズ) */

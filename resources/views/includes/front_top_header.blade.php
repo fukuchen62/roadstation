@@ -14,25 +14,25 @@
 
         <ul class="header__box flex">
             <li class="g-nav">
-                <a href="{{ route('top') }}">道の駅一覧</a>
+                <a href="{{ url('station-list') }}">道の駅一覧</a>
             </li>
             <li class="g-nav">
-                <a href="{{ route('top') }}">地域検索</a>
+                <a href="{{ url('area-search') }}">地域検索</a>
             </li>
             <li class="g-nav">
-                <a href="{{ route('top') }}">詳細検索</a>
+                <a href="{{ url('detail-search') }}">詳細検索</a>
             </li>
             <li class="g-nav">
-                <a href="{{ route('top') }}">特産品</a>
+                <a href="{{ url('specialty-goods') }}">特産品</a>
             </li>
             <li class="g-nav">
-                <a href="{{ route('top') }}">体験</a>
+                <a href="{{ url('activities') }}">体験</a>
             </li>
             <li class="g-nav">
-                <a href="{{ route('top') }}">ブログ</a>
+                <a href="{{ url('blog') }}">ブログ</a>
             </li>
             <li class="g-nav">
-                <a href="{{ route('top') }}">新着ニュース</a>
+                <a href="{{ url('news') }}">新着ニュース</a>
             </li>
             <li class="g-nav">
                 <a href="{{ route('top') }}">お気に入り</a>
