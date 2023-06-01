@@ -16,7 +16,7 @@ class NewsController extends Controller
 
 
         $items = DB::table('news')
-            ->simplePaginate(5);
+            ->simplePaginate(6);
 
         $data = [
             'news' => $items,

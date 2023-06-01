@@ -7,6 +7,7 @@
     <style>
         main {
             margin: 50px;
+            display: flex;
         }
 
         h1 {
