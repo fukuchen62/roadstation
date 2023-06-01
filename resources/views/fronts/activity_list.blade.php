@@ -19,18 +19,17 @@
 
     {{--  体験できる道の駅の表示部分  --}}
     <h3>体験できる道の駅</h3>
-    @foreach ($road_stations as $road_station)
+    {{-- @foreach ($road_stations as $road_station)
 
-    @endforeach
+    @endforeach --}}
 
-    @endforeach
 
     {{--  体験したブログ記事の表示部分  --}}
-    <h3>体験したブログ記事</h3>
+    {{-- <h3>体験したブログ記事</h3>
     @foreach ($blogs as $blog)
         <ul>
             <li><a href="">{{ $blog->blogCategory->getName() }}</a></li>
         </ul>
-    @endforeach
+    @endforeach --}}
 
 @endsection
