@@ -7,7 +7,7 @@ use App\Models\News;
 
 class TopController extends Controller
 {
-    public function indexView(Request $request)
+    public function index(Request $request)
     {
         $items = News::orderBy('id', 'asc')
             ->orderBy('id', 'asc')
