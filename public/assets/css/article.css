@@ -16,22 +16,6 @@
     margin-bottom: 30px;
 }
 
-/* .date {
-} */
-
-.blog-img {
-
-    object-fit: cover;
-}
-
-.blog-text {
-    text-align: start;
-    margin-bottom: 50px;
-
-}
-
-
-
 
 
 .blog-img {
@@ -47,12 +31,18 @@
 
 .address {
     text-align: start;
-    font-size: 12px;
+    font-size: 1px;
     margin-bottom: 50px;
+    font-size: 14px;
 }
 
 .relatedarticle {
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.relatedarticle-title {
+    margin-bottom: 20px;
 }
 
 
@@ -63,6 +53,134 @@
 }
 
 
+.before-next-pcbtn {
+
+    display: none;
+
+}
+
+.before-next-mobilebtn {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width:761px) {
+
+
+    .blog-banner {
+        max-width: 761px;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+
+    .back-btn {
+        margin-bottom: 50px;
+    }
+
+    .blog-title {
+        margin-bottom: 30px;
+    }
+
+    /* .date {
+} */
+
+    .blog-img {
+
+        object-fit: cover;
+    }
+
+    .blog-text {
+        text-align: start;
+        margin-bottom: 50px;
+
+    }
+
+
+
+
+
+    .blog-img {
+        max-width: 761px;
+        height: auto;
+        width: 100%;
+
+    }
+
+    .blogarticle {
+        text-align: center;
+    }
+
+    .address {
+        text-align: start;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .relatedarticle {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+
+    .relatedarticle-title {
+        margin-bottom: 20px;
+    }
+
+
+    .relatedarticle {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 50px;
+        justify-content: center;
+
+
+    }
+
+
+
+    .relatedarticle-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .before-nextbtn {
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: center;
+        gap: 50px;
+
+    }
+
+
+    .before-next-pcbtn {
+
+        display: none;
+
+    }
+
+    .before-next-mobilebtn {
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+
+
+
+
+
+
+
+}
 
 @media screen and (min-width:901px) {
 
@@ -120,6 +238,7 @@
     .address {
         text-align: start;
         margin-bottom: 50px;
+        font-size: 16px;
 
 
     }
@@ -144,13 +263,18 @@
 
     }
 
-    .before-nextbtn {
+    .before-next-pcbtn {
         display: flex;
-        /* justify-content: space-between; */
         justify-content: center;
         gap: 50px;
+        margin-bottom: 50px;
 
     }
+
+    .before-next-mobilebtn {
+        display: none;
+    }
+
 
     .side {
         width: 45%;
