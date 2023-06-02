@@ -10,14 +10,14 @@ class Blog extends Model
     //use HasFactory;
 
     /**
-     * カテゴリーとのリレーション
+     * カテゴリーとリレーション
      */
     public function blogCategory(){
 
         return $this->belongsTo('App\Models\BlogCategory');
     }
 
-    protected $table = 'blogs';
+    // protected $table = 'blogs';
     
     /**
      * アクティビティとリレーション
@@ -35,5 +35,15 @@ class Blog extends Model
         return $this->title;
     }
 
+
+    /**
+     * ロードステーションとリレーション
+     */
+    public function roadStation(){
+
+        return $this->belongsTo('App\Models\RoadStation');
+    }
+
+    protected $table = 'blogs';
 
 }

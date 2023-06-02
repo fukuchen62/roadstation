@@ -27,4 +27,12 @@ class RoadstationController extends Controller
         // return view('fronts.station_detail', $data, $outName);
         return view('fronts.station_detail', $data);
     }
+    public function stationListView(Request $request)
+    {
+        $items = RoadStation::get();
+        $data = [
+            'road_stations' => $items,
+        ];
+        return view('fronts.station_list', $data);
+    }
 }
