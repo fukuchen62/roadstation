@@ -39,7 +39,7 @@ class Blog extends Model
     /**
      * ロードステーションとリレーション
      */
-    public function roadstation(){
+    public function roadStation(){
 
         return $this->belongsTo('App\Models\RoadStation');
     }
