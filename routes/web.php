@@ -27,8 +27,10 @@ use Illuminate\Support\Facades\Auth;
 // })->name('top');
 
 
+Route::get('/', [App\Http\Controllers\TopController::class, 'index'])->name('top');
 
-// Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('top');
+
+
 
 Auth::routes();
 
@@ -56,12 +58,7 @@ Route::get(
 // ---------------------- frontPage -----------------------
 
 
-// ************* TOPページ *************
 
-Route::get(
-    '/',
-    'App\Http\Controllers\TopController@indexView'
-)->name('top');
 
 
 
