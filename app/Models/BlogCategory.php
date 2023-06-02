@@ -10,16 +10,16 @@ class BlogCategory extends Model
     /**
      * ブログのリレーション
      */
-    public function blogs(){
-        return $this->hasone(Blog::class);
-    }
+    // public function blogs(){
+    //     return $this->hasone(Blog::class);
+    // }
 
     /**
      * ブログのリレーション
      */
-    // public function blogs(){
-    //     return $this->hasMany(Blog::class);
-    // }
+    public function blogs(){
+        return $this->hasMany(Blog::class);
+    }
 
     /**
      * 表示の値が1のブログのみ表示するメソッド
@@ -48,4 +48,10 @@ class BlogCategory extends Model
     }
 
     // protected $table = 'blogCategories';
+    // protected $table = 'blogs';
+
+    // public function posts()
+    // {
+    //     return $this->hasMany('App\Models\Blog');
+    // }
 }

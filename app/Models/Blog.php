@@ -27,7 +27,7 @@ class Blog extends Model
     }
 
         /**
-     * 記事タイトルをビュー（アクティビティ）に送るメソッド
+     * 記事タイトルをアクティビティビューに送るメソッド
      *
      * @return void
      */
@@ -36,13 +36,22 @@ class Blog extends Model
     }
 
     /**
+     * ブログのidをアクティビティビューに送るメソッド
+     *
+     * @return void
+     */
+    public function getId(){
+        return $this->id;
+    }
+
+    /**
      * blogs_tableのデータ全てをビュー（アーティクル）に送るメソッド
      *
      * @return void
      */
-    public function getData(){
-        return $this->item;
-    }
+    // public function getData(){
+    //     return $this->item;
+    // }
 
     /**
      * ロードステーションとリレーション

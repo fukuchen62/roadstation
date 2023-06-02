@@ -18,16 +18,18 @@
 
     {{--  体験できる道の駅の表示部分  --}}
     <h3>体験できる道の駅</h3>
-        <ul>
-            <li><a href="">{{ $activity->roadstation->getName() }}</a></li>
-        </ul>
-
+            <ul>
+                <li><a href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a></li>
+            </ul>
     {{--  体験したブログ記事の表示部分  --}}
     <h3>体験したブログ記事</h3>
         <ul>
-            <li><a href="">{{ $activity->blog->getName() }}</a></li>
+            <li><a href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}">{{ $activity->blog->getName() }}</a></li>
         </ul>
 
     @endforeach
+
+    {{-- 行ってきたんよボタンの表示部分 --}}
+    <a href="{{  url('blog') }}">行ってきたんよボタン<img src="" alt=""></a>
 
 @endsection

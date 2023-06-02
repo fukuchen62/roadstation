@@ -23,6 +23,7 @@ class BlogController extends Controller
         ];
 
         return view('fronts.article',$data);
+
     }
 
         public function blogListSearch(Request $request)
@@ -66,4 +67,8 @@ class BlogController extends Controller
     //     return view('blog', ['items' => $items ]);
     // }
     
+    public function relationArticle()
+    {
+        $posts = Blog::find(1);
+    }
 }

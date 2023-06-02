@@ -46,26 +46,17 @@
     @foreach ($blogs as $blog)
         <h3>道の駅情報</h3>
         <p>各道の駅詳細ページリンク</p>
-        <P><a
-                href="{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}">{{ url('station-detail') }}?d={{ $blog->roadStation->getId() }}</a>
+        <P><a href="{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}">{{ url('station-detail') }}?d={{ $blog->roadStation->getId() }}</a>
         </P>
     @endforeach
 
 
-    関連記事の表示部分
+    {{-- 関連記事の表示部分 --}}
 
-    @foreach ($blogcategriess as $blogcategory)
-        <ul>
-            <li>
-                {{--  <a href="{{ url('blog-detail') }}?id={{ }}"></a>  --}}
-                {{--  <img src="{{ asset('/storage/images') }}/test-picture/{{ $blogCategory->blog->picture }}" alt="">
-                <h3>{{ $blogCategory->blog->title }}</h3>
-                <p>日付{{ $blogCategory->blog->created_at }}</p>  --}}
-                <p>{{ $blogCategory->category_name }}</p>
+        {{-- @foreach ($blogs as $blog)
 
-            </li>
-        </ul>
-    @endforeach
+        @endforeach --}}
+        <p></p>
 
     {{--  サイドバーのカテゴリーの表示部分  --}}
 
@@ -98,6 +89,10 @@
                 </a>
             </li>
         </ul>
+        {{-- @foreach ($blogCategries as $bpogCategory)
+        <p>{{ $blogCategory->category_name }}</p>
+        @endforeach
+        --}}
     </div>
 
 @endsection
