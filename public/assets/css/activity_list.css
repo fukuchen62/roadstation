@@ -65,17 +65,19 @@ h2 {
 }
 
 .activity-place {
-    width: 160px;
+    width: 205px;
 }
 
 .roadstation-frame {
     display: flex;
-    justify-content: flex-start;
-    gap: 30px 25px;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: center;
     margin-bottom: 30px;
+}
 
+.roadstation-name{
+width: 160px;
 }
 
 /* PC(デスクトップサイズ) */

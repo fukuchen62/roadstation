@@ -11,7 +11,7 @@ class BlogCategory extends Model
      * ブログのリレーション
      */
     public function blogs(){
-        return $this->hasone(Brog::class);
+        return $this->hasone(Blog::class);
     }
 
     /**
