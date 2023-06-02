@@ -25,6 +25,69 @@
         // finallyは絶対最後に起動
         // nullでデーターベースとの接続情報を初期化
     }
+    function nameChangeInt($value)
+    {
+        switch ($value) {
+            case 'くるくるなると':
+                $id = 1;
+                break;
+            case '第九の里':
+                $id = 2;
+                break;
+            case '道の駅いたの':
+                $id = 3;
+                break;
+            case 'てすてすてすと':
+                $id = 4;
+                break;
+            case 'ぴ地の駅':
+                $id = 5;
+                break;
+            case 'くるくるなると':
+                $id = 6;
+                break;
+            case 'くるくるなると':
+                $id = 7;
+                break;
+            case 'くるくるなると':
+                $id = 8;
+                break;
+            case 'くるくるなると':
+                $id = 9;
+                break;
+            case 'くるくるなると':
+                $id = 10;
+                break;
+            case 'くるくるなると':
+                $id = 11;
+                break;
+            case 'くるくるなると':
+                $id = 12;
+                break;
+            case 'くるくるなると':
+                $id = 13;
+                break;
+            case 'くるくるなると':
+                $id = 14;
+                break;
+            case 'くるくるなると':
+                $id = 15;
+                break;
+            case 'くるくるなると':
+                $id = 16;
+                break;
+            case 'くるくるなると':
+                $id = 17;
+                break;
+            case 'くるくるなると':
+                $id = 18;
+                break;
+            default:
+                $id = 1;
+                break;
+        }
+        return $id;
+    }
 @endphp
 
 @section('keywords', 'キーワード1,キーワード2・・・')
@@ -52,7 +115,7 @@
         <?php
             if ($value['area_name'] === '西部') { ?>
         <div class="list">
-            <a href="{{ url('station-detail' . '?id=' . $value['id']) }}">
+            <a href="{{ url('station-detail' . '?id=' . nameChangeInt($value['station_name'])) }}">
                 <img src="{{ asset('/storage/imgs/' . $value['picture1']) }}" alt="">
                 <p><?= $value['station_name'] ?></p>
                 <div> 営業時間:<?= $value['business_hours'] ?></div>
@@ -92,7 +155,7 @@
         <?php
         if ($value['area_name'] === '東部') { ?>
         <div class="list">
-            <a href="{{ url('station-detail' . '?id=' . $value['id']) }}">
+            <a href="{{ url('station-detail' . '?id=' . nameChangeInt($value['station_name'])) }}">
                 <img src="{{ asset('/storage/imgs/' . $value['picture1']) }}" alt="">
                 <p><?= $value['station_name'] ?></p>
                 <div> 営業時間:<?= $value['business_hours'] ?></div>
@@ -132,7 +195,7 @@
         <?php
         if ($value['area_name'] === '南部') { ?>
         <div class="list">
-            <a href="{{ url('station-detail' . '?id=' . road_stations['id']) }}">道の駅詳細ページへ
+            <a href="{{ url('station-detail' . '?id=' . nameChangeInt($value['station_name'])) }}">道の駅詳細ページへ
                 <img src="{{ asset('/storage/imgs/' . $value['picture1']) }}" alt="">
                 <p><?= $value['station_name'] ?></p>
                 <div> 営業時間:<?= $value['business_hours'] ?></div>

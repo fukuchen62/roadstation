@@ -27,8 +27,10 @@ use Illuminate\Support\Facades\Auth;
 // })->name('top');
 
 
+Route::get('/', [App\Http\Controllers\TopController::class, 'index'])->name('top');
 
-// Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('top');
+
+
 
 Auth::routes();
 
@@ -56,12 +58,7 @@ Route::get(
 // ---------------------- frontPage -----------------------
 
 
-// ************* TOPページ *************
 
-Route::get(
-    '/',
-    'App\Http\Controllers\TopController@indexView'
-)->name('top');
 
 
 
@@ -169,3 +166,54 @@ Route::get(
     'news-detail',
     'App\Http\Controllers\NewsController@newsMainView'
 )->name('newsdetail');
+
+
+/*--- 以下は管理画面に関するルーティン設定です--*/
+
+/**
+ * ニュースの一覧画面
+ */
+Route::get(
+    'cms-news-list',
+    'App\Http\Controllers\AdminNewsController@index'
+)->name('cms-newslist');
+
+/**
+ * ニュースの新規登録画面
+ */
+Route::get(
+    'cms-news-new',
+    'App\Http\Controllers\AdminNewsController@new'
+)->name('cms-newsinput');
+
+/**
+ * ニュースの新規登処理
+ */
+Route::post(
+    'cms-news-new',
+    'App\Http\Controllers\AdminNewsController@new'
+)->name('cms-newsinsert');
+
+/**
+ * ニュースの編集画面
+ */
+Route::get(
+    'cms-news-edit',
+    'App\Http\Controllers\AdminNewsController@edit'
+)->name('cms-newsedit');
+
+/**
+ * ニュースの編集登録
+ */
+Route::post(
+    'cms-news-edit',
+    'App\Http\Controllers\AdminNewsController@update'
+)->name('cms-newsupdate');
+
+/**
+ * ニュースの削除処理
+ */
+Route::post(
+    'cms-news-del',
+    'App\Http\Controllers\AdminNewsController@delete'
+)->name('cms-newsdelete');

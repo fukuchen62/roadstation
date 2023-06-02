@@ -31,7 +31,7 @@
                 <div class="card">
                     <ul>
                         <div class="cardContainer">
-                            <a href="" class="{{}}">
+                            <a href="" class="">
                         <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="listImg"></a>
                         <li class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</li>
                         </div>
@@ -134,5 +134,5 @@
 
 {{-- 該当ページ専用JS --}}
 @section('pageJs')
-
+<script src="{{ asset('/assets/js/goods_list.js') }}"></script>
 @endsection
