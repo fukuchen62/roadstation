@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+.categoryTitle {
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    font-size: 32px;
+    border: solid black 1px;
+    border-radius: 999px;
+    background-color: chartreuse;
+}
+
 .container {
     display: grid;
     justify-items: center;
@@ -7,8 +18,9 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 20px;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto auto;
     gap: 30px;
 }
 
@@ -19,26 +31,25 @@
 }
 
 .cardContainer {
-    height: 100%;
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50% 10% 10% 30% 20%;
-    grid-template-areas:
-        "areaA areaA "
-        "areaB areaC "
-        "areaD areaE "
-        "areaF areaF "
-        "areaG areaG ";
+    display: flex;
+    flex-direction: column;
 }
 
 .listImg {
     width: 100%;
-    grid-area: areaA;
+}
+
+.listCategoryName {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.listDiscription {
+    grid-area: areaF;
 }
 
 .commonName {
-    grid-area: areaB;
+    margin-top: 10px;
 }
 
 .listPrice {
@@ -49,46 +60,26 @@
     grid-area: areaD;
 }
 
-.listCategoryName {
-    grid-area: areaE;
-}
-
-.listDiscription {
-    grid-area: areaF;
-}
-
 .listStation {
     grid-area: areaG;
     margin-top: 20px;
 }
 
-.testspace {
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.detail {
-    background-color: ivory;
-    border: solid black 2px;
-    width: 60%;
-    padding: 0;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.detailimg {
-    height: 100%;
-    width: 100%;
-    grid-area: areaA;
+.detail li {
+    padding: 20px;
 }
 
 .detailContainer {
     height: 100%;
-    display: grid;
+    width: 80%;
     margin: 0 auto;
+    margin-top: 50px;
+    background-color: ivory;
+    border: solid black 2px;
+    display: grid;
+
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px 50px 50px 200px 150px 30px 30px;
+    grid-template-rows: 30px 50px 50px 200px auto 30px auto;
     grid-template-areas:
         "areaA areaA areaB areaB areaB"
         "areaA areaA areaC areaC areaC"
@@ -99,28 +90,33 @@
         "areaH areaH areaH areaH areaH";
 }
 
-.detail_name {
+.detailImg {
+    width: 100%;
+    grid-area: areaA;
+}
+
+.detailName {
     grid-area: areaB;
     text-align: center;
     padding: 10px;
 }
 
-.detail_season {
+.detailSeason {
     grid-area: areaC;
     padding: 10px;
 }
 
-.detail_price {
+.detailPrice {
     grid-area: areaD;
     padding: 10px;
 }
 
-.detail_usage {
+.detailUsage {
     grid-area: areaE;
     padding: 10px;
 }
 
-.detail_discription {
+.detailDiscription {
     grid-area: areaF;
     margin-top: 20px;
     padding: 10px;
@@ -129,35 +125,18 @@
 .detail_sub {
     grid-area: areaG;
     text-align: center;
-    padding: 10px;
 }
 
-.station_list {
+.stationLink {
     grid-area: areaH;
-    padding: 10px;
+    text-align: center;
 }
 
-.dummyimg {
-    height: 100%;
-    width: 100%;
-    grid-area: areaA;
+.stationBtn {
+    padding: 20px;
 }
 
-.category {
-    border: solid 1px black;
-}
-
-.goods_name {
-    border: solid 1px black;
-}
-
-.roadside_station {
-    border: solid 1px black;
-}
-
-.discription {
-    height: 150%;
-    grid-area: areaE;
-    margin-top: 30px;
-    padding: 5px;
+.bloglink {
+    text-align: center;
+    margin-top: 50px;
 }
