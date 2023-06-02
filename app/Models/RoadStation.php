@@ -49,4 +49,13 @@ class RoadStation extends Model
     public function getName(){
         return $this->station_name;
     }
+
+            /**
+     * 記事のカテゴリーidをビューに送るメソッド
+     *
+     * @return void
+     */
+    public function getId(){
+        return $this->id;
+    }
 }
