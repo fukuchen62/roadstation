@@ -59,6 +59,7 @@ h4 {
     background: #ccc;
 }
 
+/* PC吹き出しを横に並べる */
 @media screen and (min-width:901px) {
     .flex {
         display: flex;
@@ -80,6 +81,8 @@ h4 {
     margin: 0;
     padding: 0;
 }
+
+/* 画像と文字を重ねる */
 
 /* 道の駅グルメとお土産のエリア */
 .img {
@@ -144,7 +147,7 @@ h4 {
 
 
 
-/* 基本情報の枠 */
+/* 基本情報 */
 .item {
     background-color: #ccc;
 }
@@ -169,7 +172,7 @@ dd {
 }
 
 
-
+/* PCグルメとお土産エリアを横に並べる */
 @media screen and (min-width:901px) {
     .container {
         flex-direction: row;
