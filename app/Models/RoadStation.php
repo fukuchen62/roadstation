@@ -17,6 +17,23 @@ class RoadStation extends Model
 
 
 
+    
+    /**
+     * ブログとリレーション
+     */
+    public function blog(){
+        return $this->hasone(blog::class);
+    }
+
+    /**
+     * 道の駅のURLをビュー（アーてぃくる）に送るメソッド
+     *
+     * @return void
+     */
+    public function getUrl(){
+        return $this->url;
+    }
+
     /**
      * アクティビティとリレーション
      */

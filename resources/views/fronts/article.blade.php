@@ -34,7 +34,7 @@
             <h2>{{ $blog->title }}</h2>
             <p>カテゴリー名：{{ $blog->blogCategory->getName() }}</p>
             <p>記事制作者：{{ $blog->user_name }}</p>
-            <img src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+            <img src="{{ asset('/storage/images') }}/test-picture/{{ $blog->picture }}" alt="">
             <p>内 容：</p>{!! $blog->content !!}
             <p>道の駅詳細：{{ $blog->roadstation_id }} </p>
             <p>特産品：{{ $blog->special_goods_id }}</p>
