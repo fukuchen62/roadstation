@@ -23,4 +23,16 @@ class ProductType extends Model
     {
         return $this->goodsCategory->category_name;
     }
+
+    public static function getRoadstationName($id)
+    {
+        $item = RoadStation::find($id);
+        if ($item != null) {
+            $name = $item->station_name;
+        } else {
+            $name = "No name";
+        }
+
+        return $name;
+    }
 }
