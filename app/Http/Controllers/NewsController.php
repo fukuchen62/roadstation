@@ -21,17 +21,21 @@ class NewsController extends Controller
      */
     public function newsListView(Request $request)
     {
+        $sort = $request->sort;
+
         $items = News::where('deleted_at', null)
-            ->where('is_show', 1)
+            // ->where('is_show', 1)
             ->orderby('id', 'DESC')
-            ->get();
-        // ->simplePaginate(6);
+            // ->orderby('id', 'ASC')
+            ->paginate(6);
+        // ->get();
 
         $category = NewsCategory::all();
 
         $data = [
             'news' => $items,
             'news_categories' => $category,
+            'sort' => $sort,
         ];
 
         return view('fronts.news_list', $data);
