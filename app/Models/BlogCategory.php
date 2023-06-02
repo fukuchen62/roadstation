@@ -15,6 +15,13 @@ class BlogCategory extends Model
     }
 
     /**
+     * ブログのリレーション
+     */
+    // public function blogs(){
+    //     return $this->hasMany(Blog::class);
+    // }
+
+    /**
      * 表示の値が1のブログのみ表示するメソッド
      */
     public function blogsIsShow(){
@@ -30,4 +37,15 @@ class BlogCategory extends Model
     public function getName(){
         return $this->category_name;
     }
+
+        /**
+     * 記事のカテゴリーidをビューに送るメソッド
+     *
+     * @return void
+     */
+    public function getId(){
+        return $this->id;
+    }
+
+    // protected $table = 'blogCategories';
 }
