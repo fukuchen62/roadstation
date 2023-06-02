@@ -10,6 +10,7 @@
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/top.css')  }}">
 @endsection
 
 @section('key_visual')
@@ -87,7 +88,7 @@
             <div class="news2">
                 <ul>
                     <li><a href="">New! ●月●日　カテゴリ:その他</a></li>
-                    <li class="news-title"><a href="">世界初！DMVに乗ってきたんよ</a></li>
+                    {{-- <li class="news-title"><a href="">{{$news->title}}</a></li> --}}
                     <li><a href="">New! ●月●日　カテゴリ:その他</a></li>
                     <li class="news-title"><a href="">世界初！DMVに乗ってきたんよ</a></li>
                     <li><a href="">New! ●月●日　カテゴリ:その他</a></li>

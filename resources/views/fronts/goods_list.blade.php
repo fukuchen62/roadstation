@@ -31,7 +31,8 @@
                 <div class="card">
                     <ul>
                         <div class="cardContainer">
-                        <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="listImg">
+                            <a href="" class="{{}}">
+                        <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="listImg"></a>
                         <li class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</li>
                         </div>
                     </ul>
