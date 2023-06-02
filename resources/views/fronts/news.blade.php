@@ -22,6 +22,27 @@
         .station {
             font-weight: bold;
         }
+
+        span {
+            margin: 10px;
+        }
+
+        .cards {
+            /* display: flex; */
+            float: left;
+            width: 1200px;
+            height: auto;
+        }
+
+        .card {
+            border: 1px solid #949393;
+            padding: 20px;
+            margin: 30px 5px;
+            width: 400px;
+            height: auto;
+
+            float: left;
+        }
     </style>
 @endsection
 
@@ -34,15 +55,19 @@
 
             <div>
                 <span>{{ $new->updated_at }}</span>
-                <span>{{ $new->news_category_id }}</span>
+                <span>{{ $new->newsCategory->category_name }}</span>
             </div>
 
             <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
 
-            <p>{{ $new->discription }}</p>
+            <p>{!! $new->discription !!}</p>
 
-            <span>前のページへ</span>
-            <span>次のページへ</span>
+            <span>
+                <a href="{{ url('news-detail') }}?id={{ $new->id - 1 }}">前のページへ</a>
+            </span>
+            <span>
+                <a href="{{ url('news-detail') }}?id={{ $new->id + 1 }}">次のページへ</a>
+            </span>
 
             <p class="station">
                 <a href="{{ url('station-detail') }}">道の駅詳細ページへ</a>
@@ -54,6 +79,30 @@
             <h2>関連記事</h2>
         </div>
 
+        <div class="cards">
+
+            @foreach ($news as $new)
+                <a href="{{ url('news-detail') }}?id={{ $new->id }}">
+
+                    <div class="card">
+
+                        <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+
+                        <h2>{{ $new->title }} </h2>
+
+                        <p>{!! $new->overview !!}</p>
+
+                        <small>{{ $new->created_at }}</small>
+
+                        <span>
+                            {{ $new->newsCategory->category_name }}
+                        </span>
+
+                    </div>
+                </a>
+            @endforeach
+
+        </div>
 
 
         {{-- @foreach ($news as $new)

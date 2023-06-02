@@ -33,7 +33,7 @@
             border: 1px solid #949393;
             padding: 20px;
             margin: 30px 5px;
-            width: 350px;
+            width: 400px;
             height: auto;
 
             float: left;
@@ -82,7 +82,7 @@
                     <small>{{ $new->created_at }}</small>
 
                     <span>
-                        {!! $new->getCategoryName() !!}
+                        {{-- {!! $new->getCategoryName() !!} --}}
                         {{ $new->newsCategory->category_name }}
                     </span>
 
@@ -99,14 +99,15 @@
         <ul>
             <a href="">
                 @foreach ($news_categories as $category)
-                    <li>{{ $category->category_name }}</li>
+                    <li><a href="{{ url('news') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
                 @endforeach
             </a>
         </ul>
+
     </div>
 
-
     <div class="link">{{ $news->links() }}</div>
+
 
 
 @endsection
