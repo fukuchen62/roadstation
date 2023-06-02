@@ -3,24 +3,60 @@
 {{-- タイトル --}}
 @section('title', '新着情報詳細ページ')
 
+@section('pageCss')
+    <style>
+        main {
+            margin: 30px;
+        }
+
+        .wrap {
+            width: 800px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .station {
+            font-weight: bold;
+        }
+    </style>
+@endsection
+
 @section('content')
 
-    <h1>新着情報詳細ページ</h1>
+    <div class="wrap">
 
-    <table border="1">
+        @foreach ($news as $new)
+            <h1>{{ $new->title }}</h1>
 
-        <thead>
-            <tr>
-                <th>カテゴリー</th>
-                <th>タイトル</th>
-                <th>道の駅ID</th>
-                <th>解説テキスト</th>
-                <th>画像ファイル</th>
-            </tr>
-        </thead>
+            <div>
+                <span>{{ $new->updated_at }}</span>
+                <span>{{ $new->news_category_id }}</span>
+            </div>
 
-        <tbody>
-            @foreach ($news as $new)
+            <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+
+            <p>{{ $new->discription }}</p>
+
+            <span>前のページへ</span>
+            <span>次のページへ</span>
+
+            <p class="station">
+                <a href="{{ url('station-detail') }}">道の駅詳細ページへ</a>
+            </p>
+        @endforeach
+
+
+        <div>
+            <h2>関連記事</h2>
+        </div>
+
+
+
+        {{-- @foreach ($news as $new)
                 <tr>
                     <td>{{ $new->news_category_id }}</td>
                     <td>{{ $new->title }}</td>
@@ -30,9 +66,8 @@
                         <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
                     </td>
                 </tr>
-            @endforeach
-        </tbody>
+            @endforeach --}}
 
-    </table>
+    </div>
 
 @endsection

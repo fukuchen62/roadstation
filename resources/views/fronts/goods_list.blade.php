@@ -25,104 +25,107 @@
 
     <section class="section">
 
-        <h2 class="section__box--title ">第一セクション</h2>
-
-        {{--<div class="testspace">
-            <h3>テストスペース</h3>
-             <tbody>
-            @foreach ($special_goods as $goods)
-                <tr>
-                    <div class="detail">
-                    <div class="detailContainer">
-                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" alt="ダミー" class="detailimg">
-
-                    <div class="detail_name">
-                    <td>商品名　{!! $goods->goods_name !!}
-                    </div>
-                    <div class="detail_season">
-                    <td>旬の時期　{!! $goods->season !!}</td>
-                    </div>
-                    <div class="detail_price">
-                    <td>参考価格：{!! $goods->price !!}円</td>
-                    </div>
-                    <div class="detail_usage">
-                    <td>利用方法：{!! $goods->usage !!}</td>
-                    </div>
-                    <div class="detail_discription">
-                    <td>解説文：{!! $goods->discription !!}</td>
-                    </div>
-                    <div class="detail_sub">買える道の駅</div>
-                    <div class="station_list">
-                    <td>買える道の駅名 {!! $goods->station !!}</td>
-                    </div>
-                    </div><br><br>
-                    </div>
-                </tr>
-            @endforeach
-            </tbody> --}}
-
-
-            {{-- <div class="container">
-            <tbody>
-            @foreach ($special_goods as $goods)
-                <tr>
-                    <div class="card">
-                    <div class="cardContainer">
-                    <img src="{{ asset('storage/images/news_1_1_300×300.png')}}" alt="ダミー" class="dummyimg">
-
-
-                    <div class="category">
-                    <td>カテゴリーID：{{ $goods->category_id }}</td>
-                    </div>
-                    <div class="goods_name">
-                    <td>品名：{{ $goods->goods_name }}</td>
-                    </div>
-                    <div class="roadside_station">
-                    <td>道の駅ID：{{ $goods->station_list }}</td>
-                    </div>
-                    <div class="discription">
-                    <td>解説文：{{ $goods->discription }}</td>
-                    </div>
-                    </div><br><br>
-                    </div>
-                </tr>
-            @endforeach
-            </tbody>
-            </div>
-        </div>--}}
-
-        {{-- 特産品種別パネルを作成 --}}
-        <section>
+            <div class="categoryTitle">農産物</div>
             <div class="container">
-            @foreach ($goods_type as $type )
+            @foreach ($agricultural_products as $agricultural )
                 <div class="card">
-
                     <ul>
                         <div class="cardContainer">
-                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
-                        <li class="commonName">種別名：{{$type->common_name}}</li>
-                        <li class="listPrice">参考価格{{$type->price}}円</li>
-                        <li class="listTypeId">種別ID：{{$type->goods_category_id}}</li>
-                        <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
-                        <li class="listDiscription">説明文:{!!$type->discription!!}</li>
-                        <div class="listStation"> {{-- 関連道の駅 --}}
-
-                                                @foreach ( $station_id as $id)
-                                                    <a href="{{route('roadstation')}}?id={{$id}}">道の駅{{$id}}</a>
-                                                @endforeach
-                                            </div>
-                                              @php
-                                                    print_r($station_id);
-                                                @endphp
+                        <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="listImg">
+                        <li class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</li>
                         </div>
                     </ul>
                 </div>
             @endforeach
             </div>
-        </section>
+
+            <div class="categoryTitle">海産物</div>
+            <div class="container">
+            @foreach ($seafood as $seafood )
+                <div class="card">
+                    <ul>
+                        <div class="cardContainer">
+                        <img src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="種別画像" class="listImg">
+                        <li class="listCategoryName">種別名：{{$seafood->getCategoryName()}}</li>
+                        </div>
+                    </ul>
+                </div>
+            @endforeach
+            </div>
+
+              <div class="categoryTitle">工芸品</div>
+            <div class="container">
+            @foreach ($craft as $craft )
+                <div class="card">
+                    <ul>
+                        <div class="cardContainer">
+                        <img src="{{ asset('/storage/images/' . $craft->picture) }}" alt="種別画像" class="listImg">
+                        <li class="listCategoryName">種別名：{{$craft->getCategoryName()}}</li>
+                        </div>
+                    </ul>
+                </div>
+            @endforeach
+            </div>
+
+
+        {{-- <section>
+            <div class="container">
+            @foreach ($goods_type as $type )
+                <div class="card">
+                    <ul>
+                        <div class="cardContainer">
+                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
+                        <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
+                        </div>
+                    </ul>
+                </div>
+            @endforeach
+            </div>
+        </section> --}}
 
 
         {{-- 特産品種別詳細紹介カードを作成 --}}
+        <section>
+            @foreach ($goods_type as $type )
+                    <ul class="detail">
+                    <div class="detailContainer">
+                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailImg">
+                        <li class="detailName">商品名：　{{$type->common_name}}</li>
+                        <li class="detailSeason">旬の時期：<br>{{$type->season}}</li>
+                        <li class="detailPrice">参考価格:<br>{{$type->price}}円</li>
+                        <li class="detailUsage">利用方法：{!!$type->usage!!}</li>
+                        {{-- <li class="detailCategoryName">種別名：{{$type->getCategoryName()}}</li> --}}
+                        <li class="detailDiscription">説明文:{!!$type->discription!!}</li>
+                        <li class="detail_sub">買える道の駅</li>
+                        <li class="stationLink">
+
+                        {{-- 道の駅のリンク --}}
+                        @php
+                            $station_list = $type->station_list;
+                            // 文字列から配列に変換
+                            $id_list = explode("|", $station_list);
+                        @endphp
+
+                        @foreach ( $id_list as $id )
+
+                        @php
+
+                                $name = $type::getRoadstationName($id);
+
+                        @endphp
+
+                        <a class="stationBtn" href="{{route('roadstation')}}?id={{$id}}">{{$name}}</a>
+
+                        @endforeach
+                        </li>
+                    </div>
+                    </ul>
+            @endforeach
+        </section>
+        <div class="bloglink">
+        <a href="{{route('blog')}}" >
+            <img src="{{ asset('/storage/images/link_1_1_300×300.png') }}" alt="体験ブログリンク">
+        </a></div>
 
     </section>
 
