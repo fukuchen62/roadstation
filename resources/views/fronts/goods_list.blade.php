@@ -8,7 +8,7 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/goodsMainView.css')  }}">
+    <link rel="stylesheet" href="{{asset('assets/css/goodsMainView.css')}}">
 @endsection
 
 @section('key_visual')
