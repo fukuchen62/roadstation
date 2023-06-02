@@ -350,6 +350,7 @@ imgcontent-wrapper .heading {
         padding: 30px;
         margin-bottom: 30px;
         gap: 5%;
+        align-items: baseline;
     }
 
     .news-pcbtn {
@@ -680,7 +681,7 @@ imgcontent-wrapper .heading {
         margin: 0 auto;
         margin-bottom: 30px;
         width: 75%;
-
+        align-items: baseline;
     }
 
     .news-pcbtn {

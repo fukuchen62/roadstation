@@ -35,6 +35,14 @@ class Blog extends Model
         return $this->title;
     }
 
+    /**
+     * blogs_tableのデータ全てをビュー（アーティクル）に送るメソッド
+     *
+     * @return void
+     */
+    public function getData(){
+        return $this->item;
+    }
 
     /**
      * ロードステーションとリレーション

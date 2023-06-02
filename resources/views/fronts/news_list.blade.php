@@ -106,7 +106,7 @@
     </div>
 
 
-    {{-- <div class="link">{{ $news->links() }}</div> --}}
+    <div class="link">{{ $news->links() }}</div>
 
 
 @endsection

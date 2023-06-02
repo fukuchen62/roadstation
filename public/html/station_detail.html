@@ -13,6 +13,15 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <!-- アイコンフォント -->
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 </head>
 <body>
     <header>
@@ -56,9 +65,10 @@
             </ul>
         </div>
     </header>
+    <figure><img src="https://placehold.jp/1200x200.png" class="kv" alt="お好きな道の駅を検索してください。"></figure>
 
     <main class="wrapper">
-        <figure><img src="https://placehold.jp/1200x200.png" class="kv" alt="お好きな道の駅を検索してください。"></figure>
+
 
         <section>
             <h2>詳細検索</h2>
@@ -68,42 +78,103 @@
             <!-- value=""の設定を後でする。road_stationsのテーブル名と一緒？  -->
             <form action=" station_detail.blade.php" method="post">
                 <p>地域<br>
-                    <label><input id="area_id" class="" type="checkbox" name="area" value="1">県東部</label>
-                    <label><input id="area_id" class="" type="checkbox" name="area" value="2">県西部</label>
-                    <label><input id="area_id" class="" type="checkbox" name="area" value="3">県南部</label>
-                    <label><input id="area_id" class="" type="checkbox" name="area">全域</label>
                 </p>
 
-                <table border="1px">
+                <table border="2" width="800" height="250" cellspacing="0">
                     <tr>
-                        <th>設備</th>
-                        <td><label><input id="guide_icon" type="checkbox" name="detail" value="">観光案内</label></td>
-                        <td><label><input id="shop_icon" type="checkbox" name="detail">ショップ</label></td>
-                        <td><input id="lightmeal_icon" type="checkbox" name="detail">軽食・喫茶</label></td>
-                        <td><input id="restaurant_icon" type="checkbox" name="detail">レストラン</label></td>
+                        <td><label><input id="area_id" class="" type="checkbox" name="area" value="1">県東部</label>
+                        </td>
+                        <td>
+                            <label><input id="area_id" class="" type="checkbox" name="area" value="2">県西部</label>
+                        </td>
+                        <td>
+                            <label><input id="area_id" class="" type="checkbox" name="area" value="3">県南部</label>
+                        </td>
+                        <td>
+                            <label><input id="area_id" class="" type="checkbox" name="area">全域</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td cellspacing="4">
+                            <h3 class="checkbox-title">設備</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="">観光案内</label>
+                        </td>
+                        <td>
+                            <input id="shop_icon" type="checkbox" name="shop_icon">ショップ</label>
+                        </td>
+                        <td>
+                            <input id="lightmeal_icon" type="checkbox" name="lightmeal_icon">軽食・喫茶</label>
+                        </td>
+                        <td>
+                            <input id="restaurant_icon" type="checkbox" name="restaurant_icon">レストラン</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="experience_icon" type="checkbox" name="experience_icon">体験施設</label>
+                        </td>
+                        <td>
+                            <input id="disability_icon" type="checkbox" name="disability_icon">身障者トイレ</label>
+                        </td>
+                        <td>
+                            <label><input id="park_icon" type="checkbox" name="park_icon">公園</label>
+
+                        </td>
+                        <td>
+                            <label><input id="bed_icon" type="checkbox" name="bed_icon">ベビーベッド</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon">宿泊施設</label>
+                        </td>
+                        <td>
+                            <label><input id="spa_icon" type="checkbox" name="spa_icon">温泉施設</label>
+
+                        </td>
+                        <td>
+                            <label><input id="shower_icon" type="checkbox" name="shower_icon">シャワー</label>
+
+                        </td>
+                        <td>
+                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon">展望台</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="ev_icon" type="checkbox" name="ev_icon">EV充電施設</label>
+
+                        </td>
+                        <td>
+                            <label><input id="lan_icon" type="checkbox" name="lan_icon">無線LAN</label>
+                        </td>
+                        <td><label><input id="atm_icon" type="checkbox" name="atm_icon">ATM</label>
+
+                        <td>
+                            <label><input id="museum_icon" type="checkbox" name="museum_icon">美術館・博物館</label>
+                        </td>
+                        </td>
                     </tr>
                 </table>
 
 
 
-
                 <label>
-                    <label><input id="experience_icon" type="checkbox" name="detail">体験施設</label>
-                    <label><input id="disability_icon" type="checkbox" name="detail">身障者トイレ</label>
-                    <label><input id="park_icon" type="checkbox" name="detail">公園</label>
-                    <label><input id="bed_icon" type="checkbox" name="detail">ベビーベッド</label>
-                    <label><input id="accommodation_icon" type="checkbox" name="detail">宿泊施設</label>
-                    <label><input id="spa_icon" type="checkbox" name="detail">温泉施設</label>
-                    <label><input id="shower_icon" type="checkbox" name="detail">シャワー</label>
-                    <label><input id="observatory_icon" type="checkbox" name="detail">展望台</label>
-                    <label><input id="ev_icon" type="checkbox" name="detail">EV充電施設</label>
-                    <label><input id="lan_icon" type="checkbox" name="detail">無線LAN</label>
-                    <label><input id="atm_icon" type="checkbox" name="detail">ATM</label>
-                    <label><input id="museum_icon" type="checkbox" name="detail">美術館・博物館</label>
+                    <label>
+                        <label>
 
-                    <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
-                    <p><input class="btn-reset" type="reset" value="リセット">
-                        <input class="btn-search" type="submit" value="検索"></p>
+
+
+
+                            <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
+                            <p><input class="more-btn  btn-reset" type="reset" value="リセット">
+                        <input class="more-btn btn-search" type="submit" value="検索"></p>
             </form>
 
 
@@ -330,6 +401,10 @@
     </main>
 
     <footer>
+        <a class="pagetop" href="#">
+            <div class="pagetop__arrow"></div>
+        </a>
+
         <ul>
             <li><a href="../html/station_list.html">道の駅一覧</a></li>
             <li><a href="../html/station_area.html">エリア検索</a></li>
