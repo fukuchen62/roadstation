@@ -44,17 +44,77 @@
                 <img src="{{ asset('assets/images/cat1.jpg') }}" alt="human" class="review_img">
                 <div class="gray_box">
                     <p>
-                        {{ $val->review }}
+                        {!! $val->review !!}
                     </p>
                 </div>
                 {{-- <img src="{{ asset('/storage/images/' . $goods->picture) }}" alt="ダミー" class="detailimg"> --}}
                 {{-- imgをsrcはasset('/storage/images/'で終わり、.$gg) --}}
-        </section>
-        <section class="basic">
-            <div class="">
+    @endforeach
+    </section>
+    <section class="gourmet">
+        <h2>グルメ</h2>
+
+        @foreach ($product_types as $goods)
+            <div>
+                <div>
+                    <?= $goods['picture'] ?>
+                </div>
+                <div>
+                    <img src="{{ asset('/storage/app/public/imgs/' . $goods->picture) }}" alt="">
+                </div>
+            </div>
+        @endforeach
+    </section>
+    <section class="act1">
+        <h2>体験</h2>
+        @foreach ($activities as $act)
+            <div><?= $act['picture1'] ?></div>
+            <div>{!! $act->discription !!}</div>
+        @endforeach
+    </section>
+    <section class="basic">
+        @foreach ($road_stations as $val)
+            <div>
                 <h2>基本情報</h2>
             </div>
-        </section>
+            <div> 道の駅 {!! $val->station_name !!}</div>
+            <div> 〒{!! $val->zip_code !!}</div>
+            <div> TEL:{!! $val->tel !!}</div>
+            <div> 公式URL:{!! $val->url !!}</div>
+            <div> 公式SNS:{!! $val->sns !!}</div>
+            <div> 営業時間:{!! $val->business_hours !!}</div>
+            <div> 定休日:{!! $val->regular_holiday !!}</div>
+            <div> 駐車場:{!! $val->parking !!}</div>
+            <div>
+                <p>設備:</p>
+                <div class="icon">
+                    <img src="{{ asset('/storage/imgs/atm_icon_' . $val->atm_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/bed_icon_' . $val->bed_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/restaurant_icon_' . $val->restaurant_icon . '.jpeg') }}"
+                        alt="">
+                    <img src="{{ asset('/storage/imgs/lightmeal_icon_' . $val->lightmeal_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/accommodation_icon_' . $val->accommodation_icon . '.jpeg') }}"
+                        alt="">
+                    <img src="{{ asset('/storage/imgs/spa_icon_' . $val->spa_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/park_icon_' . $val->park_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/ev_icon_' . $val->ev_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/lan_icon_' . $val->lan_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/shower_icon_' . $val->shower_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/experience_icon_' . $val->experience_icon . '.jpeg') }}"
+                        alt="">
+                    <img src="{{ asset('/storage/imgs/guide_icon_' . $val->guide_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/disability_icon_' . $val->disability_icon . '.jpeg') }}"
+                        alt="">
+                    <img src="{{ asset('/storage/imgs/shop_icon_' . $val->shop_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/observatory_icon_' . $val->observatory_icon . '.jpeg') }}"
+                        alt="">
+                    <img src="{{ asset('/storage/imgs/museum_icon_' . $val->museum_icon . '.jpeg') }}" alt="">
+                </div>
+            </div>
+            <div>
+                <button class="star">お気に入り</button>
+            </div>
+    </section>
     @endforeach
 @endsection
 

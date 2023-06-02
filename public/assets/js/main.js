@@ -42,3 +42,14 @@ $(function () {
         }, 1000);
     });
 });
+
+// ヘッダーメニューの固定
+var navPos = jQuery('#global-nav').offset().top; // グローバルメニューの位置
+var navHeight = jQuery('#global-nav').outerHeight(); // グローバルメニューの高さ
+jQuery(window).on('scroll', function () {
+    if (700 < jQuery(this).scrollTop()) { // 1000px以上スクロールしたら
+        jQuery('#global-nav').addClass('m_fixed');
+    } else {
+        jQuery('#global-nav').removeClass('m_fixed');
+    }
+});

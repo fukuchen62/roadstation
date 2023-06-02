@@ -10,12 +10,40 @@ class Blog extends Model
     //use HasFactory;
 
     /**
-     * カテゴリーとのリレーション
+     * カテゴリーとリレーション
      */
     public function blogCategory(){
 
         return $this->belongsTo('App\Models\BlogCategory');
     }
 
+    // protected $table = 'blogs';
+    
+    /**
+     * アクティビティとリレーション
+     */
+    public function activity(){
+        return $this->hasone(activity::class);
+    }
+
+        /**
+     * 記事タイトルをビュー（アクティビティ）に送るメソッド
+     *
+     * @return void
+     */
+    public function getName(){
+        return $this->title;
+    }
+
+
+    /**
+     * ロードステーションとリレーション
+     */
+    public function roadstation(){
+
+        return $this->belongsTo('App\Models\RoadStation');
+    }
+
     protected $table = 'blogs';
+
 }

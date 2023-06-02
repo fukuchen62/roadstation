@@ -10,8 +10,11 @@ about resetcss
 /* リセットcssはフォルダ内に作成済み */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kiwi+Maru&display=swap');
 
+
+
 body {
     font-family: 'Kiwi Maru', serif;
+
 }
 
 .header {
@@ -120,4 +123,33 @@ h1.pagetitle {
     font-size: 2rem;
     text-align: center;
     background-color: #808080;
+}
+
+.icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.star {
+    display: block;
+    margin: 2rem auto;
+    width: 90px;
+    height: 20px;
+    border: solid 1px #000;
+    transition: all 200ms ease;
+}
+
+.star:hover {
+    background-color: rgb(255, 246, 144);
+}
+
+/* 一覧 */
+.car {
+    height: 200px;
 }

@@ -4,7 +4,7 @@
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
-@section('title', 'ページタイトル')
+@section('title', '特産品の選択画面')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
@@ -19,7 +19,7 @@
 @section('content')
     <section class="titlesection">
         <div class="titlesection__box">
-            <h1 class="pagetitle">特産品のページ</h1>
+            <h1 class="pagetitle">特産品の選択画面</h1>
         </div>
     </section>
 
@@ -27,9 +27,9 @@
 
         <h2 class="section__box--title ">第一セクション</h2>
 
-        <div class="testspace">
+        {{--<div class="testspace">
             <h3>テストスペース</h3>
-            <tbody>
+             <tbody>
             @foreach ($special_goods as $goods)
                 <tr>
                     <div class="detail">
@@ -49,20 +49,20 @@
                     <td>利用方法：{!! $goods->usage !!}</td>
                     </div>
                     <div class="detail_discription">
-                    <td>解説文：{{ $goods->discription }}</td>
+                    <td>解説文：{!! $goods->discription !!}</td>
                     </div>
                     <div class="detail_sub">買える道の駅</div>
                     <div class="station_list">
-                    <td>買える道の駅名 <?= htmlspecialchars_decode($goods->station_list); ?></td>
+                    <td>買える道の駅名 {!! $goods->station !!}</td>
                     </div>
                     </div><br><br>
                     </div>
                 </tr>
             @endforeach
-            </tbody>
+            </tbody> --}}
 
 
-            <div class="container">
+            {{-- <div class="container">
             <tbody>
             @foreach ($special_goods as $goods)
                 <tr>
@@ -89,7 +89,64 @@
             @endforeach
             </tbody>
             </div>
-        </div>
+        </div>--}}
+
+        {{-- 特産品種別パネルを作成 --}}
+        <section>
+            <div class="container">
+            @foreach ($goods_type as $type )
+                <div class="card">
+                    <ul>
+                        <div class="cardContainer">
+                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
+                        <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
+                        </div>
+                    </ul>
+                </div>
+            @endforeach
+            </div>
+        </section>
+
+
+        {{-- 特産品種別詳細紹介カードを作成 --}}
+        <section>
+            <div class="container">
+            @foreach ($goods_type as $type )
+                <div class="card">
+
+                    <ul>
+                        <div class="cardContainer">
+                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
+                        <li class="commonName">種別名：{{$type->common_name}}</li>
+                        <li class="listPrice">参考価格:{{$type->price}}円</li>
+                        <li class="listTypeId">種別ID：{{$type->goods_category_id}}</li>
+                        <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
+                        {{-- <li class="listDiscription">説明文:{!!$type->discription!!}</li> --}}
+                    </ul>
+                    {{-- 道の駅のリンク --}}
+                    <div>
+                        @php
+                            $station_list = $type->station_list;
+                            // 文字列から配列に変換
+                            $id_list = explode("|", $station_list);
+                        @endphp
+
+                        @foreach ( $id_list as $id )
+
+                        @php
+
+                                $name = $type::getRoadstationName($id);
+
+                        @endphp
+
+                        <a href="{{route('roadstation')}}?id={{$id}}">{{$name}}</a>
+
+                        @endforeach
+                    </div>
+                </div>
+            @endforeach
+            </div>
+        </section>
     </section>
 
 @endsection

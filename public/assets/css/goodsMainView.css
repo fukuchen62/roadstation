@@ -1,11 +1,65 @@
 @charset "utf-8";
 
-h1 {
-    color: purple;
+.container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    gap: 30px;
 }
 
-h3 {
-    color: red;
+.card {
+    padding: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.cardContainer {
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 10% 10% 30% 20%;
+    grid-template-areas:
+        "areaA areaA "
+        "areaB areaC "
+        "areaD areaE "
+        "areaF areaF "
+        "areaG areaG ";
+}
+
+.listImg {
+    width: 100%;
+    grid-area: areaA;
+}
+
+.commonName {
+    grid-area: areaB;
+}
+
+.listPrice {
+    grid-area: areaC;
+}
+
+.listTypeId {
+    grid-area: areaD;
+}
+
+.listCategoryName {
+    grid-area: areaE;
+}
+
+.listDiscription {
+    grid-area: areaF;
+}
+
+.listStation {
+    grid-area: areaG;
+    margin-top: 20px;
 }
 
 .testspace {
@@ -83,39 +137,10 @@ h3 {
     padding: 10px;
 }
 
-.container {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25% 25%;
-
-}
-
 .dummyimg {
     height: 100%;
     width: 100%;
     grid-area: areaA;
-}
-
-.card {
-    background-color: ivory;
-    border: solid black 2px;
-    width: 60%;
-    padding: 0;
-}
-
-.cardContainer {
-    height: 100%;
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50% 10% 40%;
-    grid-template-areas:
-        "areaA areaA areaA"
-        "areaB areaC areaD"
-        "areaE areaE areaE";
 }
 
 .category {
