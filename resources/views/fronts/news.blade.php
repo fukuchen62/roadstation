@@ -18,12 +18,17 @@
             font-size: 2rem;
             font-weight: bold;
         }
+
+        .station {
+            font-weight: bold;
+        }
     </style>
 @endsection
 
 @section('content')
 
     <div class="wrap">
+
         @foreach ($news as $new)
             <h1>{{ $new->title }}</h1>
 
@@ -32,9 +37,25 @@
                 <span>{{ $new->news_category_id }}</span>
             </div>
 
-
             <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+
+            <p>{{ $new->discription }}</p>
+
+            <span>前のページへ</span>
+            <span>次のページへ</span>
+
+            <p class="station">
+                <a href="{{ url('station-detail') }}">道の駅詳細ページへ</a>
+            </p>
         @endforeach
+
+
+        <div>
+            <h2>関連記事</h2>
+        </div>
+
+
+
         {{-- @foreach ($news as $new)
                 <tr>
                     <td>{{ $new->news_category_id }}</td>
