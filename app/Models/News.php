@@ -20,4 +20,10 @@ class News extends Model
         $data = $this->news_category_id;
         return $data;
     }
+
+    public function getCategoryName()
+    {
+        $data = '<p>' . $this->newsCategory->category_name . '</p>';
+        return $data;
+    }
 }

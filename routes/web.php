@@ -14,16 +14,19 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
-/**
- * TOP Page
- */
-Route::get('/', function () {
-    return view('fronts/index');
-})->name('top');
+
+// /**
+//  * TOP Page
+//  */
+// Route::get('/', function () {
+//     return view('fronts/index');
+// })->name('top');
+
+
 
 // Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('top');
 
@@ -51,6 +54,15 @@ Route::get(
 
 
 // ---------------------- frontPage -----------------------
+
+
+// ************* TOPページ *************
+
+Route::get(
+    '/',
+    'App\Http\Controllers\TopController@indexView'
+)->name('top');
+
 
 
 // *********** 道の駅テーブル ***********

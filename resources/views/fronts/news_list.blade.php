@@ -82,7 +82,8 @@
                     <small>{{ $new->created_at }}</small>
 
                     <span>
-                        {{ $new->news_category_id }}
+                        {!! $new->getCategoryName() !!}
+                        {{ $new->newsCategory->category_name }}
                     </span>
 
                 </div>
@@ -105,7 +106,7 @@
     </div>
 
 
-    <div class="link">{{ $news->links() }}</div>
+    {{-- <div class="link">{{ $news->links() }}</div> --}}
 
 
 @endsection
