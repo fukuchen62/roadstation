@@ -26,7 +26,7 @@ class RoadStation extends Model
     }
 
     /**
-     * 道の駅のURLをビュー（アーてぃくる）に送るメソッド
+     * 道の駅のURLをビュー（アーティクル）に送るメソッド
      *
      * @return void
      */
