@@ -35,4 +35,9 @@ class RoadstationController extends Controller
         ];
         return view('fronts.station_list', $data);
     }
+
+    public function stationDetailSearch(Request $request)
+    {
+        return view('fronts.station_search');
+    }
 }

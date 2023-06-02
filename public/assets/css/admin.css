@@ -295,6 +295,10 @@ table.info th {
     height: 50px;
 }
 
+th.clum-text {
+    width: 50%;
+}
+
 table.info th,
 table.info td {
     border: 1px darkgrey solid;
@@ -309,6 +313,13 @@ table.info tr:nth-child(even) {
 td.edit {
     width: 100px;
     text-align: center;
+}
+
+td.edit a {
+    text-align: center;
+    background-color: orange;
+    border: 1px solid chocolate;
+    padding: 10px 20px;
 }
 
 td.dt {
