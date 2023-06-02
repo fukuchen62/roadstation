@@ -48,7 +48,7 @@ h3 {
 
 .stationlist-title {
     text-align: center;
-    margin-bottom: px;
+    margin-bottom: 30px;
 }
 
 .east {
@@ -101,7 +101,7 @@ dd img {
         height: auto;
         width: 100%;
         object-fit: cover;
-        margin-bottom: 150
+        margin-bottom: 150px;
     }
 
 
@@ -163,7 +163,7 @@ dd img {
         height: auto;
         width: 100%;
         object-fit: cover;
-        margin-bottom: 150
+        margin-bottom: 150px;
     }
 
 
