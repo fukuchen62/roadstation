@@ -21,11 +21,13 @@ class NewsController extends Controller
      */
     public function newsListView(Request $request)
     {
-        $items = DB::table('news')
-            ->simplePaginate(6);
-
-        $category = DB::table('news_categories')
+        $items = News::where('deleted_at', null)
+            ->where('is_show', 1)
+            ->orderby('id', 'DESC')
             ->get();
+        // ->simplePaginate(6);
+
+        $category = NewsCategory::all();
 
         $data = [
             'news' => $items,

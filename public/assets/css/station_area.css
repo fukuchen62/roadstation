@@ -1,4 +1,3 @@
-/* エリア検索のCSS */
 @charset "utf-8";
 
 h2,
@@ -8,22 +7,29 @@ h4,
     text-align: center;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
 .card>img {
     border-radius: 20px;
 }
 
-.erea_category {
+.area_category {
+    text-align: center;
     margin: 0 auto;
-    margin-top: 250px;
+    margin-top: 120px;
 }
 
 h3 {
-    font-size: 1.5rem;
-    padding-bottom: 2rem;
+    font-size: 1rem;
+    padding: 1rem 0;
+    padding: 10px 12px;
 }
 
 .search_results {
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .kv img {
@@ -36,16 +42,17 @@ h3 {
 }
 
 .area {
+    /* width: 360px; */
     display: flex;
-    gap: 40px;
+    /* gap: 40px; */
     margin: 0 auto;
-    padding: 80px;
+    /* padding: 80px; */
     justify-content: space-evenly;
 }
 
 .area>h3 {
     display: inline-block;
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
     border-radius: 20px;
     color: #ffff;
     background-color: #ccc;
@@ -88,6 +95,11 @@ dd img {
 
 
 @media screen and (min-width:901px) {
+
+    .wrapper {
+        margin-top: 100px;
+    }
+
     .kv img {
         margin: 0 auto;
         object-fit: cover;
@@ -111,5 +123,25 @@ dd img {
         /* margin: 0 auto; */
         margin-bottom: 40px;
         word-break: break-word;
+    }
+
+    h3 {
+        font-size: 1rem;
+        padding: 2rem 0;
+        padding: 10px 12px;
+    }
+
+    .area {
+        margin-top: 40px;
+        gap: 5%;
+        justify-content: center;
+    }
+
+    .area>h3 {
+        display: inline-block;
+        padding: 20px 30px;
+        border-radius: 50px;
+        color: #ffff;
+        background-color: #ccc;
     }
 }

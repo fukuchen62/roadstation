@@ -61,7 +61,6 @@
 
 .before-next-mobilebtn {
     display: flex;
-    /* justify-content: space-between; */
     justify-content: center;
     gap: 50px;
     margin-bottom: 50px;
@@ -87,8 +86,7 @@
         margin-bottom: 30px;
     }
 
-    /* .date {
-} */
+
 
     .blog-img {
 
@@ -152,7 +150,6 @@
 
     .before-nextbtn {
         display: flex;
-        /* justify-content: space-between; */
         justify-content: center;
         gap: 50px;
 
@@ -167,7 +164,6 @@
 
     .before-next-mobilebtn {
         display: flex;
-        /* justify-content: space-between; */
         justify-content: center;
         gap: 50px;
         margin-bottom: 50px;
@@ -219,8 +215,7 @@
         margin-bottom: 30px;
     }
 
-    /* .date {
-    } */
+
 
     .blog-img {
 
@@ -252,7 +247,7 @@
         display: flex;
         gap: 50px;
         margin-bottom: 50px;
-        /* justify-content: center; */
+
 
 
     }

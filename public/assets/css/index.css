@@ -1,95 +1,101 @@
 @charset "utf-8";
 
-h2 {
-    text-align: center;
-    padding-bottom: 30px;
+
+.wrapper {
+    padding: 0;
+    margin-top: 600px;
 }
 
-.news {
-    justify-content: center;
-    gap: 50px;
-    background-color: #ffff;
-    border-radius: 50%;
-    margin-bottom: 150px;
-    margin-top: 20px;
-    padding: 20px;
-
-
-
+#top {
+    display: flex;
+    flex-direction: column;
 }
 
+.kv {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url(https://placehold.jp/1980x1080.png);
+    background-size: cover;
+    background-position: center;
+}
 
-
-.news1 {
-    text-align: right;
-    font-size: 20px;
+.sp-h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 30%;
 }
 
 .news-title {
-    text-align: end;
-    font-size: 16px;
+    margin-bottom: 30px;
 }
 
-.news2 {
-    /* text-align: center;
-    margin: 0 auto; */
-    text-align: left;
-    line-height: 2rem;
-    font-size: 16px;
-
-}
-
-.news-btn {
+.news-box {
     text-align: center;
-    margin: 0 auto;
+    background-color: #ffff;
+    border-radius: 50%;
+
+}
+
+.news-pcbtn {
+    display: none;
+}
+
+.news-mobilebtn {
+    text-align: center;
     border-radius: 50px;
     background-color: #B45A27;
     color: #ffff;
-    width: 150px;
-    position: absolute;
-    top: 420px;
-    left: 120px;
-    margin-bottom: 150px;
-
-
+    font-size: 20px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: inline-block;
 }
-
-
 
 .tokusimamap {
     margin: 0 auto;
-    display: block;
-    max-width: 320px;
+    max-width: 360px;
     width: 100%;
     height: auto;
-    margin-bottom: 150px;
+}
+
+/* 徳島のエリアマップ */
+.map {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.map a {
+    position: absolute;
+    padding: 4%;
+    border-radius: 50%;
+    background-color: #ccc;
 }
 
 .east {
-    position: absolute;
-    background-color: #ffff;
-    border-radius: 50%;
-    padding: 20px;
-    top: 660px;
-    left: 200px;
+    top: 20%;
+    left: 52%;
 }
 
 .west {
-    position: absolute;
-    background-color: #ffff;
-    border-radius: 50%;
-    padding: 20px;
-    top: 680px;
-    left: 80px;
+    top: 30%;
+    left: 30%;
 }
 
 .south {
-    position: absolute;
-    background-color: #ffff;
-    border-radius: 50%;
-    padding: 20px;
-    top: 750px;
-    left: 173px;
+    top: 55%;
+    left: 46%;
+}
+
+.area {
+    text-align: center;
+}
+
+.area-map {
+    text-align: center;
 }
 
 .station_detail {
@@ -97,25 +103,31 @@ h2 {
     border-radius: 50px;
     background-color: #B45A27;
     color: #ffff;
-    font-size: 25px;
-    padding: 20px;
-    width: 150px;
+    font-size: 20px;
+    padding: 20px 30px;
     margin: 0 auto;
-    position: absolute;
-    top: 880px;
-    left: 120px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
+    display: inline-block;
+    margin-top: 10%;
 }
+
+
+.feature-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 
 
 .goods-wrapper {
     margin: 0 auto;
     width: 100%;
-
-
     margin-bottom: 150px;
     justify-content: center;
-
+    margin-bottom: 50px;
+    align-items: center;
+    height: 100%;
+    text-align: center;
 }
 
 .goods {
@@ -123,9 +135,11 @@ h2 {
     flex-wrap: wrap;
     width: 360px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 30px;
+    align-items: center;
 
 }
 
@@ -146,42 +160,45 @@ h2 {
 .goods-2 {
     width: 120px;
     height: 120px;
+    align-items: center;
     border-radius: 30px;
     background-color: #E99787;
     color: black;
     text-align: center;
     font-size: 20px;
     padding: 20px;
+
+
 }
 
 .goods-strapline {
-    text-align: start;
-    font-size: 14px;
-    line-height: 150%;
+    display: none;
 
 }
 
-.goods-btn {
+
+.goods-pcbtn {
+    display: none;
+}
+
+.goods-mobilebtn {
     text-align: center;
     border-radius: 50px;
     background-color: #B45A27;
-    color: #ffffff;
+    color: #ffff;
     font-size: 20px;
-    position: absolute;
-    top: 1500px;
-    left: 120px;
-    padding: 20px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: inline-block;
 }
-
-
 
 .activity-wrapper {
     margin: 0 auto;
     width: 100%;
-
-
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
     justify-content: center;
+    text-align: center;
 
 }
 
@@ -190,14 +207,15 @@ h2 {
     flex-wrap: wrap;
     width: 360px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 30px;
 
 }
 
 
-.activity {
+.activityli {
     width: 360px;
     text-align: center;
 }
@@ -219,30 +237,41 @@ h2 {
     text-align: center;
     font-size: 20px;
     padding: 20px;
+
 }
 
 .activity-strapline {
-    text-align: center;
-    font-size: 14px;
-    line-height: 150%;
+    display: none;
+
 }
 
-.activity-btn {
+
+.activity-pcbtn {
+    display: none;
+}
+
+.activity-mobilebtn {
     text-align: center;
     border-radius: 50px;
     background-color: #B45A27;
-    color: #ffffff;
+    color: #ffff;
     font-size: 20px;
-    position: absolute;
-    top: 2000px;
-    left: 120px;
-    padding: 20px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.blog-taitle {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .blog-container {
     width: 100%;
     text-align: center;
     justify-content: start;
+    gap: 3%;
 }
 
 
@@ -255,10 +284,6 @@ h2 {
     border-radius: 20px;
     justify-content: center;
     margin: 30px auto;
-
-
-
-
 }
 
 .img-wrapper {
@@ -295,7 +320,7 @@ imgcontent-wrapper .heading {
 
 .blog-btn {
     text-align: center;
-
+    margin-bottom: 5%;
 }
 
 .blog-btn img {
@@ -305,187 +330,69 @@ imgcontent-wrapper .heading {
 }
 
 
-@media screen and (min-width:761px) and(min-width:900px) {
+@media screen and (min-width:761px) {
 
-    .news {
-        /* display: flex; */
-    }
-
-
-
-    .news1 {
-
-        text-align: center;
-    }
-
-    .news-btn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        position: absolute;
-        top: 255px;
-        left: 535px;
-        font-size: 20px;
-    }
 
     .news-title {
-        text-align: center;
-    }
-
-    .news2 {
-        text-align: center;
-        line-height: 2rem;
-    }
-
-
-    .news1 {
-
-        text-align: center;
+        margin-bottom: 30px;
 
     }
 
-}
-
-
-
-
-
-
-
-@media screen and (min-width:901px) {
-
-    h2 {
-        text-align: center;
-        padding-bottom: 30px;
-    }
-
-    .header__logo {
-        width: 100px;
-    }
-
-    .flex {
+    .news-box {
         display: flex;
-        justify-content: space-around;
-    }
-
-    .header__box {
-        width: 90%;
-    }
-
-    .news {
-        display: flex;
-        justify-content: center;
-        gap: 100px;
+        text-align: center;
         background-color: #ffff;
         border-radius: 50%;
-        padding: 20px;
+        display: flex;
+        justify-content: center;
+        background-color: #ffff;
+        border-radius: 50%;
+        padding: 30px;
         margin-bottom: 30px;
-        width: 800px;
-        height: auto;
+        gap: 5%;
+    }
+
+    .news-pcbtn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
         margin: 0 auto;
-        margin-top: 30px;
-
+        margin-bottom: 50px;
+        display: inline-block;
     }
 
-
-    .news1 {
-        /* text-align: center;
-        margin: 0 auto; */
-        text-align: right;
-        padding-top: 50px;
-    }
-
-    .news-btn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        position: absolute;
-        top: 255px;
-        left: 535px;
-        font-size: 20px;
-    }
-
-    .news-title {
-        text-align: end;
-    }
-
-    .news2 {
-        /* text-align: center;
-        margin: 0 auto; */
-        text-align: left;
-        line-height: 2rem;
-    }
-
-
-    .news1 {
-        /* text-align: center;
-        margin: 0 auto; */
-        text-align: right;
-        padding-top: 50px;
-    }
-
-    .news-btn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        position: absolute;
-        top: 255px;
-        left: 535px;
-        font-size: 20px;
-    }
-
-    .news-title {
-        text-align: end;
-    }
-
-    .news2 {
-        /* text-align: center;
-        margin: 0 auto; */
-        text-align: left;
-        line-height: 2rem;
+    .news-mobilebtn {
+        display: none;
     }
 
     .tokusimamap {
         margin: 0 auto;
-        max-width: 800px;
+        max-width: 80%;
+        width: 100%;
         height: auto;
-        object-fit: cover;
 
-
-    }
-
-    .area {
-        margin-bottom: 150px;
     }
 
     .east {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 40%;
-        padding: 30px;
-        top: 650px;
-        left: 850px;
+        top: 20%;
+        left: 57%;
     }
 
     .west {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 40%;
-        padding: 30px;
-        top: 700px;
-        left: 500px;
+        top: 30%;
+        left: 20%;
     }
 
     .south {
-        position: absolute;
-        background-color: #ffff;
-        border-radius: 40%;
-        padding: 30px;
-        top: 860px;
-        left: 750px;
+        top: 60%;
+        left: 50%;
+    }
+
+    .area {
+        text-align: center;
     }
 
     .station_detail {
@@ -494,142 +401,524 @@ imgcontent-wrapper .heading {
         background-color: #B45A27;
         color: #ffff;
         font-size: 20px;
-        padding: 20px;
-        width: 300px;
+        padding: 20px 30px;
         margin: 0 auto;
-        position: absolute;
-        top: 1100px;
-        left: 600px;
-
+        margin-bottom: 50px;
+        display: inline-block;
+        margin-top: 5%;
     }
+
+
+    .feature-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
 
     .goods-wrapper {
         margin: 0 auto;
-        width: 1200px;
+        width: 100%;
         margin-bottom: 150px;
         justify-content: center;
+        margin-bottom: 50px;
+        text-align: center;
 
     }
 
     .goods {
         display: flex;
         flex-wrap: wrap;
-        width: 1200px;
+        width: 761px;
+        text-align: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        align-items: center;
 
     }
 
 
     .goodsli {
-        width: 400px;
+        width: 761px;
         text-align: center;
     }
 
     .goods-1 {
-        width: 400px;
-        height: 400px;
-        border-radius: 50px;
+        width: 253px;
+        height: 253px;
+        border-radius: 30px;
         object-fit: cover;
     }
 
 
     .goods-2 {
-        width: 400px;
-        height: 400px;
-        border-radius: 50px;
+        width: 253px;
+        height: 253px;
+        align-items: center;
+        border-radius: 30px;
         background-color: #E99787;
         color: black;
-        padding: 100px;
-        line-height: 30px;
         text-align: center;
-        font-size: 32px;
-        font-weight: bold;
+        font-size: 20px;
+        padding: 20px;
+
+
     }
 
     .goods-strapline {
         text-align: center;
-        font-size: 20px;
     }
 
-    .goods-btn {
+
+    /* .goods-pcbtn {
         text-align: center;
         border-radius: 50px;
-        background-color: #FFFCEF;
-        color: #000000;
+        background-color: #B45A27;
+        color: #ffff;
         font-size: 20px;
-        left: 685px;
-        top: 2050px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+    } */
+
+    .goods-mobilebtn {
+        /* text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+       display: inline-block;  */
+        display: none;
+
     }
 
     .activity-wrapper {
         margin: 0 auto;
-        width: 1200px;
+        width: 100%;
         margin-bottom: 150px;
         justify-content: center;
+        text-align: center;
 
     }
-
 
     .activity {
         display: flex;
         flex-wrap: wrap;
-        width: 1200px;
+        width: 761px;
+        text-align: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
     }
 
+
     .activityli {
-        width: 400px;
+        width: 761px;
         text-align: center;
     }
 
     .activity-1 {
-        width: 400px;
-        height: 400px;
-        border-radius: 50px;
+        width: 253px;
+        height: 253px;
+        border-radius: 30px;
         object-fit: cover;
     }
 
 
     .activity-2 {
-        width: 400px;
-        height: 400px;
-        border-radius: 50px;
-        background-color: #F6AE54;
+        width: 253px;
+        height: 253px;
+        border-radius: 30px;
+        background-color: #E99787;
         color: black;
-        padding: 100px;
-        line-height: 30px;
         text-align: center;
-        font-size: 32px;
-        font-weight: bold;
+        font-size: 20px;
+        padding: 20px;
 
     }
 
     .activity-strapline {
-        text-align: center;
-        font-size: 20px;
+        display: none;
 
     }
 
 
-    .activity-btn {
+    .activity-pcbtn {
+        display: none;
+    }
+
+    .activity-mobilebtn {
         text-align: center;
         border-radius: 50px;
-        background-color: #FFFCEF;
-        color: #000000;
+        background-color: #B45A27;
+        color: #ffff;
         font-size: 20px;
-        left: 685px;
-        top: 3400px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+    }
 
+    .blog-taitle {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .blog-container {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .blog-wrapper {
+        max-width: 761px;
+        max-height: 500px;
+        width: 80%;
+        padding: 8px;
+        border: 3px solid #1ca10a;
+        box-sizing: border-box;
+        border-radius: 20px;
+        justify-content: center;
+        margin: 30px auto;
+    }
+
+    .img-wrapper {
+        max-width: 500px;
+        max-height: 350px;
+        width: 80%;
+        vertical-align: bottom;
+        border-radius: 20px;
+        margin: 0 auto;
+        justify-content: center;
+
+
+    }
+
+    .img-wrapper img {
+        max-width: 500px;
+        width: 80%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        object-fit: cover;
+    }
+
+    .img-wrapper {
+        padding: 8px 0;
+    }
+
+    .imgcontent-wrapper .heading {
+        margin: 0 0 8px;
+        max-width: 761px;
+        width: 80%;
+    }
+
+    .img-wrapper .text {
+        margin: 0;
+        font-size: 16px;
+        max-width: 761px;
+        width: 80%;
+    }
+
+}
+
+
+@media screen and (min-width:901px) {
+
+    .wrapper {
+        margin-top: 830px;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    #global-nav {
+        position: static;
+        top: -100px;
+        transition: all 0.6s ease 0s;
+    }
+
+    /* ヘッダーの固定 */
+    #global-nav.m_fixed {
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fffcef;
+        /* background-color: #fffcef; */
+        z-index: 999;
+    }
+
+
+
+    .sp-h2 {
+        color: #ffffff;
+        font-size: 2rem;
+        margin-top: 10%;
+    }
+
+    .news-title {
+        margin-bottom: 30px;
+
+    }
+
+    .news-box {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-color: #ffff;
+        border-radius: 50%;
+        padding: 30px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 75%;
+
+    }
+
+    .news-pcbtn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+
+    .news-mobilebtn {
+        display: none;
+    }
+
+
+    .tokusimamap {
+        margin: 0 auto;
+        max-width: 75%;
+        width: 100%;
+        height: auto;
+    }
+
+    .east {
+        top: 20%;
+        left: 57%;
+    }
+
+    .west {
+        top: 30%;
+        left: 20%;
+    }
+
+    .south {
+        top: 60%;
+        left: 50%;
+    }
+
+    .area {
+        text-align: center;
+    }
+
+
+    .station_detail {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+        margin-top: 5%;
+    }
+
+
+    .feature-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+
+    .goods-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        margin-bottom: 50px;
+        text-align: center;
+
+    }
+
+    .goods {
+        display: flex;
+        flex-wrap: wrap;
+        width: 761px;
+        text-align: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        align-items: center;
+
+    }
+
+
+    .goodsli {
+        width: 761px;
+        text-align: center;
+    }
+
+    .goods-1 {
+        width: 253px;
+        height: 253px;
+        border-radius: 30px;
+        object-fit: cover;
+    }
+
+
+    .goods-2 {
+        width: 253px;
+        height: 253px;
+        align-items: center;
+        border-radius: 30px;
+        background-color: #E99787;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    }
+
+    .goods-strapline {
+        text-align: center;
+    }
+
+
+    .goods-pcbtn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #ffffff;
+        color: #ff6c6c;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+    }
+
+    .goods-mobilebtn {
+        /* text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+       display: inline-block;  */
+        display: none;
+
+    }
+
+    .activity-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .activity {
+        display: flex;
+        flex-wrap: wrap;
+        width: 761px;
+        text-align: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+    }
+
+
+    .activityli {
+        width: 761px;
+        text-align: center;
+    }
+
+    .activity-1 {
+        width: 253px;
+        height: 253px;
+        border-radius: 30px;
+        object-fit: cover;
+    }
+
+
+    .activity-2 {
+        width: 253px;
+        height: 253px;
+        border-radius: 30px;
+        background-color: #E99787;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    }
+
+    .activity-strapline {
+        text-align: center;
+
+    }
+
+
+    .activity-pcbtn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #ffffff;
+        color: #ff6c6c;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+    }
+
+    .activity-mobilebtn {
+        display: none;
+        /* text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block; */
 
     }
 
     .blog-container {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 150px;
-
-
     }
-
 
     .blog-wrapper {
         width: 380px;
@@ -639,10 +928,6 @@ imgcontent-wrapper .heading {
         box-sizing: border-box;
         border-radius: 20px;
         justify-content: center;
-
-
-
-
     }
 
     .img-wrapper {
@@ -678,13 +963,11 @@ imgcontent-wrapper .heading {
 
     .blog-btn {
         text-align: center;
-
     }
 
     .blog-btn img {
         max-width: 700px;
         height: auto;
-
+        object-fit: cover;
     }
-
 }
