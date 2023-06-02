@@ -36,6 +36,11 @@ class NewsController extends Controller
     }
 
 
+
+
+
+
+
     /**
      * newsMainView function
      * news詳細ページの表示
