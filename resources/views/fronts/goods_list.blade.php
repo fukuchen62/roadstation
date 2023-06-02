@@ -93,27 +93,32 @@
 
         {{-- 特産品種別パネルを作成 --}}
         <section>
+            <div class="container">
             @foreach ($goods_type as $type )
-                <div>
-                    <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailimg">
+                <div class="card">
+
                     <ul>
-                        <li>種別名：{{$type->common_name}}</li>
-                        <li>参考価格{{$type->price}}</li>
-                        <li>種別ID：{{$type->goods_category_id}}</li>
-                        <li>種別名：{{$type->getCategoryName()}}</li>
-                        <li>説明文:{{$type->discription}}</li>
+                        <div class="cardContainer">
+                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
+                        <li class="commonName">種別名：{{$type->common_name}}</li>
+                        <li class="listPrice">参考価格{{$type->price}}円</li>
+                        <li class="listTypeId">種別ID：{{$type->goods_category_id}}</li>
+                        <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
+                        <li class="listDiscription">説明文:{!!$type->discription!!}</li>
+                        <div class="listStation"> {{-- 関連道の駅 --}}
+
+                                                @foreach ( $station_id as $id)
+                                                    <a href="{{route('roadstation')}}?id={{$id}}">道の駅{{$id}}</a>
+                                                @endforeach
+                                            </div>
+                                              @php
+                                                    print_r($station_id);
+                                                @endphp
+                        </div>
                     </ul>
-                    {{-- 関連道の駅 --}}
-                    <div>
-                        @php
-                            print_r($station_id);
-                        @endphp
-                        @foreach ( $station_id as $id)
-                            <a href="{{route('roadstation')}}?id={{$id}}">道の駅{{$id}}</a>
-                        @endforeach
-                    </div>
                 </div>
             @endforeach
+            </div>
         </section>
 
 

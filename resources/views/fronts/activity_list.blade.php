@@ -15,22 +15,19 @@
             <p>利用条件：{!! $activity->conditions !!}
             <p>解 説：{!! $activity->discription !!}</p>
         </div>
-    @endforeach
 
     {{--  体験できる道の駅の表示部分  --}}
     <h3>体験できる道の駅</h3>
-    @foreach ($road_stations as $road_station)
-
-    @endforeach
-
-    @endforeach
+        <ul>
+            <li><a href="">{{ $activity->roadstation->getName() }}</a></li>
+        </ul>
 
     {{--  体験したブログ記事の表示部分  --}}
     <h3>体験したブログ記事</h3>
-    @foreach ($blogs as $blog)
         <ul>
-            <li><a href="">{{ $blog->blogCategory->getName() }}</a></li>
+            <li><a href="">{{ $activity->blog->getName() }}</a></li>
         </ul>
+
     @endforeach
 
 @endsection

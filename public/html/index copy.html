@@ -10,7 +10,6 @@
     <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-
     <link rel="stylesheet" href="../assets/css/index copy.css">
 
     <!-- jQuery -->
@@ -31,49 +30,46 @@
 
 <body>
 
-    <header>
+    <header id="top">
+        <!-- g-nav mobile -->
+
         <div class="kv">
-            <img src="https://placehold.jp/1980x1080.png" alt="キービジュアル">
+        </div>
+        <div class="btn-gnavi">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
-        <!-- g-nav mobile -->
-        <h1><a href="#"><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></a></h1>
-        <nav id="wrapper">
-
-            <div class="btn-gnavi">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav id="global-navi">
+            <div class="hamburger-menu-list">
+                <ul class="menu">
+                    <li><a href="../html/station_list.html"><i class="fa-solid fa-book-bookmark"></i>
+                            道の駅一覧
+                        </a></li>
+                    <li><a href="../html/station_area.html"><i class="fa-solid fa-book-bookmark"></i>
+                            エリア検索</a></li>
+                    <li><a href="../html/station_detail.html"><i class="fa-solid fa-book-bookmark"></i>
+                            詳細検索</a></li>
+                    <li><a href="../html/goods_list.html"><i class="fa-solid fa-book-bookmark"></i>
+                            特産品</a></li>
+                    <li><a href="../html/activity_list.html"><i class="fa-solid fa-book-bookmark"></i>
+                            体験</a></li>
+                    <li><a href="../html/blog_list.html"><i class="fa-solid fa-book-bookmark"></i>
+                            行ってみたんよ</a></li>
+                    <li><a href="../html/like.html"><i class="fa-solid fa-book-bookmark"></i>
+                            お気に入り</a></li>
+                </ul>
             </div>
-
-            <nav id="global-navi">
-                <div class="hamburger-menu-list">
-                    <ul class="menu">
-                        <li><a href="../html/station_list.html"><i class="fa-solid fa-book-bookmark"></i>
-                                道の駅一覧
-                            </a></li>
-                        <li><a href="../html/station_area.html"><i class="fa-solid fa-book-bookmark"></i>
-                                エリア検索</a></li>
-                        <li><a href="../html/station_detail.html"><i class="fa-solid fa-book-bookmark"></i>
-                                詳細検索</a></li>
-                        <li><a href="../html/goods_list.html"><i class="fa-solid fa-book-bookmark"></i>
-                                特産品</a></li>
-                        <li><a href="../html/activity_list.html"><i class="fa-solid fa-book-bookmark"></i>
-                                体験</a></li>
-                        <li><a href="../html/blog_list.html"><i class="fa-solid fa-book-bookmark"></i>
-                                行ってみたんよ</a></li>
-                        <li><a href="../html/like.html"><i class="fa-solid fa-book-bookmark"></i>
-                                お気に入り</a></li>
-                    </ul>
-                </div>
-            </nav>
         </nav>
 
         <!-- g-nav pc -->
-        <nav class="nav-pc">
+        <nav id="global-nav" class="nav-pc">
             <h1><a href="#"><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></a></h1>
 
-            <ul>
+
+
+            <ul class="global-list">
                 <li><a href="../html/station_list.html"><i class="fa-solid fa-book-bookmark"></i>
                         道の駅一覧
                     </a></li>
@@ -90,6 +86,7 @@
                 <li><a href="../html/like.html"><i class="fa-solid fa-book-bookmark"></i>
                         お気に入り</a></li>
             </ul>
+
         </nav>
     </header>
 
@@ -139,9 +136,10 @@
                     <li><img class="goods-1" src="../storage/images/index.images/otaniyaki.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/renkon.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/sakana.jpg"></li>
-                    <li class="goods-2"><a href="">特産品
+                    <li class="goods-2">
+                        <h2 class="sp-h2">特産品
                             <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
-                        </a>
+                        </h2>
                         <p class="goods-pcbtn"><a href="">もっと見る</a></p>
                     </li>
                     <li><img class="goods-1" src="../storage/images/index.images/sudati.jpg" alt=""></li>
@@ -160,7 +158,8 @@
                     <li><img class="activity-1" src="../storage/images/index.images/dmv.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/aizometop.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/zipline.jpg"></li>
-                    <li class="activity-2">体験
+                    <li class="activity-2">
+                        <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
                         <p class="activity-pcbtn"><a href="">もっと見る</a></p>
                     </li>
@@ -177,33 +176,39 @@
         <section class="blog">
             <h2 class="blog-taitle">行ってきたんよ</h2>
             <div class="blog-container">
-                <div class="blog-wrapper">
-                    <div class="img-wrapper">
-                        <img src="../storage/images/index.images/boat.jpg" alt="">
-                        <h3 class="heading">タイトルなどが、入ります。 </h3>
-                        <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <a href="">
+                    <div class="blog-wrapper">
+                        <div class="img-wrapper">
+                            <img src="../storage/images/index.images/boat.jpg" alt="">
+                            <h3 class="heading">タイトルなどが、入ります。 </h3>
+                            <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="blog-wrapper">
-                    <div class="img-wrapper">
-                        <img src="../storage/images/index.images/boat.jpg" alt="">
-                        <h3 class="heading">タイトルなどが、入ります。 </h3>
-                        <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <a href="">
+                    <div class="blog-wrapper">
+                        <div class="img-wrapper">
+                            <img src="../storage/images/index.images/boat.jpg" alt="">
+                            <h3 class="heading">タイトルなどが、入ります。 </h3>
+                            <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="blog-wrapper">
-                    <div class="img-wrapper">
-                        <img src="../storage/images/index.images/boat.jpg" alt="">
-                        <h3 class="heading">タイトルなどが、入ります。 </h3>
-                        <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <a href="">
+                    <div class="blog-wrapper">
+                        <div class="img-wrapper">
+                            <img src="../storage/images/index.images/boat.jpg" alt="">
+                            <h3 class="heading">タイトルなどが、入ります。 </h3>
+                            <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        </div>
                     </div>
-                </div>
+                </a>
         </section>
 
         <div class="blog-btn">
-            <a href=""><img src="../assets/images/blog-btn.png" alt=""></a>
+            <a href="../html/blog_list.html"><img src="../assets/images/blog-btn.png" alt=""></a>
         </div>
 
     </main>
@@ -226,6 +231,10 @@
                     お気に入り</a></li>
         </ul>
     </footer>
+
+    <script src="../assets/js/main.js">
+    </script>
+
 </body>
 
 </html>

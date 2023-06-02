@@ -147,5 +147,13 @@ Route::get(
  */
 Route::get(
     'news',
-    'App\Http\Controllers\NewsController@newsMainView'
+    'App\Http\Controllers\NewsController@newsListView'
 )->name('news');
+
+/**
+ *新着情報詳細を表示する
+ */
+Route::get(
+    'news-detail',
+    'App\Http\Controllers\NewsController@newsMainView'
+)->name('newsdetail');

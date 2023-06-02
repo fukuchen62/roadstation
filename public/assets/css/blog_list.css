@@ -71,7 +71,7 @@
         border: 3px solid #1ca10a;
         background-color: #1ca10a;
         color: cornsilk;
-        position: fixed;
+        /* position: fixed; */
         left: 70%;
     }
 
