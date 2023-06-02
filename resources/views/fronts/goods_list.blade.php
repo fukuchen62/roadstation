@@ -96,24 +96,10 @@
             <div class="container">
             @foreach ($goods_type as $type )
                 <div class="card">
-
                     <ul>
                         <div class="cardContainer">
                         <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
-                        <li class="commonName">種別名：{{$type->common_name}}</li>
-                        <li class="listPrice">参考価格{{$type->price}}円</li>
-                        <li class="listTypeId">種別ID：{{$type->goods_category_id}}</li>
                         <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
-                        <li class="listDiscription">説明文:{!!$type->discription!!}</li>
-                        <div class="listStation"> {{-- 関連道の駅 --}}
-
-                                                @foreach ( $station_id as $id)
-                                                    <a href="{{route('roadstation')}}?id={{$id}}">道の駅{{$id}}</a>
-                                                @endforeach
-                                            </div>
-                                              @php
-                                                    print_r($station_id);
-                                                @endphp
                         </div>
                     </ul>
                 </div>
@@ -123,7 +109,44 @@
 
 
         {{-- 特産品種別詳細紹介カードを作成 --}}
+        <section>
+            <div class="container">
+            @foreach ($goods_type as $type )
+                <div class="card">
 
+                    <ul>
+                        <div class="cardContainer">
+                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
+                        <li class="commonName">種別名：{{$type->common_name}}</li>
+                        <li class="listPrice">参考価格:{{$type->price}}円</li>
+                        <li class="listTypeId">種別ID：{{$type->goods_category_id}}</li>
+                        <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
+                        {{-- <li class="listDiscription">説明文:{!!$type->discription!!}</li> --}}
+                    </ul>
+                    {{-- 道の駅のリンク --}}
+                    <div>
+                        @php
+                            $station_list = $type->station_list;
+                            // 文字列から配列に変換
+                            $id_list = explode("|", $station_list);
+                        @endphp
+
+                        @foreach ( $id_list as $id )
+
+                        @php
+
+                                $name = $type::getRoadstationName($id);
+
+                        @endphp
+
+                        <a href="{{route('roadstation')}}?id={{$id}}">{{$name}}</a>
+
+                        @endforeach
+                    </div>
+                </div>
+            @endforeach
+            </div>
+        </section>
     </section>
 
 @endsection
