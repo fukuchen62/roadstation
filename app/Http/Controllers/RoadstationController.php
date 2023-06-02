@@ -13,10 +13,10 @@ class RoadstationController extends Controller
 {
     public function stationMainView(Request $request)
     {
-        $name = RoadStation::where('id', 1)->get();
-        $goods = SpecialGoods::where('station_list', 1)->get();
-        $pro = ProductType::where('station_list', 1)->get();
-        $act = Activity::where('road_station_id', 1)->get();
+        $name = RoadStation::where('id', $request->id)->get();
+        $goods = SpecialGoods::where('station_list', $request->id)->get();
+        $pro = ProductType::where('station_list', $request->id)->get();
+        $act = Activity::where('road_station_id', $request->id)->get();
         $data = [
             'road_stations' => $name,
             'activities' => $act,
