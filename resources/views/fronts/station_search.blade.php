@@ -20,21 +20,45 @@
 
     <section class="titlesection">
         <div class="titlesection__box">
-            <h1 class="pagetitle">ページタイトル</h1>
+            <h1 class="pagetitle">詳細検索</h1>
         </div>
     </section>
-
-    <section class="section">
-
-        <h2 class="section__box--title ">第一セクション</h2>
-
-        <div>
-            <h3>サブタイトル</h3>
-            <div>
-                <p>テキストテキストテキストテキストテキストテキストテキスト</p>
-            </div>
-        </div>
-    </section>
+    <form action="" method="get">
+        <p>地域</p>
+        <input type="checkbox" name="area[]" id="east" value="1">
+        <label for="east">東部</label>
+        <input type="checkbox" name="area[]" id="west" value="2">
+        <label for="west">西部</label>
+        <input type="checkbox" name="area[]" id="south" value="3">
+        <label for="south">南部</label>
+        <input type="checkbox" name="area[]" id="all" value="">
+        <label for="all">全域</label>
+        <p>設備</p>
+        <input type="checkbox" name="" id="">
+        <label for="">観光案内</label>
+        <input type="checkbox" name="" id="">
+        <label for="">ショップ</label>
+        <input type="checkbox" name="" id="">
+        <label for="">軽食・喫茶</label>
+        <input type="checkbox" name="" id="">
+        <label for="">レストラン</label>
+        <input type="checkbox" name="" id="">
+        <label for="">体験施設</label>
+        <input type="checkbox" name="" id="">
+        <label for="">身障者トイレ</label>
+        <input type="checkbox" name="" id="">
+        <label for=""></label>
+        <input type="checkbox" name="" id="">
+        <label for=""></label>
+        <input type="checkbox" name="" id="">
+        <label for=""></label>
+        <input type="checkbox" name="" id="">
+        <label for=""></label>
+        <input type="checkbox" name="" id="">
+        <label for=""></label>
+        <input type="checkbox" name="" id="">
+        <label for=""></label>
+    </form>
 
 @endsection
 
