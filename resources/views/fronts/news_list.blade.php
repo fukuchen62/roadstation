@@ -69,7 +69,7 @@
     <div class="cards">
 
         @foreach ($news as $new)
-            <a href="{{ url('news-detail') }}?id={{ $new->id }}">
+            <a href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}">
 
                 <div class="card">
 
@@ -97,11 +97,9 @@
         <h2>カテゴリー</h2>
 
         <ul>
-            <a href="">
-                @foreach ($news_categories as $category)
-                    <li><a href="{{ url('news') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
-                @endforeach
-            </a>
+            @foreach ($news_categories as $category)
+                <li><a href="{{ url('news') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
+            @endforeach
         </ul>
 
     </div>

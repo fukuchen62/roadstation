@@ -75,10 +75,17 @@ class NewsController extends Controller
         $item = News::where('id', $request->id)
             ->get();
 
+        $items = News::where('news_category_id', $request->news_category_id)
+            ->where('is_show', 1)
+            ->orderby('id', 'DESC')
+            ->simplePaginate(2);
 
+        $category = NewsCategory::all();
 
         $data = [
             'news' => $item,
+            'categories' => $items,
+            'news_categories' => $category,
         ];
 
         return view('fronts.news', $data);
