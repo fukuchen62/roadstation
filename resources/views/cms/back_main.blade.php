@@ -22,21 +22,21 @@
                 <th>ID</th>
                 <th>カテゴリ</th>
                 <th>タイトル</th>
-                <th>概要</th>
+                <th class="clum-text">概要</th>
                 <th>投稿日時</th>
                 <th>編集</th>
             </tr>
 
-            {{-- @foreach ($news_list as $key => $news)
+            @foreach ($news_list as $key => $news)
                 <tr>
                     <td>{{ $news->id }}</td>
-                    <td>{{ $news->name }}</td>
+                    <td>{{ $news->newsCategory->category_name }}</td>
                     <td>{{ $news->title }}</td>
                     <td>{{ $news->overview }}</td>
                     <td class="dt">{{ $news->created_at }}</td>
-                    <td class="edit"><a href="{{ route('newsupdate') }}?id={{ $news->id }}">編集</a></td>
+                    <td class="edit"><a href="{{ route('cms-newsedit') }}?id={{ $news->id }}">編集</a></td>
                 </tr>
-            @endforeach --}}
+            @endforeach
         </table>
     </section>
 
@@ -45,24 +45,22 @@
         <table class="info tbl-count">
             <tr>
                 <th>ニュース</th>
-                <th>魚</th>
-                <th>スポット</th>
-                <th>釣具屋</th>
-                <th>体験プラン</th>
-                <th>避難場所</th>
-                <th>入門知識</th>
-                <th>周辺施設</th>
+                <th>ブログ</th>
+                <th>道の駅</th>
+                <th>特産品の種別</th>
+                <th>道駅の特産品</th>
+                <th>道駅のアクティビティ</th>
+                <th>ユーザー</th>
             </tr>
-            {{-- <tr>
+            <tr>
                 <td>{{ $counts['news_count'] }}</td>
-                <td>{{ $counts['fish_count'] }}</td>
-                <td>{{ $counts['spot_count'] }}</td>
-                <td>{{ $counts['shop_count'] }}</td>
-                <td>{{ $counts['plan_count'] }}</td>
-                <td>{{ $counts['excape_count'] }}</td>
-                <td>{{ $counts['knowledge_count'] }}</td>
-                <td>{{ $counts['facility_count'] }}</td>
-            </tr> --}}
+                <td>{{ $counts['blog_count'] }}</td>
+                <td>{{ $counts['roadStation_count'] }}</td>
+                <td>{{ $counts['productType_count'] }}</td>
+                <td>{{ $counts['specialGoods_count'] }}</td>
+                <td>{{ $counts['activity_count'] }}</td>
+                <td>{{ $counts['user_count'] }}</td>
+            </tr>
         </table>
     </section>
 @endsection
