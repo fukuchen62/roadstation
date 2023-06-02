@@ -52,6 +52,10 @@
         li {
             padding: 5px;
         }
+
+        .link {
+            clear: both;
+        }
     </style>
 @endsection
 
@@ -81,14 +85,11 @@
                         {{ $new->news_category_id }}
                     </span>
 
-
                 </div>
-
             </a>
         @endforeach
 
     </div>
-
 
     <div class="category">
 
@@ -104,6 +105,7 @@
     </div>
 
 
+    <div class="link">{{ $news->links() }}</div>
 
 
 @endsection
