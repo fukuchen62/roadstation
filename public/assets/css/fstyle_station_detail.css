@@ -153,3 +153,13 @@ h1.pagetitle {
 .car {
     height: 200px;
 }
+
+.card {
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list {
+    width: 500px;
+}
