@@ -8,9 +8,9 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/top.css')  }}">
+    <link rel="stylesheet" href="{{asset('assets/css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/css/top.css')}}">
 @endsection
 
 @section('key_visual')
