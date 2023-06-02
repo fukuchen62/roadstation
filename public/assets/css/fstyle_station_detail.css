@@ -148,3 +148,8 @@ h1.pagetitle {
 .star:hover {
     background-color: rgb(255, 246, 144);
 }
+
+/* 一覧 */
+.car {
+    height: 200px;
+}

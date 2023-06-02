@@ -68,7 +68,7 @@
     <section class="act1">
         <h2>体験</h2>
         @foreach ($activities as $act)
-            <div>{{ $act->picture1 }}</div>
+            <div><?= $act['picture1'] ?></div>
             <div>{!! $act->discription !!}</div>
         @endforeach
     </section>
@@ -92,8 +92,7 @@
                     <img src="{{ asset('/storage/imgs/bed_icon_' . $val->bed_icon . '.jpeg') }}" alt="">
                     <img src="{{ asset('/storage/imgs/restaurant_icon_' . $val->restaurant_icon . '.jpeg') }}"
                         alt="">
-                    <img src="{{ asset('/storage/imgs/lightmeal_icon_' . $val->lightmeal_icon . '.jpeg') }}"
-                        alt="">
+                    <img src="{{ asset('/storage/imgs/lightmeal_icon_' . $val->lightmeal_icon . '.jpeg') }}" alt="">
                     <img src="{{ asset('/storage/imgs/accommodation_icon_' . $val->accommodation_icon . '.jpeg') }}"
                         alt="">
                     <img src="{{ asset('/storage/imgs/spa_icon_' . $val->spa_icon . '.jpeg') }}" alt="">
