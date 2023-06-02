@@ -57,25 +57,26 @@
             <div>住所:<?= $value['address'] ?></div>
             <div class="card">
                 <img src="{{ asset('/storage/imgs/atm_icon_' . $value['atm_icon'] . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/bed_icon_' . $value->bed_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/restaurant_icon_' . $value->restaurant_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/lightmeal_icon_' . $value->lightmeal_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/accommodation_icon_' . $value->accommodation_icon . '.jpeg') }}"
+                <img src="{{ asset('/storage/imgs/bed_icon_' . $value['bed_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/restaurant_icon_' . $value['restaurant_icon'] . '.jpeg') }}"
                     alt="">
-                <img src="{{ asset('/storage/imgs/spa_icon_' . $value->spa_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/park_icon_' . $value->park_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/ev_icon_' . $value->ev_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/lan_icon_' . $value->lan_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/shower_icon_' . $value->shower_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/experience_icon_' . $value->experience_icon . '.jpeg') }}"
+                <img src="{{ asset('/storage/imgs/lightmeal_icon_' . $value['lightmeal_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/accommodation_icon_' . $value['accommodation_icon'] . '.jpeg') }}"
                     alt="">
-                <img src="{{ asset('/storage/imgs/guide_icon_' . $value->guide_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/disability_icon_' . $value->disability_icon . '.jpeg') }}"
+                <img src="{{ asset('/storage/imgs/spa_icon_' . $value['spa_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/park_icon_' . $value['park_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/ev_icon_' . $value['ev_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/lan_icon_' . $value['lan_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/shower_icon_' . $value['shower_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/experience_icon_' . $value['experience_icon'] . '.jpeg') }}"
                     alt="">
-                <img src="{{ asset('/storage/imgs/shop_icon_' . $value->shop_icon . '.jpeg') }}" alt="">
-                <img src="{{ asset('/storage/imgs/observatory_icon_' . $value->observatory_icon . '.jpeg') }}"
+                <img src="{{ asset('/storage/imgs/guide_icon_' . $value['guide_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/disability_icon_' . $value['disability_icon'] . '.jpeg') }}"
                     alt="">
-                <img src="{{ asset('/storage/imgs/museum_icon_' . $value->museum_icon . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/shop_icon_' . $value['shop_icon'] . '.jpeg') }}" alt="">
+                <img src="{{ asset('/storage/imgs/observatory_icon_' . $value['observatory_icon'] . '.jpeg') }}"
+                    alt="">
+                <img src="{{ asset('/storage/imgs/museum_icon_' . $value['museum_icon'] . '.jpeg') }}" alt="">
             </div>
 
             <?php }?>
