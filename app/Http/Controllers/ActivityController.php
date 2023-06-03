@@ -17,4 +17,6 @@ class ActivityController extends Controller
 
         return view('fronts.activity_list',$data);
     }
+
+    
 }

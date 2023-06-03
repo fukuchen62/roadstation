@@ -4,7 +4,7 @@
     <style>
         img {
             width: 320px;
-            height: 180px;
+            height: auto;
         }
     </style>
 @endsection
@@ -18,25 +18,13 @@
 
 @section('content')
 
-    {{-- <div>
-    <h2>{{ $blogs[3]->title }}</h2>
-    <p>{{ $blogs[3]->blog_category_id }}</p>
-    <p>記事制作者：{{ $blogs[3]->user_name }}</p>
-    <p>内 容：</p>{!! $blogs[3]->content !!}
-    <p>道の駅詳細：{{ $blogs[3]->roadstation_id }} </p>
-    <p>特産品：{{ $blogs[3]->special_goods_id }}</p>
-    <p>体験：{{ $blogs[3]->activity_id }}</p>
-    <p>登録日時：{{ $blogs[3]->created_at }}</p>
-</div> --}}
-
     @foreach ($blogs as $blog)
         <div>
             <h2>{{ $blog->title }}</h2>
-            <p>カテゴリー名：{{ $blog->blogCategory->getName() }}</p>
-            <img src="{{ asset('/storage/images') }}/test-picture/{{ $blog->picture }}" alt="">
-            <p>内 容：</p>{!! $blog->content !!}
-            {{--  <p>道の駅URL：<a href="{{ $blog->roadstation->getUrl() }}">各道の駅詳細ページリンク{{ $blog->roadstation->getUrl() }} </a></p>  --}}
             <p>登録日時：{{ $blog->created_at }}</p>
+            <p>カテゴリー名：{{ $blog->blogCategory->getName() }}</p>
+            <img src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+            <p>内 容：</p>{!! $blog->content !!}
         </div>
     @endforeach
 
@@ -52,47 +40,33 @@
 
 
     {{-- 関連記事の表示部分 --}}
+            <h2>
+                関連記事
+            </h2>
 
-        {{-- @foreach ($blogs as $blog)
 
-        @endforeach --}}
-        <p></p>
+            @foreach ($categories as $category)
+                <a href="{{ url('blog-detail') }}?id={{ $category->id }}&blog_category_id={{ $blog->$blog_categry_id }}">
+                    <div>
+                        <img src="{{ asset('/storage/images/' . $category->picture) }}" alt="">
+                        <h3>{{ $category->title }}</h3>
+                        <p>{{ $category->created_at }}</p>
+                        {{ $category->blogCategory->category_name }}
+                    </div>
+                </a>
+            @endforeach
+
 
     {{--  サイドバーのカテゴリーの表示部分  --}}
-
-    {{--  カテゴリーのIDを渡して、一覧表示させる  --}}
-
     <div>
         <h3>
             カテゴリー一覧
         </h3>
-        <ul>
-            <li>
-                {{-- <a href="{{ route('ルート名',['パラメータ名'=>'値']) }}"> --}}
-                体験
-                <p><a href="{{ url('blog') }}?id={{ $blog->id }}"></a>
-                    </a>
-            </li>
-            <li>
-                <a href="">
-                    特産品
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    グルメ
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    その他
-                </a>
-            </li>
-        </ul>
-        {{-- @foreach ($blogCategries as $bpogCategory)
-        <p>{{ $blogCategory->category_name }}</p>
-        @endforeach
-        --}}
+            <ul>
+                @foreach ($blog_categories as $category)
+                    <li><a href="{{ url('blog') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
+                @endforeach
+            </ul>
     </div>
 
 @endsection
