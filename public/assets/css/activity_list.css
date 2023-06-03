@@ -20,48 +20,62 @@ h2 {
 }
 
 .activity-photo{
-    max-width: 320px;
+    max-width: 550px;
     width: 100%;
     margin-bottom: 30px;
 }
 
 .activity-name{
+    max-width: 420px;
+    width: 100%;
     margin-bottom: 30px;
-    text-align: left;
+    text-align: start;
+}
+
+.activity-group{
+    border: 1px solid #000;
+    max-width: 600px;
+    width: 50%;
+    margin: 0 auto;
+
 }
 
 .text {
-    text-align: left;
-}
-
-.activity-text {
-    padding-top: 0;
-    padding-bottom: 30px;
-    text-align: left;
+    /* max-width: 800px; */
+    width: 100%;
+    text-align: start;
 }
 
 .business-text{
+    /* max-width: 420px; */
+    width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
-    text-align: left;
+    text-align: start;
 }
 
 .price-text{
+    max-width: 420px;
+    width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
-    text-align: left;
+    text-align: start;
 }
 
 .conditions-text{
+    max-width: 420px;
+    width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
-    text-align: left;
+    text-align: start;
 }
 
 .detail-text{
+    max-width: 420px;
+    width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
-    text-align: left;
+    text-align: start;
 }
 
 .activity-place {
