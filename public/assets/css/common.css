@@ -54,7 +54,6 @@ header {
 .more-btn {
     font-size: 1.5rem;
     width: 250px;
-    /* font-weight: bold; */
     padding: 4% 2%;
     border-radius: 30px;
     color: #ffffff;
@@ -65,7 +64,6 @@ header {
 .more-btn:hover {
     color: #b45a27;
     background-color: #ccc;
-
 }
 
 .icon {
@@ -260,7 +258,7 @@ footer li {
     .nav-pc {
         margin: 0 auto;
         padding: 10px;
-        max-width: 1200px;
+        /* max-width: 1200px; */
         text-align: center;
         display: flex;
         justify-content: space-between;
