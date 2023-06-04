@@ -65,7 +65,7 @@ class Blog extends Model
     }
 
     /**
-     * ブログのカテゴリーidを送るメソッド
+     * ブログのカテゴリーidを取得し送るメソッド
      *（関連記事の表示で使用するため作成）
      * 
      * @return void

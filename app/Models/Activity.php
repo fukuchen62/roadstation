@@ -17,7 +17,7 @@ class Activity extends Model
 
     /**
      * ブログモデルとリレーション
-     * （アクティビティ一覧にブログ記事のidを送るため作成）
+     * （アクティビティ一覧にブログ記事のidを送るため作成/作成者：小山）
      */
     public function blog(){
 
@@ -28,7 +28,7 @@ class Activity extends Model
 
     /**
      * ロードステーションモデルとリレーション
-     * （アクティビティ一覧に道の駅名を表示するため作成）
+     * （アクティビティ一覧に道の駅名を表示するため作成/作成者：小山）
      * 
      */
     public function roadStation(){
@@ -37,4 +37,16 @@ class Activity extends Model
     }
 
     protected $table = 'activities';
+
+
+    /**
+     * ブログのカテゴリーidを取得し送るメソッド
+     *（ブログ記事内の関連記事を表示するため作成/作成者：小山）
+     * 
+     * @return void
+     */
+    public function getCategoryId()
+    {
+        return $this->blog_category_id;
+    }
 }
