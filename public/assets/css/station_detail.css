@@ -7,17 +7,19 @@ h4,
     text-align: center;
 }
 
-.search_results {
-    margin-bottom: 40px;
+h3 {
+    padding: 10px 12px;
 }
 
-/* キービジュアル */
-.kv {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: 100% 100%;
-    margin-bottom: 20px;
+.search_results {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px 0;
+    margin: 40px 0;
 }
 
 /* カード */
@@ -44,19 +46,34 @@ h4,
     padding: 5px 10px;
     display: inline-block;
     text-align: center;
+}
+
+.submit-btn {
+    text-align: center;
 
 }
 
-/* .table {
-    width: 800px;
-     border-color;
-    inherit;
-    border-collapse: collapse;
-    margin: 0 auto;
-} */
 
 .map {
     margin: 0 auto;
+}
+
+/* mobile版のチェックボックス配置 */
+.mobile_table {
+    width: 340px;
+    margin: 0 5%;
+    text-align: left;
+}
+
+/* セル内の幅設定 */
+.mobile_table tr td {
+    width: 120px;
+    padding: 0.5rem 0;
+}
+
+/* pcを非表示 */
+.pc-form {
+    display: none;
 }
 
 
@@ -67,6 +84,10 @@ h4,
         position: absolute;
         width: 100%;
         height: 200px;
+    }
+
+    .wrapper {
+        margin-top: 200px;
     }
 
     .card-list {
@@ -86,11 +107,39 @@ h4,
         word-break: break-word;
     }
 
-    table {
+
+    /* PC版のチェックボックス配置 */
+    /* mobileを非表示 */
+    .mobile-form {
+        display: none;
+    }
+
+    /* pcを表示 */
+    .pc-form {
+        display: block;
+    }
+
+    .pc-table {
+        width: 800px;
         margin: 0 20%;
+        text-align: left;
+    }
+
+    /* セル内の幅設定 */
+    .pc-table tr td {
+        width: 300px;
+        padding: 0.5rem 0;
     }
 
     .checkbox-title {
         text-align: center;
+        font-size: 1.3rem;
+        padding: 10px 0;
+        width: 250px;
+        margin: 20px auto;
+        background-color: #ccc;
+
     }
+
+
 }

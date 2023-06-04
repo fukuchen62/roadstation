@@ -23,6 +23,7 @@
     <!-- アイコンフォント -->
     <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 </head>
+
 <body>
     <header>
         <!-- g-nav mobile -->
@@ -65,22 +66,127 @@
             </ul>
         </div>
     </header>
-    <figure><img src="https://placehold.jp/1200x200.png" class="kv" alt="お好きな道の駅を検索してください。"></figure>
+
+    <figure class="kv">
+        <img src="https://placehold.jp/1980x200.png" alt="お好きな道の駅を検索してください。">
+    </figure>
 
     <main class="wrapper">
-
-
         <section>
             <h2>詳細検索</h2>
 
+            <!-- mobile -->
+            <form class="mobile-form" action="station_detail.blade.php" method="post">
+                <h3>地域<br>
+                                                </h3>
+                <table class="mobile_table" border>
+                    <tr>
+                        <td>
+                            <input id="area_id" class="" type="checkbox" name="area" value="1">県東部</label>
+                        </td>
+                        <td>
+                            <label><input id="area_id" class="" type="checkbox" name="area" value="2">県西部</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td <label><input id="area_id" class="" type="checkbox" name="area" value="3">県南部</label>
+                        </td>
+                        <td>
+                            <label><input id="area_id" class="" type="checkbox" name="area">全域</label>
+                        </td>
+                    </tr>
+                </table>
 
+                <h3>設備</h3>
 
+                <table class="mobile_table" border="2" cellspacing=" 0">
+                    <tr>
+                        <td>
+                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="">観光案内</label>
+                        </td>
+                        <td>
+                            <input id="shop_icon" type="checkbox" name="shop_icon">ショップ</label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="lightmeal_icon" type="checkbox" name="lightmeal_icon">軽食・喫茶</label>
+                        </td>
+                        <td>
+                            <input id="restaurant_icon" type="checkbox" name="restaurant_icon">レストラン</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="experience_icon" type="checkbox" name="experience_icon">体験施設</label>
+                        </td>
+                        <td>
+                            <input id="disability_icon" type="checkbox" name="disability_icon">身障者トイレ</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="park_icon" type="checkbox" name="park_icon">公園</label>
+
+                        </td>
+                        <td>
+                            <label><input id="bed_icon" type="checkbox" name="bed_icon">ベビーベッド</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon">宿泊施設</label>
+                        </td>
+                        <td>
+                            <label><input id="spa_icon" type="checkbox" name="spa_icon">温泉施設</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="shower_icon" type="checkbox" name="shower_icon">シャワー</label>
+
+                        </td>
+                        <td>
+                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon">展望台</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="ev_icon" type="checkbox" name="ev_icon">EV充電施設</label>
+
+                        </td>
+                        <td>
+                            <label><input id="lan_icon" type="checkbox" name="lan_icon">無線LAN</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label><input id="atm_icon" type="checkbox" name="atm_icon">ATM</label>
+
+                        <td>
+                            <label><input id="museum_icon" type="checkbox" name="museum_icon">美術館・博物館</label>
+                        </td>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class="submit-btn">
+                                                                            <input class="more-btn  btn-reset" type="reset" value="リセット">
+                                                                            <input class="more-btn btn-search" type="submit" value="検索">
+                                                                        </p>
+
+            </form>
+
+            <!-- PC -->
             <!-- value=""の設定を後でする。road_stationsのテーブル名と一緒？  -->
-            <form action=" station_detail.blade.php" method="post">
-                <p>地域<br>
-                </p>
+            <form class="pc-form" action="station_detail.blade.php" method="post">
+                <h3 class="checkbox-title">地域<br>
+                </h3>
 
-                <table border="2" width="800" height="250" cellspacing="0">
+                <table class="pc-table" border="2" cellspacing="0">
                     <tr>
                         <td><label><input id="area_id" class="" type="checkbox" name="area" value="1">県東部</label>
                         </td>
@@ -94,24 +200,23 @@
                             <label><input id="area_id" class="" type="checkbox" name="area">全域</label>
                         </td>
                     </tr>
-                    <tr>
-                        <td cellspacing="4">
-                            <h3 class="checkbox-title">設備</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="">観光案内</label>
-                        </td>
-                        <td>
-                            <input id="shop_icon" type="checkbox" name="shop_icon">ショップ</label>
-                        </td>
-                        <td>
-                            <input id="lightmeal_icon" type="checkbox" name="lightmeal_icon">軽食・喫茶</label>
-                        </td>
-                        <td>
-                            <input id="restaurant_icon" type="checkbox" name="restaurant_icon">レストラン</label>
-                        </td>
+                </table>
+
+                <h3 class="checkbox-title">設備</h3>
+
+                <table class="pc-table" border="2" cellspacing=" 0">
+                    <td>
+                        <label><input id="guide_icon" type="checkbox" name="guide_icon" value="">観光案内</label>
+                    </td>
+                    <td>
+                        <input id="shop_icon" type="checkbox" name="shop_icon">ショップ</label>
+                    </td>
+                    <td>
+                        <input id="lightmeal_icon" type="checkbox" name="lightmeal_icon">軽食・喫茶</label>
+                    </td>
+                    <td>
+                        <input id="restaurant_icon" type="checkbox" name="restaurant_icon">レストラン</label>
+                    </td>
                     </tr>
                     <tr>
                         <td>
@@ -164,25 +269,88 @@
                 </table>
 
 
+                <table class="pc-table" border="2" cellspacing=" 0">
+                    <td>
+                        <label><input id="guide_icon" type="checkbox" name="guide_icon" value="">観光案内</label>
+                    </td>
+                    <td>
+                        <input id="shop_icon" type="checkbox" name="shop_icon">ショップ</label>
+                    </td>
+                    <td>
+                        <input id="lightmeal_icon" type="checkbox" name="lightmeal_icon">軽食・喫茶</label>
+                    </td>
+                    <td>
+                        <input id="restaurant_icon" type="checkbox" name="restaurant_icon">レストラン</label>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="experience_icon" type="checkbox" name="experience_icon">体験施設</label>
+                        </td>
+                        <td>
+                            <input id="disability_icon" type="checkbox" name="disability_icon">身障者トイレ</label>
+                        </td>
+                        <td>
+                            <label><input id="park_icon" type="checkbox" name="park_icon">公園</label>
+
+                        </td>
+                        <td>
+                            <label><input id="bed_icon" type="checkbox" name="bed_icon">ベビーベッド</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon">宿泊施設</label>
+                        </td>
+                        <td>
+                            <label><input id="spa_icon" type="checkbox" name="spa_icon">温泉施設</label>
+
+                        </td>
+                        <td>
+                            <label><input id="shower_icon" type="checkbox" name="shower_icon">シャワー</label>
+
+                        </td>
+                        <td>
+                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon">展望台</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input id="ev_icon" type="checkbox" name="ev_icon">EV充電施設</label>
+
+                        </td>
+                        <td>
+                            <label><input id="lan_icon" type="checkbox" name="lan_icon">無線LAN</label>
+                        </td>
+                        <td><label><input id="atm_icon" type="checkbox" name="atm_icon">ATM</label>
+
+                        <td>
+                            <label><input id="museum_icon" type="checkbox" name="museum_icon">美術館・博物館</label>
+                        </td>
+                        </td>
+                    </tr>
+                </table>
 
                 <label>
                     <label>
                         <label>
 
 
-
-
                             <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
-                            <p><input class="more-btn  btn-reset" type="reset" value="リセット">
-                        <input class="more-btn btn-search" type="submit" value="検索"></p>
+                            <p class="submit-btn">
+                                <input class="more-btn  btn-reset" type="reset" value="リセット">
+                                <input class="more-btn btn-search" type="submit" value="検索">
+                            </p>
             </form>
 
-
-            <!-- 検索エリア -->
-            <!-- ボタン -->
-            <h3 class="search_results">検索結果（〇〇件）</h3>
         </section>
 
+
+        <!-- 検索エリア -->
+        <!-- ボタン -->
+        <h3 class="search_results">検索結果（〇〇件）</h3>
         <div class="card-list">
 
             <!-- １行目 -->
@@ -215,7 +383,6 @@
                     </dd>
                 </dl>
 
-                <a href="#" class="more">More</a>
 
 
 
@@ -249,7 +416,6 @@
                     </dd>
                 </dl>
 
-                <a href="#" class="more">More</a>
                 </section>
 
             </div>
@@ -282,7 +448,6 @@
                     </dd>
                 </dl>
 
-                <a href="#" class="more">More</a>
                 </section>
 
             </div>
@@ -317,7 +482,6 @@
                     </dd>
                 </dl>
 
-                <a href="#" class="more">More</a>
 
 
 
@@ -351,7 +515,6 @@
                     </dd>
                 </dl>
 
-                <a href="#" class="more">More</a>
                 </section>
 
             </div>
@@ -383,9 +546,6 @@
                         <img src="https://placehold.jp/25x25.png" alt="設備〇〇〇">
                     </dd>
                 </dl>
-                <div class="more">
-                    <a href="#">More</a>
-                </div>
 
                 </section>
 
