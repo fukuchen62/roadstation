@@ -16,6 +16,7 @@ class BlogCategory extends Model
 
     /**
      * ブログとリレーション
+     * （ / 作成者：小山）
      */
     // public function blogs(){
     //     return $this->hasone(Blog::class);
@@ -23,6 +24,7 @@ class BlogCategory extends Model
 
     /**
      * ブログとリレーション
+     * （ / 作成者：小山）
      */
     // public function blogs(){
     //     return $this->hasMany(Blog::class);
@@ -43,7 +45,7 @@ class BlogCategory extends Model
 
     /**
      * blog_categoriesテーブルのカテゴリー名をビューに送るメソッド
-     * （ブログ記事一覧と各ブログ記事で使用するため作成）
+     * （ブログ記事一覧と各ブログ記事で使用するため作成 / 作成者：小山）
      *
      * @return void
      */
@@ -53,7 +55,7 @@ class BlogCategory extends Model
 
     /**
      *blog_categoriesテーブルのidをビューに送るメソッド
-     *（ルート設定の確認テストで使用するため作成）
+     *（ルート設定の確認テストで使用するため作成 / 作成者：小山）
      *
      * @return void
      */
