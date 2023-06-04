@@ -23,11 +23,17 @@
             font-weight: bold;
         }
 
-        .station {
-            font-weight: bold;
+        .discription {
+            margin: 10px;
         }
 
         span {
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .station {
+            font-weight: bold;
             margin: 10px;
         }
 
@@ -82,17 +88,21 @@
 
                 <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
 
-                <p>{!! $new->discription !!}</p>
+                <p class="discription">{!! $new->discription !!}</p>
 
                 <span>
-                    <a href="{{ url('news-detail') }}?id={{ $new->id - 1 }}">前のページへ</a>
+                    @if ($new->id - 1 > 0)
+                        <a href="{{ url('news-detail') }}?id={{ $new->id - 1 }}">前のページへ</a>
+                    @endif
                 </span>
                 <span>
-                    <a href="{{ url('news-detail') }}?id={{ $new->id + 1 }}">次のページへ</a>
+                    @if ($new->id + 1 < 11)
+                        <a href="{{ url('news-detail') }}?id={{ $new->id + 1 }}">次のページへ</a>
+                    @endif
                 </span>
 
                 <p class="station">
-                    <a href="{{ url('station-detail') }}">道の駅詳細ページへ</a>
+                    <a href="{{ url('station-detail') }}">関連道の駅詳細ページへ</a>
                 </p>
             @endforeach
         </div>

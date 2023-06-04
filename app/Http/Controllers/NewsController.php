@@ -27,24 +27,24 @@ class NewsController extends Controller
                 ->where('is_show', 1)
                 ->where('news_category_id', 1)
                 ->orderby('id', 'DESC')
-                ->simplePaginate(4);
+                ->paginate(4);
         } elseif ($request->id == 2) {
             $items = News::where('deleted_at', null)
                 ->where('is_show', 1)
                 ->where('news_category_id', 2)
                 ->orderby('id', 'DESC')
-                ->simplePaginate(4);
+                ->paginate(4);
         } elseif ($request->id == 3) {
             $items = News::where('deleted_at', null)
                 ->where('is_show', 1)
                 ->where('news_category_id', 3)
                 ->orderby('id', 'DESC')
-                ->simplePaginate(4);
+                ->paginate(4);
         } else {
             $items = News::where('deleted_at', null)
                 ->where('is_show', 1)
                 ->orderby('id', 'DESC')
-                ->simplePaginate(4);
+                ->paginate(4);
         }
 
         $category = NewsCategory::all();

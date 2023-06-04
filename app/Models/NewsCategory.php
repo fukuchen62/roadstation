@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NewsCategory extends Model
 {
-    // use HasFactory;
+    use HasFactory;
 
     public function getData()
     {

@@ -56,6 +56,14 @@
         .link {
             clear: both;
         }
+
+        .pagination {
+            text-align: center;
+        }
+
+        .pagination li {
+            display: inline-block;
+        }
     </style>
 @endsection
 
@@ -104,7 +112,8 @@
 
     </div>
 
-    <div class="link">{{ $news->links() }}</div>
+
+    <div class="link">{{ $news->links('pagination::bootstrap-4') }}</div>
 
 
 
