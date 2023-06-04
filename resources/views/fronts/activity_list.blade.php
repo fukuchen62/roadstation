@@ -14,6 +14,28 @@
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/activity_list.css') }}">
 
+    <style>
+        section{
+            text-align: left;
+        }
+        .activity-photo{
+            display: block;
+            margin:  auto;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .activity-name{
+            font-size: 20px;
+            margin: 0 auto;
+        }
+        .conditions-text{
+            margin-top: 8px;
+        }
+        .headline text{
+            margin-bottom: 0px;
+        }
+    </style>
+
 @endsection
 
 {{-- メイン --}}
@@ -24,18 +46,17 @@
     {{--  体験一覧一覧の表示部分  --}}
 @foreach ($activities as $activity)
     <section>
-
         <img class="activity-photo"  src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
-            <h3 class="activity-name">{{ $activity->activity_name }}</h3>
-            <div class="activity-group">
-                <h3 class="headline text">営業時間：</h3>
-                    <p class="business-text">{{ $activity->business_hours }}</p>
-                <h3 class="headline text">料 金：</h3>
-                    <p class="price-text">{{ $activity->price }}</p>
-                <h3 class="headline text">利用条件：</h3>
-                    <p class="conditions-text">{!! $activity->conditions !!}</p>
-                <h3 class="headline text">体験内容・詳細：</h3 class="detail-text">
-                    <p>{!! $activity->discription !!}</p>
+        <h3 class="activity-name">{{ $activity->activity_name }}</h3>
+        <div class="activity-group">
+            <h4 class="headline text">営業時間：</h4>
+                <p class="business-text">{{ $activity->business_hours }}</p>
+            <h4 class="headline text">料 金：</h4>
+                <p class="price-text">{{ $activity->price }}</p>
+            <h4 class="headline text">利用条件：</h4>
+                <p class="conditions-text">{!! $activity->conditions !!}</p>
+            <h4 class="headline text">体験内容・詳細：</h4 class="detail-text">
+                <p>{!! $activity->discription !!}</p>
             
         {{--  体験できる道の駅の表示部分  --}}
         <h3 class="headline activity-place">体験できる道の駅</h3>

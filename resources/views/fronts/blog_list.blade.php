@@ -19,7 +19,7 @@
 
 @section('content')
 
-    {{-- ブログ記事一覧の表示部分 表示する記事数はコントローラ内のwhere句で指定 --}}
+    {{-- ブログ記事一覧の表示部分 表示する記事数はコントローラ内のwhere句（paginate）で指定 --}}
     @foreach ($blogs as $blog)
         <a href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}">
             <h2>{{ $blog->title }}</h2>
@@ -32,9 +32,7 @@
 
     {{-- サイドバーのカテゴリー一覧の表示部分 --}}
     <div>
-        <h3>
-            カテゴリー一覧
-        </h3>
+        <h3>カテゴリー一覧</h3>
         <ul>
             <ul>
                 @foreach ($blog_categories as $category)
