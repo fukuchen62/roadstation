@@ -12,6 +12,7 @@ h3 {
 }
 
 .search_results {
+    font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -59,9 +60,14 @@ form {
 }
 
 /* mobile版のチェックボックス配置 */
+.mobile-form {
+    width: 100%;
+}
+
 .mobile_table {
-    width: 340px;
+    width: 80%;
     margin: 0 5%;
+    margin-left: 40px;
     text-align: left;
 }
 
@@ -69,6 +75,7 @@ form {
 .mobile_table tr td {
     width: 120px;
     padding: 0.5rem 0;
+
 }
 
 /* pcを非表示 */
@@ -76,6 +83,24 @@ form {
     display: none;
 }
 
+.checkbox-title {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    width: 150px;
+    margin: 20px auto;
+    background-color: #ccc;
+}
+
+@media screen and (min-width:601px) {
+    .mobile_table {
+        width: 80%;
+        margin: 0 5%;
+        margin-left: 20%;
+        text-align: left;
+    }
+
+}
 
 @media screen and (min-width:901px) {
     .kv img {
@@ -132,14 +157,7 @@ form {
     }
 
     .checkbox-title {
-        text-align: center;
-        font-size: 1.3rem;
-        padding: 10px 0;
         width: 250px;
-        margin: 20px auto;
-        background-color: #ccc;
-
     }
-
 
 }

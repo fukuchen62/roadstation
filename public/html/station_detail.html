@@ -77,7 +77,7 @@
 
             <!-- mobile -->
             <form class="mobile-form" action="station_detail.blade.php" method="post">
-                <h3>地域<br>
+                <h3 class="checkbox-title">地域<br>
                                                 </h3>
                 <table class="mobile_table" border>
                     <tr>
@@ -97,7 +97,7 @@
                     </tr>
                 </table>
 
-                <h3>設備</h3>
+                <h3 class="checkbox-title">設備</h3>
 
                 <table class="mobile_table" border="2" cellspacing=" 0">
                     <tr>
@@ -269,77 +269,9 @@
                 </table>
 
 
-                <table class="pc-table" border="2" cellspacing=" 0">
-                    <td>
-                        <label><input id="guide_icon" type="checkbox" name="guide_icon" value="">観光案内</label>
-                    </td>
-                    <td>
-                        <input id="shop_icon" type="checkbox" name="shop_icon">ショップ</label>
-                    </td>
-                    <td>
-                        <input id="lightmeal_icon" type="checkbox" name="lightmeal_icon">軽食・喫茶</label>
-                    </td>
-                    <td>
-                        <input id="restaurant_icon" type="checkbox" name="restaurant_icon">レストラン</label>
-                    </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input id="experience_icon" type="checkbox" name="experience_icon">体験施設</label>
-                        </td>
-                        <td>
-                            <input id="disability_icon" type="checkbox" name="disability_icon">身障者トイレ</label>
-                        </td>
-                        <td>
-                            <label><input id="park_icon" type="checkbox" name="park_icon">公園</label>
 
-                        </td>
-                        <td>
-                            <label><input id="bed_icon" type="checkbox" name="bed_icon">ベビーベッド</label>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon">宿泊施設</label>
-                        </td>
-                        <td>
-                            <label><input id="spa_icon" type="checkbox" name="spa_icon">温泉施設</label>
-
-                        </td>
-                        <td>
-                            <label><input id="shower_icon" type="checkbox" name="shower_icon">シャワー</label>
-
-                        </td>
-                        <td>
-                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon">展望台</label>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label><input id="ev_icon" type="checkbox" name="ev_icon">EV充電施設</label>
-
-                        </td>
-                        <td>
-                            <label><input id="lan_icon" type="checkbox" name="lan_icon">無線LAN</label>
-                        </td>
-                        <td><label><input id="atm_icon" type="checkbox" name="atm_icon">ATM</label>
-
-                        <td>
-                            <label><input id="museum_icon" type="checkbox" name="museum_icon">美術館・博物館</label>
-                        </td>
-                        </td>
-                    </tr>
-                </table>
-
-                <label>
-                    <label>
-                        <label>
-
-
-                            <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
-                            <p class="submit-btn">
+                <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
+                <p class="submit-btn">
                                 <input class="more-btn  btn-reset" type="reset" value="リセット">
                                 <input class="more-btn btn-search" type="submit" value="検索">
                             </p>
