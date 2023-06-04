@@ -32,7 +32,11 @@
             margin-top: 8px;
         }
         .headline text{
-            margin-bottom: 0px;
+            margin-top: 40px;
+        }
+
+        .roadstation-frame{
+            text-align: left;
         }
     </style>
 
@@ -54,7 +58,7 @@
             <h4 class="headline text">料 金：</h4>
                 <p class="price-text">{{ $activity->price }}</p>
             <h4 class="headline text">利用条件：</h4>
-                <p class="conditions-text">{!! $activity->conditions !!}</p>
+                {!! $activity->conditions !!}
             <h4 class="headline text">体験内容・詳細：</h4 class="detail-text">
                 <p>{!! $activity->discription !!}</p>
             

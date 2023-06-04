@@ -43,7 +43,7 @@
         <h3>道の駅情報</h3>
         <p>各道の駅詳細ページリンク</p>
         <P><a href="{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>
-        
+        <P>test:<a href="{{ url('station-detail') }}?id={{ $blog->road_station_id }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>
     @endforeach
 
 
