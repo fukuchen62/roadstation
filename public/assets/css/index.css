@@ -27,7 +27,7 @@
 }
 
 .news-title {
-    margin-bottom: 30px;
+    padding: 20px 30px;
 }
 
 .news-box {
@@ -49,6 +49,7 @@
     font-size: 20px;
     padding: 20px 30px;
     margin: 0 auto;
+    margin-top: 20px;
     margin-bottom: 50px;
     display: inline-block;
 }
@@ -98,16 +99,8 @@
     text-align: center;
 }
 
-.station_detail {
-    text-align: center;
-    border-radius: 50px;
-    background-color: #B45A27;
-    color: #ffff;
-    font-size: 20px;
-    padding: 20px 30px;
-    margin: 0 auto;
+.more-btn {
     margin-bottom: 50px;
-    display: inline-block;
     margin-top: 10%;
 }
 
@@ -181,7 +174,7 @@
     display: none;
 }
 
-.goods-mobilebtn {
+.mobile-btn {
     text-align: center;
     border-radius: 50px;
     background-color: #B45A27;
@@ -211,7 +204,6 @@
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 30px;
-
 }
 
 
@@ -248,18 +240,6 @@
 
 .activity-pcbtn {
     display: none;
-}
-
-.activity-mobilebtn {
-    text-align: center;
-    border-radius: 50px;
-    background-color: #B45A27;
-    color: #ffff;
-    font-size: 20px;
-    padding: 20px 30px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    display: inline-block;
 }
 
 .blog-taitle {
@@ -329,14 +309,18 @@ imgcontent-wrapper .heading {
     object-fit: cover;
 }
 
+/* pcボタンの非表示 */
+.pcbtn {
+    display: none;
+}
+
 
 @media screen and (min-width:761px) {
 
 
-    .news-title {
-        margin-bottom: 30px;
-
-    }
+    /* .news-title {
+        padding: 30px;
+    } */
 
     .news-box {
         display: flex;
@@ -354,16 +338,10 @@ imgcontent-wrapper .heading {
     }
 
     .news-pcbtn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        display: inline-block;
+        display: block;
+        width: 100%;
     }
+
 
     .news-mobilebtn {
         display: none;
@@ -472,29 +450,7 @@ imgcontent-wrapper .heading {
         text-align: center;
     }
 
-
-    /* .goods-pcbtn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        display: inline-block;
-    } */
-
-    .goods-mobilebtn {
-        /* text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-       display: inline-block;  */
+    .mobile-btn {
         display: none;
 
     }
@@ -556,7 +512,7 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-    .activity-mobilebtn {
+    .mobile-btn {
         text-align: center;
         border-radius: 50px;
         background-color: #B45A27;
@@ -666,10 +622,10 @@ imgcontent-wrapper .heading {
         margin-top: 10%;
     }
 
-    .news-title {
+    /* .news-title {
         margin-bottom: 30px;
 
-    }
+    } */
 
     .news-box {
         display: flex;
@@ -804,7 +760,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .goods-pcbtn {
+    .pcbtn {
         text-align: center;
         border-radius: 50px;
         background-color: #ffffff;
@@ -820,16 +776,12 @@ imgcontent-wrapper .heading {
         left: 20%;
     }
 
-    .goods-mobilebtn {
-        /* text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-       display: inline-block;  */
+    .pcbtn:hover {
+        color: #ff6c6c;
+        background-color: #fff7e2;
+    }
+
+    .goods-mobile-btn {
         display: none;
 
     }
@@ -903,17 +855,8 @@ imgcontent-wrapper .heading {
         left: 20%;
     }
 
-    .activity-mobilebtn {
+    .mobile-btn {
         display: none;
-        /* text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        display: inline-block; */
 
     }
 

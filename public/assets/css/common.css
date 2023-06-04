@@ -53,12 +53,19 @@ header {
 /* もっと見るボタン */
 .more-btn {
     font-size: 1.5rem;
-    font-weight: bold;
-    padding: 1.2% 2%;
+    width: 250px;
+    /* font-weight: bold; */
+    padding: 4% 2%;
     border-radius: 30px;
     color: #ffffff;
     background-color: #b45a27;
     display: inline-block;
+}
+
+.more-btn:hover {
+    color: #b45a27;
+    background-color: #ccc;
+
 }
 
 .icon {
@@ -284,7 +291,7 @@ footer li {
     /* もっと見るボタン */
     .more-btn {
         font-size: 1.5rem;
-        font-weight: bold;
+        /* font-weight: bold; */
         text-align: center;
         width: 250px;
         padding: 1.2% 0;
