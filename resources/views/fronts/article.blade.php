@@ -20,6 +20,10 @@
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/article.css') }}">
 
+    <style>
+        
+    </style>
+
 @endsection
 
 
