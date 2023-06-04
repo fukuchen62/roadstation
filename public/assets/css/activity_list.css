@@ -19,35 +19,29 @@ h2 {
     font-size: 20px;
 }
 
+.activity-delimiter{
+    margin-bottom: 30px;
+}
+
 .activity-photo{
     max-width: 550px;
     width: 100%;
     margin-bottom: 30px;
 }
 
+.activity-group{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .activity-name{
-    max-width: 420px;
     width: 100%;
     margin-bottom: 30px;
     text-align: start;
 }
 
-.activity-group{
-    border: 1px solid #000;
-    max-width: 600px;
-    width: 50%;
-    margin: 0 auto;
-
-}
-
-.text {
-    /* max-width: 800px; */
-    width: 100%;
-    text-align: start;
-}
-
 .business-text{
-    /* max-width: 420px; */
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
@@ -55,7 +49,6 @@ h2 {
 }
 
 .price-text{
-    max-width: 420px;
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
@@ -63,7 +56,6 @@ h2 {
 }
 
 .conditions-text{
-    max-width: 420px;
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
@@ -71,7 +63,6 @@ h2 {
 }
 
 .detail-text{
-    max-width: 420px;
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
@@ -91,51 +82,75 @@ h2 {
 }
 
 .roadstation-name{
-width: 160px;
+    width: 160px;
+}
+
+.activity-blog-place{
+    width: 205px;
+}
+
+.roadstation-blog-name{
+    text-align: center;
+}
+
+.blog{
+    margin-bottom: 10px;
 }
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:901px) {
 
 .activity-photo {
-    max-width: 550px;
-    max-height: 500px;
-    width: 50%;
+    /* max-width: 550px; */
+    max-height: 380px;
+    /* width: 100%; */
+    margin-right: 50px;
+}
+
+.activity-group{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.activity-text-group{
+    flex-direction: column;
 }
 
 .activity-name{
     max-width: 600px;
-    max-height: 120px;
-    width: 50%;
+    /* max-height: 120px; */
+    width: 100%;
 }
 
-.activity-text {
+/* .activity-text {
     max-width: 600px;
     max-height: 120px;
-    width: 50%;
-}
+    width: 100%;
+} */
 
 .business-text{
     max-width: 600px;
-    max-height: 200px;
-    width: 50%;
+    /* max-height: 200px; */
+    width: 100%;
 }
 
 .price-text{
     max-width: 600px;
-    max-height: 100px;
-    width: 50%;
+    /* max-height: 100px; */
+    width: 100%;
 }
 
 .conditions-text{
     max-width: 1200px;
-    max-height: 190px;
-    width: 50%;
+    /* max-height: 190px; */
+    width: 100%;
 }
 
 .detail-text{
     max-width: 1200px;
-    max-height: 95px;
-    width: 50%;
+    /* max-height: 95px; */
+    width: 100%;
 }
 }

@@ -33,33 +33,56 @@ h2 {
     margin-bottom: 10px;
 }
 
-.goods-group {
-    /* padding-bottom: 30px; */
-}
+/* .goods-group {
+    padding-bottom: 30px;
+} */
 
 .detail-group {
     text-align: center;
 }
 
-.detail {
-    width: 320px;
-    height: 215px;
-    margin-top: 20px;
+.detail-photo {
+    max-width: 550px;
+    width: 100%;
 }
 
 .item-name {
     margin-top: 30px;
 }
 
-.text {
-    text-align: left;
+.season-text{
+    /* max-width: 600px; */
+    /* max-height: 120px; */
+    width: 100%;
+    text-align: start;
 }
 
-.item-text {
+.price-text{
+    /* max-width: 600px; */
+    /* max-height: 200px; */
+    width: 100%;
+    text-align: start;
+}
+
+.conditions-text{
+    /* max-width: 600px; */
+    /* max-height: 100px; */
+    width: 100%;
+    text-align: start;
+}
+
+.comment-text{
+    max-width: 1200px;
+    /* max-height: 190px; */
+    width: 100%;
+    text-align: start;
+}
+
+/* .item-text {
     padding-top: 0;
     padding-bottom: 30px;
     text-align: left;
-}
+} */
 
 .buy-place {
     width: 160px;
@@ -90,12 +113,64 @@ width: 160px;
 }
 
 /* PC(デスクトップサイズ) */
-@media screen and (min-width:900px) {
-    .goods {
-        display: flex;
-        justify-content: flex-start;
-        gap: 30px 20px;
-        flex-wrap: wrap;
-        text-align: center;
-    }
+@media screen and (min-width:901px) {
+.goods {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.activity-photo {
+    max-width: 550px;
+    /* max-height: 380px; */
+    width: 100%;
+}
+
+.item-group{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto auto auto;
+}
+.detail-photo {
+    max-height: 450px;
+    margin-right: 50px;
+}
+
+.item-text-group{
+    flex-direction: column;
+}
+
+.item-name{
+    max-width: 600px;
+    /* max-height: 120px; */
+    width: 100%;
+    margin-top: 0;
+}
+
+.season-text{
+    max-width: 600px;
+    /* max-height: 120px; */
+    width: 100%;
+}
+
+.price-text{
+    max-width: 600px;
+    /* max-height: 200px; */
+    width: 100%;
+}
+
+.conditions-text{
+    max-width: 600px;
+    /* max-height: 100px; */
+    width: 100%;
+}
+
+.comment-text{
+    max-width: 1200px;
+    /* max-height: 190px; */
+    width: 100%;
+}
 }
