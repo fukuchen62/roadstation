@@ -30,7 +30,7 @@ class RoadStation extends Model
 
     /**
      * 道の駅のURLをビュー（アーティクル）に送るメソッド
-     * （ブログ記事にURLを表示するため作成）
+     * （ブログ記事にURLを表示するため作成/作成者：小山）
      *
      * @return void
      */
