@@ -49,13 +49,13 @@
         <img class="activity-photo"  src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
         <h3 class="activity-name">{{ $activity->activity_name }}</h3>
         <div class="activity-group">
-            <h3 class="headline text">営業時間：</h3>
+            <h4 class="headline text">営業時間：</h4>
                 <p class="business-text">{{ $activity->business_hours }}</p>
-            <h3 class="headline text">料 金：</h3>
+            <h4 class="headline text">料 金：</h4>
                 <p class="price-text">{{ $activity->price }}</p>
-            <h3 class="headline text">利用条件：</h3>
+            <h4 class="headline text">利用条件：</h4>
                 <p class="conditions-text">{!! $activity->conditions !!}</p>
-            <h3 class="headline text">体験内容・詳細：</h3 class="detail-text">
+            <h4 class="headline text">体験内容・詳細：</h4 class="detail-text">
                 <p>{!! $activity->discription !!}</p>
             
         {{--  体験できる道の駅の表示部分  --}}

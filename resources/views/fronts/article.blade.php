@@ -20,10 +20,6 @@
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/article.css') }}">
 
-    <style>
-        
-    </style>
-
 @endsection
 
 
@@ -52,17 +48,19 @@
 
 
     {{-- 関連記事の表示部分 --}}
-            <h2>関連記事</h2>
-
-            @foreach ($categories as $category)
-
+    <h2>関連記事</h2>
+    <ul>
+        @foreach ($categories as $category)
+            <li>
                 <a href="{{ url('blog-detail') }}?id={{ $category->id }}&blog_category_id={{ $category->blog_category_id }}">
                     <img src="{{ asset('/storage/images/' . $category->picture) }}" alt="ブログ記事の画像">
                     <h3>{{ $category->title }}</h3>
                     <p>{{ $category->created_at }}</p>
                     <p>{{ $blog->blogcategory->category_name }}</p>
-
-            @endforeach
+                </a>
+            </li>
+        @endforeach
+    </ul>
 
     {{--  サイドバーのカテゴリーの表示部分  --}}
     <div>
