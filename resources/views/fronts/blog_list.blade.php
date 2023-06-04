@@ -1,20 +1,27 @@
+{{-- レイアウトの受け取り --}}
 @extends('layouts.layout_front')
 
+{{-- タイトルの受け取り --}}
 @section('title', 'ブログ記事一覧')
 
-@section('pageCss')
-    <style>
-        img {
-            width: 320px;
-            height: auto;
-        }
-    </style>
+{{-- CSS --}}
+@section('pageCss',)
+
+    {{-- common CSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/indes.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
+    {{-- 該当ページのCSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
+
 @endsection
+
 
 @section('content')
 
+    {{-- ブログ記事一覧の表示部分 表示する記事数はコントローラ内のwhere句で指定 --}}
     @foreach ($blogs as $blog)
-        <a href="{{ url('blog-detail') }}?id={{ $blog->id }}">
+        <a href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}">
             <h2>{{ $blog->title }}</h2>
             <img src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
             <p>内 容：{!! $blog->content !!}</p>
@@ -23,6 +30,7 @@
         </a>
     @endforeach
 
+    {{-- サイドバーのカテゴリー一覧の表示部分 --}}
     <div>
         <h3>
             カテゴリー一覧
@@ -36,5 +44,6 @@
         </ul>
     </div>
 
+    {{-- ページネーション表示部分 --}}
     {{ $blogs->links() }}
 @endsection

@@ -12,17 +12,17 @@ class BlogCategory extends Model
 
 
 
-    // *********** ▼▼▼ 各リレーション ▼▼▼ ***********
+    // *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
 
     /**
-     * ブログのリレーション
+     * ブログとリレーション
      */
     // public function blogs(){
     //     return $this->hasone(Blog::class);
     // }
 
     /**
-     * ブログのリレーション
+     * ブログとリレーション
      */
     // public function blogs(){
     //     return $this->hasMany(Blog::class);
@@ -31,18 +31,19 @@ class BlogCategory extends Model
 
 
 
-    // *********** ▼▼▼ データのリターン ▼▼▼ ***********
+    // *************** ▼▼▼ データのリターン ▼▼▼ ***************
 
     /**
      * 表示の値が1のブログのみ表示するメソッド
      */
-    public function blogsIsShow(){
-        return $this->blogs()
-            ->where('is_show',1);
-    }
+    // public function blogsIsShow(){
+    //     return $this->blogs()
+    //         ->where('is_show',1);
+    // }
 
     /**
-     * 記事のカテゴリー名をビューに送るメソッド
+     * blog_categoriesテーブルのカテゴリー名をビューに送るメソッド
+     * （ブログ記事一覧と各ブログ記事で使用するため作成）
      *
      * @return void
      */
@@ -51,7 +52,8 @@ class BlogCategory extends Model
     }
 
     /**
-     * 記事のカテゴリーidをビューに送るメソッド
+     *blog_categoriesテーブルのidをビューに送るメソッド
+     *（ルート設定の確認テストで使用するため作成）
      *
      * @return void
      */

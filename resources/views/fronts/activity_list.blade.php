@@ -1,23 +1,30 @@
+{{-- レイアウトの受け取り --}}
 @extends('layouts.layout_front')
 
+{{-- タイトルの受け取り --}}
 @section('title', '注目アクティビティ | とくしま まるっと道の駅')
 
-
 {{-- CSS --}}
-@section('pageCss')
-    {{-- reset.CSS --}}
+@section('pageCss',)
+
+    {{-- common CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/indes.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/activity_list.css') }}">
+
 @endsection
 
 {{-- メイン --}}
 @section('content')
 
-{{--  体験一覧一覧の表示部分  --}}
+    <h2 class="attention">注目アクティビティ</h2>
+
+    {{--  体験一覧一覧の表示部分  --}}
 @foreach ($activities as $activity)
     <section>
-        <h2 class="attention">注目アクティビティ</h2>
+
         <img class="activity-photo"  src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
             <h3 class="activity-name">{{ $activity->activity_name }}</h3>
             <div class="activity-group">
@@ -31,20 +38,24 @@
                     <p>{!! $activity->discription !!}</p>
             
         {{--  体験できる道の駅の表示部分  --}}
-        <h3>体験できる道の駅</h3>
-            <ul>
-                <li><a href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a></li>
+        <h3 class="headline activity-place">体験できる道の駅</h3>
+            <ul class="roadstation-frame">
+                <li class="roadstation-name"><a href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a></li>
             </ul>
         {{--  体験したブログ記事の表示部分  --}}
-        <h3>体験したブログ記事</h3>
-            <ul>
-                <li><a href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}">{{ $activity->blog->getName() }}</a></li>
+        <h3 class="headline activity-place">体験したブログ記事</h3>
+            <ul class="roadstation-frame">
+                <li class="roadstation-frame"><a href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}">{{ $activity->blog->getName() }}</a></li>
             </ul>
         </div>
     </section>
 @endforeach
 
+<section class="blog">
+    <div class="blog-btn">
+
     {{-- 行ってきたんよボタンの表示部分 --}}
     <a href="{{  url('blog') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログ記事一覧に遷移するボタン"></a>
-    
+    </div>
+</section>
 @endsection
