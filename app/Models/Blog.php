@@ -17,6 +17,8 @@ class Blog extends Model
 
     /**
      * アクティビティとリレーション
+     * （アクティビティ一覧にブログ記事を表示するため作成）
+     * 
      */
     public function activity(){
         return $this->hasone(activity::class);
@@ -24,6 +26,8 @@ class Blog extends Model
 
     /**
      * カテゴリーとリレーション
+     * （ブログ記事一覧とブログ記事にカテゴリー名を表示するため作成）
+     * 
      */
     public function blogCategory(){
 
@@ -33,6 +37,8 @@ class Blog extends Model
 
     /**
      * ロードステーションとリレーション
+     * （ブログ記事に道の駅名を表示するため作成）
+     * 
      */
     public function roadStation(){
 

@@ -12,11 +12,12 @@ class Activity extends Model
 
     // public function activities()
     // {
-    //     return $this->belongsTo('App\Models\User');
+    //     return $this->belongsTo('App\Models\activity');
     // }
 
     /**
      * ブログモデルとリレーション
+     * （アクティビティ一覧にブログ記事のidを送るため作成）
      */
     public function blog(){
 
@@ -27,6 +28,8 @@ class Activity extends Model
 
     /**
      * ロードステーションモデルとリレーション
+     * （アクティビティ一覧に道の駅名を表示するため作成）
+     * 
      */
     public function roadStation(){
 
