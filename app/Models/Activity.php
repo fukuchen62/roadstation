@@ -49,4 +49,14 @@ class Activity extends Model
     {
         return $this->blog_category_id;
     }
+
+    public function getIs_show()
+    {
+        return $this->is_show;
+    }
+
+    public function getActivity_id()
+    {
+        return $this->$Activity_id;
+    }
 }

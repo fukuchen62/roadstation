@@ -32,11 +32,9 @@ class ActivityController extends Controller
             'activities' => $items,
         ];
 
-                    /**
-             * $dataをviewヘルパを使い、activity_listページに送る処理
-             */
+        /**
+         * $dataをviewヘルパを使い、activity_listページに送る処理
+         */
         return view('fronts.activity_list',$data);
     }
-
-    
 }
