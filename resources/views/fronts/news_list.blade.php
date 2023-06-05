@@ -87,7 +87,12 @@
 
                     <p>{!! $new->overview !!}</p>
 
-                    <small>{{ $new->created_at }}</small>
+                    @php
+                        $ts = strtotime($new->updated_at);
+                    @endphp
+                    <small class="news__area--data">
+                        {{ date('Y年n月j日', $ts) }}
+                    </small>
 
                     <span>
                         {{-- {!! $new->getCategoryName() !!} --}}
