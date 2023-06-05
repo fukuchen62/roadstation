@@ -5,7 +5,7 @@
 @section('title', '注目アクティビティ | とくしま まるっと道の駅')
 
 {{-- CSS --}}
-@section('pageCss',)
+@section('pageCss')
 
     {{-- common CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
@@ -15,27 +15,31 @@
     <link rel="stylesheet" href="{{ asset('assets/css/activity_list.css') }}">
 
     <style>
-        section{
+        section {
             text-align: left;
         }
-        .activity-photo{
+
+        .activity-photo {
             display: block;
-            margin:  auto;
+            margin: auto;
             margin-top: 24px;
             margin-bottom: 16px;
         }
-        .activity-name{
+
+        .activity-name {
             font-size: 20px;
             margin: 0 auto;
         }
-        .conditions-text{
+
+        .conditions-text {
             margin-top: 8px;
         }
-        .headline text{
+
+        .headline text {
             margin-top: 40px;
         }
 
-        .roadstation-frame{
+        .roadstation-frame {
             text-align: left;
         }
     </style>
@@ -48,39 +52,44 @@
     <h2 class="attention">注目アクティビティ</h2>
 
     {{--  体験一覧一覧の表示部分  --}}
-@foreach ($activities as $activity)
-    <section>
-        <img class="activity-photo"  src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
-        <h3 class="activity-name">{{ $activity->activity_name }}</h3>
-        <div class="activity-group">
-            <h4 class="headline text">営業時間：</h4>
+    @foreach ($activities as $activity)
+        <section>
+            <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
+            <h3 class="activity-name">{{ $activity->activity_name }}</h3>
+            <div class="activity-group">
+                <h4 class="headline text">営業時間：</h4>
                 <p class="business-text">{{ $activity->business_hours }}</p>
-            <h4 class="headline text">料 金：</h4>
+                <h4 class="headline text">料 金：</h4>
                 <p class="price-text">{{ $activity->price }}</p>
-            <h4 class="headline text">利用条件：</h4>
+                <h4 class="headline text">利用条件：</h4>
                 {!! $activity->conditions !!}
-            <h4 class="headline text">体験内容・詳細：</h4 class="detail-text">
+                <h4 class="headline text">体験内容・詳細：</h4 class="detail-text">
                 <p>{!! $activity->discription !!}</p>
-            
-        {{--  体験できる道の駅の表示部分  --}}
-        <h3 class="headline activity-place">体験できる道の駅</h3>
-            <ul class="roadstation-frame">
-                <li class="roadstation-name"><a href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a></li>
-            </ul>
-        {{--  体験したブログ記事の表示部分  --}}
-        <h3 class="headline activity-place">体験したブログ記事</h3>
-            <ul class="roadstation-frame">
-                <li class="roadstation-frame"><a href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}&blog_category_id={{ $activity->blog->blog_category_id }}">{{ $activity->blog->getName() }}</a></li>
-            </ul>
+
+                {{--  体験できる道の駅の表示部分  --}}
+                <h3 class="headline activity-place">体験できる道の駅</h3>
+                <ul class="roadstation-frame">
+                    <li class="roadstation-name"><a
+                            href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
+                    </li>
+                </ul>
+
+                {{--  体験したブログ記事の表示部分  --}}
+                <h3 class="headline activity-place">体験したブログ記事</h3>
+                <ul class="roadstation-frame">
+                    <li class="roadstation-frame"><a
+                            href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}&blog_category_id={{ $activity->blog->blog_category_id }}">{{ $activity->blog->getName() }}</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    @endforeach
+
+    <section class="blog">
+        <div class="blog-btn">
+
+            {{-- 行ってきたんよボタンの表示部分 --}}
+            <a href="{{ url('blog') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログ記事一覧に遷移するボタン"></a>
         </div>
     </section>
-@endforeach
-
-<section class="blog">
-    <div class="blog-btn">
-
-    {{-- 行ってきたんよボタンの表示部分 --}}
-    <a href="{{  url('blog') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログ記事一覧に遷移するボタン"></a>
-    </div>
-</section>
 @endsection
