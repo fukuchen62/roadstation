@@ -40,7 +40,7 @@ class Activity extends Model
 
 
     /**
-     * ブログのカテゴリーidを取得し送るメソッド
+     * ブログのblog_category_idを取得し送るメソッド
      *（ブログ記事内の関連記事を表示するため作成 / 作成者：小山）
      * 
      * @return void
@@ -50,11 +50,23 @@ class Activity extends Model
         return $this->blog_category_id;
     }
 
+    /**
+     * ブログのis_showを取得し送るメソッド
+     *（アクティビティ一覧内のブログ記事を正しく表示するため作成 / 作成者：小山）
+     * 
+     * @return void
+     */
     public function getIs_show()
     {
         return $this->is_show;
     }
 
+    /**
+     * ブログのactivbvity_idを取得し送るメソッド
+     *（アクティビティ一覧内のブログ記事を正しく表示するため作成 / 作成者：小山）
+     * 
+     * @return void
+     */
     public function getActivity_id()
     {
         return $this->$Activity_id;
