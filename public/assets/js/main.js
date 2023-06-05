@@ -38,6 +38,24 @@ $(function () {
     });
 });
 
+// topへ戻るボタン
+$(".scroll-top").hide();
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 800) {
+        $(".scroll-top").fadeIn();
+    } else {
+        $(".scroll-top").fadeOut();
+    }
+});
+
+$("ボタンを指定").click(function () {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 1000);
+    return false;
+});
+
 // ハンバーガーメニューの設定
 $(function () {
     $(".btn-gnavi").on("click", function () {
