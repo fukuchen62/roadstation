@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #0000be;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #0000be;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x="1" y="1" width="28" height="28" rx="4" ry="4"/>
+    <path class="cls-2" d="m25,2c1.65,0,3,1.35,3,3v20c0,1.65-1.35,3-3,3H5c-1.65,0-3-1.35-3-3V5c0-1.65,1.35-3,3-3h20m0-2H5C2.24,0,0,2.24,0,5v20c0,2.76,2.24,5,5,5h20c2.76,0,5-2.24,5-5V5c0-2.76-2.24-5-5-5h0Z"/>
+  </g>
+  <g>
+    <path class="cls-2" d="m24.24,21.46H5.88v-6.49c0-.54-.43-.97-.97-.97h-.06c-.54,0-.97.43-.97.97v10.64h0s2,0,2,0v-2.15h18.37v2.16h0s2,.01,2,.01v-4.17h-2Z"/>
+    <path class="cls-2" d="m24.99,18.21c0-.9-.73-1.62-1.62-1.62l-8.69-1.08c-.9,0-1.62.73-1.62,1.62v2.91h11.94v-1.83h0Z"/>
+    <path class="cls-2" d="m9.72,20.05c1.34,0,2.42-1.08,2.42-2.42s-1.08-2.42-2.42-2.42-2.42,1.08-2.42,2.42c0,1.34,1.08,2.42,2.42,2.42Z"/>
+  </g>
+  <polyline class="cls-3" points="4.5 11 15.04 5 25.5 11"/>
+</svg>
