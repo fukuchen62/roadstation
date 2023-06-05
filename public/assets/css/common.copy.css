@@ -420,7 +420,7 @@ footer {
     footer li {
         margin: 0 auto;
         max-width: 1200px;
-        line-height: 2rem;
+        line-height: 1.2rem;
     }
 
     .bg-wave img {
