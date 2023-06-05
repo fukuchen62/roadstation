@@ -1,7 +1,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトル --}}
-@section('title', '新着情報詳細ページ')
+@section('title', '新着情報一覧ページ')
 
 @section('pageCss')
     <style>
@@ -87,7 +87,12 @@
 
                     <p>{!! $new->overview !!}</p>
 
-                    <small>{{ $new->created_at }}</small>
+                    @php
+                        $ts = strtotime($new->updated_at);
+                    @endphp
+                    <small class="news__area--data">
+                        {{ date('Y年n月j日', $ts) }}
+                    </small>
 
                     <span>
                         {{-- {!! $new->getCategoryName() !!} --}}

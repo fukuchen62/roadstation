@@ -46,7 +46,7 @@ class BlogController extends Controller
         $items = Blog::where('blog_category_id', $request->blog_category_id)
         ->wherenot('id',$request->id)
         ->where('is_show', 1)
-        ->orderby('id', 'DESC')
+        ->orderby('created_at', 'DESC')
         ->simplePaginate(2);
         // var_dump($items);
         // dump($items);

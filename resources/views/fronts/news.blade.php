@@ -89,14 +89,38 @@
                         {{ date('Y年n月j日', $ts) }}
                     </span>
 
-                    {{-- <span>{{ $new->updated_at }}</span> --}}
-
                     <span>{{ $new->newsCategory->category_name }}</span>
                 </div>
 
                 <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
 
                 <p class="discription">{!! $new->discription !!}</p>
+
+
+
+
+                <p class="station">関連道の駅詳細ページへ
+                    @php
+                        
+                        $station_list = $new->station_list;
+                        
+                        $id_list = explode('|', $station_list);
+                        
+                    @endphp
+
+                    @foreach ($id_list as $id)
+                        @php
+                            $name = $new::getRoadstationName($id);
+                        @endphp
+
+                        <a class="stationBtn" href="{{ url('station-detail') }}?id={{ $id }}">{{ $name }}
+                        </a>
+                    @endforeach
+                </p>
+
+
+
+
 
                 <span>
                     @if ($new->id - 1 > 0)
@@ -108,10 +132,6 @@
                         <a href="{{ url('news-detail') }}?id={{ $new->id + 1 }}">次のページへ</a>
                     @endif
                 </span>
-
-                <p class="station">
-                    <a href="{{ url('station-detail') }}">関連道の駅詳細ページへ</a>
-                </p>
             @endforeach
         </div>
 
