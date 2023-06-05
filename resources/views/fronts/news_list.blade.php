@@ -3,7 +3,7 @@
 {{-- タイトル --}}
 @section('title', '新着情報一覧ページ')
 
-{{-- @section('pageCss')
+@section('pageCss')
     <style>
         main {
             margin: 50px;
@@ -65,13 +65,13 @@
             display: inline-block;
         }
     </style>
-@endsection --}}
+@endsection
 
-@section('pageCss')
+{{-- @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }} ">
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
-@endsection
+@endsection --}}
 
 @section('content')
 
@@ -86,7 +86,7 @@
 
                     <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
 
-                    <h2>{{ $new->title }} </h2>
+                    <h2>{{ $new->title }}</h2>
 
                     <p>{!! $new->overview !!}</p>
 
@@ -120,58 +120,6 @@
 
     </div>
 
-
     <div class="link">{{ $news->links('pagination::bootstrap-4') }}</div>
+
 @endsection
-
-@section('content')
-    {{-- <img class="sp-kv" src="https://placehold.jp/1980x200.png" alt="ブログの画像"> --}}
-
-    <main class="wrapper">
-
-        <div class="blog-main">
-            <div class="blog-wrapper">
-                <div class="blog-card">
-
-                    <img class="card-img" src="https://placehold.jp/300x200.png" alt="no-img">
-                    <p>見出し</p>
-                    <p class="text">
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-                    <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
-
-                </div>
-                <div class="blog-card">
-
-                    <img class="card-img" src="https://placehold.jp/300x200.png" alt="no-img">
-                    <p>見出し</p>
-                    <p class="text">
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-                    <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
-
-                </div>
-                <div class="blog-card">
-
-                    <img class="card-img" src="https://placehold.jp/300x200.png" alt="no-img">
-                    <p>見出し</p>
-                    <p class="text">
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-                    <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
-
-                </div>
-                <div class="blog-card">
-
-                    <img class="card-img" src="https://placehold.jp/300x200.png" alt="no-img">
-                    <p>見出し</p>
-                    <p class="text">
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </p>
-                    <p>●月〇日　　　カテゴリ:<a href="">グルメ</a></p>
-
-                </div>
-
-
-            </div>
-        @endsection

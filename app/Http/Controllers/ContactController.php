@@ -27,7 +27,17 @@ class ContactController extends Controller
      */
     public function contactCheck(Request $request)
     {
+        $validate_rule = [
+            'name' => 'required',
+            'email' => 'required|email',
+            'title' => 'required|string|max:50',
+            'content' => 'required|string|max:1000',
+        ];
+
+        $this->validate($request, $validate_rule);
+
         $data = [
+            'name' => $request->name,
             'email' => $request->email,
             'title' => $request->title,
             'content' => $request->content,
@@ -38,7 +48,7 @@ class ContactController extends Controller
 
     /**
      * contactCheck function
-     * お問い合わせページの表示
+     * お問い合わせ完了ページの表示
      *
      * @param Request $request
      * @return void
