@@ -8,11 +8,11 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    <link rel="stylesheet" href="{{asset('assets/css/reset.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/common.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/index.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/css/top.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/top.css') }}">
 @endsection
 
 @section('key_visual')
@@ -93,27 +93,25 @@
 
             <div class="news2">
                 <ul>
-                    @foreach ($news as $news )
+                    @foreach ($news as $news)
                         <a href="" class="" id="">
-                        @php
-                        $ts = strtotime($news->created_at);
-                        @endphp
-                        <li class="news__area--data">
-                        {{ date('Y年m月d日', $ts) }}
-                        </li>
+                            @php
+                                $ts = strtotime($news->created_at);
+                            @endphp
+                            <li class="news__area--data">
+                                {{ date('Y年m月d日', $ts) }}
+                            </li>
 
-                        @foreach ( $category as $category )
-
-                        @php
-                                $categoryName = $news::getCategoryName($id);
-                        @endphp
-
-                        @endforeach
+                            @foreach ($category as $category)
+                                @php
+                                    $categoryName = $news::getCategoryName($id);
+                                @endphp
+                            @endforeach
 
 
-                        {{-- <li>カテゴリー：{{$news->news_category_id}}</li> --}}
-                        <li>カテゴリー：{{$categoryName}}</li>
-                        <li>タイトル：{{$news->title}}</li>
+                            {{-- <li>カテゴリー：{{$news->news_category_id}}</li> --}}
+                            <li>カテゴリー：{{ $news->newsCategory->category_name }}</li>
+                            <li>タイトル：{{ $news->title }}</li>
                         </a>
                     @endforeach
                 </ul>
@@ -245,5 +243,6 @@
 {{-- 該当ページ専用JS --}}
 @section('pageJs')
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 @endsection

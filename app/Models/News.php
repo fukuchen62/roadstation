@@ -37,8 +37,6 @@ class News extends Model
         return $items;
     }
 
-
-
     public function getData()
     {
         $data = $this->news_category_id;
@@ -50,9 +48,6 @@ class News extends Model
         $data = '<p>' . $this->newsCategory->category_name . '</p>';
         return $data;
     }
-
-
-
 
     public function getStationName()
     {
