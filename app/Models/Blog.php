@@ -17,7 +17,7 @@ class Blog extends Model
 
     /**
      * アクティビティとリレーション
-     * （アクティビティ一覧にブログ記事を表示するため作成）
+     * （アクティビティ一覧にブログ記事を表示するため作成 / 作成者：小山）
      * 
      */
     public function activity(){
@@ -26,7 +26,7 @@ class Blog extends Model
 
     /**
      * カテゴリーとリレーション
-     * （ブログ記事一覧とブログ記事にカテゴリー名を表示するため作成）
+     * （ブログ記事一覧とブログ記事にカテゴリー名を表示するため作成 / 作成者：小山）
      * 
      */
     public function blogCategory(){
@@ -37,7 +37,7 @@ class Blog extends Model
 
     /**
      * ロードステーションとリレーション
-     * （ブログ記事に道の駅名を表示するため作成）
+     * （ブログ記事に道の駅名を表示するため作成 / 作成者：小山）
      * 
      */
     public function roadStation(){

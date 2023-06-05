@@ -14,6 +14,7 @@ class BlogController extends Controller
     /**
      * blogMainView function
      * ブログ記事（本文と関連記事）の取得と表示
+     * （制作者：小山）
      *
      * @param Request $request
      * @return void
@@ -32,6 +33,7 @@ class BlogController extends Controller
 
         /**
          * 関連記事の検索と取得
+         * （制作者：小山）
          * 
          * 1.リクエスト時blog_tableのblog_category_idを検索
          * 2.リクエスト済みの本文を除外
@@ -48,27 +50,30 @@ class BlogController extends Controller
         ->simplePaginate(2);
         // var_dump($items);
         // dump($items);
+
         /**
-         * $categoryにblog_categoriesのデータをすべて代入
-         * （初期化）
+         * $categoryにblog_categoriesのデータをすべて代入（初期化）
+         * （制作者：小山）
          */
         $category = BlogCategory::all();
         // var_dump($category);
         /**
-             * $dataにblogとcategories、blog_categoriesを代入
-             * （初期化・二次元配列）
-             * 値$itemは記事本文（カテゴリー一覧と関連記事を除く）に使用
-             * 値$itemsは関連記事の表示に使用
-             * 値$categoryはカテゴリー一覧の表示に使用
-             */
+         * $dataにblogとcategories、blog_categoriesを代入初期化・二次元配列）
+         * （制作者：小山）
+         * 値$itemは記事本文（カテゴリー一覧と関連記事を除く）に使用
+         * 値$itemsは関連記事の表示に使用
+         * 値$categoryはカテゴリー一覧の表示に使用
+         */
         $data = [
             'blogs' => $item,
             'categories' => $items,
             'blog_categories' => $category,
         ];
         // var_dump($data);
+
         /**
          * $dataをviewヘルパを使い、blog_listページに送る処理
+         * （制作者：小山）
          */
         return view('fronts.article', $data);
     }
@@ -87,7 +92,8 @@ class BlogController extends Controller
      */
     public function blogListSearch(Request $request)
     {
-            /**
+        
+        /**
              * データから表示可能の記事を取得
              */
             // $items = Blog::where('is_show',1)->get();
