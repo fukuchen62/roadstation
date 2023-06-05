@@ -25,20 +25,16 @@
             <tr>
                 <th>メールアドレス</th>
                 <td>
-                    <input name="email" value="{{ old('email') }}" type="text">
-                    @if ($errors->has('email'))
-                        <p class="error-message">{{ $errors->first('email') }}</p>
-                    @endif
+                    <p>{{ $email }}</p>
+                    <input name="email" value="{{ $email }}" type="hidden">
                 </td>
             </tr>
 
             <tr>
                 <th>タイトル</th>
                 <td>
-                    <input name="title" value="{{ old('title') }}" type="text">
-                    @if ($errors->has('title'))
-                        <p class="error-message">{{ $errors->first('title') }}</p>
-                    @endif
+                    <p>{{ $title }}</p>
+                    <input name="title" value="{{ $title }}" type="hidden">
                 </td>
             </tr>
 
@@ -46,16 +42,15 @@
             <tr>
                 <th>お問い合わせ内容</th>
                 <td>
-                    <textarea name="body">{{ old('body') }}</textarea>
-                    @if ($errors->has('body'))
-                        <p class="error-message">{{ $errors->first('body') }}</p>
-                    @endif
+                    <p>{{ $content }}</p>
+                    <input name="content" type='hidden' value="{{ $content }}">
+
                 </td>
             </tr>
 
         </table>
 
-        <button type="submit">入力内容確認</button>
+        <button type="submit">送信する</button>
 
     </form>
 
