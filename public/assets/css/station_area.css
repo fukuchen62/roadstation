@@ -24,7 +24,18 @@ h2 {
 h3 {
     font-size: 1rem;
     padding: 1rem 0;
-    padding: 10px 12px;
+    /* padding: 20px 20px; */
+    /* background-color: #ccc; */
+}
+
+.area-btn {
+    padding: 10px 10px;
+    border-radius: 30px;
+    background-color: #ccc;
+}
+
+.area-btn:hover {
+    background-color: #ffffff;
 }
 
 .search_results {
@@ -93,6 +104,13 @@ dd img {
 
 }
 
+@media screen and (min-width:601px) {
+    .area-btn {
+        padding: 20px 30px;
+        border-radius: 30px;
+        background-color: #ccc;
+    }
+}
 
 @media screen and (min-width:901px) {
 
