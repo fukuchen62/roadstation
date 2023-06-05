@@ -5,7 +5,7 @@
 @section('keywords', 'キーワード1,キーワード2・・・')
 
 @section('title', 'エリア検索')
-
+<?php $com = 0; ?>
 {{-- 該当ページのCSS --}}
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
@@ -38,23 +38,33 @@
     $area = 0;
     if (isset($_GET['east'])) {
         $area = 1;
-        var_dump($area);
+        // var_dump($area);
     } elseif (isset($_GET['west'])) {
         $area = 2;
-        var_dump($area);
+        // var_dump($area);
     } elseif (isset($_GET['south'])) {
         $area = 3;
-        var_dump($area);
+        // var_dump($area);
     }
     
     ?>
-    <section>
+    @foreach ($road_stations as $station)
+        @if ($station->area_id === $area)
+            @php
+                $com++;
+            @endphp
+        @endif
+    @endforeach
+    <section class="search_sum">
         <h2>
-            検索件数
+            検索件数:<?= $com ?>件
         </h2>
     </section>
     @foreach ($road_stations as $station)
         @if ($station->area_id === $area)
+            @php
+                $com++;
+            @endphp
             <div class="station">
                 <img src="{{ asset('/storage/imgs/' . $station['picture1']) }}" width="300px" alt="">
                 <p>道の駅{{ $station->station_name }}</p>
@@ -86,7 +96,14 @@
                         alt="">
                     <img src="{{ asset('/storage/imgs/museum_icon_' . $station['museum_icon'] . '.jpeg') }}"
                         alt="">
+
                 </div>
+
+                <a href="{{ url('station-detail' . '?id=' . $station->id) }}">
+                    <div class="link">
+                        <p>more</p>
+                    </div>
+                </a>
             </div>
         @endif
     @endforeach
