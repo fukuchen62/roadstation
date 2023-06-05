@@ -49,4 +49,9 @@ class RoadstationController extends Controller
     {
         return view('fronts.station_search');
     }
+
+    public function stationAreaSearch(Request $request)
+    {
+        return view('fronts.station_area');
+    }
 }
