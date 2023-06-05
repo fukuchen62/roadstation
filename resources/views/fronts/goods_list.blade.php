@@ -28,14 +28,10 @@
             <div class="categoryTitle">農産物</div>
             <div class="container">
             @foreach ($agricultural_products as $agricultural )
-                <div class="card">
-                    <ul>
-                        <div class="cardContainer">
-                            <a href="" class="">
-                        <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="listImg"></a>
-                        <li class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</li>
-                        </div>
-                    </ul>
+                <div class="card" >
+                        <a href="#1" class="btns" id="{{'btn-' . $agricultural->id}}">
+                        <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="cardImg"></a>
+                        <div class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</div>
                 </div>
             @endforeach
             </div>
@@ -44,26 +40,22 @@
             <div class="container">
             @foreach ($seafood as $seafood )
                 <div class="card">
-                    <ul>
-                        <div class="cardContainer">
-                        <img src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="種別画像" class="listImg">
-                        <li class="listCategoryName">種別名：{{$seafood->getCategoryName()}}</li>
-                        </div>
-                    </ul>
+                        <a href="#1" class="btns" id="{{'btn-' . $seafood->id}}">
+                        <img src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="種別画像" class="cardImg"></a>
+                        <p class="listCategoryName">
+                            種別名：{{$seafood->getCategoryName()}}
+                        </p>
                 </div>
             @endforeach
             </div>
 
-              <div class="categoryTitle">工芸品</div>
+            <div class="categoryTitle">工芸品</div>
             <div class="container">
             @foreach ($craft as $craft )
                 <div class="card">
-                    <ul>
-                        <div class="cardContainer">
-                        <img src="{{ asset('/storage/images/' . $craft->picture) }}" alt="種別画像" class="listImg">
-                        <li class="listCategoryName">種別名：{{$craft->getCategoryName()}}</li>
-                        </div>
-                    </ul>
+                        <a href="#1" class="btns" id="{{'btn-' . $craft->id}}">
+                        <img src="{{ asset('/storage/images/' . $craft->picture) }}" alt="種別画像" class="cardImg"></a>
+                        <div class="listCategoryName">種別名：{{$craft->getCategoryName()}}</div>
                 </div>
             @endforeach
             </div>
@@ -87,9 +79,10 @@
 
         {{-- 特産品種別詳細紹介カードを作成 --}}
         <section>
+            <div class="details">
             @foreach ($goods_type as $type )
-                    <ul class="detail">
-                    <div class="detailContainer">
+
+                    <ul class="detailContainer" id="{{'type-' . $type->id}}">
                         <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailImg">
                         <li class="detailName">商品名：　{{$type->common_name}}</li>
                         <li class="detailSeason">旬の時期：<br>{{$type->season}}</li>
@@ -119,9 +112,10 @@
 
                         @endforeach
                         </li>
-                    </div>
                     </ul>
+
             @endforeach
+            </div>
         </section>
         <div class="bloglink">
         <a href="{{route('blog')}}" >

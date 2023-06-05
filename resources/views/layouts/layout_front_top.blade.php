@@ -35,7 +35,7 @@
     @yield('pageCss')
 
     <!-- jqueryライブラリ -->
-    <script src="{{ asset('assets/js/ventor/jquery-3.6.3.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.6.3.min.js') }}"></script>
 
     {{-- トークンを読み込む --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">

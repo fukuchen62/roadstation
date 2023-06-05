@@ -15,58 +15,30 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 20px;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 22% 22% 22% 22%;
     grid-template-rows: auto auto auto auto;
-    gap: 30px;
+    gap: 20px;
 }
 
 .card {
+    margin: 0 auto;
     padding: 10px;
     padding-bottom: 50px;
     margin-bottom: 30px;
-}
-
-.cardContainer {
     display: flex;
     flex-direction: column;
 }
 
-.listImg {
+.cardImg {
     width: 100%;
-}
-
-.listCategoryName {
-    margin: 0 auto;
-    margin-top: 20px;
-}
-
-.listDiscription {
-    grid-area: areaF;
 }
 
 .commonName {
     margin-top: 10px;
-}
-
-.listPrice {
-    grid-area: areaC;
-}
-
-.listTypeId {
-    grid-area: areaD;
-}
-
-.listStation {
-    grid-area: areaG;
-    margin-top: 20px;
-}
-
-.detail li {
-    padding: 20px;
 }
 
 .detailContainer {
@@ -88,6 +60,10 @@
         "areaF areaF areaF areaF areaF"
         "areaG areaG areaG areaG areaG"
         "areaH areaH areaH areaH areaH";
+}
+
+.detail li {
+    padding: 20px;
 }
 
 .detailImg {
@@ -140,4 +116,8 @@
 .bloglink {
     text-align: center;
     margin-top: 50px;
+}
+
+.displayNone {
+    display: none;
 }
