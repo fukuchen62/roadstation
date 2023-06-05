@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('news_category_id', 20)->nullable(false);
+            $table->integer('news_category_id')->nullable(false);
             $table->string('title', 32)->nullable(false);
             $table->string('station_list', 20)->nullable(true);
             $table->string('overview', 200)->nullable(true);

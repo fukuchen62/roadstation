@@ -27,7 +27,6 @@ $sum = 0;
                 </h1>
             </div>
         </section>
-
         <section class="section">
             <div class="station_img">
                 <img src="{{ asset('/storage/imgs/' . $val->picture1) }}" alt="トップ">
@@ -65,7 +64,7 @@ $sum = 0;
                             <p><?= $pro['discription'] ?></p>
                         </div>
                     </div>
-                    <a href="" class="mr-tp-2 block">
+                    <a href="{{ url('blog-detail' . '?id=' . $pro->station_list) }}" class="mr-tp-2 block">
                         <div class="link">
                             <p>行ってみたんよ</p>
                         </div>
@@ -90,7 +89,7 @@ $sum = 0;
                             <p><?= $goods['discription'] ?></p>
                         </div>
                     </div>
-                    <a href="" class="mr-tp-2 block">
+                    <a href="{{ url('blog-detail' . '?id=' . $goods->station_list) }}"class="mr-tp-2 block">
                         <div class="link">
                             <p>行ってみたんよ</p>
                         </div>
@@ -163,6 +162,9 @@ $sum = 0;
                 <button class="star">お気に入り</button>
             </div>
     </section>
+    <div class="google_map">
+        {!! $val->map_url !!}
+    </div>
     @endforeach
 @endsection
 
