@@ -61,6 +61,22 @@ h4 {
     background: #ccc;
 }
 
+/* slick */
+.slide-items {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-items img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slick-dots li button::before {
+    font-size: 30px;
+}
+
 /* PC吹き出しを横に並べる */
 @media screen and (min-width:901px) {
     .flex {

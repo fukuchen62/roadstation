@@ -12,11 +12,16 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
 
+    <!-- slick -->
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+
     <!-- 独自CSS -->
     <link rel="stylesheet" href="../assets/css/station.css">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+
 
     <!-- フォント設定 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,25 +76,32 @@
     </header>
 
     <main class="wrapper">
-        <img src="../storage/images/slide.jpg" class="kv" alt="道の駅くるくるなるとのモニュメント">
+
+
+        <!-- <img src="../storage/images/slide.jpg" class="kv" alt="道の駅くるくるなるとのモニュメント"> -->
 
         <section>
             <h2>道の駅&nbsp;くるくるなると</h2>
             <p>皆んながくるくる、 笑顔になると”~ 鳴門の美味しさで、世界に愛と笑顔と元気を伝えたい〜</p>
 
             <!-- スライドショー -->
+            <div class="slide-items">
+                <div><img src="../storage/images/station.html/stations_3_1_1200_400.jpg .jpg" alt=""></div>
+                <div><img src="../storage/images/station.html/drive.jpg" alt=""></div>
+                <div><img src="../storage/images/station.html/stations_3_2_.jpg" alt=""></div>
+            </div>
 
-            <<<<<<<section HEAD <p>"鳴門の魅力を全国に発信すべく、 鳴門金時やれんこん 鳴門鯛など “地 域特産物”をテーマに、 農産物マルシェや名産グルメ、スイーツをお楽 しみいただけるショップ、 お食事処を展開するほか、 施設内には、鳴門 市を見渡せる屋上ジップラインや屋上デッキ、 周辺観光を楽しめるレン タサイクルも設置しております。
+            <p>"鳴門の魅力を全国に発信すべく、 鳴門金時やれんこん 鳴門鯛など “地 域特産物”をテーマに、 農産物マルシェや名産グルメ、スイーツをお楽 しみいただけるショップ、 お食事処を展開するほか、 施設内には、鳴門 市を見渡せる屋上ジップラインや屋上デッキ、 周辺観光を楽しめるレン タサイクルも設置しております。
                 "</p>
-                =======
-                <p>鳴門の魅力を全国に発信すべく、 鳴門金時やれんこん 鳴門鯛など “地 域特産物”をテーマに、 農産物マルシェや名産グルメ、スイーツをお楽 しみいただけるショップ、 お食事処を展開するほか、 施設内には、鳴門 市を見渡せる屋上ジップラインや屋上デッキ、 周辺観光を楽しめるレン タサイクルも設置しております。</p>
-                <!-- 画像と文字を横に並べる。CSS -->
-                <div class="flex">
-                    <img src="../assets/images/heart.png" width="200" height="204" alt="道の駅の感想を嬉しそうに喋る人物">
-                    <div class="speech">
-                        <p>四国の東の玄関口に位置する鳴門。明るく開放的な店内には鳴門の豊かな自然が生んだ特産物を使用したお食事や加工品も盛りだくさん。まさに「食のテーマパーク」です。また来たいと思えること間違いなし！</p>
-                    </div>
+            =======
+            <p>鳴門の魅力を全国に発信すべく、 鳴門金時やれんこん 鳴門鯛など “地 域特産物”をテーマに、 農産物マルシェや名産グルメ、スイーツをお楽 しみいただけるショップ、 お食事処を展開するほか、 施設内には、鳴門 市を見渡せる屋上ジップラインや屋上デッキ、 周辺観光を楽しめるレン タサイクルも設置しております。</p>
+            <!-- 画像と文字を横に並べる。CSS -->
+            <div class="flex">
+                <img src="../assets/images/heart.png" width="200" height="204" alt="道の駅の感想を嬉しそうに喋る人物">
+                <div class="speech">
+                    <p>四国の東の玄関口に位置する鳴門。明るく開放的な店内には鳴門の豊かな自然が生んだ特産物を使用したお食事や加工品も盛りだくさん。まさに「食のテーマパーク」です。また来たいと思えること間違いなし！</p>
                 </div>
+            </div>
         </section>
 
         <section>
@@ -269,11 +281,11 @@
 
                 <p><strong><span class="yellow">★</span>お気に入りを押したらお気に入りページに登録されます！</strong></p>
                 <p><a href="#">登録する（マイクロコピー）</a></p>
-            </div>
+                </div>
 
-            <!-- googlemap -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.533509598061!2d134.5772079762422!3d34.15827496212325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536fda4ddf71ff%3A0xc5ce5c88e1a48d83!2z6YGT44Gu6aeFIOOBj-OCi-OBj-OCi-OBquOCi-OBqA!5e0!3m2!1sja!2sjp!4v1685414674912!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="道の駅くるくるなるとの地図" loading="lazy"></iframe>
-        </section>
+                <!-- googlemap -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.533509598061!2d134.5772079762422!3d34.15827496212325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536fda4ddf71ff%3A0xc5ce5c88e1a48d83!2z6YGT44Gu6aeFIOOBj-OCi-OBj-OCi-OBquOCi-OBqA!5e0!3m2!1sja!2sjp!4v1685414674912!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="道の駅くるくるなるとの地図" loading="lazy"></iframe>
+            </section>
     </main>
 
     <footer>
@@ -292,6 +304,11 @@
         </ul>
     </footer>
 
+    <!-- main.jsの読み込み -->
+
+    <script src="../assets/js/slick.min.js"></script>
+    <!-- slickの読み込み -->
     <script src="../assets/js/main.js"></script>
+
 </body>
 </html>

@@ -26,6 +26,18 @@ function deleteComfirm(title, url) {
     }
 }
 
+// slick//
+$(function () {
+    $('.slide-items').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        adaptiveHeight: true,
+        dots: true,
+    });
+});
+
 // ハンバーガーメニューの設定
 $(function () {
     $(".btn-gnavi").on("click", function () {
