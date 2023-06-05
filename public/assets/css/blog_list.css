@@ -1,16 +1,11 @@
 @charset "utf-8";
 
-
-
-
 .blog-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
 }
-
-
 
 .blog-card {
     height: 500px;
@@ -19,12 +14,12 @@
     box-sizing: border-box;
     border-radius: 20px;
     justify-content: center;
-
 }
 
-
-
-
+.category_list li {
+    margin-top: 10px;
+    padding: 20px 20px;
+}
 
 @media screen and (min-width:901px) {
 
@@ -55,7 +50,7 @@
         border: 3px solid #1ca10a;
         background-color: #1ca10a;
         color: cornsilk;
-        /* position: fixed; */
+        padding: 20px 10px;
         left: 70%;
     }
 
