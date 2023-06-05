@@ -31,6 +31,14 @@ class News extends Model
         return $items;
     }
 
+    public function roadStation()
+    {
+        $items = $this->belongsTo('App\Models\RoadStation');
+        return $items;
+    }
+
+
+
     public function getData()
     {
         $data = $this->news_category_id;
@@ -41,5 +49,66 @@ class News extends Model
     {
         $data = '<p>' . $this->newsCategory->category_name . '</p>';
         return $data;
+    }
+
+
+
+
+    public function getStationName()
+    {
+        $data = $this->station_list;
+
+        $array = explode('|', $data);
+
+        return $array;
+    }
+
+    public function changeName($id)
+    {
+        switch ($id) {
+            case 'a':
+                $id = 10;
+                break;
+            case 'b':
+                $id = 11;
+                break;
+            case 'c':
+                $id = 12;
+                break;
+            case 'd':
+                $id = 13;
+                break;
+            case 'e':
+                $id = 14;
+                break;
+            case 'f':
+                $id = 15;
+                break;
+            case 'g':
+                $id = 16;
+                break;
+            case 'h':
+                $id = 17;
+                break;
+            case 'i':
+                $id = 18;
+                break;
+        }
+
+        return $id;
+    }
+
+
+
+    public static function getRoadstationName($id)
+    {
+        $item = RoadStation::find($id);
+        if ($item != null) {
+            $name = $item->station_name;
+        } else {
+            $name = "No name";
+        }
+
+        return $name;
     }
 }

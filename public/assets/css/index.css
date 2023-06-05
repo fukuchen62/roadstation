@@ -1,23 +1,18 @@
 @charset "utf-8";
 
-
 .wrapper {
     padding: 0;
-    margin-top: 600px;
+    margin-top: 1200px;
 }
+
 
 #top {
     display: flex;
     flex-direction: column;
 }
 
-.kv {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    background: url(https://placehold.jp/1980x1080.png);
-    background-size: cover;
-    background-position: center;
+.hamburger-menu-list {
+    display: none;
 }
 
 .sp-h2 {
@@ -27,7 +22,7 @@
 }
 
 .news-title {
-    margin-bottom: 30px;
+    padding: 20px 30px;
 }
 
 .news-box {
@@ -49,6 +44,7 @@
     font-size: 20px;
     padding: 20px 30px;
     margin: 0 auto;
+    margin-top: 20px;
     margin-bottom: 50px;
     display: inline-block;
 }
@@ -98,17 +94,9 @@
     text-align: center;
 }
 
-.station_detail {
-    text-align: center;
-    border-radius: 50px;
-    background-color: #B45A27;
-    color: #ffff;
-    font-size: 20px;
-    padding: 20px 30px;
-    margin: 0 auto;
+.more-btn {
     margin-bottom: 50px;
-    display: inline-block;
-    margin-top: 10%;
+    margin-top: 30px;
 }
 
 
@@ -116,8 +104,6 @@
     text-align: center;
     margin-bottom: 30px;
 }
-
-
 
 .goods-wrapper {
     margin: 0 auto;
@@ -181,7 +167,7 @@
     display: none;
 }
 
-.goods-mobilebtn {
+.mobile-btn {
     text-align: center;
     border-radius: 50px;
     background-color: #B45A27;
@@ -211,7 +197,6 @@
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 30px;
-
 }
 
 
@@ -248,18 +233,6 @@
 
 .activity-pcbtn {
     display: none;
-}
-
-.activity-mobilebtn {
-    text-align: center;
-    border-radius: 50px;
-    background-color: #B45A27;
-    color: #ffff;
-    font-size: 20px;
-    padding: 20px 30px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    display: inline-block;
 }
 
 .blog-taitle {
@@ -329,14 +302,18 @@ imgcontent-wrapper .heading {
     object-fit: cover;
 }
 
+/* pcボタンの非表示 */
+.pcbtn {
+    display: none;
+}
+
 
 @media screen and (min-width:761px) {
 
 
-    .news-title {
-        margin-bottom: 30px;
-
-    }
+    /* .news-title {
+        padding: 30px;
+    } */
 
     .news-box {
         display: flex;
@@ -354,16 +331,10 @@ imgcontent-wrapper .heading {
     }
 
     .news-pcbtn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        display: inline-block;
+        display: block;
+        width: 100%;
     }
+
 
     .news-mobilebtn {
         display: none;
@@ -472,31 +443,8 @@ imgcontent-wrapper .heading {
         text-align: center;
     }
 
-
-    /* .goods-pcbtn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        display: inline-block;
-    } */
-
-    .goods-mobilebtn {
-        /* text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-       display: inline-block;  */
+    .mobile-btn {
         display: none;
-
     }
 
     .activity-wrapper {
@@ -556,7 +504,7 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-    .activity-mobilebtn {
+    /* .mobile-btn {
         text-align: center;
         border-radius: 50px;
         background-color: #B45A27;
@@ -566,7 +514,7 @@ imgcontent-wrapper .heading {
         margin: 0 auto;
         margin-bottom: 50px;
         display: inline-block;
-    }
+    } */
 
     .blog-taitle {
         text-align: center;
@@ -634,7 +582,29 @@ imgcontent-wrapper .heading {
 @media screen and (min-width:901px) {
 
     .wrapper {
-        margin-top: 830px;
+        padding: 0;
+        margin-top: 600px;
+    }
+
+    header {
+        width: 100vw;
+    }
+
+    .top-kv img {
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+        z-index: -999;
+    }
+
+    .kv {
+        width: 100%;
+        height: 980px;
+        position: absolute;
+        background: url(https://placehold.jp/1980x1080.png);
+        background-size: cover;
+        background-position: center;
+        z-index: -999;
     }
 
     section {
@@ -654,22 +624,19 @@ imgcontent-wrapper .heading {
         top: 0;
         width: 100%;
         background-color: #fffcef;
-        /* background-color: #fffcef; */
         z-index: 999;
     }
 
-
-
-    .sp-h2 {
+    /* .sp-h2 {
         color: #ffffff;
         font-size: 2rem;
         margin-top: 10%;
     }
 
-    .news-title {
+    /* .news-title {
         margin-bottom: 30px;
 
-    }
+    } */
 
     .news-box {
         display: flex;
@@ -747,14 +714,12 @@ imgcontent-wrapper .heading {
         margin-bottom: 30px;
     }
 
-
-
     .goods-wrapper {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 150px;
         justify-content: center;
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
         text-align: center;
 
     }
@@ -804,7 +769,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .goods-pcbtn {
+    .pcbtn {
         text-align: center;
         border-radius: 50px;
         background-color: #ffffff;
@@ -820,16 +785,12 @@ imgcontent-wrapper .heading {
         left: 20%;
     }
 
-    .goods-mobilebtn {
-        /* text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-       display: inline-block;  */
+    .pcbtn:hover {
+        color: #ff6c6c;
+        background-color: #fff7e2;
+    }
+
+    .goods-mobile-btn {
         display: none;
 
     }
@@ -903,17 +864,8 @@ imgcontent-wrapper .heading {
         left: 20%;
     }
 
-    .activity-mobilebtn {
+    .mobile-btn {
         display: none;
-        /* text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        display: inline-block; */
 
     }
 

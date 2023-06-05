@@ -7,27 +7,56 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-    //use HasFactory;
+    use HasFactory;
+
+
+
+
+
+// *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
+
+    /**
+     * アクティビティとリレーション
+     * （アクティビティ一覧にブログ記事を表示するため作成 / 作成者：小山）
+     * 
+     */
+    public function activity(){
+        return $this->hasone(activity::class);
+    }
 
     /**
      * カテゴリーとリレーション
+     * （ブログ記事一覧とブログ記事にカテゴリー名を表示するため作成 / 作成者：小山）
+     * 
      */
     public function blogCategory(){
 
         return $this->belongsTo('App\Models\BlogCategory');
     }
 
-    // protected $table = 'blogs';
-    
+
     /**
-     * アクティビティとリレーション
+     * ロードステーションとリレーション
+     * （ブログ記事に道の駅名を表示するため作成 / 作成者：小山）
+     * 
      */
-    public function activity(){
-        return $this->hasone(activity::class);
+    public function roadStation(){
+
+        return $this->belongsTo('App\Models\RoadStation');
     }
 
-        /**
-     * 記事タイトルをビュー（アクティビティ）に送るメソッド
+    // protected $table = 'blogs';
+
+
+
+
+
+    // *********** ▼▼▼ データのリターン ▼▼▼ ***********
+
+
+    /**
+     * ブログの記事タイトルを送るメソッド
+     * （アクティビティビューで使用するため作成 / 作成者：小山）
      *
      * @return void
      */
@@ -36,22 +65,13 @@ class Blog extends Model
     }
 
     /**
-     * blogs_tableのデータ全てをビュー（アーティクル）に送るメソッド
-     *
+     * ブログのカテゴリーidを取得し送るメソッド
+     *（関連記事の表示で使用するため作成 / 作成者：小山）
+     * 
      * @return void
      */
-    public function getData(){
-        return $this->item;
+    public function getCategoryId()
+    {
+        return $this->blog_category_id;
     }
-
-    /**
-     * ロードステーションとリレーション
-     */
-    public function roadStation(){
-
-        return $this->belongsTo('App\Models\RoadStation');
-    }
-
-    protected $table = 'blogs';
-
 }

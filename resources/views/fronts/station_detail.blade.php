@@ -14,7 +14,9 @@
 @section('key_visual')
     <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル">
 @endsection
-
+<?php
+$sum = 0;
+?>
 {{-- メイン --}}
 @section('content')
     @foreach ($road_stations as $val)
@@ -25,7 +27,6 @@
                 </h1>
             </div>
         </section>
-
         <section class="section">
             <div class="station_img">
                 <img src="{{ asset('/storage/imgs/' . $val->picture1) }}" alt="トップ">
@@ -54,22 +55,67 @@
     <section class="gourmet">
         <h2>グルメ</h2>
 
-        @foreach ($product_types as $goods)
-            <div>
-                <div>
-                    <?= $goods['picture'] ?>
+        @foreach ($product_types as $pro)
+            <div class="flex pro_box mr-tp-2">
+                <div class="pro_in">
+                    <p><span class="pro_title"><?= $pro['common_name'] ?> </span>参考価格:<?= $pro['price'] ?>円</p>
+                    <div>
+                        <div class="pro_disc">
+                            <p><?= $pro['discription'] ?></p>
+                        </div>
+                    </div>
+                    <a href="{{ url('blog-detail' . '?id=' . $pro->station_list) }}" class="mr-tp-2 block">
+                        <div class="link">
+                            <p>行ってみたんよ</p>
+                        </div>
+                    </a>
                 </div>
+
                 <div>
-                    <img src="{{ asset('/storage/app/public/imgs/' . $goods->picture) }}" alt="">
+                    <img src="{{ asset('/storage/imgs/' . $pro->picture) }}" alt="グルメ">
                 </div>
             </div>
         @endforeach
     </section>
+
+    <section class="souvenir">
+        <h2>お土産</h2>
+        @foreach ($special_goods as $goods)
+            <div class="flex pro_box mr-tp-2">
+                <div class="pro_in">
+                    <p><span class="pro_title"><?= $pro['common_name'] ?> </span>参考価格:<?= $pro['price'] ?>円</p>
+                    <div>
+                        <div class="pro_disc">
+                            <p><?= $goods['discription'] ?></p>
+                        </div>
+                    </div>
+                    <a href="{{ url('blog-detail' . '?id=' . $goods->station_list) }}"class="mr-tp-2 block">
+                        <div class="link">
+                            <p>行ってみたんよ</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <img src="{{ asset('/storage/imgs/' . $goods->picture) }}" alt="グルメ">
+                </div>
+        @endforeach
+    </section>
+
     <section class="act1">
         <h2>体験</h2>
         @foreach ($activities as $act)
-            <div><?= $act['picture1'] ?></div>
-            <div>{!! $act->discription !!}</div>
+            <div class="wrap">
+                <div><?= $act['picture1'] ?></div>
+                <img src="{{ asset('/storage/imgs/' . $act->picture1) }}" alt="アクティビティー">
+                <div>{!! $act->discription !!}</div>
+                <div class="box">
+                    <a href="{{ url('news') }}" class="block">
+                        <div class="blog_link">
+                            <p>行ってみたんよ</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         @endforeach
     </section>
     <section class="basic">
@@ -92,7 +138,8 @@
                     <img src="{{ asset('/storage/imgs/bed_icon_' . $val->bed_icon . '.jpeg') }}" alt="">
                     <img src="{{ asset('/storage/imgs/restaurant_icon_' . $val->restaurant_icon . '.jpeg') }}"
                         alt="">
-                    <img src="{{ asset('/storage/imgs/lightmeal_icon_' . $val->lightmeal_icon . '.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/imgs/lightmeal_icon_' . $val->lightmeal_icon . '.jpeg') }}"
+                        alt="">
                     <img src="{{ asset('/storage/imgs/accommodation_icon_' . $val->accommodation_icon . '.jpeg') }}"
                         alt="">
                     <img src="{{ asset('/storage/imgs/spa_icon_' . $val->spa_icon . '.jpeg') }}" alt="">
@@ -115,6 +162,9 @@
                 <button class="star">お気に入り</button>
             </div>
     </section>
+    <div class="google_map">
+        {!! $val->map_url !!}
+    </div>
     @endforeach
 @endsection
 

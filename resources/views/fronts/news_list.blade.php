@@ -1,7 +1,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトル --}}
-@section('title', '新着情報詳細ページ')
+@section('title', '新着情報一覧ページ')
 
 @section('pageCss')
     <style>
@@ -33,7 +33,7 @@
             border: 1px solid #949393;
             padding: 20px;
             margin: 30px 5px;
-            width: 350px;
+            width: 400px;
             height: auto;
 
             float: left;
@@ -56,6 +56,14 @@
         .link {
             clear: both;
         }
+
+        .pagination {
+            text-align: center;
+        }
+
+        .pagination li {
+            display: inline-block;
+        }
     </style>
 @endsection
 
@@ -69,7 +77,7 @@
     <div class="cards">
 
         @foreach ($news as $new)
-            <a href="{{ url('news-detail') }}?id={{ $new->id }}">
+            <a href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}">
 
                 <div class="card">
 
@@ -79,10 +87,15 @@
 
                     <p>{!! $new->overview !!}</p>
 
-                    <small>{{ $new->created_at }}</small>
+                    @php
+                        $ts = strtotime($new->updated_at);
+                    @endphp
+                    <small class="news__area--data">
+                        {{ date('Y年n月j日', $ts) }}
+                    </small>
 
                     <span>
-                        {!! $new->getCategoryName() !!}
+                        {{-- {!! $new->getCategoryName() !!} --}}
                         {{ $new->newsCategory->category_name }}
                     </span>
 
@@ -97,16 +110,16 @@
         <h2>カテゴリー</h2>
 
         <ul>
-            <a href="">
-                @foreach ($news_categories as $category)
-                    <li>{{ $category->category_name }}</li>
-                @endforeach
-            </a>
+            @foreach ($news_categories as $category)
+                <li><a href="{{ url('news') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
+            @endforeach
         </ul>
+
     </div>
 
 
-    <div class="link">{{ $news->links() }}</div>
+    <div class="link">{{ $news->links('pagination::bootstrap-4') }}</div>
+
 
 
 @endsection

@@ -30,16 +30,19 @@
 
 <body>
 
-    <header id="top">
-        <!-- g-nav mobile -->
+    <header>
 
-        <div class="kv">
-        </div>
+        <!-- g-nav mobile -->
         <div class="btn-gnavi">
             <span></span>
             <span></span>
             <span></span>
         </div>
+
+        <div class="top-kv">
+            <img src="../storage/images/index.images/mitinoeki.jpg" alt="">
+        </div>
+
 
         <nav id="global-navi">
             <div class="hamburger-menu-list">
@@ -65,9 +68,10 @@
 
         <!-- g-nav pc -->
         <nav id="global-nav" class="nav-pc">
-            <h1><a href="#"><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></a></h1>
-
-
+            <a class="site-logo" href="#">
+                <h1><img src="../assets/images/top-logo/logo1.png" alt="とくしままるっと道の駅">
+                </h1>
+            </a>
 
             <ul class="global-list">
                 <li><a href="../html/station_list.html"><i class="fa-solid fa-book-bookmark"></i>
@@ -88,6 +92,7 @@
             </ul>
 
         </nav>
+
     </header>
 
 
@@ -95,7 +100,7 @@
         <section class="news-box">
             <div class="new1">
                 <h2 class="news-title">ニュース</h2>
-                <p class="news-pcbtn"><a href="">もっと見る</a></p>
+                <p class="more-btn news-pcbtn"><a href="news_list.html">もっと見る</a></p>
 
             </div>
 
@@ -125,7 +130,7 @@
                 <a class="west" href="">西部</a>
                 <a class="south" href="">南部</a>
             </div>
-            <p class="station_detail"><a href="">詳細検索</a></p>
+            <p class="more-btn"><a href="">詳細検索</a></p>
         </section>
 
         <section>
@@ -140,14 +145,18 @@
                         <h2 class="sp-h2">特産品</h2>
                         <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
 
-                        <p class="goods-pcbtn"><a href="">もっと見る</a></p>
+                        <a href="">
+                            <p class="pcbtn">もっと見る</p>
+                        </a>
                     </li>
                     <li><img class="goods-1" src="../storage/images/index.images/sudati.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/tikuwa.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/wakame.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/yakiimo.jpg" alt=""></li>
                 </ul>
-                <p class="goods-mobilebtn"><a href="">もっと見る</a></p>
+                <a href="">
+                    <p class="more-btn mobile-btn">もっと見る</p>
+                </a>
             </div>
 
 
@@ -161,15 +170,21 @@
                     <li class="activity-2">
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
-                        <p class="activity-pcbtn"><a href="">もっと見る</a></p>
+
+                        <a href="">
+                            <p class="pcbtn">もっと見る</p>
+                        </a>
                     </li>
+
 
                     <li><img class="activity-1" src="../storage/images/index.images/hune.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/asiyu.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/udon.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/ropeway.jpg" alt=""></li>
                 </ul>
-                <p class="activity-mobilebtn"><a href="">もっと見る</a></p>
+                <a href="">
+                    <p class="more-btn mobile-btn">もっと見る</p>
+                </a>
             </div>
         </section>
 
@@ -237,7 +252,7 @@
         </ul>
     </footer>
 
-    <script src="../assets/js/main.js">
+    <!-- <script src="../assets/js/main.js"> -->
     </script>
 
 </body>

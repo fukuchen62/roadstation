@@ -7,30 +7,45 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogCategory extends Model
 {
-    /**
-     * ブログのリレーション
-     */
-    public function blogs(){
-        return $this->hasone(Blog::class);
-    }
+    use HasFactory;
+
+
+
+
+    // *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
 
     /**
-     * ブログのリレーション
+     * ブログとリレーション
+     * （ / 作成者：小山）
+     */
+    // public function blogs(){
+    //     return $this->hasone(Blog::class);
+    // }
+
+    /**
+     * ブログとリレーション
+     * （ / 作成者：小山）
      */
     // public function blogs(){
     //     return $this->hasMany(Blog::class);
     // }
 
+
+
+
+    // *************** ▼▼▼ データのリターン ▼▼▼ ***************
+
     /**
      * 表示の値が1のブログのみ表示するメソッド
      */
-    public function blogsIsShow(){
-        return $this->blogs()
-            ->where('is_show',1);
-    }
+    // public function blogsIsShow(){
+    //     return $this->blogs()
+    //         ->where('is_show',1);
+    // }
 
     /**
-     * 記事のカテゴリー名をビューに送るメソッド
+     * blog_categoriesテーブルのカテゴリー名をビューに送るメソッド
+     * （ブログ記事一覧と各ブログ記事で使用するため作成 / 作成者：小山）
      *
      * @return void
      */
@@ -38,14 +53,13 @@ class BlogCategory extends Model
         return $this->category_name;
     }
 
-        /**
-     * 記事のカテゴリーidをビューに送るメソッド
+    /**
+     *blog_categoriesテーブルのidをビューに送るメソッド
+     *（ルート設定の確認テストで使用するため作成 / 作成者：小山）
      *
      * @return void
      */
     public function getId(){
         return $this->id;
     }
-
-    // protected $table = 'blogCategories';
 }

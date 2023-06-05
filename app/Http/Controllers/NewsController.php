@@ -21,21 +21,37 @@ class NewsController extends Controller
      */
     public function newsListView(Request $request)
     {
-        $sort = $request->sort;
+        if ($request->id == 1) {
 
-        $items = News::where('deleted_at', null)
-            // ->where('is_show', 1)
-            ->orderby('id', 'DESC')
-            // ->orderby('id', 'ASC')
-            ->paginate(6);
-        // ->get();
+            $items = News::where('deleted_at', null)
+                ->where('is_show', 1)
+                ->where('news_category_id', 1)
+                ->orderby('id', 'DESC')
+                ->paginate(4);
+        } elseif ($request->id == 2) {
+            $items = News::where('deleted_at', null)
+                ->where('is_show', 1)
+                ->where('news_category_id', 2)
+                ->orderby('id', 'DESC')
+                ->paginate(4);
+        } elseif ($request->id == 3) {
+            $items = News::where('deleted_at', null)
+                ->where('is_show', 1)
+                ->where('news_category_id', 3)
+                ->orderby('id', 'DESC')
+                ->paginate(4);
+        } else {
+            $items = News::where('deleted_at', null)
+                ->where('is_show', 1)
+                ->orderby('id', 'DESC')
+                ->paginate(4);
+        }
 
         $category = NewsCategory::all();
 
         $data = [
             'news' => $items,
             'news_categories' => $category,
-            'sort' => $sort,
         ];
 
         return view('fronts.news_list', $data);
@@ -56,19 +72,37 @@ class NewsController extends Controller
      */
     public function newsMainView(Request $request)
     {
-
-        // $items = News::all();
-        // $id = $request->id;
-        // $items = News::find($id);
-
-        $item = DB::table('news')
-            ->where('id', $request->id)
+        $item = News::where('id', $request->id)
             ->get();
+
+        $items = News::where('news_category_id', $request->news_category_id)
+            ->wherenot('id', $request->id)
+            ->where('is_show', 1)
+            ->orderby('id', 'DESC')
+            ->simplePaginate(2);
+
+        $category = NewsCategory::all();
 
         $data = [
             'news' => $item,
+            'categories' => $items,
+            'news_categories' => $category,
         ];
 
         return view('fronts.news', $data);
+    }
+
+
+
+    /**
+     * newsMainView function
+     * news詳細ページの表示
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function inquiryView(Request $request)
+    {
+        return view('fronts.inquiry');
     }
 }

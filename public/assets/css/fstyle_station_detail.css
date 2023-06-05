@@ -10,7 +10,26 @@ about resetcss
 /* リセットcssはフォルダ内に作成済み */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kiwi+Maru&display=swap');
 
+.flex {
+    display: flex;
+}
 
+.block {
+    display: block;
+}
+
+.mr-tp-2 {
+    margin-top: 2rem;
+}
+
+.wrap {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.google_map {
+    text-align: center;
+}
 
 body {
     font-family: 'Kiwi Maru', serif;
@@ -32,7 +51,7 @@ body {
     height: 100px;
     justify-content: space-around;
     align-items: center;
-    background-color: #008C41;
+    background-color: #ff9f19;
     color: #fff;
 }
 
@@ -163,4 +182,150 @@ h1.pagetitle {
 .list {
     display: inline-block;
     width: 500px;
+}
+
+.gourmet h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.act1 h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.souvenir h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.pro_box {
+    justify-content: space-evenly;
+}
+
+.pro_box:nth-child(even) {
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+.pro_box_rev {
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+.pro_title {
+    font-size: 1.5rem;
+}
+
+.pro_disc {
+    margin-top: 1.2rem;
+    width: 250px;
+    overflow: hidden;
+}
+
+.link {
+    border: solid black 2px;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    border-radius: 2rem;
+    display: flex;
+}
+
+.pro_in {
+    margin: auto 0;
+}
+
+.blog_link {
+    border: solid black 2px;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    border-radius: 2rem;
+    display: flex;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+ul.header__box.flex {
+    display: contents;
+}
+
+.footer__box.flex {
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+p.copyright {
+    text-align: center;
+}
+
+.search_area {
+    display: flex;
+    justify-content: center;
+}
+
+.search_form {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search_form p {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.search_check {
+    display: flex;
+}
+
+label {
+    cursor: pointer;
+    width: 150px;
+}
+
+.search_box {
+    display: flex;
+    justify-content: center;
+}
+
+.send {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+    gap: 4.5rem;
+}
+
+.send input {
+    text-align: center;
+    border: solid;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #B45A27;
+    color: #fff;
+}
+
+.area_only button {
+    background-color: #B45A26;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.area_in {
+    gap: 3rem;
+    justify-content: center;
+}
+
+.search_area {
+    display: flex;
+    gap: 3rem;
 }

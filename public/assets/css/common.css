@@ -14,7 +14,11 @@ body {
 .wrapper {
     margin: 0 auto;
     padding: 20px;
+}
 
+.site-logo img {
+    width: 80px;
+    height: 80px;
 }
 
 /* フォントサイズ */
@@ -31,7 +35,6 @@ h2 {
 p {
     line-height: 1.5rem;
     padding-top: 1rem;
-    /* padding-bottom: 1rem; */
 }
 
 a {
@@ -40,6 +43,10 @@ a {
 
 a:hover {
     color: #ccc;
+}
+
+h3 {
+    font-size: 20px;
 }
 
 
@@ -53,12 +60,17 @@ header {
 /* もっと見るボタン */
 .more-btn {
     font-size: 1.5rem;
-    font-weight: bold;
-    padding: 1.2% 2%;
+    width: 250px;
+    padding: 4% 2%;
     border-radius: 30px;
     color: #ffffff;
     background-color: #b45a27;
     display: inline-block;
+}
+
+.more-btn:hover {
+    color: #b45a27;
+    background-color: #ccc;
 }
 
 .icon {
@@ -209,7 +221,11 @@ footer li {
     line-height: 2rem;
 }
 
-
+@media screen and (min-width:900px) {
+    .nav-pc li {
+        font-size: 18px;
+    }
+}
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:900px) {
@@ -252,8 +268,8 @@ footer li {
 
     .nav-pc {
         margin: 0 auto;
-        padding: 10px;
-        max-width: 1200px;
+        /* padding: 10px; */
+        /* max-width: 1200px; */
         text-align: center;
         display: flex;
         justify-content: space-between;
@@ -284,7 +300,7 @@ footer li {
     /* もっと見るボタン */
     .more-btn {
         font-size: 1.5rem;
-        font-weight: bold;
+        /* font-weight: bold; */
         text-align: center;
         width: 250px;
         padding: 1.2% 0;
