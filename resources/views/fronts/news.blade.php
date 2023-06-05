@@ -110,6 +110,7 @@
 
                     @foreach ($id_list as $id)
                         @php
+                            $id = $new->changeName($id);
                             $name = $new::getRoadstationName($id);
                         @endphp
 
