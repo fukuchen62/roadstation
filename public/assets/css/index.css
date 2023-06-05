@@ -2,23 +2,18 @@
 
 .wrapper {
     padding: 0;
-    margin-top: 600px;
+    margin-top: 1200px;
 }
+
 
 #top {
     display: flex;
     flex-direction: column;
 }
 
-/* .kv {
-    width: 100%;
-    height: 80vh;
-    position: absolute;
-    background: url(https://placehold.jp/1980x1080.png);
-    background-size: cover;
-    background-position: center;
-    z-index: -999;
-} */
+.hamburger-menu-list {
+    display: none;
+}
 
 .sp-h2 {
     color: #ffffff;
@@ -586,15 +581,20 @@ imgcontent-wrapper .heading {
 
 @media screen and (min-width:901px) {
 
+    .wrapper {
+        padding: 0;
+        margin-top: 600px;
+    }
 
-    /* .wrapper {
-        margin-top: 1080px;
-    } */
+    header {
+        width: 100vw;
+    }
 
     .top-kv img {
         width: 100%;
         height: 85vh;
         object-fit: cover;
+        z-index: -999;
     }
 
     .kv {
@@ -611,27 +611,27 @@ imgcontent-wrapper .heading {
         margin-bottom: 100px;
     }
 
-    /* #global-nav {
+    #global-nav {
         position: static;
         top: -100px;
         transition: all 0.6s ease 0s;
-    } */
+    }
 
     /* ヘッダーの固定 */
-    /* #global-nav.m_fixed {
+    #global-nav.m_fixed {
         left: 0;
         position: fixed;
         top: 0;
         width: 100%;
         background-color: #fffcef;
         z-index: 999;
-    } */
+    }
 
     /* .sp-h2 {
         color: #ffffff;
         font-size: 2rem;
         margin-top: 10%;
-    } */
+    }
 
     /* .news-title {
         margin-bottom: 30px;

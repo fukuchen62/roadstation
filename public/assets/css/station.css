@@ -38,6 +38,7 @@ h4 {
     height: 400px;
     object-fit: cover;
     object-position: 80% 100%;
+    margin-bottom: 1rem;
 }
 
 /* 人とコメント */
@@ -121,18 +122,11 @@ h4 {
     }
 }
 
-/* .img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-    height: auto;
-    object-fit: cover;
-} */
-
+/* 商品名の下に引く線の設定 */
 .deco-h4::after {
     display: block;
     content: "";
-    width: 70%;
+    width: clamp(280px, 49vw, 380px);
     height: 0;
     border-top: solid 3px #1ca10a;
     margin-top: 0.5rem;
@@ -140,6 +134,11 @@ h4 {
 
 .commentary {
     margin-bottom: 3rem;
+}
+
+/* 商品説明文の幅をボタンサイズに合わせる */
+.com-wrap {
+    width: clamp(280px, 50vw, 380px);
 }
 
 .container {
@@ -194,6 +193,7 @@ h4 {
 /* 基本情報 */
 .item {
     background-color: #ccc;
+    padding: 1rem;
 }
 
 dd {
