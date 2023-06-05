@@ -88,7 +88,7 @@ class AdminController extends Controller
             'counts' => $counts,
             'login_user' => $login_user,
         ];
-        return view('cms.back_main', $data);
+        return view('cms.cms_main', $data);
     }
 
 
