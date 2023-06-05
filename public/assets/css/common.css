@@ -14,7 +14,11 @@ body {
 .wrapper {
     margin: 0 auto;
     padding: 20px;
+}
 
+.site-logo img {
+    width: 80px;
+    height: 80px;
 }
 
 /* フォントサイズ */
@@ -31,7 +35,6 @@ h2 {
 p {
     line-height: 1.5rem;
     padding-top: 1rem;
-    /* padding-bottom: 1rem; */
 }
 
 a {
@@ -45,7 +48,6 @@ a:hover {
 h3 {
     font-size: 20px;
 }
-
 
 
 header {
@@ -219,7 +221,11 @@ footer li {
     line-height: 2rem;
 }
 
-
+@media screen and (min-width:900px) {
+    .nav-pc li {
+        font-size: 18px;
+    }
+}
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:900px) {
@@ -262,7 +268,7 @@ footer li {
 
     .nav-pc {
         margin: 0 auto;
-        padding: 10px;
+        /* padding: 10px; */
         /* max-width: 1200px; */
         text-align: center;
         display: flex;
