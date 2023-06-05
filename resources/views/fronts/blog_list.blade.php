@@ -5,11 +5,11 @@
 @section('title', 'ブログ記事一覧')
 
 {{-- CSS --}}
-@section('pageCss',)
+@section('pageCss')
 
     {{-- common CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/indes.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
@@ -25,7 +25,7 @@
             <h2>{{ $blog->title }}</h2>
             <img src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
             <p>内 容：{!! $blog->content !!}</p>
-            <p>登録日時：{{ $blog->created_at }}</p>
+            <p>登録日時：{{ $blog['created_at']->format('Y年n月j日') }}</p>
             <p>カテゴリー名：{{ $blog->blogCategory->getName() }}</p>
         </a>
     @endforeach
