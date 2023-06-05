@@ -17,14 +17,15 @@ class RoadStation extends Model
 
 
 
-    
+
     /**
      * ブログとリレーション
      * （ブログのURLを取得するためのもの）
      * （ブログ記事にURLを表示するため作成 / 作成者：小山）
-     * 
+     *
      */
-    public function blog(){
+    public function blog()
+    {
         return $this->hasone(blog::class);
     }
 
@@ -34,7 +35,8 @@ class RoadStation extends Model
      *
      * @return void
      */
-    public function getUrl(){
+    public function getUrl()
+    {
         return $this->url;
     }
 
@@ -42,7 +44,8 @@ class RoadStation extends Model
      * アクティビティとリレーション
      * （アクティビティ名を取得するためのもの / 作成者：小山）
      */
-    public function activity(){
+    public function activity()
+    {
         return $this->hasone(activity::class);
     }
 
@@ -52,7 +55,8 @@ class RoadStation extends Model
      *
      * @return void
      */
-    public function getName(){
+    public function getName()
+    {
         return $this->station_name;
     }
 
@@ -62,7 +66,8 @@ class RoadStation extends Model
      *
      * @return void
      */
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 }

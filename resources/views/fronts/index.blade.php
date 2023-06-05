@@ -92,18 +92,30 @@
             </div>
 
             <div class="news2">
-
                 <ul>
-                    <li> <a href="">●月●日　　その他<br>
-                            世界初！DMVに乗ってきたんよ</a>
-                    </li>
-                    <li> <a href="">●月●日　　その他<br>
-                            世界初！DMVに乗ってきたんよ</a>
-                    </li>
-                    <li> <a href="">●月●日　　その他<br>
-                            世界初！DMVに乗ってきたんよ</a>
-                    </li>
+                    @foreach ($news as $news )
+                        <a href="" class="" id="">
+                        @php
+                        $ts = strtotime($news->created_at);
+                        @endphp
+                        <li class="news__area--data">
+                        {{ date('Y年m月d日', $ts) }}
+                        </li>
 
+                        @foreach ( $category as $category )
+
+                        @php
+                                $categoryName = $news::getCategoryName($id);
+                        @endphp
+
+                        @endforeach
+
+
+                        {{-- <li>カテゴリー：{{$news->news_category_id}}</li> --}}
+                        <li>カテゴリー：{{$categoryName}}</li>
+                        <li>タイトル：{{$news->title}}</li>
+                        </a>
+                    @endforeach
                 </ul>
             </div>
 
