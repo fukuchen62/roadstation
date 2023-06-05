@@ -27,6 +27,10 @@ about resetcss
     text-align: center;
 }
 
+.google_map {
+    text-align: center;
+}
+
 body {
     font-family: 'Kiwi Maru', serif;
 
@@ -246,4 +250,82 @@ h1.pagetitle {
     display: flex;
     justify-content: center;
     margin: 2rem auto;
+}
+
+ul.header__box.flex {
+    display: contents;
+}
+
+.footer__box.flex {
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+p.copyright {
+    text-align: center;
+}
+
+.search_area {
+    display: flex;
+    justify-content: center;
+}
+
+.search_form {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search_form p {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.search_check {
+    display: flex;
+}
+
+label {
+    cursor: pointer;
+    width: 150px;
+}
+
+.search_box {
+    display: flex;
+    justify-content: center;
+}
+
+.send {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+    gap: 4.5rem;
+}
+
+.send input {
+    text-align: center;
+    border: solid;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #B45A27;
+    color: #fff;
+}
+
+.area_only button {
+    background-color: #B45A26;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.area_in {
+    gap: 3rem;
+    justify-content: center;
+}
+
+.search_area {
+    display: flex;
+    gap: 3rem;
 }

@@ -76,6 +76,7 @@ class NewsController extends Controller
             ->get();
 
         $items = News::where('news_category_id', $request->news_category_id)
+            ->wherenot('id', $request->id)
             ->where('is_show', 1)
             ->orderby('id', 'DESC')
             ->simplePaginate(2);

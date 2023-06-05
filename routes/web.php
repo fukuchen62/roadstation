@@ -183,7 +183,7 @@ Route::get(
  */
 Route::get(
     'cms-news-new',
-    'App\Http\Controllers\AdminNewsController@new'
+    'App\Http\Controllers\AdminNewsController@newsInput'
 )->name('cms-newsinput');
 
 /**
@@ -191,15 +191,15 @@ Route::get(
  */
 Route::post(
     'cms-news-new',
-    'App\Http\Controllers\AdminNewsController@new'
-)->name('cms-newsinsert');
+    'App\Http\Controllers\AdminNewsController@newsCreate'
+)->name('cms-newscreate');
 
 /**
  * ニュースの編集画面
  */
 Route::get(
     'cms-news-edit',
-    'App\Http\Controllers\AdminNewsController@edit'
+    'App\Http\Controllers\AdminNewsController@newsEdit'
 )->name('cms-newsedit');
 
 /**
@@ -207,13 +207,5 @@ Route::get(
  */
 Route::post(
     'cms-news-edit',
-    'App\Http\Controllers\AdminNewsController@update'
+    'App\Http\Controllers\AdminNewsController@newsUpdate'
 )->name('cms-newsupdate');
-
-/**
- * ニュースの削除処理
- */
-Route::post(
-    'cms-news-del',
-    'App\Http\Controllers\AdminNewsController@delete'
-)->name('cms-newsdelete');
