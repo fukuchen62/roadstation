@@ -10,6 +10,15 @@
             width: 500px;
             height: 500px;
         }
+
+        tr {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+
+        }
     </style>
 
 @endsection
@@ -17,7 +26,7 @@
 
 @section('content')
 
-    <form method="POST" action="{{ url('inquiry') }}">
+    <form method="POST" action="{{ url('contact-check') }}">
         @csrf
 
         <table>
@@ -46,15 +55,16 @@
             <tr>
                 <th>お問い合わせ内容</th>
                 <td>
-                    <textarea name="body">{{ old('body') }}</textarea>
-                    @if ($errors->has('body'))
-                        <p class="error-message">{{ $errors->first('body') }}</p>
+                    <textarea name="content">{{ old('content') }}</textarea>
+                    @if ($errors->has('content'))
+                        <p class="error-message">{{ $errors->first('content') }}</p>
                     @endif
                 </td>
             </tr>
 
         </table>
 
+        <button type="reset">書き直す</button>
         <button type="submit">入力内容確認</button>
 
     </form>

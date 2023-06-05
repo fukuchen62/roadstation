@@ -165,14 +165,30 @@ Route::get(
 
 
 // *********** お問い合わせ ***********
+
 /**
  *お問い合わせページを表示する
  */
 Route::get(
-    'inquiry',
-    'App\Http\Controllers\NewsController@inquiryView'
-)->name('inquiry');
+    'contact',
+    'App\Http\Controllers\ContactController@contact'
+)->name('contact');
 
+/**
+ *お問い合わせ確認ページを表示する
+ */
+Route::post(
+    'contact-check',
+    'App\Http\Controllers\ContactController@contactCheck'
+)->name('check');
+
+/**
+ *お問い合わせ送信完了ページを表示する
+ */
+Route::post(
+    'contact-send',
+    'App\Http\Controllers\ContactController@contactSend'
+)->name('send');
 
 
 

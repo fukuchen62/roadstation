@@ -44,4 +44,12 @@
 
     {{-- ページネーション表示部分 --}}
     {{ $blogs->links() }}
+
+    <input type="button" value="Check" onclick="myfunc()">
+
+    <script>
+        var myfunc = function() {
+            console.log("Hello world!");
+        }
+    </script>
 @endsection

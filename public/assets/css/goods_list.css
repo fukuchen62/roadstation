@@ -20,13 +20,6 @@ h2 {
     font-size: 20px;
 }
 
-/* .goods-box{
-    border: 1px solid #000;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-} */
-
 .goods {
     display: flex;
     justify-content: center;
