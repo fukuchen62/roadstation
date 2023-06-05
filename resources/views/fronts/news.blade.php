@@ -82,7 +82,15 @@
                 <h1>{{ $new->title }}</h1>
 
                 <div>
-                    <span>{{ $new->updated_at }}</span>
+                    @php
+                        $ts = strtotime($new->updated_at);
+                    @endphp
+                    <span class="news__area--data">
+                        {{ date('Y年n月j日', $ts) }}
+                    </span>
+
+                    {{-- <span>{{ $new->updated_at }}</span> --}}
+
                     <span>{{ $new->newsCategory->category_name }}</span>
                 </div>
 
@@ -96,7 +104,7 @@
                     @endif
                 </span>
                 <span>
-                    @if ($new->id + 1 < 11)
+                    @if ($new->id + 1 < count($news))
                         <a href="{{ url('news-detail') }}?id={{ $new->id + 1 }}">次のページへ</a>
                     @endif
                 </span>
