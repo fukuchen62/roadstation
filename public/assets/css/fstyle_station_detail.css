@@ -329,3 +329,9 @@ label {
     display: flex;
     gap: 3rem;
 }
+
+.search_sum {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
