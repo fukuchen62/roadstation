@@ -91,4 +91,18 @@ class NewsController extends Controller
 
         return view('fronts.news', $data);
     }
+
+
+
+    /**
+     * newsMainView function
+     * news詳細ページの表示
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function inquiryView(Request $request)
+    {
+        return view('fronts.inquiry');
+    }
 }

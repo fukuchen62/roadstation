@@ -1,7 +1,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトル --}}
-@section('title', '新着情報詳細ページ')
+@section('title', '新着情報一覧ページ')
 
 @section('pageCss')
     <style>

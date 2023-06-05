@@ -58,10 +58,6 @@ Route::get(
 // ---------------------- frontPage -----------------------
 
 
-
-
-
-
 // *********** 道の駅テーブル ***********
 
 /**
@@ -166,6 +162,21 @@ Route::get(
     'news-detail',
     'App\Http\Controllers\NewsController@newsMainView'
 )->name('newsdetail');
+
+
+// *********** お問い合わせ ***********
+/**
+ *お問い合わせページを表示する
+ */
+Route::get(
+    'inquiry',
+    'App\Http\Controllers\NewsController@inquiryView'
+)->name('inquiry');
+
+
+
+
+
 
 
 /*--- 以下は管理画面に関するルーティン設定です--*/
