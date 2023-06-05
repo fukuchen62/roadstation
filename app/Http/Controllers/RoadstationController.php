@@ -52,6 +52,25 @@ class RoadstationController extends Controller
 
     public function stationAreaSearch(Request $request)
     {
-        return view('fronts.station_area');
+        // $name = RoadStation::where('id', $request->id)->get();
+        $name = RoadStation::all();
+
+        $goods = SpecialGoods::where('station_list', $request->id)->get();
+        // $goods = SpecialGoods::all();
+
+        $pro = ProductType::where('station_list', $request->id)->get();
+        // $pro = ProductType::all();
+
+        // $act = Activity::where('road_station_id', $request->id)->get();
+        $act = Activity::where('road_station_id', $request->id)->get();
+
+
+        $data = [
+            'road_stations' => $name,
+            'activities' => $act,
+            'special_goods' => $goods,
+            'product_types' => $pro,
+        ];
+        return view('fronts.station_area', $data);
     }
 }
