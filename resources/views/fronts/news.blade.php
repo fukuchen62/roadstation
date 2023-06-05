@@ -100,7 +100,6 @@
 
 
                 <p class="station">関連道の駅詳細ページへ
-                    {{-- <a href="{{ url('station-detail') }}"></a> --}}
                     @php
                         
                         $station_list = $new->station_list;

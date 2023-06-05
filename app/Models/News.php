@@ -67,6 +67,42 @@ class News extends Model
 
     public static function getRoadstationName($id)
     {
+        // switch ($id) {
+        //     case 'a':
+        //         $id = 10;
+        //         break;
+        //     case 'b':
+        //         $id = 11;
+        //         break;
+        //     case 'c':
+        //         $id = 12;
+        //         break;
+        //     case 'd':
+        //         $id = 13;
+        //         break;
+        //     case 'e':
+        //         $id = 14;
+        //         break;
+        //     case 'f':
+        //         $id = 15;
+        //         break;
+        //     case 'g':
+        //         $id = 16;
+        //         break;
+        //     case 'h':
+        //         $id = 17;
+        //         break;
+        //     case 'i':
+        //         $id = 18;
+        //         break;
+        // }
+
+        if ($id = 'a') {
+            $id = 10;
+        } elseif ($id = 'd') {
+            $id = 11;
+        }
+
         $item = RoadStation::find($id);
         if ($item != null) {
             $name = $item->station_name;
