@@ -47,7 +47,40 @@ class RoadstationController extends Controller
 
     public function stationDetailSearch(Request $request)
     {
-        return view('fronts.station_search');
+        // $name = RoadStation::where('id', $request->id)->get();
+        $name = RoadStation::all();
+
+        $goods = SpecialGoods::where('station_list', $request->id)->get();
+        // $goods = SpecialGoods::all();
+
+        $pro = ProductType::where('station_list', $request->id)->get();
+        // $pro = ProductType::all();
+
+        // $act = Activity::where('road_station_id', $request->id)->get();
+        $act = Activity::where('road_station_id', $request->id)->get();
+
+        // $area = 0;
+        // if (isset($_GET['east'])) {
+        //     $area = 1;
+        //     // var_dump($area);
+        // } elseif (isset($_GET['west'])) {
+        //     $area = 2;
+        //     // var_dump($area);
+        // } elseif (isset($_GET['south'])) {
+        //     $area = 3;
+        //     // var_dump($area);
+        // }
+
+
+
+        $data = [
+            'road_stations' => $name,
+            'activities' => $act,
+            'special_goods' => $goods,
+            'product_types' => $pro,
+            // 'station_area' => $area,
+        ];
+        return view('fronts.station_search', $data);
     }
 
     public function stationAreaSearch(Request $request)
@@ -64,12 +97,26 @@ class RoadstationController extends Controller
         // $act = Activity::where('road_station_id', $request->id)->get();
         $act = Activity::where('road_station_id', $request->id)->get();
 
+        // $area = 0;
+        // if (isset($_GET['east'])) {
+        //     $area = 1;
+        //     // var_dump($area);
+        // } elseif (isset($_GET['west'])) {
+        //     $area = 2;
+        //     // var_dump($area);
+        // } elseif (isset($_GET['south'])) {
+        //     $area = 3;
+        //     // var_dump($area);
+        // }
+
+
 
         $data = [
             'road_stations' => $name,
             'activities' => $act,
             'special_goods' => $goods,
             'product_types' => $pro,
+            // 'station_area' => $area,
         ];
         return view('fronts.station_area', $data);
     }
