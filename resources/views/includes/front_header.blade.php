@@ -3,6 +3,7 @@
     <div class="header flex">
         <a href="{{ route('top') }}">
             {{-- <img src="{{ asset('assets/images/cat1.jpg') }}" alt="ネコの画像" class="header__logo expand"> --}}
+            <div>(仮)TOPに戻る</div>
         </a>
         <!-- g-nav mobile -->
         <div id="wrapper">
