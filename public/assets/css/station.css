@@ -297,15 +297,3 @@ dd {
     }
 
 }
-
-
-.svg__container {
-    position: relative;
-    width: 100%;
-}
-
-.svg__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
