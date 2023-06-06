@@ -14,6 +14,7 @@
 
 .blog-title {
     margin-bottom: 30px;
+    font-size: 20px;
 }
 
 
@@ -22,6 +23,11 @@
     max-width: 360px;
     height: auto;
     width: 100%;
+
+}
+
+.roadstation-information {
+    font-size: 20px;
 
 }
 
@@ -43,6 +49,7 @@
 
 .relatedarticle-title {
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 
@@ -76,6 +83,8 @@
         object-fit: cover;
 
     }
+
+
 
 
     .back-btn {
@@ -191,6 +200,8 @@
         margin-bottom: 150px;
 
     }
+
+
 
     .back-btn {
         margin-bottom: 50px;

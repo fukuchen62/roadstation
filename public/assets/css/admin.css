@@ -228,7 +228,7 @@ h3 {
 /* 検索条件,検索ボタン */
 .search {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .search input:first-child {
@@ -251,6 +251,8 @@ h3 {
 }
 
 .submit_btn {
+    /* width: 200px; */
+    padding: 5px 40px;
     margin-top: 30px;
     margin-right: 60px;
     transition: 0.1s;
@@ -319,7 +321,8 @@ td.edit a {
     text-align: center;
     background-color: orange;
     border: 1px solid chocolate;
-    padding: 10px 20px;
+    padding: 5px 20px;
+    color: #fff;
 }
 
 td.dt {
@@ -328,7 +331,8 @@ td.dt {
 }
 
 table.info input,
-table.info textarea {
+table.info textarea,
+table.info select {
     /* border: 1px black solid; */
     width: 100%;
 }
@@ -348,15 +352,21 @@ table.new_info td {
 table.edit_info input,
 table.edit_info textarea,
 table.new_info input,
-table.new_info textarea {
+table.new_info textarea,
+table.new_info select,
+table.new_info select {
     border: 1px #b9adc3 solid;
+    background-color: lightgoldenrodyellow;
+    padding: 4px;
 }
 
 /* 編集画面と新規登録画面の入力欄にホバーすると枠線の色が変わる */
 table.edit_info input:hover,
 table.edit_info textarea:hover,
 table.new_info input:hover,
-table.new_info textarea:hover {
+table.new_info textarea:hover,
+table.new_info select:hover,
+table.new_info select:hover {
     border: 2px blueviolet solid;
 }
 

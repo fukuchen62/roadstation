@@ -8,21 +8,24 @@ use Illuminate\Database\Eloquent\Model;
 class News extends Model
 {
     use HasFactory;
-
     protected $guarded = array('id');
+
     public static $rules = array(
-        'category_id' => 'required|integer',
-        'title'       => 'required|string|max:50',
+        'news_category_id' => 'required|integer',
+        'title'       => 'required|string|max:32',
+        'discription'    => 'required',
         'overview'    => 'max:200',
-        'thumbnail'   => 'required|string|max:200',
+        'picture'   => 'max:200',
         'is_show'     => 'required|boolean'
     );
     // 日本語エラーメッセージ
     public static $messages = [
-        'category_id.required' => 'カテゴリーIDは必ず入力してください。',
-        'title.required'       => 'タイトルは必ず入力してください。',
-        'thumbnail.required'   => 'サムネ画像は必ず入力してください。',
-        'is_show.required'     => '表示フラグは必ず入力してください。'
+        'news_category_id.required' => 'カテゴリーIDは必ず入力してください。',
+        'title.required' => 'タイトルは必ず入力してください。',
+        'discription.required' => '詳細内容は必ず入力してください。',
+        'picture.max:200' => '画像は200文字まで入力してください。',
+        'overview.max:200' => '概要は200文字まで入力してください。',
+        'is_show.required' => '表示フラグは必ず入力してください。0 or 1'
     ];
 
     public function newsCategory()
