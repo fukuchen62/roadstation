@@ -30,7 +30,7 @@
 
         <!-- g-nav pc -->
         <div class="nav-pc">
-            <h1><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></h1>
+            <a href="{{route('top')}}"><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></a>
 
             <ul>
                 <li><a href="{{route('stationlist')}}">道の駅一覧
