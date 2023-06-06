@@ -5,16 +5,7 @@
 
 @section('pageCss')
 
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }} ">
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
-
-    <!-- フォント設定 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-
-    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 
     <style>
         .pagination {
