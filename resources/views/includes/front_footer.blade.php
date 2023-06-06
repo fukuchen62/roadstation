@@ -7,7 +7,7 @@
             <a href="{{ url('station-list') }}">道の駅一覧</a>
         </li>
         <li class="fa-solid fa-book-bookmark">
-            <a href="{{ url('area-search') }}">地域検索</a>
+            <a href="{{ url('area-search') }}">エリア検索</a>
         </li>
         <li class="fa-solid fa-book-bookmark">
             <a href="{{ url('detail-search') }}">詳細検索</a>
@@ -19,7 +19,7 @@
             <a href="{{ url('activities') }}">体験</a>
         </li>
         <li class="fa-solid fa-book-bookmark">
-            <a href="{{ url('blog') }}">ブログ</a>
+            <a href="{{ url('blog') }}">行ってみたんよ</a>
         </li>
         <li class="fa-solid fa-book-bookmark">
             <a href="{{ url('news') }}">新着ニュース</a>
