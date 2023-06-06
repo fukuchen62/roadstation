@@ -109,18 +109,58 @@
             </div>
     </form>
     <?php
+
+    if (isset($_GET['area']) && isset($_GET['icon'])) { ?>
+    <?php
+    $area = '';
+    $icon = '';
+    $atm = 0;
+    $bed = 0;
+    $area = $_GET['area'];
+    $icon = $_GET['icon'];
+    $areaA = in_array(4, $area);
+    if ($areaA) {
+        $area = [1, 2, 3];
+    }
+    $atmA = in_array('atm_icon', $icon);
+    if ($atmA) {
+        $atm = 1;
+    } else {
+        $atm = 0;
+    }
+    $bedA = in_array('bea_icon', $icon);
+    if ($bedA) {
+        $bed = 1;
+    } else {
+        $bed = 0;
+    }
     
-    if (isset($_GET['area']) && isset($_GET['icon'])) {
-        $area = $_GET['area'];
-        $icon = $_GET['icon'];
+    $area = array_map('intval', $area);
+    $areaB = in_array('4', $area);
+    if ($areaB) {
+        $areaA = 1 || 2 || 3;
+    } else {
+        $areaA = implode('||', $area);
+        echo var_dump($areaA);
     }
     ?>
 
-    @if (isset($area) && isset($icon))
-        @foreach ($icon as $areas)
-            <div>{{ $areas }}</div>
+    <pre>
+        <?php var_dump($area); ?>
+        <?php var_dump($icon); ?>
+    </pre>
+    <?php } ?>
+    @if (isset($_GET['area']) && isset($_GET['icon']))
+
+        @foreach ($road_stations as $road)
+            @if ($road->area_id == $area['0'] || $road->area_id == isset($area['1']) || $road->area_id == isset($area['2']))
+                @if ($road->atm_icon == $atm && $road->bed_icon == $bed)
+                    {{ $road->station_name }}
+                @endif
+            @endif
         @endforeach
     @endif
+
 @endsection
 
 {{-- 該当ページ専用JS --}}
