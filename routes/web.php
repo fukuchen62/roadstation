@@ -26,7 +26,9 @@ use Illuminate\Support\Facades\Auth;
 //     return view('fronts/index');
 // })->name('top');
 
-
+/**
+ * TOP Page
+ */
 Route::get('/', [App\Http\Controllers\TopController::class, 'index'])->name('top');
 
 
