@@ -1,6 +1,6 @@
 <header id="header">
 
-    <div class="header flex">
+    <div class="header topheader flex">
         <div>仮設置リンク集　　</div>
         <a href="{{ route('top') }}">
             {{-- <img src="{{ asset('assets/images/cat1.jpg') }}" alt="ネコの画像" class="header__logo"> --}}
