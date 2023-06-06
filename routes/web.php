@@ -241,7 +241,7 @@ Route::post(
 /**
  * ニュースの削除処理
  */
-Route::post(
+Route::get(
     'cms-news-delete',
     'App\Http\Controllers\AdminNewsController@newsDelete'
 )->name('cms-newsremove');

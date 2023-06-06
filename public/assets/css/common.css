@@ -207,8 +207,8 @@ footer {
 
     /* 確認用 */
     /* background-color: #d3ffe3; */
-    background-image: url(../images/footer3.jpg);
-    background-size: contain;
+    background-image: url(../images/footer4.jpg);
+    background-size: cover;
     /* object-fit: cover; */
     background-position: center;
     background-repeat: no-repeat;
@@ -224,6 +224,10 @@ footer ul {
 footer li {
     margin: 0 auto;
     line-height: 2rem;
+    color: #fff;
+    background-color: #000;
+    opacity: 0.6;
+    width: 300px;
 }
 
 @media screen and (min-width:900px) {

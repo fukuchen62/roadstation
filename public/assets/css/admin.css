@@ -271,6 +271,7 @@ h3 {
 .delete_btn {
     margin-top: 30px;
     margin-right: 60px;
+    padding: 5px 40px;
     background-color: #8c8c8c;
 }
 
