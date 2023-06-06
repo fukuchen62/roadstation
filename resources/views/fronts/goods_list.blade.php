@@ -69,7 +69,18 @@
                     <ul class="detailContainer" id="{{'type-' . $type->id}}">
                         <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailImg">
                         <li class="detailName">商品名：　{{$type->common_name}}</li>
-                        <li class="detailSeason">旬の時期：<br>{{$type->season}}</li>
+                        @php
+                            $season = $type->season;
+                            // 文字列から配列に変換
+                            $season = explode("|", $season);
+                        @endphp
+
+                        @foreach ( $season as $season )
+
+                        <li class="detailSeason">旬の月：<br>{{$season}}</li>
+
+                        @endforeach
+
                         <li class="detailPrice">参考価格:<br>{{$type->price}}円</li>
                         <li class="detailUsage">利用方法：{!!$type->usage!!}</li>
                         <li class="detailDiscription">説明文:{!!$type->discription!!}</li>
