@@ -1,9 +1,21 @@
 @charset "utf-8";
 
+.topHeader {
+    height: 20px;
+    width: 100%;
+    /* 確認用 */
+    background-color: #e6e6e6;
+}
 
+#top {
+    height: 0px;
+}
 
+.kv {
+    height: 100vh;
+}
 
-
+/* ニュース見出し配置用 */
 .flex {
     display: flex;
     flex-direction: row;
@@ -15,6 +27,7 @@
     margin-right: 20px;
 }
 
+/* ブログ見出し配置用 */
 .blogList {
     list-style: none;
     display: grid;
@@ -24,6 +37,7 @@
     gap: 30px;
 }
 
+/* ブログカード型成型用 */
 .blogwrapper {
     padding: 8px;
     border: 3px solid #1ca10a;

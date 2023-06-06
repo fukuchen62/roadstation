@@ -17,15 +17,16 @@
 
 {{-- メイン --}}
 @section('content')
-    {{-- <section class="titlesection">
-        <div class="titlesection__box">
+    <section class="titlesection">
+        {{-- <div class="titlesection__box">
             <h1 class="pagetitle">特産品の選択画面</h1>
-        </div>
-    </section> --}}
+        </div> --}}
+    </section>
 
     <section class="section">
         {{-- 農産物の一覧表示 --}}
             <div class="categoryTitle">農産物</div>
+            {{-- 出力した農産品画像名前のグリッド配置 --}}
             <div class="container">
             @foreach ($agricultural_products as $agricultural )
                 <div class="card" >
@@ -68,7 +69,18 @@
                     <ul class="detailContainer" id="{{'type-' . $type->id}}">
                         <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailImg">
                         <li class="detailName">商品名：　{{$type->common_name}}</li>
-                        <li class="detailSeason">旬の時期：<br>{{$type->season}}</li>
+                        @php
+                            $season = $type->season;
+                            // 文字列から配列に変換
+                            $season = explode("|", $season);
+                        @endphp
+
+                        @foreach ( $season as $season )
+
+                        <li class="detailSeason">旬の月：<br>{{$season}}</li>
+
+                        @endforeach
+
                         <li class="detailPrice">参考価格:<br>{{$type->price}}円</li>
                         <li class="detailUsage">利用方法：{!!$type->usage!!}</li>
                         <li class="detailDiscription">説明文:{!!$type->discription!!}</li>
