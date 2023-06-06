@@ -58,6 +58,13 @@ h4 {
     text-align: center;
 }
 
+.flex2 {
+    gap: 1.25rem;
+    width: clamp(320px, 100%, 1000px);
+    margin: 100px auto;
+    text-align: center;
+}
+
 
 .speech {
     position: relative;
