@@ -7,6 +7,11 @@ h4,
     text-align: center;
 }
 
+h4 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 h2 {
     margin-bottom: 20px;
 }
@@ -27,6 +32,16 @@ h3 {
     /* padding: 20px 20px; */
     /* background-color: #ccc; */
 }
+
+dl {
+    text-align: start;
+
+}
+
+dd {
+    margin-bottom: 30px;
+}
+
 
 .area-btn {
     padding: 10px 10px;
