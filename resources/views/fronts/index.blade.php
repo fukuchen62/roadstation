@@ -25,13 +25,14 @@
     <header id="top">
         <!-- g-nav mobile -->
 
-        <div class="kv">
-        </div>
+        <div class="kv"></div>
+
         <div class="btn-gnavi">
             <span></span>
             <span></span>
             <span></span>
         </div>
+
 
         <nav id="global-navi">
             <div class="hamburger-menu-list">
@@ -52,7 +53,7 @@
                     <li><a href="../html/like.html"><i class="fa-solid fa-book-bookmark"></i>
                             お気に入り</a></li>
                 </ul>
-            </div>
+
         </nav>
 
         <!-- g-nav pc -->
@@ -80,10 +81,17 @@
             </ul>
 
         </nav>
+        </div>
     </header>
 
 
     <main class="wrapper">
+
+
+
+
+
+
         <section class="news-box">
             <div class="new1">
                 <h2 class="news-title">ニュース</h2>
@@ -122,29 +130,33 @@
                 <a class="west" href="">西部</a>
                 <a class="south" href="">南部</a>
             </div>
-            <p class="station_detail"><a href="">詳細検索</a></p>
+            <p class="more-btn"><a href="">詳細検索</a></p>
         </section>
 
-        <section>
+         <section>
             <h2 class="feature-title">こんなんあるで！</h2>
             <div class="goods-wrapper">
                 <ul class="goods">
                     <li><img class="goods-1" src="../storage/images/index.images/mikan.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/otaniyaki.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/renkon.jpg" alt=""></li>
-                    <li><img class="goods-1" src="../storage/images/index.images/sakana.jpg"></li>
+                    <li><img class="goods-1" src="../storage/images/index.images/sakana.jpg" alt=""></li>
                     <li class="goods-2">
                         <h2 class="sp-h2">特産品</h2>
                         <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
 
-                        <p class="goods-pcbtn"><a href="">もっと見る</a></p>
+                        <a href="">
+                            <p class="pcbtn">もっと見る</p>
+                        </a>
                     </li>
                     <li><img class="goods-1" src="../storage/images/index.images/sudati.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/tikuwa.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/wakame.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/yakiimo.jpg" alt=""></li>
                 </ul>
-                <p class="goods-mobilebtn"><a href="">もっと見る</a></p>
+                <a href="">
+                    <p class="more-btn mobile-btn">もっと見る</p>
+                </a>
             </div>
 
 
@@ -154,19 +166,25 @@
                     <li><img class="activity-1" src="../storage/images/index.images/boat.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/dmv.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/aizometop.jpg" alt=""></li>
-                    <li><img class="activity-1" src="../storage/images/index.images/zipline.jpg"></li>
+                    <li><img class="activity-1" src="../storage/images/index.images/zipline.jpg" alt=""></li>
                     <li class="activity-2">
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
-                        <p class="activity-pcbtn"><a href="">もっと見る</a></p>
+
+                        <a href="">
+                            <p class="pcbtn">もっと見る</p>
+                        </a>
                     </li>
+
 
                     <li><img class="activity-1" src="../storage/images/index.images/hune.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/asiyu.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/udon.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/ropeway.jpg" alt=""></li>
                 </ul>
-                <p class="activity-mobilebtn"><a href="">もっと見る</a></p>
+                <a href="">
+                    <p class="more-btn mobile-btn">もっと見る</p>
+                </a>
             </div>
         </section>
 
@@ -230,4 +248,6 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 @endsection

@@ -17,15 +17,16 @@
 
 {{-- メイン --}}
 @section('content')
-    {{-- <section class="titlesection">
-        <div class="titlesection__box">
+    <section class="titlesection">
+        {{-- <div class="titlesection__box">
             <h1 class="pagetitle">特産品の選択画面</h1>
-        </div>
-    </section> --}}
+        </div> --}}
+    </section>
 
     <section class="section">
         {{-- 農産物の一覧表示 --}}
             <div class="categoryTitle">農産物</div>
+            {{-- 出力した農産品画像名前のグリッド配置 --}}
             <div class="container">
             @foreach ($agricultural_products as $agricultural )
                 <div class="card" >
