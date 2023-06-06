@@ -74,4 +74,15 @@ class Blog extends Model
     {
         return $this->blog_category_id;
     }
+
+    public static function getRoadstationName($id)
+    {
+        $item = Roadstation::find($id);
+        if($item != null){
+            $name = $item->station_name;
+        }else{
+            $name = "NO name";
+        }
+        return $name;
+    }
 }
