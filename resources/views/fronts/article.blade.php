@@ -40,15 +40,42 @@
 
 
     {{--  道の駅情報の表示部分  --}}
-    @foreach ($blogs as $blog)
-        <h3>道の駅情報</h3>
-        <p>各道の駅詳細ページリンク</p>
-        <P><a
-                href="{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a>
+    <h3>道の駅情報</h3>
+    <p>アドレス：</p>
+
+    @php
+        $road_station_id = $blog->road_station_id;
+        $id_list = explode('|', $road_station_id);
+    @endphp
+
+    @foreach ($id_list as $id)
+        @php
+            $name = $blog::getRoadstationName($id);
+        @endphp
+
+        <P><a href="{{ url('station-detail') }}?id={{ $id }}">{{ $name }}の詳細はこちら</a>
         </P>
         {{--  <P>test:<a href="{{ url('station-detail') }}?id={{ $blog->road_station_id }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>  --}}
     @endforeach
 
+    {{--  <p>
+        @if ($paginator->hasPages())
+            <a href="{{ $paginator->previousPageUrl() }}">戻る</a>
+        @endif
+    </p>
+    <p>
+        @if ($paginator->hasPages())
+            <a href="{{ $paginator->nextPageUrl() }}">次へ</a>
+        @endif
+    </p>  --}}
+
+    @if ($blog->id - 1 > 0)
+        <a href="{{ url('blog-detail') }}?id={{ $blog->id - 1 }}">前の記事へ</a>
+    @endif
+
+    @if ($blog->id + 1 < count($blogs))
+        <a href="{{ url('blog-detail') }}?id={{ $blog->id + 1 }}">次の記事へ</a>
+    @endif
 
     {{-- 関連記事の表示部分 --}}
     <h2>関連記事</h2>
