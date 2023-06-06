@@ -192,6 +192,9 @@ class AdminNewsController extends Controller
         // _tokenを削除
         unset($form['_token']);
 
+        // 更新日時を刷新
+        $news->updated_at = date("Y-m-d H:i:s");
+
         // インスタンスに編集結果を入れ替え、保存
         $news->fill($form)->save();
 
@@ -200,9 +203,13 @@ class AdminNewsController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
+        // ニュースの件数
+        $news_count = count($items);
+
         // 渡すデータ
         $data = [
-            'newslist' => $items,
+            'news_list' => $items,
+            'count' => $news_count,
             'login_user' => $login_user,
         ];
 
@@ -217,21 +224,35 @@ class AdminNewsController extends Controller
      * @param Request $request
      * @return void
      */
-    public function newsRemove(Request $request)
+    public function newsDelete(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
 
-        News::find($request->id)->delete();
+        // News::find($request->id)->delete();
+
+        // 論理削除処理
+        // deleted_atフィル―ドに現在の日時を代入
+        $param = [
+            'deleted_at' => date("Y-m-d H:i:s"),
+        ];
+
+        // DBクリエターで更新処理
+        DB::table('news')->where('id', $request->id)
+            ->update($param);
 
         // ニュースを読み直す
         $items = News::where('deleted_at', null)
             ->orderBy('id', 'desc')
             ->get();
 
+        // ニュースの件数
+        $news_count = count($items);
+
         // 渡すデータ
         $data = [
-            'newslist' => $items,
+            'news_list' => $items,
+            'count' => $news_count,
             'login_user' => $login_user,
         ];
 
