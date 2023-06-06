@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 特産品一覧タイトル */
 .categoryTitle {
     margin: 0 auto;
     text-align: center;
@@ -12,6 +13,7 @@
     background-color: chartreuse;
 }
 
+/* 特産品一覧カード型配置用 */
 .container {
     display: grid;
     justify-items: center;
@@ -25,6 +27,7 @@
     gap: 20px;
 }
 
+/* 特産品一覧カード型成型用 */
 .card {
     margin: 0 auto;
     padding: 10px;
@@ -41,6 +44,7 @@
     margin-top: 10px;
 }
 
+/* 特産品詳細カード型成型用 */
 .detailContainer {
     height: 100%;
     width: 80%;
@@ -113,11 +117,13 @@
     padding: 20px;
 }
 
+/* ブログへのリンク */
 .bloglink {
     text-align: center;
     margin-top: 50px;
 }
 
+/* 特産品詳細表示用 */
 .displayNone {
     display: none;
 }
