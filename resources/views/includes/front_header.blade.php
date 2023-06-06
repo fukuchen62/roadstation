@@ -3,7 +3,6 @@
     <div class="header flex">
         <a href="{{ route('top') }}">
             {{-- <img src="{{ asset('assets/images/cat1.jpg') }}" alt="ネコの画像" class="header__logo expand"> --}}
-            <div>(仮)TOPに戻る</div>
         </a>
         <!-- g-nav mobile -->
         <div id="wrapper">
@@ -31,7 +30,7 @@
 
         <!-- g-nav pc -->
         <div class="nav-pc">
-            <h1><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></h1>
+            <a href="{{route('top')}}"><img src="https://placehold.jp/80x80.png" alt="とくしままるっと道の駅"></a>
 
             <ul>
                 <li><a href="{{route('stationlist')}}">道の駅一覧
