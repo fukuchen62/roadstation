@@ -1,1 +1,41 @@
 @charset "utf-8";
+
+
+
+
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+
+.news__area--data {
+    margin-right: 20px;
+}
+
+.blogList {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 30px;
+}
+
+.blogwrapper {
+    padding: 8px;
+    border: 3px solid #1ca10a;
+    border-radius: 20px;
+}
+
+.news__area--data {
+    margin-top: 5px;
+}
+
+.enclosure {
+    border: solid black 2px;
+    border-radius: 999px;
+    padding: 5px;
+}

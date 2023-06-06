@@ -92,29 +92,24 @@
             </div>
 
             <div class="news2">
-                <ul>
                     @foreach ($news as $news)
-                        <a href="" class="" id="">
+                    <ul class="flex">
                             @php
                                 $ts = strtotime($news->created_at);
                             @endphp
                             <li class="news__area--data">
                                 {{ date('Y年m月d日', $ts) }}
                             </li>
-
-                            @foreach ($category as $category)
-                                @php
-                                    $categoryName = $news::getCategoryName($id);
-                                @endphp
-                            @endforeach
-
-
-                            {{-- <li>カテゴリー：{{$news->news_category_id}}</li> --}}
-                            <li>カテゴリー：{{ $news->newsCategory->category_name }}</li>
-                            <li>タイトル：{{ $news->title }}</li>
+                        <a href="{{route('newsdetail')}}?id={{$news->id}}">
+                            <li>カテゴリー：
+                            {{ $news->newsCategory->category_name }}</li>
+                            <li>タイトル：
+                            {!! $news->title !!}</li>
                         </a>
+                    </ul>
                     @endforeach
-                </ul>
+
+
             </div>
 
             <p class="news-mobilebtn"><a href="">もっと見る</a></p>
@@ -177,37 +172,27 @@
 
         <section class="blog">
             <h2 class="blog-taitle">行ってきたんよ</h2>
-            <div class="blog-container">
-                <a href="">
-                    <div class="blog-wrapper">
-                        <div class="img-wrapper">
-                            <img src="../storage/images/index.images/boat.jpg" alt="">
-                            <h3 class="heading">タイトルなどが、入ります。 </h3>
-                            <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        </div>
-                    </div>
-                </a>
+                <div class="blogList">
+                    @foreach ($blog as $blog)
+                        <div class="blogwrapper">
+                            <a href="{{route('blog')}}?id={{$blog->id}}">
+                            <li><img src="{{ asset('/storage/images/' . $blog->picture) }}" alt="ブログ画像" class="cardImg"></li>
+                            <li>{!!$blog->title!!}</li>
+                            <li>{!!$blog->overview!!}</li>
+                            </a>
+                            @php
+                                $ts = strtotime($blog->created_at);
+                            @endphp
+                            <li class="flex">
+                            <div class="news__area--data">
+                                {{ date('Y年m月d日', $ts) }}
+                            </div>
+                            <div class="enclosure">{{ $news->newsCategory->category_name }}</div>
 
-                <a href="">
-                    <div class="blog-wrapper">
-                        <div class="img-wrapper">
-                            <img src="../storage/images/index.images/boat.jpg" alt="">
-                            <h3 class="heading">タイトルなどが、入ります。 </h3>
-                            <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                            </li>
                         </div>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="blog-wrapper">
-                        <div class="img-wrapper">
-                            <img src="../storage/images/index.images/boat.jpg" alt="">
-                            <h3 class="heading">タイトルなどが、入ります。 </h3>
-                            <p class="text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    @endforeach
+                </div>
         </section>
 
         <div class="blog-btn">
