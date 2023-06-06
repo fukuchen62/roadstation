@@ -15,16 +15,24 @@ h2 {
 }
 
 h2::before {
-background-image: url();
+    content: '';/*何も入れない*/
+    display: inline-block;
+    width: 50px;/*画像の幅*/
+    height: 50px;/*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-gift2.png);
+    background-size: contain;
+    vertical-align: middle;
 }
 
 h2::after {
-    padding-left: 5px;
-    font-family: fontAwesome;
-    content: '\f1b0';
+content: '';/*何も入れない*/
+    display: inline-block;
+    width: 50px;/*画像の幅*/
+    height: 50px;/*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-gift2.png);
+    background-size: contain;
+    vertical-align: middle;
 }
-
-
 
 h3 {
     background-color: #008C41;
@@ -38,15 +46,23 @@ h3 {
 }
 
 h3::before {
-    padding-right: 3px;
-    font-family: fontAwesome;
-    content: '\f6be';
+    content: '';/*何も入れない*/
+    display: inline-block;
+    width: 50px;/*画像の幅*/
+    height: 50px;/*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-gift2.png);
+    background-size: contain;
+    vertical-align: middle;
 }
 
 h3::after {
-    padding-left: 3px;
-    font-family: fontAwesome;
-    content: '\f6be';
+content: '';/*何も入れない*/
+    display: inline-block;
+    width: 50px;/*画像の幅*/
+    height: 50px;/*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-gift2.png);
+    background-size: contain;
+    vertical-align: middle;
 }
 
 h4{
@@ -105,9 +121,9 @@ h4{
 }
 
 .buy-place {
-    background-color: #008C41;
-    border-radius: 50px;
-    max-width: 220px;
+    /* background-color: #008C41; */
+    /* border-radius: 50px; */
+    max-width: 300px;
     width: 100%;
     margin: 30px auto auto auto;
     text-align: center;
