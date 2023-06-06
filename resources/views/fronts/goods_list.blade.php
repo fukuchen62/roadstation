@@ -17,11 +17,11 @@
 
 {{-- メイン --}}
 @section('content')
-    <section class="titlesection">
+    {{-- <section class="titlesection">
         <div class="titlesection__box">
             <h1 class="pagetitle">特産品の選択画面</h1>
         </div>
-    </section>
+    </section> --}}
 
     <section class="section">
         {{-- 農産物の一覧表示 --}}
@@ -61,10 +61,10 @@
             </div>
 
         {{-- 特産品種別詳細紹介カードを作成 --}}
-        <section>
-            <div class="details" id="detail">
-            @foreach ($goods_type as $type )
 
+        <section id="detail">
+            <div class="details">
+            @foreach ($goods_type as $type )
                     <ul class="detailContainer" id="{{'type-' . $type->id}}">
                         <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailImg">
                         <li class="detailName">商品名：　{{$type->common_name}}</li>
@@ -101,8 +101,8 @@
         </section>
         {{-- 体験ブログへのリンク --}}
         <div class="bloglink">
-        <a href="{{route('blog')}}" >
-            <img src="{{ asset('/storage/images/link_1_1_300×300.png') }}" alt="体験ブログリンク">
+        <a href="{{route('bloglist')}}" >
+            <img src="{{ asset('assets/images/blog-btn.png') }}" alt="体験ブログリンク">
         </a></div>
 
     </section>
