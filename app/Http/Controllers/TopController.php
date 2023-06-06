@@ -5,22 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\NewsCategories;
+use App\Models\Blog;
 
 class TopController extends Controller
 {
     public function index(Request $request)
     {
-        // Newsテーブルから、全てのニュースの種別を取得
-        $items = News::orderBy('id', 'asc')
-            ->orderBy('id', 'asc')
-            ->get();
+        // Newsテーブルから、表示のニュースを取得
 
-        $category = News::where('news_category_id')
-            ->get();
+        $news = News::orderBy('id', 'desc')
+            ->paginate(3)
+            ->all();
+
+        // brogsテーブルから、表示のブログを取得
+        $blogs = Blog::orderBy('id', 'desc')
+            ->paginate(3)
+            ->all();
 
         $data = [
-            'news' => $items,
-            'category' => $category,
+            'news' => $news,
+            'blog' => $blogs,
         ];
 
         return view('fronts.index', $data);

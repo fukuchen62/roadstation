@@ -17,30 +17,30 @@
 
 {{-- メイン --}}
 @section('content')
-    <section class="titlesection">
+    {{-- <section class="titlesection">
         <div class="titlesection__box">
             <h1 class="pagetitle">特産品の選択画面</h1>
         </div>
-    </section>
+    </section> --}}
 
     <section class="section">
-
+        {{-- 農産物の一覧表示 --}}
             <div class="categoryTitle">農産物</div>
             <div class="container">
             @foreach ($agricultural_products as $agricultural )
                 <div class="card" >
-                        <a href="#1" class="btns" id="{{'btn-' . $agricultural->id}}">
+                        <a href="#detail" class="btns" id="{{'btn-' . $agricultural->id}}">
                         <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="cardImg"></a>
-                        <div class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</div>
+                        <p class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</p>
                 </div>
             @endforeach
             </div>
-
+            {{-- 海産物の一覧表示 --}}
             <div class="categoryTitle">海産物</div>
             <div class="container">
             @foreach ($seafood as $seafood )
                 <div class="card">
-                        <a href="#1" class="btns" id="{{'btn-' . $seafood->id}}">
+                        <a href="#detail" class="btns" id="{{'btn-' . $seafood->id}}">
                         <img src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="種別画像" class="cardImg"></a>
                         <p class="listCategoryName">
                             種別名：{{$seafood->getCategoryName()}}
@@ -48,47 +48,29 @@
                 </div>
             @endforeach
             </div>
-
+            {{-- 工芸品の一覧表示 --}}
             <div class="categoryTitle">工芸品</div>
             <div class="container">
             @foreach ($craft as $craft )
                 <div class="card">
-                        <a href="#1" class="btns" id="{{'btn-' . $craft->id}}">
+                        <a href="#detail" class="btns" id="{{'btn-' . $craft->id}}">
                         <img src="{{ asset('/storage/images/' . $craft->picture) }}" alt="種別画像" class="cardImg"></a>
-                        <div class="listCategoryName">種別名：{{$craft->getCategoryName()}}</div>
+                        <p class="listCategoryName">種別名：{{$craft->getCategoryName()}}</p>
                 </div>
             @endforeach
             </div>
-
-
-        {{-- <section>
-            <div class="container">
-            @foreach ($goods_type as $type )
-                <div class="card">
-                    <ul>
-                        <div class="cardContainer">
-                        <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="listImg">
-                        <li class="listCategoryName">種別名：{{$type->getCategoryName()}}</li>
-                        </div>
-                    </ul>
-                </div>
-            @endforeach
-            </div>
-        </section> --}}
-
 
         {{-- 特産品種別詳細紹介カードを作成 --}}
-        <section>
+
+        <section id="detail">
             <div class="details">
             @foreach ($goods_type as $type )
-
                     <ul class="detailContainer" id="{{'type-' . $type->id}}">
                         <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailImg">
                         <li class="detailName">商品名：　{{$type->common_name}}</li>
                         <li class="detailSeason">旬の時期：<br>{{$type->season}}</li>
                         <li class="detailPrice">参考価格:<br>{{$type->price}}円</li>
                         <li class="detailUsage">利用方法：{!!$type->usage!!}</li>
-                        {{-- <li class="detailCategoryName">種別名：{{$type->getCategoryName()}}</li> --}}
                         <li class="detailDiscription">説明文:{!!$type->discription!!}</li>
                         <li class="detail_sub">買える道の駅</li>
                         <li class="stationLink">
@@ -117,9 +99,10 @@
             @endforeach
             </div>
         </section>
+        {{-- 体験ブログへのリンク --}}
         <div class="bloglink">
-        <a href="{{route('blog')}}" >
-            <img src="{{ asset('/storage/images/link_1_1_300×300.png') }}" alt="体験ブログリンク">
+        <a href="{{route('bloglist')}}" >
+            <img src="{{ asset('assets/images/blog-btn.png') }}" alt="体験ブログリンク">
         </a></div>
 
     </section>

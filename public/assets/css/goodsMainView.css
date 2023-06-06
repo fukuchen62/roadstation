@@ -3,6 +3,7 @@
 .categoryTitle {
     margin: 0 auto;
     text-align: center;
+    margin-top: 10px;
     width: 150px;
     padding: 10px;
     font-size: 32px;
@@ -19,7 +20,7 @@
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 20px;
-    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
     gap: 20px;
 }
@@ -27,8 +28,7 @@
 .card {
     margin: 0 auto;
     padding: 10px;
-    padding-bottom: 50px;
-    margin-bottom: 30px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -51,7 +51,7 @@
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px 50px 50px 200px auto 30px auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
     grid-template-areas:
         "areaA areaA areaB areaB areaB"
         "areaA areaA areaC areaC areaC"
