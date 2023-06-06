@@ -10,14 +10,14 @@ section {
 }
 
 h2 {
-    border: 1px solid #000;
+    background-color: #008C41;
     border-radius: 50px;
     max-width: 220px;
     width: 50%;
-    /* height: 60px; */
     margin: 30px auto 30px auto;
     text-align: center;
     font-size: 20px;
+    color: #fff;
 }
 
 .goods {
@@ -30,7 +30,6 @@ h2 {
 
 .goods-photo {
     max-width: 150px;
-    /* width: 90%; */
     margin-bottom: 10px;
 }
 
@@ -52,42 +51,34 @@ h2 {
 }
 
 .season-text{
-    /* max-width: 600px; */
-    /* max-height: 120px; */
     width: 100%;
     text-align: start;
 }
 
 .price-text{
-    /* max-width: 600px; */
-    /* max-height: 200px; */
     width: 100%;
     text-align: start;
 }
 
 .conditions-text{
-    /* max-width: 600px; */
-    /* max-height: 100px; */
     width: 100%;
     text-align: start;
 }
 
 .comment-text{
     max-width: 1200px;
-    /* max-height: 190px; */
     width: 100%;
     text-align: start;
 }
 
-/* .item-text {
-    padding-top: 0;
-    padding-bottom: 30px;
-    text-align: left;
-} */
-
 .buy-place {
-    margin-top: 30px;
+    background-color: #008C41;
+    border-radius: 50px;
+    max-width: 220px;
+    width: 100%;
+    margin: 30px auto auto auto;
     text-align: center;
+    color: #fff;
 }
 
 .roadstation-frame {
@@ -100,6 +91,10 @@ h2 {
 
 .roadstation-name{
 width: 160px;
+}
+
+.name{
+    padding-top: 30px;
 }
 
 .blog-btn {

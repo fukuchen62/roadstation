@@ -69,6 +69,6 @@ class Activity extends Model
      */
     public function getActivity_id()
     {
-        return $this->$Activity_id;
+        return $this->activity_id;
     }
 }
