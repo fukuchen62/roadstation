@@ -29,9 +29,9 @@
             <div class="container">
             @foreach ($agricultural_products as $agricultural )
                 <div class="card" >
-                        <a href="#1" class="btns" id="{{'btn-' . $agricultural->id}}">
+                        <a href="#detail" class="btns" id="{{'btn-' . $agricultural->id}}">
                         <img src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="種別画像" class="cardImg"></a>
-                        <div class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</div>
+                        <p class="listCategoryName">種別名：{{$agricultural->getCategoryName()}}</p>
                 </div>
             @endforeach
             </div>
@@ -40,7 +40,7 @@
             <div class="container">
             @foreach ($seafood as $seafood )
                 <div class="card">
-                        <a href="#1" class="btns" id="{{'btn-' . $seafood->id}}">
+                        <a href="#detail" class="btns" id="{{'btn-' . $seafood->id}}">
                         <img src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="種別画像" class="cardImg"></a>
                         <p class="listCategoryName">
                             種別名：{{$seafood->getCategoryName()}}
@@ -53,16 +53,16 @@
             <div class="container">
             @foreach ($craft as $craft )
                 <div class="card">
-                        <a href="#1" class="btns" id="{{'btn-' . $craft->id}}">
+                        <a href="#detail" class="btns" id="{{'btn-' . $craft->id}}">
                         <img src="{{ asset('/storage/images/' . $craft->picture) }}" alt="種別画像" class="cardImg"></a>
-                        <div class="listCategoryName">種別名：{{$craft->getCategoryName()}}</div>
+                        <p class="listCategoryName">種別名：{{$craft->getCategoryName()}}</p>
                 </div>
             @endforeach
             </div>
 
         {{-- 特産品種別詳細紹介カードを作成 --}}
         <section>
-            <div class="details">
+            <div class="details" id="detail">
             @foreach ($goods_type as $type )
 
                     <ul class="detailContainer" id="{{'type-' . $type->id}}">
