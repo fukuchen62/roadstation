@@ -2,7 +2,8 @@
 
     <div class="header flex">
         <a href="{{ route('top') }}">
-            <img src="{{ asset('assets/images/cat1.jpg') }}" alt="ネコの画像" class="header__logo">
+            {{-- <img src="{{ asset('assets/images/cat1.jpg') }}" alt="ネコの画像" class="header__logo"> --}}
+            <div>（仮）TOPに戻る</div>
         </a>
 
         <!-- ハンバーガーメニュー -->
