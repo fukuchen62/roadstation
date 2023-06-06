@@ -46,7 +46,6 @@
         $area = 3;
         // var_dump($area);
     }
-    
     ?>
     @foreach ($road_stations as $station)
         @if ($station->area_id === $area)

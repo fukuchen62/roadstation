@@ -46,7 +46,7 @@
     <script src="{{ asset('assets/js/ventor/jquery-3.6.3.min.js') }}"></script>
 
     {{-- main.jsを読み込む --}}
-    <script src="{{ asset('assets/js/admin.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
     {{-- トークンを読み込む --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">

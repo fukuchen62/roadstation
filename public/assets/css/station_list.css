@@ -5,6 +5,10 @@ h3 {
     margin-bottom: 30px;
 }
 
+h4 {
+    font-weight: bold;
+}
+
 .stationlist-box {
     text-align: center;
 }
@@ -16,6 +20,7 @@ h3 {
     border-radius: 20px;
     color: #ffff;
     background-color: #ccc;
+    font-size: 20px;
 }
 
 .west-title {
@@ -25,6 +30,8 @@ h3 {
     border-radius: 20px;
     color: #ffff;
     background-color: #ccc;
+    font-size: 20px;
+
 }
 
 .south-title {
@@ -34,6 +41,8 @@ h3 {
     border-radius: 20px;
     color: #ffff;
     background-color: #ccc;
+    font-size: 20px;
+
 
 }
 

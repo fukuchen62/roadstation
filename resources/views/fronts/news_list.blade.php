@@ -4,59 +4,10 @@
 @section('title', '新着情報一覧ページ')
 
 @section('pageCss')
+
+    <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
+
     <style>
-        main {
-            margin: 50px;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 30px 0;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 10px;
-        }
-
-        .cards {
-            /* display: flex; */
-            float: left;
-            width: 1200px;
-            height: auto;
-        }
-
-        .card {
-            border: 1px solid #949393;
-            padding: 20px;
-            margin: 30px 5px;
-            width: 400px;
-            height: auto;
-
-            float: left;
-        }
-
-        img {
-            width: 300px;
-            height: 300px;
-            object-fit: contain;
-        }
-
-        .category {
-            float: right;
-        }
-
-        li {
-            padding: 5px;
-        }
-
-        .link {
-            clear: both;
-        }
-
         .pagination {
             text-align: center;
         }
@@ -67,59 +18,48 @@
     </style>
 @endsection
 
-{{-- @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }} ">
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
-@endsection --}}
+
 
 @section('content')
 
-    <h1>新着情報詳細ページ</h1>
+    <main class="wrapper">
 
-    <div class="cards">
+        <div class="blog-main">
+            <div class="blog-wrapper">
 
-        @foreach ($news as $new)
-            <a href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}">
+                @foreach ($news as $new)
+                    <div class="blog-card">
+                        <img class="card-img" src="https://placehold.jp/300x200.png" alt="no-img">
+                        <p>{{ $new->title }}</p>
+                        <p class="text">
+                            {!! $new->overview !!}
+                        </p>
+                        @php
+                            $ts = strtotime($new->updated_at);
+                        @endphp
+                        <p>{{ date('Y年n月j日', $ts) }}カテゴリ:<a href="">{{ $new->newsCategory->category_name }}</a></p>
 
-                <div class="card">
+                    </div>
+                @endforeach
 
-                    <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+                <div class="link">{{ $news->links('pagination::bootstrap-4') }}</div>
 
-                    <h2>{{ $new->title }}</h2>
+            </div>
 
-                    <p>{!! $new->overview !!}</p>
 
-                    @php
-                        $ts = strtotime($new->updated_at);
-                    @endphp
-                    <small class="news__area--data">
-                        {{ date('Y年n月j日', $ts) }}
-                    </small>
+            <section class="side">
+                <h3>カテゴリー一覧</h3>
+                <ul class="category_list">
+                    @foreach ($news_categories as $category)
+                        <li><a href="{{ url('news') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
+                    @endforeach
+                </ul>
+            </section>
+        </div>
 
-                    <span>
-                        {{-- {!! $new->getCategoryName() !!} --}}
-                        {{ $new->newsCategory->category_name }}
-                    </span>
 
-                </div>
-            </a>
-        @endforeach
 
-    </div>
 
-    <div class="category">
-
-        <h2>カテゴリー</h2>
-
-        <ul>
-            @foreach ($news_categories as $category)
-                <li><a href="{{ url('news') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
-            @endforeach
-        </ul>
-
-    </div>
-
-    <div class="link">{{ $news->links('pagination::bootstrap-4') }}</div>
+    </main>
 
 @endsection
