@@ -25,6 +25,9 @@ header {
     position: relative;
     width: 100%;
     height: 100px;
+    background-image: url(../images/header/bg_header.png);
+    background-size: cover;
+    background-position: center;
 }
 
 
