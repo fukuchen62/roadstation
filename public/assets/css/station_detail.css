@@ -16,6 +16,14 @@ h4 {
     padding-bottom: 20px;
 }
 
+dl {
+    text-align: start;
+}
+
+dd {
+    margin-bottom: 30px;
+}
+
 .search_results {
     font-size: 1.5rem;
     margin-top: 20px;
