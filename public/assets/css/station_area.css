@@ -103,6 +103,7 @@ dd img {
 }
 
 .card {
+    background-color: #fff;
     border: 1px solid;
     width: 300px;
     /* width: 306px; */
