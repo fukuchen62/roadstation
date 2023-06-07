@@ -1,12 +1,6 @@
 @charset "utf-8";
 
-.blog-banner {
-    max-width: 360px;
-    height: auto;
-    width: 100%;
-    object-fit: cover;
 
-}
 
 .back-btn {
     margin-bottom: 50px;
@@ -207,16 +201,6 @@
     }
 
 
-    .blog-banner {
-        max-width: 1400px;
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 150px;
-
-    }
-
-
 
     .back-btn {
         margin-bottom: 50px;
@@ -227,6 +211,7 @@
         justify-content: space-between;
         width: 100%;
         position: relative;
+        margin-top: 150px;
 
     }
 
@@ -304,6 +289,8 @@
         background-color: #1ca10a;
         color: cornsilk;
         left: 70%;
+        margin-top: 150px;
+
 
     }
 
