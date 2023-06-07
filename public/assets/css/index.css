@@ -5,6 +5,10 @@
     margin-top: 600px;
 }
 
+section {
+    margin-top: 100px;
+}
+
 .site-logo {
     position: fixed;
     top: 0;
@@ -63,32 +67,28 @@
 .news-box {
     text-align: center;
     background-color: #ffff;
+    border: #ffebd8 2px solid;
     border-radius: 50%;
+}
 
+.article-list li {
+    padding-bottom: 5px;
 }
 
 .news-pcbtn {
     display: none;
 }
 
-/* .news-mobilebtn {
-    text-align: center;
-    border-radius: 50px;
-    background-color: #B45A27;
-    color: #ffff;
-    font-size: 20px;
-    padding: 20px 30px;
-    margin: 0 auto;
+.news-mobilebtn {
     margin-top: 20px;
-    margin-bottom: 50px;
-    display: inline-block;
-} */
+}
 
 .tokusimamap {
     margin: 0 auto;
     max-width: 360px;
     width: 100%;
     height: auto;
+    margin-bottom: 20px;
 }
 
 /* 徳島のエリアマップ */
@@ -103,7 +103,7 @@
     position: absolute;
     padding: 4%;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #ffffff;
 }
 
 .east {
@@ -135,7 +135,7 @@
 }
 
 
-.feature-title {
+.section-title {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -439,7 +439,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .feature-title {
+    .section-title {
         text-align: center;
         margin-bottom: 30px;
     }
@@ -776,7 +776,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .feature-title {
+    .section-title {
         text-align: center;
         margin-bottom: 30px;
     }
