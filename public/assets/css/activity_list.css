@@ -165,7 +165,7 @@ h2 {
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
-    .kv-img {
+    .kv img {
         object-position: 80% 20%;
 
 

@@ -85,6 +85,10 @@ p {
 
 @media screen and (min-width:901px) {
 
+    .kv img {
+        object-position: center;
+    }
+
     .sp-kv {
         width: 100%;
 
