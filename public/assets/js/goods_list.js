@@ -9,6 +9,11 @@ $(document).ready(function () {
         $(elem).addClass('displayNone');
     });
 
+    $(".any").each(function (i, elem) {
+        // console.log(i + ': ' + $(elem).text());
+        $(elem).addClass('displayNone');
+    });
+
     // 指定IDを表示させる
     $('#type-1').removeClass('displayNone');
 
@@ -26,6 +31,11 @@ $(document).ready(function () {
 
         // 全部非表示処理
         $(".detailContainer").each(function (i, elem) {
+            // console.log(i + ': ' + $(elem).text());
+            $(elem).addClass('displayNone');
+        });
+
+        $(".any").each(function (i, elem) {
             // console.log(i + ': ' + $(elem).text());
             $(elem).addClass('displayNone');
         });

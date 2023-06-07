@@ -60,7 +60,7 @@ h4 {
     margin-bottom: 1rem;
 }
 
-/* 人とコメント */
+/* たぬきとコメント */
 .flex {
     gap: 1.25rem;
     width: clamp(320px, 100%, 1000px);
@@ -70,12 +70,9 @@ h4 {
 
 .f-width {
     padding-bottom: 20px;
-    /* max-width: 300px; */
-    width: clamp(100px, 100%, 300px);
+    max-width: 300px;
     justify-content: center;
 }
-
-@media screen and (min-width:901px) {}
 
 
 .none {
@@ -89,7 +86,15 @@ h4 {
 .sideways {
     position: relative;
     top: -130px;
-    left: -90px;
+    left: -100px;
+    margin-bottom: -110px;
+}
+
+.sideways2 {
+    position: relative;
+    top: -120px;
+    right: 115px;
+    margin-bottom: -110px;
 }
 
 @media screen and (min-width:901px) {
@@ -99,21 +104,15 @@ h4 {
 
     .sideways {
         position: static;
+        margin-bottom: 0;
+    }
+
+    .sideways2 {
+        position: static;
+        margin-bottom: 0;
     }
 }
 
-
-.speech {
-    position: relative;
-    display: inline-block;
-    margin: 1.25rem;
-    padding: 1.25rem;
-    border-radius: 20px;
-    min-width: 120px;
-    max-width: 100%;
-    background: #ccc;
-    text-align: left;
-}
 
 /* slick */
 .slide-items {
@@ -143,6 +142,19 @@ h4 {
     }
 }
 
+.speech {
+    position: relative;
+    display: inline-block;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 20px;
+    min-width: 120px;
+    max-width: 100%;
+    background: #fff;
+    text-align: left;
+}
+
+
 .speech:before {
     content: "";
     position: absolute;
@@ -151,7 +163,7 @@ h4 {
     transform: rotate(90deg);
     margin-top: -15px;
     border: 15px solid transparent;
-    border-right: 15px solid #ccc;
+    border-right: 15px solid #fff;
 }
 
 .speech p {
@@ -251,7 +263,10 @@ h4 {
     padding: 10px 10px;
     height: 47px;
     width: clamp(280px, 50vw, 380px);
+}
 
+.blog-btn:hover {
+    color: #b45a27;
 }
 
 .blog-img {
@@ -265,7 +280,8 @@ h4 {
 
 /* 基本情報 */
 .item {
-    background-color: #ccc;
+    color: #fffbf1;
+    background-color: #1ca10a;
     padding: 1rem;
 }
 
@@ -324,7 +340,7 @@ dd {
         border-radius: 20px;
         min-width: 120px;
         max-width: 100%;
-        background: #ccc;
+        background: #fff;
     }
 
     .speech:before {
@@ -335,7 +351,7 @@ dd {
         margin-top: 45%;
         transform: rotate(0deg);
         border: 15px solid transparent;
-        border-right: 15px solid #ccc;
+        border-right: 15px solid #fff;
     }
 
 }

@@ -5,6 +5,23 @@
     margin-top: 1200px;
 }
 
+.nav-pc {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/header/bg_header_green.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 
 #top {
     display: flex;
@@ -594,6 +611,7 @@ imgcontent-wrapper .heading {
         width: 100%;
         height: 85vh;
         object-fit: cover;
+        object-position: center;
         z-index: -999;
     }
 
