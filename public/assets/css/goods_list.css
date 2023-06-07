@@ -148,6 +148,12 @@ width: 160px;
 }
 }
 
+@media screen and (min-width:601px){
+h2 {
+    margin-top: 130px;
+}
+}
+
 @media screen and (min-width:680px){
 .goods-photo {
     max-width: 290px;
@@ -157,7 +163,7 @@ width: 160px;
 @media screen and (min-width:900px) {
 
 h2{
-    margin-top: 200px;
+    margin-top: 250px;
 }
 
 .goods-photo{
@@ -174,7 +180,7 @@ h2{
 @media screen and (min-width:1180px) {
 
 h2 {
-    margin-top: 230px;
+    margin-top: 250px;
 }
 
 h3{
