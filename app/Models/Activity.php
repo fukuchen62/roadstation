@@ -71,4 +71,46 @@ class Activity extends Model
     {
         return $this->activity_id;
     }
+
+    public function getBlogName()
+    {
+        $data = $this->blog_list;
+        $array = explode('|',$data);
+        return $array;
+    }
+
+    public static function changeName($id)
+    {
+        switch($id){
+            case 'a';
+                $id = 10;
+                break;
+            case'b';
+                $id = 11;
+                break;
+            case 'c';
+                $id = 12;
+                break;
+            case 'd';
+                $id = 13;
+                break;
+            case 'e';
+                $id = 14;
+                break;
+            case 'f';
+                $id = 15;
+                break;
+            case 'g';
+                $id = 16;
+                break;
+            case 'h';
+                $id = 17;
+                break;
+            case 'i';
+                $id = 18;
+                break;
+        }
+
+        return $id;
+    }
 }

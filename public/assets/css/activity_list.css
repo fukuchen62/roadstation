@@ -13,9 +13,24 @@ section {
     /* text-align: center; */
 }
 
+
+h2 {
+
+    /* max-width: 220px; */
+    width: 100%;
+    /* margin: 30px auto 30px auto; */
+    text-align: center;
+    font-size: 32px;
+    margin-top: 300px;
+
+
+}
+
 h3 {
     font-size: 20px;
 }
+
+
 
 
 h4 {
@@ -30,9 +45,13 @@ h4 {
 
 
 .attention {
-    margin-top: 50px;
-
+    margin-top: 150px;
     margin-bottom: 30px;
+    background-image: url(../images/bg_headline.png);
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #B45A27;
+    text-align: center;
 }
 
 
@@ -70,17 +89,6 @@ h4 {
 
 
 
-h2 {
-
-    /* max-width: 220px; */
-    width: 100%;
-    /* margin: 30px auto 30px auto; */
-    text-align: center;
-    font-size: 32px;
-    margin-top: 300px;
-
-
-}
 
 .activity-delimiter {
     margin-bottom: 100px;
@@ -169,6 +177,14 @@ h2 {
 
 
 @media screen and (min-width:600px) {
+    .attention {
+        margin-top: 130px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (min-width:601px) {
     .attention {
         margin-top: 130px;
         margin-bottom: 30px;
