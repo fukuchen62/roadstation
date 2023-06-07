@@ -27,7 +27,7 @@ h3 {
 .blog-card {
     height: 500px;
     padding: 10px;
-    border: 3px solid #1ca10a;
+    border: 3px solid #a7d28d;
     box-sizing: border-box;
     border-radius: 20px;
     justify-content: center;
@@ -46,9 +46,9 @@ h3 {
 .side {
     /* width: 25%; */
     height: 400px;
-    border: 3px solid #1ca10a;
-    background-color: #1ca10a;
-    color: cornsilk;
+    border: 3px solid #a7d28d;
+    background-color: #a7d28d;
+    color: #8c5243;
     padding: 20px 10px;
 
 }
@@ -81,7 +81,7 @@ h3 {
         max-width: 761px;
         height: 500px;
         padding: 10px;
-        border: 3px solid #1ca10a;
+        border: 3px solid #a7d28d;
         box-sizing: border-box;
         border-radius: 20px;
         justify-content: center;
@@ -99,9 +99,9 @@ h3 {
     .side {
         width: 300px;
         height: 400px;
-        border: 3px solid #1ca10a;
-        background-color: #1ca10a;
-        color: cornsilk;
+        border: 3px solid #a7d28d;
+        background-color: #a7d28d;
+        color: #8c5243;
         padding: 20px 10px;
 
     }
@@ -140,20 +140,19 @@ h3 {
     }
 
     .side {
-        width: 25%;
+        width: 300px;
         height: 400px;
-        border: 3px solid #1ca10a;
-        background-color: #1ca10a;
-        color: cornsilk;
+        border: 3px solid #a7d28d;
+        background-color: #a7d28d;
+        color: #8c5243;
         padding: 20px 10px;
-        left: 70%;
     }
 
     .blog-card {
         width: 46%;
         height: 500px;
         padding: 20px 8px;
-        border: 3px solid #1ca10a;
+        border: 3px solid #a7d28d;
         box-sizing: border-box;
         border-radius: 20px;
         justify-content: center;
