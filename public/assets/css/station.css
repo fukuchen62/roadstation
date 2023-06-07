@@ -70,21 +70,35 @@ h4 {
 
 .f-width {
     padding-bottom: 20px;
-    max-width: 300px;
+    /* max-width: 300px; */
+    width: clamp(100px, 100%, 300px);
     justify-content: center;
 }
+
+@media screen and (min-width:901px) {}
+
 
 .none {
     display: none;
 }
 
-.sideways {
-    text-align: left;
+.absolute {
+    position: absolute;
 }
 
-@media screen and (min-width:321px) {
+.sideways {
+    position: relative;
+    top: -130px;
+    left: -90px;
+}
+
+@media screen and (min-width:901px) {
     .none {
-        display: block
+        display: block;
+    }
+
+    .sideways {
+        position: static;
     }
 }
 
