@@ -5,6 +5,12 @@
     margin-top: 1200px;
 }
 
+.site-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .nav-pc {
     position: relative;
     width: 100%;
@@ -773,14 +779,13 @@ imgcontent-wrapper .heading {
     .goods {
         display: flex;
         flex-wrap: wrap;
-        width: 761px;
+        width: 1200px;
         text-align: center;
         margin-bottom: 30px;
         justify-content: center;
         margin: 0 auto;
         margin-bottom: 30px;
         align-items: center;
-
     }
 
 
@@ -790,16 +795,16 @@ imgcontent-wrapper .heading {
     }
 
     .goods-1 {
-        width: 253px;
-        height: 253px;
+        width: 330px;
+        height: 330px;
         border-radius: 30px;
         object-fit: cover;
     }
 
 
     .goods-2 {
-        width: 253px;
-        height: 253px;
+        width: 330px;
+        height: 330px;
         align-items: center;
         border-radius: 30px;
         background-color: #E99787;
@@ -853,7 +858,7 @@ imgcontent-wrapper .heading {
     .activity {
         display: flex;
         flex-wrap: wrap;
-        width: 761px;
+        width: 1200px;
         text-align: center;
         margin-bottom: 30px;
         justify-content: center;
@@ -869,16 +874,16 @@ imgcontent-wrapper .heading {
     }
 
     .activity-1 {
-        width: 253px;
-        height: 253px;
+        width: 330px;
+        height: 330px;
         border-radius: 30px;
         object-fit: cover;
     }
 
 
     .activity-2 {
-        width: 253px;
-        height: 253px;
+        width: 330px;
+        height: 330px;
         border-radius: 30px;
         background-color: #E99787;
         color: black;
