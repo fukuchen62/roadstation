@@ -19,7 +19,8 @@ h2::before {
     width: 45px;
     height: 40px;
     margin-right: 10px;
-    background-image: url(../images/illustrations/tanuki-gift2.png);
+    background: no-repeat;
+    background-image: url(../images/illustrations/tanuki-food2.png);
     background-size: contain;
     vertical-align: middle;
 }
@@ -30,7 +31,8 @@ h2::after {
     width: 45px;
     height: 40px;
     margin-left: 10px;
-    background-image: url(../images/illustrations/tanuki-gift2.png);
+    background: no-repeat;
+    background-image: url(../images/illustrations/tanuki-food3.png);
     background-size: contain;
     vertical-align: middle;
 }
@@ -46,96 +48,8 @@ h3 {
     color: #fff;
 }
 
-h3::before {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    margin-right: 10px;
-    background-image: url(../images/illustrations/tanuki-gift2.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
-h3::after {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    margin-left: 10px;
-    background-image: url(../images/illustrations/tanuki-gift2.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
 h4{
     font-size: 20px;
-}
-
-.headline-agricultural-products::before {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-food.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
-.headline-agricultural-products::after {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-food.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
-.headline-seafood::before {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-food2.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
-.headline-seafood::after {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-food2.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
-.headline-craft::before {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-gift2.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
-.headline-craft::after {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 40px;
-    background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-gift2.png);
-    background-size: contain;
-    vertical-align: middle;
 }
 
 .goods {
