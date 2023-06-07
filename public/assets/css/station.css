@@ -74,6 +74,20 @@ h4 {
     justify-content: center;
 }
 
+.none {
+    display: none;
+}
+
+.sideways {
+    text-align: left;
+}
+
+@media screen and (min-width:321px) {
+    .none {
+        display: block
+    }
+}
+
 
 .speech {
     position: relative;
