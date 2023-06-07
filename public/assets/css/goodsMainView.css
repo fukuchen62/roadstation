@@ -84,7 +84,9 @@
 
 .detailSeason {
     grid-area: areaC;
-    padding: 10px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .detailPrice {
