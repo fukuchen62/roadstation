@@ -70,17 +70,13 @@
                         <img src="{{ asset('/storage/images/' . $type->picture) }}" alt="種別画像" class="detailImg">
                         <li class="detailName">商品名：　{{$type->common_name}}</li>
                         @php
-                            $season = $type->season;
-                            // 文字列から配列に変換
-                            $season = explode("|", $season);
+                            $seasons = $type->season;
+                            $month = str_replace("|",'月　',$seasons);
+                            $month = str_replace("a",'10',$month);
+                            $month = str_replace("b",'11',$month);
+                            $month = str_replace("c",'12',$month);
                         @endphp
-
-                        @foreach ( $season as $season )
-
-                        <li class="detailSeason">旬の月：<br>{{$season}}</li>
-
-                        @endforeach
-
+                        <li class="detailSeason">旬の月:<br>{{$month}}月</li>
                         <li class="detailPrice">参考価格:<br>{{$type->price}}円</li>
                         <li class="detailUsage">利用方法：{!!$type->usage!!}</li>
                         <li class="detailDiscription">説明文:{!!$type->discription!!}</li>
