@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-.kv img{
-/* object-position:0 10%; */
+.kv img {
+    /* object-position:0 10%; */
 }
 
 h2,
@@ -84,8 +84,8 @@ dd {
     margin-bottom: 10px;
 }
 
-.district{
-background-image: url(../images/bg_headline.png);
+.district {
+    background-image: url(../images/bg_headline.png);
 }
 
 .kv img {
@@ -161,7 +161,7 @@ dd img {
         margin-top: 100px;
     }
 
-    .area-btn{
+    .area-btn {
         font-size: 2rem;
     }
 
@@ -189,7 +189,8 @@ dd img {
         margin-bottom: 40px;
         word-break: break-word;
     }
-    .area_category{
+
+    .area_category {
         margin-top: 120px;
     }
 
