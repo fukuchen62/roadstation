@@ -60,13 +60,44 @@
                 {{--  <P>test:<a href="{{ url('station-detail') }}?id={{ $blog->road_station_id }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>  --}}
             @endforeach
 
-            {{--  @if ($blog->id - 1 > 0)
-        <a href="{{ url('blog-detail') }}?id={{ $blog->id - 1 }}">前の記事へ</a>
-    @endif
+                {{-- 現在の投稿を基準に【次の記事へ】と【前の記事へ】ボタンの表示部分 --}}
+                <div>
+                    @if ($blog->previous() != null)
+                        <a href="{{ url('blog-detail')}}?id={{  $blog->previous()->id }}">< 前の記事へ</a>
+                    @endif
+                </div>
 
-    @if ($blog->id + 1 > count($blogs))
-        <a href="{{ url('blog-detail') }}?id={{ $blog->id + 1 }}">次の記事へ</a>
-    @endif  --}}
+                <div>
+                    @if ($blog->next()!= null)
+                        <a href="{{ url('blog-detail')}}?id={{  $blog->next()->id }}">次の記事へ ></a>
+                    @endif
+                </div>
+
+                {{-- <div>
+                    @if ($previous != null)
+                        <a href="{{ url('fronts.article') }}?id={{ $previous }}">前の記事</a>
+                    @endif
+                    @if ($next != null)
+                        <a href="{{ url('fronts.article') }}?id={{ $next }}">次の記事</a>
+                    @endif
+                </div> --}}
+
+                {{-- @foreach ($texts as $text) --}}
+                    
+                {{-- @endforeach --}}
+            
+                {{-- <div>
+                    @if (isset($previous))
+                        <a href="{{ route('fronts.article',$previous->id) }}">< 前の記事へ</a>
+                    @endif
+                </div>
+
+                <div>
+                    @if (isset($next))
+                        <a href="{{ route('fronts.article',$next->id) }}">次の記事へ ></a>
+                    @endif
+                </div> --}}
+
 
             {{-- 関連記事の表示部分 --}}
             <h3 class="relatedarticle-title">関連記事</h3>

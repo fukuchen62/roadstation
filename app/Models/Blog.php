@@ -85,4 +85,16 @@ class Blog extends Model
         }
         return $name;
     }
+
+
+
+    public function previous()
+    {
+        return $this->where('id','<',$this->id)->where('is_show',1)->orderBy('id','desc')->first();
+    }
+
+    public function next()
+    {
+        return  $this->where('id', '>', $this->id)->where('is_show',1)->orderBy('id','asc')->first();
+    }
 }
