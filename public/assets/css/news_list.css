@@ -2,9 +2,7 @@
 
 p {
     text-align: start;
-
 }
-
 
 .blog-wrapper {
     display: flex;
@@ -13,16 +11,15 @@ p {
     gap: 30px;
 }
 
-
-
 .blog-card {
     height: 500px;
-    padding: 10px;
+    padding: 20px;
     border: 3px solid #1ca10a;
     box-sizing: border-box;
     border-radius: 20px;
     justify-content: center;
     margin-bottom: 50px;
+    background-color: #fff;
 }
 
 .category_list li {
