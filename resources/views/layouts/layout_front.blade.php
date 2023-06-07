@@ -48,16 +48,12 @@
     @yield('pageCss')
 
 
+
+    {{-- 独自のJSファイルを読み込む(道の駅詳細ページのみ) --}}
+    @yield('pageJs1')
+
     <!-- jqueryライブラリ -->
     <script src="{{ asset('assets/js/vendor/jquery-3.6.3.min.js') }}"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-
-    <!-- slick -->
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <script type="text/javascript" src="js/slick.min.js"></script>
 
 
     <!-- フォント設定 -->
@@ -122,8 +118,9 @@
 
     <!-- 共通のjsファイル -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
     {{-- 独自のJSファイルを読み込む --}}
-    @yield('pageJs')
+    @yield('pageJs2')
 </body>
 
 </html>

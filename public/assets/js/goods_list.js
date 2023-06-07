@@ -4,13 +4,13 @@ $(document).ready(function () {
 
     // 初期表示の時に、１つ目の詳細を表示させる
     // 全部非表示処理
-    $(".detailContainer").each(function (i, elem) {
-        // console.log(i + ': ' + $(elem).text());
-        $(elem).addClass('displayNone');
-    });
+    // $(".detailContainer").each(function (i, elem) {
+    //     // console.log(i + ': ' + $(elem).text());
+    //     $(elem).addClass('displayNone');
+    // });
 
     $(".any").each(function (i, elem) {
-        // console.log(i + ': ' + $(elem).text());
+        console.log(i + ': ' + $(elem).text());
         $(elem).addClass('displayNone');
     });
 
@@ -30,10 +30,10 @@ $(document).ready(function () {
         const typeid = '#type-' + id;
 
         // 全部非表示処理
-        $(".detailContainer").each(function (i, elem) {
-            // console.log(i + ': ' + $(elem).text());
-            $(elem).addClass('displayNone');
-        });
+        // $(".detailContainer").each(function (i, elem) {
+        //     // console.log(i + ': ' + $(elem).text());
+        //     $(elem).addClass('displayNone');
+        // });
 
         $(".any").each(function (i, elem) {
             // console.log(i + ': ' + $(elem).text());

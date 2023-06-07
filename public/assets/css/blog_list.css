@@ -5,12 +5,21 @@ p {
 
 }
 
+h3 {
+    text-align: center;
+}
+
 
 .blog-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
+
+}
+
+.blog-main {
+    margin-top: 50px;
 }
 
 
@@ -24,6 +33,10 @@ p {
     justify-content: center;
     margin-bottom: 50px;
 }
+
+
+
+
 
 .category_list li {
     margin-top: 10px;
@@ -41,11 +54,26 @@ p {
 }
 
 @media screen and (min-width:761px) {
+    .card-img {
+        width: 80%;
+
+        text-align: center;
+    }
+}
+
+
+
+
+@media screen and (min-width:761px) {
     .blog-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
+    }
+
+    .blog-main {
+        margin-top: 150px;
     }
 
 
@@ -63,8 +91,8 @@ p {
     }
 
     .card-img {
-        width: 500px;
-        height: 300px;
+        width: 80%;
+        height: 200px;
         text-align: center;
     }
 
@@ -103,6 +131,7 @@ p {
         justify-content: space-between;
         width: 100%;
         position: relative;
+        margin-top: 250px;
     }
 
     .blog-wrapper {
