@@ -30,6 +30,11 @@ header {
 
 /* 各自スタイルシートで    margin-top: 200px;を設定 */
 
+.kv {
+    position: relative;
+    top: 100px;
+}
+
 .kv img {
     margin: 0 auto;
     object-fit: cover;
@@ -63,6 +68,12 @@ p {
     line-height: 1.5rem;
     padding-top: 1rem;
 }
+
+/* li a {
+    display: block;
+    height: 100%;
+    width: 100%
+} */
 
 a {
     cursor: pointer;

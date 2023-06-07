@@ -1,18 +1,24 @@
 @charset "utf-8";
 
+.wrapper {
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
 p {
     text-align: start;
 }
 
 .blog-wrapper {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: space-evenly;
 }
 
 .blog-card {
-    height: 500px;
+    width: 100%;
+    height: auto;
     padding: 20px;
     border: 3px solid #1ca10a;
     box-sizing: border-box;
@@ -20,6 +26,13 @@ p {
     justify-content: center;
     margin-bottom: 50px;
     background-color: #fff;
+    word-break: break-all;
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 .category_list li {
@@ -28,8 +41,7 @@ p {
 }
 
 .side {
-    /* width: 25%; */
-    height: 400px;
+    width: 100%;
     border: 3px solid #1ca10a;
     background-color: #1ca10a;
     color: cornsilk;
@@ -37,18 +49,18 @@ p {
 
 }
 
-@media screen and (min-width:761px) {
+@media screen and (min-width:601px) {
+
     .blog-wrapper {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 30px;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
 
     .blog-card {
-        max-width: 761px;
-        height: 500px;
+        width: 40%;
         padding: 10px;
         border: 3px solid #1ca10a;
         box-sizing: border-box;
@@ -56,18 +68,12 @@ p {
         justify-content: center;
         margin-bottom: 50px;
         text-align: center;
-
     }
 
-    .card-img {
-        width: 500px;
-        height: 300px;
-        text-align: center;
-    }
 
-    .side {
-        width: 300px;
-        height: 400px;
+    */ .side {
+        width: 100%;
+        height: auto;
         border: 3px solid #1ca10a;
         background-color: #1ca10a;
         color: cornsilk;
@@ -77,14 +83,10 @@ p {
 }
 
 
-
-
-
 @media screen and (min-width:901px) {
 
     .sp-kv {
         width: 100%;
-
     }
 
     .blog-box {
@@ -95,16 +97,16 @@ p {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        height: auto;
         position: relative;
     }
 
     .blog-wrapper {
-        width: 65%;
-        gap: 40px;
+        width: 75%;
     }
 
     .side {
-        width: 25%;
+        width: 20%;
         height: 400px;
         border: 3px solid #1ca10a;
         background-color: #1ca10a;
@@ -114,9 +116,7 @@ p {
     }
 
     .blog-card {
-        width: 46%;
-        height: 500px;
-        padding: 20px 8px;
+        padding: 20px;
         border: 3px solid #1ca10a;
         box-sizing: border-box;
         border-radius: 20px;
@@ -124,16 +124,6 @@ p {
         text-align: center;
 
     }
-
-    .card-img {
-        display: inline-block;
-        margin: 0 auto;
-        width: 300px;
-        height: 200px;
-    }
-
-
-
 
 
 }
