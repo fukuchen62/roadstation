@@ -79,7 +79,7 @@ section {
     display: none;
 }
 
-.news-mobilebtn {
+.mobilebtn {
     margin-top: 20px;
 }
 
@@ -661,6 +661,14 @@ imgcontent-wrapper .heading {
         margin-top: 30%;
     }
 
+    .sp-btn {
+        display: inline-block;
+        background-color: #fff;
+        width: 200px;
+        height: 60px;
+        border-radius: 50px;
+    }
+
     .kv {
         width: 100%;
         height: 980px;
@@ -730,7 +738,7 @@ imgcontent-wrapper .heading {
         display: inline-block;
     }
 
-    .news-mobilebtn {
+    .mobilebtn {
         display: none;
     }
 
