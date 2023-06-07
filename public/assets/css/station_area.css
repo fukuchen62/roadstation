@@ -27,7 +27,6 @@ h2 {
 .area_category {
     text-align: center;
     margin: 0 auto;
-    margin-top: 120px;
 }
 
 h3 {
@@ -51,6 +50,7 @@ dd {
     padding: 10px 10px;
     border-radius: 30px;
     background-color: #ccc;
+    font-size: 1.1rem;
 }
 
 .area-btn:hover {
@@ -103,6 +103,7 @@ dd img {
 }
 
 .card {
+    background-color: #fff;
     border: 1px solid;
     width: 300px;
     /* width: 306px; */
@@ -137,6 +138,10 @@ dd img {
         margin-top: 100px;
     }
 
+    .area-btn{
+        font-size: 2rem;
+    }
+
     .kv img {
         margin: 0 auto;
         object-fit: cover;
@@ -161,6 +166,10 @@ dd img {
         margin-bottom: 40px;
         word-break: break-word;
     }
+    .area_category{
+        margin-top: 120px;
+    }
+
 
     h3 {
         font-size: 2rem;
