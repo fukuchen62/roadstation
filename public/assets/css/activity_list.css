@@ -30,7 +30,7 @@ h4 {
 
 
 .attention {
-    margin-top: 230px;
+    margin-top: 30px;
 
     margin-bottom: 30px;
 }
@@ -173,6 +173,11 @@ h2 {
 
     }
 
+    .attention {
+        margin-top: 230px;
+
+        margin-bottom: 30px;
+    }
 
     /* h2 {
         width: 100%;
