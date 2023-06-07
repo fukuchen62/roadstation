@@ -11,7 +11,7 @@ html {
 body {
     font-size: 16px;
     font-family: 'Zen Maru Gothic', sans-serif;
-    /* background-color: #f2eee2; */
+    color: #91471d;
     background-color: #fffbf1;
 }
 
@@ -29,11 +29,6 @@ header {
 
 
 /* 各自スタイルシートで    margin-top: 200px;を設定 */
-
-.kv {
-    position: relative;
-    top: 100px;
-}
 
 .kv img {
     margin: 0 auto;
@@ -83,79 +78,31 @@ h3 {
 
 
 
-/* もっと見るボタン */
-a.btn-border-shadow {
-    padding: calc(1.5rem - 12px) 3rem 1.5rem;
-
-    background: #fff;
-}
-
-a.btn-border-shadow:before {
-    position: absolute;
-    top: -6px;
-    left: -6px;
-
-    width: 100%;
-    height: 100%;
-
-    content: "";
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-
-    border: 3px solid #000;
-    border-radius: 0.5rem;
-}
-
-a.btn-border-shadow:hover {
-    padding: calc(1.5rem - 6px) 3rem;
-}
-
-a.btn-border-shadow:hover:before {
-    top: 0;
-    left: 0;
-}
-
-a.btn-border-shadow--color {
-    border-radius: 50px;
-    background: #b45a27;
-}
-
-a.btn-border-shadow--color:before {
-    border-radius: 50px;
-}
-
-/* 新もっとみる */
-.btn,
-a.btn,
-button.btn {
-    font-size: 1.6rem;
+/* ↓もっと見るボタン */
+.btn {
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.5;
     position: relative;
     display: inline-block;
-    padding: 1rem 4rem;
+    padding: 0.5rem 2rem;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
     letter-spacing: 0.1em;
-    color: #ffff;
+    color: #ffffff;
     border-radius: 0.5rem;
 }
 
-a.btn-border-shadow {
+.btn-border-shadow {
     padding: calc(1.5rem - 12px) 3rem 1.5rem;
 
     background: #fff;
 }
 
-a.btn-border-shadow:before {
+.btn-border-shadow:before {
     position: absolute;
     top: -6px;
     left: -6px;
@@ -167,32 +114,35 @@ a.btn-border-shadow:before {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
-    border: 3px solid #000;
+    border: 3px solid #91471d;
     border-radius: 0.5rem;
 }
 
-a.btn-border-shadow:hover {
+.btn-border-shadow:hover {
     padding: calc(1.5rem - 6px) 3rem;
 }
 
-a.btn-border-shadow:hover:before {
+.btn-border-shadow:hover:before {
     top: 0;
     left: 0;
 }
 
-a.btn-border-shadow--color {
+.btn-border-shadow--color {
     border-radius: 50px;
-    background: #b45a27;
+    background: linear-gradient(180deg, rgba(180, 90, 39, 1) 0%, rgba(213, 89, 21, 1) 100%);
+    ;
 }
 
-a.btn-border-shadow--color:before {
+.btn-border-shadow--color:before {
     border-radius: 50px;
 }
+
+/* ↑ここまで */
 
 .icon {
     width: 30px;
     height: 30px;
-    background-color: #732424;
+    background-color: #B45A27;
     border-radius: 50%;
     align-items: flex-end;
 }
@@ -531,7 +481,7 @@ footer {
     }
 
     /* もっと見るボタン */
-    .more-btn {
+    /* .more-btn {
         font-size: 1.5rem;
         text-align: center;
         width: 250px;
@@ -540,7 +490,7 @@ footer {
         color: #ffffff;
         background-color: #b45a27;
         display: inline-block;
-    }
+    } */
 
     footer li {
         margin: 0 auto;

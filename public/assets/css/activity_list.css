@@ -183,6 +183,14 @@ h4 {
     }
 }
 
+
+@media screen and (min-width:601px) {
+    .attention {
+        margin-top: 130px;
+        margin-bottom: 30px;
+    }
+}
+
 @media screen and (min-width:900px) {
     .attention {
         margin-top: 250px;
