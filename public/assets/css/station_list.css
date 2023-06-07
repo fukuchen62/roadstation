@@ -217,7 +217,6 @@ dl {
 }
 
 .card {
-    border: 1px solid;
     width: 300px;
     /* width: 306px; */
     height: auto;
@@ -226,6 +225,8 @@ dl {
     margin-bottom: 40px;
     word-break: break-word;
     border-radius: 20px;
+    box-shadow: 15px 10px 3px 0 #a7d28d;
+    border: solid 3px #8c5243;
 }
 
 dt {
@@ -238,6 +239,12 @@ dd img {
 
 
 @media screen and (min-width:761px) {
+
+
+    h2 {
+        margin-top: 250px;
+        margin-bottom: 30px;
+    }
 
     .stationlist-banner {
         max-width: 761px;
@@ -260,7 +267,8 @@ dd img {
 
 
     .card {
-        border: 1px solid;
+        box-shadow: 15px 10px 3px 0 #a7d28d;
+        border: solid 3px #8c5243;
         width: 300px;
         height: auto;
         padding: 20px;
@@ -303,7 +311,7 @@ dd img {
 @media screen and (min-width:901px) {
 
     h2 {
-        margin-top: 150px;
+        margin-top: 250px;
         margin-bottom: 30px;
     }
 
@@ -329,7 +337,9 @@ dd img {
 
 
     .card {
-        border: 1px solid;
+        box-shadow: 15px 10px 3px 0 #a7d28d;
+        border: solid 3px #8c5243;
+        
         width: 300px;
         height: auto;
         padding: 20px;
