@@ -164,6 +164,25 @@ h2 {
     margin-bottom: 10px;
 }
 
+
+@media screen and (min-width:600px) {
+    .attention {
+        margin-top: 130px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .attention {
+        margin-top: 250px;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
     .kv img {
@@ -174,7 +193,7 @@ h2 {
     }
 
     .attention {
-        margin-top: 230px;
+        margin-top: 250px;
 
         margin-bottom: 30px;
     }
