@@ -239,8 +239,23 @@
     text-align: center;
     font-size: 20px;
     padding: 20px;
-
+    position: relative;
 }
+
+/*うどんたぬきアニメの設定 */
+.anime2 {
+    position: absolute;
+    top: -5px;
+    left: 150px;
+}
+
+/* うどんアニメの設定 */
+.anime3 {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+
 
 .activity-strapline {
     display: none;
@@ -452,8 +467,21 @@ imgcontent-wrapper .heading {
         text-align: center;
         font-size: 20px;
         padding: 20px;
+        position: relative;
+    }
 
+    /* 芋ほりアニメの設定 */
+    .anime1 {
+        position: absolute;
+        top: -5px;
+        left: 150px;
+    }
 
+    /* 人参アニメの設定 */
+    .anime4 {
+        position: absolute;
+        top: 80px;
+        left: 1px;
     }
 
     .goods-strapline {

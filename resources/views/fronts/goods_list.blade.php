@@ -99,8 +99,8 @@
             @endforeach
             </ul>
         </section>
-
-        <section class="detail-group" id="detail-top">
+        <div id="detail-top"></div>
+        <section class="detail-group">
             @foreach ($goods_type as $type )
             <div class="any" id="{{'type-' . $type->id}}">
             <h3 class="headline item-name">{{$type->common_name}}</h3>
