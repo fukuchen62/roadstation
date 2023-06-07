@@ -135,7 +135,7 @@ h4 {
 }
 
 /* PC吹き出しを横に並べる */
-@media screen and (min-width:901px) {
+@media screen and (min-width:930px) {
     .flex {
         display: flex;
         align-items: center;
@@ -313,7 +313,7 @@ dd {
 
 /* PCグルメとお土産エリアを横に並べる */
 
-@media screen and (min-width:901px) {
+@media screen and (min-width:930px) {
     .container {
         flex-direction: row;
         align-items: center;
@@ -346,7 +346,7 @@ dd {
     .speech:before {
         content: "";
         position: absolute;
-        top: -300px;
+        top: -290px;
         left: -27px;
         margin-top: 45%;
         transform: rotate(0deg);
