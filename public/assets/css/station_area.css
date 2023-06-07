@@ -84,6 +84,10 @@ dd {
     margin-bottom: 10px;
 }
 
+.district{
+background-image: url(../images/bg_headline.png);
+}
+
 .kv img {
     margin: 0 auto;
     object-fit: cover;
