@@ -13,7 +13,9 @@ section {
     /* text-align: center; */
 }
 
-
+h3 {
+    font-size: 20px;
+}
 
 
 h4 {
@@ -28,71 +30,51 @@ h4 {
 }
 
 
+.attention {
 
-/* .attention-box {
-    /* position: relative; */
-/* display: inline-block; */
-/* text-align: center;
-    margin: 0 auto; */
-
-
-/* .attention-img1 {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 100px;
-    height: 100px;
-
+    margin-bottom: 30px;
 }
 
-.attention-img2 img {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-
-} */
 
 .attention::before {
-    content: "";
+    content: '';
+    /*何も入れない*/
     display: inline-block;
     width: 80px;
-    height: 80px;
-    background: url(../images/illustrations/tanuki-activity.png) no-repeat;
-    background-size: contain;
-    /* position: absolute;
-    /* top: px; */
-    /* left: 5%;  */
-    margin: 3px 5px;
-
-
+    /*画像の幅*/
+    height: 63px;
+    /*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-activity2.png);
+    background-size: cover;
+    vertical-align: middle;
 
 }
 
+
 .attention::after {
-    content: "";
+    content: '';
+    /*何も入れない*/
     display: inline-block;
-    width: 50px;
-    /* スマホで見た時の幅 */
-    height: 50px;
-    /* スマホで見た時の高さ */
-    background: url(../images/illustrations/tanuki-activity.png) no-repeat;
-    background-size: contain;
-    margin-right: 3px 3px;
-    transform: translate(10px 10px);
+    width: 80px;
+    /*画像の幅*/
+    height: 63px;
+    /*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-activity2.png);
+    background-size: cover;
+    vertical-align: middle;
+
 }
 
 
 
 h2 {
 
-    border-radius: 50px;
-    max-width: 220px;
+    /* max-width: 220px; */
     width: 100%;
     margin: 30px auto 30px auto;
     text-align: center;
     font-size: 32px;
+
 }
 
 .activity-delimiter {
@@ -179,6 +161,12 @@ h2 {
 @media screen and (min-width:1115px) {
     .kv-img {
         object-position: 80% 20%;
+
+
+    }
+
+    h3 {
+        font-size: 32px;
     }
 
     h4 {
@@ -187,6 +175,21 @@ h2 {
     }
 
 
+
+    .attention-box {
+        position: relative;
+    }
+
+    .attention {
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+
+    /* 
     .attention-img1 {
         position: absolute;
         top: 20%;
@@ -203,7 +206,7 @@ h2 {
         width: 100px;
         height: 100px;
 
-    }
+    } */
 
     .activity-photo {
         /* max-width: 550px; */
