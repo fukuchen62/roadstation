@@ -2,13 +2,25 @@
 
 .wrapper {
     padding: 0;
-    margin-top: 1200px;
+    margin-top: 600px;
 }
 
 .site-logo {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.top-kv video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center bottom;
+    z-index: -999;
+}
+
+#nav {
+    position: fixed;
 }
 
 .nav-pc {
@@ -348,10 +360,17 @@ imgcontent-wrapper .heading {
 
 @media screen and (min-width:761px) {
 
+    .wrapper {
+        padding: 0;
+        margin-top: 650px;
+    }
 
-    /* .news-title {
-        padding: 30px;
-    } */
+    .top-kv video {
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+        object-position: center bottom;
+    }
 
     .news-box {
         display: flex;
@@ -632,21 +651,8 @@ imgcontent-wrapper .heading {
 
 @media screen and (min-width:901px) {
 
-    .wrapper {
-        padding: 0;
-        margin-top: 600px;
-    }
-
     header {
         width: 100vw;
-    }
-
-    .top-kv video {
-        width: 100%;
-        height: 85vh;
-        object-fit: cover;
-        object-position: center bottom;
-        z-index: -999;
     }
 
     .kv {
