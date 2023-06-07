@@ -4,6 +4,8 @@
     object-position: bottom;
 }
 
+
+
 h2 {
     margin-bottom: 30px;
 }
@@ -36,7 +38,6 @@ dl {
     border-radius: 30px;
     background-color: #ccc;
     color: #ffff;
-    background-color: #ccc;
     font-size: 20px;
     /* padding: 1rem 0; */
 
@@ -45,13 +46,11 @@ dl {
 .west-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 30px;
+    padding: 20px 60px;
     border-radius: 30px;
     background-color: #ccc;
     color: #ffff;
-    background-color: #ccc;
     font-size: 20px;
-    font-size: 2rem;
 
 
 }
@@ -59,13 +58,11 @@ dl {
 .south-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 30px;
+    padding: 20px 60px;
     border-radius: 30px;
     background-color: #ccc;
     color: #ffff;
-    background-color: #ccc;
     font-size: 20px;
-    font-size: 2rem;
 
 
 
