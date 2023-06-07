@@ -63,13 +63,13 @@
                 {{-- 現在の投稿を基準に【次の記事へ】と【前の記事へ】ボタンの表示部分 --}}
                 <div>
                     @if ($blog->previous() != null)
-                        <a href="{{ url('blog-detail')}}?id={{  $blog->previous()->id }}">< 前の記事へ</a>
+                        <a href="{{ url('blog-detail')}}?id={{  $blog->previous()->id }}&blog_category_id={{ $blog->blog_category_id }}">< 前の記事へ</a>
                     @endif
                 </div>
 
                 <div>
                     @if ($blog->next()!= null)
-                        <a href="{{ url('blog-detail')}}?id={{  $blog->next()->id }}">次の記事へ ></a>
+                        <a href="{{ url('blog-detail')}}?id={{  $blog->next()->id }}&blog_category_id={{ $blog->blog_category_id }}">次の記事へ ></a>
                     @endif
                 </div>
 
