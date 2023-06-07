@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.kv img{
+object-position:bottom;
+}
+
 h2,
 h3,
 h4,
@@ -40,6 +44,7 @@ form {
 .card-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .card {
