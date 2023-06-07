@@ -1,5 +1,8 @@
 "use strict";
 
+alert(パステスト)
+
+
 $(document).ready(function () {
 
     // 初期表示の時に、１つ目の詳細を表示させる

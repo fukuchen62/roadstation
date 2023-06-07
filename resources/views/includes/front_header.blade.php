@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('activity') }}">
+                <a href="{{ route('bloglist') }}">
                     <div>
                         <img src="{{ asset('assets/images/menu_icon/blog_list_icon.png') }}" alt=""
                             width="35" height="35">
