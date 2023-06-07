@@ -210,6 +210,10 @@ margin-top: 230px;
         margin-top: 250px;
     }
 
+    h3{
+        font-size: 32px;
+    }
+
     .goods-photo {
         max-width: 200px;
     }
