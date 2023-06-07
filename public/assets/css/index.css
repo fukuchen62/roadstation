@@ -52,7 +52,7 @@
 
 .sp-h2 {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 4rem;
     margin-top: 30%;
 }
 
@@ -263,15 +263,15 @@
 /*うどんたぬきアニメの設定 */
 .anime2 {
     position: absolute;
-    top: -5px;
-    left: 150px;
+    top: -8px;
+    left: 183px;
 }
 
 /* うどんアニメの設定 */
 .anime3 {
     position: absolute;
-    top: 70px;
-    left: 10px;
+    top: 80px;
+    left: 30px;
 }
 
 
@@ -307,6 +307,7 @@
     border-radius: 20px;
     justify-content: center;
     margin: 30px auto;
+    background-color: #fff;
 }
 
 .img-wrapper {
@@ -498,15 +499,15 @@ imgcontent-wrapper .heading {
     /* 芋ほりアニメの設定 */
     .anime1 {
         position: absolute;
-        top: -5px;
-        left: 150px;
+        top: 10px;
+        left: 199px;
     }
 
     /* 人参アニメの設定 */
     .anime4 {
         position: absolute;
-        top: 80px;
-        left: 1px;
+        top: 250px;
+        left: 14px;
     }
 
     .goods-strapline {
@@ -568,7 +569,6 @@ imgcontent-wrapper .heading {
         display: none;
 
     }
-
 
     .activity-pcbtn {
         display: none;
@@ -685,16 +685,19 @@ imgcontent-wrapper .heading {
         z-index: 999;
     }
 
-    /* .sp-h2 {
-        color: #ffffff;
-        font-size: 2rem;
-        margin-top: 10%;
+    /*うどんたぬきアニメの設定 */
+    .anime2 {
+        position: absolute;
+        top: -10px;
+        left: 183px;
     }
 
-    /* .news-title {
-        margin-bottom: 30px;
-
-    } */
+    /* うどんアニメの設定 */
+    .anime3 {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+    }
 
     .news-box {
         display: flex;
@@ -813,7 +816,7 @@ imgcontent-wrapper .heading {
         height: 330px;
         align-items: center;
         border-radius: 30px;
-        background-color: #E99787;
+        background-color: #ff8871;
         color: black;
         text-align: center;
         font-size: 20px;
@@ -833,12 +836,12 @@ imgcontent-wrapper .heading {
         color: #ff6c6c;
         font-weight: bold;
         font-size: 20px;
-        padding: 20px 30px;
+        padding: 20px 50px;
         margin: 0 auto;
         margin-bottom: 50px;
         display: inline-block;
         position: absolute;
-        top: 60%;
+        top: 58%;
         left: 20%;
     }
 
@@ -891,7 +894,7 @@ imgcontent-wrapper .heading {
         width: 330px;
         height: 330px;
         border-radius: 30px;
-        background-color: #E99787;
+        background-color: #fbae51;
         color: black;
         text-align: center;
         font-size: 20px;
