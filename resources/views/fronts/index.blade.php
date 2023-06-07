@@ -50,7 +50,7 @@
                 </ul>
                 @endforeach
             </div>
-            <p class="news-mobilebtn"><a href="">もっと見る</a></p>
+            <p class="news-mobilebtn"><a href="{{ url('news') }}">もっと見る</a></p>
         </section>
 
         <section class="area-map">
@@ -60,7 +60,7 @@
                 <a class="west" href="{{route('areasearch')}}?id=2">西部</a>
                 <a class="south" href="{{route('areasearch')}}?id=3">南部</a>
             </div>
-            <p class="more-btn"><a href="">詳細検索</a></p>
+            <p class="more-btn"><a href="{{route('ditailsearch')}}">詳細検索</a></p>
         </section>
 
         <section>
@@ -75,7 +75,7 @@
                         <h2 class="sp-h2">特産品</h2>
                         <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
 
-                        <a href="">
+                        <a href="{{route('goods')}}">
                             <p class="pcbtn">もっと見る</p>
                         </a>
                     </li>
@@ -84,7 +84,7 @@
                     <li><img class="goods-1" src="../storage/images/index.images/wakame.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/yakiimo.jpg" alt=""></li>
                 </ul>
-                <a href="">
+                <a href="{{route('goods')}}">
                     <p class="more-btn mobile-btn">もっと見る</p>
                 </a>
             </div>
@@ -101,7 +101,7 @@
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
 
-                        <a href="">
+                        <a href="{{route('activity')}}">
                             <p class="pcbtn">もっと見る</p>
                         </a>
                     </li>

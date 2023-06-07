@@ -26,6 +26,9 @@
             <div class="activity-group">
                 <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
                 <div class="activity-text-group">
+                    <p>道の駅 <a
+                            href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
+                    </p>
                     <h3 class="activity-name">
                         {{ $activity->activity_name }}
                     </h3>
