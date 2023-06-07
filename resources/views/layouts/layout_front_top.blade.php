@@ -50,9 +50,6 @@
     <!-- jqueryライブラリ -->
     <script src="{{ asset('assets/js/vendor/jquery-3.6.3.min.js') }}"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 
     <!-- フォント設定 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,6 +83,7 @@
 
     <!-- 共通のjsファイル -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
     {{-- 独自のJSファイルを読み込む --}}
     @yield('pageJs2')
 </body>
