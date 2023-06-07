@@ -59,6 +59,9 @@ h1 {
 h2 {
     font-size: 2rem;
     font-family: 'Kiwi Maru', serif;
+
+    /* padding: 20px;
+    background-image: url(../images/bg_headline.png); */
 }
 
 p {

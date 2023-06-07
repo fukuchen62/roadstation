@@ -641,11 +641,11 @@ imgcontent-wrapper .heading {
         width: 100vw;
     }
 
-    .top-kv img {
+    .top-kv video {
         width: 100%;
         height: 85vh;
         object-fit: cover;
-        object-position: center;
+        object-position: center bottom;
         z-index: -999;
     }
 
