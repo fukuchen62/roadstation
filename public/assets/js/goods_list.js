@@ -1,6 +1,6 @@
 "use strict";
 
-alert(動作テスト)
+alert(パステスト)
 
 
 $(document).ready(function () {
