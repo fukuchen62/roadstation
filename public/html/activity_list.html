@@ -6,22 +6,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>体験一覧</title>
+
+    <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <!-- 独自CSS -->
     <link rel="stylesheet" href="../assets/css/activity_list.css">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <!-- アイコンフォント -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 
 </head>
 
 <body>
     <header>
+        <!-- g-nav pc -->
+        <nav class="nav-pc">
+            <h1><a href="index.html"><img src="../assets/images/site_logo/logo.png" width="100" height="100" alt="とくしままるっと道の駅"></a></h1>
+
+            <ul>
+                <li>
+                    <a href="../html/station_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        道の駅一覧
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../html/station_area.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_area_icon.png" alt="" width="30" height="30">
+                        </div>
+                        エリア検索
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/station_detail.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_detail_icon.png" alt="" width="30" height="30">
+                        </div>
+                        詳細検索
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/goods_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/goods_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        特産品
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/activity_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/activity_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        体験
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/blog_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/blog_list_icon.png" alt="" width="35" height="35">
+                        </div>
+                        行ってみたんよ
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/like.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/like_icon.png" alt="" width="30" height="30">
+                        </div>
+                        お気に入り
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
         <!-- g-nav mobile -->
         <nav id="wrapper">
-            <h1 class="site-logo"><a href="index.html"><img src="../assets/images/site_logo/logo.png"
-                        alt="とくしままるっと道の駅"></a></h1>
+            <h1 class="site-logo mobile-logo"><a href="index.html"><img src="../assets/images/site_logo/logo.png" alt="とくしままるっと道の駅"></a></h1>
 
             <div class="btn-gnavi">
                 <span></span>
@@ -30,51 +110,81 @@
             </div>
 
             <nav id="global-navi">
-                <div class="hamburger-menu-list">
-                    <ul class="menu">
-                        <li><a href="../html/station_list.html">道の駅一覧
-                            </a></li>
-                        <li><a href="../html/station_area.html">エリア検索</a></li>
-                        <li><a href="../html/station_detail.html">詳細検索</a></li>
-                        <li><a href="../html/goods_list.html">特産品</a></li>
-                        <li><a href="../html/activity_list.html">体験</a></li>
-                        <li><a href="../html/blog_list.html">行ってみたんよ</a></li>
-                        <li><a href="../html/like.html">お気に入り</a></li>
-                    </ul>
-                </div>
+
+                <ul class="hamburger-menu">
+                    <li>
+                        <a href="../html/station_list.html">
+
+                            <img src="../assets/images/menu_icon/station_list_icon.png" alt="" width="30" height="30">
+
+                            道の駅一覧
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="../html/station_area.html">
+
+                            <img src="../assets/images/menu_icon/station_area_icon.png" alt="" width="30" height="30">
+
+                            エリア検索
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/station_detail.html">
+
+                            <img src="../assets/images/menu_icon/station_detail_icon.png" alt="" width="30" height="30">
+
+                            詳細検索
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/goods_list.html">
+
+                            <img src="../assets/images/menu_icon/goods_list_icon.png" alt="" width="30" height="30">
+
+                            特産品
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/activity_list.html">
+
+                            <img src="../assets/images/menu_icon/activity_list_icon.png" alt="" width="30" height="30">
+
+                            体験
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/blog_list.html">
+
+                            <img src="../assets/images/menu_icon/blog_list_icon.png" alt="" width="35" height="35">
+
+                            行ってみたんよ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/like.html">
+
+                            <img src="../assets/images/menu_icon/like_icon.png" alt="" width="30" height="30">
+
+                            お気に入り
+                        </a>
+                    </li>
+                </ul>
+
             </nav>
-        </nav>
-
-        <!-- g-nav pc -->
-        <nav class="nav-pc">
-            <h1 class="site-logo"><a href="index.html"><img src="../assets/images/site_logo/logo.png"
-                        alt="とくしままるっと道の駅"></a></h1>
-
-            <ul>
-                <li><a href="../html/station_list.html">
-                        道の駅一覧</a></li>
-                </a></li>
-                <li><a href="../html/station_area.html">
-                        エリア検索</a></li>
-                <li><a href="../html/station_detail.html">
-                        詳細検索</a></li>
-                <li><a href="../html/goods_list.html">
-                        特産品</a></li>
-                <li><a href="../html/activity_list.html">
-                        体験</a></li>
-                <li><a href="../html/blog_list.html">
-                        行ってみたんよ</a></li>
-                <li><a href="../html/like.html">
-                        お気に入り</a></li>
-            </ul>
         </nav>
 
         <!-- キービジュアル -->
         <div class="kv">
-            <figure><img class="kv-img" src="../assets/images/activity_list/indigo.jpg" alt="お好きな道の駅を検索してください。">
-            </figure>
+
+            <figure><img src="../assets/images/activity_list/indigo.jpg" alt="お好きな道の駅を検索してください。"></figure>
+
         </div>
+
     </header>
+
+
     <main class="wrapper">
 
         <div class="attention-box">
@@ -416,43 +526,49 @@
     </main>
 
     <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fffbf1" fill-opacity="1" d="M0,96L60,112C120,128,240,160,360,149.3C480,139,600,85,720,80C840,75,960,117,1080,138.7C1200,160,1320,160,1380,160L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+
+        <img src="../assets/images/" alt="">
         <!-- topへ戻るボタン -->
         <div class="scroll-top">
-            <a href="#">↑</a>
+            <a href="#"><img src="../assets/images/illustrations/Tanuki-top.png" alt=""></a>
         </div>
 
-        <!-- 波のsvg -->
-        <figure class=bg-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
-                <path fill="#fff7e2" fill-opacity="1"
-                    d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,165.3C672,160,768,160,864,165.3C960,171,1056,181,1152,197.3C1248,213,1344,235,1392,245.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-                </path>
-            </svg>
-            <!-- <img class=bg-wave" src="../assets/images/header/wave.svg" alt="スクロールトップ"> -->
-        </figure>
+
 
         <!-- フッターメニュー -->
         <div class="footer-menu">
+
             <ul class="footer-menu-list">
                 <li><a href="../html/station_list.html">
+                        <img src="../assets/images/menu_icon/station_list_icon_w.png" alt="" width="20" height="20">
                         道の駅一覧</a></li>
                 <li><a href="../html/station_area.html">
+                        <img src="../assets/images/menu_icon/station_area_icon_w.png" alt="" width="20" height="20">
                         エリア検索</a></li>
                 <li><a href="../html/station_detail.html">
+                        <img src="../assets/images/menu_icon/station_detail_icon_w.png" alt="" width="20" height="20">
                         詳細検索</a></li>
             </ul>
 
             <ul class="footer-menu-list">
                 <li><a href="../html/goods_list.html">
+                        <img src="../assets/images/menu_icon/goods_list_icon_w.png" alt="" width="20" height="20">
                         特産品</a></li>
                 <li><a href="../html/activity_list.html">
+                        <img src="../assets/images/menu_icon/activity_list_icon_w.png" alt="" width="20" height="20">
                         体験</a></li>
                 <li><a href="../html/blog_list.html">
+                        <img src="../assets/images/menu_icon/blog_list_icon_w.png" alt="" width="20" height="20">
                         行ってみたんよ</a></li>
+                <li><a href="../html/like.html">
+                        <img src="../assets/images/menu_icon/like_icon_w.png" alt="" width="20" height="20">
+                        お気に入り</a></li>
             </ul>
             <ul>
-                <li><a href="../html/like.html">
-                        お気に入り</a></li>
+
                 <li><a href="">
                         このサイトについて</a></li>
                 <li><a href="">
