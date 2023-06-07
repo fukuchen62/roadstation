@@ -74,12 +74,12 @@ $(function () {
 });
 
 // ヘッダーメニューの固定
-var navPos = jQuery('#global-nav').offset().top; // グローバルメニューの位置
-var navHeight = jQuery('#global-nav').outerHeight(); // グローバルメニューの高さ
-jQuery(window).on('scroll', function () {
-    if (500 < jQuery(this).scrollTop()) { // 〇〇px以上スクロールしたら
-        jQuery('#global-nav').addClass('m_fixed');
-    } else {
-        jQuery('#global-nav').removeClass('m_fixed');
-    }
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 570) { //570px以上スクロールした固定
+            $('#menu').addClass('fixed');
+        } else {
+            $('#menu').removeClass('fixed');
+        }
+    });
 });
