@@ -4,7 +4,7 @@ html {
     overflow-x: hidden;
 }
 
-p{
+p {
     text-align: center;
 }
 
@@ -13,61 +13,115 @@ section {
     /* text-align: center; */
 }
 
-h2 {
-    border: 1px solid #000;
-    border-radius: 50px;
-    max-width: 220px;
-    width: 100%;
-    margin: 30px auto 30px auto;
-    text-align: center;
+h3 {
     font-size: 20px;
 }
 
-.activity-delimiter{
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.wrapper {
+    margin-top: 300px;
+}
+
+
+.attention {
+
     margin-bottom: 30px;
 }
 
-.activity-photo{
+
+.attention::before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    width: 80px;
+    /*画像の幅*/
+    height: 63px;
+    /*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-activity2.png);
+    background-size: cover;
+    vertical-align: middle;
+
+}
+
+
+.attention::after {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    width: 80px;
+    /*画像の幅*/
+    height: 63px;
+    /*画像の高さ*/
+    background-image: url(../images/illustrations/tanuki-activity2.png);
+    background-size: cover;
+    vertical-align: middle;
+
+}
+
+
+
+h2 {
+
+    /* max-width: 220px; */
+    width: 100%;
+    margin: 30px auto 30px auto;
+    text-align: center;
+    font-size: 32px;
+
+}
+
+.activity-delimiter {
+    margin-bottom: 100px;
+}
+
+.activity-photo {
     max-width: 550px;
     width: 100%;
     margin-bottom: 30px;
 }
 
-.activity-group{
+.activity-group {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
-.activity-name{
+.activity-name {
     width: 100%;
     margin-bottom: 30px;
     text-align: start;
 }
 
-.business-text{
+.business-text {
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
     text-align: start;
 }
 
-.price-text{
+.price-text {
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
     text-align: start;
 }
 
-.conditions-text{
+.conditions-text {
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
     text-align: start;
 }
 
-.detail-text{
+.detail-text {
     width: 100%;
     padding-top: 0;
     padding-bottom: 30px;
@@ -86,77 +140,125 @@ h2 {
     margin-bottom: 30px;
 }
 
-.roadstation-name{
+.roadstation-name {
     width: 160px;
     text-align: center;
 }
 
-.activity-blog-place{
+.activity-blog-place {
     width: 205px;
 }
 
-.roadstation-blog-name{
+.roadstation-blog-name {
     text-align: center;
 }
 
-.blog{
+.blog {
     margin-bottom: 10px;
 }
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
+    .kv-img {
+        object-position: 80% 20%;
 
-.activity-photo {
-    /* max-width: 550px; */
-    max-height: 380px;
-    /* width: 100%; */
-    margin-right: 50px;
-}
 
-.activity-group{
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-}
+    }
 
-.activity-text-group{
-    flex-direction: column;
-}
+    h3 {
+        font-size: 32px;
+    }
 
-.activity-name{
-    max-width: 600px;
-    /* max-height: 120px; */
-    width: 100%;
-}
+    h4 {
+        font-size: 20px;
+        font-weight: bold;
+    }
 
-/* .activity-text {
+
+
+    .attention-box {
+        position: relative;
+    }
+
+    .attention {
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+
+    /* 
+    .attention-img1 {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .attention-img2 img {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+
+    } */
+
+    .activity-photo {
+        /* max-width: 550px; */
+        max-height: 380px;
+        /* width: 100%; */
+        margin-right: 50px;
+    }
+
+    .activity-group {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .activity-text-group {
+        flex-direction: column;
+    }
+
+    .activity-name {
+        max-width: 600px;
+        /* max-height: 120px; */
+        width: 100%;
+    }
+
+    /* .activity-text {
     max-width: 600px;
     max-height: 120px;
     width: 100%;
 } */
 
-.business-text{
-    max-width: 600px;
-    /* max-height: 200px; */
-    width: 100%;
-}
+    .business-text {
+        max-width: 600px;
+        /* max-height: 200px; */
+        width: 100%;
+    }
 
-.price-text{
-    max-width: 600px;
-    /* max-height: 100px; */
-    width: 100%;
-}
+    .price-text {
+        max-width: 600px;
+        /* max-height: 100px; */
+        width: 100%;
+    }
 
-.conditions-text{
-    max-width: 1200px;
-    /* max-height: 190px; */
-    width: 100%;
-}
+    .conditions-text {
+        max-width: 1200px;
+        /* max-height: 190px; */
+        width: 100%;
+    }
 
-.detail-text{
-    max-width: 1200px;
-    /* max-height: 95px; */
-    width: 100%;
-}
+    .detail-text {
+        max-width: 1200px;
+        /* max-height: 95px; */
+        width: 100%;
+    }
 }

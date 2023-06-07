@@ -25,21 +25,25 @@
     <main class="wrapper">
 
         <div class="blog-main">
+
             <div class="blog-wrapper">
 
                 @foreach ($news as $new)
-                    <div class="blog-card">
-                        <img class="card-img" src="https://placehold.jp/300x200.png" alt="no-img">
-                        <p>{{ $new->title }}</p>
-                        <p class="text">
-                            {!! $new->overview !!}
-                        </p>
-                        @php
-                            $ts = strtotime($new->updated_at);
-                        @endphp
-                        <p>{{ date('Y年n月j日', $ts) }}カテゴリ:<a href="">{{ $new->newsCategory->category_name }}</a></p>
+                    <a href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}">
+                        <div class="blog-card">
+                            <img class="card-img" src="https://placehold.jp/300x200.png" alt="no-img">
+                            <p>{{ $new->title }}</p>
+                            <p class="text">
+                                {!! $new->overview !!}
+                            </p>
+                            @php
+                                $ts = strtotime($new->updated_at);
+                            @endphp
+                            <p>{{ date('Y年n月j日', $ts) }}カテゴリ:<a href="">{{ $new->newsCategory->category_name }}</a>
+                            </p>
 
-                    </div>
+                        </div>
+                    </a>
                 @endforeach
 
                 <div class="link">{{ $news->links('pagination::bootstrap-4') }}</div>

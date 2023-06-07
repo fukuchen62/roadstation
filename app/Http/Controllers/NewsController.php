@@ -75,6 +75,13 @@ class NewsController extends Controller
         $item = News::where('id', $request->id)
             ->get();
 
+        // $id = $request->id;
+        // $item = News::find($id);
+
+        // $counts = News::where('is_show', 1)
+        //     ->latest($id)
+        //     ->get();
+
         $items = News::where('news_category_id', $request->news_category_id)
             ->wherenot('id', $request->id)
             ->where('is_show', 1)
@@ -87,6 +94,7 @@ class NewsController extends Controller
             'news' => $item,
             'categories' => $items,
             'news_categories' => $category,
+            // 'counts' => $counts,
         ];
 
         return view('fronts.news', $data);
