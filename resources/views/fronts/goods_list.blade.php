@@ -138,8 +138,6 @@
             <h3 class="headline buy-place">買える道の駅</h3>
 
             <ul class="roadstation-frame">
-                <li class="roadstation-name">
-
 
                     @php
                         $station_list = $type->station_list;
@@ -152,11 +150,13 @@
                         @php
                                 $name = $type::getRoadstationName($id);
                         @endphp
+                        <li class="roadstation-name">
                         <a class="" href="{{route('roadstation')}}?id={{$id}}">
                             <p class="name">{{$name}}</p>
                         </a>
+                        </li>
                     @endforeach
-                </li>
+
             </ul>
             </div>
             @endforeach
