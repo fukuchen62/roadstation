@@ -50,12 +50,12 @@
             <p>{!! $activity->discription !!}</p>
 
             {{--  体験できる道の駅の表示部分  --}}
-            <h3 class="headline activity-place">体験できる道の駅</h3>
+            {{-- <h3 class="headline activity-place">体験できる道の駅</h3>
             <ul class="roadstation-frame">
                 <li class="roadstation-name"><a
                         href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
                 </li>
-            </ul>
+            </ul> --}}
 
             {{--  体験したブログ記事の表示部分  --}}
             <h3 class="headline activity-place">体験したブログ記事</h3>
