@@ -11,7 +11,7 @@ html {
 body {
     font-size: 16px;
     font-family: 'Zen Maru Gothic', sans-serif;
-    /* background-color: #f2eee2; */
+    color: #91471d;
     background-color: #fffbf1;
 }
 
@@ -29,11 +29,6 @@ header {
 
 
 /* 各自スタイルシートで    margin-top: 200px;を設定 */
-
-.kv {
-    position: relative;
-    top: 100px;
-}
 
 .kv img {
     margin: 0 auto;
@@ -85,18 +80,13 @@ h3 {
 
 /* ↓もっと見るボタン */
 .btn {
-    font-size: 1.6rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.5;
     position: relative;
     display: inline-block;
-    padding: 1rem 4rem;
+    padding: 0.5rem 2rem;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     text-align: center;
     vertical-align: middle;
