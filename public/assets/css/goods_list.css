@@ -6,7 +6,6 @@ html {
 
 section {
     margin: 0 auto;
-    /* text-align: center; */
 }
 
 h2 {
@@ -15,20 +14,20 @@ h2 {
 }
 
 h2::before {
-    content: '';/*何も入れない*/
+    content: '';
     display: inline-block;
-    width: 50px;/*画像の幅*/
-    height: 50px;/*画像の高さ*/
+    width: 45px;
+    height: 40px;
     background-image: url(../images/illustrations/tanuki-gift2.png);
     background-size: contain;
     vertical-align: middle;
 }
 
 h2::after {
-content: '';/*何も入れない*/
+    content: '';
     display: inline-block;
-    width: 50px;/*画像の幅*/
-    height: 50px;/*画像の高さ*/
+    width: 45px;
+    height: 40px;
     background-image: url(../images/illustrations/tanuki-gift2.png);
     background-size: contain;
     vertical-align: middle;
@@ -46,20 +45,20 @@ h3 {
 }
 
 h3::before {
-    content: '';/*何も入れない*/
+    content: '';
     display: inline-block;
-    width: 50px;/*画像の幅*/
-    height: 50px;/*画像の高さ*/
+    width: 45px;
+    height: 40px;
     background-image: url(../images/illustrations/tanuki-gift2.png);
     background-size: contain;
     vertical-align: middle;
 }
 
 h3::after {
-content: '';/*何も入れない*/
+    content: '';
     display: inline-block;
-    width: 50px;/*画像の幅*/
-    height: 50px;/*画像の高さ*/
+    width: 45px;
+    height: 40px;
     background-image: url(../images/illustrations/tanuki-gift2.png);
     background-size: contain;
     vertical-align: middle;
@@ -171,6 +170,11 @@ width: 160px;
 }
 
 @media screen and (min-width:900px) {
+
+h2{
+    margin-top: 200px;
+}
+
 .goods-photo{
     max-width: 200px;
 }
