@@ -9,7 +9,7 @@ section {
 }
 
 h2 {
-    margin-top: 150px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -20,7 +20,7 @@ h2::before {
     height: 40px;
     margin-right: 10px;
     background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-food2.png);
+    background-image: url(../images/illustrations/tanuki-food.png);
     background-size: contain;
     vertical-align: middle;
 }
@@ -32,7 +32,7 @@ h2::after {
     height: 40px;
     margin-left: 10px;
     background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-food3.png);
+    background-image: url(../images/illustrations/tanuki-food2.png);
     background-size: contain;
     vertical-align: middle;
 }
