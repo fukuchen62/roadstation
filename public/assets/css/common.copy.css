@@ -323,7 +323,7 @@ footer {
 
     /* background-color: #dce7be; */
     background-image: url(../images/footer/sudati.png);
-    opacity: 0.7;
+    /* opacity: 0.7; */
     background-size: cover;
     /* object-fit: cover; */
     background-position: center;
