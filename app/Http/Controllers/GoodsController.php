@@ -29,11 +29,16 @@ class GoodsController extends Controller
         $craft = ProductType::where('goods_category_id', '3')
             ->get();
 
+        // ProductTyepsテーブルから、グルメのデータを取得
+        $gourmet = ProductType::where('goods_category_id', '4')
+            ->get();
+
         $data = [
             'goods_type' => $items,
             'agricultural_products' => $agricultural_products,
             'seafood' => $seafood,
             'craft' => $craft,
+            'gourmet' => $gourmet,
         ];
         return view('fronts.goods_list', $data);
     }

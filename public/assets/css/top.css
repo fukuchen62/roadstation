@@ -22,6 +22,9 @@
     margin-bottom: 15px;
 }
 
+.flex li {
+    text-align: left;
+}
 
 .news__area--data {
     margin-right: 20px;
