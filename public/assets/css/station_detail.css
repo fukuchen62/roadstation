@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .kv img{
-object-position:bottom;
+/* object-position:bottom; */
 }
 
 h2,

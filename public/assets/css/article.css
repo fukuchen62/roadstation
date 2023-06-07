@@ -1,6 +1,11 @@
 @charset "utf-8";
 
-
+.blog-banner {
+    max-width: 360px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
 
 .back-btn {
     margin-bottom: 50px;
@@ -9,20 +14,18 @@
 .blog-title {
     margin-bottom: 30px;
     font-size: 20px;
+    width: 100%;
+    word-wrap: break-word;
 }
-
-
 
 .blog-img {
     max-width: 360px;
     height: auto;
     width: 100%;
-
 }
 
 .roadstation-information {
     font-size: 20px;
-
 }
 
 .blogarticle {
@@ -46,18 +49,14 @@
     font-size: 20px;
 }
 
-
 .relatedarticle-img {
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
 
-
 .before-next-pcbtn {
-
     display: none;
-
 }
 
 .before-next-mobilebtn {
@@ -81,18 +80,12 @@
 }
 
 @media screen and (min-width:761px) {
-
-
     .blog-banner {
         max-width: 761px;
         height: auto;
         width: 100%;
         object-fit: cover;
-
     }
-
-
-
 
     .back-btn {
         margin-bottom: 50px;
@@ -102,28 +95,19 @@
         margin-bottom: 30px;
     }
 
-
-
     .blog-img {
-
         object-fit: cover;
     }
 
     .blog-text {
         text-align: start;
         margin-bottom: 50px;
-
     }
-
-
-
-
 
     .blog-img {
         max-width: 761px;
         height: auto;
         width: 100%;
-
     }
 
     .blogarticle {
@@ -141,22 +125,16 @@
         margin-bottom: 50px;
     }
 
-
     .relatedarticle-title {
         margin-bottom: 20px;
     }
-
 
     .relatedarticle {
         display: flex;
         gap: 50px;
         margin-bottom: 50px;
         justify-content: center;
-
-
     }
-
-
 
     .relatedarticle-img {
         width: 200px;
@@ -168,14 +146,10 @@
         display: flex;
         justify-content: center;
         gap: 50px;
-
     }
 
-
     .before-next-pcbtn {
-
         display: none;
-
     }
 
     .before-next-mobilebtn {
@@ -184,52 +158,42 @@
         gap: 50px;
         margin-bottom: 50px;
     }
-
-
-
-
-
-
-
-
 }
 
 @media screen and (min-width:901px) {
-
     .kv img {
         object-position: center;
     }
 
-
+    .blog-banner {
+        max-width: 1400px;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 150px;
+    }
 
     .back-btn {
         margin-bottom: 50px;
     }
 
     .blog-main {
-
         justify-content: space-between;
         width: 100%;
         position: relative;
-        margin-top: 150px;
-
     }
 
     .blog-wrapper {
         width: 100%;
         gap: 200px;
         display: flex;
-
     }
 
     .blog-title {
         margin-bottom: 30px;
     }
 
-
-
     .blog-img {
-
         object-fit: cover;
         width: 100%;
         max-width: 700px;
@@ -238,35 +202,27 @@
     .blog-text {
         text-align: start;
         margin-bottom: 50px;
-
     }
 
     .address {
         text-align: start;
         margin-bottom: 50px;
         font-size: 16px;
-
-
     }
 
     .relatedarticle-title {
         margin-bottom: 20px;
     }
 
-
     .relatedarticle {
         display: flex;
         gap: 50px;
         margin-bottom: 50px;
-
-
-
     }
 
     .relatedarticle .img {
         width: 300px;
         height: 300px;
-
     }
 
     .before-next-pcbtn {
@@ -274,13 +230,11 @@
         justify-content: center;
         gap: 50px;
         margin-bottom: 50px;
-
     }
 
     .before-next-mobilebtn {
         display: none;
     }
-
 
     .side {
         width: 45%;
@@ -289,10 +243,5 @@
         background-color: #1ca10a;
         color: cornsilk;
         left: 70%;
-        margin-top: 150px;
-
-
     }
-
-
 }

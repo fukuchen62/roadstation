@@ -10,7 +10,6 @@ use App\Models\BlogCategory;
 class BlogController extends Controller
 {
 
-
     /**
      * blogMainView function
      * ブログ記事（本文と関連記事）の取得と表示
@@ -21,6 +20,10 @@ class BlogController extends Controller
      */
     public function blogMainView(Request $request)
     {
+
+        $id_list = Blog::where('id')
+        ->where('is_show',1)
+        ->get();
 
         /**
          * ブログ記事（本文）の検索と取得
@@ -73,6 +76,8 @@ class BlogController extends Controller
             'categories' => $items,
             'blog_categories' => $category,
             'message' => $msg,
+            'id_list' => $id_list,
+
         ];
         // var_dump($data);
 
