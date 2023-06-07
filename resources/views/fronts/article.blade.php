@@ -27,7 +27,7 @@
     <div class="blog-wrapper">
         <section class="blog-main">
             <p class="back-btn">
-                <a href="blog_list.html">＜＜一覧へ戻る</a>
+                <a href="{{ url('blog') }}">＜＜一覧へ戻る</a>
             </p>
             @foreach ($blogs as $blog)
                 <h3 class="blog-title">{{ $blog->title }}</h3>

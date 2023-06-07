@@ -13,6 +13,19 @@
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
 
+    <style>
+        .link{
+            margin: 0 auto;
+            margin-top: 16px;
+        }
+        .pagination {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .pagination li {
+            display: inline-block;
+        }
+    </style>
 @endsection
 
 
@@ -25,15 +38,14 @@
         @foreach ($blogs as $blog)
             <a class="blog-card"
                 href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}">
-                <h2>{{ $blog->title }}</h2>
                 <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
-                <p class="text">{!! $blog->content !!}</p>
-                <p>登録日時：{{ $blog['created_at']->format('Y年n月j日') }}</p>
-                <p>カテゴリー名：{{ $blog->blogCategory->getName() }}</p>
+                <h3>{{ $blog->title }}</h3>
+                {!! $blog->overview !!}
+                <p>●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
             </a>
         @endforeach
                 {{-- ページネーション表示部分 --}}
-                {{ $blogs->links('pagination::bootstrap-4') }}
+                <div class="link">{{ $blogs->links('pagination::bootstrap-4') }}</div>
         </div>
         {{-- サイドバーのカテゴリー一覧の表示部分 --}}
         <section class="side">
