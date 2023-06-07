@@ -7,6 +7,7 @@
 
 
 h2 {
+    margin-top: 150px;
     margin-bottom: 30px;
 }
 
@@ -189,6 +190,12 @@ dd img {
 
 
 @media screen and (min-width:901px) {
+
+    h2 {
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
+
     .stationlist-banner {
         max-width: 1400px;
         height: auto;
