@@ -113,7 +113,7 @@
     @include('includes.front_header')
 
     {{-- メインコンテンツ --}}
-    <main id="main">
+    <main id="main" class="wrapper">
         @yield('content')
     </main>
 
