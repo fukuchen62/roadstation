@@ -24,13 +24,13 @@ h4 {
 }
 
 
-
-.wrapper {
-    margin-top: 300px;
-}
+/* .wrapper {
+    margin-top: 150px; 
+} */
 
 
 .attention {
+    margin-top: 230px;
 
     margin-bottom: 30px;
 }
@@ -71,20 +71,26 @@ h2 {
 
     /* max-width: 220px; */
     width: 100%;
-    margin: 30px auto 30px auto;
+    /* margin: 30px auto 30px auto; */
     text-align: center;
     font-size: 32px;
+    margin-top: 300px;
+
 
 }
 
 .activity-delimiter {
     margin-bottom: 100px;
+    background-color: #ffff;
+    border-radius: 20px;
+    padding: 30px;
 }
 
 .activity-photo {
     max-width: 550px;
     width: 100%;
     margin-bottom: 30px;
+    border-radius: 20px;
 }
 
 .activity-group {
@@ -163,7 +169,17 @@ h2 {
         object-position: 80% 20%;
 
 
+
     }
+
+
+    /* h2 {
+        width: 100%;
+        margin: 30px auto 30px auto;
+        text-align: center;
+        font-size: 32px;
+        margin-top: 150px; */
+    /* } */
 
     h3 {
         font-size: 32px;
@@ -176,11 +192,10 @@ h2 {
 
 
 
-    .attention-box {
-        position: relative;
-    }
+
 
     .attention {
+
         margin-bottom: 30px;
     }
 
