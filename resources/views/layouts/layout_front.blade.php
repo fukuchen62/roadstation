@@ -108,6 +108,9 @@
     {{-- ヘッダー --}}
     @include('includes.front_header')
 
+    {{-- keyビジュアル --}}
+    @yield('key_visual')
+
     {{-- メインコンテンツ --}}
     <main id="main" class="wrapper">
         @yield('content')
