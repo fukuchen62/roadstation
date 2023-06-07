@@ -30,7 +30,7 @@ h4 {
 
 
 .attention {
-    margin-top: 230px;
+    margin-top: 50px;
 
     margin-bottom: 30px;
 }
@@ -91,6 +91,7 @@ h2 {
     width: 100%;
     margin-bottom: 30px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .activity-group {
@@ -165,13 +166,18 @@ h2 {
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
-    .kv-img {
+    .kv img {
         object-position: 80% 20%;
 
 
 
     }
 
+    .attention {
+        margin-top: 230px;
+
+        margin-bottom: 30px;
+    }
 
     /* h2 {
         width: 100%;

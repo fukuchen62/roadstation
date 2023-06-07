@@ -202,7 +202,9 @@
 
 @media screen and (min-width:901px) {
 
-
+    .kv img {
+        object-position: center;
+    }
 
 
     .blog-banner {
