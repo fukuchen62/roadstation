@@ -44,7 +44,7 @@
                     @php
                         $ts = strtotime($news->created_at);
                     @endphp
-                    <li> <a href="{{route('newsdetail')}}">{{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
+                    <li> <a href="{{route('newsdetail')}}?id={{$news->id}}">{{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
                             {!! $news->title !!}</a>
                     </li>
                 </ul>
@@ -56,9 +56,9 @@
         <section class="area-map">
             <div class="map">
                 <img class="tokusimamap" src="{{ asset('assets/images/tizu.png') }}" alt="地図">
-                <a class="east" href="">東部</a>
-                <a class="west" href="">西部</a>
-                <a class="south" href="">南部</a>
+                <a class="east" href="{{route('areasearch')}}?id=1">東部</a>
+                <a class="west" href="{{route('areasearch')}}?id=2">西部</a>
+                <a class="south" href="{{route('areasearch')}}?id=3">南部</a>
             </div>
             <p class="more-btn"><a href="">詳細検索</a></p>
         </section>
