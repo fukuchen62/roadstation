@@ -294,7 +294,8 @@ footer {
 
     min-width: 320px;
     height: 400px;
-    background-image: url(../images/footer/sudati.png);
+    background-color: #86cc7f;
+    /* background-image: url(../images/footer/sudati.png); */
     /* opacity: 0.7; */
     background-size: cover;
     background-position: center;

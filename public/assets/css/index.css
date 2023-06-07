@@ -403,7 +403,7 @@ imgcontent-wrapper .heading {
         max-width: 80%;
         width: 100%;
         height: auto;
-
+        margin-bottom: 20px;
     }
 
     .east {
@@ -742,13 +742,6 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-
-    .tokusimamap {
-        margin: 0 auto;
-        max-width: 75%;
-        width: 100%;
-        height: auto;
-    }
 
     .east {
         top: 20%;
