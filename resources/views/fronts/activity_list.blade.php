@@ -98,9 +98,6 @@
         </section>
     @endforeach
 
-    </section>
-    @endforeach
-
     <section class="blog">
         <div class="blog-btn">
 
