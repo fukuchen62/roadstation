@@ -247,3 +247,52 @@ Route::get(
     'cms-news-delete',
     'App\Http\Controllers\AdminNewsController@newsDelete'
 )->name('cms-newsremove');
+
+/**
+ * 道駅特産品の一覧画面
+ */
+Route::get(
+    'cms-product-types',
+    'App\Http\Controllers\AdminGoodsController@index'
+)->name('cms-producttypes');
+
+/**
+ * 道駅特産品の新規登録画面
+ */
+Route::get(
+    'cms-producttypes-new',
+    'App\Http\Controllers\AdminGoodsController@newsInput'
+)->name('cms-producttypesinput');
+
+/**
+ * 道駅特産品の新規登処理
+ */
+Route::post(
+    'cms-producttypes-new',
+    'App\Http\Controllers\AdminGoodsController@newsCreate'
+)->name('cms-producttypescreate');
+
+/**
+ * 道駅特産品の編集画面
+ */
+Route::get(
+    'cms-producttypes-edit',
+    'App\Http\Controllers\AdminGoodsController@newsEdit'
+)->name('cms-producttypesedit');
+
+/**
+ * 道駅特産品の編集登録
+ */
+Route::post(
+    'cms-producttypes-edit',
+    'App\Http\Controllers\AdminGoodsController@newsUpdate'
+)->name('cms-producttypesupdate');
+
+
+/**
+ * 道駅特産品の削除処理
+ */
+Route::get(
+    'cms-producttypes-delete',
+    'App\Http\Controllers\AdminGoodsController@newsDelete'
+)->name('cms-producttypesremove');
