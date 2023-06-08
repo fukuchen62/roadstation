@@ -22,13 +22,11 @@ body {
 }
 
 header {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100px;
+    background: #99d184;
 }
-
-
-/* 各自スタイルシートで    margin-top: 200px;を設定 */
 
 .kv {
     position: relative;
@@ -44,11 +42,10 @@ header {
 }
 
 .site-logo img {
-    position: absolute;
+    position: fixed;
     width: 100px;
     height: auto;
     z-index: 100;
-
 }
 
 h1 {
@@ -315,8 +312,6 @@ footer {
     clear: both;
 }
 
-
-
 .footer-menu {
     width: 200px;
     margin: -60px auto;
@@ -373,6 +368,7 @@ footer {
 }
 
 @media screen and (min-width:601px) {
+
     .kv img {
         margin: 0 auto;
         object-fit: cover;
@@ -428,6 +424,13 @@ footer {
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:900px) {
+
+    header {
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+
     .site-logo img {
         padding: 5px;
         z-index: 100;
