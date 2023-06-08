@@ -23,7 +23,6 @@
 
 
 @section('content')
-<div class="wrapper">
     <section class="agricultural-products-goods">
             <h2 class="title">特産品一覧</h2>
             <h3 class="headline agricultural-products">農産物</h3>
@@ -157,7 +156,6 @@
             </div>
             @endforeach
         </section>
-</div>
 @endsection
 
 {{-- 該当ページ専用JS --}}
