@@ -16,8 +16,8 @@
     <h3>道の駅特産品一覧</h3>
     {{-- 以下はshowのところにはめ込む --}}
     <ul class="menubar">
-        <li><a href="./newsshow">一覧画面へ</a></li>
-        <li><a href="./newsentry">新規登録</a></li>
+        <li><a href="{{ route('cms-goodslist') }}">一覧画面へ</a></li>
+        <li><a href="{{ route('cms-goodsinput') }}">新規登録</a></li>
     </ul>
 
     {{-- 検索条件入力フォーム --}}
