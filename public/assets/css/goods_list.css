@@ -9,6 +9,7 @@ section {
 }
 
 h2 {
+    padding: 20px;
     margin-top: 50px;
     text-align: center;
     background-image: url(../images/bg_headline.png);

@@ -263,8 +263,15 @@
 /*うどんたぬきアニメの設定 */
 .anime2 {
     position: absolute;
-    top: -5px;
+    top: 0px;
     left: 150px;
+}
+
+@media screen and (min-width:901px) {
+    .anime2 {
+        top: 15px;
+        left: 200px;
+    }
 }
 
 /* うどんアニメの設定 */
@@ -274,6 +281,12 @@
     left: 10px;
 }
 
+@media screen and (min-width:901px) {
+    .anime3 {
+        top: 110px;
+        left: 20px;
+    }
+}
 
 .activity-strapline {
     display: none;
@@ -502,11 +515,25 @@ imgcontent-wrapper .heading {
         left: 150px;
     }
 
+    @media screen and (min-width:901px) {
+        .anime1 {
+            top: 15px;
+            left: 200px;
+        }
+    }
+
     /* 人参アニメの設定 */
     .anime4 {
         position: absolute;
         top: 80px;
         left: 1px;
+    }
+
+    @media screen and (min-width:901px) {
+        .anime4 {
+            top: 120px;
+            left: 20px;
+        }
     }
 
     .goods-strapline {
