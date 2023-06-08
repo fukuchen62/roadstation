@@ -15,6 +15,13 @@
 
 @endsection
 
+{{-- キービジュアル --}}
+@section('key_visual')
+    <div class="kv">
+        <img class="sub-keyvisual" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="サブキービジュアル">
+    </div>
+@endsection
+
 {{-- メイン --}}
 @section('content')
     <div class="attention-box">

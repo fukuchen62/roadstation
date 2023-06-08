@@ -1,12 +1,18 @@
 @charset "utf-8";
 
+
+/* .wrapper {
+    margin-top: 250px;
+} */
+
+
 .kv img {
     object-position: center;
     z-index: -1;
 }
 
 h2 {
-    margin-top: 150px;
+    /* margin-top: 150px; */
     margin-bottom: 50px;
 
 
@@ -54,9 +60,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity2.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/east1.png);
     background-size: cover;
     vertical-align: middle;
     margin-right: 10px;
@@ -71,9 +78,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/east2.png);
     background-size: cover;
     vertical-align: middle;
     margin-left: 10px;
@@ -101,9 +109,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity2.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/west1.png);
     background-size: cover;
     vertical-align: middle;
     margin-right: 10px;
@@ -118,9 +127,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/west2.png);
     background-size: cover;
     vertical-align: middle;
     margin-left: 10px;
@@ -151,9 +161,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity2.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/south1.png);
     background-size: cover;
     vertical-align: middle;
     margin-right: 10px;
@@ -166,9 +177,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/south2.png);
     background-size: cover;
     vertical-align: middle;
     margin-left: 10px;
@@ -192,7 +204,7 @@ dd {
 }
 
 .stationlist-title {
-    margin-top: 250px;
+    /* margin-top: 250px; */
     text-align: center;
     margin-bottom: 30px;
     background-image: url(../images/bg_headline.png);
@@ -260,8 +272,12 @@ dd img {
 
 @media screen and (min-width:601px) {
 
+    /* .wrapper {
+        margin-top: 250px;
+    } */
+
     .stationlist-title {
-        margin-top: 300px;
+        /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
     }
@@ -269,21 +285,21 @@ dd img {
 
 
 @media screen and (min-width:761px) {
-
-    wrapper {
-        margin-top: 200px;
-    }
+    /* 
+    .wrapper {
+        margin-top: 250px;
+    } */
 
 
 
     h2 {
-        margin-top: 250px;
+        /* margin-top: 250px; */
         margin-bottom: 30px;
     }
 
 
     .stationlist-title {
-        margin-top: 300px;
+        /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
     }
@@ -344,6 +360,24 @@ dd img {
 }
 
 
+@media screen and (min-width:900px) {
+    /* 
+    .wrapper {
+        margin-top: 250px;
+    } */
+
+
+    .kv {
+        object-position: center;
+        position: relative;
+        top: 0;
+    }
+
+    .kv-img {
+        z-index: -1;
+    }
+
+}
 
 
 
@@ -352,6 +386,10 @@ dd img {
 
 
 @media screen and (min-width:901px) {
+
+    /* .wrapper {
+        margin-top: 250px;
+    } */
 
     .kv {
         object-position: center;

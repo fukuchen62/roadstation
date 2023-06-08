@@ -61,8 +61,6 @@ class BlogController extends Controller
         $category = BlogCategory::all();
         // var_dump($category);
 
-        $msg = '関連する記事はありません。';
-
 
         /**
          * $dataにblogとcategories、blog_categoriesを代入初期化・二次元配列）
@@ -75,9 +73,7 @@ class BlogController extends Controller
             'blogs' => $item,
             'categories' => $items,
             'blog_categories' => $category,
-            'message' => $msg,
             'id_list' => $id_list,
-
         ];
         // var_dump($data);
 
@@ -126,24 +122,24 @@ class BlogController extends Controller
                     ->where('is_show', 1)
                     ->where('blog_category_id', 1)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(3);
             } elseif ($request->id == 2) {
                 $items = Blog::where('deleted_at', null)
                     ->where('is_show', 1)
                     ->where('blog_category_id', 2)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(3);
             } elseif ($request->id == 3) {
                 $items = Blog::where('deleted_at', null)
                     ->where('is_show', 1)
                     ->where('blog_category_id', 3)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(3);
             } else {
                 $items = Blog::where('deleted_at', null)
                     ->where('is_show', 1)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(3);
             }
 
             /**

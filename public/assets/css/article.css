@@ -1,5 +1,22 @@
 @charset "utf-8";
 
+
+
+h4 {
+    text-align: start;
+
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.kv img {
+    object-position: center;
+    z-index: -1;
+}
+
+
 .blog-banner {
     max-width: 360px;
     height: auto;
@@ -53,6 +70,10 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
+}
+
+.relatedarticle-text {
+    text-align: start;
 }
 
 .before-next-pcbtn {
@@ -161,9 +182,22 @@
 }
 
 @media screen and (min-width:901px) {
-    .kv img {
+
+    .kv {
         object-position: center;
+        position: relative;
+        top: 0;
     }
+
+    .kv-img {
+
+        object-position: center;
+
+    }
+
+
+
+
 
     .blog-banner {
         max-width: 1400px;
