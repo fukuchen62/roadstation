@@ -8,14 +8,7 @@
 h2 {
     margin-top: 150px;
     margin-bottom: 50px;
-    background-image: url(../images/bg_header_small01.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 100px;
-    padding: 20px;
-    color: #B45A27;
-    margin: 0 auto;
+
 
 
 }
@@ -202,6 +195,11 @@ dd {
     margin-top: 250px;
     text-align: center;
     margin-bottom: 30px;
+    background-image: url(../images/bg_headline.png);
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #B45A27;
+    text-align: center;
 }
 
 .east {
