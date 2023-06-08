@@ -61,8 +61,6 @@ class BlogController extends Controller
         $category = BlogCategory::all();
         // var_dump($category);
 
-        $msg = '関連する記事はありません。';
-
 
         /**
          * $dataにblogとcategories、blog_categoriesを代入初期化・二次元配列）
@@ -75,7 +73,6 @@ class BlogController extends Controller
             'blogs' => $item,
             'categories' => $items,
             'blog_categories' => $category,
-            'message' => $msg,
             'id_list' => $id_list,
 
         ];
