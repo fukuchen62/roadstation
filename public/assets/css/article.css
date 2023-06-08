@@ -68,9 +68,9 @@
 
 .side {
     height: 400px;
-    border: 3px solid #1ca10a;
-    background-color: #1ca10a;
-    color: cornsilk;
+    border: 3px solid #a7d28d;
+    background-color: #a7d28d;
+    color: #8c5243;
     padding: 20px 10px;
 }
 
@@ -239,9 +239,10 @@
     .side {
         width: 45%;
         height: 400px;
-        border: 3px solid #1ca10a;
-        background-color: #1ca10a;
-        color: cornsilk;
+        border: 3px solid #a7d28d;
+        background-color: #a7d28d;
+        color: #8c5243;
+        padding: 20px 10px;
         left: 70%;
     }
 }
