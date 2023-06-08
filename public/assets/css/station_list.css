@@ -2,9 +2,8 @@
 
 .kv img {
     object-position: center;
+    z-index: -1;
 }
-
-
 
 h2 {
     margin-top: 150px;
