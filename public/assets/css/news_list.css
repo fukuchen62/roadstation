@@ -2,7 +2,6 @@
 
 .wrapper {
     margin: 0 auto;
-    margin-top: 200px;
 }
 
 a:hover {
@@ -38,13 +37,21 @@ p {
     width: 100%;
     height: auto;
     padding: 20px;
-    border: 3px solid #1ca10a;
+    box-shadow: 15px 10px 3px 0 #A7D28D;
+    border: solid 3px #8C5243;
     box-sizing: border-box;
     border-radius: 20px;
     justify-content: center;
     margin-bottom: 50px;
     background-color: #fff;
     word-break: break-all;
+}
+
+.blog-card:hover {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    box-shadow: none;
 }
 
 .blog-card img {
@@ -68,6 +75,10 @@ p {
 }
 
 @media screen and (min-width:601px) {
+    .wrapper {
+        margin: 0 auto;
+        /* margin-top: 200px; */
+    }
 
     .blog-wrapper {
         display: flex;
