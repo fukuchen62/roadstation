@@ -27,7 +27,7 @@ class ActivityController extends Controller
          */
         $items = Activity::all();
 
-        $category = BlogCategory::get($id);
+        $category = BlogCategory::where('id')->get();
 
         /**
          * $dataに$itemを代入

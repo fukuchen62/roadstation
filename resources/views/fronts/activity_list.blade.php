@@ -15,8 +15,11 @@
 
 @endsection
 
+{{-- キービジュアル --}}
 @section('key_visual')
-    <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル">
+    <div class="kv">
+        <img class="sub-keyvisual" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="サブキービジュアル">
+    </div>
 @endsection
 
 {{-- メイン --}}
@@ -80,7 +83,7 @@
                     @endphp
 
                     <li class="roadstation-frame"><a
-                            href="{{ url('blog-detail') }}?id={{ $id }}&blog_category_id={{ $blog_category->id }}">{{ $title }}</a>
+                            href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
                     </li>
                 @endforeach
             </ul>

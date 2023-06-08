@@ -12,17 +12,18 @@
 
 {{-- CSS --}}
 @section('pageCss')
-
     {{-- common CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/article.css') }}">
-
 @endsection
 
+{{-- キービジュアル --}}
 @section('key_visual')
-    <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル">
+<div class="kv">
+    <img class="sub-keyvisual" src="{{ asset('assets/images/article/ブログ.png') }}" alt="サブキービジュアル">
+</div>
 @endsection
 
 {{-- メイン --}}

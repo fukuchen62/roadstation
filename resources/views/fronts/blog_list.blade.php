@@ -31,7 +31,7 @@
 @endsection
 
 @section('key_visual')
-    <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル">
+    <img class="sub-keyvisual" src="{{ asset('assets/images/blog_list/blog1.jpg') }}" alt="サブキービジュアル">
 @endsection
 
 @section('content')

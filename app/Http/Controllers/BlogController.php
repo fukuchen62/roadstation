@@ -74,7 +74,6 @@ class BlogController extends Controller
             'categories' => $items,
             'blog_categories' => $category,
             'id_list' => $id_list,
-
         ];
         // var_dump($data);
 
