@@ -13,7 +13,7 @@
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
 
-    {{--  <style>
+    {{-- <style>
         .link {
             margin: 0 auto;
             margin-top: 16px;
@@ -36,6 +36,7 @@
 
 @section('content')
 
+    <h2>ブログ一覧</h2>
     <div class="blog-main">
         <div class="blog-wrapper">
 
