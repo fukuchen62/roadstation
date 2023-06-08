@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    position: relative;
     font-size: 16px;
     font-family: 'Zen Maru Gothic', sans-serif;
     color: #91471d;
@@ -369,6 +370,11 @@ footer {
 }
 
 @media screen and (min-width:601px) {
+
+    .kv {
+        position: relative;
+        top: 0px;
+    }
 
     .kv img {
         margin: 0 auto;
