@@ -76,6 +76,7 @@ dd {
 
 .district {
     background-image: url(../images/bg_headline.png);
+    background-repeat: no-repeat;
     margin-top: 200px;
     padding: 20px;
 }
@@ -86,7 +87,8 @@ dd {
     position: absolute;
     width: 100%;
     height: 100px;
-    /* float: left; */
+    float: left;
+    z-index: -1;
 }
 
 .area {
@@ -162,6 +164,11 @@ dd img {
 
     .area-btn {
         font-size: 2rem;
+    }
+
+    .kv{
+        position: relative;
+        top: 0;
     }
 
     .kv img {
