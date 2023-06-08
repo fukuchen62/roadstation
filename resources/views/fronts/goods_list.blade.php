@@ -12,13 +12,10 @@
 @endsection
 
 @section('key_visual')
-
-{{-- <div class="kv">
-<figure>
-    <img src="{{asset('assets/images/goods_list.img/goods_list_header.jpg')}}" alt="特産品ページ">
-</figure>
-</div> --}}
-    {{-- <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル"> --}}
+<!-- キービジュアル -->
+        <div class="kv">
+            <figure><img src="{{asset('assets/images/goods_list.img/goods_list_header.jpg')}}" alt="特産品ページ"></figure>
+        </div>
 @endsection
 
 
