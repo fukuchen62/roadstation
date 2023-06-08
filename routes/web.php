@@ -293,7 +293,7 @@ Route::post(
  * 道の駅特産品の削除処理
  */
 Route::get(
-    'cms-producttypes-delete',
+    'cms-goods-delete',
     'App\Http\Controllers\AdminGoodsController@goodsDelete'
 )->name('cms-goodsremove');
 
