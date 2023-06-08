@@ -42,7 +42,7 @@ dd {
 .east-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 23px;
+    /* padding: 20px 23px; */
     border-bottom: dotted 10px #e7d955;
     font-size: 30px;
     color: #B45A27;
@@ -89,7 +89,7 @@ dd {
 .west-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 23px;
+    /* padding: 20px 23px; */
     border-bottom: dotted 10px #e7d955;
     font-size: 30px;
     color: #B45A27;
@@ -136,7 +136,7 @@ dd {
 .south-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 23px;
+    /* padding: 20px 23px; */
     border-bottom: dotted 10px #e7d955;
     font-size: 30px;
     color: #B45A27;
@@ -233,7 +233,19 @@ dd {
     border-radius: 20px;
     box-shadow: 15px 10px 3px 0 #a7d28d;
     border: solid 3px #8c5243;
+    background-color: #ffff;
 }
+
+.card:hover {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    box-shadow: none;
+}
+
+
+
+
 
 dt {
     padding-top: 10px;

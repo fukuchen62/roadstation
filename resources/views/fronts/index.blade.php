@@ -31,36 +31,44 @@
 
 {{-- メイン --}}
 @section('content')
-    <main class="wrapper">
         <section class="news-box">
-            <div class="new1">
+            <div>
                 <h2 class="news-title">ニュース</h2>
-                <p class="more-btn news-pcbtn"><a href="news_list.html">もっと見る</a></p>
+                <a class="pcbtn btn btn-border-shadow btn-border-shadow--color" href="{{ url('news') }}">もっと見る</a>
             </div>
 
-            <div class="news2">
+            <!-- 記事リスト -->
+            <ul class="article-list">
                 @foreach ($news as $news)
                 <ul>
                     @php
                         $ts = strtotime($news->created_at);
                     @endphp
-                    <li> <a href="{{route('newsdetail')}}?id={{$news->id}}">{{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
-                            {!! $news->title !!}</a>
+                    <li>
+                    <a href="{{route('newsdetail')}}?id={{$news->id}}">
+                    <div class="text-alignLeft">
+                    {{date('Y年m月d日', $ts)}}
+
+                    {{$news->newsCategory->category_name }}
+                    </div>
+                            {!! $news->title !!}
+                    </a>
                     </li>
                 </ul>
                 @endforeach
-            </div>
-            <p class="news-mobilebtn"><a href="{{ url('news') }}">もっと見る</a></p>
+            </ul>
+            <p class="news-mobilebtn btn btn-border-shadow btn-border-shadow--color"><a href="{{ url('news') }}">もっと見る</a></p>
         </section>
+
 
         <section class="area-map">
             <div class="map">
-                <img class="tokusimamap" src="{{ asset('assets/images/tizu.png') }}" alt="地図">
+                <img class="tokusimamap" src="{{ asset('assets/images/map.png') }}" alt="地図">
                 <a class="east" href="{{route('areasearch')}}?id=1">東部</a>
                 <a class="west" href="{{route('areasearch')}}?id=2">西部</a>
                 <a class="south" href="{{route('areasearch')}}?id=3">南部</a>
             </div>
-            <p class="more-btn"><a href="{{route('ditailsearch')}}">詳細検索</a></p>
+            <a class="btn btn-border-shadow btn-border-shadow--color" href="{{route('ditailsearch')}}">詳細検索</a>
         </section>
 
         <section>
@@ -75,8 +83,11 @@
                         <h2 class="sp-h2">特産品</h2>
                         <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
 
-                        <a href="{{route('goods')}}">
-                            <p class="pcbtn">もっと見る</p>
+                        <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="" width="130px" height="130px" class="anime1">
+
+                        <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="" width="80px" height="80px" class="anime4">
+                        <a class="sp-btn" href="{{route('goods')}}">
+                            もっと見る
                         </a>
                     </li>
                     <li><img class="goods-1" src="../storage/images/index.images/sudati.jpg" alt=""></li>
@@ -84,11 +95,12 @@
                     <li><img class="goods-1" src="../storage/images/index.images/wakame.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/yakiimo.jpg" alt=""></li>
                 </ul>
+
+
                 <a href="{{route('goods')}}">
                     <p class="more-btn mobile-btn">もっと見る</p>
                 </a>
             </div>
-
 
 
             <div class="activity-wrapper">
@@ -101,8 +113,12 @@
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
 
-                        <a href="{{route('activity')}}">
-                            <p class="pcbtn">もっと見る</p>
+                        <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="" width="100px" height="100px" class="anime2">
+
+                        <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="" width="80px" height="80px" class="anime3">
+
+                        <a class="sp-btn" href=" {{route('activity')}}">
+                            もっと見る
                         </a>
                     </li>
 
@@ -113,7 +129,7 @@
                     <li><img class="activity-1" src="../storage/images/index.images/ropeway.jpg" alt=""></li>
                 </ul>
                 <a href="">
-                    <p class="more-btn mobile-btn">もっと見る</p>
+                    <p class="mobilebtn btn btn-border-shadow btn-border-shadow--color">もっと見る</p>
                 </a>
             </div>
         </section>
@@ -122,7 +138,7 @@
             <h2 class="blog-taitle">行ってきたんよ</h2>
             <div class="blog-container">
                 @foreach ($blog as $blog)
-                <a href="{{route('blog')}}?id={{$blog->id}}">
+                <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}">
                     <div class="blog-wrapper">
                         <div class="img-wrapper">
                             <img src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
@@ -146,10 +162,8 @@
         </section>
 
         <div class="blog-btn">
-            <a href="../html/blog_list.html"><img src="../assets/images/blog-btn.png" alt=""></a>
+            <a href="{{route('bloglist')}}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt=""></a>
         </div>
-
-    </main>
 @endsection
 
 {{-- 該当ページ専用JS --}}
