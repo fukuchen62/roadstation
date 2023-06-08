@@ -60,13 +60,22 @@
                 {{--  <P>test:<a href="{{ url('station-detail') }}?id={{ $blog->road_station_id }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>  --}}
             @endforeach
 
-            {{--  @if ($blog->id - 1 > 0)
-        <a href="{{ url('blog-detail') }}?id={{ $blog->id - 1 }}">前の記事へ</a>
-    @endif
+            {{-- 現在の投稿を基準に【次の記事へ】と【前の記事へ】ボタンの表示部分 --}}
+            <div>
+                @if ($blog->previous() != null)
+                    <a
+                        href="{{ url('blog-detail') }}?id={{ $blog->previous()->id }}&blog_category_id={{ $blog->blog_category_id }}">
+                        < 前の記事へ</a>
+                @endif
+            </div>
 
-    @if ($blog->id + 1 > count($blogs))
-        <a href="{{ url('blog-detail') }}?id={{ $blog->id + 1 }}">次の記事へ</a>
-    @endif  --}}
+            <div>
+                @if ($blog->next() != null)
+                    <a
+                        href="{{ url('blog-detail') }}?id={{ $blog->next()->id }}&blog_category_id={{ $blog->blog_category_id }}">次の記事へ
+                        ></a>
+                @endif
+            </div>
 
             {{-- 関連記事の表示部分 --}}
             <h3 class="relatedarticle-title">関連記事</h3>
