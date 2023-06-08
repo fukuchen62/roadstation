@@ -11,28 +11,27 @@ section {
 h2 {
     margin-top: 50px;
     text-align: center;
+    background-image: url(../images/bg_headline.png);
 }
 
-h2::before {
+h3::before {
     content: '';
     display: inline-block;
     width: 45px;
     height: 40px;
-    margin-right: 10px;
     background: no-repeat;
     background-image: url(../images/illustrations/tanuki-food.png);
     background-size: contain;
     vertical-align: middle;
 }
 
-h2::after {
+h3::after {
     content: '';
     display: inline-block;
     width: 45px;
     height: 40px;
-    margin-left: 10px;
     background: no-repeat;
-    background-image: url(../images/illustrations/tanuki-food2.png);
+    background-image: url(../images/illustrations/tanuki-food.png);
     background-size: contain;
     vertical-align: middle;
 }
@@ -44,31 +43,35 @@ h3 {
     margin: 30px auto 30px auto;
     text-align: center;
     font-size: 20px;
-    color: #fff;
+    color: #000;
 }
 
 .headline-others{
-    background-color: #008C41;
+    text-decoration: underline dotted #e7d955
 }
 
 .headline-gourmet{
-    background-color: #008C41;
+    text-decoration: underline dotted #e7d955;
 }
 
 .headline-craft{
-    background-color: #008C41;
+    text-decoration: underline dotted #e7d955;
 }
 
 .headline-seafood{
-    background-color: #008C41;
+    text-decoration: underline dotted #e7d955;
 }
 
 .headline-agricultural-products{
-    background-color: #008C41;
+    text-decoration: underline dotted #e7d955;
 }
 
 h4 {
     font-size: 20px;
+}
+
+.title{
+margin-top: 150px;
 }
 
 .goods {
@@ -148,7 +151,7 @@ h4 {
     width: 100%;
     margin: 30px auto auto auto;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 
 .roadstation-frame {
@@ -189,6 +192,10 @@ h4 {
     h2 {
         margin-top: 130px;
     }
+.title{
+margin-top: 230px;
+}
+
 }
 
 @media screen and (min-width:680px) {
@@ -201,6 +208,10 @@ h4 {
 
     h2 {
         margin-top: 250px;
+    }
+
+    h3{
+        font-size: 32px;
     }
 
     .goods-photo {

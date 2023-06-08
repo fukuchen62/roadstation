@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-.kv img{
-/* object-position:0 10%; */
-}
-
 h2,
 h3,
 h4,
@@ -25,15 +21,13 @@ h2 {
 }
 
 .area_category {
+    margin: 150px auto 0 auto;
     text-align: center;
-    margin: 0 auto;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 20px;
     padding: 1rem 0;
-    /* padding: 20px 20px; */
-    /* background-color: #ccc; */
 }
 
 dl {
@@ -47,14 +41,36 @@ dd {
 
 
 .area-btn {
-    padding: 10px 10px;
-    border-radius: 30px;
-    background-color: #ccc;
-    font-size: 1.1rem;
+    margin-top: 30px;
+    /* padding: 10px 10px; */
+    font-size: 16px;
+    text-decoration: underline dotted #e7d955;
 }
 
 .area-btn:hover {
     background-color: #ffffff;
+}
+
+.area-btn::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat;
+    background-image: url(../images/illustrations/tanuki-food.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.area-btn::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat;
+    background-image: url(../images/illustrations/tanuki-food.png);
+    background-size: contain;
+    vertical-align: middle;
 }
 
 .search_results {
@@ -62,30 +78,32 @@ dd {
     margin-bottom: 10px;
 }
 
+.district{
+    background-image: url(../images/bg_headline.png);
+}
+
 .kv img {
     margin: 0 auto;
     object-fit: cover;
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 120px;
     /* float: left; */
 }
 
 .area {
     /* width: 360px; */
     display: flex;
-    /* gap: 40px; */
+    gap: 10px;
     margin: 0 auto;
     /* padding: 80px; */
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .area>h3 {
     display: inline-block;
     /* padding: 20px 30px; */
     border-radius: 20px;
-    color: #ffff;
-    background-color: #ccc;
 }
 
 dt {
@@ -128,8 +146,19 @@ dd img {
     .area-btn {
         padding: 20px 30px;
         border-radius: 30px;
-        background-color: #ccc;
+        font-size: 20px;
     }
+
+.area-btn::before {
+    width: 20px;
+    height: 20px;
+}
+
+.area-btn::after {
+    width: 20px;
+    height: 20px;
+}
+
 }
 
 @media screen and (min-width:901px) {
@@ -153,7 +182,6 @@ dd img {
     .card-list {
         display: flex;
         flex-direction: row;
-
         width: 100%;
     }
 
@@ -187,7 +215,5 @@ dd img {
         display: inline-block;
         padding: 20px 30px;
         border-radius: 50px;
-        color: #ffff;
-        background-color: #ccc;
     }
 }

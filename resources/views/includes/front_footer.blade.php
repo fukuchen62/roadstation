@@ -6,7 +6,6 @@
         </path>
     </svg>
 
-    <img src="../assets/images/" alt="">
     <!-- topへ戻るボタン -->
     <div class="scroll-top">
         <a href="#"><img src="{{ asset('assets/images/illustrations/Tanuki-top.png') }}" alt=""></a>
