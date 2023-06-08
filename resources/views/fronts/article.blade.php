@@ -21,6 +21,9 @@
 
 @endsection
 
+@section('key_visual')
+    <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル">
+@endsection
 
 {{-- メイン --}}
 @section('content')
@@ -36,7 +39,19 @@
                 <p class="date">
                     ●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
                 <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
-                {!! $blog->content !!}
+                {{--  {!! $blog->content !!}  --}}
+                <div>
+                    @php
+                        $text = $blog->content;
+                        $target = ['storage_path', 'link_path'];
+                        $path = [asset('storage/images'), route('blog', ['id' => ''])];
+                        
+                        // 写真pathを絶対パスで置換
+                        $text = str_replace($target, $path, $text);
+                        // 出力
+                        echo $text;
+                    @endphp
+                </div>
             @endforeach
 
 
