@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* 
+/*
 .wrapper {
     margin-top: 250px;
 } */
@@ -25,19 +25,18 @@ section {
 
 
 h2 {
-
     /* max-width: 220px; */
     width: 100%;
     /* margin: 30px auto 30px auto; */
     text-align: center;
     font-size: 32px;
+    font-weight: bold;
     margin-top: 300px;
-
-
 }
 
 h3 {
     font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -46,6 +45,7 @@ h3 {
 h4 {
     font-size: 20px;
     font-weight: bold;
+    text-align: start;
 }
 
 
@@ -92,27 +92,27 @@ h4 {
 .activity-name {
     width: 100%;
     margin-bottom: 30px;
-    text-align: start;
+    text-align: center;
 }
 
 .business-text {
     width: 100%;
     padding-top: 0;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     text-align: start;
 }
 
 .price-text {
     width: 100%;
     padding-top: 0;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     text-align: start;
 }
 
 .conditions-text {
     width: 100%;
     padding-top: 0;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     text-align: start;
 }
 
@@ -124,20 +124,20 @@ h4 {
 }
 
 .activity-place {
-    text-align: center;
+    text-align: start;
 }
 
 .roadstation-frame {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 30px;
 }
 
 .roadstation-name {
     width: 160px;
-    text-align: center;
+    text-align: start;
 }
 
 .activity-blog-place {
@@ -179,7 +179,7 @@ h4 {
 
 @media screen and (min-width:900px) {
 
-    /* 
+    /*
     .wrapper {
         margin-top: 250px;
     } */
