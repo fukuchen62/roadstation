@@ -9,6 +9,8 @@ use App\Models\ProductType;
 use Illuminate\Support\Facades\DB;
 use App\Models\RoadStation;
 use App\Models\SpecialGoods;
+use App\Models\Blog;
+
 
 class Roadstation2Controller extends Controller
 {
@@ -27,11 +29,15 @@ class Roadstation2Controller extends Controller
         $act = Activity::where('road_station_id', $request->id)
             ->get();
 
+        $blog = Blog::where('road_station_id', $request->id)
+            ->get();
+
         $data = [
             'road_stations' => $station,
             'activities' => $act,
             'special_goods' => $goods,
             'product_types' => $pro,
+            'blogs' => $blog,
         ];
 
         return view('fronts.station_detail', $data);

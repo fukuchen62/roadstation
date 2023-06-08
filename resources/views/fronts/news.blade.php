@@ -119,17 +119,6 @@
                     @endforeach
                 </p>
 
-                {{-- <span>
-                    @if ($new->id - 1 > 0)
-                        <a href="{{ url('news-detail') }}?id={{ $new->id - 1 }}">前のページへ</a>
-                    @endif
-                </span>
-                <span>
-                    @if ($new->id + 1 > count($news))
-                        <a href="{{ url('news-detail') }}?id={{ $new->id + 1 }}">次のページへ</a>
-                    @endif
-                </span> --}}
-
                 <div>
                     @if ($new->previous() != null)
                         <a href="{{ url('news-detail') }}?id={{ $new->previous()->id }}">前の記事</a>
