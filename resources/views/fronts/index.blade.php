@@ -32,57 +32,38 @@
 {{-- メイン --}}
 @section('content')
         <section class="news-box">
-             <div>
+            <div>
                 <h2 class="news-title">ニュース</h2>
-                <a class="pcbtn btn btn-border-shadow btn-border-shadow--color" href="news_list.html">もっと見る</a>
-
+                <a class="pcbtn btn btn-border-shadow btn-border-shadow--color" href="{{ url('news') }}">もっと見る</a>
             </div>
 
             <!-- 記事リスト -->
             <ul class="article-list">
-                <li> <a href="">6月7日　　その他<br>
-                        世界初！DMVに乗ってきたんよ</a>
-                </li>
-                <li> <a href="">6月7日　　その他<br>
-                        世界初！DMVに乗ってきたんよ</a>
-                </li>
-                <li> <a href="">6月7日　　その他<br>
-                        世界初！DMVに乗ってきたんよ</a>
-                </li>
-
-            </ul>
-
-
-            <p class="news-mobilebtn btn btn-border-shadow btn-border-shadow--color"><a href="">もっと見る</a></p>
-        </section>
-
-
-
-
-
-            <div class="new1">
-                <h2 class="news-title">ニュース</h2>
-                <p class="more-btn news-pcbtn"><a href="news_list.html">もっと見る</a></p>
-            </div>
-
-            <div class="news2">
                 @foreach ($news as $news)
                 <ul>
                     @php
                         $ts = strtotime($news->created_at);
                     @endphp
-                    <li> <a href="{{route('newsdetail')}}?id={{$news->id}}">{{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
-                            {!! $news->title !!}</a>
+                    <li>
+                    <a href="{{route('newsdetail')}}?id={{$news->id}}">
+                    <div class="text-alignLeft">
+                    {{date('Y年m月d日', $ts)}}
+
+                    {{$news->newsCategory->category_name }}
+                    </div>
+                            {!! $news->title !!}
+                    </a>
                     </li>
                 </ul>
                 @endforeach
-            </div>
-            <p class="news-mobilebtn"><a href="{{ url('news') }}">もっと見る</a></p>
+            </ul>
+            <p class="news-mobilebtn btn btn-border-shadow btn-border-shadow--color"><a href="{{ url('news') }}">もっと見る</a></p>
         </section>
+
 
         <section class="area-map">
             <div class="map">
-                <img class="tokusimamap" src="{{ asset('assets/images/tizu.png') }}" alt="地図">
+                <img class="tokusimamap" src="{{ asset('assets/images/map.png') }}" alt="地図">
                 <a class="east" href="{{route('areasearch')}}?id=1">東部</a>
                 <a class="west" href="{{route('areasearch')}}?id=2">西部</a>
                 <a class="south" href="{{route('areasearch')}}?id=3">南部</a>
@@ -121,6 +102,7 @@
                 </a>
             </div>
 
+
             <div class="activity-wrapper">
                 <ul class="activity">
                     <li><img class="activity-1" src="../storage/images/index.images/boat.jpg" alt=""></li>
@@ -131,11 +113,11 @@
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
 
-                        <img src="../assets/images/illustrations/anime2.gif" alt="" width="100px" height="100px" class="anime2">
+                        <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="" width="100px" height="100px" class="anime2">
 
-                        <img src="../assets/images/illustrations/anime3.gif" alt="" width="80px" height="80px" class="anime3">
+                        <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="" width="80px" height="80px" class="anime3">
 
-                        <a class="sp-btn" href="{{route('activity')}}">
+                        <a class="sp-btn" href=" {{route('activity')}}">
                             もっと見る
                         </a>
                     </li>
@@ -180,7 +162,7 @@
         </section>
 
         <div class="blog-btn">
-            <a href="../html/blog_list.html"><img src="../assets/images/blog-btn.png" alt=""></a>
+            <a href="{{route('bloglist')}}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt=""></a>
         </div>
 @endsection
 

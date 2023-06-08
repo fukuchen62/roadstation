@@ -1,20 +1,5 @@
 @charset "utf-8";
 
-.topHeader {
-    height: 20px;
-    width: 100%;
-    /* 確認用 */
-    background-color: #e6e6e6;
-}
-
-#top {
-    height: 0px;
-}
-
-.kv {
-    height: 100vh;
-}
-
 /* ニュース見出し配置用 */
 .flex {
     display: flex;
@@ -22,37 +7,6 @@
     margin-bottom: 15px;
 }
 
-.flex li {
+.text-alignLeft {
     text-align: left;
-}
-
-.news__area--data {
-    margin-right: 20px;
-}
-
-/* ブログ見出し配置用 */
-.blogList {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    margin-left: 30px;
-    margin-right: 30px;
-    gap: 30px;
-}
-
-/* ブログカード型成型用 */
-.blogwrapper {
-    padding: 8px;
-    border: 3px solid #1ca10a;
-    border-radius: 20px;
-}
-
-.news__area--data {
-    margin-top: 5px;
-}
-
-.enclosure {
-    border: solid black 2px;
-    border-radius: 999px;
-    padding: 5px;
 }
