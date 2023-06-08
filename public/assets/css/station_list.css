@@ -233,6 +233,7 @@ dd {
     border-radius: 20px;
     box-shadow: 15px 10px 3px 0 #a7d28d;
     border: solid 3px #8c5243;
+    background-color: #ffff;
 }
 
 .card:hover {
