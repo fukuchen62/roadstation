@@ -30,7 +30,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding: 1rem 0;
     /* padding: 20px 20px; */
     /* background-color: #ccc; */
@@ -180,7 +180,7 @@ dd img {
     .kv img {
         margin: 0 auto;
         object-fit: cover;
-        position: absolute;
+        /* position: absolute; */
         width: 100%;
         height: 200px;
     }
