@@ -38,7 +38,6 @@ h3::after {
 }
 
 h3 {
-    border-radius: 50px;
     max-width: 220px;
     width: 50%;
     margin: 30px auto 30px auto;
@@ -48,23 +47,28 @@ h3 {
 }
 
 .headline-others {
-    text-decoration: underline dotted #e7d955
+    border-bottom: dotted 10px #e7d955;
+    /* padding: 20px 23px; */
 }
 
 .headline-gourmet {
-    text-decoration: underline dotted #e7d955;
+    border-bottom: dotted 10px #e7d955;
+    /* padding: 20px 23px; */
 }
 
 .headline-craft {
-    text-decoration: underline dotted #e7d955;
+    border-bottom: dotted 10px #e7d955;
+    /* padding: 20px 23px; */
 }
 
 .headline-seafood {
-    text-decoration: underline dotted #e7d955;
+    border-bottom: dotted 10px #e7d955;
+    /* padding: 20px 23px; */
 }
 
 .headline-agricultural-products {
-    text-decoration: underline dotted #e7d955;
+    border-bottom: dotted 10px #e7d955;
+    /* padding: 20px 23px; */
 }
 
 h4 {
@@ -119,8 +123,9 @@ h4 {
     bottom: -5px;
     width: 100%;
     height: 7px;
-    background: -webkit-repeating-linear-gradient(-45deg, #008C41, #008C41 2px, #fff 2px, #fff 4px);
-    background: repeating-linear-gradient(-45deg, #008C41, #008C41 2px, #fff 2px, #fff 4px);
+    border-bottom: dotted 10px #e7d955;
+    /* padding: 10px; */
+
 }
 
 
@@ -153,6 +158,9 @@ h4 {
     margin: 30px auto auto auto;
     text-align: center;
     color: #000;
+    border-bottom: dotted 10px #e7d955;
+
+
 }
 
 .roadstation-frame {
