@@ -74,7 +74,31 @@
                 </ul>
             @endif
 
+            {{-- @php
+                
+                $blog_list = $activity->blog_list;
+
+                $id_list = explode('|',$blog_list);
+
+            @endphp
+
+            <ul>
+                @foreach ($id_list as $id)
+                    @php
+                        $id = $activity->changeName($id);
+                        $name = $activity::getBlogName($id);
+                    @endphp
+                    
+                    <li class="roadstation-frame"><a
+                        href="{{ url('blog-detail') }}?id={{ $id }}">{{ $name }}</a>
+                    </li>
+
+                @endforeach
+            </ul> --}}
         </section>
+    @endforeach
+
+    </section>
     @endforeach
 
     <section class="blog">
