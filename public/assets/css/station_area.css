@@ -47,14 +47,15 @@ dd {
 
 
 .area-btn {
+    background-color: #A7D28D;
+    border-radius: 50px;
     margin-top: 50px;
     /* padding: 10px 10px; */
     font-size: 1.1rem;
-    text-decoration: underline dotted #e7d955;
 }
 
 .area-btn:hover {
-    background-color: #ffffff;
+    background-color: #a7d28d86;
 }
 
 .search_results {
@@ -117,7 +118,7 @@ dd img {
 
 .card {
     background-color: #fff;
-    border: 1px solid;
+    border: solid 3px #8C5243;
     width: 300px;
     /* width: 306px; */
     height: auto;
@@ -126,7 +127,9 @@ dd img {
     margin-bottom: 40px;
     word-break: break-word;
     border-radius: 20px;
+    box-shadow: 15px 10px 3px 0 #A7D28D;
 }
+
 
 
 .more {
@@ -141,6 +144,7 @@ dd img {
     .area-btn {
         padding: 20px 30px;
         border-radius: 30px;
+        font-size: 1.5rem;
     }
 }
 
@@ -170,7 +174,6 @@ dd img {
     }
 
     .card {
-        border: 1px solid;
         width: 300px;
         height: auto;
         padding: 20px;
