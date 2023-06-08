@@ -9,10 +9,14 @@
 h2 {
     margin-top: 150px;
     margin-bottom: 50px;
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/bg_header_small01.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 100px;
     padding: 20px;
     color: #B45A27;
+    margin: 0 auto;
 
 
 }
@@ -196,6 +200,7 @@ dd {
 }
 
 .stationlist-title {
+    margin-top: 250px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -256,13 +261,32 @@ dd img {
 }
 
 
+@media screen and (min-width:601px) {
+
+    .stationlist-title {
+        margin-top: 300px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+
 @media screen and (min-width:761px) {
+
 
 
     h2 {
         margin-top: 250px;
         margin-bottom: 30px;
     }
+
+
+    .stationlist-title {
+        margin-top: 250px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
 
     .stationlist-banner {
         max-width: 761px;
@@ -329,17 +353,18 @@ dd img {
 @media screen and (min-width:901px) {
 
     h2 {
-        margin-top: 250px;
-        margin-bottom: 30px;
+        /* margin-top: 150px;
+        margin-bottom: 50px; */
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* width: 300px;
+        height: 100px; */
+        padding: 20px;
+        color: #B45A27;
+        margin: 0 auto;
+
     }
 
-    .stationlist-banner {
-        max-width: 1400px;
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 150px;
-    }
 
 
 
