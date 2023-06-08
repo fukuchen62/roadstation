@@ -9,10 +9,14 @@
 h2 {
     margin-top: 150px;
     margin-bottom: 50px;
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/bg_headline_small.png);
     background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
+    width: 300px;
     color: #B45A27;
+    text-align: center;
+    margin: 0 auto;
 
 
 }
