@@ -40,15 +40,4 @@ class ActivityController extends Controller
          */
         return view('fronts.activity_list',$data);
     }
-
-    public function listdata(Request $request)
-    {
-        $activities = Activities::with(['blog:id,blog_category_id','blog.blogcategory:id,category_name', $request->blog_category_id])
-            ->wherenot('id',$request->id)
-            ->where('is_show', 1)
-            ->orderby('created_at', 'DESC')
-            ->simplePaginate(2);
-
-        return view('fronts.activity_list', ['activities' => $activities]);
-    }
 }
