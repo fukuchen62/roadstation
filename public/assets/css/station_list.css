@@ -60,9 +60,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity2.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/east1.png);
     background-size: cover;
     vertical-align: middle;
     margin-right: 10px;
@@ -77,9 +78,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/east2.png);
     background-size: cover;
     vertical-align: middle;
     margin-left: 10px;
@@ -107,9 +109,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity2.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/west1.png);
     background-size: cover;
     vertical-align: middle;
     margin-right: 10px;
@@ -124,9 +127,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/west2.png);
     background-size: cover;
     vertical-align: middle;
     margin-left: 10px;
@@ -157,9 +161,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity2.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/south1.png);
     background-size: cover;
     vertical-align: middle;
     margin-right: 10px;
@@ -172,9 +177,10 @@ dd {
     display: inline-block;
     width: 80px;
     /*画像の幅*/
-    height: 63px;
+    height: 80px;
     /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity.png);
+    padding: 10px;
+    background-image: url(../images/illustrations/south2.png);
     background-size: cover;
     vertical-align: middle;
     margin-left: 10px;
