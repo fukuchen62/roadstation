@@ -55,7 +55,8 @@ class BlogCategory extends Model
 
     /**
      *blog_categoriesテーブルのidをビューに送るメソッド
-     *（ルート設定の確認テストで使用するため作成 / 作成者：小山）
+     *ルート設定の確認テストで使用するため作成
+     *作成者：小山
      *
      * @return void
      */

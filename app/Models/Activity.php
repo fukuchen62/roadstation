@@ -10,6 +10,8 @@ class Activity extends Model
     use HasFactory;
     protected $table = 'activities';
 
+    // *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
+
     /**
      * ブログモデルとリレーション
      * アクティビティ一覧にブログ記事のidを送るため作成
@@ -19,6 +21,11 @@ class Activity extends Model
     {
 
         return $this->belongsTo('App\Models\Blog');
+    }
+
+    public function blogCategory()
+    {
+        return $this->belongsTo('App\Models\BlogCategory');
     }
 
     /**
@@ -33,6 +40,7 @@ class Activity extends Model
         return $this->belongsTo('App\Models\RoadStation');
     }
 
+    // *************** ▼▼▼ データのリターン ▼▼▼ ***************
 
     /**
      * ブログのblog_category_idを取得し送るメソッド
@@ -65,10 +73,10 @@ class Activity extends Model
      *
      * @return void
      */
-    public function getActivity_id()
-    {
-        return $this->activity_id;
-    }
+    // public function getActivity_id()
+    // {
+    //     return $this->activity_id;
+    // }
 
     /**
      * getBlogName function
@@ -120,7 +128,13 @@ class Activity extends Model
                 $id = 20;
                 break;
         }
-
         return $id;
     }
+
+public function getBlogCategoryId()
+{
+    
+    $category = $this->id;
+    return $category;
+}
 }

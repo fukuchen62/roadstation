@@ -17,15 +17,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
 @endsection
 
-
-<?php
-$sum = 0;
-?>
-
 {{-- メイン --}}
 @section('content')
 
     @foreach ($road_stations as $station)
+        {{-- 基本情報1 --}}
         <section>
 
             <div class="station-title">
@@ -63,82 +59,125 @@ $sum = 0;
 
         <section>
 
-            <!-- 画像と文字を重ねる。CSS -->
-            <div class="flex f-width">
-
-                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130px" height="128px"
-                    alt="美味しい飲み物" class="none">
-
-                <div class="center overlap ">
-
-                    <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137" alt="">
-
-                    <h3 class="center width absolute">グルメ</h3>
-
-                </div>
-
-                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145px" height="126.5px"
-                    alt="道の駅のソフトクリームを食べるたぬき" class="sideways">
-
-            </div>
-
-            <section class="commentary">
-                <!-- 画像右と文字を横に並べる。CSS -->
-                <div class="container">
-                    <img src="../assets/images/station.html/gourmet1.jpg" width="5472" height="3648" class="img"
-                        alt="美味しいパンケーキ">
-                    <div class="text">
-                        <h4 class="deco-h4">鳴門金時パンケーキ</h4>
-                        <p>1,210円</p>
-                        <p class="com-wrap">ふわふわなパンケーキともちもち触感の求肥がたまらなくおいしい自慢のパンケーキです</p>
-                        <p class="blog-btn">
-                            <a href="#">【ブログ】行ってみたんよへ</a>
-                            </>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="commentary">
-                <!-- 画像左と文字を横に並べる。CSS -->
-                <div class="container reverse">
-                    <img src="../assets/images/station.html/gourmet3.jpg" class="img" alt="美味しい海鮮丼">
-                    <div class="text">
-                        <h4 class="deco-h4">ぶりぶり丼</h4>
-                        <p>1,580円</p>
-                        <p>徳島県産を使用しております</p>
-                        <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="commentary">
-                <!-- 画像右と文字を横に並べる。CSS -->
-                <div class="container">
-                    <img src="../assets/images/station.html/gourmet2.jpg" class="img" alt="美味しい芋けんぴ">
-                    <div class="text">
-                        <h4 class="deco-h4">極細けんぴ</h4>
-                        <p>580円</p>
-                        <p class="com-wrap">鳴門金時を３ミリにカットし秘伝の蜜をたっぷり絡めたやみつきになる味わい</p>
-                        <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-
+            {{-- グルメ --}}
             <section>
+
+                {{-- グルメタイトル --}}
                 <div class="flex f-width">
+
+                    <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130px" height="128px"
+                        alt="美味しい飲み物" class="none">
+
+                    <div class="center overlap ">
+
+                        <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137" alt="">
+
+                        <h3 class="center width absolute">
+                            グルメ
+                        </h3>
+
+                    </div>
+
+                    <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145px"
+                        height="126.5px" alt="道の駅のソフトクリームを食べるたぬき" class="sideways">
+                </div>
+
+                @php
+                    $count = 0;
+                @endphp
+                @foreach ($special_goods as $goods)
+                    @if ($count % 2 != 0)
+                        <section class="commentary">
+
+                            <div class="container">
+
+                                <img src="{{ asset('/storage/images/' . $goods->picture) }}" width="5472" height="3648"
+                                    class="img" alt="美味しいパンケーキ">
+
+                                <div class="text">
+
+                                    <h4 class="deco-h4">
+                                        {{ $goods->goods_name }}
+                                    </h4>
+
+                                    <p>{{ $goods->price }}円</p>
+
+                                    <p class="com-wrap">{!! $goods->discription !!}
+                                    </p>
+
+                                    <p class="blog-btn">
+
+                                        <a
+                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </section>
+                    @else
+                        <section class="commentary">
+
+                            <!-- 画像左と文字を横に並べる。CSS -->
+                            <div class="container reverse">
+
+                                <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img" alt="美味しい海鮮丼">
+                                <div class="text">
+                                    <h4 class="deco-h4">ぶりぶり丼</h4>
+                                    <p>1,580円</p>
+                                    <p>徳島県産を使用しております</p>
+                                    <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    @endif
+                    @php
+                        $count++;
+                    @endphp
+                @endforeach
+
+                <section class="commentary">
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <div class="container">
+                        <img src="../assets/images/station.html/gourmet2.jpg" class="img" alt="美味しい芋けんぴ">
+                        <div class="text">
+                            <h4 class="deco-h4">極細けんぴ</h4>
+                            <p>580円</p>
+                            <p class="com-wrap">鳴門金時を３ミリにカットし秘伝の蜜をたっぷり絡めたやみつきになる味わい</p>
+                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+            {{-- お土産 --}}
+            <section>
+
+                {{-- お土産タイトル --}}
+                <div class="flex f-width">
+
                     <img src="../assets/images/illustrations/tanuki-gift2.png" width="150px" height="135px" alt="お土産を運ぶたぬき"
                         class="none">
+
                     <div class="center overlap ">
+
                         <img src="../assets/images/h3-green.png" width="214" height="137" alt="道の駅のお土産">
-                        <h3 class="center width">お土産</h3>
+
+                        <h3 class="center width">
+                            お土産
+                        </h3>
+
                     </div>
+
                     <img src="../assets/images/illustrations/tanuki-gift.png" width="150px" height="150px" alt="美味しいお土産"
                         class="sideways">
+
                 </div>
+
                 <section class="commentary">
                     <!-- 画像右と文字を横に並べる。CSS -->
                     <div class="container">
@@ -184,18 +223,26 @@ $sum = 0;
             </section>
 
 
+            {{-- 農産物 --}}
             <section>
-                <!-- 画像と文字を重ねる。CSS -->
+
                 <div class="flex f-width">
+
                     <img src="../assets/images/illustrations/tanuki-food4.png" width="125px" height="100px"
                         alt="美味しいすだち" class="none">
+
                     <div class="center overlap ">
                         <img src="../assets/images/h3-orange.png" width="214" height="137" alt="">
+
                         <h3 class="center width absolute">農産物</h3>
+
                     </div>
+
                     <img src="../assets/images/illustrations/tanuki-food.png" width="141.5px" height="140px"
                         alt="道の駅のさつまいもを食べるたぬき" class="sideways">
+
                 </div>
+
                 <section class="commentary">
                     <!-- 画像右と文字を横に並べる。CSS -->
                     <div class="container">
@@ -241,118 +288,144 @@ $sum = 0;
                     </div>
                 </section>
 
+            </section>
 
-                <section>
-                    <div class="flex f-width">
-                        <img src="../assets/images/illustrations/tanuki-food5.png" width="125px" height="125.5px"
-                            alt="美味しいわかめ" class="sideways">
-                        <div class="center overlap ">
-                            <img src="../assets/images/h3-red.png" width="214" height="137" alt="道の駅のお土産">
-                            <h3 class="center width">水産物</h3>
-                        </div>
-                        <img src="../assets/images/illustrations/tanuki-food2.png" width="141.5px" height="140px"
-                            alt="道の駅の魚を食べるたぬき" class="sideways">
+
+            {{-- 海産物 --}}
+            <section>
+
+                {{-- 海産物タイトル --}}
+                <div class="flex f-width">
+
+                    <img src="../assets/images/illustrations/tanuki-food5.png" width="125px" height="125.5px"
+                        alt="美味しいわかめ" class="sideways">
+                    <div class="center overlap ">
+
+                        <img src="../assets/images/h3-red.png" width="214" height="137" alt="道の駅のお土産">
+
+                        <h3 class="center width">水産物</h3>
+
                     </div>
-                    <section class="commentary">
-                        <!-- 画像右と文字を横に並べる。CSS -->
-                        <div class="container">
-                            <img src="../assets/images/station.html/gift1.jpg" class="img" alt="美味しいスイートポテト">
-                            <div class="text">
-                                <h4 class="deco-h4">ほっこりおいものスイートポテト</h4>
-                                <p>4個 897円/8個 1,782円税込</p>
-                                <p class="com-wrap">しっとり滑らかなお芋の優しい甘さが特徴。お芋好きにはたまらない！</p>
-                                <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                                </p>
-                            </div>
-                        </div>
-                    </section>
 
-                    <section class="commentary">
-                        <!-- 画像左と文字を横に並べる。CSS -->
-                        <div class="container reverse">
-                            <img src="../assets/images/station.html/gift2.jpg" class="img" alt="美味しいプリン">
-                            <div class="text">
-                                <h4 class="deco-h4">鳴門ほれほれプリン</h4>
-                                <p>１個３８０円税込み</p>
-                                <p class="com-wrap">一番人気のほれほれ芋プリンにはスコップ型のスプーンがついています</p>
-                                <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                    <img src="../assets/images/illustrations/tanuki-food2.png" width="141.5px" height="140px"
+                        alt="道の駅の魚を食べるたぬき" class="sideways">
 
-                    <section class="commentary">
-                        <!-- 画像右と文字を横に並べる。CSS -->
-                        <div class="container">
-                            <img src="../assets/images/station.html/gift3.jpg" class="img" alt="美味しいカレー">
-                            <div class="text">
-                                <h4 class="deco-h4">鳴門金時カレー</h4>
-                                <p>648円税込</p>
-                                <p class="com-wrap">お芋の甘みとカレーのスパイス。実は相性ばっちりなんです。</p>
-                                <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                </div>
 
+                <section class="commentary">
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <div class="container">
+                        <img src="../assets/images/station.html/gift1.jpg" class="img" alt="美味しいスイートポテト">
+                        <div class="text">
+                            <h4 class="deco-h4">ほっこりおいものスイートポテト</h4>
+                            <p>4個 897円/8個 1,782円税込</p>
+                            <p class="com-wrap">しっとり滑らかなお芋の優しい甘さが特徴。お芋好きにはたまらない！</p>
+                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
-
-                <section>
-                    <div class="flex f-width">
-                        <img src="../assets/images/illustrations/tanuki-food6.png" width="118px" height="114.5px"
-                            alt="きれいな藍染" class="none">
-                        <div class="center overlap ">
-                            <img src="../assets/images/h3-green.png" width="214" height="137" alt="道の駅のお土産">
-                            <h3 class="center width">工芸品</h3>
+                <section class="commentary">
+                    <!-- 画像左と文字を横に並べる。CSS -->
+                    <div class="container reverse">
+                        <img src="../assets/images/station.html/gift2.jpg" class="img" alt="美味しいプリン">
+                        <div class="text">
+                            <h4 class="deco-h4">鳴門ほれほれプリン</h4>
+                            <p>１個３８０円税込み</p>
+                            <p class="com-wrap">一番人気のほれほれ芋プリンにはスコップ型のスプーンがついています</p>
+                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                            </p>
                         </div>
-                        <img src="../assets/images/illustrations/tanuki-food3.png" width="141.5px" height="140px"
-                            alt="道の駅で買ったお椀でご飯を食べるたぬき" class="sideways">
                     </div>
-                    <section class="commentary">
-                        <!-- 画像右と文字を横に並べる。CSS -->
-                        <div class="container">
-                            <img src="../assets/images/station.html/gift1.jpg" class="img" alt="美味しいスイートポテト">
-                            <div class="text">
-                                <h4 class="deco-h4">ほっこりおいものスイートポテト</h4>
-                                <p>4個 897円/8個 1,782円税込</p>
-                                <p class="com-wrap">しっとり滑らかなお芋の優しい甘さが特徴。お芋好きにはたまらない！</p>
-                                <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="commentary">
-                        <!-- 画像左と文字を横に並べる。CSS -->
-                        <div class="container reverse">
-                            <img src="../assets/images/station.html/gift2.jpg" class="img" alt="美味しいプリン">
-                            <div class="text">
-                                <h4 class="deco-h4">鳴門ほれほれプリン</h4>
-                                <p>１個３８０円税込み</p>
-                                <p class="com-wrap">一番人気のほれほれ芋プリンにはスコップ型のスプーンがついています</p>
-                                <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="commentary">
-                        <!-- 画像右と文字を横に並べる。CSS -->
-                        <div class="container">
-                            <img src="../assets/images/station.html/gift3.jpg" class="img" alt="美味しいカレー">
-                            <div class="text">
-                                <h4 class="deco-h4">鳴門金時カレー</h4>
-                                <p>648円税込</p>
-                                <p class="com-wrap">お芋の甘みとカレーのスパイス。実は相性ばっちりなんです。</p>
-                                <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
                 </section>
 
+                <section class="commentary">
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <div class="container">
+                        <img src="../assets/images/station.html/gift3.jpg" class="img" alt="美味しいカレー">
+                        <div class="text">
+                            <h4 class="deco-h4">鳴門金時カレー</h4>
+                            <p>648円税込</p>
+                            <p class="com-wrap">お芋の甘みとカレーのスパイス。実は相性ばっちりなんです。</p>
+                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+
+            {{-- 工芸品 --}}
+            <section>
+
+                {{-- 工芸品タイトル --}}
+                <div class="flex f-width">
+
+                    <img src="../assets/images/illustrations/tanuki-food6.png" width="118px" height="114.5px"
+                        alt="きれいな藍染" class="none">
+
+                    <div class="center overlap ">
+
+                        <img src="../assets/images/h3-green.png" width="214" height="137" alt="道の駅のお土産">
+
+                        <h3 class="center width">工芸品</h3>
+
+                    </div>
+
+                    <img src="../assets/images/illustrations/tanuki-food3.png" width="141.5px" height="140px"
+                        alt="道の駅で買ったお椀でご飯を食べるたぬき" class="sideways">
+
+                </div>
+
+                <section class="commentary">
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <div class="container">
+                        <img src="../assets/images/station.html/gift1.jpg" class="img" alt="美味しいスイートポテト">
+                        <div class="text">
+                            <h4 class="deco-h4">ほっこりおいものスイートポテト</h4>
+                            <p>4個 897円/8個 1,782円税込</p>
+                            <p class="com-wrap">しっとり滑らかなお芋の優しい甘さが特徴。お芋好きにはたまらない！</p>
+                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="commentary">
+                    <!-- 画像左と文字を横に並べる。CSS -->
+                    <div class="container reverse">
+                        <img src="../assets/images/station.html/gift2.jpg" class="img" alt="美味しいプリン">
+                        <div class="text">
+                            <h4 class="deco-h4">鳴門ほれほれプリン</h4>
+                            <p>１個３８０円税込み</p>
+                            <p class="com-wrap">一番人気のほれほれ芋プリンにはスコップ型のスプーンがついています</p>
+                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="commentary">
+                    <!-- 画像右と文字を横に並べる。CSS -->
+                    <div class="container">
+                        <img src="../assets/images/station.html/gift3.jpg" class="img" alt="美味しいカレー">
+                        <div class="text">
+                            <h4 class="deco-h4">鳴門金時カレー</h4>
+                            <p>648円税込</p>
+                            <p class="com-wrap">お芋の甘みとカレーのスパイス。実は相性ばっちりなんです。</p>
+                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+
+            {{-- 体験 --}}
+            @foreach ($activities as $activity)
                 <section class="width">
 
                     <div class="flex f-width">
@@ -362,7 +435,7 @@ $sum = 0;
 
                         <div class="center overlap ">
 
-                            <img src="{{ 'assets/images/h3-orange.png' }}" width="191" height="111"
+                            <img src="{{ asset('assets/images/h3-orange.png') }}" width="191" height="111"
                                 alt="">
 
                             <h3 class="center width">体験</h3>
@@ -374,29 +447,34 @@ $sum = 0;
 
                     </div>
 
+                    {{-- <img src="{{ asset('/storage/images/' . $activity->picture1) }}" class="kv" alt="楽しいジップライン"> --}}
+
+                    <h4>{{ $activity->activity_name }}</h4>
+
+                    <p>料金：{{ $activity->price }}</p>
+
+                    <p>利用条件：
+                        {!! $activity->conditions !!}
+                    </p>
+
+                    <a href="{{ route('bloglist') }}">
+                        <img src="{{ asset('assets/images/blog-btn.png') }}" class="blog-btn blog-img" alt="体験ブログの記事へ">
+                    </a>
+
                 </section>
-
-                @foreach ($station->activity as $activites)
-                    <img src="../assets/images/index.images/zipline.jpg" class="kv" alt="楽しいジップライン">
-
-                    <h4>{{ $activites->activity_name }}</h4>
-
-                    <p>大人料金 : 800円 子供料金:500円&nbsp;小学3年生~中学生3年生<br>
-                        気軽に楽しめる天空アクティビティです。&nbsp;※完全予約制です<br>
-                        体重制限25kg~100kgまで&nbsp;※身長120cm以上で年齢9歳以上<br>※上記をクリアされている方でもハーネスが体にフィットしない方は参加することができません
-                        <a href="#">
-                            <img src="../assets/images/blog-btn.png" class="blog-btn blog-img" alt="体験ブログの記事へ">
-                        </a>
-                @endforeach
-            </section>
+            @endforeach
 
         </section>
 
+        {{-- 基本情報2 --}}
         <section>
 
             <h3 class="item center">基本情報</h3>
+
             <div class="text">
+
                 <h4 class="station-name">道の駅&nbsp;{{ $station->station_name }}</h4>
+
                 <!-- dtとdd１セットのみdivでくくれる。１２０ｐ -->
 
                 <dl>
@@ -459,8 +537,19 @@ $sum = 0;
                     </dd>
                 </dl>
 
-                <p><strong><span class="yellow">★</span>お気に入りを押したらお気に入りページに登録されます！</strong></p>
-                <p><a href="#">登録する（マイクロコピー）</a></p>
+                <p>
+                    <strong>
+                        <span class="yellow">
+                            ★
+                        </span>
+                        お気に入りを押したらお気に入りページに登録されます！
+                    </strong>
+                </p>
+                <p>
+                    <a href="#">
+                        登録する（マイクロコピー）
+                    </a>
+                </p>
             </div>
 
             <!-- googlemap -->
@@ -468,9 +557,9 @@ $sum = 0;
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.533509598061!2d134.5772079762422!3d34.15827496212325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536fda4ddf71ff%3A0xc5ce5c88e1a48d83!2z6YGT44Gu6aeFIOOBj-OCi-OBj-OCi-OBquOCi-OBqA!5e0!3m2!1sja!2sjp!4v1685414674912!5m2!1sja!2sjp"
                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 title="道の駅くるくるなるとの地図" loading="lazy"></iframe>
+
         </section>
     @endforeach
-
 @endsection
 
 {{-- 該当ページ専用JS --}}

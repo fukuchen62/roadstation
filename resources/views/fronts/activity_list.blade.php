@@ -80,6 +80,7 @@
                     @php
                         $id = $activity->changeName($id);
                         $title = $activity->getBlogName($id);
+                        // $categoryid = $activity->$category;
                     @endphp
 
                     <li class="roadstation-frame"><a
