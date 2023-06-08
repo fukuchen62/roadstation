@@ -273,6 +273,10 @@ dd img {
 
 @media screen and (min-width:761px) {
 
+    wrapper {
+        margin-top: 200px;
+    }
+
 
 
     h2 {
@@ -282,7 +286,7 @@ dd img {
 
 
     .stationlist-title {
-        margin-top: 250px;
+        margin-top: 300px;
         text-align: center;
         margin-bottom: 30px;
     }
@@ -351,6 +355,12 @@ dd img {
 
 
 @media screen and (min-width:901px) {
+
+    .kv {
+        object-position: center;
+        position: relative;
+        top: 0;
+    }
 
     h2 {
         /* margin-top: 150px;
