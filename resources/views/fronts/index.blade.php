@@ -25,13 +25,18 @@
 @endsection
 
 @section('key_visual')
-    <p class="catchcopy koresae">これさえ見れば徳島で</p>
-    <p class="catchcopy sakanaga">道の駅を楽しめる</p>
+    {{-- <p class="catchcopy koresae">これさえ見れば徳島で</p>
+    <p class="catchcopy sakanaga">道の駅を楽しめる</p> --}}
+    <div class="top-kv">
+    <!-- <div>道の駅をあそびつくせ！</div> -->
+     <video autoplay muted playsinline loop src="../assets/images/index.images/IMG_2833.MOV">
+    </video>
+    <!-- <img src="../assets/images/index.images/drive.jpg" alt="キービジュアル画像"> -->
+     </div>
 @endsection
 
 {{-- メイン --}}
 @section('content')
-    <main class="wrapper">
         <section class="news-box">
             <div class="new1">
                 <h2 class="news-title">ニュース</h2>
@@ -66,7 +71,7 @@
         <section>
             <h2 class="feature-title">こんなんあるで！</h2>
             <div class="goods-wrapper">
-                <ul class="goods">
+                 <ul class="goods">
                     <li><img class="goods-1" src="../storage/images/index.images/mikan.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/otaniyaki.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/renkon.jpg" alt=""></li>
@@ -75,6 +80,9 @@
                         <h2 class="sp-h2">特産品</h2>
                         <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
 
+                        <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="タヌキ" width="100px" height="100px" class="anime1">
+
+                        <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="" width="80px" height="80px" class="anime4">
                         <a href="{{route('goods')}}">
                             <p class="pcbtn">もっと見る</p>
                         </a>
@@ -89,8 +97,6 @@
                 </a>
             </div>
 
-
-
             <div class="activity-wrapper">
                 <ul class="activity">
                     <li><img class="activity-1" src="../storage/images/index.images/boat.jpg" alt=""></li>
@@ -100,6 +106,10 @@
                     <li class="activity-2">
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
+
+                        <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="生地をこねるたぬき" width="100px" height="100px" class="anime2">
+
+                        <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="うどん" width="80px" height="80px" class="anime3">
 
                         <a href="{{route('activity')}}">
                             <p class="pcbtn">もっと見る</p>
@@ -112,7 +122,7 @@
                     <li><img class="activity-1" src="../storage/images/index.images/udon.jpg" alt=""></li>
                     <li><img class="activity-1" src="../storage/images/index.images/ropeway.jpg" alt=""></li>
                 </ul>
-                <a href="">
+                <a href="{{route('activity')}}">
                     <p class="more-btn mobile-btn">もっと見る</p>
                 </a>
             </div>
@@ -148,8 +158,6 @@
         <div class="blog-btn">
             <a href="../html/blog_list.html"><img src="../assets/images/blog-btn.png" alt=""></a>
         </div>
-
-    </main>
 @endsection
 
 {{-- 該当ページ専用JS --}}

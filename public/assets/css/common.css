@@ -11,7 +11,7 @@ html {
 body {
     font-size: 16px;
     font-family: 'Zen Maru Gothic', sans-serif;
-    color: #91471d;
+    /* background-color: #f2eee2; */
     background-color: #fffbf1;
 }
 
@@ -78,31 +78,14 @@ h3 {
 
 
 
-/* ↓もっと見るボタン */
-.btn {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.5;
-    position: relative;
-    display: inline-block;
-    padding: 0.5rem 2rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    color: #ffffff;
-    border-radius: 0.5rem;
-}
-
-.btn-border-shadow {
+/* もっと見るボタン */
+a.btn-border-shadow {
     padding: calc(1.5rem - 12px) 3rem 1.5rem;
 
     background: #fff;
 }
 
-.btn-border-shadow:before {
+a.btn-border-shadow:before {
     position: absolute;
     top: -6px;
     left: -6px;
@@ -114,35 +97,97 @@ h3 {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
-    border: 3px solid #91471d;
+    border: 3px solid #000;
     border-radius: 0.5rem;
 }
 
-.btn-border-shadow:hover {
+a.btn-border-shadow:hover {
     padding: calc(1.5rem - 6px) 3rem;
 }
 
-.btn-border-shadow:hover:before {
+a.btn-border-shadow:hover:before {
     top: 0;
     left: 0;
 }
 
-.btn-border-shadow--color {
+a.btn-border-shadow--color {
     border-radius: 50px;
-    background: linear-gradient(180deg, rgba(180, 90, 39, 1) 0%, rgba(213, 89, 21, 1) 100%);
-    ;
+    background: #b45a27;
 }
 
-.btn-border-shadow--color:before {
+a.btn-border-shadow--color:before {
     border-radius: 50px;
 }
 
-/* ↑ここまで */
+/* 新もっとみる */
+.btn,
+a.btn,
+button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #ffff;
+    border-radius: 0.5rem;
+}
+
+a.btn-border-shadow {
+    padding: calc(1.5rem - 12px) 3rem 1.5rem;
+
+    background: #fff;
+}
+
+a.btn-border-shadow:before {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    border: 3px solid #000;
+    border-radius: 0.5rem;
+}
+
+a.btn-border-shadow:hover {
+    padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+    top: 0;
+    left: 0;
+}
+
+a.btn-border-shadow--color {
+    border-radius: 50px;
+    background: #b45a27;
+}
+
+a.btn-border-shadow--color:before {
+    border-radius: 50px;
+}
 
 .icon {
     width: 30px;
     height: 30px;
-    background-color: #B45A27;
+    background-color: #732424;
     border-radius: 50%;
     align-items: flex-end;
 }
@@ -294,8 +339,7 @@ footer {
 
     min-width: 320px;
     height: 400px;
-    background-color: #86cc7f;
-    /* background-image: url(../images/footer/sudati.png); */
+    background-image: url(../images/footer/sudati.png);
     /* opacity: 0.7; */
     background-size: cover;
     background-position: center;
@@ -489,7 +533,7 @@ footer {
     }
 
     /* もっと見るボタン */
-    /* .more-btn {
+    .more-btn {
         font-size: 1.5rem;
         text-align: center;
         width: 250px;
@@ -498,7 +542,7 @@ footer {
         color: #ffffff;
         background-color: #b45a27;
         display: inline-block;
-    } */
+    }
 
     footer li {
         margin: 0 auto;
