@@ -42,7 +42,7 @@ dd {
 .east-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 23px;
+    /* padding: 20px 23px; */
     border-bottom: dotted 10px #e7d955;
     font-size: 30px;
     color: #B45A27;
@@ -89,7 +89,7 @@ dd {
 .west-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 23px;
+    /* padding: 20px 23px; */
     border-bottom: dotted 10px #e7d955;
     font-size: 30px;
     color: #B45A27;
@@ -136,7 +136,7 @@ dd {
 .south-title {
     text-align: center;
     display: inline-block;
-    padding: 20px 23px;
+    /* padding: 20px 23px; */
     border-bottom: dotted 10px #e7d955;
     font-size: 30px;
     color: #B45A27;
