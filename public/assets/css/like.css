@@ -1,13 +1,12 @@
 @charset "utf-8";
 
 kv img {
-    object-position: center;
-    z-index: -1;
+    z-index: -100;
 }
 
-/* html {
+html {
     overflow-x: hidden;
-} */
+}
 
 h2 {
     text-align: center;
