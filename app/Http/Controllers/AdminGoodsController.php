@@ -69,7 +69,7 @@ class AdminGoodsController extends Controller
         ];
 
         // Bladeファイルを呼び出す
-        return view('cms.special_goods', $data);
+        return view('cms.cms_goods_list', $data);
     }
 
     /**
