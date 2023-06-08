@@ -146,6 +146,8 @@ p {
         width: 100%;
         height: auto;
         position: relative;
+        background: url(../images/illustrations/tanuki-blog.png) no-repeat right -30px bottom 300px / 300px auto;
+
 
     }
 

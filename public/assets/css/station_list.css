@@ -58,13 +58,14 @@ dd {
     content: '';
     /*何も入れない*/
     display: inline-block;
-    width: 80px;
+    width: 50px;
     /*画像の幅*/
-    height: 80px;
+    height: 50px;
     /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/east1.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
     margin-right: 10px;
 
@@ -76,13 +77,14 @@ dd {
     content: '';
     /*何も入れない*/
     display: inline-block;
-    width: 80px;
+    width: 50px;
     /*画像の幅*/
-    height: 80px;
+    height: 50px;
     /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/east2.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
     margin-left: 10px;
 
@@ -107,13 +109,14 @@ dd {
     content: '';
     /*何も入れない*/
     display: inline-block;
-    width: 80px;
+    width: 50px;
     /*画像の幅*/
-    height: 80px;
+    height: 50px;
     /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/west1.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
     margin-right: 10px;
 
@@ -125,13 +128,14 @@ dd {
     content: '';
     /*何も入れない*/
     display: inline-block;
-    width: 80px;
+    width: 50px;
     /*画像の幅*/
-    height: 80px;
+    height: 50px;
     /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/west2.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
     margin-left: 10px;
 
@@ -159,13 +163,14 @@ dd {
     content: '';
     /*何も入れない*/
     display: inline-block;
-    width: 80px;
+    width: 50px;
     /*画像の幅*/
-    height: 80px;
+    height: 50px;
     /*画像の高さ*/
     padding: 10px;
-    background-image: url(../images/illustrations/south1.png);
-    background-size: cover;
+    background-image: url(../images/illustrations/south2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
     margin-right: 10px;
 }
@@ -175,13 +180,14 @@ dd {
     content: '';
     /*何も入れない*/
     display: inline-block;
-    width: 80px;
+    width: 50px;
     /*画像の幅*/
-    height: 80px;
+    height: 50px;
     /*画像の高さ*/
     padding: 10px;
-    background-image: url(../images/illustrations/south2.png);
-    background-size: cover;
+    background-image: url(../images/illustrations/south1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     vertical-align: middle;
     margin-left: 10px;
 

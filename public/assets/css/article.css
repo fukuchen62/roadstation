@@ -215,6 +215,7 @@ a:hover {
         justify-content: space-between;
         width: 100%;
         position: relative;
+        /* background: url(../images/illustrations/tanuki-blog.png) no-repeat right -30px bottom 300px / 300px auto; */
     }
 
     .blog-wrapper {
