@@ -134,7 +134,7 @@ class Activity extends Model
 public function getBlogCategoryId()
 {
     
-    $category = $this->id;
-    return $category;
+    return $this->id;
+    
 }
 }
