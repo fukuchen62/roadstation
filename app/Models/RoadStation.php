@@ -7,13 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoadStation extends Model
 {
-    //use HasFactory;
-
-
-
-
-
-
+    use HasFactory;
 
 
 
