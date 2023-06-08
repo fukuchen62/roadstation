@@ -235,6 +235,17 @@ dd {
     border: solid 3px #8c5243;
 }
 
+.card:hover {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    box-shadow: none;
+}
+
+
+
+
+
 dt {
     padding-top: 10px;
 }
