@@ -25,7 +25,7 @@
 {{-- メイン --}}
 @section('content')
     <div class="attention-box">
-        <h2 class="attention">注目アクティビティ</h2>
+        <h2 class="attention">アクティビティ一覧</h2>
     </div>
     {{--  体験一覧一覧の表示部分  --}}
     @foreach ($activities as $activity)
@@ -33,22 +33,22 @@
             <div class="activity-group">
                 <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
                 <div class="activity-text-group">
-                    <p>道の駅 <a
+                    <h3>道の駅 <a
                             href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
-                    </p>
+                    </h3>
                     <h3 class="activity-name">
                         {{ $activity->activity_name }}
                     </h3>
                     {!! $activity->discription !!}
                 </div>
             </div>
-            {{--  <h4 class="headline-text">営業時間：</h4>  --}}
+            <h4 class="headline-text">営業時間：</h4> 
             <p class="business-text">
-                営業時間：<br>{{ $activity->business_hours }}
+                {{ $activity->business_hours }}
             </p>
-            {{--  <h4 class="headline text">料 金：</h4>  --}}
+            <h4 class="headline text">料 金：</h4> 
             <p class="price-text">
-                料 金：<br>{{ $activity->price }}
+                {{ $activity->price }}
             </p>
             {{--  <h4 class="headline text">利用条件：</h4>  --}}
             {!! $activity->conditions !!}
