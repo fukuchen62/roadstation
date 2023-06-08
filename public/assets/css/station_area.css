@@ -77,6 +77,7 @@ dd {
 .district {
     background-image: url(../images/bg_headline.png);
     margin-top: 200px;
+    padding: 20px;
 }
 
 .kv img {

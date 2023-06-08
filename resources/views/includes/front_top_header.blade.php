@@ -1,18 +1,159 @@
 <header id="header">
+        <!-- g-nav mobile -->
+        <nav id="wrapper">
+            <h1 class="site-logo mobile-logo"><a href="index.html"><img src="../assets/images/site_logo/logo.png" alt="とくしままるっと道の駅"></a></h1>
 
-    <div class="header topheader flex">
+            <div class="btn-gnavi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="global-navi">
+
+                <ul class="hamburger-menu">
+                    <li>
+                        <a href="../html/station_list.html">
+
+                            <img src="{{ asset('assets/images/menu_icon/station_list_icon.png') }}" alt="" width="30" height="30">
+
+                            道の駅一覧
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="../html/station_area.html">
+
+                            <img src="../assets/images/menu_icon/station_area_icon.png" alt="" width="30" height="30">
+
+                            エリア検索
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/station_detail.html">
+
+                            <img src="../assets/images/menu_icon/station_detail_icon.png" alt="" width="30" height="30">
+
+                            詳細検索
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/goods_list.html">
+
+                            <img src="../assets/images/menu_icon/goods_list_icon.png" alt="" width="30" height="30">
+
+                            特産品
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/activity_list.html">
+
+                            <img src="../assets/images/menu_icon/activity_list_icon.png" alt="" width="30" height="30">
+
+                            体験
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/blog_list.html">
+
+                            <img src="../assets/images/menu_icon/blog_list_icon.png" alt="" width="35" height="35">
+
+                            行ってみたんよ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/like.html">
+
+                            <img src="../assets/images/menu_icon/like_icon.png" alt="" width="30" height="30">
+
+                            お気に入り
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </nav>
+
+        <div class="top-kv">
+
+            <!-- <div>道の駅をあそびつくせ！</div> -->
+            <video autoplay muted playsinline loop src="{{ asset('assets/images/index.images/IMG_2833.MOV') }}">
+
+            </video>
+        </div>
+        <!-- g-nav pc -->
+        <nav id="menu" class="nav-pc">
+            <h1><a href="index.html"><img src="../assets/images/site_logo/logo.png" width="95" height="95" alt="とくしままるっと道の駅"></a></h1>
+
+            <ul>
+                <li>
+                    <a href="../html/station_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        道の駅一覧
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../html/station_area.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_area_icon.png" alt="" width="30" height="30">
+                        </div>
+                        エリア検索
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/station_detail.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_detail_icon.png" alt="" width="30" height="30">
+                        </div>
+                        詳細検索
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/goods_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/goods_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        特産品
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/activity_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/activity_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        体験
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/blog_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/blog_list_icon.png" alt="" width="35" height="35">
+                        </div>
+                        行ってみたんよ
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/like.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/like_icon.png" alt="" width="30" height="30">
+                        </div>
+                        お気に入り
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header topheader flex">
         <div>仮設置リンク集　　</div>
         <a href="{{ route('top') }}">
             {{-- <img src="{{ asset('assets/images/cat1.jpg') }}" alt="ネコの画像" class="header__logo"> --}}
             <div>TOPに戻る　</div>
         </a>
-
-        <!-- ハンバーガーメニュー -->
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
 
         <ul class="header__box flex">
             <li class="g-nav">
@@ -41,4 +182,5 @@
             </li>
         </ul>
     </div>
+
 </header>
