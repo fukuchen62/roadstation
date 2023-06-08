@@ -27,7 +27,7 @@ class ActivityController extends Controller
          */
         $items = Activity::all();
 
-        $category = BlogCategory::all();
+        $category = BlogCategory::get($id);
 
         /**
          * $dataに$itemを代入
@@ -41,7 +41,5 @@ class ActivityController extends Controller
          * $dataをviewヘルパを使い、activity_listページに送る処理
          */
         return view('fronts.activity_list',$data);
-
-
     }
 }

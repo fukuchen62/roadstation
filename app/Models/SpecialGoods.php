@@ -26,4 +26,16 @@ class SpecialGoods extends Model
         $items = '<p>' . $this->goodsCategory->category_name . '</p>';
         return $items;
     }
+
+    public function stationCategory()
+    {
+        $items = $this->belongsTo('App\Models\RoadStations');
+        return $items;
+    }
+
+    public function getStationName()
+    {
+        $items = '<p>' . $this->roadStation->station_name . '</p>';
+        return $items;
+    }
 }
