@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Activity;
+use App\Models\Blog;
 use App\Models\BlogCategory;
 
 class ActivityController extends Controller
@@ -38,5 +39,16 @@ class ActivityController extends Controller
          * $dataをviewヘルパを使い、activity_listページに送る処理
          */
         return view('fronts.activity_list',$data);
+    }
+
+    public function listdata(Request $request)
+    {
+        $activities = Activities::with(['blog:id,blog_category_id','blog.blogcategory:id,category_name', $request->blog_category_id])
+            ->wherenot('id',$request->id)
+            ->where('is_show', 1)
+            ->orderby('created_at', 'DESC')
+            ->simplePaginate(2);
+
+        return view('fronts.activity_list', ['activities' => $activities]);
     }
 }

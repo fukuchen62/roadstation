@@ -80,10 +80,11 @@
                     @php
                         $id = $activity->changeName($id);
                         $title = $activity->getBlogName($id);
+                        $blogCategory = $activity->getBlogCategoryId($id)
                     @endphp
 
                     <li class="roadstation-frame"><a
-                            href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
+                            href="{{ url('blog-detail') }}?id={{ $id }}&blog_category_id={{ $blogCategory }}">{{ $title }}</a>
                     </li>
                 @endforeach
             </ul>
