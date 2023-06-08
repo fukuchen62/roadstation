@@ -249,50 +249,100 @@ Route::get(
 )->name('cms-newsremove');
 
 /**
- * 道駅特産品の一覧画面
+ * 道の駅特産品の一覧画面
  */
 Route::get(
-    'cms-product-types',
-    'App\Http\Controllers\AdminGoodsController@index'
-)->name('cms-producttypes');
+    'cms-goods-list',
+    'App\Http\Controllers\AdminGoodsController@goodsindex'
+)->name('cms-goodslist');
 
 /**
- * 道駅特産品の新規登録画面
+ * 道の駅特産品の新規登録画面
  */
 Route::get(
-    'cms-producttypes-new',
-    'App\Http\Controllers\AdminGoodsController@newsInput'
-)->name('cms-producttypesinput');
+    'cms-goods-new',
+    'App\Http\Controllers\AdminGoodsController@goodsInput'
+)->name('cms-goodsinput');
 
 /**
- * 道駅特産品の新規登処理
+ * 道の駅特産品の新規登処理
  */
 Route::post(
-    'cms-producttypes-new',
-    'App\Http\Controllers\AdminGoodsController@newsCreate'
-)->name('cms-producttypescreate');
+    'cms-goods-new',
+    'App\Http\Controllers\AdminGoodsController@goodsCreate'
+)->name('cms-goodscreate');
 
 /**
- * 道駅特産品の編集画面
+ * 道の駅特産品の編集画面
  */
 Route::get(
-    'cms-producttypes-edit',
-    'App\Http\Controllers\AdminGoodsController@newsEdit'
-)->name('cms-producttypesedit');
+    'cms-goods-edit',
+    'App\Http\Controllers\AdminGoodsController@goodsEdit'
+)->name('cms-goodsedit');
 
 /**
- * 道駅特産品の編集登録
+ * 道の駅特産品の編集登録
  */
 Route::post(
-    'cms-producttypes-edit',
-    'App\Http\Controllers\AdminGoodsController@newsUpdate'
-)->name('cms-producttypesupdate');
+    'cms-goods-edit',
+    'App\Http\Controllers\AdminGoodsController@goodsUpdate'
+)->name('cms-goodsupdate');
 
 
 /**
- * 道駅特産品の削除処理
+ * 道の駅特産品の削除処理
  */
 Route::get(
     'cms-producttypes-delete',
-    'App\Http\Controllers\AdminGoodsController@newsDelete'
-)->name('cms-producttypesremove');
+    'App\Http\Controllers\AdminGoodsController@goodsDelete'
+)->name('cms-goodsremove');
+
+
+/**
+ * 特産品タイプの一覧画面
+ */
+Route::get(
+    'cms-product-types',
+    'App\Http\Controllers\AdminGoodsController@typeindex'
+)->name('cms-typeslist');
+
+/**
+ * 特産品タイプの新規登録画面
+ */
+Route::get(
+    'cms-producttypes-new',
+    'App\Http\Controllers\AdminGoodsController@typeInput'
+)->name('cms-typesinput');
+
+/**
+ * 特産品タイプの新規登処理
+ */
+Route::post(
+    'cms-producttypes-new',
+    'App\Http\Controllers\AdminGoodsController@typeCreate'
+)->name('cms-typescreate');
+
+/**
+ * 特産品タイプの編集画面
+ */
+Route::get(
+    'cms-producttypes-edit',
+    'App\Http\Controllers\AdminGoodsController@typeEdit'
+)->name('cms-typesedit');
+
+/**
+ * 特産品タイプの編集登録
+ */
+Route::post(
+    'cms-producttypes-edit',
+    'App\Http\Controllers\AdminGoodsController@typeUpdate'
+)->name('cms-typesupdate');
+
+
+/**
+ * 特産品タイプの削除処理
+ */
+Route::get(
+    'cms-producttypes-delete',
+    'App\Http\Controllers\AdminGoodsController@typeDelete'
+)->name('cms-typesremove');
