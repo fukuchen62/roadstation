@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+
+
+.kv img {
+    object-position: center;
+    z-index: -1;
+}
+
 .wrapper {
     margin: 0 auto;
     margin-top: 200px;
@@ -38,14 +45,27 @@ p {
     width: 100%;
     height: auto;
     padding: 20px;
-    border: 3px solid #1ca10a;
     box-sizing: border-box;
     border-radius: 20px;
     justify-content: center;
     margin-bottom: 50px;
-    background-color: #fff;
     word-break: break-all;
+    box-shadow: 15px 10px 3px 0 #A7D28D;
+    border: solid 3px #8C5243;
+    background-color: #ffff;
 }
+
+
+.blog-card:hover {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    box-shadow: none;
+    z-index: -999;
+}
+
+
+
 
 .blog-card img {
     width: 100%;
@@ -61,8 +81,9 @@ p {
 .side {
     width: 100%;
     /* border: 3px solid #1ca10a; */
-    background-color: #6cb862;
-    color: cornsilk;
+    border: 3px solid #a7d28d;
+    background-color: #a7d28d;
+    color: #8c5243;
     padding: 20px 10px;
 
 }
@@ -80,12 +101,14 @@ p {
     .blog-card {
         width: 40%;
         padding: 10px;
-        border: 3px solid #1ca10a;
         box-sizing: border-box;
         border-radius: 20px;
         justify-content: center;
         margin-bottom: 50px;
         text-align: center;
+        box-shadow: 15px 10px 3px 0 #A7D28D;
+        border: solid 3px #8C5243;
+        background-color: #ffff;
     }
 
 
@@ -97,6 +120,17 @@ p {
 
 
 @media screen and (min-width:901px) {
+
+
+    .kv {
+        object-position: center;
+        position: relative;
+        top: 0;
+    }
+
+    .kv-img {
+        z-index: -1;
+    }
 
     .sp-kv {
         width: 100%;
@@ -112,6 +146,7 @@ p {
         width: 100%;
         height: auto;
         position: relative;
+
     }
 
     .blog-wrapper {
@@ -126,18 +161,6 @@ p {
     }
 
     .blog-card {
-        /* padding: 20px;
-        box-sizing: border-box;
-        border-radius: 20px;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 40px;
-        word-break: break-word;
-        border-radius: 20px;
-        border: solid 3px #8C5243;
-        box-shadow: 5px 10px 3px 0 #A7D28D; */
-
-
         background-color: #fff;
         padding: 20px;
         box-sizing: border-box;
