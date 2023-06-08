@@ -32,15 +32,15 @@
             <!-- スライドショー -->
             <div class="slide-items">
                 <div>
-                    <img src="{{ asset('assets/images/station.html/stations_3_1_1200_400.jpg .jpg') }}" alt="">
+                    <img src="{{ asset('assets/images/station/stations_3_1_1200_400.jpg .jpg') }}" alt="">
                 </div>
 
                 <div>
-                    <img src="{{ asset('assets/images/station.html/drive.jpg') }}" alt="">
+                    <img src="{{ asset('assets/images/station/drive.jpg') }}" alt="">
                 </div>
 
                 <div>
-                    <img src="{{ asset('assets/images/station.html/stations_3_2_.jpg') }}" alt="">
+                    <img src="{{ asset('assets/images/station/stations_3_2_.jpg') }}" alt="">
                 </div>
             </div>
 
@@ -60,369 +60,339 @@
         <section>
 
             {{-- グルメ --}}
-            <section>
+            @if ($meal->isNotEmpty())
+                <section>
 
-                {{-- グルメタイトル --}}
-                <div class="flex f-width">
+                    {{-- グルメタイトル --}}
+                    <div class="flex f-width">
 
-                    <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130px" height="128px"
-                        alt="美味しい飲み物" class="none">
+                        <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130px"
+                            height="128px" alt="美味しい飲み物" class="none">
 
-                    <div class="center overlap ">
+                        <div class="center overlap ">
 
-                        <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137" alt="">
+                            <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137"
+                                alt="">
 
-                        <h3 class="center width absolute">
-                            グルメ
-                        </h3>
+                            <h3 class="center width absolute">
+                                グルメ
+                            </h3>
 
+                        </div>
+
+                        <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145px"
+                            height="126.5px" alt="道の駅のソフトクリームを食べるたぬき" class="sideways">
                     </div>
 
-                    <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145px"
-                        height="126.5px" alt="道の駅のソフトクリームを食べるたぬき" class="sideways">
-                </div>
-
-                @php
-                    $count = 0;
-                @endphp
-                @foreach ($special_goods as $goods)
-                    @if ($count % 2 != 0)
-                        <section class="commentary">
-
-                            <div class="container">
-
-                                <img src="{{ asset('/storage/images/' . $goods->picture) }}" width="5472" height="3648"
-                                    class="img" alt="美味しいパンケーキ">
-
-                                <div class="text">
-
-                                    <h4 class="deco-h4">
-                                        {{ $goods->goods_name }}
-                                    </h4>
-
-                                    <p>{{ $goods->price }}円</p>
-
-                                    <p class="com-wrap">{!! $goods->discription !!}
-                                    </p>
-
-                                    <p class="blog-btn">
-
-                                        <a
-                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </section>
-                    @else
-                        <section class="commentary">
-
-                            <!-- 画像左と文字を横に並べる。CSS -->
-                            <div class="container reverse">
-
-                                <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img" alt="美味しい海鮮丼">
-                                <div class="text">
-                                    <h4 class="deco-h4">ぶりぶり丼</h4>
-                                    <p>1,580円</p>
-                                    <p>徳島県産を使用しております</p>
-                                    <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    @endif
+                    {{-- グルメ記事 --}}
                     @php
-                        $count++;
+                        $count = 0;
                     @endphp
-                @endforeach
+                    @foreach ($meal as $goods)
+                        @if ($count % 2 != 0)
+                            <section class="commentary">
 
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gourmet2.jpg" class="img" alt="美味しい芋けんぴ">
-                        <div class="text">
-                            <h4 class="deco-h4">極細けんぴ</h4>
-                            <p>580円</p>
-                            <p class="com-wrap">鳴門金時を３ミリにカットし秘伝の蜜をたっぷり絡めたやみつきになる味わい</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
+                                <div class="container">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" width="5472"
+                                        height="3648" class="img" alt="美味しいパンケーキ">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">
+                                            {{ $goods->goods_name }}
+                                        </h4>
+
+                                        <p>{{ $goods->price }}円</p>
+
+                                        <p class="com-wrap">{!! $goods->discription !!}
+                                        </p>
+
+                                        <p class="blog-btn">
+
+                                            <a
+                                                href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </section>
+                        @else
+                            <section class="commentary">
+
+                                <!-- 画像左と文字を横に並べる。CSS -->
+                                <div class="container reverse">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
+                                        alt="美味しい海鮮丼">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}円</p>
+
+                                        <p>{!! $goods->discription !!}</p>
+
+                                        <p class="blog-btn"><a
+                                                href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </section>
+                        @endif
+                        @php
+                            $count++;
+                        @endphp
+                    @endforeach
+
                 </section>
-            </section>
-
-
-            {{-- お土産 --}}
-            <section>
-
-                {{-- お土産タイトル --}}
-                <div class="flex f-width">
-
-                    <img src="../assets/images/illustrations/tanuki-gift2.png" width="150px" height="135px" alt="お土産を運ぶたぬき"
-                        class="none">
-
-                    <div class="center overlap ">
-
-                        <img src="../assets/images/h3-green.png" width="214" height="137" alt="道の駅のお土産">
-
-                        <h3 class="center width">
-                            お土産
-                        </h3>
-
-                    </div>
-
-                    <img src="../assets/images/illustrations/tanuki-gift.png" width="150px" height="150px" alt="美味しいお土産"
-                        class="sideways">
-
-                </div>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gift1.jpg" class="img" alt="美味しいスイートポテト">
-                        <div class="text">
-                            <h4 class="deco-h4">ほっこりおいものスイートポテト</h4>
-                            <p>4個 897円/8個 1,782円税込</p>
-                            <p class="com-wrap">しっとり滑らかなお芋の優しい甘さが特徴。お芋好きにはたまらない！</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="commentary">
-                    <!-- 画像左と文字を横に並べる。CSS -->
-                    <div class="container reverse">
-                        <img src="../assets/images/station.html/gift2.jpg" class="img" alt="美味しいプリン">
-                        <div class="text">
-                            <h4 class="deco-h4">鳴門ほれほれプリン</h4>
-                            <p>１個３８０円税込み</p>
-                            <p class="com-wrap">一番人気のほれほれ芋プリンにはスコップ型のスプーンがついています</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gift3.jpg" class="img" alt="美味しいカレー">
-                        <div class="text">
-                            <h4 class="deco-h4">鳴門金時カレー</h4>
-                            <p>648円税込</p>
-                            <p class="com-wrap">お芋の甘みとカレーのスパイス。実は相性ばっちりなんです。</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-            </section>
-
+            @endif
 
             {{-- 農産物 --}}
-            <section>
+            @if ($vegetable->isNotEmpty())
+                <section>
 
-                <div class="flex f-width">
+                    <div class="flex f-width">
 
-                    <img src="../assets/images/illustrations/tanuki-food4.png" width="125px" height="100px"
-                        alt="美味しいすだち" class="none">
+                        <img src="{{ asset('assets/images/illustrations/tanuki-food4.png') }}" width="125px"
+                            height="100px" alt="美味しいすだち" class="none">
 
-                    <div class="center overlap ">
-                        <img src="../assets/images/h3-orange.png" width="214" height="137" alt="">
+                        <div class="center overlap ">
 
-                        <h3 class="center width absolute">農産物</h3>
+                            <img src="{{ asset('assets/images/h3-orange.png') }}" width="214" height="137"
+                                alt="">
 
-                    </div>
+                            <h3 class="center width absolute">農産物</h3>
 
-                    <img src="../assets/images/illustrations/tanuki-food.png" width="141.5px" height="140px"
-                        alt="道の駅のさつまいもを食べるたぬき" class="sideways">
-
-                </div>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gourmet1.jpg" width="5472" height="3648"
-                            class="img" alt="美味しいパンケーキ">
-                        <div class="text">
-                            <h4 class="deco-h4">鳴門金時パンケーキ</h4>
-                            <p>1,210円</p>
-                            <p class="com-wrap">ふわふわなパンケーキともちもち触感の求肥がたまらなくおいしい自慢のパンケーキです</p>
-                            <p class="blog-btn">
-                                <a href="#">【ブログ】行ってみたんよへ</a>
-                                </>
                         </div>
+
+                        <img src="{{ asset('assets/images/illustrations/tanuki-food.png') }}" width="141.5px"
+                            height="140px" alt="道の駅のさつまいもを食べるたぬき" class="sideways">
+
                     </div>
+
+                    @php
+                        $count = 0;
+                    @endphp
+                    @foreach ($vegetable as $goods)
+                        @if ($count % 2 != 0)
+                            <section class="commentary">
+
+                                <div class="container">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" width="5472"
+                                        height="3648" class="img" alt="美味しいパンケーキ">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}</p>
+
+                                        <p class="com-wrap">{!! $goods->discription !!}</p>
+
+                                        <p class="blog-btn">
+                                            <a
+                                                href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        @else
+                            <section class="commentary">
+
+                                <div class="container reverse">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
+                                        alt="美味しい海鮮丼">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}</p>
+
+                                        <p>{!! $goods->discription !!}</p>
+
+                                        <p class="blog-btn"><a
+                                                href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        @endif
+                        @php
+                            $count++;
+                        @endphp
+                    @endforeach
+
+
                 </section>
-
-
-                <section class="commentary">
-                    <!-- 画像左と文字を横に並べる。CSS -->
-                    <div class="container reverse">
-                        <img src="../assets/images/station.html/gourmet3.jpg" class="img" alt="美味しい海鮮丼">
-                        <div class="text">
-                            <h4 class="deco-h4">ぶりぶり丼</h4>
-                            <p>1,580円</p>
-                            <p>徳島県産を使用しております</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gourmet2.jpg" class="img" alt="美味しい芋けんぴ">
-                        <div class="text">
-                            <h4 class="deco-h4">極細けんぴ</h4>
-                            <p>580円</p>
-                            <p class="com-wrap">鳴門金時を３ミリにカットし秘伝の蜜をたっぷり絡めたやみつきになる味わい</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-            </section>
-
+            @endif
 
             {{-- 海産物 --}}
-            <section>
+            @if ($fish->isNotEmpty())
+                <section>
 
-                {{-- 海産物タイトル --}}
-                <div class="flex f-width">
+                    {{-- 海産物タイトル --}}
+                    <div class="flex f-width">
 
-                    <img src="../assets/images/illustrations/tanuki-food5.png" width="125px" height="125.5px"
-                        alt="美味しいわかめ" class="sideways">
-                    <div class="center overlap ">
+                        <img src="{{ asset('assets/images/illustrations/tanuki-food5.png') }}" width="125px"
+                            height="125.5px" alt="美味しいわかめ" class="sideways">
 
-                        <img src="../assets/images/h3-red.png" width="214" height="137" alt="道の駅のお土産">
+                        <div class="center overlap ">
 
-                        <h3 class="center width">水産物</h3>
+                            <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137"
+                                alt="道の駅のお土産">
 
-                    </div>
+                            <h3 class="center width">水産物</h3>
 
-                    <img src="../assets/images/illustrations/tanuki-food2.png" width="141.5px" height="140px"
-                        alt="道の駅の魚を食べるたぬき" class="sideways">
-
-                </div>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gift1.jpg" class="img" alt="美味しいスイートポテト">
-                        <div class="text">
-                            <h4 class="deco-h4">ほっこりおいものスイートポテト</h4>
-                            <p>4個 897円/8個 1,782円税込</p>
-                            <p class="com-wrap">しっとり滑らかなお芋の優しい甘さが特徴。お芋好きにはたまらない！</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
                         </div>
+
+                        <img src="{{ asset('assets/images/illustrations/tanuki-food2.png') }}" width="141.5px"
+                            height="140px" alt="道の駅の魚を食べるたぬき" class="sideways">
+
                     </div>
+
+                    @php
+                        $count = 0;
+                    @endphp
+                    @foreach ($fish as $goods)
+                        @if ($count % 2 != 0)
+                            <section class="commentary">
+
+                                <div class="container">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
+                                        alt="美味しいスイートポテト">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}</p>
+
+                                        <p class="com-wrap">{{ $goods->discription }}</p>
+
+                                        <p class="blog-btn"><a
+                                                href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        @else
+                            <section class="commentary">
+
+                                <div class="container reverse">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
+                                        alt="美味しいプリン">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}</p>
+
+                                        <p class="com-wrap">{{ $goods->discription }}</p>
+
+                                        <p class="blog-btn"><a
+                                                href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        @endif
+                        @php
+                            $count++;
+                        @endphp
+                    @endforeach
+
                 </section>
-
-                <section class="commentary">
-                    <!-- 画像左と文字を横に並べる。CSS -->
-                    <div class="container reverse">
-                        <img src="../assets/images/station.html/gift2.jpg" class="img" alt="美味しいプリン">
-                        <div class="text">
-                            <h4 class="deco-h4">鳴門ほれほれプリン</h4>
-                            <p>１個３８０円税込み</p>
-                            <p class="com-wrap">一番人気のほれほれ芋プリンにはスコップ型のスプーンがついています</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gift3.jpg" class="img" alt="美味しいカレー">
-                        <div class="text">
-                            <h4 class="deco-h4">鳴門金時カレー</h4>
-                            <p>648円税込</p>
-                            <p class="com-wrap">お芋の甘みとカレーのスパイス。実は相性ばっちりなんです。</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-            </section>
-
+            @endif
 
             {{-- 工芸品 --}}
-            <section>
+            @if ($craft->isNotEmpty())
+                <section>
 
-                {{-- 工芸品タイトル --}}
-                <div class="flex f-width">
+                    {{-- 工芸品タイトル --}}
+                    <div class="flex f-width">
 
-                    <img src="../assets/images/illustrations/tanuki-food6.png" width="118px" height="114.5px"
-                        alt="きれいな藍染" class="none">
+                        <img src="{{ asset('assets/images/illustrations/tanuki-food6.png') }}" width="118px"
+                            height="114.5px" alt="きれいな藍染" class="none">
 
-                    <div class="center overlap ">
+                        <div class="center overlap ">
 
-                        <img src="../assets/images/h3-green.png" width="214" height="137" alt="道の駅のお土産">
+                            <img src="{{ asset('assets/images/h3-green.png') }}" width="214" height="137"
+                                alt="道の駅のお土産">
 
-                        <h3 class="center width">工芸品</h3>
+                            <h3 class="center width">工芸品</h3>
 
-                    </div>
-
-                    <img src="../assets/images/illustrations/tanuki-food3.png" width="141.5px" height="140px"
-                        alt="道の駅で買ったお椀でご飯を食べるたぬき" class="sideways">
-
-                </div>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gift1.jpg" class="img" alt="美味しいスイートポテト">
-                        <div class="text">
-                            <h4 class="deco-h4">ほっこりおいものスイートポテト</h4>
-                            <p>4個 897円/8個 1,782円税込</p>
-                            <p class="com-wrap">しっとり滑らかなお芋の優しい甘さが特徴。お芋好きにはたまらない！</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
                         </div>
+
+                        <img src="{{ asset('assets/images/illustrations/tanuki-food3.png') }}" width="141.5px"
+                            height="140px" alt="道の駅で買ったお椀でご飯を食べるたぬき" class="sideways">
+
                     </div>
+
+                    @php
+                        $count = 0;
+                    @endphp
+                    @foreach ($craft as $goods)
+                        @if ($count % 2 != 0)
+                            <section class="commentary">
+
+                                <div class="container">
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
+                                        alt="美味しいスイートポテト">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}</p>
+
+                                        <p class="com-wrap">{{ $goods->discription }}</p>
+
+                                        <p class="blog-btn"><a
+                                                href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        @else
+                            <section class="commentary">
+
+                                <div class="container reverse">
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
+                                        alt="美味しいプリン">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}</p>
+
+                                        <p class="com-wrap">{{ $goods->discription }}</p>
+
+                                        <p class="blog-btn"><a
+                                                href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        @endif
+                        @php
+                            $count++;
+                        @endphp
+                    @endforeach
+
                 </section>
-
-                <section class="commentary">
-                    <!-- 画像左と文字を横に並べる。CSS -->
-                    <div class="container reverse">
-                        <img src="../assets/images/station.html/gift2.jpg" class="img" alt="美味しいプリン">
-                        <div class="text">
-                            <h4 class="deco-h4">鳴門ほれほれプリン</h4>
-                            <p>１個３８０円税込み</p>
-                            <p class="com-wrap">一番人気のほれほれ芋プリンにはスコップ型のスプーンがついています</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="commentary">
-                    <!-- 画像右と文字を横に並べる。CSS -->
-                    <div class="container">
-                        <img src="../assets/images/station.html/gift3.jpg" class="img" alt="美味しいカレー">
-                        <div class="text">
-                            <h4 class="deco-h4">鳴門金時カレー</h4>
-                            <p>648円税込</p>
-                            <p class="com-wrap">お芋の甘みとカレーのスパイス。実は相性ばっちりなんです。</p>
-                            <p class="blog-btn"><a href="#">【ブログ】行ってみたんよへ</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-            </section>
-
+            @endif
 
             {{-- 体験 --}}
             @foreach ($activities as $activity)
@@ -475,8 +445,6 @@
 
                 <h4 class="station-name">道の駅&nbsp;{{ $station->station_name }}</h4>
 
-                <!-- dtとdd１セットのみdivでくくれる。１２０ｐ -->
-
                 <dl>
                     <dt>〒{{ $station->zip_code }}</dt>
                     <dd>{{ $station->address }}</dd>
@@ -508,29 +476,105 @@
                     <dt>設備：</dt>
                     <dd>
                         <div class="icon-wrapper">
-                            <img title="宿泊施設" src="{{ asset('assets/images/icon/accommodation_icon1.svg') }}"
-                                alt="宿泊施設">
-                            <img title="ATM" src="{{ asset('assets/images/icon/atm_icon1.svg') }}" alt="設備ATM">
-                            <img title="ベビーベッド" src="{{ asset('assets/images/icon/bed_icon1.svg') }}" alt="ベビーベッド">
-                            <img title="身障者トイレ" src="{{ asset('assets/images/icon/disability_icon1.svg') }}"
-                                alt="身障者トイレ">
-                            <img title="EV充電施設" src="{{ asset('assets/images/icon/ev_icon1.svg') }}" alt="EV充電施設">
-                            <img title="軽食・喫茶" src="{{ asset('assets/images/icon/lightmeal_icon1.svg') }}"
-                                alt="軽食・喫茶">
-                            <img title="公園" src="{{ asset('assets/images/icon/park_icon1.svg') }}" alt="公園">
-                            <img title="レストラン" src="{{ asset('assets/images/icon/restaurant_icon1.svg') }}"
-                                alt="レストラン">
-                            <img title="ショップ" src="{{ asset('assets/images/icon/shop_icon1.svg') }}" alt="ショップ">
-                            <img title="シャワー" src="{{ asset('assets/images/icon/shower_icon1.svg') }}" alt="シャワー">
-                            <img title="温泉施設" src="{{ asset('assets/images/icon/spa_icon1.svg') }}" alt="温泉施設">
+
+                            @if ($station->accommodation_icon == 1)
+                                <img title="宿泊施設" src="{{ asset('assets/images/icon/accommodation_icon1.svg') }}"
+                                    alt="宿泊施設">
+                            @else
+                                <img title="宿泊施設" src="{{ asset('assets/images/icon/accommodation_icon0.svg') }}"
+                                    alt="宿泊施設">
+                            @endif
+
+                            @if ($station->atm_icon == 1)
+                                <img title="ATM" src="{{ asset('assets/images/icon/atm_icon1.svg') }}"
+                                    alt="設備ATM">
+                            @else
+                                <img title="ATM" src="{{ asset('assets/images/icon/atm_icon0.svg') }}"
+                                    alt="設備ATM">
+                            @endif
+
+                            @if ($station->bed_icon == 1)
+                                <img title="ベビーベッド" src="{{ asset('assets/images/icon/bed_icon1.svg') }}"
+                                    alt="ベビーベッド">
+                            @else
+                                <img title="ベビーベッド" src="{{ asset('assets/images/icon/bd_icon0.svg') }}" alt="ベビーベッド">
+                            @endif
+
+                            @if ($station->disability_icon == 1)
+                                <img title="身障者トイレ" src="{{ asset('assets/images/icon/disability_icon1.svg') }}"
+                                    alt="身障者トイレ">
+                            @else
+                                <img title="身障者トイレ" src="{{ asset('assets/images/icon/disability_icon0.svg') }}"
+                                    alt="身障者トイレ">
+                            @endif
+
+                            @if ($station->ev_icon == 1)
+                                <img title="EV充電施設" src="{{ asset('assets/images/icon/ev_icon1.svg') }}" alt="EV充電施設">
+                            @else
+                                <img title="EV充電施設" src="{{ asset('assets/images/icon/ev_icon0.svg') }}" alt="EV充電施設">
+                            @endif
+
+                            @if ($station->lightmeal_icon == 1)
+                                <img title="軽食・喫茶" src="{{ asset('assets/images/icon/lightmeal_icon1.svg') }}"
+                                    alt="軽食・喫茶">
+                            @else
+                                <img title="軽食・喫茶" src="{{ asset('assets/images/icon/lightmeal_icon0.svg') }}"
+                                    alt="軽食・喫茶">
+                            @endif
+
+                            @if ($station->park_icon == 1)
+                                <img title="公園" src="{{ asset('assets/images/icon/park_icon1.svg') }}"
+                                    alt="公園">
+                            @else
+                                <img title="公園" src="{{ asset('assets/images/icon/park_icon0.svg') }}"
+                                    alt="公園">
+                            @endif
+
+                            @if ($station->restaurant_icon == 1)
+                                <img title="レストラン" src="{{ asset('assets/images/icon/restaurant_icon1.svg') }}"
+                                    alt="レストラン">
+                            @else
+                                <img title="レストラン" src="{{ asset('assets/images/icon/restaurant_icon0.svg') }}"
+                                    alt="レストラン">
+                            @endif
+
+                            @if ($station->shop_icon == 1)
+                                <img title="ショップ" src="{{ asset('assets/images/icon/shop_icon1.svg') }}"
+                                    alt="ショップ">
+                            @else
+                                <img title="ショップ" src="{{ asset('assets/images/icon/shop_icon0.svg') }}"
+                                    alt="ショップ">
+                            @endif
+
+                            @if ($station->shower_icon == 1)
+                                <img title="シャワー" src="{{ asset('assets/images/icon/shower_icon1.svg') }}"
+                                    alt="シャワー">
+                            @else
+                                <img title="シャワー" src="{{ asset('assets/images/icon/shower_icon0.svg') }}"
+                                    alt="シャワー">
+                            @endif
+
+                            @if ($station->spa_icon == 1)
+                                <img title="温泉施設" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
+                                    alt="温泉施設">
+                            @else
+                                <img title="温泉施設" src="{{ asset('assets/images/icon/spa_icon0.svg') }}"
+                                    alt="温泉施設">
+                            @endif
+
+
                             <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/shower_icon1.svg') }}"
                                 alt="">
+
                             <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
                                 alt="">
+
                             <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
                                 alt="">
+
                             <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
                                 alt="">
+
                             <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
                                 alt="">
                         </div>
@@ -553,13 +597,11 @@
             </div>
 
             <!-- googlemap -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.533509598061!2d134.5772079762422!3d34.15827496212325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536fda4ddf71ff%3A0xc5ce5c88e1a48d83!2z6YGT44Gu6aeFIOOBj-OCi-OBj-OCi-OBquOCi-OBqA!5e0!3m2!1sja!2sjp!4v1685414674912!5m2!1sja!2sjp"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                title="道の駅くるくるなるとの地図" loading="lazy"></iframe>
+            {!! $station->map_url !!}
 
         </section>
     @endforeach
+
 @endsection
 
 {{-- 該当ページ専用JS --}}
