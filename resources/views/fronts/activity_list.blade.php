@@ -80,7 +80,7 @@
                     @endphp
 
                     <li class="roadstation-frame"><a
-                            href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
+                            href="{{ url('blog-detail') }}?id={{ $id }}&blog_category_id={{ $blog_category->id }}">{{ $title }}</a>
                     </li>
                 @endforeach
             </ul>
