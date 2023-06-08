@@ -15,6 +15,10 @@
 
 @endsection
 
+@section('key_visual')
+    <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル">
+@endsection
+
 {{-- メイン --}}
 @section('content')
     <div class="attention-box">

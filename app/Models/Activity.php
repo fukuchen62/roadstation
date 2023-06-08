@@ -36,7 +36,8 @@ class Activity extends Model
 
     /**
      * ブログのblog_category_idを取得し送るメソッド
-     *（ブログ記事内の関連記事を表示するため作成 / 作成者：小山）
+     * ブログ記事内の関連記事を表示するため作成
+     * 作成者：小山
      *
      * @return void
      */
@@ -47,8 +48,9 @@ class Activity extends Model
 
     /**
      * ブログのis_showを取得し送るメソッド
-     *（アクティビティ一覧内のブログ記事を正しく表示するため作成 / 作成者：小山）
-     *
+     *アクティビティ一覧内のブログ記事を正しく表示するため作成
+     * 作成者：小山
+     * 
      * @return void
      */
     public function getIs_show()
@@ -58,7 +60,8 @@ class Activity extends Model
 
     /**
      * ブログのactivbvity_idを取得し送るメソッド
-     *（アクティビティ一覧内のブログ記事を正しく表示するため作成 / 作成者：小山）
+     * アクティビティ一覧内のブログ記事を正しく表示するため作成
+     * 作成者：小山
      *
      * @return void
      */
