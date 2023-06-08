@@ -86,6 +86,17 @@ class BlogController extends Controller
          * （制作者：小山）
          */
         return view('fronts.article', $data);
+
+
+        
+            // $texts = Blog::all();
+            // $previous = Blog::where('id','<',$text->id)->orderBy('id','desc')->first();
+    
+            // $next = Blog::where('id','>',$text->id)->orderBy('id')->first();
+    
+            // return view('fronts.article', compact('text','previous','next'));
+            $texts = Blog::all();
+            return  view('fronts.article',$texts);
     }
 
 

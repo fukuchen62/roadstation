@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-.kv img{
-/* object-position:0 10%; */
+.kv img {
+    /* object-position:0 10%; */
 }
 
 h2,
@@ -25,8 +25,8 @@ h2 {
 }
 
 .area_category {
+    margin: 100px auto 0 auto;
     text-align: center;
-    margin: 0 auto;
 }
 
 h3 {
@@ -47,19 +47,45 @@ dd {
 
 
 .area-btn {
-    padding: 10px 10px;
-    border-radius: 30px;
-    background-color: #ccc;
+    margin-top: 50px;
+    /* padding: 10px 10px; */
     font-size: 1.1rem;
+    text-decoration: underline dotted #e7d955;
 }
 
 .area-btn:hover {
     background-color: #ffffff;
 }
 
+.area-btn::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat;
+    background-image: url(../images/illustrations/tanuki-food.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.area-btn::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat;
+    background-image: url(../images/illustrations/tanuki-food.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
 .search_results {
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.district {
+    background-image: url(../images/bg_headline.png);
 }
 
 .kv img {
@@ -84,8 +110,6 @@ dd {
     display: inline-block;
     /* padding: 20px 30px; */
     border-radius: 20px;
-    color: #ffff;
-    background-color: #ccc;
 }
 
 dt {
@@ -128,7 +152,6 @@ dd img {
     .area-btn {
         padding: 20px 30px;
         border-radius: 30px;
-        background-color: #ccc;
     }
 }
 
@@ -138,7 +161,7 @@ dd img {
         margin-top: 100px;
     }
 
-    .area-btn{
+    .area-btn {
         font-size: 2rem;
     }
 
@@ -166,7 +189,8 @@ dd img {
         margin-bottom: 40px;
         word-break: break-word;
     }
-    .area_category{
+
+    .area_category {
         margin-top: 120px;
     }
 
@@ -187,7 +211,5 @@ dd img {
         display: inline-block;
         padding: 20px 30px;
         border-radius: 50px;
-        color: #ffff;
-        background-color: #ccc;
     }
 }

@@ -6,10 +6,9 @@
         </path>
     </svg>
 
-    <img src="../assets/images/" alt="">
     <!-- topへ戻るボタン -->
     <div class="scroll-top">
-        <a href="#"><img src="../assets/images/illustrations/Tanuki-top.png" alt=""></a>
+        <a href="#"><img src="{{ asset('assets/images/illustrations/Tanuki-top.png') }}" alt=""></a>
     </div>
 
 
@@ -18,39 +17,50 @@
     <div class="footer-menu">
 
         <ul class="footer-menu-list">
-            <li><a href="../html/station_list.html">
-                    <img src="../assets/images/menu_icon/station_list_icon_w.png" alt="" width="20"
-                        height="20">
+
+            <li><a href="{{ route('stationlist') }}">
+                    <img src="{{ asset('assets/images/menu_icon/station_list_icon_w.png') }}" alt=""
+                        width="20" height="20">
                     道の駅一覧</a></li>
-            <li><a href="../html/station_area.html">
-                    <img src="../assets/images/menu_icon/station_area_icon_w.png" alt="" width="20"
-                        height="20">
+
+            <li><a href="{{ route('areasearch') }}">
+                    <img src="{{ asset('assets/images/menu_icon/station_area_icon_w.png') }}" alt=""
+                        width="20" height="20">
                     エリア検索</a></li>
-            <li><a href="../html/station_detail.html">
-                    <img src="../assets/images/menu_icon/station_detail_icon_w.png" alt="" width="20"
-                        height="20">
+
+            <li><a href="{{ route('ditailsearch') }}">
+                    <img src="{{ asset('assets/images/menu_icon/station_detail_icon_w.png') }}" alt=""
+                        width="20" height="20">
                     詳細検索</a></li>
+
         </ul>
 
         <ul class="footer-menu-list">
-            <li><a href="../html/goods_list.html">
-                    <img src="../assets/images/menu_icon/goods_list_icon_w.png" alt="" width="20"
-                        height="20">
+
+            <li><a href="{{ route('goods') }}">
+                    <img src="{{ asset('assets/images/menu_icon/goods_list_icon_w.png') }}" alt=""
+                        width="20" height="20">
                     特産品</a></li>
-            <li><a href="../html/activity_list.html">
-                    <img src="../assets/images/menu_icon/activity_list_icon_w.png" alt="" width="20"
-                        height="20">
+
+            <li><a href=".{{ route('activity') }}">
+                    <img src="{{ asset('assets/images/menu_icon/activity_list_icon_w.png') }}" alt=""
+                        width="20" height="20">
                     体験</a></li>
-            <li><a href="../html/blog_list.html">
-                    <img src="../assets/images/menu_icon/blog_list_icon_w.png" alt="" width="20"
-                        height="20">
+
+            <li><a href="{{ route('bloglist') }}">
+                    <img src="{{ asset('assets/images/menu_icon/blog_list_icon_w.png') }}" alt=""
+                        width="20" height="20">
                     行ってみたんよ</a></li>
+
             <li><a href="../html/like.html">
-                    <img src="../assets/images/menu_icon/like_icon_w.png" alt="" width="20" height="20">
+                    <img src="{{ asset('assets/images/menu_icon/like_icon_w.png') }}" alt="" width="20"
+                        height="20">
                     お気に入り</a></li>
         </ul>
-        <ul>
 
+        <ul>
+            <li><a href="{{ route('news') }}">
+                    新着ニュース</a></li>
             <li><a href="">
                     このサイトについて</a></li>
             <li><a href="">
