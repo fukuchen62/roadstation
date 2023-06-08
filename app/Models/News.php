@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class News extends Model
 {
     use HasFactory;
+
     protected $guarded = array('id');
 
     public static $rules = array(
@@ -28,30 +29,48 @@ class News extends Model
         'is_show.required' => '表示フラグは必ず入力してください。0 or 1'
     ];
 
+    /**
+     * newsCategory function
+     * ニュースカテゴリーテーブルとのリレーション
+     *
+     * @return void
+     */
     public function newsCategory()
     {
         $items = $this->belongsTo('App\Models\NewsCategory');
         return $items;
     }
 
+    /**
+     * roadStation function
+     * 道の駅テーブルとのリレーション
+     *
+     * @return void
+     */
     public function roadStation()
     {
         $items = $this->belongsTo('App\Models\RoadStation');
         return $items;
     }
 
-    public function getData()
-    {
-        $data = $this->news_category_id;
-        return $data;
-    }
-
+    /**
+     * getCategoryName function
+     * ニュースカテゴリー名を取得
+     *
+     * @return void
+     */
     public function getCategoryName()
     {
         $data = '<p>' . $this->newsCategory->category_name . '</p>';
         return $data;
     }
 
+    /**
+     * getStationName function
+     * 道の駅listから、|を外す
+     *
+     * @return void
+     */
     public function getStationName()
     {
         $data = $this->station_list;
@@ -61,6 +80,13 @@ class News extends Model
         return $array;
     }
 
+    /**
+     * changeName function
+     * アルファベットを数字に置き換え
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function changeName($id)
     {
         switch ($id) {
@@ -96,8 +122,13 @@ class News extends Model
         return $id;
     }
 
-
-
+    /**
+     * getRoadstationName function
+     * 道の駅名を取得
+     *
+     * @param [type] $id
+     * @return void
+     */
     public static function getRoadstationName($id)
     {
         $item = RoadStation::find($id);
@@ -108,5 +139,29 @@ class News extends Model
         }
 
         return $name;
+    }
+
+    /**
+     * previous function
+     * 戻るボタン
+     *
+     * @return void
+     */
+    public function previous()
+    {
+        return $this->where('id', '<', $this->id)
+            ->orderBy('id', 'desc')->first();
+    }
+
+    /**
+     * next function
+     * 前に進むボタン
+     *
+     * @return void
+     */
+    public function next()
+    {
+        return $this->where('id', '>', $this->id)
+            ->orderBy('id', 'asc')->first();
     }
 }

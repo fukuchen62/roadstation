@@ -50,7 +50,7 @@ class RoadstationController extends Controller
         // $name = RoadStation::where('id', $request->id)->get();
         $name = RoadStation::all();
 
-        $goods = SpecialGoods::where('station_list', $request->id)->get();
+        $goods = SpecialGoods::where('road_station_id', $request->id)->get();
         // $goods = SpecialGoods::all();
 
         $pro = ProductType::where('station_list', $request->id)->get();
@@ -88,7 +88,7 @@ class RoadstationController extends Controller
         // $name = RoadStation::where('id', $request->id)->get();
         $name = RoadStation::all();
 
-        $goods = SpecialGoods::where('station_list', $request->id)->get();
+        $goods = SpecialGoods::where('road_station_id', $request->id)->get();
         // $goods = SpecialGoods::all();
 
         $pro = ProductType::where('station_list', $request->id)->get();
