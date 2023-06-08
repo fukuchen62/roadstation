@@ -15,6 +15,10 @@
 
 @endsection
 
+@section('key_visual')
+    <img class="sub-keyvisual" src="{{ asset('assets/images/sub-keyvisual.jpg') }}" alt="サブキービジュアル">
+@endsection
+
 {{-- メイン --}}
 @section('content')
     <div class="attention-box">
@@ -32,7 +36,7 @@
                     <h3 class="activity-name">
                         {{ $activity->activity_name }}
                     </h3>
-                    <p>体験内容・詳細：</p>{!! $activity->discription !!}
+                    {!! $activity->discription !!}
                 </div>
             </div>
             {{--  <h4 class="headline-text">営業時間：</h4>  --}}
@@ -44,7 +48,7 @@
                 料 金：<br>{{ $activity->price }}
             </p>
             {{--  <h4 class="headline text">利用条件：</h4>  --}}
-            <p>利用条件：</p>{!! $activity->conditions !!}
+            {!! $activity->conditions !!}
 
             {{--  体験したブログ記事の表示部分  --}}
             <h3 class="headline activity-place">体験したブログ記事</h3>
