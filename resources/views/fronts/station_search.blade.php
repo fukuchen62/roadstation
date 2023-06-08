@@ -8,6 +8,8 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
+    <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fstyle_search.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
 @endsection
 
