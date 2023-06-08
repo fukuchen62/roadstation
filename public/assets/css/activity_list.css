@@ -55,39 +55,6 @@ h4 {
 }
 
 
-.attention::before {
-    content: '';
-    /*何も入れない*/
-    display: inline-block;
-    width: 80px;
-    /*画像の幅*/
-    height: 63px;
-    /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity2.png);
-    background-size: cover;
-    vertical-align: middle;
-    margin-right: 10px;
-
-
-}
-
-
-.attention::after {
-    content: '';
-    /*何も入れない*/
-    display: inline-block;
-    width: 80px;
-    /*画像の幅*/
-    height: 63px;
-    /*画像の高さ*/
-    background-image: url(../images/illustrations/tanuki-activity.png);
-    background-size: cover;
-    vertical-align: middle;
-    margin-left: 10px;
-
-}
-
-
 
 
 .activity-delimiter {

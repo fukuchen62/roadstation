@@ -32,6 +32,8 @@
                     <img src="{{ asset('assets/images/menu_icon/station_detail_icon_w.png') }}" alt=""
                         width="20" height="20">
                     詳細検索</a></li>
+            <li><a href="{{ route('news') }}">
+                    新着ニュース</a></li>
 
         </ul>
 
@@ -42,7 +44,7 @@
                         width="20" height="20">
                     特産品</a></li>
 
-            <li><a href=".{{ route('activity') }}">
+            <li><a href="{{ route('activity') }}">
                     <img src="{{ asset('assets/images/menu_icon/activity_list_icon_w.png') }}" alt=""
                         width="20" height="20">
                     体験</a></li>
@@ -59,15 +61,14 @@
         </ul>
 
         <ul>
-            <li><a href="{{ route('news') }}">
-                    新着ニュース</a></li>
             <li><a href="">
                     このサイトについて</a></li>
             <li><a href="">
                     お問い合わせ</a></li>
             <li><a href="">
                     プライバシーポリシー</a></li>
-
+            <li><a href="{{ route('admintop') }}">
+                    ログインページ</a></li>
         </ul>
 
     </div>
