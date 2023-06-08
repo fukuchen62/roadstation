@@ -9,9 +9,8 @@
 @section('title', '一覧')
 
 @section('pageCss')
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
 @endsection
 
 @section('key_visual')
@@ -23,11 +22,12 @@
         <img src="{{ asset('/storage/imgs/road_side_2.jpg') }}" alt="man">
     </div>
     <p>道の駅一覧</p>
-    <p>西部</p>
-    @foreach ($road_stations as $road)
-        @if ($road->area_id == 2)
-            <div class="list">
-                <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+    <p class="area_direction">西部</p>
+    <div class="list_box">
+        @foreach ($road_stations as $road)
+            @if ($road->area_id == 2)
+                <div class="list">
+
                     <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" alt="">
                     <div class="station-title">
                         <h2>道の駅&nbsp;{{ $road->station_name }}</h2>
@@ -35,6 +35,9 @@
                     </div>
 
                     <dl>
+                        <dt>営業時間：</dt>
+                        <dd>{{ $road->business_hours }}</dd>
+
                         <dt>〒{{ $road->zip_code }}</dt>
                         <dd>{{ $road->address }}</dd>
 
@@ -51,11 +54,7 @@
                             @else
                                 {{ $road->sns }}
                             @endif
-
-                        <dt>営業時間：</dt>
-                        <dd>{{ $road->business_hours }}
                         </dd>
-
                         <dt>定休日：</dt>
                         <dd>{{ $road->regular_holiday }}</dd>
 
@@ -116,15 +115,20 @@
                             </div>
                         </dd>
                     </dl>
-                </a>
-            </div>
-        @endif
-    @endforeach
-    <p>東部</p>
-    @foreach ($road_stations as $road)
-        @if ($road->area_id == 1)
-            <div class="list">
-                <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                    <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                        <div class="link_more_box">
+                            <p>more</p>
+                        </div>
+                    </a>
+                </div>
+            @endif
+        @endforeach
+    </div>
+    <p class="area_direction">東部</p>
+    <div class="list_box">
+        @foreach ($road_stations as $road)
+            @if ($road->area_id == 1)
+                <div class="list">
                     <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" alt="">
                     <div class="station-title">
                         <h2>道の駅&nbsp;{{ $road->station_name }}</h2>
@@ -213,15 +217,20 @@
                             </div>
                         </dd>
                     </dl>
-                </a>
-            </div>
-        @endif
-    @endforeach
-    <p>南部</p>
-    @foreach ($road_stations as $road)
-        @if ($road->area_id == 3)
-            <div class="list">
-                <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                    <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                        <div class="link_more_box">
+                            <p>more</p>
+                        </div>
+                    </a>
+                </div>
+            @endif
+        @endforeach
+    </div>
+    <p class="area_direction">南部</p>
+    <div class="list_box">
+        @foreach ($road_stations as $road)
+            @if ($road->area_id == 3)
+                <div class="list">
                     <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" alt="">
                     <div class="station-title">
                         <h2>道の駅&nbsp;{{ $road->station_name }}</h2>
@@ -310,10 +319,15 @@
                             </div>
                         </dd>
                     </dl>
-                </a>
-            </div>
-        @endif
-    @endforeach
+                    <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                        <div class="link_more_box">
+                            <p>more</p>
+                        </div>
+                    </a>
+                </div>
+            @endif
+        @endforeach
+    </div>
 @endsection
 
 {{-- 該当ページ専用JS --}}
