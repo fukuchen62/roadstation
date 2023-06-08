@@ -36,7 +36,7 @@
                 <p class="date">
                     ●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
                 <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
-                <p class="blog-text">内 容：</p>{!! $blog->content !!}
+                {!! $blog->content !!}
             @endforeach
 
 
@@ -60,8 +60,27 @@
                 {{--  <P>test:<a href="{{ url('station-detail') }}?id={{ $blog->road_station_id }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>  --}}
             @endforeach
 
-            {{-- 現在の投稿を基準に【次の記事へ】と【前の記事へ】ボタンの表示部分 --}}
+            {{-- 現在の投稿を基準に【次の記事へ】と【前の記事へ】ボタンの表示部分 モバイル用 --}}
             <div class="before-next-mobilebtn">
+                <p>
+                    @if ($blog->previous() != null)
+                        <a
+                            href="{{ url('blog-detail') }}?id={{ $blog->previous()->id }}&blog_category_id={{ $blog->blog_category_id }}">
+                            < 前の記事へ</a>
+                    @endif
+                </p>
+
+                <p>
+                    @if ($blog->next() != null)
+                        <a
+                            href="{{ url('blog-detail') }}?id={{ $blog->next()->id }}&blog_category_id={{ $blog->blog_category_id }}">次の記事へ
+                            ></a>
+                    @endif
+                </p>
+            </div>
+
+            {{-- 現在の投稿を基準に【次の記事へ】と【前の記事へ】ボタンの表示部分 モバイル以外 --}}
+            <div class="before-next-pcbtn">
                 <div>
                     @if ($blog->previous() != null)
                         <a
