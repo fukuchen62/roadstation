@@ -1,8 +1,6 @@
 @charset "utf-8";
 
-.kv img{
-/* object-position:bottom; */
-}
+
 
 h2,
 h3,
@@ -11,9 +9,15 @@ h4,
     text-align: center;
 }
 
-h2{
+h2 {
     margin-top: 150px;
+    margin-bottom: 50px;
+    background-image: url(../images/bg_headline.png);
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #B45A27;
 }
+
 
 h3 {
     padding: 10px 12px;

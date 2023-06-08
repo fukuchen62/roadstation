@@ -5,6 +5,10 @@
     margin-top: 600px;
 }
 
+section {
+    margin-top: 100px;
+}
+
 .site-logo {
     position: fixed;
     top: 0;
@@ -63,25 +67,20 @@
 .news-box {
     text-align: center;
     background-color: #ffff;
+    border: #ffebd8 2px solid;
     border-radius: 50%;
+}
 
+.article-list li {
+    padding-bottom: 5px;
 }
 
 .news-pcbtn {
     display: none;
 }
 
-.news-mobilebtn {
-    text-align: center;
-    border-radius: 50px;
-    background-color: #B45A27;
-    color: #ffff;
-    font-size: 20px;
-    padding: 20px 30px;
-    margin: 0 auto;
+.mobilebtn {
     margin-top: 20px;
-    margin-bottom: 50px;
-    display: inline-block;
 }
 
 .tokusimamap {
@@ -89,6 +88,7 @@
     max-width: 360px;
     width: 100%;
     height: auto;
+    margin-bottom: 20px;
 }
 
 /* 徳島のエリアマップ */
@@ -103,7 +103,7 @@
     position: absolute;
     padding: 4%;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #ffffff;
 }
 
 .east {
@@ -135,7 +135,7 @@
 }
 
 
-.feature-title {
+.section-title {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -202,7 +202,7 @@
     display: none;
 }
 
-.mobile-btn {
+/* .mobile-btn {
     text-align: center;
     border-radius: 50px;
     background-color: #B45A27;
@@ -212,7 +212,7 @@
     margin: 0 auto;
     margin-bottom: 50px;
     display: inline-block;
-}
+} */
 
 .activity-wrapper {
     margin: 0 auto;
@@ -263,15 +263,15 @@
 /*うどんたぬきアニメの設定 */
 .anime2 {
     position: absolute;
-    top: -5px;
-    left: 150px;
+    top: -8px;
+    left: 0;
 }
 
 /* うどんアニメの設定 */
 .anime3 {
     position: absolute;
-    top: 70px;
-    left: 10px;
+    top: 80px;
+    left: 30px;
 }
 
 
@@ -307,6 +307,7 @@
     border-radius: 20px;
     justify-content: center;
     margin: 30px auto;
+    background-color: #fff;
 }
 
 .img-wrapper {
@@ -402,7 +403,7 @@ imgcontent-wrapper .heading {
         max-width: 80%;
         width: 100%;
         height: auto;
-
+        margin-bottom: 20px;
     }
 
     .east {
@@ -438,7 +439,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .feature-title {
+    .section-title {
         text-align: center;
         margin-bottom: 30px;
     }
@@ -495,18 +496,18 @@ imgcontent-wrapper .heading {
         position: relative;
     }
 
-    /* 腕上げたぬきアニメの設定 */
+    /* 芋ほりアニメの設定 */
     .anime1 {
         position: absolute;
-        top: -5px;
-        left: 150px;
+        top: 10px;
+        left: 199px;
     }
 
     /* 人参アニメの設定 */
     .anime4 {
         position: absolute;
-        top: 80px;
-        left: 1px;
+        top: 250px;
+        left: 14px;
     }
 
     .goods-strapline {
@@ -568,7 +569,6 @@ imgcontent-wrapper .heading {
         display: none;
 
     }
-
 
     .activity-pcbtn {
         display: none;
@@ -655,6 +655,20 @@ imgcontent-wrapper .heading {
         width: 100vw;
     }
 
+    .sp-h2 {
+        color: #ffffff;
+        font-size: 4rem;
+        margin-top: 30%;
+    }
+
+    .sp-btn {
+        display: inline-block;
+        background-color: #fff;
+        width: 200px;
+        height: 60px;
+        border-radius: 50px;
+    }
+
     .kv {
         width: 100%;
         height: 980px;
@@ -685,16 +699,19 @@ imgcontent-wrapper .heading {
         z-index: 999;
     }
 
-    /* .sp-h2 {
-        color: #ffffff;
-        font-size: 2rem;
-        margin-top: 10%;
+    /*うどんたぬきアニメの設定 */
+    .anime2 {
+        position: absolute;
+        top: -10px;
+        left: 183px;
     }
 
-    /* .news-title {
-        margin-bottom: 30px;
-
-    } */
+    /* うどんアニメの設定 */
+    .anime3 {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+    }
 
     .news-box {
         display: flex;
@@ -721,17 +738,10 @@ imgcontent-wrapper .heading {
         display: inline-block;
     }
 
-    .news-mobilebtn {
+    .mobilebtn {
         display: none;
     }
 
-
-    .tokusimamap {
-        margin: 0 auto;
-        max-width: 75%;
-        width: 100%;
-        height: auto;
-    }
 
     .east {
         top: 20%;
@@ -767,7 +777,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .feature-title {
+    .section-title {
         text-align: center;
         margin-bottom: 30px;
     }
@@ -813,7 +823,7 @@ imgcontent-wrapper .heading {
         height: 330px;
         align-items: center;
         border-radius: 30px;
-        background-color: #E99787;
+        background-color: #ff8871;
         color: black;
         text-align: center;
         font-size: 20px;
@@ -827,23 +837,12 @@ imgcontent-wrapper .heading {
 
 
     .pcbtn {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #ffffff;
-        color: #ff6c6c;
-        font-weight: bold;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
         margin-bottom: 50px;
         display: inline-block;
-        position: absolute;
-        top: 60%;
-        left: 20%;
     }
 
     .pcbtn:hover {
-        color: #ff6c6c;
+        color: #ffffff;
         background-color: #fff7e2;
     }
 
@@ -891,7 +890,7 @@ imgcontent-wrapper .heading {
         width: 330px;
         height: 330px;
         border-radius: 30px;
-        background-color: #E99787;
+        background-color: #fbae51;
         color: black;
         text-align: center;
         font-size: 20px;
