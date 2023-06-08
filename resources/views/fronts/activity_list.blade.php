@@ -45,10 +45,9 @@
                 </div>
             </div>
             {{--  <h4 class="headline text">利用条件：</h4>  --}}
-            {!! $activity->conditions !!}
+            <p>利用条件：</p>{!! $activity->conditions !!}
             {{--  <h4 class="headline text">体験内容・詳細：</h4 class="detail-text">  --}}
-            <p>{!! $activity->discription !!}</p>
-
+            <p>体験内容・詳細：</p>{!! $activity->discription !!}
             {{--  体験できる道の駅の表示部分  --}}
             {{-- <h3 class="headline activity-place">体験できる道の駅</h3>
             <ul class="roadstation-frame">
@@ -64,7 +63,7 @@
                                 href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}&blog_category_id={{ $activity->blog->blog_category_id }}">{{ $activity->blog->getName() }}</a>
                         </li> 
                     </ul> --}}
-            @if ($activity->blog->is_show == 0)
+            {{--  @if ($activity->blog->is_show == 0)
                 <p>{{ '該当するブログ記事はありません。' }}</p>
             @else
                 <ul>
@@ -72,14 +71,14 @@
                             href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}&category_id={{ $activity->blog->categoryy_id }}">{{ $activity->blog->getName() }}</a>
                     </li>
                 </ul>
-            @endif
+            @endif  --}}
 
-            {{-- @php
+            @php
                 
                 $blog_list = $activity->blog_list;
-
-                $id_list = explode('|',$blog_list);
-
+                
+                $id_list = explode('|', $blog_list);
+                
             @endphp
 
             <ul>
@@ -88,13 +87,12 @@
                         $id = $activity->changeName($id);
                         $name = $activity::getBlogName($id);
                     @endphp
-                    
-                    <li class="roadstation-frame"><a
-                        href="{{ url('blog-detail') }}?id={{ $id }}">{{ $name }}</a>
-                    </li>
 
+                    <li class="roadstation-frame"><a
+                            href="{{ url('blog-detail') }}?id={{ $id }}">{{ $name }}</a>
+                    </li>
                 @endforeach
-            </ul> --}}
+            </ul>
         </section>
     @endforeach
 

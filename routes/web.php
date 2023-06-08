@@ -92,7 +92,7 @@ Route::get(
 Route::get(
     'station-detail',
     // こっちをアドレスに入れるんだよ。
-    'App\Http\Controllers\RoadstationController@stationMainView'
+    'App\Http\Controllers\Roadstation2Controller@stationMainView'
 )->name('roadstation');
 
 
