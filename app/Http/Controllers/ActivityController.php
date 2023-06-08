@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Activity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Activity;
+use App\Models\BlogCategory;
 
 class ActivityController extends Controller
 {
@@ -25,16 +27,21 @@ class ActivityController extends Controller
          */
         $items = Activity::all();
 
+        $category = BlogCategory::all();
+
         /**
          * $dataに$itemを代入
          */
         $data = [
             'activities' => $items,
+            'blog_category' =>$category,
         ];
 
         /**
          * $dataをviewヘルパを使い、activity_listページに送る処理
          */
         return view('fronts.activity_list',$data);
+
+
     }
 }
