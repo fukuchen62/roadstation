@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 
-.wrapper {
+/* .wrapper {
     margin-top: 250px;
-}
+} */
 
 
 .kv img {
@@ -266,9 +266,9 @@ dd img {
 
 @media screen and (min-width:601px) {
 
-    .wrapper {
+    /* .wrapper {
         margin-top: 250px;
-    }
+    } */
 
     .stationlist-title {
         /* margin-top: 300px; */
@@ -279,10 +279,10 @@ dd img {
 
 
 @media screen and (min-width:761px) {
-
+    /* 
     .wrapper {
         margin-top: 250px;
-    }
+    } */
 
 
 
@@ -355,10 +355,10 @@ dd img {
 
 
 @media screen and (min-width:900px) {
-
+    /* 
     .wrapper {
         margin-top: 250px;
-    }
+    } */
 
 
     .kv {
@@ -381,9 +381,9 @@ dd img {
 
 @media screen and (min-width:901px) {
 
-    .wrapper {
+    /* .wrapper {
         margin-top: 250px;
-    }
+    } */
 
     .kv {
         object-position: center;
