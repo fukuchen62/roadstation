@@ -47,76 +47,81 @@ class RoadstationController extends Controller
 
     public function stationDetailSearch(Request $request)
     {
-        // $name = RoadStation::where('id', $request->id)->get();
-        $name = RoadStation::all();
+        $items = [];
 
-        $goods = SpecialGoods::where('road_station_id', $request->id)->get();
-        // $goods = SpecialGoods::all();
-
-        $pro = ProductType::where('station_list', $request->id)->get();
-        // $pro = ProductType::all();
-
-        // $act = Activity::where('road_station_id', $request->id)->get();
-        $act = Activity::where('road_station_id', $request->id)->get();
-
-        // $area = 0;
-        // if (isset($_GET['east'])) {
-        //     $area = 1;
-        //     // var_dump($area);
-        // } elseif (isset($_GET['west'])) {
-        //     $area = 2;
-        //     // var_dump($area);
-        // } elseif (isset($_GET['south'])) {
-        //     $area = 3;
-        //     // var_dump($area);
-        // }
-
-
+        if (isset($request->area)) {
+            foreach ($request->area as $val) {
+                if ($val == 1) {
+                    $items = RoadStation::where('area_id', 1)
+                        ->orderby('station_name', 'DESC')
+                        ->get();
+                } elseif ($request->area == 2) {
+                    $items = RoadStation::where('area_id', 2)
+                        ->orderby('station_name', 'DESC')
+                        ->get();
+                } elseif ($request->area == 3) {
+                    $items = RoadStation::where('area_id', 3)
+                        ->orderby('station_name', 'DESC')
+                        ->get();
+                } else {
+                    // $items = RoadStation::all();
+                    $items = [];
+                }
+            }
+        }
 
         $data = [
-            'road_stations' => $name,
-            'activities' => $act,
-            'special_goods' => $goods,
-            'product_types' => $pro,
-            // 'station_area' => $area,
+            // 'road_stations' => $name,
+            // 'activities' => $act,
+            // 'special_goods' => $goods,
+            // 'product_types' => $pro,
+            'search' => $items,
         ];
+
         return view('fronts.station_search', $data);
     }
 
+
     public function stationAreaSearch(Request $request)
     {
-        // $name = RoadStation::where('id', $request->id)->get();
-        $name = RoadStation::all();
+        $items = "";
+        // // $name = RoadStation::where('id', $request->id)->get();
+        // $name = RoadStation::all();
 
-        $goods = SpecialGoods::where('road_station_id', $request->id)->get();
-        // $goods = SpecialGoods::all();
+        // $goods = SpecialGoods::where('road_station_id', $request->id)->get();
+        // // $goods = SpecialGoods::all();
 
-        $pro = ProductType::where('station_list', $request->id)->get();
-        // $pro = ProductType::all();
+        // $pro = ProductType::where('station_list', $request->id)->get();
+        // // $pro = ProductType::all();
 
+        // // $act = Activity::where('road_station_id', $request->id)->get();
         // $act = Activity::where('road_station_id', $request->id)->get();
-        $act = Activity::where('road_station_id', $request->id)->get();
 
-        // $area = 0;
-        // if (isset($_GET['east'])) {
-        //     $area = 1;
-        //     // var_dump($area);
-        // } elseif (isset($_GET['west'])) {
-        //     $area = 2;
-        //     // var_dump($area);
-        // } elseif (isset($_GET['south'])) {
-        //     $area = 3;
-        //     // var_dump($area);
-        // }
+        if ($request->area == "east") {
+            $items = RoadStation::where('area_id', 1)
+                ->orderby('station_name', 'DESC')
+                ->get();
+        } elseif ($request->area == "west") {
+            $items = RoadStation::where('area_id', 2)
+                ->orderby('station_name', 'DESC')
+                ->get();
+        } elseif ($request->area == "south") {
+            $items = RoadStation::where('area_id', 3)
+                ->orderby('station_name', 'DESC')
+                ->get();
+        } else {
+            // $items = RoadStation::all();
+            $items = [];
+        }
 
 
 
         $data = [
-            'road_stations' => $name,
-            'activities' => $act,
-            'special_goods' => $goods,
-            'product_types' => $pro,
-            // 'station_area' => $area,
+            // 'road_stations' => $name,
+            // 'activities' => $act,
+            // 'special_goods' => $goods,
+            // 'product_types' => $pro,
+            'search' => $items,
         ];
         return view('fronts.station_area', $data);
     }

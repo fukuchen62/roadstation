@@ -8,6 +8,8 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
+    <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fstyle_search.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
 @endsection
 
@@ -23,7 +25,8 @@
             <h1 class="pagetitle">詳細検索</h1>
         </div>
     </section>
-    <form action="#" method="GET">
+    <form action="{{ url('detail-search') }}" method="GET">
+        {{ csrf_field() }}
         <div class="search_form">
             <p>地域</p>
             <div class="search_area">
@@ -109,58 +112,139 @@
             </div>
     </form>
     <?php
-
-    if (isset($_GET['area']) && isset($_GET['icon'])) { ?>
-    <?php
-    $area = '';
-    $icon = '';
-    $atm = 0;
-    $bed = 0;
-    $area = $_GET['area'];
-    $icon = $_GET['icon'];
-    $areaA = in_array(4, $area);
-    if ($areaA) {
-        $area = [1, 2, 3];
-    }
-    $atmA = in_array('atm_icon', $icon);
-    if ($atmA) {
-        $atm = 1;
-    } else {
-        $atm = 0;
-    }
-    $bedA = in_array('bea_icon', $icon);
-    if ($bedA) {
-        $bed = 1;
-    } else {
-        $bed = 0;
-    }
     
-    $area = array_map('intval', $area);
-    $areaB = in_array('4', $area);
-    if ($areaB) {
-        $areaA = 1 || 2 || 3;
-    } else {
-        $areaA = implode('||', $area);
-        echo var_dump($areaA);
-    }
+    // if (isset($_GET['area']) && isset($_GET['icon'])) {
+    ?>
+    <?php
+    // $area = '';
+    // $icon = '';
+    // $atm = 0;
+    // $bed = 0;
+    // $area = $_GET['area'];
+    // $icon = $_GET['icon'];
+    // $areaA = in_array(4, $area);
+    // if ($areaA) {
+    //     $area = [1, 2, 3];
+    // }
+    // $atmA = in_array('atm_icon', $icon);
+    // if ($atmA) {
+    //     $atm = 1;
+    // } else {
+    //     $atm = 0;
+    // }
+    // $bedA = in_array('bea_icon', $icon);
+    // if ($bedA) {
+    //     $bed = 1;
+    // } else {
+    //     $bed = 0;
+    // }
+    
+    // $area = array_map('intval', $area);
+    // $areaB = in_array('4', $area);
+    // if ($areaB) {
+    //     $areaA = 1 || 2 || 3;
+    // } else {
+    //     $areaA = implode('||', $area);
+    //     echo var_dump($areaA);
+    // }
     ?>
 
-    <pre>
-        <?php var_dump($area); ?>
-        <?php var_dump($icon); ?>
-    </pre>
-    <?php } ?>
-    @if (isset($_GET['area']) && isset($_GET['icon']))
+    <div class="list_box">
+        @foreach ($search as $road)
+            {{-- @if ($road->area_id == 3) --}}
+            <?php $com++; ?>
+            <div class="list">
 
-        @foreach ($road_stations as $road)
-            @if ($road->area_id == $area['0'] || $road->area_id == isset($area['1']) || $road->area_id == isset($area['2']))
-                @if ($road->atm_icon == $atm && $road->bed_icon == $bed)
-                    {{ $road->station_name }}
-                @endif
-            @endif
+                <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" alt="">
+                <div class="station-title">
+                    <h2>道の駅&nbsp;{{ $road->station_name }}</h2>
+                    <p>{{ $road->catchphrase }}</p>
+                </div>
+
+                <dl>
+                    <dt>営業時間：</dt>
+                    <dd>{{ $road->business_hours }}</dd>
+
+                    <dt>〒{{ $road->zip_code }}</dt>
+                    <dd>{{ $road->address }}</dd>
+
+                    <dt>TEL：</dt>
+                    <dd>{{ $road->tel }}</dd>
+
+                    <dt>公式URL：</dt>
+                    <dd>{{ $road->url }}</dd>
+
+                    <dt>SNS：</dt>
+                    <dd>
+                        @if ($road->sns == null)
+                            {{ '現在掲載はございません。' }}
+                        @else
+                            {{ $road->sns }}
+                        @endif
+                    </dd>
+                    <dt>定休日：</dt>
+                    <dd>{{ $road->regular_holiday }}</dd>
+
+                    <dt>駐車場：</dt>
+                    <dd>{{ $road->parking }}
+                    </dd>
+                    <dt>設備：</dt>
+                    <dd>
+                        <div class="icon-wrapper">
+                            <img title="宿泊施設"
+                                src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
+                                alt="宿泊施設">
+                            <img title="ATM"
+                                src="{{ asset('assets/images/icon/atm_icon' . $road->atm_icon . '.svg') }}"
+                                alt="設備ATM">
+                            <img title="ベビーベッド"
+                                src="{{ asset('assets/images/icon/bed_icon' . $road->bed_icon . '.svg') }}"
+                                alt="ベビーベッド">
+                            <img title="身障者トイレ"
+                                src="{{ asset('assets/images/icon/disability_icon' . $road->disability_icon . '.svg') }}"
+                                alt="身障者トイレ">
+                            <img title="EV充電施設" src="{{ asset('assets/images/icon/ev_icon' . $road->ev_icon . '.svg') }}"
+                                alt="EV充電施設">
+                            <img title="軽食・喫茶"
+                                src="{{ asset('assets/images/icon/lightmeal_icon' . $road->lightmeal_icon . '.svg') }}"
+                                alt="軽食・喫茶">
+                            <img title="公園"
+                                src="{{ asset('assets/images/icon/park_icon' . $road->park_icon . '.svg') }}"
+                                alt="公園">
+                            <img title="レストラン"
+                                src="{{ asset('assets/images/icon/restaurant_icon' . $road->restaurant_icon . '.svg') }}"
+                                alt="レストラン">
+                            <img title="ショップ"
+                                src="{{ asset('assets/images/icon/shop_icon' . $road->shop_icon . '.svg') }}"
+                                alt="ショップ">
+                            <img title="シャワー"
+                                src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
+                                alt="シャワー">
+                            <img title="温泉施設"
+                                src="{{ asset('assets/images/icon/spa_icon' . $road->spa_icon . '.svg') }}"
+                                alt="温泉施設">
+                            <img title="ここに説明が入ります"
+                                src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
+                                alt="">
+                            <img title="ここに説明が入ります"
+                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}" alt="">
+                            <img title="ここに説明が入ります"
+                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}" alt="">
+                            <img title="ここに説明が入ります"
+                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}" alt="">
+                            <img title="ここに説明が入ります"
+                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}" alt="">
+                        </div>
+                    </dd>
+                </dl>
+                <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                    <div class="link_more_box">
+                        <p>more</p>
+                    </div>
+                </a>
+            </div>
         @endforeach
-    @endif
-
+    </div>
 @endsection
 
 {{-- 該当ページ専用JS --}}

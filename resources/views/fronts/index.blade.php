@@ -57,13 +57,13 @@
                 </ul>
                 @endforeach
             </ul>
-            <p class="news-mobilebtn btn btn-border-shadow btn-border-shadow--color"><a href="{{ url('news') }}">もっと見る</a></p>
+            <p class="news-mobilebtn btn btn-border-shadow btn-border-shadow--color"><a href="{{ route('news') }}">もっと見る</a></p>
         </section>
 
 
         <section class="area-map">
             <div class="map">
-                <img class="tokusimamap" src="{{ asset('assets/images/map.png') }}" alt="地図">
+                <img class="tokusimamap" src="{{ asset('assets/images/illustrations/tokushima_map.png') }}" alt="地図">
                 <a class="east" href="{{route('areasearch')}}?id=1">東部</a>
                 <a class="west" href="{{route('areasearch')}}?id=2">西部</a>
                 <a class="south" href="{{route('areasearch')}}?id=3">南部</a>
@@ -95,7 +95,6 @@
                     <li><img class="goods-1" src="../storage/images/index.images/wakame.jpg" alt=""></li>
                     <li><img class="goods-1" src="../storage/images/index.images/yakiimo.jpg" alt=""></li>
                 </ul>
-
 
                 <a href="{{route('goods')}}">
                     <p class="more-btn mobile-btn">もっと見る</p>
@@ -135,29 +134,31 @@
         </section>
 
         <section class="blog">
-            <h2 class="blog-taitle">行ってきたんよ</h2>
-            <div class="blog-container">
+            <h2 class="section-title">行ってきたんよ</h2>
+            <div class="blog-main">
                 @foreach ($blog as $blog)
-                <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}">
+                <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
                     <div class="blog-wrapper">
-                        <div class="img-wrapper">
-                            <img src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
-                            <h3 class="heading">{!!$blog->title!!}</h3>
-                            <p class="text">{!!$blog->overview!!}</p>
-                        </div>
-                        {{-- @php
+                        <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
+
+                        <h3>{!!$blog->title!!}</h3>
+
+                        @php
                                 $ts = strtotime($blog->created_at);
                         @endphp
-                            <div class="flex">
+                            <p class="flex">
                             <div class="news__area--data">
                                 {{ date('Y年m月d日', $ts) }}
                             </div>
                             <div class="enclosure">{{ $news->newsCategory->category_name }}</div>
 
-                        </div> --}}
+                        </p>
+
+                        <p class="text">{!!$blog->overview!!}</p>
                     </div>
                 </a>
                 @endforeach
+
             </div>
         </section>
 

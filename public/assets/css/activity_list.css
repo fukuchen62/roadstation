@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* 
+/*
 .wrapper {
     margin-top: 250px;
 } */
@@ -7,8 +7,6 @@
 kv img {
     z-index: -1;
 }
-
-
 
 html {
     overflow-x: hidden;
@@ -23,49 +21,37 @@ section {
     /* text-align: center; */
 }
 
-
 h2 {
-
     /* max-width: 220px; */
     width: 100%;
-    /* margin: 30px auto 30px auto; */
     text-align: center;
-    font-size: 32px;
-    margin-top: 300px;
-
-
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 20px;
-}
-
-
-
-
-h4 {
-    font-size: 20px;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
+h4 {
+    text-align: start;
+    font-weight: bold;
+}
 
 /* .wrapper {
     margin-top: 150px;
 } */
 
-
 .attention {
     /* margin-top: 220px; */
     margin-bottom: 30px;
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/hedline_yellow.png);
+    background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
     color: #B45A27;
     text-align: center;
 }
-
-
-
 
 .activity-delimiter {
     margin-bottom: 100px;
@@ -91,53 +77,54 @@ h4 {
 
 .activity-name {
     width: 100%;
-    margin-bottom: 30px;
-    text-align: start;
+    text-align: center;
+}
+
+.station-name{
+    margin: 10px auto 20px auto;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .business-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    padding-bottom: 30px;
     text-align: start;
 }
 
 .price-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    padding-bottom: 30px;
     text-align: start;
 }
 
 .conditions-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    padding-bottom: 30px;
     text-align: start;
 }
 
 .detail-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    padding-bottom: 30px;
     text-align: start;
-}
-
-.activity-place {
-    text-align: center;
 }
 
 .roadstation-frame {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
-    text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .roadstation-name {
     width: 160px;
-    text-align: center;
+    text-align: start;
+    font-size: 1.2rem;
 }
 
 .activity-blog-place {
@@ -179,7 +166,7 @@ h4 {
 
 @media screen and (min-width:900px) {
 
-    /* 
+    /*
     .wrapper {
         margin-top: 250px;
     } */
@@ -247,18 +234,7 @@ h4 {
 
     h4 {
         font-size: 20px;
-        font-weight: bold;
     }
-
-
-
-
-
-
-
-
-
-
 
     /*
     .attention-img1 {

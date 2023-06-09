@@ -87,16 +87,7 @@
             <tr>
                 <th width="15%"> <span>*</span> 関連道の駅: </th>
                 <td>
-                <select name="station_id">
-                        @foreach ($category_items as $item)
-                            {{-- 選んでいる選択肢にselectedをつける --}}
-                            @if ($item->id == $goods->road_station_id)
-                                <option value="{{ $item->road_station_id }}" selected>{{ $item->road_station_name }}</option>
-                            @else
-                                <option value="{{ $item->id }}">{{ $item->road_station_name }}</option>
-                            @endif
-                        @endforeach
-                    </select>
+                    <input type="text" name="road_station_id" value="{{ $goods->road_station_id }}">
                 </td>
             </tr>
 

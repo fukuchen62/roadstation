@@ -23,6 +23,14 @@ class Activity extends Model
         return $this->belongsTo('App\Models\Blog');
     }
 
+    /**
+     * blogCategory function
+     * アクティビティ一覧からブログ記事に遷移した際、
+     * ブログ記事に関連記事を表示させるために作成
+     * 作成者：小山
+     *
+     * @return void
+     */
     public function blogCategory()
     {
         return $this->belongsTo('App\Models\BlogCategory');
@@ -130,11 +138,4 @@ class Activity extends Model
         }
         return $id;
     }
-
-public function getBlogCategoryId()
-{
-    
-    return $this->id;
-    
-}
 }
