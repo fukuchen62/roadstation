@@ -9,9 +9,10 @@
 @section('title', '一覧')
 
 @section('pageCss')
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/station_list.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
+
 @endsection
 
 @section('key_visual')
@@ -30,9 +31,9 @@
         <div class="stationlist-box">
             {{-- <div class="list_box"> --}}
             <h3 class="east-title">県東部</h3>
-            @foreach ($road_stations as $road)
-                @if ($road->area_id == 1)
-                    <section class="east">
+            <section class="east">
+                @foreach ($road_stations as $road)
+                    @if ($road->area_id == 1)
                         <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                             <div class="card">
                                 <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" width="250px" height="200px"
@@ -122,15 +123,16 @@
                                 </dl>
                             </div>
                         </a>
-                    </section>
-                @endif
-            @endforeach
+                    @endif
+                @endforeach
+            </section>
             {{-- </div> --}}
             <h3 class="west-title">県西部</h3>
             {{-- <div class="list_box"> --}}
-            @foreach ($road_stations as $road)
-                @if ($road->area_id == 2)
-                    <section class="west">
+            <section class="west">
+
+                @foreach ($road_stations as $road)
+                    @if ($road->area_id == 2)
                         <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                             <div class="card">
                                 <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" width="250px" height="200px"
@@ -220,15 +222,16 @@
                                 </dl>
                             </div>
                         </a>
-                    </section>
-                @endif
-            @endforeach
+                    @endif
+                @endforeach
+            </section>
             {{-- </div> --}}
             <h3 class="south-title">県南部</h3>
             {{-- <div class="list_box"> --}}
-            @foreach ($road_stations as $road)
-                @if ($road->area_id == 3)
-                    <section class="south">
+            <section class="south">
+
+                @foreach ($road_stations as $road)
+                    @if ($road->area_id == 3)
                         <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                             <div class="card">
                                 <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" width="250px" height="200px"
@@ -318,9 +321,9 @@
                                 </dl>
                             </div>
                         </a>
-                    </section>
-                @endif
-            @endforeach
+                    @endif
+                @endforeach
+            </section>
             {{-- </div> --}}
         </div>
     </main>

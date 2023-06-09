@@ -2,7 +2,7 @@
 
 .wrapper {
     padding: 0;
-    margin-top: 600px;
+    margin-top: 100vh;
 }
 
 header {
@@ -399,7 +399,7 @@ imgcontent-wrapper .heading {
 
     .wrapper {
         padding: 0;
-        margin-top: 500px;
+        margin-top: 100vh;
     }
 
     .article-list li {
@@ -681,7 +681,7 @@ imgcontent-wrapper .heading {
 
 
     .blog-card {
-        width: 27%;
+        width: 85%;
         box-sizing: border-box;
         border-radius: 20px;
         justify-content: center;
@@ -698,7 +698,7 @@ imgcontent-wrapper .heading {
 
     .wrapper {
         padding: 0;
-        margin-top: 650px;
+        margin-top: 100vh;
     }
 
     .kv {
