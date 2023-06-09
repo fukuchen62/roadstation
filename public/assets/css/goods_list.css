@@ -381,6 +381,10 @@ a.goods-group-c i.fa {
     }
 }
 
+#detail-top {
+    height: 60px;
+}
+
 .displayNone {
     display: none;
 }

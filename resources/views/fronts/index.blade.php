@@ -34,7 +34,7 @@
         <section class="news-box">
             <div>
                 <h2 class="news-title">ニュース</h2>
-                <a class="pcbtn btn btn-border-shadow btn-border-shadow--color" href="{{ url('news') }}">もっと見る</a>
+                <a class="pcbtn btn btn-border-shadow btn-border-shadow--color" href="{{ route('news') }}">もっと見る</a>
             </div>
 
             <!-- 記事リスト -->
@@ -75,10 +75,10 @@
             <h2 class="section-title">こんなんあるで！</h2>
             <div class="goods-wrapper">
                 <ul class="goods">
-                    <li><img class="goods-1" src="../storage/images/index.images/mikan.jpg" alt=""></li>
-                    <li><img class="goods-1" src="../storage/images/index.images/otaniyaki.jpg" alt=""></li>
-                    <li><img class="goods-1" src="../storage/images/index.images/renkon.jpg" alt=""></li>
-                    <li><img class="goods-1" src="../storage/images/index.images/sakana.jpg" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/mikan.jpg')}}" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/otaniyaki.jpg')}}" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/renkon.jpg')}}" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/sakana.jpg')}}" alt=""></li>
                     <li class="goods-2">
                         <h2 class="sp-h2">特産品</h2>
                         <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
@@ -90,10 +90,10 @@
                             もっと見る
                         </a>
                     </li>
-                    <li><img class="goods-1" src="../storage/images/index.images/sudati.jpg" alt=""></li>
-                    <li><img class="goods-1" src="../storage/images/index.images/tikuwa.jpg" alt=""></li>
-                    <li><img class="goods-1" src="../storage/images/index.images/wakame.jpg" alt=""></li>
-                    <li><img class="goods-1" src="../storage/images/index.images/yakiimo.jpg" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/sudati.jpg')}}" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/tikuwa.jpg')}}" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/wakame.jpg')}}" alt=""></li>
+                    <li><img class="goods-1" src="{{ asset('assets/images/index/yakiimo.jpg')}}" alt=""></li>
                 </ul>
 
                 <a href="{{route('goods')}}">
@@ -104,10 +104,10 @@
 
             <div class="activity-wrapper">
                 <ul class="activity">
-                    <li><img class="activity-1" src="../storage/images/index.images/boat.jpg" alt=""></li>
-                    <li><img class="activity-1" src="../storage/images/index.images/dmv.jpg" alt=""></li>
-                    <li><img class="activity-1" src="../storage/images/index.images/aizometop.jpg" alt=""></li>
-                    <li><img class="activity-1" src="../storage/images/index.images/zipline.jpg" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/boat.jpg')}}" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/dmv.jpg')}}" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/aizometop.jpg')}}" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/zipline.jpg')}}" alt=""></li>
                     <li class="activity-2">
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
@@ -123,10 +123,10 @@
                     </li>
 
 
-                    <li><img class="activity-1" src="../storage/images/index.images/hune.jpg" alt=""></li>
-                    <li><img class="activity-1" src="../storage/images/index.images/asiyu.jpg" alt=""></li>
-                    <li><img class="activity-1" src="../storage/images/index.images/udon.jpg" alt=""></li>
-                    <li><img class="activity-1" src="../storage/images/index.images/ropeway.jpg" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/hune.jpg')}}" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/asiyu.jpg')}}" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/udon.jpg')}}" alt=""></li>
+                    <li><img class="activity-1" src="{{ asset('assets/images/index/ropeway.jpg')}}" alt=""></li>
                 </ul>
                 <a href="">
                     <p class="mobilebtn btn btn-border-shadow btn-border-shadow--color">もっと見る</p>
