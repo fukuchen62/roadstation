@@ -2,7 +2,7 @@
 
     <!-- g-nav pc -->
     <nav class="nav-pc">
-        <h1><a href="{{ url('/') }}"><img src="{{ asset('assets/images/site_logo/logo.png') }}" width="100"
+        <h1><a href="{{ route('top') }}"><img src="{{ asset('assets/images/site_logo/logo.png') }}" width="100"
                     height="100" alt="とくしままるっと道の駅"></a></h1>
 
         <ul>
@@ -76,7 +76,7 @@
 
     <!-- g-nav mobile -->
     <nav id="wrapper">
-        <h1 class="site-logo mobile-logo"><a href="{{ url('/') }}"><img
+        <h1 class="site-logo mobile-logo"><a href="{{ route('top') }}"><img
                     src="{{ asset('assets/images/site_logo/logo.png') }}" alt="とくしままるっと道の駅"></a></h1>
 
         <div class="btn-gnavi">

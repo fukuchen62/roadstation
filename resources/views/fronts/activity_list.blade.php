@@ -18,14 +18,14 @@
 {{-- キービジュアル --}}
 @section('key_visual')
     <div class="kv">
-        <img class="sub-keyvisual" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="サブキービジュアル">
+        <img src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="サブキービジュアル">
     </div>
 @endsection
 
 {{-- メイン --}}
 @section('content')
     <div class="attention-box">
-        <h2 class="attention">アクティビティ一覧</h2>
+        <h2 class="attention">体験一覧</h2>
     </div>
     {{--  体験一覧一覧の表示部分  --}}
     @foreach ($activities as $activity)
@@ -36,27 +36,27 @@
                     <h3 class="activity-name">
                         {{ $activity->activity_name }}
                     </h3>
-                    <h3>道の駅 <a
+                    <h4 class="station-name">体験できる道の駅 <a
                             href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
-                    </h3>
-                    <h4 class="headline-text">営業時間：</h4>
+                    </h4>
+                    <h4 class="headline-text">＜営業時間＞</h4>
                     <p class="business-text">
                         {{ $activity->business_hours }}
                     </p>
-                    <h4 class="headline text">料 金：</h4>
+                    <h4 class="headline text">＜料 金＞</h4>
                     <p class="price-text">
                         {{ $activity->price }}
                     </p>
 
                 </div>
             </div>
-            <h4 class="headline text">利用条件：</h4>
+            <h4 class="headline text">＜利用条件＞</h4>
             {!! $activity->conditions !!}
-            <h4 class="headline text">体験・詳細：</h4>
+            <h4 class="headline text">＜体験・詳細＞</h4>
             {!! $activity->discription !!}
 
             {{-- 体験したブログ記事の表示部分  --}}
-            <h3 class="headline activity-place">体験したブログ記事</h3>
+            <h3 class="headline activity-place">＜体験したブログ記事＞</h3>
             {{-- <ul class="roadstation-frame">
                         <li class="roadstation-frame"><a
                                 href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}&blog_category_id={{ $activity->blog->blog_category_id }}">{{ $activity->blog->getName() }}</a>
@@ -83,7 +83,6 @@
                         $id = $activity->changeName($id);
                         $title = $activity->getBlogName($id);
                     @endphp
-
                     <li class="roadstation-frame"><a
                             href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
                     </li>

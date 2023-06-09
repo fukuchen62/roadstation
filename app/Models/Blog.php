@@ -9,7 +9,21 @@ class Blog extends Model
 {
     use HasFactory;
 
-
+protected $guarded = array('id');
+    public static $rules = array(
+        'blog_category_id' => 'required|integer',
+        'title'       => 'required|string|max:60',
+        'overview'    => 'max:200',
+        'picture'   => 'required|string|max:200',
+        'is_show'     => 'required|boolean'
+    );
+    // 日本語エラーメッセージ
+    public static $messages = [
+        'blog_category_id.required' => 'カテゴリーIDは必ず入力してください。',
+        'title.required'       => 'タイトルは必ず入力してください。',
+        'picture.required'   => 'サムネ画像は必ず入力してください。',
+        'is_show.required'     => '表示フラグは必ず入力してください。'
+    ];
 
 
 
