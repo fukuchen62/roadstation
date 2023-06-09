@@ -10,7 +10,7 @@ h4,
 }
 
 h2 {
-    margin-top: 150px;
+    /* margin-top: 150px; */
     margin-bottom: 50px;
     background-image: url(../images/bg_headline.png);
     background-repeat: no-repeat;
@@ -115,7 +115,8 @@ form {
     padding: 10px 0;
     width: 150px;
     margin: 20px auto;
-    background-color: #ccc;
+    border-radius: 50px;
+    background-color: #A7D28D;
 }
 
 @media screen and (min-width:601px) {
