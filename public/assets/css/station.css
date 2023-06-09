@@ -17,7 +17,7 @@ section {
 iframe {
     width: clamp(320px, 90vw, 1160px);
     height: 30vh;
-    margin-top: 1.25rem;
+    margin-top: 60px;
     border-radius: 20px;
 }
 
@@ -64,7 +64,8 @@ h4 {
 
 .width {
     /* margin-bottom: 1.25rem; */
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin-bottom: 60px;
 }
 
 .bottom {
