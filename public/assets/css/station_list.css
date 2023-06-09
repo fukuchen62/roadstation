@@ -3,6 +3,7 @@
 
 .station-titlebox {
     text-align: center;
+    margin-bottom: 60px;
 }
 
 
@@ -13,7 +14,7 @@
 
 h2 {
     /* margin-top: 150px; */
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
 
 
@@ -29,6 +30,7 @@ h4 {
 
 .stationlist-box {
     text-align: center;
+    margin: 0 auto;
 }
 
 dl {
@@ -216,7 +218,6 @@ dd {
 .stationlist-title {
     /* margin-top: 250px; */
     text-align: center;
-    margin-bottom: 30px;
     background-image: url(../images/hedline_yellow.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -254,15 +255,15 @@ dd {
 .card {
     width: 300px;
     /* width: 306px; */
-    height: auto;
+    height: 615px;
     padding: 20px;
     margin: 0 auto;
     margin-bottom: 40px;
     word-break: break-word;
     border-radius: 20px;
-    box-shadow: 15px 10px 3px 0 #a7d28d;
-    border: solid 3px #8c5243;
-    background-color: #ffff;
+    border: solid 1px;
+    margin: 0 auto;
+
 }
 
 .card:hover {
@@ -313,7 +314,7 @@ dd img {
 
 
 @media screen and (min-width:761px) {
-    /*
+    /* 
     .wrapper {
         margin-top: 250px;
     } */
@@ -345,29 +346,21 @@ dd img {
     .east {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
+        gap: 30px;
         width: 100%;
         flex-wrap: wrap;
+        margin: 0 auto;
 
     }
 
 
-
-    .card {
-        box-shadow: 15px 10px 3px 0 #a7d28d;
-        border: solid 3px #8c5243;
-        width: 300px;
-        height: auto;
-        padding: 20px;
-        /* margin: 0 auto; */
-        margin-bottom: 40px;
-        word-break: break-word;
-    }
 
     .west {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
+        gap: 30px;
         width: 100%;
         flex-wrap: wrap;
 
@@ -379,7 +372,8 @@ dd img {
     .south {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
+        gap: 30px;
         width: 100%;
         flex-wrap: wrap;
 
@@ -462,7 +456,8 @@ dd img {
     .east {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
+        gap: 30px;
         width: 100%;
         flex-wrap: wrap;
 
@@ -470,22 +465,12 @@ dd img {
 
 
 
-    .card {
-        box-shadow: 15px 10px 3px 0 #a7d28d;
-        border: solid 3px #8c5243;
-
-        width: 300px;
-        height: auto;
-        padding: 20px;
-        /* margin: 0 auto; */
-        margin-bottom: 40px;
-        word-break: break-word;
-    }
 
     .west {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
+        gap: 30px;
         width: 100%;
         flex-wrap: wrap;
 
@@ -497,7 +482,8 @@ dd img {
     .south {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
+        gap: 30px;
         width: 100%;
         flex-wrap: wrap;
 
