@@ -31,9 +31,13 @@ class BlogController extends Controller
          * 1.リクエストされたblogs_tableのidを検索し取得
          * 2.$itemに取得したidのデータを代入
          */
-        $item = Blog::where('id', $request->id)
-        ->get();
+        // $item = Blog::where('id', $request->id)
+        //         ->get()->first();
 
+        $item = Blog::find($request->id);
+
+        // ブログのカテゴリIDを取得
+        $blog_category_id = $item->blog_category_id;
         /**
          * 関連記事の検索と取得
          * （制作者：小山）
@@ -46,7 +50,9 @@ class BlogController extends Controller
          * 6.取得したデータを第一引数idに代入
          * 7.第一引数idを$itemsに代入
          */
-        $items = Blog::where('blog_category_id', $request->blog_category_id)
+
+        
+        $items = Blog::where('blog_category_id', $blog_category_id)
         ->wherenot('id',$request->id)
         ->where('is_show', 1)
         ->orderby('created_at', 'DESC')
@@ -70,7 +76,7 @@ class BlogController extends Controller
          * 値$categoryはカテゴリー一覧の表示に使用
          */
         $data = [
-            'blogs' => $item,
+            'blog' => $item,
             'categories' => $items,
             'blog_categories' => $category,
             'id_list' => $id_list,
