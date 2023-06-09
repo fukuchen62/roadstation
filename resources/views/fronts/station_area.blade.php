@@ -1,17 +1,26 @@
 @extends('layouts.layout_front')
 
-@section('description', 'area検索')
+@section('description', 'エリア検索')
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
 @section('title', 'エリア検索')
-<?php $com = 0; ?>
+
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/fstyle_search.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/fstyle_search.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/station_area.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}"> --}}
+    <style>
+        .pagination {
+            text-align: center;
+        }
+
+        .pagination li {
+            display: inline-block;
+        }
+    </style>
 @endsection
 
 @section('key_visual')
@@ -23,60 +32,40 @@
 {{-- メイン --}}
 @section('content')
     <main class="wrapper">
-        {{-- <section class="area_category"> --}}
-        {{-- <div class="titlesection__box">
-                <h1 class="pagetitle">エリア検索</h1>
-            </div> --}}
-        @foreach ($area as $areas)
+        {{-- @foreach ($area as $areas)
             <h3 class="district">{{ $areas->area_name }}</h3>
-        @endforeach
-        <div class="area_only">
-            <div class="flex area_in">
-                <form action="{{ url('area-search') }}" method="GET">
-                    {{-- controllerに送ってやる --}}
-                    {{ csrf_field() }}
-                    <div class="search_area">
-                        <button type="submit" name="area" id="east" value="east">県東部</button>
-                        <button type="submit" name="area" id="west" value="west">県西部</button>
-                        <button type="submit" name="area" id="south" value="south">県南部</button>
-                        {{-- 同じnameでvalueで分けなあかん --}}
-                    </div>
-                </form>
-                {{-- <a href="{{ url('news') }}?id={{ $category->id }}"></a> --}}
-                <button onclick="location.href='{{ url('detail-search') }}'">詳細検索</button>
-            </div>
+        @endforeach --}}
+        <h3 class="district">{{ $area->area_name }}</h3>
+
+        <div class="area">
+            {{-- aの場合下のようにしてやるとcontrollerに反映される。 --}}
+            <a href="{{ route('areasearch') }}?area_id=1">
+                {{-- routeの場合はname --}}
+                <h3 class="area-btn">県東部</h3>
+            </a>
+            <a href="{{ route('areasearch') }}?area_id=2">
+                <h3 class="area-btn">県西部</h3>
+            </a>
+            <a href="{{ route('areasearch') }}?area_id=3">
+                <h3 class="area-btn">県南部</h3>
+            </a>
+            <a href="{{ route('ditailsearch') }}">
+                <h3 class="area-btn">詳細検索</h3>
+            </a>
         </div>
-        <?php
-        // $area = 0;
-        // if (isset($_GET['east'])) {
-        //     $area = 1;
-        //     // var_dump($area);
-        // } elseif (isset($_GET['west'])) {
-        //     $area = 2;
-        //     // var_dump($area);
-        // } elseif (isset($_GET['south'])) {
-        //     $area = 3;
-        //     // var_dump($area);
-        // }
-        ?>
-        @foreach ($search as $road)
-            @php
-                $com++;
-            @endphp
-        @endforeach
+
         <section class="search_sum">
             <h3 class="search_results">
-                検索件数:<?= $com ?>件
-                </h2>
+                検索件数:&nbsp;{{ $com }}&nbsp;件
+            </h3>
         </section>
         <div class="card-list">
             @foreach ($search as $road)
                 <div class="card">
 
                     {{-- @if ($road->area_id == 3) --}}
-                    <?php $com++; ?>
                     <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
-                        <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" width="250px" height="200px"
+                        <img src="{{ asset('./storage/images/' . $road->picture1) }}" width="250px" height="200px"
                             alt="道の駅写真">
                         <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                         <p>{{ $road->catchphrase }}</p>
@@ -87,29 +76,10 @@
                             <dt>〒{{ $road->zip_code }}</dt>
                             <dd>{{ $road->address }}</dd>
 
-                            <dt>TEL：</dt>
-                            <dd>{{ $road->tel }}</dd>
-
-                            <dt>公式URL：</dt>
-                            <dd>{{ $road->url }}</dd>
-
-                            <dt>SNS：</dt>
-                            <dd>
-                                @if ($road->sns == null)
-                                    {{ '現在掲載はございません。' }}
-                                @else
-                                    {{ $road->sns }}
-                                @endif
-                            </dd>
-                            <dt>定休日：</dt>
-                            <dd>{{ $road->regular_holiday }}</dd>
-
-                            <dt>駐車場：</dt>
-                            <dd>{{ $road->parking }}
-                            </dd>
                             <dt>設備：</dt>
                             <dd>
                                 <div class="icon-wrapper">
+
                                     <img title="宿泊施設"
                                         src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
                                         alt="宿泊施設">
@@ -147,16 +117,16 @@
                                         src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
                                         alt="">
                                     <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                        src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
                                         alt="">
                                     <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                        src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
                                         alt="">
                                     <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                        src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
                                         alt="">
                                     <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                        src="{{ asset('assets/images/icon/museum_icon' . $road->museum_icon . '.svg') }}"
                                         alt="">
                                 </div>
                             </dd>
@@ -164,8 +134,12 @@
                     </a>
                 </div>
             @endforeach
+
         </div>
-        {{-- </section> --}}
+
+        <div class="link">
+            {{ $search->links('pagination::bootstrap-4') }}
+        </div>
     </main>
 @endsection
 

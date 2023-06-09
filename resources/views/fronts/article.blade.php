@@ -38,7 +38,7 @@
             {{--  <p>登録日時：{{ $blog->created_at }}</p>  --}}
             {{--  <p>登録日時：{{ $blog['created_at']->format('Y年m月d日') }}</p>  --}}
             <p class="date">
-                ●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
+                {{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
             <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
             {{--  {!! $blog->content !!}  --}}
             <div>

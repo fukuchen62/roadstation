@@ -9,7 +9,7 @@
 @section('title', '一覧')
 
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/station_list.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
 
@@ -36,8 +36,8 @@
                     @if ($road->area_id == 1)
                         <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                             <div class="card">
-                                <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" width="250px" height="200px"
-                                    alt="道の駅の画像">
+                                <img src="{{ asset('/assets/images/station/' . $road->picture1) }}" width="250px"
+                                    height="200px" alt="道の駅の画像">
                                 <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                                 <p>{{ $road->catchphrase }}</p>
                                 <dl>
@@ -47,7 +47,7 @@
                                     <dt>〒{{ $road->zip_code }}</dt>
                                     <dd>{{ $road->address }}</dd>
 
-                                    <dt>TEL：</dt>
+                                    {{-- <dt>TEL：</dt>
                                     <dd>{{ $road->tel }}</dd>
 
                                     <dt>公式URL：</dt>
@@ -66,7 +66,7 @@
 
                                     <dt>駐車場：</dt>
                                     <dd>{{ $road->parking }}
-                                    </dd>
+                                    </dd> --}}
                                     <dt>設備：</dt>
                                     <dd>
                                         <div class="icon-wrapper">
@@ -135,8 +135,8 @@
                     @if ($road->area_id == 2)
                         <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                             <div class="card">
-                                <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" width="250px" height="200px"
-                                    alt="道の駅の画像">
+                                <img src="{{ asset('/assets/images/station/' . $road->picture1) }}" width="250px"
+                                    height="200px" alt="道の駅の画像">
                                 <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                                 <p>{{ $road->catchphrase }}</p>
                                 <dl>
@@ -234,8 +234,8 @@
                     @if ($road->area_id == 3)
                         <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                             <div class="card">
-                                <img src="{{ asset('/storage/imgs/' . $road->picture1) }}" width="250px" height="200px"
-                                    alt="道の駅の画像">
+                                <img src="{{ asset('/assets/images/station/' . $road->picture1) }}" width="250px"
+                                    height="200px" alt="道の駅の画像">
                                 <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                                 <p>{{ $road->catchphrase }}</p>
                                 <dl>
@@ -268,6 +268,7 @@
                                     <dt>設備：</dt>
                                     <dd>
                                         <div class="icon-wrapper">
+
                                             <img title="宿泊施設"
                                                 src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
                                                 alt="宿泊施設">
@@ -305,16 +306,16 @@
                                                 src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/museum_icon' . $road->museum_icon . '.svg') }}"
                                                 alt="">
                                         </div>
                                     </dd>

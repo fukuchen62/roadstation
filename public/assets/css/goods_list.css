@@ -12,6 +12,10 @@ section {
     z-index: -1;
 }
 
+p {
+    color: #B45A27;
+}
+
 h2 {
     margin-bottom: 60px;
     padding: 20px;
@@ -53,6 +57,11 @@ h3::after {
     background-image: url(../images/illustrations/tanuki-food.png);
     background-size: contain;
     vertical-align: middle;
+}
+
+h4 {
+    font-size: 20px;
+    color: #B45A27;
 }
 
 .headline-name {
@@ -100,10 +109,6 @@ h3::after {
     border-bottom: double 5px #A7D28D;
 }
 
-h4 {
-    font-size: 20px;
-}
-
 .goods {
     display: flex;
     justify-content: center;
@@ -112,45 +117,16 @@ h4 {
     text-align: center;
 }
 
-.goods-group{
-        border: 1px solid #000;
-        background-color: #fff;
-        padding-bottom: 10px;
-        box-shadow: 10px 6px 2px 0 #405732;
+.goods-group {
+    border: 1px solid #000;
+    background-color: #fff;
+    padding-bottom: 10px;
+    box-shadow: 10px 6px 2px 0 #405732;
 }
 
-a.goods-group--green {
-    color: #fff;
-    background-color: #094;
-}
-
-a.goods-group--green:hover {
-    color: #fff;
-    background: #00a349;
-}
-
-a.goods-group--green.btn--cubic {
-    border-bottom: 5px solid #00662d;
-}
-
-a.goods-group--green.btn--cubic:hover {
-    margin-top: 3px;
-    border-bottom: 2px solid #00662d;
-}
-
-a.goods-group-c {
-    font-size: 2rem;
-    position: relative;
-    padding: 1.5rem 3rem 1.5rem 2rem;
-}
-
-a.goods-group-c i.fa {
-    margin-right: 1rem;
-}
-
-/* .goods-group:hover{
+.goods-group:hover {
     opacity: 0.6;
-} */
+}
 
 .goods-photo {
     max-width: 150px;
@@ -381,10 +357,10 @@ a.goods-group-c i.fa {
     }
 }
 
-#detail-top {
-    height: 60px;
-}
-
 .displayNone {
     display: none;
+}
+
+#detail-top {
+    height: 60px;
 }

@@ -143,7 +143,7 @@ a:hover img {
 
 .logout {
     border: 1px lightgray solid;
-    padding: 5px 5px;
+    padding: 10px 15px;
     background-color: burlywood;
     color: #fff;
     text-align: center;
@@ -210,13 +210,22 @@ h3 {
 .menubar>li,
 .search_btn,
 .submit_btn,
-.delete_btn {
+.delete_btn,
+td.edit a {
     border: 1px lightgray solid;
-    padding: 5px 10px;
-    background-color: rgb(227, 157, 66);
+    padding: 10px 15px;
+    background-color: burlywood;
     color: #fff;
     text-align: center;
     border-radius: 10px;
+    box-shadow: 8px 8px 8px -8px rgba(0, 0, 0, 1.5);
+
+    /* border: 1px lightgray solid;
+    padding: 10px 20px;
+    background-color: burlywood;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px; */
     /* box-shadow: 5px 8px 8px -5px rgba(0, 0, 0, 1.5); */
 }
 
@@ -228,10 +237,10 @@ h3 {
 
 .menubar li:first-child {
     margin-right: 20px;
-    background-color: burlywood;
+    /* background-color: burlywood;
     font-size: 1.2em;
-    /* color: lightcyan; */
-    text-align: center;
+    color: lightcyan;
+    text-align: center; */
 }
 
 /* 検索条件,検索ボタン */
@@ -246,7 +255,7 @@ h3 {
 }
 
 .search_btn {
-    padding: 3px 10px;
+    /* padding: 3px 10px; */
     transition: 0.1s;
 }
 
@@ -328,11 +337,11 @@ td.edit {
 }
 
 td.edit a {
-    text-align: center;
+    /* text-align: center;
     background-color: orange;
-    border: 1px solid chocolate;
+    border: 1px solid chocolate; */
     padding: 5px 20px;
-    color: #fff;
+    /* color: #fff; */
 }
 
 td.dt {
