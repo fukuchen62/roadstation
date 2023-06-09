@@ -146,13 +146,13 @@
                         @php
                                 $ts = strtotime($blog->created_at);
                         @endphp
-                            <p class="flex">
+                            {{-- <p class="flex">
                             <div class="news__area--data">
                                 {{ date('Y年m月d日', $ts) }}
                             </div>
                             <div class="enclosure">{{ $news->newsCategory->category_name }}</div>
-
-                        </p>
+                            </p> --}}
+                        <p>{{ date('Y年m月d日', $ts) }}　　カテゴリ:{{ $news->newsCategory->category_name }}</p>
 
                         <p class="text">{!!$blog->overview!!}</p>
                     </div>
