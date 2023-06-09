@@ -136,14 +136,16 @@
 
         <section class="blog">
             <h2 class="section-title">行ってきたんよ</h2>
-            <div class="blog-main">
-                @foreach ($blog as $blog)
-                <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
-                    <div class="blog-wrapper">
-                        <img class="card-img"
+    <div class="blog-main">
+
+    <div class="blog-wrapper">
+        @foreach ($blog as $blog)
+
+        <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
+
+            <img class="card-img"
                         {{-- src="{{ asset('/storage/images/' . $blog->picture) }}" --}}
-                        src="https://placehold.jp/300x200.png"
-                        alt="no-img">
+                        src="https://placehold.jp/300x200.png" alt="no-img">
 
                         <h3>{!!$blog->title!!}</h3>
 
@@ -156,14 +158,14 @@
                             </div>
                             <div class="enclosure">{{ $news->newsCategory->category_name }}</div>
                             </p> --}}
-                        <p>{{ date('Y年m月d日', $ts) }}　　カテゴリ:{{ $news->newsCategory->category_name }}</p>
+                        <p>{{ date('Y年m月d日', $ts) }}　　
+                            {{ $news->newsCategory->category_name }}</p>
 
                         <p class="text">{!!$blog->overview!!}</p>
-                    </div>
-                </a>
-                @endforeach
-
-            </div>
+        </a>
+        @endforeach
+    </div>
+    </div>
         </section>
 
         <div class="blog-btn">
