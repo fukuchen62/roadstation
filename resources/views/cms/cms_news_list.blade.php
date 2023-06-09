@@ -22,8 +22,10 @@
 
     {{-- 検索条件入力フォーム --}}
     <form action="{{ route('cms-newslist') }}" method="get" class="search">
-        検索条件 :&nbsp;<input type="text" name="s" id="s"><br>
-        <input type="submit" value="検索" class="search_btn">
+        <div>
+            検索条件&nbsp;<input type="text" name="s" id="s">
+            <input type="submit" value="検索" class="search_btn">
+        </div>
     </form>
     <table class="info">
         <tr>
