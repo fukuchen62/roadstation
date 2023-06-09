@@ -21,9 +21,9 @@
 
 {{-- キービジュアル --}}
 @section('key_visual')
-<div class="kv">
-    <img class="sub-keyvisual" src="{{ asset('assets/images/article/ブログ.png') }}" alt="サブキービジュアル">
-</div>
+    <div class="kv">
+        <img class="sub-keyvisual" src="{{ asset('assets/images/article/ブログ.png') }}" alt="サブキービジュアル">
+    </div>
 @endsection
 
 {{-- メイン --}}
@@ -33,27 +33,27 @@
             <p class="back-btn">
                 <a href="{{ url('blog') }}">＜＜一覧へ戻る</a>
             </p>
-            @foreach ($blogs as $blog)
-                <h3 class="blog-title">{{ $blog->title }}</h3>
-                {{--  <p>登録日時：{{ $blog->created_at }}</p>  --}}
-                {{--  <p>登録日時：{{ $blog['created_at']->format('Y年m月d日') }}</p>  --}}
-                <p class="date">
-                    ●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
-                <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
-                {{--  {!! $blog->content !!}  --}}
-                <div>
-                    @php
-                        $text = $blog->content;
-                        $target = ['storage_path', 'link_path'];
-                        $path = [asset('storage/images'), route('blog', ['id' => ''])];
-                        
-                        // 写真pathを絶対パスで置換
-                        $text = str_replace($target, $path, $text);
-                        // 出力
-                        echo $text;
-                    @endphp
-                </div>
-            @endforeach
+            {{--  @foreach ($blogs as $blog)  --}}
+            <h3 class="blog-title">{{ $blog->title }}</h3>
+            {{--  <p>登録日時：{{ $blog->created_at }}</p>  --}}
+            {{--  <p>登録日時：{{ $blog['created_at']->format('Y年m月d日') }}</p>  --}}
+            <p class="date">
+                ●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
+            <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+            {{--  {!! $blog->content !!}  --}}
+            <div>
+                @php
+                    $text = $blog->content;
+                    $target = ['storage_path', 'link_path'];
+                    $path = [asset('storage/images'), route('blog', ['id' => ''])];
+                    
+                    // 写真pathを絶対パスで置換
+                    $text = str_replace($target, $path, $text);
+                    // 出力
+                    echo $text;
+                @endphp
+            </div>
+            {{--  @endforeach  --}}
 
 
             {{--  道の駅情報の表示部分  --}}
@@ -119,8 +119,7 @@
             <ul class="relatedarticle">
                 @foreach ($categories as $category)
                     <li class="relatedarticle1">
-                        <a
-                            href="{{ url('blog-detail') }}?id={{ $category->id }}&blog_category_id={{ $category->blog_category_id }}">
+                        <a href="{{ url('blog-detail') }}?id={{ $category->id }}">
                             <img class="relatedarticle-img" src="{{ asset('/storage/images/' . $category->picture) }}"
                                 alt="ブログ記事の画像">
                             <h4>{{ $category->title }}</h4>

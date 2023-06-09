@@ -96,7 +96,9 @@ class Activity extends Model
     public function getBlogName($id)
     {
         $blog = Blog::find($id);
-        return $blog->title;
+        if($blog->is_show == 1){
+            return $blog->title;
+            }
     }
 
     public function changeName($id)

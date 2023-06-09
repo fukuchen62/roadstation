@@ -83,7 +83,6 @@
                         $id = $activity->changeName($id);
                         $title = $activity->getBlogName($id);
                     @endphp
-
                     <li class="roadstation-frame"><a
                             href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
                     </li>
