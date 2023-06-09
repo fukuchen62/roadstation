@@ -16,7 +16,8 @@ section {
 /* グーグルマップ */
 iframe {
     width: clamp(320px, 90vw, 1160px);
-    height: 30vh;
+    /* height: 30vh; */
+    height: clamp(450px, 90vw, 1160px);
     margin-top: 60px;
     border-radius: 20px;
 }
@@ -63,9 +64,11 @@ h4 {
 }
 
 .width {
-    /* margin-bottom: 1.25rem; */
-    /* margin-bottom: 30px; */
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+}
+
+.width-row {
+    margin-bottom: 40px;
 }
 
 .bottom {
@@ -136,6 +139,7 @@ h4 {
     width: 100%;
     height: 400px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .slick-dots li button::before {
@@ -151,6 +155,10 @@ h4 {
     .flex {
         display: flex;
         align-items: center;
+    }
+
+    .flex2 {
+        align-items: stretch;
     }
 }
 
@@ -235,9 +243,14 @@ h4 {
     margin-bottom: 3rem;
 }
 
+.frameborder {
+    border: dashed 3px #d6e6ae;
+}
+
 /* 商品説明文の幅をボタンサイズに合わせる */
 .com-wrap {
     width: clamp(280px, 50vw, 380px);
+    word-wrap: break-word;
 }
 
 .container {
@@ -246,6 +259,8 @@ h4 {
     margin: auto;
     gap: 20px;
 }
+
+
 
 .container img {
     border-radius: 20px;
@@ -260,6 +275,7 @@ h4 {
     border-radius: 20px;
 }
 
+
 /* ボタン */
 
 .blog-btn p {
@@ -269,18 +285,17 @@ h4 {
 .blog-btn a {
     display: inline-block;
     text-align: center;
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    background-color: #d6e6ae;
     border-radius: 50px;
-    /* font-size: 20px; */
     margin: 0 auto;
     padding: 10px 10px;
     height: 47px;
     width: clamp(280px, 50vw, 380px);
 }
 
-.blog-btn:hover {
-    color: #b45a27;
+.blog-btn a:hover {
+    background-color: #b45a27;
+    color: #d6e6ae;
 }
 
 .blog-img {
@@ -303,26 +318,45 @@ h4 {
 
 
 /* 基本情報 */
-.item {
+/* .item {
     color: #fffbf1;
     background-color: #1ca10a;
     padding: 1rem;
     border-radius: 20px 20px 0 0;
+} */
+.item {
+    color: #fffbf1;
+    background-color: #1ca10a;
+    width: clamp(280px, 49vw, 380px);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
+
 
 dd {
     line-height: 1.5rem;
     margin-bottom: 1.25rem;
 }
 
+dt {
+    float: left;
+}
+
+
 /* アイコンの幅調整 */
 .icon-wrapper {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     max-width: 300px;
     justify-items: center;
     padding-top: 10px;
+}
+
+@media screen and (min-width:768px) {
+    grid-template-columns: repeat(8, 1fr);
 }
 
 .icon-wrapper img {
@@ -355,6 +389,13 @@ dd {
 
     .container>.img {
         flex: 1;
+    }
+
+    /* 地図と基本情報エリア */
+
+    .container>iframe {
+        flex: 8;
+        width: 50vw;
     }
 
     .speech {

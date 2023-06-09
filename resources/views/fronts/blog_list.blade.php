@@ -32,7 +32,7 @@
 
 @section('key_visual')
     <div class="kv">
-        <img class="sub-keyvisual" src="{{ asset('assets/images/blog_list/blog-kv.jpg') }}" alt="サブキービジュアル">
+        <img class="sub-keyvisual" src="{{ asset('assets/images/blog_list/blog.jpg') }}" alt="サブキービジュアル">
     </div>
 @endsection
 
@@ -48,8 +48,8 @@
                     href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}">
                     <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
                     <h3>{{ $blog->title }}</h3>
+                    <p>{{ $blog['created_at']->format('Y年n月j日') }}　　　{{ $blog->blogCategory->getName() }}</p>
                     {!! $blog->overview !!}
-                    <p>●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
                 </a>
             @endforeach
             {{-- ページネーション表示部分 --}}

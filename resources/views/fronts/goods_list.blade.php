@@ -30,7 +30,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $agricultural->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="">
-                        <h4 class="goods-name">{{$agricultural->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$agricultural->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -45,7 +45,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $seafood->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="">
-                        <h4 class="goods-name">{{$seafood->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$seafood->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -60,7 +60,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $craft->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $craft->picture) }}" alt="">
-                        <h4 class="goods-name">{{$craft->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$craft->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -75,7 +75,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $gourmet->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $gourmet->picture) }}" alt="">
-                        <h4 class="goods-name">{{$gourmet->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$gourmet->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -97,14 +97,15 @@
             </ul>
         </section>
         <div id="detail-top"></div>
+
         <section class="detail-group">
             @foreach ($goods_type as $type )
             <div class="any" id="{{'type-' . $type->id}}">
-            <h3 class="headline item-name">{{$type->common_name}}</h3>
+            <h3 class="headline-item-name">{{$type->common_name}}</h3>
             <div class="item-group">
                 <img class="detail-photo" src="{{ asset('/storage/images/' . $type->picture) }}" alt="">
                 <div class="item-text-group">
-                    <!-- <h3 class="headline text"></h3> -->
+
                     @php
                     //  配列$seasonsの中身を表示用に加工
                         $seasons = $type->season;
@@ -113,22 +114,20 @@
                         $month = str_replace("b",'11',$month);
                         $month = str_replace("c",'12',$month);
                     @endphp
-                    <p class="season-text">旬の時期：<br>{{$month}}月</p>
+                    <h4 class="headline-name-season">＜旬の時期＞</h4>
+                    <p class="season-text">{{$month}}月</p>
 
-                    <!-- <h3 class="headline text"></h3> -->
-                    <p class="price-text">参考価格：<br>
-                        {{$type->price}}円</p>
+                    <h4 class="headline-name">＜参考価格＞</h4>
+                    <p class="price-text">{{$type->price}}円</p>
 
-                    <!-- <h3 class="headline text"></h3> -->
-                    <p class="conditions-text">利用方法：<br>
-                        {!!$type->usage!!}</p>
+                    <h4 class="headline-name">＜利用方法＞</h4>
+                    <p class="conditions-text">{!!$type->usage!!}</p>
                 </div>
             </div>
-            <!-- <h3 class="headline text"></h3> -->
-            <p class="comment-text">解説テキスト：<br>
-                {!!$type->discription!!}</p>
+            <h4 class="headline-name-comment"></h4>
+            <p class="comment-text"> {!!$type->discription!!}</p>
 
-            <h3 class="headline buy-place">買える道の駅</h3>
+            <h3 class="headline-buy-place">買える道の駅</h3>
 
             <ul class="roadstation-frame">
 
