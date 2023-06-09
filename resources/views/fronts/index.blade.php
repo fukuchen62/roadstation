@@ -55,9 +55,9 @@
         <section class="area-map">
             <div class="map">
                 <img class="tokusimamap" src="{{ asset('assets/images/illustrations/tokushima_map.png') }}" alt="地図">
-                <a class="east" href="{{route('areasearch')}}?id=1">東部</a>
-                <a class="west" href="{{route('areasearch')}}?id=2">西部</a>
-                <a class="south" href="{{route('areasearch')}}?id=3">南部</a>
+                <a class="east" href="{{route('areasearch')}}?&area=east">東部</a>
+                <a class="west" href="{{route('areasearch')}}?&area=west">西部</a>
+                <a class="south" href="{{route('areasearch')}}?&area=south">南部</a>
             </div>
             <a class="btn btn-border-shadow btn-border-shadow--color" href="{{route('ditailsearch')}}">詳細検索</a>
         </section>
@@ -143,15 +143,8 @@
                         @php
                                 $ts = strtotime($blog->created_at);
                         @endphp
-                            {{-- <p class="flex">
-                            <div class="news__area--data">
-                                {{ date('Y年m月d日', $ts) }}
-                            </div>
-                            <div class="enclosure">{{ $news->newsCategory->category_name }}</div>
-                            </p> --}}
-                        <p>{{ date('Y年m月d日', $ts) }}
+                        <p>{{ date('Y年m月d日', $ts) }}　　　
                             {{ $news->newsCategory->category_name }}</p>
-
                         <p class="text">{!!$blog->overview!!}</p>
         </a>
         @endforeach
