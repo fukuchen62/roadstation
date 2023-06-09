@@ -114,7 +114,8 @@
 
                         <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="" width="100px" height="100px" class="anime2">
 
-                        <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="" width="80px" height="80px" class="anime3">
+                        <img
+                        src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="" width="80px" height="80px" class="anime3">
 
                         <a class="sp-btn" href=" {{route('activity')}}">
                             もっと見る
@@ -139,7 +140,10 @@
                 @foreach ($blog as $blog)
                 <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
                     <div class="blog-wrapper">
-                        <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
+                        <img class="card-img"
+                        {{-- src="{{ asset('/storage/images/' . $blog->picture) }}" --}}
+                        src="https://placehold.jp/300x200.png"
+                        alt="no-img">
 
                         <h3>{!!$blog->title!!}</h3>
 
