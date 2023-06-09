@@ -83,7 +83,7 @@ a:hover img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 40px;
 }
 
 .header-logo {
@@ -95,11 +95,11 @@ a:hover img {
 }
 
 .logo {
-    width: 150px;
-    background-color: #fff;
-    margin-right: 20px;
+    width: 120px;
+    /* background-color: #fff; */
+    margin-right: 10px 20px;
     border-radius: 20px;
-    padding: 10px 20px
+    padding: 5px 20px
 }
 
 /* h1 ページタイトル*/
@@ -201,6 +201,11 @@ h3 {
     padding: 20px;
 }
 
+.menu-box li:first-child {
+    background-color: #e9967a;
+    text-align: center;
+}
+
 /* ボタン共通 */
 .menubar>li,
 .search_btn,
@@ -223,6 +228,10 @@ h3 {
 
 .menubar li:first-child {
     margin-right: 20px;
+    background-color: burlywood;
+    font-size: 1.2em;
+    /* color: lightcyan; */
+    text-align: center;
 }
 
 /* 検索条件,検索ボタン */
