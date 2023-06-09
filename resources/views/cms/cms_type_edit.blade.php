@@ -114,7 +114,7 @@
         <div class="change_btn">
             @php
                 $title = $goods->title;
-                $url = route('cms-goodsremove', ['id' => $goods->id]);
+                $url = route('cms-typesremove', ['id' => $goods->id]);
             @endphp
             <input type="submit"value="修正" class="submit_btn" onclick="return saveComfirm('{{ $goods->common_name }}')">
 
