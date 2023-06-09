@@ -12,10 +12,23 @@ section {
     z-index: -1;
 }
 h2 {
+    margin-bottom: 60px;
     padding: 20px;
     /* margin-top: 50px; */
     text-align: center;
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/hedline_yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h3 {
+    max-width: 220px;
+    width: 50%;
+    margin: 30px auto 30px auto;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #B45A27;
 }
 
 h3::before {
@@ -40,21 +53,27 @@ h3::after {
     vertical-align: middle;
 }
 
-h3 {
-    max-width: 220px;
-    width: 50%;
-    margin: 30px auto 30px auto;
-    text-align: center;
-    font-size: 20px;
-    color: #000;
+.headline-name{
+    text-align: start;
+    font-weight: bold;
 }
 
-.headline-others {
+.headline-name-comment{
+    text-align: start;
+    font-weight: bold;
+}
+
+.headline-name-season{
+    text-align: start;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.headline-agricultural-products {
     border-bottom: dotted 10px #e7d955;
     /* padding: 20px 23px; */
 }
-
-.headline-gourmet {
+.headline-seafood {
     border-bottom: dotted 10px #e7d955;
     /* padding: 20px 23px; */
 }
@@ -64,27 +83,22 @@ h3 {
     /* padding: 20px 23px; */
 }
 
-.headline-seafood {
+.headline-gourmet {
     border-bottom: dotted 10px #e7d955;
     /* padding: 20px 23px; */
 }
 
-.headline-agricultural-products {
+.headline-others {
     border-bottom: dotted 10px #e7d955;
     /* padding: 20px 23px; */
 }
 
-.item-name{
+.headline-item-name{
     border-bottom: double 5px #A7D28D;
 }
 
-
 h4 {
     font-size: 20px;
-}
-
-.title {
-    /* margin-top: 200px; */
 }
 
 .goods {
@@ -111,59 +125,65 @@ h4 {
     object-fit: cover;
 }
 
-.item-name {
+.headline-item-name {
     position: relative;
-    max-width: 1200px;
+    max-width: 220px;
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
     position: relative;
-    color: #333;
+    color: #B45A27;
     display: inline-block;
     margin: 47px 0;
     text-shadow: 0 0 2px white;
 }
 
-.item-name::before{
+.headline-item-name::before{
     display: none;
 }
 
-.item-name::after{
+.headline-item-name:after{
     display: none;
 }
 
 .season-text {
     width: 100%;
     text-align: start;
+    margin-bottom: 10px;
+    padding-top: 0;
 }
 
 .price-text {
     width: 100%;
     text-align: start;
+    margin-bottom: 10px;
+    padding-top: 0;
 }
 
 .conditions-text {
     width: 100%;
     text-align: start;
+    margin-bottom: 10px;
+    padding-top: 0;
 }
 
 .comment-text {
     max-width: 1200px;
     width: 100%;
     text-align: start;
+    margin-bottom: 10px;
+    padding-top: 0;
 }
 
-.buy-place {
+.headline-buy-place {
     /* background-color: #008C41; */
     /* border-radius: 50px; */
     max-width: 300px;
     width: 100%;
     margin: 30px auto auto auto;
     text-align: center;
-    color: #000;
+    color: #B45A27;
     border-bottom: dotted 10px #e7d955;
-
-
 }
 
 .roadstation-frame {
@@ -200,19 +220,8 @@ h4 {
     }
 
     .item-name{
-        font-size: 32px;
+        font-size: 2rem;
     }
-}
-
-@media screen and (min-width:601px) {
-    /* h2 {
-        margin-top: 130px;
-    }
-
-    .title {
-        margin-top: 230px;
-    } */
-
 }
 
 @media screen and (min-width:680px) {
@@ -296,10 +305,21 @@ h4 {
             margin-top: 100px;
         }
 
+        .headline-name-comment{
+            text-align: start;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .headline-name-season{
+            text-align: start;
+            margin-top: 0;
+            font-weight: bold;
+        }
+
         .season-text {
             max-width: 600px;
             width: 100%;
-            padding-top: 0;
         }
 
         .price-text {

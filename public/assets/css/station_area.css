@@ -78,7 +78,6 @@ dd {
     background-image: url(../images/hedline_yellow.png);
     background-repeat: no-repeat;
     background-position: center;
-    /* margin-top: 200px; */
     padding: 20px;
     margin-bottom: 60px;
 }
@@ -148,7 +147,7 @@ dd img {
     }
 
     .district {
-        background-image: url(../images/bg_headline.png);
+        background-image: url(../images/hedline_yellow.png);
         background-repeat: no-repeat;
         /* margin-top: 200px; */
 
