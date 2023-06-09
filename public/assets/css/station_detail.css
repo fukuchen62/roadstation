@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-
+.kv img {
+    object-position: 80% 25%;
+}
 
 h2,
 h3,
@@ -185,7 +187,7 @@ form {
     }
 
     .card {
-        border: 1px solid;
+        border: 3px solid;
         width: 300px;
         height: auto;
         padding: 20px;

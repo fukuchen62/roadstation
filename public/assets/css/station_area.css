@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-/* .kv img {
+.kv img {
     object-position: 30% 15%;
-} */
+}
 
 h2,
 h3,
@@ -50,7 +50,7 @@ dd {
     background-color: #A7D28D;
     border-radius: 50px;
     /* margin-top: 50px; */
-    /* padding: 10px 10px; */
+    padding: 8px 8px;
     font-size: 1.1rem;
 }
 
@@ -75,10 +75,11 @@ dd {
 }
 
 .district {
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/hedline_yellow.png);
     background-repeat: no-repeat;
-    /* margin-top: 200px; */
+    background-position: center;
     padding: 20px;
+    margin-bottom: 60px;
 }
 
 .area {
@@ -146,7 +147,7 @@ dd img {
     }
 
     .district {
-        background-image: url(../images/bg_headline.png);
+        background-image: url(../images/hedline_yellow.png);
         background-repeat: no-repeat;
         /* margin-top: 200px; */
 
@@ -169,7 +170,7 @@ dd img {
     }
 
     .card {
-        border: 1px solid;
+        border: 3px solid;
         width: 300px;
         height: auto;
         padding: 20px;
