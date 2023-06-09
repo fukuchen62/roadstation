@@ -8,9 +8,10 @@ section {
     margin: 0 auto;
 }
 
-.kv{
+.kv {
     z-index: -1;
 }
+
 h2 {
     margin-bottom: 60px;
     padding: 20px;
@@ -54,17 +55,17 @@ h3::after {
     vertical-align: middle;
 }
 
-.headline-name{
+.headline-name {
     text-align: start;
     font-weight: bold;
 }
 
-.headline-name-comment{
+.headline-name-comment {
     text-align: start;
     font-weight: bold;
 }
 
-.headline-name-season{
+.headline-name-season {
     text-align: start;
     margin-top: 10px;
     font-weight: bold;
@@ -74,6 +75,7 @@ h3::after {
     border-bottom: dotted 10px #e7d955;
     /* padding: 20px 23px; */
 }
+
 .headline-seafood {
     border-bottom: dotted 10px #e7d955;
     /* padding: 20px 23px; */
@@ -94,7 +96,7 @@ h3::after {
     /* padding: 20px 23px; */
 }
 
-.headline-item-name{
+.headline-item-name {
     border-bottom: double 5px #A7D28D;
 }
 
@@ -139,11 +141,11 @@ h4 {
     text-shadow: 0 0 2px white;
 }
 
-.headline-item-name::before{
+.headline-item-name::before {
     display: none;
 }
 
-.headline-item-name:after{
+.headline-item-name:after {
     display: none;
 }
 
@@ -220,7 +222,7 @@ h4 {
         max-width: 200px;
     }
 
-    .item-name{
+    .item-name {
         font-size: 2rem;
     }
 }
@@ -250,7 +252,7 @@ h4 {
     /* PC(デスクトップサイズ) */
     @media screen and (min-width:1180px) {
 
-        .kv{
+        .kv {
             position: relative;
             top: 0;
         }
@@ -306,13 +308,13 @@ h4 {
             margin-top: 100px;
         }
 
-        .headline-name-comment{
+        .headline-name-comment {
             text-align: start;
             margin-top: 10px;
             font-weight: bold;
         }
 
-        .headline-name-season{
+        .headline-name-season {
             text-align: start;
             margin-top: 0;
             font-weight: bold;

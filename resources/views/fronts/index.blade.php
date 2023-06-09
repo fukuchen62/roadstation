@@ -72,7 +72,7 @@
         </section>
 
         <section>
-            <h2 class="feature-title">こんなんあるで！</h2>
+            <h2 class="section-title">こんなんあるで！</h2>
             <div class="goods-wrapper">
                 <ul class="goods">
                     <li><img class="goods-1" src="../storage/images/index.images/mikan.jpg" alt=""></li>
