@@ -4,8 +4,9 @@
     margin-top: 250px;
 } */
 
-kv img {
+.kv img {
     z-index: -1;
+    object-position: 80% 20%;
 }
 
 html {
@@ -43,8 +44,7 @@ h4 {
 } */
 
 .attention {
-    /* margin-top: 220px; */
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     background-image: url(../images/hedline_yellow.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -139,62 +139,6 @@ h4 {
     margin-bottom: 10px;
 }
 
-
-@media screen and (min-width:600px) {
-    /* .wrapper {
-        margin-top: 250px;
-    } */
-
-
-    .attention {
-        /* margin-top: 300px; */
-        margin-bottom: 30px;
-    }
-}
-
-
-@media screen and (min-width:601px) {
-    /* .wrapper {
-        margin-top: 250px;
-    } */
-
-    .attention {
-        /* margin-top: 320px; */
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (min-width:900px) {
-
-    /*
-    .wrapper {
-        margin-top: 250px;
-    } */
-
-    .kv {
-        position: relative;
-        top: 0;
-
-    }
-
-    .attention {
-        /* margin-top: 250px; */
-        margin-bottom: 30px;
-    }
-}
-
-
-
-@media screen and (min-width:900px) {
-    /* .wrapper {
-        margin-top: 250px;
-    } */
-}
-
-
-
-
-
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
 
@@ -208,16 +152,8 @@ h4 {
 
     }
 
-
     .kv img {
         object-position: 80% 20%;
-
-
-    }
-
-    .attention {
-        /* margin-top: 250px; */
-        margin-bottom: 30px;
     }
 
     /* h2 {
