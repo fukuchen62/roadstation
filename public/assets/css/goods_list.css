@@ -116,12 +116,41 @@ h4 {
         border: 1px solid #000;
         background-color: #fff;
         padding-bottom: 10px;
-        box-shadow: 5px 3px 1px 0 #a7d28d;
+        box-shadow: 10px 6px 2px 0 #405732;
 }
 
-.goods-group:hover{
-    opacity: 0.6;
+a.goods-group--green {
+    color: #fff;
+    background-color: #094;
 }
+
+a.goods-group--green:hover {
+    color: #fff;
+    background: #00a349;
+}
+
+a.goods-group--green.btn--cubic {
+    border-bottom: 5px solid #00662d;
+}
+
+a.goods-group--green.btn--cubic:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid #00662d;
+}
+
+a.goods-group-c {
+    font-size: 2rem;
+    position: relative;
+    padding: 1.5rem 3rem 1.5rem 2rem;
+}
+
+a.goods-group-c i.fa {
+    margin-right: 1rem;
+}
+
+/* .goods-group:hover{
+    opacity: 0.6;
+} */
 
 .goods-photo {
     max-width: 150px;
