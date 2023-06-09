@@ -297,9 +297,8 @@ h3 {
 /* footer */
 footer {
     position: relative;
-
     min-width: 320px;
-    height: 400px;
+    /* height: 400px; */
     background-color: #86cc7f;
     background-size: cover;
     background-position: center;

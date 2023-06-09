@@ -140,17 +140,17 @@ h4 {
 .roadstation-blog-name {
     text-align: center;
 }
-
+/*
 .blog {
     margin-bottom: 10px;
-}
+} */
 
-.blog-btn img {
+/* .blog-btn img {
     max-width: 320px;
     height: auto;
     text-align: center;
     margin: 30px auto 10px auto;
-}
+} */
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
