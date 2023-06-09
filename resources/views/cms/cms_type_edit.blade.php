@@ -116,10 +116,10 @@
                 $title = $goods->title;
                 $url = route('cms-goodsremove', ['id' => $goods->id]);
             @endphp
-            <input type="submit"value="修正" class="submit_btn" onclick="return saveComfirm('{{ $title }}')">
+            <input type="submit"value="修正" class="submit_btn" onclick="return saveComfirm('{{ $goods->common_name }}')">
 
             <input type="button"value="削除" class="delete_btn"
-                onclick="return deleteComfirm('{{ $title }}','{{ $url }}')">
+                onclick="return deleteComfirm('{{ $goods->common_name }}','{{ $url }}')">
         </div>
 
     </form>
