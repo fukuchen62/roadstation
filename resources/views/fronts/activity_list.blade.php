@@ -56,7 +56,7 @@
             {!! $activity->discription !!}
 
             {{-- 体験したブログ記事の表示部分  --}}
-            <h3 class="headline activity-place">＜体験したブログ記事＞</h3>
+            <h4 class="headline activity-place">＜体験したブログ記事＞</h4>
             {{-- <ul class="roadstation-frame">
                         <li class="roadstation-frame"><a
                                 href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}&blog_category_id={{ $activity->blog->blog_category_id }}">{{ $activity->blog->getName() }}</a>

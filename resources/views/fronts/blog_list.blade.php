@@ -49,7 +49,7 @@
                     <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
                     <h3>{{ $blog->title }}</h3>
                     {!! $blog->overview !!}
-                    <p>●{{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
+                    <p>●{{ $blog['created_at']->format('Y年n月j日') }}　　　{{ $blog->blogCategory->getName() }}</p>
                 </a>
             @endforeach
             {{-- ページネーション表示部分 --}}
