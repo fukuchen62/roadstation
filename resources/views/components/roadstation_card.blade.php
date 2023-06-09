@@ -2,7 +2,7 @@
 
     {{-- @if ($road->area_id == 3) --}}
     <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
-        <img src="{{ asset('./storage/images/' . $road->picture1) }}" width="250px" height="200px" alt="道の駅写真">
+        <img src="{{ $link }}" width="250px" height="200px" alt="道の駅写真">
         <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
         <p>{{ $road->catchphrase }}</p>
         <dl>

@@ -268,6 +268,7 @@
                                     <dt>設備：</dt>
                                     <dd>
                                         <div class="icon-wrapper">
+
                                             <img title="宿泊施設"
                                                 src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
                                                 alt="宿泊施設">
@@ -305,16 +306,16 @@
                                                 src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
                                                 alt="">
                                             <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
+                                                src="{{ asset('assets/images/icon/museum_icon' . $road->museum_icon . '.svg') }}"
                                                 alt="">
                                         </div>
                                     </dd>
