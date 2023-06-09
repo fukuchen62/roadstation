@@ -10,7 +10,7 @@ h4,
 }
 
 h2 {
-    margin-top: 150px;
+    /* margin-top: 150px; */
     margin-bottom: 50px;
     background-image: url(../images/bg_headline.png);
     background-repeat: no-repeat;
