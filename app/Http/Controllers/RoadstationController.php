@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\RoadStation;
 use App\Models\SpecialGoods;
+use App\Models\Area;
 
 class RoadstationController extends Controller
 {
@@ -86,22 +87,29 @@ class RoadstationController extends Controller
 
         // // $act = Activity::where('road_station_id', $request->id)->get();
         // $act = Activity::where('road_station_id', $request->id)->get();
+        $area = Area::where('id', 1)->get();
 
         if ($request->area == "east") {
             $items = RoadStation::where('area_id', 1)
                 ->orderby('station_name', 'DESC')
                 ->get();
+            $area = Area::where('id', 1)->get();
         } elseif ($request->area == "west") {
             $items = RoadStation::where('area_id', 2)
                 ->orderby('station_name', 'DESC')
                 ->get();
+            $area = Area::where('id', 2)->get();
         } elseif ($request->area == "south") {
             $items = RoadStation::where('area_id', 3)
                 ->orderby('station_name', 'DESC')
                 ->get();
+            $area = Area::where('id', 3)->get();
         } else {
             // $items = RoadStation::all();
-            $items = [];
+            $items = RoadStation::where('area_id', 1)
+                ->orderby('station_name', 'DESC')
+                ->get();
+            $area = Area::where('id', 1)->get();
         }
 
 
@@ -111,6 +119,7 @@ class RoadstationController extends Controller
             // 'activities' => $act,
             // 'special_goods' => $goods,
             // 'product_types' => $pro,
+            'area' => $area,
             'search' => $items,
         ];
         return view('fronts.station_area', $data);
