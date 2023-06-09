@@ -55,11 +55,11 @@ class ProductType extends Model
     );
     // 日本語エラーメッセージ
     public static $messages = [
-        'news_category_id.required' => 'カテゴリーIDは必ず入力してください。',
-        'title.required' => 'タイトルは必ず入力してください。',
+        'goods_category_id.required' => 'カテゴリーIDは必ず入力してください。',
+        'common_name.required' => '特産品名は必ず入力してください。',
         'discription.required' => '詳細内容は必ず入力してください。',
         'picture.max:200' => '画像は200文字まで入力してください。',
-        'overview.max:200' => '概要は200文字まで入力してください。',
+        'usage.max:500' => '概要は500文字まで入力してください。',
         'is_show.required' => '表示フラグは必ず入力してください。0 or 1'
     ];
 }
