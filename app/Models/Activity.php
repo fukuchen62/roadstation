@@ -13,9 +13,11 @@ class Activity extends Model
     protected $guarded = array('id');
     public static $rules = array(
         'category_id' => 'required|integer',
-        'title'       => 'required|string|max:50',
+        'activity_name' => 'required|string|max:50',
+        'discription' => 'max:200',
+        'business_hours'    => 'max:200',
         'overview'    => 'max:200',
-        'thumbnail'   => 'required|string|max:200',
+        'picture1'   => 'required|string|max:200',
         'is_show'     => 'required|boolean'
     );
     // 日本語エラーメッセージ
