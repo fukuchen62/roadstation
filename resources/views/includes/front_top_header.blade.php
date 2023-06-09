@@ -60,7 +60,7 @@
 
     <div class="top-kv">
         <!-- <div>道の駅をあそびつくせ！</div> -->
-        <video autoplay muted playsinline loop src="../assets/images/index/IMG_2833.MOV">
+        <video autoplay muted playsinline loop src="{{ asset('assets/images/index/IMG_2833.MOV') }}">
         </video>
     </div>
 
