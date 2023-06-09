@@ -276,7 +276,7 @@ h3 {
 }
 
 .scroll-top:hover {
-    /* animation: pikopiko 2s steps(2, start) infinite; */
+    animation: pikopiko 2s steps(2, start) infinite;
 }
 
 @keyframes pikopiko {
