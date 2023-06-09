@@ -50,7 +50,7 @@ dd {
     background-color: #A7D28D;
     border-radius: 50px;
     /* margin-top: 50px; */
-    /* padding: 10px 10px; */
+    padding: 8px 8px;
     font-size: 1.1rem;
 }
 
@@ -170,7 +170,7 @@ dd img {
     }
 
     .card {
-        border: 1px solid;
+        border: 3px solid;
         width: 300px;
         height: auto;
         padding: 20px;
