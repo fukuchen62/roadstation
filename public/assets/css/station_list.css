@@ -3,6 +3,7 @@
 
 .station-titlebox {
     text-align: center;
+    margin-bottom: 60px;
 }
 
 
@@ -13,7 +14,7 @@
 
 h2 {
     /* margin-top: 150px; */
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
 
 
@@ -216,7 +217,6 @@ dd {
 .stationlist-title {
     /* margin-top: 250px; */
     text-align: center;
-    margin-bottom: 30px;
     background-image: url(../images/hedline_yellow.png);
     background-position: center;
     background-repeat: no-repeat;
