@@ -100,8 +100,17 @@ dt {
     padding-top: 10px;
 }
 
+dl {
+    width: 100%;
+    height: auto;
+}
+
 dd img {
-    padding: 3px 1px;
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+    /* padding: 10px; */
+
 }
 
 
