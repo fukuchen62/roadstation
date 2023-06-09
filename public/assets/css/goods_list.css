@@ -12,7 +12,7 @@ section {
     z-index: -1;
 }
 
-p{
+p {
     color: #B45A27;
 }
 
@@ -117,14 +117,14 @@ h4 {
     text-align: center;
 }
 
-.goods-group{
-        border: 1px solid #000;
-        background-color: #fff;
-        padding-bottom: 10px;
-        box-shadow: 10px 6px 2px 0 #405732;
+.goods-group {
+    border: 1px solid #000;
+    background-color: #fff;
+    padding-bottom: 10px;
+    box-shadow: 10px 6px 2px 0 #405732;
 }
 
-.goods-group:hover{
+.goods-group:hover {
     opacity: 0.6;
 }
 
@@ -359,4 +359,8 @@ h4 {
 
 .displayNone {
     display: none;
+}
+
+#detail-top {
+    height: 60px;
 }
