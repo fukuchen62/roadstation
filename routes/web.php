@@ -348,6 +348,53 @@ Route::get(
     'App\Http\Controllers\AdminGoodsController@typeDelete'
 )->name('cms-typesremove');
 
+
+// *********** 道の駅テーブル ***********
 /**
- *道の駅追加要諦
+ * 道の駅の一覧画面
  */
+Route::get(
+    'cms-station-list',
+    'App\Http\Controllers\AdminGoodsController@stationIndex'
+)->name('cms-stationlist');
+
+/**
+ * 道の駅の新規登録画面
+ */
+Route::get(
+    'cms-station-new',
+    'App\Http\Controllers\AdminGoodsController@stationInput'
+)->name('cms-stationinput');
+
+/**
+ * 道の駅の新規登処理
+ */
+Route::post(
+    'cms-station-new',
+    'App\Http\Controllers\AdminGoodsController@stationCreate'
+)->name('cms-stationcreate');
+
+/**
+ * 道の駅の編集画面
+ */
+Route::get(
+    'cms-station-edit',
+    'App\Http\Controllers\AdminGoodsController@stationEdit'
+)->name('cms-stationedit');
+
+/**
+ * 道の駅の編集登録
+ */
+Route::post(
+    'cms-station-edit',
+    'App\Http\Controllers\AdminGoodsController@stationUpdate'
+)->name('cms-stationupdate');
+
+
+/**
+ * 道の駅の削除処理
+ */
+Route::get(
+    'cms-station-delete',
+    'App\Http\Controllers\AdminGoodsController@stationDelete'
+)->name('cms-stationremove');
