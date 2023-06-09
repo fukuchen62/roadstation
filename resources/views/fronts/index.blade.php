@@ -8,8 +8,6 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick-theme.css') }}">
@@ -45,15 +43,8 @@
                         $ts = strtotime($news->created_at);
                     @endphp
                     <li>
-                    <a href="{{route('newsdetail')}}?id={{$news->id}}">
-                    <div class="text-alignLeft">
-                    {{date('Y年m月d日', $ts)}}
-
-                    {{$news->newsCategory->category_name }}
-                    </div>
-                            {!! $news->title !!}
-                    </a>
-                    </li>
+                    <a href="{{route('newsdetail')}}?id={{$news->id}}">{{date('Y年m月d日', $ts)}}　　{{$news->newsCategory->category_name }}<br>
+                        {!! $news->title !!}</a>
                 </ul>
                 @endforeach
             </ul>
@@ -158,7 +149,7 @@
                             </div>
                             <div class="enclosure">{{ $news->newsCategory->category_name }}</div>
                             </p> --}}
-                        <p>{{ date('Y年m月d日', $ts) }}　　
+                        <p>{{ date('Y年m月d日', $ts) }}
                             {{ $news->newsCategory->category_name }}</p>
 
                         <p class="text">{!!$blog->overview!!}</p>
