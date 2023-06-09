@@ -2,7 +2,7 @@
 
 @section('title', '阿波道の駅管理システム')
 
-@section('subtitle', 'ニュース')
+@section('subtitle', 'ブログ')
 
 @section('login_name', 'QLIP')
 
@@ -13,15 +13,15 @@
 
 
 @section('content')
-    <h3>ニュース一覧 ({{ $count }})</h3>
+    <h3>ブログ一覧 ({{ $count }})</h3>
     {{-- 以下はshowのところにはめ込む --}}
     <ul class="menubar">
-        <li><a href="{{ route('cms-newslist') }}">一覧画面へ</a></li>
-        <li><a href="{{ route('cms-newsinput') }}">新規登録</a></li>
+        <li><a href="{{ route('cms-bloglist') }}">一覧画面へ</a></li>
+        <li><a href="{{ route('cms-bloginput') }}">新規登録</a></li>
     </ul>
 
     {{-- 検索条件入力フォーム --}}
-    <form action="{{ route('cms-newslist') }}" method="get" class="search">
+    <form action="{{ route('cms-bloglist') }}" method="get" class="search">
         検索条件 :&nbsp;<input type="text" name="s" id="s"><br>
         <input type="submit" value="検索" class="search_btn">
     </form>
@@ -35,10 +35,10 @@
             <th>表示</th>
             <th width="100px">編集</th>
         </tr>
-        @foreach ($news_list as $item)
+        @foreach ($blog_list as $item)
             <tr>
                 <td>{{ $item->id }}</td>
-                <td>{{ $item->newsCategory->category_name }}</td>
+                <td>{{ $item->blogCategory->category_name }}</td>
                 <td>{{ $item->title }}</td>
                 <td>{{ $item->overview }}</td>
                 <td>{{ $item->created_at }}</td>

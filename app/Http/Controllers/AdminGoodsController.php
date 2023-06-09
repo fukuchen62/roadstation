@@ -361,11 +361,53 @@ class AdminGoodsController extends Controller
 
         // 渡すデータ
         $data = [
-            'goods_list' => $items,
+            'goods' => $items,
             'count' => $goods_count,
             'login_user' => $login_user,
         ];
 
         return view('cms.cms_goods_list', $data);
+    }
+
+    /**
+     * Undocumented function
+     * 道の駅特産品を削除
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function typeDelete(Request $request)
+    {
+        // ログインユーザーの情報取得
+        $login_user = Auth::user();
+
+        // News::find($request->id)->delete();
+
+        // 論理削除処理
+        // deleted_atフィル―ドに現在の日時を代入
+        $param = [
+            'deleted_at' => date("Y-m-d H:i:s"),
+        ];
+
+        // DBクリエターで更新処理
+        DB::table('product_types')->where('id', $request->id)
+            ->update($param);
+
+        // 道の駅特産品を読み直す
+        $items = ProductType::where('deleted_at', null)
+            ->orderBy('id', 'desc')
+            ->get();
+
+        // 特産品の件数
+        $goods_count = count($items);
+
+        // 渡すデータ
+        $data = [
+            'type' => $items,
+            'count' => $goods_count,
+            'login_user' => $login_user,
+        ];
+
+        return view('cms.cms_type_list', $data);
     }
 }

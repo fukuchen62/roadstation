@@ -39,6 +39,10 @@
                     <h4 class="station-name">体験できる道の駅 <a
                             href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
                     </h4>
+                    <h4 class="headline text">＜利用条件＞</h4>
+                    {!! $activity->conditions !!}
+                    <h4 class="headline text">＜体験・詳細＞</h4>
+                    {!! $activity->discription !!}
                     <h4 class="headline-text">＜営業時間＞</h4>
                     <p class="business-text">
                         {{ $activity->business_hours }}
@@ -50,13 +54,10 @@
 
                 </div>
             </div>
-            <h4 class="headline text">＜利用条件＞</h4>
-            {!! $activity->conditions !!}
-            <h4 class="headline text">＜体験・詳細＞</h4>
-            {!! $activity->discription !!}
+
 
             {{-- 体験したブログ記事の表示部分  --}}
-            <h3 class="headline activity-place">＜体験したブログ記事＞</h3>
+            <h4 class="headline activity-place">＜体験したブログ記事＞</h4>
             {{-- <ul class="roadstation-frame">
                         <li class="roadstation-frame"><a
                                 href="{{ url('blog-detail') }}?id={{ $activity->blog->id }}&blog_category_id={{ $activity->blog->blog_category_id }}">{{ $activity->blog->getName() }}</a>
