@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-kv img {
-    z-index: -100;
-}
-
 html {
     overflow-x: hidden;
 }
@@ -12,11 +8,11 @@ h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 30px;
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/hedline_yellow.png);
+    background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
     color: #B45A27;
-    text-align: center;
 }
 
 
@@ -59,7 +55,6 @@ h4 {
 
 }
 
-
 .title::after {
     content: '';
     /*何も入れない*/
@@ -75,11 +70,6 @@ h4 {
 
 }
 
-
-
-
-
-
 @media screen and (min-width:600px) {
     .attention {
         margin-top: 300px;
@@ -87,19 +77,11 @@ h4 {
     }
 }
 
-/*
-@media screen and (min-width:601px) {
-    .attention {
-        margin-top: 320px;
-        margin-bottom: 30px;
-    }
-} */
 
 @media screen and (min-width:900px) {
     .kv {
         position: relative;
         top: 0;
-
     }
 
     .attention {
@@ -115,7 +97,6 @@ h4 {
     .kv {
         position: relative;
         top: 0;
-
     }
 
 
@@ -141,5 +122,4 @@ h4 {
 
         margin-bottom: 30px;
     }
-
 }
