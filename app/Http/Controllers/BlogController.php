@@ -61,7 +61,7 @@ class BlogController extends Controller
 
         /**
          * $categoryにblog_categoriesのデータをすべて代入（初期化）
-         * （制作者：小山）
+         * 制作者：小山
          */
         $category = BlogCategory::all();
         // var_dump($category);
@@ -69,7 +69,7 @@ class BlogController extends Controller
 
         /**
          * $dataにblogとcategories、blog_categoriesを代入初期化・二次元配列）
-         * （制作者：小山）
+         * 制作者：小山
          * 値$itemは記事本文（カテゴリー一覧と関連記事を除く）に使用
          * 値$itemsは関連記事の表示に使用
          * 値$categoryはカテゴリー一覧の表示に使用
