@@ -358,7 +358,7 @@ imgcontent-wrapper .heading {
     justify-content: center;
     margin-bottom: 50px;
     word-break: break-all;
-    box-shadow: 15px 10px 3px 0 #A7D28D;
+    /* box-shadow: 15px 10px 3px 0 #A7D28D; */
     border: solid 3px #8C5243;
     background-color: #ffff;
 }
@@ -369,7 +369,7 @@ imgcontent-wrapper .heading {
     top: 5px;
     left: 10px;
     box-shadow: none;
-    z-index: -999;
+    /* z-index: -999; */
 }
 
 .blog-card img {
