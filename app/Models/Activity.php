@@ -141,7 +141,7 @@ class Activity extends Model
 
 public function getBlogCategoryId($id)
 {
-    $blogCattegory = blog::find($id);
+    $blogCattegory = Blog::find($id);
     return $blogCattegory->blog_category_id;
 }
 }
