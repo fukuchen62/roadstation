@@ -355,7 +355,7 @@ Route::get(
  */
 Route::get(
     'cms-station-list',
-    'App\Http\Controllers\AdminGoodsController@stationIndex'
+    'App\Http\Controllers\AdminRoadstationController@stationIndex'
 )->name('cms-stationlist');
 
 /**
@@ -363,7 +363,7 @@ Route::get(
  */
 Route::get(
     'cms-station-new',
-    'App\Http\Controllers\AdminGoodsController@stationInput'
+    'App\Http\Controllers\AdminRoadstationController@stationInput'
 )->name('cms-stationinput');
 
 /**
@@ -371,7 +371,7 @@ Route::get(
  */
 Route::post(
     'cms-station-new',
-    'App\Http\Controllers\AdminGoodsController@stationCreate'
+    'App\Http\Controllers\AdminRoadstationController@stationCreate'
 )->name('cms-stationcreate');
 
 /**
@@ -379,7 +379,7 @@ Route::post(
  */
 Route::get(
     'cms-station-edit',
-    'App\Http\Controllers\AdminGoodsController@stationEdit'
+    'App\Http\Controllers\AdminRoadstationController@stationEdit'
 )->name('cms-stationedit');
 
 /**
@@ -387,7 +387,7 @@ Route::get(
  */
 Route::post(
     'cms-station-edit',
-    'App\Http\Controllers\AdminGoodsController@stationUpdate'
+    'App\Http\Controllers\AdminRoadstationController@stationUpdate'
 )->name('cms-stationupdate');
 
 
@@ -396,5 +396,56 @@ Route::post(
  */
 Route::get(
     'cms-station-delete',
-    'App\Http\Controllers\AdminGoodsController@stationDelete'
+    'App\Http\Controllers\AdminRoadstationController@stationDelete'
 )->name('cms-stationremove');
+
+
+// *********** 体験テーブル ***********
+/**
+ * 体験の一覧画面
+ */
+Route::get(
+    'cms-activity-list',
+    'App\Http\Controllers\AdminActivityController@activityIndex'
+)->name('cms-activitylist');
+
+/**
+ * 体験の新規登録画面
+ */
+Route::get(
+    'cms-activity-new',
+    'App\Http\Controllers\AdminActivityController@activityInput'
+)->name('cms-activityinput');
+
+/**
+ * 体験の新規登処理
+ */
+Route::post(
+    'cms-activity-new',
+    'App\Http\Controllers\AdminActivityController@activityCreate'
+)->name('cms-activitycreate');
+
+/**
+ * 体験の編集画面
+ */
+Route::get(
+    'cms-activity-edit',
+    'App\Http\Controllers\AdminActivityController@activityEdit'
+)->name('cms-activityedit');
+
+/**
+ * 体験の編集登録
+ */
+Route::post(
+    'cms-activity-edit',
+    'App\Http\Controllers\AdminActivityController@activityUpdate'
+)->name('cms-activityupdate');
+
+
+/**
+ * 体験の削除処理
+ */
+Route::get(
+    'cms-activity-delete',
+    'App\Http\Controllers\AdminActivityController@activityDelete'
+)->name('cms-activityremove');
