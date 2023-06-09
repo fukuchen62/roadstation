@@ -32,22 +32,25 @@
             <!-- スライドショー -->
             <div class="slide-items">
                 <div>
-                    <img src="{{ asset('assets/images/station/stations_3_1_1200_400.jpg .jpg') }}" alt="">
+                    {{-- <img src="{{ asset('assets/images/station/stations_3_1_1200_400.jpg .jpg') }}" alt=""> --}}
+                    <img src="{{ asset('/storage/images/' . $station->picture1) }}" alt="">
                 </div>
 
                 <div>
-                    <img src="{{ asset('assets/images/station/drive.jpg') }}" alt="">
+                    {{-- <img src="{{ asset('assets/images/station/drive.jpg') }}" alt=""> --}}
+                    <img src="{{ asset('/storage/images/' . $station->picture2) }}" alt="">
+
                 </div>
 
                 <div>
-                    <img src="{{ asset('assets/images/station/stations_3_2_.jpg') }}" alt="">
+                    {{-- <img src="{{ asset('assets/images/station/stations_3_2_.jpg') }}" alt=""> --}}
+                    <img src="{{ asset('/storage/images/' . $station->picture3) }}" alt="">
                 </div>
             </div>
 
             <p class="width">{!! $station->discription !!}
             </p>
 
-            <!-- 画像と文字を横に並べる。CSS -->
             <div class="flex">
                 <img src="{{ asset('assets/images/illustrations/tanuki-heart.png') }}" width="145px" height="145px"
                     alt="道の駅の感想を嬉しそうに喋るたぬき">
@@ -417,7 +420,7 @@
 
                     </div>
 
-                    {{-- <img src="{{ asset('/storage/images/' . $activity->picture1) }}" class="kv" alt="楽しいジップライン"> --}}
+                    <img src="{{ asset('/storage/images/' . $activity->picture1) }}" class="kv" alt="楽しいジップライン">
 
                     <h4>{{ $activity->activity_name }}</h4>
 
