@@ -449,3 +449,54 @@ Route::get(
     'cms-activity-delete',
     'App\Http\Controllers\AdminActivityController@activityDelete'
 )->name('cms-activityremove');
+
+
+// *********** ブログテーブル ***********
+/**
+ * ブログの一覧画面
+ */
+Route::get(
+    'cms-blog-list',
+    'App\Http\Controllers\AdminBlogController@blogIndex'
+)->name('cms-bloglist');
+
+/**
+ * ブログの新規登録画面
+ */
+Route::get(
+    'cms-blog-new',
+    'App\Http\Controllers\AdminBlogController@blogInput'
+)->name('cms-bloginput');
+
+/**
+ * ブログの新規登処理
+ */
+Route::post(
+    'cms-blog-new',
+    'App\Http\Controllers\AdminBlogController@blogCreate'
+)->name('cms-blogcreate');
+
+/**
+ * ブログの編集画面
+ */
+Route::get(
+    'cms-blog-edit',
+    'App\Http\Controllers\AdminBlogController@blogEdit'
+)->name('cms-blogedit');
+
+/**
+ * ブログの編集登録
+ */
+Route::post(
+    'cms-blog-edit',
+    'App\Http\Controllers\AdminBlogController@blogUpdate'
+)->name('cms-blogupdate');
+
+
+/**
+ * ブログの削除処理
+ */
+Route::get(
+    'cms-blog-delete',
+    'App\Http\Controllers\AdminBlogController@blogDelete'
+)->name('cms-blogremove');
