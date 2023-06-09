@@ -72,6 +72,43 @@ class AdminGoodsController extends Controller
         return view('cms.cms_goods_list', $data);
     }
 
+    public function typeindex(Request $request)
+    {
+        // ログインユーザーの情報取得
+        $login_user = Auth::user();
+
+        // 検索条件を取得
+        $s = "";
+        if (isset($request->s)) {
+            $s = $request->s;
+        }
+
+        // 種別特産品を読み込む
+        if ($s != '') {
+            $items = ProductType::where('common_name', 'like', '%' . $s . '%')
+                ->orWhere('usage', 'like', '%' . $s . '%')
+                ->orWhere('discription', 'like', '%' . $s . '%')
+                ->get();
+        } else {
+            $items = ProductType::where('deleted_at', null)
+                ->orderBy('id', 'desc')
+                ->get();
+        }
+
+        // 件数
+        $count = count($items);
+
+        // Bladeファイルに渡すデータ（連想配列）
+        $data = [
+            'type' => $items,
+            'count' => $count,
+            'login_user' => $login_user,
+        ];
+
+        // Bladeファイルを呼び出す
+        return view('cms.cms_type_list', $data);
+    }
+
     /**
      * goodsInput function
      * 新規投稿画面を表示
@@ -133,7 +170,7 @@ class AdminGoodsController extends Controller
 
         // 渡すデータ
         $data = [
-            'news_list' => $items,
+            'goods_list' => $items,
             'count' => $goods_count,
             'login_user' => $login_user,
         ];
@@ -156,7 +193,7 @@ class AdminGoodsController extends Controller
         // idによる編集するデータを取得
         $item = SpecialGoods::find($request->id);
 
-        // ニュースカテゴリー
+        // 特産品カテゴリー
         $category_items = GoodsCategory::All();
 
         // 渡すデータ
@@ -171,8 +208,37 @@ class AdminGoodsController extends Controller
     }
 
     /**
-     * newsUpdate function
-     * ニュース編集処理
+     * typeEdit function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function typeEdit(Request $request)
+    {
+        // ログインユーザーの情報取得
+        $login_user = Auth::user();
+
+        // idによる編集するデータを取得
+        $item = ProductType::find($request->id);
+
+        // 特産品カテゴリー
+        $category_items = ProductType::All();
+
+        // 渡すデータ
+        $data = [
+            'goods' => $item,
+            'category_items' => $category_items,
+            'login_user' => $login_user,
+        ];
+
+        // ブレッドファイルを呼び出す
+        return view('cms.cms_type_edit', $data);
+    }
+
+
+    /**
+     * goodsUpdate function
+     * 道の駅特産品編集処理
      *
      * @param Request $request
      * @return void
@@ -205,12 +271,12 @@ class AdminGoodsController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
-        // ニュースの件数
+        // 特産品の件数
         $goods_count = count($items);
 
         // 渡すデータ
         $data = [
-            'goods_list' => $items,
+            'goods' => $items,
             'count' => $goods_count,
             'login_user' => $login_user,
         ];
@@ -219,9 +285,51 @@ class AdminGoodsController extends Controller
         return view('cms.cms_goods_list', $data);
     }
 
+    public function typeUpdate(Request $request)
+    {
+        // ログインユーザーの情報取得
+        $login_user = Auth::user();
+
+        // バリデーション
+        $this->validate($request, ProductType::$rules);
+
+        // 編集する元のデータを読み込む
+        $goods = ProductType::find($request->id);
+
+        // 編集結果を取得
+        $form = $request->all();
+
+        // _tokenを削除
+        unset($form['_token']);
+
+        // 更新日時を刷新
+        $goods->updated_at = date("Y-m-d H:i:s");
+
+        // インスタンスに編集結果を入れ替え、保存
+        $goods->fill($form)->save();
+
+        // ニュースを読み直す
+        $items = ProductType::where('deleted_at', null)
+            ->orderBy('id', 'desc')
+            ->get();
+
+        // 特産品の件数
+        $goods_count = count($items);
+
+        // 渡すデータ
+        $data = [
+            'type' => $items,
+            'count' => $goods_count,
+            'login_user' => $login_user,
+        ];
+
+        // ブレッドファイルを呼び出す
+        return view('cms.cms_type_list', $data);
+    }
+
     /**
      * Undocumented function
-     * ニュースを削除
+     * 道の駅特産品を削除
      *
      * @param Request $request
      * @return void
