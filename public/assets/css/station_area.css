@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-/* .kv img {
+.kv img {
     object-position: 30% 15%;
-} */
+}
 
 h2,
 h3,
@@ -75,10 +75,11 @@ dd {
 }
 
 .district {
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/hedline_yellow.png);
     background-repeat: no-repeat;
-    /* margin-top: 200px; */
+    background-position: center;
     padding: 20px;
+    margin-bottom: 60px;
 }
 
 .area {
@@ -146,7 +147,7 @@ dd img {
     }
 
     .district {
-        background-image: url(../images/bg_headline.png);
+        background-image: url(../images/hedline_yellow.png);
         background-repeat: no-repeat;
         /* margin-top: 200px; */
 
@@ -155,9 +156,7 @@ dd img {
 
 @media screen and (min-width:901px) {
 
-    .wrapper {
-        /* margin-top: 100px; */
-    }
+
 
     .area-btn {
         font-size: 2rem;
@@ -180,9 +179,7 @@ dd img {
         word-break: break-word;
     }
 
-    .area_category {
-        /* margin-top: 120px; */
-    }
+
 
 
     h3 {
