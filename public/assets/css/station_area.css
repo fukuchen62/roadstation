@@ -155,9 +155,7 @@ dd img {
 
 @media screen and (min-width:901px) {
 
-    .wrapper {
-        /* margin-top: 100px; */
-    }
+
 
     .area-btn {
         font-size: 2rem;
@@ -180,9 +178,7 @@ dd img {
         word-break: break-word;
     }
 
-    .area_category {
-        /* margin-top: 120px; */
-    }
+
 
 
     h3 {

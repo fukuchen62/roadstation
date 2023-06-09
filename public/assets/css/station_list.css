@@ -261,7 +261,7 @@ dd {
     word-break: break-word;
     border-radius: 20px;
     box-shadow: 15px 10px 3px 0 #a7d28d;
-    border: solid 3px #8c5243;
+    border: solid 1px #8c5243;
     background-color: #ffff;
 }
 
@@ -355,7 +355,7 @@ dd img {
 
     .card {
         box-shadow: 15px 10px 3px 0 #a7d28d;
-        border: solid 3px #8c5243;
+        border: solid 1px #8c5243;
         width: 300px;
         height: auto;
         padding: 20px;
@@ -472,7 +472,7 @@ dd img {
 
     .card {
         box-shadow: 15px 10px 3px 0 #a7d28d;
-        border: solid 3px #8c5243;
+        border: solid 1px #8c5243;
 
         width: 300px;
         height: auto;
