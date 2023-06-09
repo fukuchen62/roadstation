@@ -22,7 +22,7 @@
 {{-- キービジュアル --}}
 @section('key_visual')
     <div class="kv">
-        <img class="sub-keyvisual" src="{{ asset('assets/images/article/ブログ.png') }}" alt="サブキービジュアル">
+        <img class="sub-keyvisual" src="{{ asset('assets/images/blog_list/blog.jpg') }}" alt="サブキービジュアル">
     </div>
 @endsection
 
