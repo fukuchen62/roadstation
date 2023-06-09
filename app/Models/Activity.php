@@ -138,10 +138,4 @@ class Activity extends Model
         }
         return $id;
     }
-
-public function getBlogCategoryId($id)
-{
-    $blogCattegory = Blog::find($id);
-    return $blogCattegory->blog_category_id;
-}
 }
