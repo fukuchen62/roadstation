@@ -13,7 +13,7 @@
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
 
-    {{-- <style>
+    <style>
         .link {
             margin: 0 auto;
             margin-top: 16px;
@@ -27,7 +27,7 @@
         .pagination li {
             display: inline-block;
         }
-    </style>  --}}
+    </style>
 @endsection
 
 @section('key_visual')
