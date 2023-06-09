@@ -10,6 +10,22 @@ class Activity extends Model
     use HasFactory;
     protected $table = 'activities';
 
+    protected $guarded = array('id');
+    public static $rules = array(
+        'category_id' => 'required|integer',
+        'title'       => 'required|string|max:50',
+        'overview'    => 'max:200',
+        'thumbnail'   => 'required|string|max:200',
+        'is_show'     => 'required|boolean'
+    );
+    // 日本語エラーメッセージ
+    public static $messages = [
+        'category_id.required' => 'カテゴリーIDは必ず入力してください。',
+        'title.required'       => 'タイトルは必ず入力してください。',
+        'thumbnail.required'   => 'サムネ画像は必ず入力してください。',
+        'is_show.required'     => '表示フラグは必ず入力してください。'
+    ];
+
     // *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
 
     /**
@@ -96,7 +112,9 @@ class Activity extends Model
     public function getBlogName($id)
     {
         $blog = Blog::find($id);
-        return $blog->title;
+        if($blog->is_show == 1){
+            return $blog->title;
+            }
     }
 
     public function changeName($id)
@@ -138,10 +156,4 @@ class Activity extends Model
         }
         return $id;
     }
-
-public function getBlogCategoryId($id)
-{
-    $blogCattegory = Blog::find($id);
-    return $blogCattegory->blog_category_id;
-}
 }

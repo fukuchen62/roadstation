@@ -28,7 +28,7 @@ h2 {
 
 .list {
     width: 350px;
-    height: 1480px;
+    /* height: 1480px; */
     margin-left: 1.5rem;
     overflow: hidden;
     border: solid green;
@@ -36,7 +36,7 @@ h2 {
     padding: 20px 20px;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    position: relative;
+    /* position: relative; */
 }
 
 .list img {
@@ -52,10 +52,10 @@ h2 {
 .link_more_box {
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 20px;
+    /* position: absolute; */
+    /* bottom: 20px;
     left: 0;
-    right: 0;
+    right: 0; */
 }
 
 .link_more_box p {

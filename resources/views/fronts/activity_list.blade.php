@@ -33,11 +33,11 @@
             <div class="activity-group">
                 <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
                 <div class="activity-text-group">
-                    <h3>道の駅 <a
-                            href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
-                    </h3>
                     <h3 class="activity-name">
                         {{ $activity->activity_name }}
+                    </h3>
+                    <h3>道の駅 <a
+                            href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
                     </h3>
                     <h4 class="headline-text">営業時間：</h4>
                     <p class="business-text">
@@ -82,11 +82,9 @@
                     @php
                         $id = $activity->changeName($id);
                         $title = $activity->getBlogName($id);
-                        $blogCategory = $activity->getBlogCategoryId($id);
                     @endphp
-
                     <li class="roadstation-frame"><a
-                            href="{{ url('blog-detail') }}?id={{ $id }}&blog_category_id={{ $blogCategory }}">{{ $title }}</a>
+                            href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
                     </li>
                 @endforeach
             </ul>
