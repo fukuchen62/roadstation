@@ -29,7 +29,7 @@ class AdminBlogController extends Controller
 
     /**
      * index function
-     * ニュースの一覧ページ
+     * ブログの一覧ページ
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class AdminBlogController extends Controller
             $s = $request->s;
         }
 
-        // ニュースを読み込む
+        // ブログを読み込む
         if ($s != '') {
             $items = Blog::where('title', 'like', '%' . $s . '%')
                 ->orWhere('overview', 'like', '%' . $s . '%')
@@ -62,7 +62,7 @@ class AdminBlogController extends Controller
         // Bladeファイルに渡すデータ（連想配列）
         $data = [
             'blog_list' => $items,
-            'count' => $news_count,
+            'count' => $blog_count,
             'login_user' => $login_user,
         ];
 
@@ -71,34 +71,34 @@ class AdminBlogController extends Controller
     }
 
     /**
-     * newsInput function
+     * blogInput function
      * 新規投稿画面を表示
      *
      * @param Request $request
      * @return void
      */
-    public function newsInput(Request $request)
+    public function blogInput(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
 
-        // ニュースカテゴリー
-        $category_items = NewsCategory::All();
+        // ブログカテゴリー
+        $category_items = blogCategory::All();
         $data = [
             'login_user' => $login_user,
             'category_items' => $category_items
         ];
-        return view('cms.cms_news_new', $data);
+        return view('cms.cms_blog_new', $data);
     }
 
     /**
-     * newsCreate function
-     * ニュース投稿処理
+     * blogCreate function
+     * ブログ投稿処理
      *
      * @param Request $request
      * @return void
      */
-    public function newsCreate(Request $request)
+    public function blogCreate(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -107,7 +107,7 @@ class AdminBlogController extends Controller
         $this->validate($request, News::$rules);
 
         // 登録用ニュースのインスタンスを生成
-        $news = new News();
+        $blog = new Blog();
 
         // 入力データを取得
         $form = $request->all();
@@ -116,10 +116,10 @@ class AdminBlogController extends Controller
         unset($form['_token']);
 
         // インスタンスのuser_idプロパティにログイン中のユーザーIDを代入
-        $news->user_id = $login_user->id;
+        $blog->user_id = $login_user->id;
 
         // インスタンスを保存
-        $news->fill($form)->save();
+        $blog->fill($form)->save();
 
         // ニュースを読み込む
         $items = News::where('deleted_at', null)
@@ -127,12 +127,12 @@ class AdminBlogController extends Controller
             ->get();
 
         // ニュースの件数
-        $news_count = count($items);
+        $blog_count = count($items);
 
         // 渡すデータ
         $data = [
-            'news_list' => $items,
-            'count' => $news_count,
+            'blog_list' => $items,
+            'count' => $blog_count,
             'login_user' => $login_user,
         ];
 
@@ -152,20 +152,20 @@ class AdminBlogController extends Controller
         $login_user = Auth::user();
 
         // idによる編集するデータを取得
-        $item = News::find($request->id);
+        $item = Blog::find($request->id);
 
         // ニュースカテゴリー
-        $category_items = NewsCategory::All();
+        $category_items = BlogCategory::All();
 
         // 渡すデータ
         $data = [
-            'news' => $item,
+            'blog' => $item,
             'category_items' => $category_items,
             'login_user' => $login_user,
         ];
 
         // ブレッドファイルを呼び出す
-        return view('cms.cms_news_edit', $data);
+        return view('cms.cms_blog_edit', $data);
     }
 
     /**
@@ -175,7 +175,7 @@ class AdminBlogController extends Controller
      * @param Request $request
      * @return void
      */
-    public function newsUpdate(Request $request)
+    public function blogUpdate(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -184,7 +184,7 @@ class AdminBlogController extends Controller
         $this->validate($request, News::$rules);
 
         // 編集する元のデータを読み込む
-        $news = News::find($request->id);
+        $blog = News::find($request->id);
 
         // 編集結果を取得
         $form = $request->all();
@@ -193,28 +193,28 @@ class AdminBlogController extends Controller
         unset($form['_token']);
 
         // 更新日時を刷新
-        $news->updated_at = date("Y-m-d H:i:s");
+        $blog->updated_at = date("Y-m-d H:i:s");
 
         // インスタンスに編集結果を入れ替え、保存
-        $news->fill($form)->save();
+        $blog->fill($form)->save();
 
         // ニュースを読み直す
-        $items = News::where('deleted_at', null)
+        $items = Blog::where('deleted_at', null)
             ->orderBy('id', 'desc')
             ->get();
 
         // ニュースの件数
-        $news_count = count($items);
+        $blog_count = count($items);
 
         // 渡すデータ
         $data = [
-            'news_list' => $items,
-            'count' => $news_count,
+            'blog_list' => $items,
+            'count' => $blog_count,
             'login_user' => $login_user,
         ];
 
         // ブレッドファイルを呼び出す
-        return view('cms.cms_news_list', $data);
+        return view('cms.cms_blog_list', $data);
     }
 
     /**
@@ -224,7 +224,7 @@ class AdminBlogController extends Controller
      * @param Request $request
      * @return void
      */
-    public function newsDelete(Request $request)
+    public function blogDelete(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -238,24 +238,24 @@ class AdminBlogController extends Controller
         ];
 
         // DBクリエターで更新処理
-        DB::table('news')->where('id', $request->id)
+        DB::table('blogs')->where('id', $request->id)
             ->update($param);
 
         // ニュースを読み直す
-        $items = News::where('deleted_at', null)
+        $items = Blog::where('deleted_at', null)
             ->orderBy('id', 'desc')
             ->get();
 
         // ニュースの件数
-        $news_count = count($items);
+        $blog_count = count($items);
 
         // 渡すデータ
         $data = [
-            'news_list' => $items,
+            'blog_list' => $items,
             'count' => $news_count,
             'login_user' => $login_user,
         ];
 
-        return view('cms.cms_news_list', $data);
+        return view('cms.cms_blog_list', $data);
     }
 }

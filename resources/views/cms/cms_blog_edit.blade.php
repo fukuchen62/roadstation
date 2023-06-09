@@ -41,10 +41,10 @@
             <tr>
                 <th width="15%"> <span>*</span> カテゴリー名: </th>
                 <td>
-                    <select name="news_category_id">
+                    <select name="blog_category_id">
                         @foreach ($category_items as $item)
                             {{-- 選んでいる選択肢にselectedをつける --}}
-                            @if ($item->id == $news->blog_category_id)
+                            @if ($item->id == $blog->blog_category_id)
                                 <option value="{{ $item->id }}" selected>{{ $item->category_name }}</option>
                             @else
                                 <option value="{{ $item->id }}">{{ $item->category_name }}</option>
