@@ -48,33 +48,23 @@ class RoadstationController extends Controller
     public function stationDetailSearch(Request $request)
     {
         $items = [];
-
-        if (isset($request->area)) {
-            foreach ($request->area as $val) {
-                if ($val == 1) {
-                    $items = RoadStation::where('area_id', 1)
-                        ->orderby('station_name', 'DESC')
-                        ->get();
-                } elseif ($request->area == 2) {
-                    $items = RoadStation::where('area_id', 2)
-                        ->orderby('station_name', 'DESC')
-                        ->get();
-                } elseif ($request->area == 3) {
-                    $items = RoadStation::where('area_id', 3)
-                        ->orderby('station_name', 'DESC')
-                        ->get();
-                } else {
-                    // $items = RoadStation::all();
-                    $items = [];
-                }
-            }
-        }
+        $area = $request->area;
+        // if ($request->area) {
+        //     $area = $request->area;
+        //     foreach ($area as $val) {
+        //         $areas = $val;
+        //     }
+        //     $items = RoadStation::where('area_id', $areas)
+        //         ->get();
+        // }
+        $items = RoadStation::all();
 
         $data = [
             // 'road_stations' => $name,
             // 'activities' => $act,
             // 'special_goods' => $goods,
             // 'product_types' => $pro,
+            'count' => $area,
             'search' => $items,
         ];
 
