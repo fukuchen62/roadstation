@@ -2,9 +2,12 @@
 
 .wrapper {
     padding: 0;
-    margin-top: 50px;
+    margin-top: 600px;
 }
 
+header {
+    position: relative;
+}
 
 section {
     margin-top: 100px;
@@ -396,7 +399,7 @@ imgcontent-wrapper .heading {
 
     .wrapper {
         padding: 0;
-        margin-top: 50px;
+        margin-top: 500px;
     }
 
     .article-list li {
