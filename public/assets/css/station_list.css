@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 
-/* .wrapper {
-    margin-top: 250px;
-} */
+.station-titlebox {
+    text-align: center;
+    margin-bottom: 60px;
+}
 
 
 .kv img {
@@ -13,7 +14,7 @@
 
 h2 {
     /* margin-top: 150px; */
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
 
 
@@ -49,7 +50,8 @@ dd {
     font-size: 30px;
     color: #B45A27;
     /* padding: 1rem 0; */
-    margin-bottom: 30px;
+    margin: 30px auto 30px auto;
+
 
 }
 
@@ -100,7 +102,9 @@ dd {
     font-size: 30px;
     color: #B45A27;
     /* padding: 1rem 0; */
-    margin-bottom: 30px;
+
+    margin: 30px auto 30px auto;
+
 
 
 }
@@ -151,7 +155,8 @@ dd {
     font-size: 30px;
     color: #B45A27;
     /* padding: 1rem 0; */
-    margin-bottom: 30px;
+    margin: 30px auto 30px auto;
+
 
 
 
@@ -212,12 +217,16 @@ dd {
 .stationlist-title {
     /* margin-top: 250px; */
     text-align: center;
-    margin-bottom: 30px;
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/hedline_yellow.png);
+    background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
     color: #B45A27;
-    text-align: center;
+    /* display: inline-block; */
+    margin: 0 auto;
+    padding: 20px;
+
+
+
 }
 
 .east {
@@ -286,6 +295,19 @@ dd img {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
+        background-image: url(../images/hedline_yellow.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px;
+        color: #B45A27;
+        text-align: center;
+        display: inline-block;
+        width: 320px;
+        height: auto;
+        margin: 0 auto;
+
+
+
     }
 }
 
@@ -362,15 +384,15 @@ dd img {
         flex-wrap: wrap;
 
 
+
     }
 }
 
 
+
+
 @media screen and (min-width:900px) {
-    /* 
-    .wrapper {
-        margin-top: 250px;
-    } */
+
 
 
     .kv {
@@ -391,11 +413,9 @@ dd img {
 
 
 
+
 @media screen and (min-width:901px) {
 
-    /* .wrapper {
-        margin-top: 250px;
-    } */
 
     .kv {
         object-position: center;
@@ -413,6 +433,26 @@ dd img {
         padding: 20px;
         color: #B45A27;
         margin: 0 auto;
+
+    }
+
+
+    .stationlist-title {
+        /* margin-top: 300px; */
+        text-align: center;
+        margin-bottom: 30px;
+        background-image: url(../images/hedline_yellow.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px;
+        color: #B45A27;
+        text-align: center;
+        display: inline-block;
+        width: 320px;
+        height: auto;
+        margin: 0 auto;
+
+
 
     }
 

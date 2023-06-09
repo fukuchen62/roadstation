@@ -21,14 +21,20 @@ iframe {
 }
 
 h2 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-image: url(../images/bg_headline.png);
+    /* margin-bottom: 50px; */
+    margin-bottom: 4px;
+    background-image: url(../images/hedline_yellow.png);
+    background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
     color: #B45A27;
 }
 
+@media screen and (min-width:901px) {
+    h2 {
+        margin-bottom: 14px;
+    }
+}
 
 
 h3 {
@@ -53,7 +59,8 @@ h4 {
 }
 
 .width {
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
+    margin-bottom: 30px;
 }
 
 .bottom {
@@ -66,7 +73,8 @@ h4 {
     height: 400px;
     object-fit: cover;
     object-position: 80% 100%;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    margin-bottom: 30px;
 }
 
 /* たぬきとコメント */

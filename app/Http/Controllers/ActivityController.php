@@ -28,8 +28,6 @@ class ActivityController extends Controller
          */
         $items = Activity::all();
 
-        
-
         /**
          * $dataに$itemを代入
          */

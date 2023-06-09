@@ -4,11 +4,10 @@
     margin-top: 250px;
 } */
 
-kv img {
+.kv img {
     z-index: -1;
+    object-position: 80% 20%;
 }
-
-
 
 html {
     overflow-x: hidden;
@@ -23,49 +22,36 @@ section {
     /* text-align: center; */
 }
 
-
 h2 {
     /* max-width: 220px; */
     width: 100%;
-    /* margin: 30px auto 30px auto; */
     text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 300px;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 1.6rem;
     font-weight: bold;
 }
-
-
-
 
 h4 {
-    font-size: 20px;
-    font-weight: bold;
     text-align: start;
+    font-weight: bold;
 }
-
 
 /* .wrapper {
     margin-top: 150px;
 } */
 
-
 .attention {
-    /* margin-top: 220px; */
-    margin-bottom: 30px;
-    background-image: url(../images/bg_headline.png);
+    margin-bottom: 60px;
+    background-image: url(../images/hedline_yellow.png);
+    background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
     color: #B45A27;
     text-align: center;
 }
-
-
-
 
 .activity-delimiter {
     margin-bottom: 100px;
@@ -91,39 +77,40 @@ h4 {
 
 .activity-name {
     width: 100%;
-    margin-bottom: 30px;
     text-align: center;
+}
+
+.station-name{
+    margin: 10px auto 20px auto;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .business-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    /* padding-bottom: 30px; */
     text-align: start;
 }
 
 .price-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    /* padding-bottom: 30px; */
     text-align: start;
 }
 
 .conditions-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    /* padding-bottom: 30px; */
     text-align: start;
 }
 
 .detail-text {
     width: 100%;
+    margin-bottom: 10px;
     padding-top: 0;
-    padding-bottom: 30px;
-    text-align: start;
-}
-
-.activity-place {
     text-align: start;
 }
 
@@ -131,13 +118,13 @@ h4 {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    /* text-align: center; */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .roadstation-name {
     width: 160px;
     text-align: start;
+    font-size: 1.2rem;
 }
 
 .activity-blog-place {
@@ -152,62 +139,6 @@ h4 {
     margin-bottom: 10px;
 }
 
-
-@media screen and (min-width:600px) {
-    /* .wrapper {
-        margin-top: 250px;
-    } */
-
-
-    .attention {
-        /* margin-top: 300px; */
-        margin-bottom: 30px;
-    }
-}
-
-
-@media screen and (min-width:601px) {
-    /* .wrapper {
-        margin-top: 250px;
-    } */
-
-    .attention {
-        /* margin-top: 320px; */
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (min-width:900px) {
-
-    /*
-    .wrapper {
-        margin-top: 250px;
-    } */
-
-    .kv {
-        position: relative;
-        top: 0;
-
-    }
-
-    .attention {
-        /* margin-top: 250px; */
-        margin-bottom: 30px;
-    }
-}
-
-
-
-@media screen and (min-width:900px) {
-    /* .wrapper {
-        margin-top: 250px;
-    } */
-}
-
-
-
-
-
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
 
@@ -221,16 +152,8 @@ h4 {
 
     }
 
-
     .kv img {
         object-position: 80% 20%;
-
-
-    }
-
-    .attention {
-        /* margin-top: 250px; */
-        margin-bottom: 30px;
     }
 
     /* h2 {
@@ -247,18 +170,7 @@ h4 {
 
     h4 {
         font-size: 20px;
-        font-weight: bold;
     }
-
-
-
-
-
-
-
-
-
-
 
     /*
     .attention-img1 {

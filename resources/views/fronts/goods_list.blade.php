@@ -14,16 +14,16 @@
 @section('key_visual')
 <!-- キービジュアル -->
         <div class="kv">
-            <figure><img src="{{asset('assets/images/goods_list.img/goods_list_header.jpg')}}" alt="特産品ページ"></figure>
+            <figure><img src="{{asset('assets/images/goods_list/goods_list_header.jpg')}}" alt="特産品ページ"></figure>
         </div>
 @endsection
 
 
 @section('content')
-<div class="wrapper">
     <section class="agricultural-products-goods">
             <h2 class="title">特産品一覧</h2>
-            <h3 class="headline agricultural-products">農産物</h3>
+
+            <h3 class="headline-agricultural-products">農産物</h3>
 
             <ul class="goods">
             @foreach ($agricultural_products as $agricultural )
@@ -38,7 +38,7 @@
         </section>
 
         <section class="seafood-goods">
-            <h3 class="headline seafood">水産物</h3>
+            <h3 class="headline-seafood">水産物</h3>
 
             <ul class="goods">
             @foreach ($seafood as $seafood )
@@ -53,7 +53,7 @@
         </section>
 
         <section class="craft-goods">
-            <h3 class="headline craft">工芸品</h3>
+            <h3 class="headline-craft">工芸品</h3>
 
             <ul class="goods">
             @foreach ($craft as $craft )
@@ -154,7 +154,6 @@
             </div>
             @endforeach
         </section>
-</div>
 @endsection
 
 {{-- 該当ページ専用JS --}}

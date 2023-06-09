@@ -44,7 +44,9 @@
                 </a>
             @endforeach
 
-            <div class="link">{{ $news->links('pagination::bootstrap-4') }}</div>
+            <div class="link">
+                {{ $news->links('pagination::bootstrap-4') }}
+            </div>
 
         </div>
 
