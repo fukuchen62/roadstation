@@ -63,6 +63,7 @@ form {
     background-color: #ffffff;
     padding: 20px 0;
     margin: 40px 0;
+    border-radius: 20px;
 }
 
 /* カード */
@@ -140,10 +141,22 @@ form {
     text-align: center;
     font-size: 1.3rem;
     padding: 10px 0;
-    width: 150px;
+    width: 130px;
     margin: 20px auto;
+    border-bottom: dotted 10px #e7d955;
+    font-weight: bold;
+
+}
+
+.more-btn {
+    display: inline-block;
     border-radius: 50px;
     background-color: #A7D28D;
+    padding: 15px;
+    width: 100px;
+    margin: 20px;
+
+
 }
 
 @media screen and (min-width:601px) {
@@ -197,6 +210,7 @@ form {
     }
 
 
+
     /* PC版のチェックボックス配置 */
     /* mobileを非表示 */
     .mobile-form {
@@ -221,7 +235,13 @@ form {
     }
 
     .checkbox-title {
-        width: 250px;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 10px 0;
+        width: 130px;
+        margin: 20px auto;
+        border-bottom: dotted 10px #e7d955;
+        font-weight: bold;
     }
 
 }

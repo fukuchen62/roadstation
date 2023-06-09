@@ -38,6 +38,7 @@ class BlogController extends Controller
 
         // ブログのカテゴリIDを取得
         $blog_category_id = $item->blog_category_id;
+
         /**
          * 関連記事の検索と取得
          * （制作者：小山）
@@ -50,8 +51,6 @@ class BlogController extends Controller
          * 6.取得したデータを第一引数idに代入
          * 7.第一引数idを$itemsに代入
          */
-
-        
         $items = Blog::where('blog_category_id', $blog_category_id)
         ->wherenot('id',$request->id)
         ->where('is_show', 1)
