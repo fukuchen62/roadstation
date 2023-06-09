@@ -12,19 +12,22 @@ class Activity extends Model
 
     protected $guarded = array('id');
     public static $rules = array(
-        'category_id' => 'required|integer',
         'activity_name' => 'required|string|max:50',
         'discription' => 'max:200',
         'business_hours'    => 'max:200',
-        'overview'    => 'max:200',
-        'picture1'   => 'required|string|max:200',
-        'is_show'     => 'required|boolean'
+        'price' => 'max:100',
+        'conditions'    => 'max:500',
+        'road_station_id' => 'integer',
+        'blog_list'  => 'max:20',
+        'picture1'   => 'string|max:200',
+        'picture2'   => 'string|max:200',
+        'picture3'   => 'string|max:200',
+        'memo'       => 'string|max:500',
+        'is_show'    => 'required|boolean'
     );
     // 日本語エラーメッセージ
     public static $messages = [
-        'category_id.required' => 'カテゴリーIDは必ず入力してください。',
-        'title.required'       => 'タイトルは必ず入力してください。',
-        'thumbnail.required'   => 'サムネ画像は必ず入力してください。',
+        'activity_name.required' => 'お名前は必ず入力してください。',
         'is_show.required'     => '表示フラグは必ず入力してください。'
     ];
 
