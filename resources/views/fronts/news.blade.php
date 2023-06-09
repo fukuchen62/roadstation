@@ -73,6 +73,13 @@
     </style>
 @endsection
 
+@section('key_visual')
+    <!-- キービジュアル -->
+    <div class="kv">
+        <figure><img src="{{ asset('assets/images/goods_list/goods_list_header.jpg') }}" alt="特産品ページ"></figure>
+    </div>
+@endsection
+
 @section('content')
 
     <div class="wrap">
