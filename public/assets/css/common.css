@@ -8,6 +8,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 基本設定 */
 body {
     font-size: 16px;
     font-family: 'Zen Maru Gothic', sans-serif;
@@ -15,22 +16,42 @@ body {
     background-color: #fffbf1;
 }
 
+h1 {
+    padding-left: 5px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Kiwi Maru', serif;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    line-height: 1.5rem;
+    padding-top: 1rem;
+}
+
 header {
     position: fixed;
     top: 0;
     width: 100%;
     height: 100px;
-    background: #99d184;
+    background: #ffffff;
     z-index: 10;
 }
 
-/* contents */
+
+/* コンテンツ内容 */
 .wrapper {
     margin: 0 auto;
     margin-top: 100px;
     padding: 20px;
 }
 
+/* 各ページのキービジュアル（TOPを除く） */
 .kv {
     position: relative;
     top: 100px;
@@ -44,6 +65,7 @@ header {
     height: 120px;
 }
 
+/* サイトロゴ */
 .site-logo img {
     position: fixed;
     width: 80px;
@@ -52,99 +74,18 @@ header {
     z-index: 100;
 }
 
-h1 {
-    padding-left: 5px;
-}
-
-
-h2 {
-    font-size: 2rem;
-    font-family: 'Kiwi Maru', serif;
-
-    /* padding: 20px;
-    background-image: url(../images/bg_headline.png); */
-}
-
-p {
-    line-height: 1.5rem;
-    padding-top: 1rem;
-}
-
-/* a {
-    cursor: pointer;
-} */
-
-.footer-menu a:hover {
-    opacity: 0.8;
-}
-
-h3 {
-    font-size: 20px;
-}
-
-
-
 /* ↓もっと見るボタン */
 .btn {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.5;
-    position: relative;
-    display: inline-block;
-    padding: 0.5rem 2rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    color: #ffffff;
-    border-radius: 0.5rem;
+    padding: 20px 20px;
+    background-color: #ccc;
 }
 
-.btn-border-shadow {
-    padding: calc(1.5rem - 12px) 3rem 1.5rem;
-
-    background: #fff;
+/* PC版：ナビゲーションメニュー*/
+.nav-pc {
+    display: none;
 }
 
-.btn-border-shadow:before {
-    position: absolute;
-    top: -6px;
-    left: -6px;
-
-    width: 100%;
-    height: 100%;
-
-    content: "";
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-
-    border: 3px solid #91471d;
-    border-radius: 0.5rem;
-}
-
-.btn-border-shadow:hover {
-    padding: calc(1.5rem - 6px) 3rem;
-}
-
-.btn-border-shadow:hover:before {
-    top: 0;
-    left: 0;
-}
-
-.btn-border-shadow--color {
-    border-radius: 50px;
-    background: linear-gradient(180deg, rgba(180, 90, 39, 1) 0%, rgba(213, 89, 21, 1) 100%);
-    ;
-}
-
-.btn-border-shadow--color:before {
-    border-radius: 50px;
-}
-
-/* ↑ここまで */
-
+/* ナビゲーションメニューアイコン */
 .icon {
     width: 30px;
     height: 30px;
@@ -153,13 +94,7 @@ h3 {
     align-items: flex-end;
 }
 
-
-/* nav_menu */
-.nav-pc {
-    display: none;
-}
-
-/* ハンバーガーメニュー */
+/* モバイル版：ハンバーガーメニュー */
 #wrapper nav {
     position: fixed;
     top: 0;
@@ -244,16 +179,14 @@ h3 {
     transform: translate(-7px, -17px) rotate(-45deg);
 }
 
-.blog-btn {
-    text-align: center;
-}
+/* ↑ここまでハンバーガーメニュー */
 
+/* ブログボタン */
 .blog-btn img {
     max-width: 320px;
     height: auto;
     object-fit: cover;
 }
-
 
 /* topへ戻るボタン */
 .scroll-top {
@@ -271,8 +204,6 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .scroll-top:hover {
@@ -294,17 +225,11 @@ h3 {
     color: black;
 }
 
-/* footer */
+/* フッター */
 footer {
     position: relative;
-    min-width: 320px;
-    /* height: 400px; */
     background-color: #86cc7f;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
-    clear: both;
 }
 
 .footer-menu {
@@ -315,61 +240,26 @@ footer {
 
 .footer-menu li {
     color: #ffffff;
-    padding: 5px 0;
+    font-size: 20px;
+    padding: 10px 0;
 }
 
-
-.page-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    transition: 0.5s;
-}
-
-.page-top_link {
-    position: relative;
-    display: block;
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-    background-color: #cccccc;
-}
-
-.page-top_link:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
-}
-
-/*フッターまでスクロールしたら消す*/
-.is-hidden {
-    visibility: hidden;
-    opacity: 0;
+.footer-menu a:hover {
+    opacity: 0.8;
 }
 
 .copyright {
     font-size: 14px;
-    margin-top: -100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: #ffffff;
     text-align: center;
-
 }
 
 @media screen and (min-width:601px) {
 
-    .nav-pc li {
-        font-size: 18px;
-    }
-
+    /* PC版メニュー  */
     .nav-pc ul {
-        font-family: 'Kiwi Maru', serif;
         height: 100px;
         display: flex;
         gap: 20px;
@@ -378,7 +268,6 @@ footer {
         color: #36725a;
     }
 
-
     .nav-pc ul li:hover {
         border-radius: 60% 50% 20% 60%;
         background-color: #f0ffc9;
@@ -386,38 +275,19 @@ footer {
         transform: rotate(5deg);
     }
 
+    /* タブレット版：フッターメニュー */
     .footer-menu {
-        margin: -50px auto;
-        width: 700px;
+        width: 100%;
+        min-width: 650px;
         display: flex;
         justify-content: space-evenly;
-    }
-
-    footer ul .footer-menu-list {
-        top: 10%;
-        margin: 0 auto;
-        padding: 50px 20px;
-        margin: 0 auto;
-        line-height: 2rem;
-    }
-
-    .copyright {
-        margin-top: 120px;
-        color: #ffffff;
-        text-align: center;
-
     }
 }
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:900px) {
 
-    .wrapper {
-        margin: 0 auto;
-    }
-
-
-
+    /* 各ページのKV */
     .kv {
         position: relative;
         top: 0;
@@ -426,43 +296,16 @@ footer {
     .kv img {
         margin: 0 auto;
         object-fit: cover;
-        /* position: absolute; */
         width: 100%;
         height: 200px;
     }
 
-    header {
-        position: relative;
-        width: 100%;
-        height: 100px;
-    }
-
-    .site-logo img {
-        padding: 5px;
-        z-index: 100;
-        margin-left: 20px;
-    }
-
+    /* モバイル版：サイトロゴ */
     .mobile-logo {
         display: none;
     }
 
-    .nav-pc {
-        position: fixed;
-        width: 100%;
-        background-image: url(../images/header/bg_header_green.png);
-        background-size: cover;
-        background-position: center;
-        z-index: 999;
-    }
-
-    .sp-kv {
-        width: 100%;
-        height: 200px;
-        background-image: url(https://placehold.jp/1980x200.png);
-        background-size: cover;
-    }
-
+    /* モバイル版：ハンバーガーメニュー */
     .btn-gnavi {
         display: none;
     }
@@ -471,74 +314,32 @@ footer {
         display: none;
     }
 
-    /* contents */
+    /* コンテンツ */
     .wrapper {
         margin: 0 auto;
         max-width: 1200px;
         min-width: 320px;
     }
 
-    /* nav-menu */
+    /* PC版：ナビゲーションメニュー */
     .nav-pc {
         margin: 0 auto;
         text-align: center;
         display: flex;
         justify-content: space-evenly;
+        background-image: url(../images/header/bg_header_green.png);
+        background-position: center;
+        background-size: cover;
+
     }
 
     .nav-pc li {
         font-size: 20px;
     }
 
-    .blog-btn {
-        text-align: center;
-
-    }
-
     .blog-btn img {
         max-width: 700px;
         height: auto;
-
-    }
-
-    footer li {
-        margin: 0 auto;
-        max-width: 1200px;
-        line-height: 1.2rem;
-    }
-
-    .bg-wave img {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 80px;
-        z-index: 999;
-    }
-
-    .footer-menu {
-        margin: -120px auto;
-        width: 1000px;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .scroll-top {
-        /* ボタンを右下で固定位置にする */
-        position: fixed;
-        bottom: 60px;
-        right: 60px;
-
-        width: 35px;
-        height: 35px;
-        background: white;
-        border-radius: 50%;
-        cursor: pointer;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
     }
 
 }
