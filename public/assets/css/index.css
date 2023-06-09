@@ -558,8 +558,8 @@ imgcontent-wrapper .heading {
     /* 芋ほりアニメの設定 */
     .anime1 {
         position: absolute;
-        top: 10px;
-        left: 199px;
+        top: 3px;
+        left: 200px;
     }
 
     /* 人参アニメの設定 */
@@ -738,8 +738,8 @@ imgcontent-wrapper .heading {
     /*うどんたぬきアニメの設定 */
     .anime2 {
         position: absolute;
-        top: -10px;
-        left: 183px;
+        top: 10px;
+        left: 200px;
     }
 
     /* うどんアニメの設定 */
