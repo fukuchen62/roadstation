@@ -2,7 +2,7 @@
 
 @section('title', '阿波道の駅管理システム')
 
-@section('subtitle', 'ニュース編集')
+@section('subtitle', 'ブログ編集')
 
 @section('login_name', 'QLIP')
 
@@ -13,12 +13,12 @@
 
 
 @section('content')
-    <h3>ニュースの編集画面</h3>
+    <h3>ブログの編集画面</h3>
 
     {{-- 以下はshowのところにはめ込む --}}
     <ul class="menubar">
-        <li><a href="{{ route('cms-newslist') }}">一覧画面へ</a></li>
-        <li><a href="{{ route('cms-newsinput') }}">新規登録</a></li>
+        <li><a href="{{ route('cms-bloglist') }}">一覧画面へ</a></li>
+        <li><a href="{{ route('cms-bloginput') }}">新規登録</a></li>
     </ul>
 
     {{-- バリデーションのエラーを表示する --}}
@@ -32,19 +32,19 @@
         </div>
     @endif
 
-    <form method="post" action="{{ route('cms-newsupdate') }}">
+    <form method="post" action="{{ route('cms-blogupdate') }}">
         @csrf
         {{-- ニュースのidを隠しinputに保持する --}}
-        <input type="hidden" name="id" value="{{ $news->id }}">
+        <input type="hidden" name="id" value="{{ $blog->id }}">
 
         <table class="info new_info">
             <tr>
-                <th width="15%"> <span>*</span> カテゴリー: </th>
+                <th width="15%"> <span>*</span> カテゴリー名: </th>
                 <td>
                     <select name="news_category_id">
                         @foreach ($category_items as $item)
                             {{-- 選んでいる選択肢にselectedをつける --}}
-                            @if ($item->id == $news->news_category_id)
+                            @if ($item->id == $news->blog_category_id)
                                 <option value="{{ $item->id }}" selected>{{ $item->category_name }}</option>
                             @else
                                 <option value="{{ $item->id }}">{{ $item->category_name }}</option>
@@ -55,23 +55,23 @@
             </tr>
             <tr>
                 <th> <span>*</span> タイトル: </th>
-                <td><input type="text" name="title" value="{{ $news->title }}" required></td>
+                <td><input type="text" name="title" value="{{ $blog->title }}" required></td>
             </tr>
             <tr>
                 <th> <span>*</span> 概要: </th>
                 <td>
-                    <textarea name="overview" cols="50" rows="5">{{ $news->overview }}</textarea>
+                    <textarea name="overview" cols="50" rows="5">{{ $blog->overview }}</textarea>
                 </td>
             </tr>
             <tr>
                 <th> <span>*</span> 詳細内容：</th>
                 <td>
-                    <textarea name="discription" id="content" cols="50" rows="5" required>{{ $news->discription }}</textarea>
+                    <textarea name="discription" id="content" cols="50" rows="5" required>{{ $blog->discription }}</textarea>
                 </td>
             </tr>
             <tr>
                 <th>アイキャッチ画像: </th>
-                <td><input type="text" name="picture" value="{{ $news->picture }}"></td>
+                <td><input type="text" name="picture" value="{{ $blog->picture }}"></td>
             </tr>
             <tr>
                 <th>関連道の駅: </th>
@@ -79,15 +79,15 @@
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
-                <td><input type="boolean" name="is_show" value="1" value="{{ $news->is_show }}" required></td>
+                <td><input type="boolean" name="is_show" value="1" value="{{ $blog->is_show }}" required></td>
             </tr>
         </table>
 
         <div class="change_btn">
             {{-- url作成 --}}
             @php
-                $title = $news->title;
-                $url = route('cms-newsremove', ['id' => $news->id]);
+                $title = $blog->title;
+                $url = route('cms-blogremove', ['id' => $blog->id]);
             @endphp
 
             <input type="submit"value="修正" class="submit_btn" onclick="return saveComfirm('{{ $title }}')">
