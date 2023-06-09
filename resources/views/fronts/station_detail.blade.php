@@ -59,99 +59,6 @@
 
         <section>
 
-            {{-- グルメ --}}
-            @if ($meal->isNotEmpty())
-                <section>
-
-                    {{-- グルメタイトル --}}
-                    <div class="flex f-width">
-
-                        <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130px"
-                            height="128px" alt="美味しい飲み物" class="none">
-
-                        <div class="center overlap ">
-
-                            <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137"
-                                alt="">
-
-                            <h3 class="center width absolute">
-                                グルメ
-                            </h3>
-
-                        </div>
-
-                        <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145px"
-                            height="126.5px" alt="道の駅のソフトクリームを食べるたぬき" class="sideways">
-                    </div>
-
-                    {{-- グルメ記事 --}}
-                    @php
-                        $count = 0;
-                    @endphp
-                    @foreach ($meal as $goods)
-                        @if ($count % 2 != 0)
-                            <section class="commentary">
-
-                                <div class="container">
-
-                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" width="5472"
-                                        height="3648" class="img" alt="美味しいパンケーキ">
-
-                                    <div class="text">
-
-                                        <h4 class="deco-h4">
-                                            {{ $goods->goods_name }}
-                                        </h4>
-
-                                        <p>{{ $goods->price }}円</p>
-
-                                        <p class="com-wrap">{!! $goods->discription !!}
-                                        </p>
-
-                                        <p class="blog-btn">
-
-                                            <a
-                                                href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                            </section>
-                        @else
-                            <section class="commentary">
-
-                                <!-- 画像左と文字を横に並べる。CSS -->
-                                <div class="container reverse">
-
-                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
-                                        alt="美味しい海鮮丼">
-
-                                    <div class="text">
-
-                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
-
-                                        <p>{{ $goods->price }}円</p>
-
-                                        <p>{!! $goods->discription !!}</p>
-
-                                        <p class="blog-btn"><a
-                                                href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </section>
-                        @endif
-                        @php
-                            $count++;
-                        @endphp
-                    @endforeach
-
-                </section>
-            @endif
-
             {{-- 農産物 --}}
             @if ($vegetable->isNotEmpty())
                 <section>
@@ -234,11 +141,11 @@
                 </section>
             @endif
 
-            {{-- 海産物 --}}
+            {{-- 水産物 --}}
             @if ($fish->isNotEmpty())
                 <section>
 
-                    {{-- 海産物タイトル --}}
+                    {{-- 水産物タイトル --}}
                     <div class="flex f-width">
 
                         <img src="{{ asset('assets/images/illustrations/tanuki-food5.png') }}" width="125px"
@@ -382,6 +289,99 @@
                                         <p class="blog-btn"><a
                                                 href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
                                         </p>
+                                    </div>
+                                </div>
+                            </section>
+                        @endif
+                        @php
+                            $count++;
+                        @endphp
+                    @endforeach
+
+                </section>
+            @endif
+
+            {{-- グルメ --}}
+            @if ($meal->isNotEmpty())
+                <section>
+
+                    {{-- グルメタイトル --}}
+                    <div class="flex f-width">
+
+                        <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130px"
+                            height="128px" alt="美味しい飲み物" class="none">
+
+                        <div class="center overlap ">
+
+                            <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137"
+                                alt="">
+
+                            <h3 class="center width absolute">
+                                グルメ
+                            </h3>
+
+                        </div>
+
+                        <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145px"
+                            height="126.5px" alt="道の駅のソフトクリームを食べるたぬき" class="sideways">
+                    </div>
+
+                    {{-- グルメ記事 --}}
+                    @php
+                        $count = 0;
+                    @endphp
+                    @foreach ($meal as $goods)
+                        @if ($count % 2 != 0)
+                            <section class="commentary">
+
+                                <div class="container">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" width="5472"
+                                        height="3648" class="img" alt="美味しいパンケーキ">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">
+                                            {{ $goods->goods_name }}
+                                        </h4>
+
+                                        <p>{{ $goods->price }}円</p>
+
+                                        <p class="com-wrap">{!! $goods->discription !!}
+                                        </p>
+
+                                        <p class="blog-btn">
+
+                                            <a
+                                                href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </section>
+                        @else
+                            <section class="commentary">
+
+                                <!-- 画像左と文字を横に並べる。CSS -->
+                                <div class="container reverse">
+
+                                    <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img"
+                                        alt="美味しい海鮮丼">
+
+                                    <div class="text">
+
+                                        <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
+
+                                        <p>{{ $goods->price }}円</p>
+
+                                        <p>{!! $goods->discription !!}</p>
+
+                                        <p class="blog-btn"><a
+                                                href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                        </p>
+
                                     </div>
                                 </div>
                             </section>

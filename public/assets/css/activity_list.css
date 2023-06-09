@@ -45,7 +45,8 @@ h4 {
 .attention {
     /* margin-top: 220px; */
     margin-bottom: 30px;
-    background-image: url(../images/bg_headline.png);
+    background-image: url(../images/hedline_yellow.png);
+    background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
     color: #B45A27;
