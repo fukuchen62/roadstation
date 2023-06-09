@@ -74,3 +74,23 @@ h2 {
     font-size: 5rem;
     margin: 2.5rem 0;
 }
+
+.icon-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* gap: 10px; */
+    max-width: 300px;
+    justify-items: center;
+    padding-top: 10px;
+}
+
+.icon-wrapper img {
+    gap: 0;
+    width: 25px;
+    height: 25px;
+}
+
+dd img {
+    margin: 3px;
+    padding: 0 0;
+}

@@ -346,3 +346,7 @@ Route::get(
     'cms-producttypes-delete',
     'App\Http\Controllers\AdminGoodsController@typeDelete'
 )->name('cms-typesremove');
+
+/**
+ *道の駅追加要諦
+ */
