@@ -30,7 +30,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $agricultural->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="">
-                        <h4 class="goods-name">{{$agricultural->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$agricultural->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -45,7 +45,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $seafood->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="">
-                        <h4 class="goods-name">{{$seafood->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$seafood->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -60,7 +60,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $craft->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $craft->picture) }}" alt="">
-                        <h4 class="goods-name">{{$craft->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$craft->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -75,7 +75,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $gourmet->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $gourmet->picture) }}" alt="">
-                        <h4 class="goods-name">{{$gourmet->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$gourmet->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
