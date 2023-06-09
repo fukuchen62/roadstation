@@ -205,17 +205,17 @@ h4 {
     padding-top: 30px;
 }
 
-.blog-btn {
+/* .blog-btn {
     text-align: center;
     margin: 0 auto;
-}
+} */
 
-.blog-btn img {
+/* .blog-btn img {
     max-width: 320px;
     height: auto;
     text-align: center;
     margin: 30px auto 10px auto;
-}
+} */
 
 @media screen and (min-width:530px) {
     .goods-photo {
