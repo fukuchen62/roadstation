@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.kv img {
+    object-position: 80% 25%;
+}
+
 h2,
 h3,
 h4,
@@ -22,17 +26,36 @@ h3 {
     padding: 10px 12px;
 }
 
+
 h4 {
+    font-weight: bold;
     font-size: 20px;
-    padding-bottom: 20px;
+    padding: 15px;
 }
+
+/* カード内:直下の画像 */
+.card>img {
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
 
 dl {
     text-align: start;
 }
 
+/* 施設アイコン */
+dd img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
 dd {
-    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .search_results {
@@ -62,26 +85,27 @@ form {
     border-radius: 20px;
 }
 
-/* カード */
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+/* カードの設定 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
-
 .card {
-    width: 300px;
-    /* width: 306px; */
-    height: auto;
+    width: 320px;
+    height: 620px;
+    border: solid 1px;
+    text-align: center;
     padding: 20px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    word-break: break-word;
     border-radius: 20px;
-    box-shadow: 15px 10px 3px 0 #a7d28d;
-    border: solid 3px #8c5243;
-    background-color: #ffff;
+    background-color: #fff;
+}
+
+dl {
+    text-align: start;
 }
 
 .card:hover {
@@ -90,6 +114,9 @@ form {
     left: 10px;
     box-shadow: none;
 }
+
+
+
 
 
 .more {
@@ -155,12 +182,52 @@ form {
 
 }
 
+
+.more-btn:hover {
+    position: relative;
+    top: 2px;
+    left: 5px;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+
 @media screen and (min-width:601px) {
     .mobile_table {
         width: 80%;
         margin: 0 5%;
         margin-left: 20%;
         text-align: left;
+    }
+
+
+    /* カードの設定 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .card {
+        width: 320px;
+        height: 620px;
+        border: solid 1px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+
+    dl {
+        text-align: start;
+    }
+
+    .card:hover {
+        position: relative;
+        top: 5px;
+        left: 10px;
+        box-shadow: none;
     }
 }
 
@@ -172,21 +239,34 @@ form {
         margin-bottom: 10px;
     }
 
-    .card-list {
-        display: flex;
-        flex-direction: row;
 
-        width: 100%;
+    /* カードの設定 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 30px;
+        justify-items: center;
     }
 
     .card {
-        border: 3px solid;
-        width: 300px;
-        height: auto;
+        width: 320px;
+        height: 620px;
+        border: solid 1px;
+        text-align: center;
         padding: 20px;
-        /* margin: 0 auto; */
-        margin-bottom: 40px;
-        word-break: break-word;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+
+    dl {
+        text-align: start;
+    }
+
+    .card:hover {
+        position: relative;
+        top: 5px;
+        left: 10px;
+        box-shadow: none;
     }
 
 
