@@ -19,7 +19,7 @@ protected $guarded = array('id');
         'road_station_id'  => 'integer',
         'special_goods_id' => 'max:50',
         'activity_id' => 'max:50',
-        'picture'     => 'string|max:200',
+        'picture'     => 'max:200',
         'memo'        => 'string|max:500',
         'is_show'     => 'required|boolean'
     );

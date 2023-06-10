@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-.kv img {
-    object-position: 30% 15%;
-}
-
 h2,
 h3,
 h4,
@@ -14,19 +10,11 @@ h4,
 h4 {
     font-weight: bold;
     font-size: 20px;
+    padding: 15px;
 }
 
 h2 {
     margin-bottom: 20px;
-}
-
-.card>img {
-    border-radius: 20px;
-}
-
-.area_category {
-    /* margin: 100px auto 0 auto; */
-    text-align: center;
 }
 
 h3 {
@@ -36,21 +24,28 @@ h3 {
     /* background-color: #ccc; */
 }
 
+/* カード内:直下の画像 */
+.card>img {
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.area_category {
+    /* margin: 100px auto 0 auto; */
+    text-align: center;
+}
+
 dl {
     text-align: start;
-
 }
 
-dd {
-    margin-bottom: 30px;
-}
-
-
+/* ボタン */
 .area-btn {
     background-color: #A7D28D;
     border-radius: 50px;
-    /* margin-top: 50px; */
-    padding: 8px 8px;
+    padding: 10px 10px;
     font-size: 1.1rem;
 }
 
@@ -58,6 +53,7 @@ dd {
     background-color: #a7d28d94;
 }
 
+/* 検索結果 */
 .search_results {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -96,41 +92,47 @@ dd {
     border-radius: 20px;
 }
 
-dt {
-    padding-top: 10px;
-}
-
 dl {
     width: 100%;
     height: auto;
 }
 
-dd img {
-    width: 25px;
-    height: 25px;
-    margin: 3px;
-    /* padding: 10px; */
-
+dt {
+    padding-top: 10px;
 }
 
+/* 施設アイコン */
+dd img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
 
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
+dd {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* カードの設定 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
 .card {
-    width: 300px;
-    /* width: 306px; */
-    height: auto;
+    width: 320px;
+    height: 620px;
+    border: solid 1px;
+    text-align: center;
     padding: 20px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    word-break: break-word;
     border-radius: 20px;
-    box-shadow: 15px 10px 3px 0 #A7D28D;
-    border: solid 3px #8C5243;
-    background-color: #ffff;
+    background-color: #fff;
+}
+
+dl {
+    text-align: start;
 }
 
 .card:hover {
@@ -164,37 +166,22 @@ dd img {
 }
 
 @media screen and (min-width:901px) {
-
-
+    h3 {
+        font-size: 2rem;
+        padding: 2rem 0;
+        padding: 10px 12px;
+    }
 
     .area-btn {
         font-size: 2rem;
     }
 
-    .card-list {
-        display: flex;
-        flex-direction: row;
-
-        width: 100%;
-    }
-
-    .card {
-        border: 3px solid;
-        width: 300px;
-        height: auto;
-        padding: 20px;
-        /* margin: 0 auto; */
-        margin-bottom: 40px;
-        word-break: break-word;
-    }
-
-
-
-
-    h3 {
-        font-size: 2rem;
-        padding: 2rem 0;
-        padding: 10px 12px;
+    /* カードの設定 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-items: center;
     }
 
     .area {
@@ -208,4 +195,5 @@ dd img {
         padding: 20px 30px;
         border-radius: 50px;
     }
+
 }
