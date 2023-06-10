@@ -15,7 +15,7 @@
 
     <style>
         .link {
-            width: 75%;
+            width: 100%;
             margin-top: 16px;
         }
 
@@ -26,6 +26,11 @@
 
         .pagination li {
             display: inline-block;
+        }
+        @media screen and (min-width:1080px){
+            .link {
+            width: 70%;
+        }
         }
     </style>
 @endsection
