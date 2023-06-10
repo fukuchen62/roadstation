@@ -76,7 +76,7 @@ h4 {
 
 .f-width {
     padding-bottom: 20px;
-    max-width: 300px;
+    /* max-width: 300px; */
     justify-content: center;
 }
 
