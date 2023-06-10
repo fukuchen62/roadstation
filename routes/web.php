@@ -194,9 +194,9 @@ Route::post(
 /**
  * マイページへのルート情報
  */
-Route::get('/mypage', [App\Http\Controllers\MypageController::class, 'myPageShow'])->name('mypage');
+Route::get('mypage', [App\Http\Controllers\MypageController::class, 'myPageShow'])->name('mypage');
 
-Route::get('/cookie', [App\Http\Controllers\MypageController::class, 'myPage'])->name('cookie');
+Route::get('cookie', [App\Http\Controllers\MypageController::class, 'myPage'])->name('cookie');
 
 
 

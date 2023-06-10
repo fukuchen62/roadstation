@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Cookie;
+use App\Models\RoadStation;
 
 class MypageController extends Controller
 {
@@ -36,9 +37,6 @@ class MypageController extends Controller
 
                     // お気に入りリストから該当IDを外す
                     if ($value == $input1) {
-                        // $result = array_diff($station_array, array($input1,));
-                        // $result = array_values($result);
-
                         array_splice($station_array, $key, 1);
                         $flag_delete = 1;
                     }
@@ -57,7 +55,7 @@ class MypageController extends Controller
 
             $data = [
                 'id' => $request->id,
-                'url' => 'spotsinfo',
+                'url' => 'roadstation',
             ];
 
             $response = response()->view('fronts.cookie_save', $data);
@@ -67,5 +65,36 @@ class MypageController extends Controller
 
             return $response;
         }
+    }
+
+
+    /**
+     * myPage
+     * お気に入りを読み込み
+     *
+     * @return void
+     */
+    public function myPageShow(Request $request)
+    {
+        $station_list = null;
+
+        if ($request->hasCookie('id')) {
+
+            $station_id = explode(',', $request->cookie('id'));
+
+            foreach ($station_id as $id) {
+                if ($id != 0) {
+                    $station = RoadStation::find($id);
+                    // 道の駅idを配列に加える
+                    $station_list[] = $station;
+                }
+            }
+        }
+
+        $data = [
+            'stations' => $station_list,
+        ];
+
+        return view('fronts.mypage', $data);
     }
 }
