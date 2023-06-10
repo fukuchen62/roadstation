@@ -95,6 +95,11 @@ dd {
 
 
 
+
+
+
+
+
 .west-title {
     text-align: center;
     display: inline-block;
@@ -197,14 +202,7 @@ dd {
     margin-left: 10px;
 }
 
-.stationlist-banner {
-    max-width: 360px;
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 30px;
 
-}
 
 .stationlist-title {
     /* margin-top: 250px; */
@@ -230,27 +228,33 @@ dd {
     margin-bottom: 80px;
 }
 
+/* カード内:直下の画像 */
 .card>img {
     border-radius: 20px;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+
 }
 
 
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
+
+/* カードの設定 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
 .card {
-    width: 300px;
-    /* width: 306px; */
-    height: 615px;
-    padding: 20px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    word-break: break-word;
-    border-radius: 20px;
+    width: 320px;
+    height: 620px;
     border: solid 1px;
-    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
 }
 
 .card:hover {
@@ -260,14 +264,18 @@ dd {
     box-shadow: none;
 }
 
+
 dt {
     padding-top: 10px;
 }
 
-dd img {
-    padding: 3px 1px;
-}
 
+/* 施設アイコン */
+dd img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
 
 @media screen and (min-width:601px) {
 
@@ -302,42 +310,20 @@ dd img {
         margin-bottom: 30px;
     }
 
-    .stationlist-banner {
-        max-width: 761px;
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 150px;
-    }
 
-    .east {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
+    /* カードの設定 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
-        width: 100%;
-        flex-wrap: wrap;
-        margin: 0 auto;
-    }
-
-    .west {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        gap: 30px;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .south {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        gap: 30px;
-        width: 100%;
-        flex-wrap: wrap;
+        justify-items: center;
     }
 }
+
+
+
+
+
 
 @media screen and (min-width:901px) {
 
@@ -376,42 +362,13 @@ dd img {
 
 
 
-
-    .east {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
+    /* カードの設定 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
-        width: 100%;
-        flex-wrap: wrap;
-
+        justify-items: center;
     }
 
 
-
-
-    .west {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        gap: 30px;
-        width: 100%;
-        flex-wrap: wrap;
-
-
-    }
-
-
-
-    .south {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        gap: 30px;
-        width: 100%;
-        flex-wrap: wrap;
-        margin: 0 auto;
-
-
-    }
 }
