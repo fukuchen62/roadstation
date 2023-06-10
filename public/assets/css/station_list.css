@@ -25,7 +25,7 @@ h2 {
 h4 {
     font-weight: bold;
     font-size: 20px;
-
+    padding: 15px;
 }
 
 .stationlist-box {
@@ -42,6 +42,9 @@ dd {
     margin-bottom: 30px;
 }
 
+dt {
+    padding-top: 10px;
+}
 
 .east-title {
     text-align: center;
@@ -267,6 +270,11 @@ dd {
 
 dt {
     padding-top: 10px;
+}
+
+dd {
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 
