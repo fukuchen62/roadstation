@@ -13,9 +13,8 @@ p {
 }
 
 section {
-    margin: 0 auto;
-    margin-bottom: 100px;
-    /* text-align: center; */
+    /* margin: 0 auto; */
+    margin: 0px 30px 50px 30px;
 }
 
 h2 {
@@ -49,22 +48,23 @@ h4 {
     text-align: center;
 }
 
-.act-ity-delimiter {
+.activity-delimiter {
     margin-bottom: 100px;
-    background-color: #ffff;
+    /* background-color: #ffff; */
     border-radius: 20px;
     padding: 30px;
 }
 
 .activity-delimiter-last {
-    background-color: #ffff;
+    margin-bottom: 50px;
+    /* background-color: #ffff; */
     border-radius: 20px;
     padding: 30px;
 }
 
 .activity-photo {
-    max-width: 550px;
-    /* width: 100%; */
+    /* max-width: 550px; */
+    width: 100%;
     margin-bottom: 10px;
     border-radius: 20px;
     object-fit: cover;
@@ -166,9 +166,10 @@ h4 {
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
 
-    section{
-        margin-bottom: 150px;
-    }
+    section {
+    margin: 0px 0px 150px 0px;
+}
+
 
     /* h2 {
         width: 100%;
@@ -186,29 +187,10 @@ h4 {
         font-size: 20px;
     }
 
-    /*
-    .attention-img1 {
-        position: absolute;
-        top: 20%;
-        left: 10%;
-        width: 100px;
-        height: 100px;
-
-    }
-
-    .attention-img2 img {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        width: 100px;
-        height: 100px;
-
-    } */
-
     .activity-photo {
         /* max-width: 550px; */
         max-height: 380px;
-        /* width: 100%; */
+        width: 550px;
         margin-right: 50px;
     }
 
