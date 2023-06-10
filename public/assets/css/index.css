@@ -441,6 +441,7 @@ imgcontent-wrapper .heading {
         margin-bottom: 30px;
     }
 
+    /* section-titleの設定（仮）ここから */
     .section-title {
         position: relative;
         padding: 1rem 0.5rem;
@@ -460,6 +461,8 @@ imgcontent-wrapper .heading {
         background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
         content: '';
     }
+
+    /* section-titleの設定（仮）ここまで */
 
     .sp-btn {
         display: inline-block;
@@ -706,27 +709,21 @@ imgcontent-wrapper .heading {
     }
 
 
-    .anime2 .anime3 {
-        display: none;
+
+    /*うどんたぬきアニメの設定 */
+    .anime2 {
+        position: absolute;
+        top: 10px;
+        left: 200px;
     }
 
-    @media screen and (min-width:768px) {
-
-        /*うどんたぬきアニメの設定 */
-        .anime2 {
-            position: absolute;
-            top: 10px;
-            left: 200px;
-        }
-
-        /* うどんアニメの設定 */
-        .anime3 {
-            position: absolute;
-            top: 80px;
-            left: 30px;
-        }
-
+    /* うどんアニメの設定 */
+    .anime3 {
+        position: absolute;
+        top: 80px;
+        left: 30px;
     }
+
 
     .news-box {
         display: flex;
