@@ -58,17 +58,32 @@
                 <td><input type="text" name="title" value="{{ $blog->title }}" required></td>
             </tr>
             <tr>
+                <th> <span>*</span> 記事作成者ニックネーム: </th>
+                <td><input type="text" name="user_name" required></td>
+            </tr>
+            <tr>
                 <th> <span>*</span> 概要: </th>
                 <td>
                     <textarea name="overview" cols="50" rows="5">{{ $blog->overview }}</textarea>
                 </td>
             </tr>
             <tr>
-                <th> <span>*</span> 詳細内容：</th>
+                <th> <span>*</span> 内容：</th>
                 <td>
                     <textarea name="discription" id="content" cols="50" rows="5" required>{{ $blog->discription }}</textarea>
                 </td>
             </tr>
+            <th> 道の駅ID: </th>
+            <td><input type="number" name="road_station_id" ></td>
+        </tr>
+        <tr>
+            <th> 特産品ID: </th>
+            <td><input type="text" name="special_goods_id" ></td>
+        </tr>
+        <tr>
+            <th> 体験ID: </th>
+            <td><input type="text" name="activity_id" ></td>
+        </tr>
             <tr>
                 <th>アイキャッチ画像: </th>
                 <td><input type="text" name="picture" value="{{ $blog->picture }}"></td>
@@ -76,6 +91,10 @@
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
                 <td><input type="boolean" name="is_show" value="1" value="{{ $blog->is_show }}" required></td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 特集記事フラグ: </th>
+                <td><input type="boolean" name="is_highlight" value="0" required></td>
             </tr>
         </table>
 
