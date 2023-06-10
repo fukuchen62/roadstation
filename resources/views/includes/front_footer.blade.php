@@ -53,7 +53,7 @@
                     行ってみたんよ</a></li>
 
             <li>
-                <a href="../html/like.html">
+                <a href="{{ route('mypage') }}">
                     <img src="{{ asset('assets/images/menu_icon/like_icon_w.png') }}" alt="" width="20"
                         height="20">
                     お気に入り</a>

@@ -45,11 +45,10 @@
                 <li>
                     <a href="{{ route('bloglist') }}">
                         <img src="{{ asset('assets/images/menu_icon/blog_list_icon.png') }}" alt=""
-                            width="35" height="35"<a href="../html/like.html">>行ってみたんよ</a>
+                            width="35" height="35">行ってみたんよ</a>
                 </li>
                 <li>
-                    {{-- <a href="{{ route('like') }}"> --}}
-                    <a href="../html/like.html">
+                    <a href="{{ route('mypage') }}">
                         <img src="{{ asset('assets/images/menu_icon/like_icon.png') }}" alt="" width="30"
                             height="30">お気に入り</a>
                 </li>
@@ -126,8 +125,7 @@
                 </a>
             </li>
             <li>
-                {{-- <a href="{{ route('like') }}"> --}}
-                <a href="../html/like.html">
+                <a href="{{ route('mypage') }}">
                     <div>
                         <img src="{{ asset('assets/images/menu_icon/like_icon.png') }}" alt="" width="30"
                             height="30">
