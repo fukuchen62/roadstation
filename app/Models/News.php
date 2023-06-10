@@ -14,8 +14,8 @@ class News extends Model
     public static $rules = array(
         'news_category_id' => 'required|integer',
         'title'       => 'required|string|max:32',
-        'discription'    => 'required',
         'overview'    => 'max:200',
+        'discription'    => 'required',
         'picture'   => 'max:200',
         'is_show'     => 'required|boolean'
     );
