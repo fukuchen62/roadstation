@@ -13,7 +13,7 @@ protected $guarded = array('id');
     public static $rules = array(
         'blog_category_id' => 'required|integer',
         'title'       => 'required|string|max:60',
-        'user_name'   => 'max:10',
+        'user_name'   => 'required|string|max:10',
         'overview'    => 'max:200',
         'content'     => 'text',
         'road_station_id'  => 'integer',
@@ -21,7 +21,8 @@ protected $guarded = array('id');
         'activity_id' => 'max:50',
         'picture'     => 'max:200',
         'memo'        => 'string|max:500',
-        'is_show'     => 'required|boolean'
+        'is_show'     => 'required|boolean',
+        'is_highlight'     => 'required|boolean'
     );
     // 日本語エラーメッセージ
     public static $messages = [

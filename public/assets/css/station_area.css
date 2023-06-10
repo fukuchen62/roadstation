@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.kv img {
+    object-position: 80% 20%;
+}
+
 h2,
 h3,
 h4,
@@ -116,19 +120,21 @@ dd {
 /* カードの設定 */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(334px, 1fr));
     gap: 30px;
     justify-items: center;
 }
 
 .card {
-    width: 320px;
+    width: 334px;
     height: 620px;
-    border: solid 1px;
+    /* border: solid 1px; */
     text-align: center;
     padding: 20px;
     border-radius: 20px;
     background-color: #fff;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    border: groove 6px #cf9957;
 }
 
 dl {

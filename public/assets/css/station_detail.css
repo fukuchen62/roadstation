@@ -100,15 +100,20 @@ form {
     justify-items: center;
 }
 
+
 .card {
-    width: 320px;
+    width: 334px;
     height: 620px;
-    border: solid 1px;
+    /* border: solid 1px; */
     text-align: center;
     padding: 20px;
     border-radius: 20px;
     background-color: #fff;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    /* border: 3px #7b7b7b; */
+    border: groove 6px #cf9957;
 }
+
 
 dl {
     text-align: start;
@@ -220,15 +225,7 @@ dd {
         justify-items: center;
     }
 
-    .card {
-        width: 320px;
-        height: 620px;
-        border: solid 1px;
-        text-align: center;
-        padding: 20px;
-        border-radius: 20px;
-        background-color: #fff;
-    }
+
 
     dl {
         text-align: start;
@@ -241,6 +238,7 @@ dd {
         box-shadow: none;
     }
 }
+
 
 @media screen and (min-width:901px) {
 
@@ -259,15 +257,6 @@ dd {
         justify-items: center;
     }
 
-    .card {
-        width: 320px;
-        height: 620px;
-        border: solid 1px;
-        text-align: center;
-        padding: 20px;
-        border-radius: 20px;
-        background-color: #fff;
-    }
 
     dl {
         text-align: start;
