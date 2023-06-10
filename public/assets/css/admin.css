@@ -373,7 +373,8 @@ table.edit_info textarea,
 table.new_info input,
 table.new_info textarea,
 table.new_info select,
-table.new_info select {
+table.new_info select,
+.selectcategory {
     border: 1px #b9adc3 solid;
     background-color: lightgoldenrodyellow;
     padding: 4px;
@@ -385,7 +386,8 @@ table.edit_info textarea:hover,
 table.new_info input:hover,
 table.new_info textarea:hover,
 table.new_info select:hover,
-table.new_info select:hover {
+table.new_info select:hover,
+.selectcategory:hover {
     border: 2px blueviolet solid;
 }
 
