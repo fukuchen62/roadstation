@@ -48,19 +48,27 @@
                 </td>
             </tr>
             <tr>
-                <th> <span>*</span> 種別名: </th>
+                <th> <span>*</span> 種別特産品名: </th>
                 <td><input type="text" name="common_name" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 旬の月 </th>
+                <th> <span>*</span> 旬の月 数字を|で区切って</th>
                 <td>
                     <textarea name="season" cols="50" rows="5"></textarea>
                 </td>
             </tr>
+
             <tr>
-                <th> <span>*</span> 詳細内容：</th>
+                <th> <span>*</span> 利用方法：</th>
                 <td>
-                    <textarea name="discription" id="content" cols="50" rows="5" required></textarea>
+                    <textarea name="usage" id="usage" cols="50" rows="5" required></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <th> <span>*</span> 解説文：</th>
+                <td>
+                    <textarea name="discription" id="discription" cols="50" rows="5" required></textarea>
                 </td>
             </tr>
             <tr>
@@ -70,6 +78,10 @@
             <tr>
                 <th>関連道の駅: </th>
                 <td><input type="text" name="station_list" placeholder="1|2|a"></td>
+            </tr>
+            <tr>
+                <th>価格: </th>
+                <td><input type="number" name="price" placeholder="1|2|a"></td>
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>

@@ -55,7 +55,7 @@
             </tr>
 
             <tr>
-                <th> <span>*</span> 道の駅特産品名: </th>
+                <th> <span>*</span> 種別特産品名: </th>
                 <td><input type="text" name="common_name" value="{{ $goods->common_name }}" required></td>
             </tr>
 
@@ -94,7 +94,7 @@
             <tr>
                 <th>価格:</th>
                 <td>
-                    <input type="text" name="price" value="{{ $goods->price }}">
+                    <input type="number" name="price" value="{{ $goods->price }}">
                 </td>
             </tr>
 
