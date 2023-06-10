@@ -28,12 +28,12 @@ class AdminBlogController extends Controller
     }
 
     /**
-     * index function
+     * blogindex function
      * ブログの一覧ページ
      *
      * @return void
      */
-    public function index(Request $request)
+    public function blogindex(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -57,7 +57,7 @@ class AdminBlogController extends Controller
         }
 
         // 件数
-        $news_count = count($items);
+        $blog_count = count($items);
 
         // Bladeファイルに渡すデータ（連想配列）
         $data = [
@@ -146,7 +146,7 @@ class AdminBlogController extends Controller
      * @param Request $request
      * @return void
      */
-    public function newsEdit(Request $request)
+    public function blogEdit(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -181,10 +181,10 @@ class AdminBlogController extends Controller
         $login_user = Auth::user();
 
         // バリデーション
-        $this->validate($request, News::$rules);
+        $this->validate($request, Blog::$rules);
 
         // 編集する元のデータを読み込む
-        $blog = News::find($request->id);
+        $blog = Blog::find($request->id);
 
         // 編集結果を取得
         $form = $request->all();
@@ -252,7 +252,7 @@ class AdminBlogController extends Controller
         // 渡すデータ
         $data = [
             'blog_list' => $items,
-            'count' => $news_count,
+            'count' => $blog_count,
             'login_user' => $login_user,
         ];
 

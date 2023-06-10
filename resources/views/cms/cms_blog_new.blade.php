@@ -67,10 +67,10 @@
                 <th>アイキャッチ画像: </th>
                 <td><input type="text" name="picture"></td>
             </tr>
-            <tr>
+            {{-- <tr>
                 <th>関連道の駅: </th>
                 <td><input type="text" name="station_list" placeholder="1|2|a"></td>
-            </tr>
+            </tr> --}}
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
                 <td><input type="boolean" name="is_show" value="1" required></td>
@@ -78,7 +78,7 @@
         </table>
 
         <div class="submit">
-            <input type="submit" value="登録" class="submit_btn" onclick="return saveComfirm('ニュース')">
+            <input type="submit" value="登録" class="submit_btn" onclick="return saveComfirm('ブログ')">
         </div>
 
     </form>
