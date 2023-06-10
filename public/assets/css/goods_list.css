@@ -216,17 +216,20 @@ h4 {
     padding-top: 30px;
 }
 
-/* .blog-btn {
+.blog-btn {
     text-align: center;
-    margin: 0 auto;
-} */
+    margin-bottom: 5%;
+}
 
-/* .blog-btn img {
+.blog-btn a:hover {
+    opacity: 0.7;
+}
+
+.blog-btn img {
     max-width: 320px;
     height: auto;
-    text-align: center;
-    margin: 30px auto 10px auto;
-} */
+    object-fit: cover;
+}
 
 @media screen and (min-width:530px) {
     .goods-photo {
@@ -244,7 +247,7 @@ h4 {
     }
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:901px) {
 
     h2 {
         /* margin-top: 250px; */
@@ -252,6 +255,16 @@ h4 {
 
     .goods-photo {
         max-width: 200px;
+    }
+
+.blog-btn {
+        text-align: center;
+    }
+
+.blog-btn img {
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
     }
 
     @media screen and (min-width:1050px) {
