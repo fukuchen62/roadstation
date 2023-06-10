@@ -49,7 +49,7 @@ class AdminBlogController extends Controller
         if ($s != '') {
             $items = Blog::where('title', 'like', '%' . $s . '%')
                 ->orWhere('overview', 'like', '%' . $s . '%')
-                ->orWhere('discription', 'like', '%' . $s . '%')
+                ->orWhere('content', 'like', '%' . $s . '%')
                 ->get();
         } else {
             $items = Blog::where('deleted_at', null)
