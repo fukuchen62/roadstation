@@ -60,16 +60,18 @@
 
             {{-- ブログ記事一覧の表示部分 表示する記事数はコントローラ内のwhere句（paginate）で指定 --}}
             @foreach ($blogs as $blog)
-                <a class="blog-card"
+                <div class="blog-card">
+                    <a
                     href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}">
                     <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
                     <h3>{{ $blog->title }}</h3>
                     <div class="update-information">
                     <p class="date">{{ $blog['created_at']->format('Y年n月j日') }}</p>
                     <p class="category">{{ $blog->blogCategory->getName() }}</p>
-                </div>
+                    </div>
                     <p class="text">{!! $blog->overview !!}</p>
-                </a>
+                    </a>
+                </div>
             @endforeach
 
         </div>
