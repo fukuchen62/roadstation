@@ -292,7 +292,7 @@ class AdminGoodsController extends Controller
         $item = ProductType::find($request->id);
 
         // 特産品カテゴリー
-        $category_items = ProductType::All();
+        $category_items = GoodsCategory::All();
 
         // 渡すデータ
         $data = [

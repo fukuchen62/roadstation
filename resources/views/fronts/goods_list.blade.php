@@ -155,7 +155,7 @@
         </section>
 
         <div class="blog-btn">
-            <a href="{{route('roadstation')}}"><img src="{{ asset('/assets/images/blog-btn01.png')}}" alt=""></a>
+            <a href="{{route('bloglist')}}"><img src="{{ asset('/assets/images/blog-btn01.png')}}" alt=""></a>
         </div>
 
 

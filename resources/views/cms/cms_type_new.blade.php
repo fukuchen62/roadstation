@@ -2,7 +2,7 @@
 
 @section('title', '阿波道の駅管理システム')
 
-@section('subtitle', 'ニュース投稿')
+@section('subtitle', '特産品の種別投稿')
 
 @section('login_name', 'QLIP')
 

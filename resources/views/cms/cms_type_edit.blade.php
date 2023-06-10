@@ -1,8 +1,8 @@
 @extends('layouts.layout_back')
 
-@section('title', '釣徳コンテンツ管理システム')
+@section('title', '阿波道の駅管理システム')
 
-@section('subtitle', 'ニュース')
+@section('subtitle', '特産品の種別編集')
 
 @section('login_name', 'QLIP')
 
@@ -38,12 +38,12 @@
             @csrf
             <input type="hidden" name="id" value="{{ $goods->id }}">
 
-            {{-- <tr>
+            <tr>
                 <th width="15%"> <span>*</span> カテゴリー名: </th>
                 <td>
                 <select name="goods_category_id">
                         @foreach ($category_items as $item)
-                            選んでいる選択肢にselectedをつける
+                            {{-- 選んでいる選択肢にselectedをつける --}}
                             @if ($item->id == $goods->goods_category_id)
                                 <option value="{{ $item->id }}" selected>{{ $item->category_name }}</option>
                             @else
@@ -52,11 +52,6 @@
                         @endforeach
                     </select>
                 </td>
-            </tr> --}}
-
-             <tr>
-                <th> <span>*</span> カテゴリーID: <br>1:農産物<br>2:水産物<br>3:工芸品<br>4:グルメ<br>5:その他</th>
-                <td><input type="text" name="goods_category_id" value="{{ $goods->goods_category_id }}" required></td>
             </tr>
 
             <tr>

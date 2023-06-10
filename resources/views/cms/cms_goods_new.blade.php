@@ -1,8 +1,8 @@
 @extends('layouts.layout_back')
 
-@section('title', '釣徳コンテンツ管理システム')
+@section('title', '阿波道の駅管理システム')
 
-@section('subtitle', 'ニュース')
+@section('subtitle', '道の駅特産品投稿')
 
 @section('login_name', 'QLIP')
 
