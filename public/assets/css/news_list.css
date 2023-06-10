@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-a:hover {
-    opacity: 0.7;
-}
-
 h2 {
     text-align: center;
     padding: 60px;
@@ -15,8 +11,11 @@ h2 {
 }
 
 h3 {
+    font-weight: bold;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
+    padding-bottom: 20px;
+    text-align: left;
 }
 
 .category-title {
@@ -27,92 +26,86 @@ p {
     text-align: start;
 }
 
-.blog-wrapper {
+/* カテゴリー */
+.category {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 4px 8px;
+    background-color: #bdbdbd;
+    color: #ffff;
+    border-radius: 10px;
+}
+
+/* 更新の日時とカテゴリー内容 */
+.update-information {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+/* ２カラムを囲う要素 */
+.blog-main {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+}
+
+/* カードの設定 */
+.blog-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
 .blog-card {
-    width: 100%;
-    height: auto;
+    width: 320px;
+    height: 450px;
     padding: 20px;
-    box-sizing: border-box;
     border-radius: 20px;
     justify-content: center;
     margin-bottom: 50px;
     word-break: break-all;
-    box-shadow: 15px 10px 3px 0 #A7D28D;
-    border: solid 3px #8C5243;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    border: groove 6px #cf9957;
     background-color: #ffff;
 }
-
-
-.blog-card:hover {
-    position: relative;
-    top: 5px;
-    left: 10px;
-    box-shadow: none;
-    /* z-index: -999; */
-}
-
-
-
 
 .blog-card img {
     width: 100%;
     height: auto;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .category_list li {
     margin-top: 10px;
     padding: 20px 20px;
+    font-weight: bold;
 }
 
 .side {
     width: 100%;
-    /* border: 3px solid #1ca10a; */
-    border: 3px solid #a7d28d;
     background-color: #a7d28d;
     color: #8c5243;
     padding: 20px 10px;
-
 }
 
-@media screen and (min-width:601px) {
+/* PC版のページネーションを表示 */
+.pc {
+    display: none;
+}
 
-    .blog-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+@media screen and (min-width:1080px) {
 
-
-    .blog-card {
-        width: 40%;
-        padding: 10px;
-        box-sizing: border-box;
-        border-radius: 20px;
-        justify-content: center;
-        margin-bottom: 50px;
-        text-align: center;
-        box-shadow: 15px 10px 3px 0 #A7D28D;
-        border: solid 3px #8C5243;
-        background-color: #ffff;
-    }
-
-
-    */ .side {
+    /* ２カラムを囲う要素 */
+    .blog-main {
         width: 100%;
-        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
-}
-
-
-@media screen and (min-width:901px) {
 
     .sp-kv {
         width: 100%;
@@ -122,50 +115,15 @@ p {
         display: flex;
     }
 
-    .blog-main {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: auto;
-        position: relative;
-        background: url(../images/illustrations/tanuki-blog.png) no-repeat right -30px bottom 300px / 300px auto;
-    }
-
     .blog-wrapper {
-        width: 75%;
+        width: 70%;
     }
 
     .side {
-        width: 20%;
+        width: 25%;
         height: 400px;
         padding: 20px 10px;
         left: 70%;
-    }
-
-    .blog-card {
-        background-color: #fff;
-        padding: 20px;
-        box-sizing: border-box;
-        border-radius: 20px;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        word-break: break-word;
-        border-radius: 20px;
-        box-shadow: 15px 10px 3px 0 #A7D28D;
-        border: solid 3px #8C5243;
-        background-color: #ffff;
-    }
-
-
-    .blog-card:hover {
-        position: relative;
-        top: 5px;
-        left: 10px;
-        box-shadow: none;
-        /* z-index: -999; */
     }
 
 }
