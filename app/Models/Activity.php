@@ -118,7 +118,7 @@ class Activity extends Model
     public function getBlogName($id)
     {
         $blog = Blog::find($id);
-        if($blog->is_show == 1){
+        if($blog->is_show == 1 && $blog->is_highlight == 1){
             return $blog->title;
             }
     }
