@@ -36,7 +36,7 @@
                     <h3 class="activity-name">
                         {{ $activity->activity_name }}
                     </h3>
-                    <h4 class="station-name">＜体験できる道の駅＞<a
+                    <h4 class="station-name"><a
                             href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
                     </h4>
                     <h4 class="headline text">＜体験・詳細＞</h4>

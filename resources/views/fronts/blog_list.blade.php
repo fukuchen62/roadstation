@@ -15,7 +15,7 @@
 
     <style>
         .link {
-            width: 75%;
+            width: 100%;
             margin-top: 16px;
         }
 
@@ -26,6 +26,22 @@
 
         .pagination li {
             display: inline-block;
+        }
+
+        .text{
+            /* overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            /*IE対策*/
+            /* line-height: 1.5em;
+            max-height: 4.5em;  */
+        }
+
+        @media screen and (min-width:1080px){
+            .link {
+            width: 70%;
+        }
         }
     </style>
 @endsection
@@ -48,8 +64,11 @@
                     href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}">
                     <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
                     <h3>{{ $blog->title }}</h3>
-                    <p>{{ $blog['created_at']->format('Y年n月j日') }}　　　{{ $blog->blogCategory->getName() }}</p>
-                    {!! $blog->overview !!}
+                    <div class="update-information">
+                    <p class="date">{{ $blog['created_at']->format('Y年n月j日') }}</p>
+                    <p class="category">{{ $blog->blogCategory->getName() }}</p>
+                </div>
+                    <p class="text">{!! $blog->overview !!}</p>
                 </a>
             @endforeach
 

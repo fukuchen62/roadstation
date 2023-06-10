@@ -92,17 +92,18 @@ p {
     padding: 20px 10px;
 }
 
-@media screen and (min-width:1080px) {
+/* PC版のページネーションを表示 */
+.pc {
+    display: none;
+}
 
-    .blog-main {
-        display: flex;
-        flex-direction: row;
-    }
+@media screen and (min-width:1080px) {
 
     /* ２カラムを囲う要素 */
     .blog-main {
         width: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
 
@@ -124,4 +125,5 @@ p {
         padding: 20px 10px;
         left: 70%;
     }
+
 }

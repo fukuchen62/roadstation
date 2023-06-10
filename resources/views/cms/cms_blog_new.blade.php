@@ -53,7 +53,14 @@
             </tr>
             <tr>
                 <th> <span>*</span> 記事作成者ニックネーム: </th>
-                <td><input type="text" name="user_name" required></td>
+                {{-- <td><input type="text" name="user_name" required></td> --}}
+                <td>
+                    <select name="blog_category_id">
+                        @foreach ($category_items as $item)
+                            <option value="{{ $item->id }}">{{ $item->category_name }}</option>
+                        @endforeach
+                    </select>
+                </td>
             </tr>
             <tr>
                 <th> <span>*</span> 概要: </th>
