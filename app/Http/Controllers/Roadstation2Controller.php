@@ -23,10 +23,6 @@ class Roadstation2Controller extends Controller
         $goods = SpecialGoods::where('road_station_id', $request->id)
             ->get();
 
-        $meal = SpecialGoods::where('road_station_id', $request->id)
-            ->where('goods_category_id', 4)
-            ->get();
-
         $vegetable = SpecialGoods::where('road_station_id', $request->id)
             ->where('goods_category_id', 1)
             ->get();
@@ -39,6 +35,16 @@ class Roadstation2Controller extends Controller
             ->where('goods_category_id', 3)
             ->get();
 
+        $meal = SpecialGoods::where('road_station_id', $request->id)
+            ->where('goods_category_id', 4)
+            ->get();
+
+        $others = SpecialGoods::where('road_station_id', $request->id)
+            ->where('goods_category_id', 5)
+            ->get();
+
+
+
         $pro = ProductType::where('station_list', $request->id)
             ->get();
 
@@ -50,21 +56,14 @@ class Roadstation2Controller extends Controller
 
         $data = [
             'road_stations' => $station,
-
             'special_goods' => $goods,
-
             'meal' => $meal,
-
             'vegetable' => $vegetable,
-
             'fish' => $fish,
-
             'craft' => $craft,
-
+            'others' => $others,
             'activities' => $act,
-
             'product_types' => $pro,
-
             'blogs' => $blog,
         ];
 
