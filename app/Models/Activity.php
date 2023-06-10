@@ -23,7 +23,7 @@ class Activity extends Model
         'picture2'   => 'string|max:200',
         'picture3'   => 'string|max:200',
         'memo'       => 'string|max:500',
-        'is_show'    => 'required|boolean'
+        'is_show'    => 'required|boolean',
     );
     // 日本語エラーメッセージ
     public static $messages = [
