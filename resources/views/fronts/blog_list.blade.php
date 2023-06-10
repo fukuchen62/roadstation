@@ -15,7 +15,7 @@
 
     <style>
         .link {
-            margin: 0 auto;
+            width: 75%;
             margin-top: 16px;
         }
 
@@ -52,9 +52,9 @@
                     {!! $blog->overview !!}
                 </a>
             @endforeach
-            {{-- ページネーション表示部分 --}}
-            <div class="link">{{ $blogs->links('pagination::bootstrap-4') }}</div>
+
         </div>
+
         {{-- サイドバーのカテゴリー一覧の表示部分 --}}
         <section class="side">
             <h3>カテゴリー一覧</h3>
@@ -64,5 +64,8 @@
                 @endforeach
             </ul>
         </section>
+
     </div>
+    {{-- ページネーション表示部分 --}}
+    <div class="link">{{ $blogs->links('pagination::bootstrap-4') }}</div>
 @endsection
