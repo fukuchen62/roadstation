@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <th> <span>*</span> 旬の月: 数字を|で区切って</th>
-                <td><input type="text" name="month" required></td>
+                <td><input type="text" name="month" placeholder="1|2|a" required></td>
             </tr>
 
             <tr>
@@ -51,7 +51,7 @@
             </tr>
 
             <tr>
-                <th> <span>*</span> 詳細内容：</th>
+                <th> <span>*</span> 解説文：</th>
                 <td>
                     <textarea name="discription" id="discription" cols="50" rows="5" required></textarea>
                 </td>
@@ -59,6 +59,14 @@
             <tr>
                 <th>画像: </th>
                 <td><input type="text" name="picture"></td>
+            </tr>
+            <tr>
+                <th>関連道の駅: </th>
+                <td><input type="text" name="road_station_id"></td>
+            </tr>
+            <tr>
+                <th>価格: </th>
+                <td><input type="number" name="price"></td>
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>

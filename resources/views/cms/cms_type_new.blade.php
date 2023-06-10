@@ -54,7 +54,7 @@
             <tr>
                 <th> <span>*</span> 旬の月 数字を|で区切って</th>
                 <td>
-                    <textarea name="season" cols="50" rows="5"></textarea>
+                    <input type="text" name="season" placeholder="1|2|a" cols="50" rows="5"></input>
                 </td>
             </tr>
 
@@ -81,7 +81,7 @@
             </tr>
             <tr>
                 <th>価格: </th>
-                <td><input type="number" name="price" placeholder="1|2|a"></td>
+                <td><input type="number" name="price"></td>
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
