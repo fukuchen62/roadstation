@@ -63,7 +63,7 @@
                 </a>
             </li>
             <li>
-                <a href="../html/like.html">
+                <a href="{{ route('mypage') }}">
                     <div>
                         <img src="{{ asset('assets/images/menu_icon/like_icon.png') }}" alt="" width="30"
                             height="30">
@@ -145,7 +145,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../html/like.html">
+                    <a href="{{ route('mypage') }}">
 
                         <img src="{{ asset('assets/images/menu_icon/like_icon.png') }}" alt="" width="30"
                             height="30">
