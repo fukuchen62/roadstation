@@ -90,7 +90,7 @@
                 <li class="goods-group">
                     <a href="#detail-top" class="btns" id="{{'btn-' . $others->id}}">
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $gourmet->others) }}" alt="">
-                        <h4 class="goods-name">{{$others->getCategoryName()}}</h4>
+                        <h4 class="goods-name">{{$others->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
