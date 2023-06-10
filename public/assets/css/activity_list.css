@@ -1,13 +1,5 @@
 @charset "utf-8";
-/*
-.wrapper {
-    margin-top: 250px;
-} */
 
-.kv img {
-    z-index: -1;
-    object-position: 80% 20%;
-}
 
 html {
     overflow-x: hidden;
@@ -86,7 +78,7 @@ h4 {
     text-align: center;
 }
 
-.station-name{
+.station-name {
     margin: 10px auto 20px auto;
     text-align: center;
     font-size: 1.2rem;
@@ -140,6 +132,7 @@ h4 {
 .roadstation-blog-name {
     text-align: center;
 }
+
 /*
 .blog {
     margin-bottom: 10px;
@@ -154,20 +147,6 @@ h4 {
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1115px) {
-
-    /* .wrapper {
-        margin-top: 250px;
-    } */
-
-    .kv {
-        position: relative;
-        top: 0;
-
-    }
-
-    .kv img {
-        object-position: 80% 20%;
-    }
 
     /* h2 {
         width: 100%;
@@ -228,7 +207,7 @@ h4 {
         width: 100%;
     }
 
-    .headline-conditions-text{
+    .headline-conditions-text {
         margin-top: 10px;
     }
 

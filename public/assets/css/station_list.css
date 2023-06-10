@@ -181,7 +181,6 @@ dd {
     margin-right: 10px;
 }
 
-
 .south-title::after {
     content: '';
     /*何も入れない*/
@@ -196,15 +195,7 @@ dd {
     background-size: contain;
     vertical-align: middle;
     margin-left: 10px;
-
 }
-
-
-
-
-
-
-
 
 .stationlist-banner {
     max-width: 360px;
@@ -225,9 +216,6 @@ dd {
     /* display: inline-block; */
     margin: 0 auto;
     padding: 20px;
-
-
-
 }
 
 .east {
@@ -263,7 +251,6 @@ dd {
     border-radius: 20px;
     border: solid 1px;
     margin: 0 auto;
-
 }
 
 .card:hover {
@@ -272,10 +259,6 @@ dd {
     left: 10px;
     box-shadow: none;
 }
-
-
-
-
 
 dt {
     padding-top: 10px;
@@ -287,10 +270,6 @@ dd img {
 
 
 @media screen and (min-width:601px) {
-
-    /* .wrapper {
-        margin-top: 250px;
-    } */
 
     .stationlist-title {
         /* margin-top: 300px; */
@@ -306,33 +285,22 @@ dd img {
         width: 320px;
         height: auto;
         margin: 0 auto;
-
-
-
     }
 }
 
 
 @media screen and (min-width:761px) {
-    /* 
-    .wrapper {
-        margin-top: 250px;
-    } */
-
-
 
     h2 {
         /* margin-top: 250px; */
         margin-bottom: 30px;
     }
 
-
     .stationlist-title {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
     }
-
 
     .stationlist-banner {
         max-width: 761px;
@@ -342,7 +310,6 @@ dd img {
         margin-bottom: 150px;
     }
 
-
     .east {
         display: flex;
         flex-direction: row;
@@ -351,10 +318,7 @@ dd img {
         width: 100%;
         flex-wrap: wrap;
         margin: 0 auto;
-
     }
-
-
 
     .west {
         display: flex;
@@ -363,11 +327,7 @@ dd img {
         gap: 30px;
         width: 100%;
         flex-wrap: wrap;
-
-
     }
-
-
 
     .south {
         display: flex;
@@ -376,46 +336,10 @@ dd img {
         gap: 30px;
         width: 100%;
         flex-wrap: wrap;
-
-
-
     }
 }
-
-
-
-
-@media screen and (min-width:900px) {
-
-
-
-    .kv {
-        object-position: center;
-        position: relative;
-        top: 0;
-    }
-
-    .kv-img {
-        z-index: -1;
-    }
-
-}
-
-
-
-
-
-
-
 
 @media screen and (min-width:901px) {
-
-
-    .kv {
-        object-position: center;
-        position: relative;
-        top: 0;
-    }
 
     h2 {
         /* margin-top: 150px;

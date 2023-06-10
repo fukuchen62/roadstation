@@ -1,21 +1,5 @@
 @charset "utf-8";
 
-
-
-.kv img {
-    object-position: center;
-    z-index: -1;
-}
-
-.wrapper {
-    margin: 0 auto;
-
-}
-
-/* a:hover {
-    opacity: 0.7;
-} */
-
 h2 {
     text-align: center;
     padding: 60px;
@@ -125,17 +109,6 @@ p {
 
 
 @media screen and (min-width:901px) {
-
-
-    .kv {
-        object-position: center;
-        position: relative;
-        top: 0;
-    }
-
-    .kv-img {
-        z-index: -1;
-    }
 
     .sp-kv {
         width: 100%;

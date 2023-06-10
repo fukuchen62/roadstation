@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-.kv img {
-    object-position: 80% 25%;
-}
-
 h2,
 h3,
 h4,
@@ -166,30 +162,14 @@ form {
         margin-left: 20%;
         text-align: left;
     }
-
 }
 
 @media screen and (min-width:901px) {
-
-
-    .kv img {
-        margin: 0 auto;
-        object-fit: cover;
-        position: absolute;
-        width: 100%;
-        height: 200px;
-    }
-
-
 
     .search_results {
         font-size: 2rem;
         margin-top: 20px;
         margin-bottom: 10px;
-    }
-
-    .wrapper {
-        margin-top: 200px;
     }
 
     .card-list {

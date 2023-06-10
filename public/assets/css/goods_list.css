@@ -8,10 +8,6 @@ section {
     margin: 0 auto;
 }
 
-.kv {
-    z-index: -1;
-}
-
 p {
     color: #B45A27;
 }
@@ -266,11 +262,6 @@ h4 {
 
     /* PC(デスクトップサイズ) */
     @media screen and (min-width:1180px) {
-
-        .kv {
-            position: relative;
-            top: 0;
-        }
 
         h3 {
             font-size: 32px;
