@@ -25,7 +25,7 @@ h2 {
 
 h3 {
     max-width: 220px;
-    width: 50%;
+    width: 100%;
     margin: 30px auto 30px auto;
     text-align: center;
     font-size: 1.6rem;
@@ -114,10 +114,11 @@ h4 {
 }
 
 .goods-group {
-    border: 1px solid #000;
+    border-radius: 20px;
     background-color: #fff;
     padding-bottom: 10px;
-    box-shadow: 10px 6px 2px 0 #405732;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    border: groove 6px #cf9957;
 }
 
 .goods-group:hover {
@@ -125,8 +126,11 @@ h4 {
 }
 
 .goods-photo {
-    max-width: 150px;
-    margin-bottom: 10px;
+    border-radius: 20px;
+    max-width: 135px;
+    /* margin-bottom: 10px; */
+    padding: 5px;
+    object-fit: cover;
 }
 
 .detail-group {
@@ -231,7 +235,7 @@ h4 {
     object-fit: cover;
 }
 
-@media screen and (min-width:530px) {
+@media screen and (min-width:515px) {
     .goods-photo {
         max-width: 200px;
     }

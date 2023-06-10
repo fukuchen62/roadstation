@@ -74,46 +74,50 @@ h4 {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
+    text-align: start;
 }
 
 .activity-name {
     width: 100%;
-    text-align: center;
+    text-align: start;
 }
 
 .station-name {
-    width: 150px;
+    width: 100%;
     margin: 10px auto 20px auto;
-    text-align: center;
+    text-align: start;
     font-size: 1.2rem;
-    border-bottom: double 4px #e7d955;
+    /* border-bottom: double 4px #e7d955; */
 }
 
 .business-text {
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding-top: 0;
     text-align: start;
 }
 
 .price-text {
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding-top: 0;
     text-align: start;
 }
 
 .conditions-text {
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding-top: 0;
     text-align: start;
 }
 
 .detail-text {
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding-top: 0;
     text-align: start;
 }
