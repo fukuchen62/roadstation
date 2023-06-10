@@ -27,6 +27,17 @@
         .pagination li {
             display: inline-block;
         }
+
+        .text{
+            /* overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            /*IE対策*/
+            /* line-height: 1.5em;
+            max-height: 4.5em;  */
+        }
+
         @media screen and (min-width:1080px){
             .link {
             width: 70%;
