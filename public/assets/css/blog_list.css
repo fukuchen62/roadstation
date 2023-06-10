@@ -54,14 +54,14 @@ p {
 /* カードの設定 */
 .blog-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 30px;
     justify-items: center;
 }
 
 .blog-card {
-    width: 320px;
-    height: 450px;
+    width: 380px;
+    height: 650px;
     padding: 20px;
     border-radius: 20px;
     justify-content: center;
