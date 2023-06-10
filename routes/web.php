@@ -190,6 +190,16 @@ Route::post(
 )->name('send');
 
 
+// *********** お気に入り ***********
+/**
+ * マイページへのルート情報
+ */
+Route::get('/mypage', [App\Http\Controllers\MypageController::class, 'myPageShow'])->name('mypage');
+
+Route::get('/cookie', [App\Http\Controllers\MypageController::class, 'myPage'])->name('cookie');
+
+
+
 
 /*--- 以下は管理画面に関するルーティン設定です--*/
 
