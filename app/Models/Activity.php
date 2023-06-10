@@ -110,6 +110,7 @@ class Activity extends Model
     /**
      * getBlogName function
      * idによるブログ記事のタイトルを取得
+     * 作成者：小山
      *
      * @param integer $id
      * @return void
@@ -122,6 +123,15 @@ class Activity extends Model
             }
     }
 
+    /**
+     * changeName function
+     * アルファベットになっているidを数字に変換
+     * idによるブログ記事取得のため
+     * 作成者：小山
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function changeName($id)
     {
         switch ($id) {
