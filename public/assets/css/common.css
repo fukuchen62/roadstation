@@ -251,6 +251,14 @@ footer {
     text-align: center;
 }
 
+.pagination {
+    text-align: center;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
 @media screen and (min-width:601px) {
 
     /* PC版メニュー  */

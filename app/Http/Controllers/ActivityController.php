@@ -26,7 +26,11 @@ class ActivityController extends Controller
          * 1.データベースからactivitiesテーブルのデータを全て取得
          * 2.$itemにデータを代入
          */
-        $items = Activity::all();
+        // $items = Activity::all();
+        $items = Activity::where('deleted_at', null)
+                ->where('is_show', 1)
+                ->orderby('created_at', 'DESC')
+                ->simplePaginate(5);
 
         /**
          * $dataに$itemを代入

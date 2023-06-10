@@ -4,18 +4,7 @@
 @section('title', '新着情報一覧ページ')
 
 @section('pageCss')
-
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
-
-    <style>
-        .pagination {
-            text-align: center;
-        }
-
-        .pagination li {
-            display: inline-block;
-        }
-    </style>
 @endsection
 
 @section('key_visual')
