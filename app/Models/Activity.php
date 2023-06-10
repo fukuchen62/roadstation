@@ -13,7 +13,7 @@ class Activity extends Model
     protected $guarded = array('id');
     public static $rules = array(
         'activity_name' => 'required|string|max:50',
-        'discription' => 'max:200',
+        'discription' => 'max:300',
         'business_hours'    => 'max:200',
         'price' => 'max:100',
         'conditions'    => 'max:500',
@@ -87,7 +87,7 @@ class Activity extends Model
      * ブログのis_showを取得し送るメソッド
      *アクティビティ一覧内のブログ記事を正しく表示するため作成
      * 作成者：小山
-     *
+     * 
      * @return void
      */
     public function getIs_show()
@@ -117,9 +117,9 @@ class Activity extends Model
     public function getBlogName($id)
     {
         $blog = Blog::find($id);
-        if ($blog->is_show == 1) {
+        if($blog->is_show == 1){
             return $blog->title;
-        }
+            }
     }
 
     public function changeName($id)
