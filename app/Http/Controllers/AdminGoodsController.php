@@ -131,6 +131,27 @@ class AdminGoodsController extends Controller
     }
 
     /**
+     * typeInput function
+     * 新規投稿画面を表示
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function typeInput(Request $request)
+    {
+        // ログインユーザーの情報取得
+        $login_user = Auth::user();
+
+        // 特産品カテゴリー
+        $category_items = GoodsCategory::All();
+        $data = [
+            'login_user' => $login_user,
+            'category_items' => $category_items
+        ];
+        return view('cms.cms_type_new', $data);
+    }
+
+    /**
      * goodsCreate function
      * 道の駅特産品投稿処理
      *
@@ -170,13 +191,62 @@ class AdminGoodsController extends Controller
 
         // 渡すデータ
         $data = [
-            'goods_list' => $items,
+            'goods' => $items,
             'count' => $goods_count,
             'login_user' => $login_user,
         ];
 
         // ブレッドファイルを読み込む
         return view('cms.cms_goods_list', $data);
+    }
+
+    /**
+     * goodsCreate function
+     * 種別特産品投稿処理
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function typeCreate(Request $request)
+    {
+        // ログインユーザーの情報取得
+        $login_user = Auth::user();
+
+        // バリデーション
+        $this->validate($request, ProductType::$rules);
+
+        // 登録用種別特産品のインスタンスを生成
+        $goods = new ProductType();
+
+        // 入力データを取得
+        $form = $request->all();
+
+        // _tokenを入力データから無くす
+        unset($form['_token']);
+
+        // インスタンスのuser_idプロパティにログイン中のユーザーIDを代入
+        $goods->user_id = $login_user->id;
+
+        // インスタンスを保存
+        $goods->fill($form)->save();
+
+        // 種別特産品を読み込む
+        $items = ProductType::where('deleted_at', null)
+            ->orderBy('id', 'desc')
+            ->get();
+
+        // 道の駅特産品の件数
+        $goods_count = count($items);
+
+        // 渡すデータ
+        $data = [
+            'goods' => $items,
+            'count' => $goods_count,
+            'login_user' => $login_user,
+        ];
+
+        // ブレッドファイルを読み込む
+        return view('cms.cms_type_list', $data);
     }
 
     /**
