@@ -93,7 +93,7 @@
             </tr>
             <tr>
                 <th> <span>*</span> 特集記事フラグ: </th>
-                <td><input type="boolean" name="is_highlight" value="0" required></td>
+                <td><input type="boolean" name="is_highlight" value="1" required></td>
             </tr>
         </table>
 
