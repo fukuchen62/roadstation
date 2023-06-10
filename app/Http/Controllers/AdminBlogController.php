@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\user;
 
 class AdminBlogController extends Controller
 {
@@ -82,11 +83,15 @@ class AdminBlogController extends Controller
         // ログインユーザーの情報取得
         $login_user = Auth::user();
 
+        //登録ユーザーの情報取得
+        $users = User::All();
+
         // ブログカテゴリー
         $category_items = blogCategory::All();
         $data = [
             'login_user' => $login_user,
-            'category_items' => $category_items
+            'category_items' => $category_items,
+            'users' => $users,
         ];
         return view('cms.cms_blog_new', $data);
     }
@@ -151,6 +156,9 @@ class AdminBlogController extends Controller
         // ログインユーザーの情報取得
         $login_user = Auth::user();
 
+        //登録ユーザーの情報取得
+        $users = User::All();
+
         // idによる編集するデータを取得
         $item = Blog::find($request->id);
 
@@ -162,6 +170,7 @@ class AdminBlogController extends Controller
             'blog' => $item,
             'category_items' => $category_items,
             'login_user' => $login_user,
+            'users'=> $users,
         ];
 
         // ブレッドファイルを呼び出す

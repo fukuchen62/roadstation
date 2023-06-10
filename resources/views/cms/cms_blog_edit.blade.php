@@ -58,8 +58,15 @@
                 <td><input type="text" name="title" value="{{ $blog->title }}" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 記事作成者ニックネーム: </th>
-                <td><input type="text" name="user_name" required></td>
+                <th> <span>*</span> ユーザーネーム: </th>
+                {{-- <td><input type="text" name="user_name" required></td> --}}
+                <td>
+                    <select name="user_id">
+                        @foreach ($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        @endforeach
+                    </select>
+                </td>
             </tr>
             <tr>
                 <th> <span>*</span> 概要: </th>
