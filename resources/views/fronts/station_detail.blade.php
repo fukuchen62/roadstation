@@ -592,11 +592,28 @@
                         お気に入りを押したらお気に入りページに登録されます！
                     </strong>
                 </p>
+
                 <p>
-                    <a href="#">
-                        登録する（マイクロコピー）
-                    </a>
-                </p>
+                    @php
+                        $cookie = Cookie::get('id');
+                        $cookielist = explode(',', $cookie);
+                    @endphp
+
+                    @if (in_array($station->id, $cookielist))
+                        <div>
+                            <a href="{{ route('cookie', ['id' => $station->id]) }}">
+                                <span>お気に入りに登録済み</span>
+                            </a>
+                        </div>
+                    @else
+                        <div>
+                            <a href="{{ route('cookie', ['id' => $station->id]) }}">
+                                <span>お気に入りに登録する</span>
+                            </a>
+                        </div>
+                    @endif
+            </div>
+            </p>
             </div>
 
             <!-- googlemap -->

@@ -52,16 +52,32 @@
                 <td><input type="text" name="title" required></td>
             </tr>
             <tr>
+                <th> <span>*</span> 記事作成者ニックネーム: </th>
+                <td><input type="text" name="user_name" required></td>
+            </tr>
+            <tr>
                 <th> <span>*</span> 概要: </th>
                 <td>
-                    <textarea name="overview" cols="50" rows="5"></textarea>
+                    <textarea name="overview" cols="50" rows="5" required></textarea>
                 </td>
             </tr>
             <tr>
-                <th> <span>*</span> 詳細内容：</th>
+                <th> <span>*</span> 内容：</th>
                 <td>
-                    <textarea name="discription" id="content" cols="50" rows="5" required></textarea>
+                    <textarea name="content" id="content" cols="50" rows="5" required></textarea>
                 </td>
+            </tr>
+            <tr>
+                <th> 道の駅ID: </th>
+                <td><input type="number" name="road_station_id" ></td>
+            </tr>
+            <tr>
+                <th> 特産品ID: </th>
+                <td><input type="text" name="special_goods_id" ></td>
+            </tr>
+            <tr>
+                <th> 体験ID: </th>
+                <td><input type="text" name="activity_id" ></td>
             </tr>
             <tr>
                 <th>アイキャッチ画像: </th>
@@ -74,6 +90,10 @@
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
                 <td><input type="boolean" name="is_show" value="1" required></td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 特集記事フラグ: </th>
+                <td><input type="boolean" name="is_highlight" value="1" required></td>
             </tr>
         </table>
 

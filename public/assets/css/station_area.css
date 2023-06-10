@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.kv img {
+    object-position: 80% 20%;
+}
+
 h2,
 h3,
 h4,

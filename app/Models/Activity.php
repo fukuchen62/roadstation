@@ -13,7 +13,7 @@ class Activity extends Model
     protected $guarded = array('id');
     public static $rules = array(
         'activity_name' => 'required|string|max:50',
-        'discription' => 'max:200',
+        'discription' => 'max:300',
         'business_hours'    => 'max:200',
         'price' => 'max:100',
         'conditions'    => 'max:500',
@@ -23,7 +23,7 @@ class Activity extends Model
         'picture2'   => 'string|max:200',
         'picture3'   => 'string|max:200',
         'memo'       => 'string|max:500',
-        'is_show'    => 'required|boolean'
+        'is_show'    => 'required|boolean',
     );
     // 日本語エラーメッセージ
     public static $messages = [
@@ -110,6 +110,7 @@ class Activity extends Model
     /**
      * getBlogName function
      * idによるブログ記事のタイトルを取得
+     * 作成者：小山
      *
      * @param integer $id
      * @return void
@@ -117,11 +118,20 @@ class Activity extends Model
     public function getBlogName($id)
     {
         $blog = Blog::find($id);
-        if($blog->is_show == 1){
+        if($blog->is_show == 1 && $blog->is_highlight == 1){
             return $blog->title;
             }
     }
 
+    /**
+     * changeName function
+     * アルファベットになっているidを数字に変換
+     * idによるブログ記事取得のため
+     * 作成者：小山
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function changeName($id)
     {
         switch ($id) {

@@ -26,9 +26,11 @@ h3 {
     padding: 10px 12px;
 }
 
+
 h4 {
+    font-weight: bold;
     font-size: 20px;
-    padding-bottom: 20px;
+    padding: 15px;
 }
 
 /* カード内:直下の画像 */
@@ -40,8 +42,17 @@ h4 {
 }
 
 
+
 dl {
     text-align: start;
+}
+
+dd {
+    margin-bottom: 30px;
+}
+
+dt {
+    padding-top: 10px;
 }
 
 /* 施設アイコン */
@@ -51,10 +62,7 @@ dd img {
     margin-bottom: 10px;
 }
 
-dd {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
+
 
 .search_results {
     font-size: 1.5rem;
@@ -104,6 +112,11 @@ form {
 
 dl {
     text-align: start;
+}
+
+dd {
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .card:hover {
