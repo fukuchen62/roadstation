@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\ProductType;
 use App\Models\RoadStation;
+use App\Models\SpecialGoods;
 
 class GoodsController extends Controller
 {
@@ -37,6 +38,11 @@ class GoodsController extends Controller
         $others = ProductType::where('goods_category_id', '5')
             ->get();
 
+        // SpecialGoodsテーブルから、全てのデータを取得
+        $special_goods = SpecialGoods::orderBy('goods_category_id', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
         $data = [
             'goods_type' => $items,
             'agricultural_products' => $agricultural_products,
@@ -44,6 +50,7 @@ class GoodsController extends Controller
             'craft' => $craft,
             'gourmet' => $gourmet,
             'others' => $others,
+            'special_goods' => $special_goods,
         ];
         return view('fronts.goods_list', $data);
     }
