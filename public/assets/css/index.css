@@ -154,6 +154,10 @@ section {
 }
 
 /* 特産品 */
+.sp-btn {
+    display: none;
+}
+
 .goods-wrapper {
     margin: 0 auto;
     width: 100%;
@@ -697,7 +701,6 @@ imgcontent-wrapper .heading {
 
     .wrapper {
         padding: 0;
-        /* margin-top: 100vh; */
     }
 
     .kv {
@@ -711,7 +714,7 @@ imgcontent-wrapper .heading {
     }
 
     section {
-        margin-bottom: 100px;
+        margin-top: 100px;
     }
 
     .sp-h2 {
