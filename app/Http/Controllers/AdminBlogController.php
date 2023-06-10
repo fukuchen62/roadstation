@@ -104,9 +104,9 @@ class AdminBlogController extends Controller
         $login_user = Auth::user();
 
         // バリデーション
-        $this->validate($request, News::$rules);
+        $this->validate($request, blog::$rules);
 
-        // 登録用ニュースのインスタンスを生成
+        // 登録用ブログのインスタンスを生成
         $blog = new Blog();
 
         // 入力データを取得
@@ -121,12 +121,12 @@ class AdminBlogController extends Controller
         // インスタンスを保存
         $blog->fill($form)->save();
 
-        // ニュースを読み込む
-        $items = News::where('deleted_at', null)
+        // ブログを読み込む
+        $items = blog::where('deleted_at', null)
             ->orderBy('id', 'desc')
             ->get();
 
-        // ニュースの件数
+        // ブログの件数
         $blog_count = count($items);
 
         // 渡すデータ
@@ -137,7 +137,7 @@ class AdminBlogController extends Controller
         ];
 
         // ブレッドファイルを読み込む
-        return view('cms.cms_news_list', $data);
+        return view('cms.cms_blog_list', $data);
     }
 
     /**
@@ -154,7 +154,7 @@ class AdminBlogController extends Controller
         // idによる編集するデータを取得
         $item = Blog::find($request->id);
 
-        // ニュースカテゴリー
+        // ブログカテゴリー
         $category_items = BlogCategory::All();
 
         // 渡すデータ
@@ -170,7 +170,7 @@ class AdminBlogController extends Controller
 
     /**
      * newsUpdate function
-     * ニュース編集処理
+     * ブログ編集処理
      *
      * @param Request $request
      * @return void
@@ -198,12 +198,12 @@ class AdminBlogController extends Controller
         // インスタンスに編集結果を入れ替え、保存
         $blog->fill($form)->save();
 
-        // ニュースを読み直す
+        // ブログを読み直す
         $items = Blog::where('deleted_at', null)
             ->orderBy('id', 'desc')
             ->get();
 
-        // ニュースの件数
+        // ブログの件数
         $blog_count = count($items);
 
         // 渡すデータ
@@ -219,7 +219,7 @@ class AdminBlogController extends Controller
 
     /**
      * Undocumented function
-     * ニュースを削除
+     * ブログを削除
      *
      * @param Request $request
      * @return void
@@ -241,12 +241,12 @@ class AdminBlogController extends Controller
         DB::table('blogs')->where('id', $request->id)
             ->update($param);
 
-        // ニュースを読み直す
+        // ブログを読み直す
         $items = Blog::where('deleted_at', null)
             ->orderBy('id', 'desc')
             ->get();
 
-        // ニュースの件数
+        // ブログの件数
         $blog_count = count($items);
 
         // 渡すデータ

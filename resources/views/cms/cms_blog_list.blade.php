@@ -43,7 +43,7 @@
                 <td>{{ $item->overview }}</td>
                 <td>{{ $item->created_at }}</td>
                 <td>{{ $item->is_show }}</td>
-                <td class="edit"><a href="{{ route('cms-newsedit', ['id' => $item->id]) }}">編集</a></td>
+                <td class="edit"><a href="{{ route('cms-blogedit', ['id' => $item->id]) }}">編集</a></td>
             </tr>
         @endforeach
     </table>
