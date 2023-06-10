@@ -1,7 +1,19 @@
 @charset "utf-8";
 
+h3 {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
 .wrapper {
     margin: 0 auto;
+}
+
+section {
+    margin-top: 50px;
 }
 
 /* サイトロゴの固定 */
@@ -83,6 +95,7 @@
 /* エリアマップを囲う要素 */
 .area-map {
     text-align: center;
+    margin: 150px 0;
 }
 
 /* 徳島のエリアマップ */
@@ -286,47 +299,63 @@ imgcontent-wrapper .heading {
     font-size: 14px;
 }
 
-.blog-main {
-    margin: 0 auto;
+/* カテゴリー */
+.category {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 4px 8px;
+    background-color: #bdbdbd;
+    color: #ffff;
+    border-radius: 10px;
 }
 
-.blog-wrapper {
+/* 更新の日時とカテゴリー内容 */
+.update-information {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+/* ２カラムを囲う要素 */
+.blog-main {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+}
+
+/* カードの設定 */
+.blog-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-items: center;
 }
 
 .blog-card {
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    height: auto;
     padding: 20px;
-    box-sizing: border-box;
     border-radius: 20px;
+    justify-content: center;
     margin-bottom: 50px;
     word-break: break-all;
-    border: solid 3px #8C5243;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    border: groove 6px #cf9957;
     background-color: #ffff;
-}
-
-
-.blog-card:hover {
-    position: relative;
-    top: 5px;
-    left: 10px;
-    box-shadow: none;
-    /* z-index: -999; */
 }
 
 .blog-card img {
     width: 100%;
     height: auto;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .blog-btn {
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 5%;
+    width: 300px;
 }
 
 .blog-btn a:hover {
@@ -350,6 +379,15 @@ imgcontent-wrapper .heading {
     .wrapper {
         padding: 0;
         /* margin-top: 100vh; */
+    }
+
+    .blog-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-card {
+        width: 70%;
     }
 
     .article-list li {
@@ -650,20 +688,10 @@ imgcontent-wrapper .heading {
         margin: 0 auto;
     }
 
-
-    .blog-card {
-        width: 27%;
-        box-sizing: border-box;
-        border-radius: 20px;
-        justify-content: center;
-        margin-bottom: 50px;
-        text-align: center;
-        box-shadow: 15px 10px 3px 0 #A7D28D;
-        border: solid 3px #8C5243;
-        background-color: #ffff;
+    .blog-btn {
+        width: 400px;
     }
 }
-
 
 @media screen and (min-width:901px) {
 
@@ -966,28 +994,30 @@ imgcontent-wrapper .heading {
         font-size: 14px;
     }
 
-    .blog-box {
-        display: flex;
-    }
-
+    /* カードの設定 */
     .blog-wrapper {
-        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        justify-items: center;
     }
 
-    .blog-main {
-        display: flex;
-        justify-content: space-between;
+    .blog-card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+        justify-content: center;
+        margin-bottom: 50px;
+        word-break: break-all;
+        box-shadow: 5px 5px 8px 0 #af813a;
+        border: groove 6px #cf9957;
+        background-color: #ffff;
+    }
+
+    .blog-card img {
         width: 100%;
         height: auto;
-    }
-
-    .blog-btn {
-        text-align: center;
-    }
-
-    .blog-btn img {
-        max-width: 700px;
-        height: auto;
+        border-radius: 20px;
         object-fit: cover;
     }
 }
