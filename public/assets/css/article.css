@@ -1,79 +1,71 @@
 @charset "utf-8";
 
-
+h3 {
+    margin-top: 10px;
+}
 
 h4 {
+    padding-top: 10px;
     text-align: start;
-
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 a:hover {
     opacity: 0.7;
 }
 
-.kv img {
-    object-position: center;
-    z-index: -1;
-}
-
-
-.blog-banner {
-    max-width: 360px;
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-}
-
 .back-btn {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
+/* ブログタイトル */
 .blog-title {
-    margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
     width: 100%;
     word-wrap: break-word;
 }
 
+/* ブログ画像 */
 .blog-img {
-    max-width: 360px;
+    min-width: 360px;
     height: auto;
     width: 100%;
-}
-
-.roadstation-information {
-    font-size: 20px;
-}
-
-.blogarticle {
-    text-align: center;
 }
 
 .address {
     text-align: start;
     font-size: 1px;
     margin-bottom: 50px;
+    padding-top: 10px;
     font-size: 14px;
 }
 
+/* 関連記事 */
 .relatedarticle {
     text-align: center;
     margin-bottom: 50px;
 }
 
 .relatedarticle-title {
+    text-align: center;
+    margin: 0 auto;
     margin-bottom: 20px;
-    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #dfdfdf;
+    /* display: inline-block; */
 }
 
 .relatedarticle-img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .relatedarticle-text {
     text-align: start;
+    padding: 10px 0;
 }
 
 .before-next-pcbtn {
@@ -87,6 +79,7 @@ a:hover {
     margin-bottom: 50px;
 }
 
+/* カテゴリ一覧 */
 .side {
     height: 400px;
     border: 3px solid #a7d28d;
@@ -100,12 +93,41 @@ a:hover {
     padding: 20px 20px;
 }
 
+/* カテゴリー */
+.category {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 4px 8px;
+    background-color: #bdbdbd;
+    color: #ffff;
+    border-radius: 10px;
+}
+
+/* 更新情報 */
+.update-information {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 更新日時 */
+.date {
+    padding-bottom: 10px;
+}
+
+/* 関連記事 */
+.relatedarticle1 {
+    margin-bottom: 60px;
+}
+
 @media screen and (min-width:761px) {
-    .blog-banner {
-        max-width: 761px;
-        height: auto;
-        width: 100%;
-        object-fit: cover;
+
+    /* タブレット幅のみ横幅調整 */
+    .wrapper {
+        padding: 40px 60px;
     }
 
     .back-btn {
@@ -113,6 +135,8 @@ a:hover {
     }
 
     .blog-title {
+        font-size: 2rem;
+        font-weight: bold;
         margin-bottom: 30px;
     }
 
@@ -122,7 +146,7 @@ a:hover {
 
     .blog-text {
         text-align: start;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 
     .blog-img {
@@ -158,8 +182,8 @@ a:hover {
     }
 
     .relatedarticle-img {
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        height: auto;
         object-fit: cover;
     }
 
@@ -189,42 +213,21 @@ a:hover {
         top: 0;
     }
 
-    .kv-img {
-
-        object-position: center;
-
-    }
-
-
-
-
-
-    .blog-banner {
-        max-width: 1400px;
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 150px;
-    }
-
-    .back-btn {
-        margin-bottom: 50px;
-    }
-
+    /* ブログ内容 */
     .blog-main {
-        justify-content: space-between;
         width: 100%;
         position: relative;
-        /* background: url(../images/illustrations/tanuki-blog.png) no-repeat right -30px bottom 300px / 300px auto; */
     }
 
     .blog-wrapper {
         width: 100%;
-        gap: 200px;
+        gap: 100px;
         display: flex;
     }
 
     .blog-title {
+        font-size: 1.8rem;
+        font-weight: bold;
         margin-bottom: 30px;
     }
 
@@ -232,11 +235,6 @@ a:hover {
         object-fit: cover;
         width: 100%;
         max-width: 700px;
-    }
-
-    .blog-text {
-        text-align: start;
-        margin-bottom: 50px;
     }
 
     .address {
