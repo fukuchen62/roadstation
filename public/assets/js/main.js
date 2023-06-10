@@ -76,7 +76,7 @@ $(function () {
 // ヘッダーメニューの固定
 $(function () {
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 570) { //570px以上スクロールした固定
+        if ($(this).scrollTop() > 700) { //570px以上スクロールした固定
             $('#menu').addClass('fixed');
         } else {
             $('#menu').removeClass('fixed');
