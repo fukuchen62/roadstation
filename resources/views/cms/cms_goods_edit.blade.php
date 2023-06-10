@@ -41,7 +41,7 @@
             <tr>
                 <th width="15%"> <span>*</span> カテゴリー名: </th>
                 <td>
-                <select name="goods_category_id">
+                <select name="goods_category_id" class="selectcategory">
                         @foreach ($category_items as $item)
                             {{-- 選んでいる選択肢にselectedをつける --}}
                             @if ($item->id == $goods->goods_category_id)
@@ -85,7 +85,7 @@
             </tr>
 
             <tr>
-                <th width="15%"> <span>*</span> 関連道の駅: </th>
+                <th width="15%"> <span></span> 関連道の駅: </th>
                 <td>
                     <input type="text" name="road_station_id" value="{{ $goods->road_station_id }}">
                 </td>
@@ -94,7 +94,7 @@
             <tr>
                 <th>価格:</th>
                 <td>
-                    <input type="text" name="price" value="{{ $goods->price }}">
+                    <input type="number" name="price" value="{{ $goods->price }}">
                 </td>
             </tr>
 

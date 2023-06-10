@@ -8,7 +8,7 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-
+<link rel="stylesheet" href="{{asset('assets/css/admin.css')}}">
 @endsection
 
 
@@ -41,7 +41,7 @@
             <tr>
                 <th width="15%"> <span>*</span> カテゴリー名: </th>
                 <td>
-                <select name="goods_category_id">
+                <select name="goods_category_id" class="selectcategory">
                         @foreach ($category_items as $item)
                             {{-- 選んでいる選択肢にselectedをつける --}}
                             @if ($item->id == $goods->goods_category_id)
@@ -85,9 +85,9 @@
             </tr>
 
             <tr>
-                <th width="15%"> <span>*</span> 関連道の駅: </th>
+                <th width="15%"> <span></span> 関連道の駅: 数字を|で区切って</th>
                 <td>
-                    <input type="text" name="station_list" value="{{ $goods->station_list }}">
+                    <input type="text" name="station_list"  value="{{ $goods->station_list }}">
                 </td>
             </tr>
 
