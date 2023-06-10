@@ -7,8 +7,6 @@ h4,
     text-align: center;
 }
 
-
-
 h4 {
     font-weight: bold;
     font-size: 20px;
@@ -19,20 +17,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* カード内:直下の画像 */
-.card>img {
-    border-radius: 20px;
-    width: 280px;
-    height: 200px;
-    object-fit: cover;
-
-}
-
-.area_category {
-    /* margin: 100px auto 0 auto; */
-    text-align: center;
-}
-
 h3 {
     font-size: 1.7rem;
     padding: 1rem 0;
@@ -40,9 +24,21 @@ h3 {
     /* background-color: #ccc; */
 }
 
+/* カード内:直下の画像 */
+.card>img {
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.area_category {
+    /* margin: 100px auto 0 auto; */
+    text-align: center;
+}
+
 dl {
     text-align: start;
-
 }
 
 /* ボタン */
@@ -170,6 +166,11 @@ dl {
 }
 
 @media screen and (min-width:901px) {
+    h3 {
+        font-size: 2rem;
+        padding: 2rem 0;
+        padding: 10px 12px;
+    }
 
     .area-btn {
         font-size: 2rem;
@@ -183,12 +184,6 @@ dl {
         justify-items: center;
     }
 
-    h3 {
-        font-size: 2rem;
-        padding: 2rem 0;
-        padding: 10px 12px;
-    }
-
     .area {
         margin-top: 40px;
         gap: 5%;
@@ -200,7 +195,5 @@ dl {
         padding: 20px 30px;
         border-radius: 50px;
     }
-
-
 
 }
