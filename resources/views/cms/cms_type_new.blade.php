@@ -2,7 +2,7 @@
 
 @section('title', '阿波道の駅管理システム')
 
-@section('subtitle', '道の駅特産品投稿')
+@section('subtitle', '特産品の種別投稿')
 
 @section('login_name', 'QLIP')
 
@@ -13,17 +13,30 @@
 
 
 @section('content')
-    <h3>道の駅特産品の新規登録画面</h3>
+    <h3>種別特産品の投稿画面</h3>
 
     {{-- 以下はshowのところにはめ込む --}}
     <ul class="menubar">
-        <li><a href="{{ route('cms-goodslist') }}">HOME</a></li>
-        <li><a href="{{ route('cms-goodsinput') }}">新規登録</a></li>
+        <li><a href="{{ route('cms-typeslist') }}">一覧画面へ</a></li>
+        <li><a href="{{ route('cms-typesinput') }}">新規登録</a></li>
     </ul>
 
-    <form method="post" action="{{ route('cms-goodscreate') }}">
+    {{-- バリデーションのエラーを表示する --}}
+    @if (count($errors) > 0)
+        <div>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li class="error">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form method="post" action="{{ route('cms-newscreate') }}">
+
+        @csrf
+
         <table class="info new_info">
-            @csrf
             <tr>
                 <th width="15%"> <span>*</span> カテゴリー: </th>
                 <td>
@@ -35,30 +48,28 @@
                 </td>
             </tr>
             <tr>
-                <th> <span>*</span> 道の駅特産品名: </th>
-                <td><input type="text" name="goods_name" required></td>
+                <th> <span>*</span> 種別名: </th>
+                <td><input type="text" name="common_name" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 旬の月: 数字を|で区切って</th>
-                <td><input type="text" name="month" required></td>
-            </tr>
-
-            <tr>
-                <th> <span>*</span> 利用方法: </th>
+                <th> <span>*</span> 旬の月 </th>
                 <td>
-                    <textarea name="usage" cols="50" rows="5" required></textarea>
+                    <textarea name="season" cols="50" rows="5"></textarea>
                 </td>
             </tr>
-
             <tr>
                 <th> <span>*</span> 詳細内容：</th>
                 <td>
-                    <textarea name="discription" id="discription" cols="50" rows="5" required></textarea>
+                    <textarea name="discription" id="content" cols="50" rows="5" required></textarea>
                 </td>
             </tr>
             <tr>
                 <th>画像: </th>
                 <td><input type="text" name="picture"></td>
+            </tr>
+            <tr>
+                <th>関連道の駅: </th>
+                <td><input type="text" name="station_list" placeholder="1|2|a"></td>
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
@@ -67,7 +78,7 @@
         </table>
 
         <div class="submit">
-            <input type="submit" value="登録" class="submit_btn" onclick="return saveComfirm('道の駅特産品')">
+            <input type="submit" value="登録" class="submit_btn" onclick="return saveComfirm('種別特産品')">
         </div>
 
     </form>

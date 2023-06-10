@@ -122,9 +122,6 @@ Route::get(
     'App\Http\Controllers\ActivityController@activityMainView'
 )->name('activity');
 
-
-
-
 // *********** ブログテーブル ***********
 
 /**
