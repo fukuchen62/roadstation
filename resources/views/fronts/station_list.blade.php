@@ -9,10 +9,7 @@
 @section('title', '一覧')
 
 @section('pageCss')
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/station_list.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}">
-
 @endsection
 
 @section('key_visual')
@@ -29,47 +26,24 @@
         </section>
 
         <div class="stationlist-box">
-            {{-- <div class="list_box"> --}}
             <h3 class="east-title">県東部</h3>
             <section class="east">
-                @foreach ($road_stations as $road)
-                    @if ($road->area_id == 1)
-                        <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
-                            <div class="card">
-                                <img src="{{ asset('/assets/images/station/' . $road->picture1) }}" width="250px"
-                                    height="200px" alt="道の駅の画像">
-                                <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
-                                <p>{{ $road->catchphrase }}</p>
-                                <dl>
-                                    <dt>営業時間：</dt>
-                                    <dd>{{ $road->business_hours }}</dd>
-
-                                    <dt>〒{{ $road->zip_code }}</dt>
-                                    <dd>{{ $road->address }}</dd>
-
-                                    {{-- <dt>TEL：</dt>
-                                    <dd>{{ $road->tel }}</dd>
-
-                                    <dt>公式URL：</dt>
-                                    <dd>{{ $road->url }}</dd>
-
-                                    <dt>SNS：</dt>
-                                    <dd>
-                                        @if ($road->sns == null)
-                                            {{ '現在掲載はございません。' }}
-                                        @else
-                                            {{ $road->sns }}
-                                        @endif
-                                    </dd>
-                                    <dt>定休日：</dt>
-                                    <dd>{{ $road->regular_holiday }}</dd>
-
-                                    <dt>駐車場：</dt>
-                                    <dd>{{ $road->parking }}
-                                    </dd> --}}
-                                    <dt>設備：</dt>
-                                    <dd>
-                                        <div class="icon-wrapper">
+                <div class="grid">
+                    @foreach ($road_stations as $road)
+                        @if ($road->area_id == 1)
+                            <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                                <div class="card">
+                                    <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
+                                        height="200px" alt="道の駅の画像">
+                                    <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
+                                    <p>{!! $road->catchphrase !!}</p>
+                                    <dl>
+                                        <dt>営業時間：</dt>
+                                        <dd>{{ $road->business_hours }}</dd>
+                                        <dt>〒{{ $road->zip_code }}</dt>
+                                        <dd>{{ $road->address }}</dd>
+                                        <dt>設備：</dt>
+                                        <dd>
                                             <img title="宿泊施設"
                                                 src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
                                                 alt="宿泊施設">
@@ -103,72 +77,46 @@
                                             <img title="温泉施設"
                                                 src="{{ asset('assets/images/icon/spa_icon' . $road->spa_icon . '.svg') }}"
                                                 alt="温泉施設">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </a>
-                    @endif
-                @endforeach
+                                            <img title="無線LAN"
+                                                src="{{ asset('assets/images/icon/lan_icon' . $road->lan_icon . '.svg') }}"
+                                                alt="無線LAN">
+                                            <img title="体験施設"
+                                                src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
+                                                alt="体験施設">
+                                            <img title="観光案内"
+                                                src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
+                                                alt="観光案内">
+                                            <img title="展望台"
+                                                src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
+                                                alt="展望台">
+                                            <img title="美術館・博物館"
+                                                src="{{ asset('assets/images/icon/museam_icon' . $road->museum_icon . '.svg') }}"
+                                                alt="美術館・博物館">
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        @endif
+                    @endforeach
+                </div>
             </section>
-            {{-- </div> --}}
             <h3 class="west-title">県西部</h3>
-            {{-- <div class="list_box"> --}}
             <section class="west">
-
-                @foreach ($road_stations as $road)
-                    @if ($road->area_id == 2)
-                        <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
-                            <div class="card">
-                                <img src="{{ asset('/assets/images/station/' . $road->picture1) }}" width="250px"
-                                    height="200px" alt="道の駅の画像">
-                                <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
-                                <p>{{ $road->catchphrase }}</p>
-                                <dl>
-                                    <dt>営業時間：</dt>
-                                    <dd>{{ $road->business_hours }}</dd>
-
-                                    <dt>〒{{ $road->zip_code }}</dt>
-                                    <dd>{{ $road->address }}</dd>
-
-                                    <dt>TEL：</dt>
-                                    <dd>{{ $road->tel }}</dd>
-
-                                    <dt>公式URL：</dt>
-                                    <dd>{{ $road->url }}</dd>
-
-                                    <dt>SNS：</dt>
-                                    <dd>
-                                        @if ($road->sns == null)
-                                            {{ '現在掲載はございません。' }}
-                                        @else
-                                            {{ $road->sns }}
-                                        @endif
-                                    </dd>
-                                    <dt>定休日：</dt>
-                                    <dd>{{ $road->regular_holiday }}</dd>
-
-                                    <dt>駐車場：</dt>
-                                    <dd>{{ $road->parking }}
-                                    </dd>
-                                    <dt>設備：</dt>
-                                    <dd>
-                                        <div class="icon-wrapper">
+                <div class="grid">
+                    @foreach ($road_stations as $road)
+                        @if ($road->area_id == 2)
+                            <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                                <div class="card">
+                                    <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
+                                        height="200px" alt="道の駅の画像">
+                                    <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
+                                    <p>{!! $road->catchphrase !!}</p>
+                                    <dl>
+                                        <dt>営業時間：</dt>
+                                        <dd>{{ $road->business_hours }}</dd>
+                                        <dt>〒{{ $road->zip_code }}</dt>
+                                        <dd>{{ $road->address }}</dd>
+                                        <dd>
                                             <img title="宿泊施設"
                                                 src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
                                                 alt="宿泊施設">
@@ -202,73 +150,49 @@
                                             <img title="温泉施設"
                                                 src="{{ asset('assets/images/icon/spa_icon' . $road->spa_icon . '.svg') }}"
                                                 alt="温泉施設">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/spa_icon' . $road->_icon . '.svg') }}"
-                                                alt="">
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </a>
-                    @endif
-                @endforeach
+                                            <img title="無線LAN"
+                                                src="{{ asset('assets/images/icon/lan_icon' . $road->lan_icon . '.svg') }}"
+                                                alt="無線LAN">
+                                            <img title="体験施設"
+                                                src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
+                                                alt="体験施設">
+                                            <img title="観光案内"
+                                                src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
+                                                alt="観光案内">
+                                            <img title="展望台"
+                                                src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
+                                                alt="展望台">
+                                            <img title="美術館・博物館"
+                                                src="{{ asset('assets/images/icon/museam_icon' . $road->museum_icon . '.svg') }}"
+                                                alt="美術館・博物館">
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        @endif
+                    @endforeach
+                </div>
             </section>
             {{-- </div> --}}
             <h3 class="south-title">県南部</h3>
             {{-- <div class="list_box"> --}}
             <section class="south">
+                <div class="grid">
+                    @foreach ($road_stations as $road)
+                        @if ($road->area_id == 3)
+                            <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
+                                <div class="card">
+                                    <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
+                                        height="200px" alt="道の駅の画像">
+                                    <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
+                                    <p>{!! $road->catchphrase !!}</p>
+                                    <dl>
+                                        <dt>営業時間：</dt>
+                                        <dd>{{ $road->business_hours }}</dd>
 
-                @foreach ($road_stations as $road)
-                    @if ($road->area_id == 3)
-                        <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
-                            <div class="card">
-                                <img src="{{ asset('/assets/images/station/' . $road->picture1) }}" width="250px"
-                                    height="200px" alt="道の駅の画像">
-                                <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
-                                <p>{{ $road->catchphrase }}</p>
-                                <dl>
-                                    <dt>営業時間：</dt>
-                                    <dd>{{ $road->business_hours }}</dd>
-
-                                    <dt>〒{{ $road->zip_code }}</dt>
-                                    <dd>{{ $road->address }}</dd>
-
-                                    <dt>TEL：</dt>
-                                    <dd>{{ $road->tel }}</dd>
-
-                                    <dt>公式URL：</dt>
-                                    <dd>{{ $road->url }}</dd>
-
-                                    <dt>SNS：</dt>
-                                    <dd>
-                                        @if ($road->sns == null)
-                                            {{ '現在掲載はございません。' }}
-                                        @else
-                                            {{ $road->sns }}
-                                        @endif
-                                    </dd>
-                                    <dt>定休日：</dt>
-                                    <dd>{{ $road->regular_holiday }}</dd>
-
-                                    <dt>駐車場：</dt>
-                                    <dd>{{ $road->parking }}
-                                    </dd>
-                                    <dt>設備：</dt>
-                                    <dd>
-                                        <div class="icon-wrapper">
-
+                                        <dt>〒{{ $road->zip_code }}</dt>
+                                        <dd>{{ $road->address }}</dd>
+                                        <dd>
                                             <img title="宿泊施設"
                                                 src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
                                                 alt="宿泊施設">
@@ -302,28 +226,28 @@
                                             <img title="温泉施設"
                                                 src="{{ asset('assets/images/icon/spa_icon' . $road->spa_icon . '.svg') }}"
                                                 alt="温泉施設">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
+                                            <img title="無線LAN"
+                                                src="{{ asset('assets/images/icon/lan_icon' . $road->lan_icon . '.svg') }}"
+                                                alt="無線LAN">
+                                            <img title="体験施設"
                                                 src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
+                                                alt="体験施設">
+                                            <img title="観光案内"
                                                 src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
+                                                alt="観光案内">
+                                            <img title="展望台"
                                                 src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
-                                                alt="">
-                                            <img title="ここに説明が入ります"
-                                                src="{{ asset('assets/images/icon/museum_icon' . $road->museum_icon . '.svg') }}"
-                                                alt="">
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </a>
-                    @endif
-                @endforeach
+                                                alt="展望台">
+                                            <img title="美術館・博物館"
+                                                src="{{ asset('assets/images/icon/museam_icon' . $road->museum_icon . '.svg') }}"
+                                                alt="美術館・博物館">
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        @endif
+                    @endforeach
+                </div>
             </section>
             {{-- </div> --}}
         </div>

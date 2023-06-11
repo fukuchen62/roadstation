@@ -8,10 +8,7 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/station.css') }}"> --}}
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/fstyle_search.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/station_area.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/fstyle_station_detail.css') }}"> --}}
     <style>
         .pagination {
             text-align: center;
@@ -32,11 +29,7 @@
 {{-- メイン --}}
 @section('content')
     <main class="wrapper">
-        {{-- @foreach ($area as $areas)
-            <h3 class="district">{{ $areas->area_name }}</h3>
-        @endforeach --}}
         <h3 class="district">{{ $area->area_name }}</h3>
-
         <div class="area">
             {{-- aの場合下のようにしてやるとcontrollerに反映される。 --}}
             <a href="{{ route('areasearch') }}?area_id=1">
@@ -54,12 +47,11 @@
             </a>
         </div>
 
-        <section class="search_sum">
-            <h3 class="search_results">
-                検索件数:&nbsp;{{ $com }}&nbsp;件
-            </h3>
-        </section>
-        <div class="card-list">
+
+        <h3 class="search_results">
+            検索件数:({{ $com }}件)
+        </h3>
+        <div class="grid">
             @foreach ($search as $road)
                 <div class="card">
 
@@ -78,65 +70,60 @@
 
                             <dt>設備：</dt>
                             <dd>
-                                <div class="icon-wrapper">
-
-                                    <img title="宿泊施設"
-                                        src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
-                                        alt="宿泊施設">
-                                    <img title="ATM"
-                                        src="{{ asset('assets/images/icon/atm_icon' . $road->atm_icon . '.svg') }}"
-                                        alt="設備ATM">
-                                    <img title="ベビーベッド"
-                                        src="{{ asset('assets/images/icon/bed_icon' . $road->bed_icon . '.svg') }}"
-                                        alt="ベビーベッド">
-                                    <img title="身障者トイレ"
-                                        src="{{ asset('assets/images/icon/disability_icon' . $road->disability_icon . '.svg') }}"
-                                        alt="身障者トイレ">
-                                    <img title="EV充電施設"
-                                        src="{{ asset('assets/images/icon/ev_icon' . $road->ev_icon . '.svg') }}"
-                                        alt="EV充電施設">
-                                    <img title="軽食・喫茶"
-                                        src="{{ asset('assets/images/icon/lightmeal_icon' . $road->lightmeal_icon . '.svg') }}"
-                                        alt="軽食・喫茶">
-                                    <img title="公園"
-                                        src="{{ asset('assets/images/icon/park_icon' . $road->park_icon . '.svg') }}"
-                                        alt="公園">
-                                    <img title="レストラン"
-                                        src="{{ asset('assets/images/icon/restaurant_icon' . $road->restaurant_icon . '.svg') }}"
-                                        alt="レストラン">
-                                    <img title="ショップ"
-                                        src="{{ asset('assets/images/icon/shop_icon' . $road->shop_icon . '.svg') }}"
-                                        alt="ショップ">
-                                    <img title="シャワー"
-                                        src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
-                                        alt="シャワー">
-                                    <img title="温泉施設"
-                                        src="{{ asset('assets/images/icon/spa_icon' . $road->spa_icon . '.svg') }}"
-                                        alt="温泉施設">
-                                    <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
-                                        alt="">
-                                    <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
-                                        alt="">
-                                    <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
-                                        alt="">
-                                    <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
-                                        alt="">
-                                    <img title="ここに説明が入ります"
-                                        src="{{ asset('assets/images/icon/museum_icon' . $road->museum_icon . '.svg') }}"
-                                        alt="">
-                                </div>
+                                <img title="宿泊施設"
+                                    src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
+                                    alt="宿泊施設">
+                                <img title="ATM"
+                                    src="{{ asset('assets/images/icon/atm_icon' . $road->atm_icon . '.svg') }}"
+                                    alt="設備ATM">
+                                <img title="ベビーベッド"
+                                    src="{{ asset('assets/images/icon/bed_icon' . $road->bed_icon . '.svg') }}"
+                                    alt="ベビーベッド">
+                                <img title="身障者トイレ"
+                                    src="{{ asset('assets/images/icon/disability_icon' . $road->disability_icon . '.svg') }}"
+                                    alt="身障者トイレ">
+                                <img title="EV充電施設"
+                                    src="{{ asset('assets/images/icon/ev_icon' . $road->ev_icon . '.svg') }}"
+                                    alt="EV充電施設">
+                                <img title="軽食・喫茶"
+                                    src="{{ asset('assets/images/icon/lightmeal_icon' . $road->lightmeal_icon . '.svg') }}"
+                                    alt="軽食・喫茶">
+                                <img title="公園"
+                                    src="{{ asset('assets/images/icon/park_icon' . $road->park_icon . '.svg') }}"
+                                    alt="公園">
+                                <img title="レストラン"
+                                    src="{{ asset('assets/images/icon/restaurant_icon' . $road->restaurant_icon . '.svg') }}"
+                                    alt="レストラン">
+                                <img title="ショップ"
+                                    src="{{ asset('assets/images/icon/shop_icon' . $road->shop_icon . '.svg') }}"
+                                    alt="ショップ">
+                                <img title="シャワー"
+                                    src="{{ asset('assets/images/icon/shower_icon' . $road->shower_icon . '.svg') }}"
+                                    alt="シャワー">
+                                <img title="温泉施設"
+                                    src="{{ asset('assets/images/icon/spa_icon' . $road->spa_icon . '.svg') }}"
+                                    alt="温泉施設">
+                                <img title="無線LAN"
+                                    src="{{ asset('assets/images/icon/lan_icon' . $road->lan_icon . '.svg') }}"
+                                    alt="無線LAN">
+                                <img title="体験施設"
+                                    src="{{ asset('assets/images/icon/experience_icon' . $road->experience_icon . '.svg') }}"
+                                    alt="体験施設">
+                                <img title="観光案内"
+                                    src="{{ asset('assets/images/icon/guide_icon' . $road->guide_icon . '.svg') }}"
+                                    alt="観光案内">
+                                <img title="展望台"
+                                    src="{{ asset('assets/images/icon/observatory_icon' . $road->observatory_icon . '.svg') }}"
+                                    alt="展望台">
+                                <img title="美術館・博物館"
+                                    src="{{ asset('assets/images/icon/museam_icon' . $road->museum_icon . '.svg') }}"
+                                    alt="美術館・博物館">
                             </dd>
                         </dl>
                     </a>
                 </div>
             @endforeach
-
         </div>
-
         <div class="link">
             {{ $search->links('pagination::bootstrap-4') }}
         </div>

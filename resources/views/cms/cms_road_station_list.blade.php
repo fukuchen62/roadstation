@@ -2,7 +2,7 @@
 
 @section('title', '釣徳コンテンツ管理システム')
 
-@section('subtitle', 'ニュース')
+@section('subtitle', '道の駅')
 
 @section('login_name', 'QLIP')
 
@@ -13,7 +13,7 @@
 
 
 @section('content')
-    <h3>ニュース一覧</h3>
+    <h3>道の駅一覧</h3>
     {{-- 以下はshowのところにはめ込む --}}
     <ul class="menubar">
         <li><a href="./newsshow">HOME</a></li>
@@ -32,11 +32,11 @@
             <th>タイトル</th>
             <th width="100px">修正</th>
         </tr>
-        @foreach ($newslist as $item)
+        @foreach ($road_station_list as $item)
             <tr>
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->name }}</td>
-                <td>{{ $item->title }}</td>
+                <td>{{ $item->ruby }}</td>
                 <td class="edit"><a href="{{ route('newsedit', ['id' => $item->id]) }}">編集</a></td>
             </tr>
         @endforeach
