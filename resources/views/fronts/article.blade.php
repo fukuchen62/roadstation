@@ -37,8 +37,10 @@
             <h3 class="blog-title">{{ $blog->title }}</h3>
             {{--  <p>登録日時：{{ $blog->created_at }}</p>  --}}
             {{--  <p>登録日時：{{ $blog['created_at']->format('Y年m月d日') }}</p>  --}}
-            <p class="date">
-                {{ $blog['created_at']->format('Y年n月j日') }}　　　カテゴリ：{{ $blog->blogCategory->getName() }}</p>
+            <div class="update-information">
+                <p class="date">{{ $blog['created_at']->format('Y年n月j日') }}</p>
+                    <p class="category">{{ $blog->blogCategory->getName() }}</p>
+            </div>   
             <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
             {{--  {!! $blog->content !!}  --}}
             <div>
@@ -58,7 +60,7 @@
 
             {{--  道の駅情報の表示部分  --}}
             <h3 class="roadstation-
-                information">道の駅情報</h3>
+                information">＜ 道の駅情報 ＞</h3>
 
             @php
                 $road_station_id = $blog->road_station_id;
@@ -116,19 +118,21 @@
 
             {{-- 関連記事の表示部分 --}}
             <h3 class="relatedarticle-title">関連記事</h3>
-            <ul class="relatedarticle">
+            <div class="relatedarticle">
                 @foreach ($categories as $category)
-                    <li class="relatedarticle1">
+                    <div class="relatedarticle1">
                         <a href="{{ url('blog-detail') }}?id={{ $category->id }}">
                             <img class="relatedarticle-img" src="{{ asset('/storage/images/' . $category->picture) }}"
                                 alt="ブログ記事の画像">
                             <h4>{{ $category->title }}</h4>
-                            <p>{{ $category['created_at']->format('Y年n月j日') }}</p>
-                            <p>{{ $blog->blogcategory->category_name }}</p>
+                            <div class="update-information">
+                                <p class="date">{{ $category['created_at']->format('Y年n月j日') }}</p>
+                                <p class="category">{{ $blog->blogcategory->category_name }}</p>
+                            </div>
                         </a>
-                    </li>
+                    </div>
                 @endforeach
-            </ul>
+                </div>
         </section>
         {{--  サイドバーのカテゴリーの表示部分  --}}
         <section class="side">
