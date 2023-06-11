@@ -334,7 +334,7 @@ footer {
         margin: 0 auto;
         text-align: center;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         background-image: url(../images/header/bg_header_green.png);
         background-position: center;
         background-size: cover;
