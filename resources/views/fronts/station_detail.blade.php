@@ -426,22 +426,120 @@
                     <dt>設備：</dt>
                     <dd>
                         <div class="icon-wrapper">
-                            <img title="宿泊施設" src="../assets/images/icon/accommodation_icon1.svg" alt="宿泊施設">
-                            <img title="ATM" src="../assets/images/icon/atm_icon1.svg" alt="設備ATM">
-                            <img title="ベビーベッド" src="../assets/images/icon/bed_icon1.svg" alt="ベビーベッド">
-                            <img title="身障者トイレ" src="../assets/images/icon/disability_icon1.svg" alt="身障者トイレ">
-                            <img title="EV充電施設" src="../assets/images/icon/ev_icon1.svg" alt="EV充電施設">
-                            <img title="軽食・喫茶" src="../assets/images/icon/lightmeal_icon1.svg" alt="軽食・喫茶">
-                            <img title="公園" src="../assets/images/icon/park_icon1.svg" alt="公園">
-                            <img title="レストラン" src="../assets/images/icon/restaurant_icon1.svg" alt="レストラン">
-                            <img title="ショップ" src="../assets/images/icon/shop_icon1.svg" alt="ショップ">
-                            <img title="シャワー" src="../assets/images/icon/shower_icon1.svg" alt="シャワー">
-                            <img title="温泉施設" src="../assets/images/icon/spa_icon1.svg" alt="温泉施設">
-                            <img title="ここに説明が入ります" src="../assets/images/icon/shower_icon1.svg" alt="">
-                            <img title="ここに説明が入ります" src="../assets/images/icon/spa_icon1.svg" alt="">
-                            <img title="ここに説明が入ります" src="../assets/images/icon/spa_icon1.svg" alt="">
-                            <img title="ここに説明が入ります" src="../assets/images/icon/spa_icon1.svg" alt="">
-                            <img title="ここに説明が入ります" src="../assets/images/icon/spa_icon1.svg" alt="">
+
+                            @if ($station->accommodation_icon == 1)
+                                <img title="宿泊施設" src="{{ asset('assets/images/icon/accommodation_icon1.svg') }}"
+                                    alt="宿泊施設">
+                            @else
+                                <img title="宿泊施設" src="{{ asset('assets/images/icon/accommodation_icon0.svg') }}"
+                                    alt="宿泊施設">
+                            @endif
+
+                            @if ($station->atm_icon == 1)
+                                <img title="ATM" src="{{ asset('assets/images/icon/atm_icon1.svg') }}"
+                                    alt="設備ATM">
+                            @else
+                                <img title="ATM" src="{{ asset('assets/images/icon/atm_icon0.svg') }}"
+                                    alt="設備ATM">
+                            @endif
+
+                            @if ($station->bed_icon == 1)
+                                <img title="ベビーベッド" src="{{ asset('assets/images/icon/bed_icon1.svg') }}"
+                                    alt="ベビーベッド">
+                            @else
+                                <img title="ベビーベッド" src="{{ asset('assets/images/icon/bed_icon0.svg') }}"
+                                    alt="ベビーベッド">
+                            @endif
+
+                            @if ($station->disability_icon == 1)
+                                <img title="身障者トイレ" src="{{ asset('assets/images/icon/disability_icon1.svg') }}"
+                                    alt="身障者トイレ">
+                            @else
+                                <img title="身障者トイレ" src="{{ asset('assets/images/icon/disability_icon0.svg') }}"
+                                    alt="身障者トイレ">
+                            @endif
+
+                            @if ($station->ev_icon == 1)
+                                <img title="EV充電施設" src="{{ asset('assets/images/icon/ev_icon1.svg') }}"
+                                    alt="EV充電施設">
+                            @else
+                                <img title="EV充電施設" src="{{ asset('assets/images/icon/ev_icon0.svg') }}"
+                                    alt="EV充電施設">
+                            @endif
+
+                            @if ($station->lightmeal_icon == 1)
+                                <img title="軽食・喫茶" src="{{ asset('assets/images/icon/lightmeal_icon1.svg') }}"
+                                    alt="軽食・喫茶">
+                            @else
+                                <img title="軽食・喫茶" src="{{ asset('assets/images/icon/lightmeal_icon0.svg') }}"
+                                    alt="軽食・喫茶">
+                            @endif
+
+                            @if ($station->park_icon == 1)
+                                <img title="公園" src="{{ asset('assets/images/icon/park_icon1.svg') }}"
+                                    alt="公園">
+                            @else
+                                <img title="公園" src="{{ asset('assets/images/icon/park_icon0.svg') }}"
+                                    alt="公園">
+                            @endif
+
+                            @if ($station->restaurant_icon == 1)
+                                <img title="レストラン" src="{{ asset('assets/images/icon/restaurant_icon1.svg') }}"
+                                    alt="レストラン">
+                            @else
+                                <img title="レストラン" src="{{ asset('assets/images/icon/restaurant_icon0.svg') }}"
+                                    alt="レストラン">
+                            @endif
+
+                            @if ($station->shop_icon == 1)
+                                <img title="ショップ" src="{{ asset('assets/images/icon/shop_icon1.svg') }}"
+                                    alt="ショップ">
+                            @else
+                                <img title="ショップ" src="{{ asset('assets/images/icon/shop_icon0.svg') }}"
+                                    alt="ショップ">
+                            @endif
+
+                            @if ($station->shower_icon == 1)
+                                <img title="シャワー" src="{{ asset('assets/images/icon/shower_icon1.svg') }}"
+                                    alt="シャワー">
+                            @else
+                                <img title="シャワー" src="{{ asset('assets/images/icon/shower_icon0.svg') }}"
+                                    alt="シャワー">
+                            @endif
+
+                            @if ($station->spa_icon == 1)
+                                <img title="温泉施設" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
+                                    alt="温泉施設">
+                            @else
+                                <img title="温泉施設" src="{{ asset('assets/images/icon/spa_icon0.svg') }}"
+                                    alt="温泉施設">
+                            @endif
+
+                            @if ($station->observatory_icon == 1)
+                                <img title="展望台" src="{{ asset('assets/images/icon/observatory_icon1.svg') }}"
+                                    alt="展望台">
+                            @else
+                                <img title="展望台" src="{{ asset('assets/images/icon/observatory_icon0.svg') }}"
+                                    alt="展望台">
+                            @endif
+
+                            @if ($station->museum_icon == 1)
+                                <img title="美術館・博物館" src="{{ asset('assets/images/icon/museam_icon1.svg') }}"
+                                    alt="美術館・博物館">
+                            @else
+                                <img title="美術館・博物館" src="{{ asset('assets/images/icon/museam_icon0.svg') }}"
+                                    alt="美術館・博物館">
+                            @endif
+
+
+                            <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
+                                alt="">
+
+                            <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
+                                alt="">
+
+                            <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
+                                alt="">
                         </div>
                     </dd>
                 </dl>
