@@ -42,7 +42,7 @@
                 <td>
                     <select name="blog_category_id">
                         @foreach ($category_items as $item)
-                            <option value="{{ $item->id }}">{{ $item->category_name }}</option>
+                            <option value="{{ $item->id }}" selected>{{ $item->category_name }}</option>
                         @endforeach
                     </select>
                 </td>
@@ -57,7 +57,7 @@
                 <td>
                     <select name="user_id">
                         @foreach ($users as $user)
-                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                            <option value="{{ $user->id }}" selected>{{ $user->name }}</option>
                         @endforeach
                     </select>
                 </td>
