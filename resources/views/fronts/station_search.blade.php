@@ -29,24 +29,70 @@
                 <table class="mobile_table" border>
                     <tr>
                         <td>
-                            <label><input id="area_id" class="" type="checkbox" name="area[]"
-                                    value="1">県東部</label>
+                            @if ($area_id != null)
+                                @if (in_array(1, $area_id))
+                                    <label><input type="checkbox" name="area[]" id="east" value="1"
+                                            class="checkbox_list" checked>
+                                        県東部</label>
+                                @else
+                                    <label><input type="checkbox" name="area[]" id="east" value="1"
+                                            class="checkbox_list">
+                                        県東部</label>
+                                @endif
+                            @else
+                                <label><input type="checkbox" name="area[]" id="east" value="1"
+                                        class="checkbox_list">
+                                    県東部</label>
+                            @endif
+                            {{-- <label><input id="area_id" class="" type="checkbox" name="area[]"
+                                    value="1">県東部</label> --}}
                         </td>
                         <td>
-                            <label><input id="area_id" class="" type="checkbox" name="area[]"
-                                    value="2">県西部</label>
+                            @if ($area_id != null)
+                                @if (in_array(2, $area_id))
+                                    <label><input type="checkbox" name="area[]" id="west" value="2"
+                                            class="checkbox_list" checked>
+                                        県西部</label>
+                                @else
+                                    <label><input type="checkbox" name="area[]" id="west" value="2"
+                                            class="checkbox_list">
+                                        県西部</label>
+                                @endif
+                            @else
+                                <label><input type="checkbox" name="area[]" id="west" value="2"
+                                        class="checkbox_list">
+                                    県西部</label>
+                            @endif
+                            {{-- <label><input id="area_id" class="" type="checkbox" name="area[]"
+                                    value="2">県西部</label> --}}
+                        </td>
+                        <td>
+                            @if ($area_id != null)
+                                @if (in_array(3, $area_id))
+                                    <label><input type="checkbox" name="area[]" id="south" value="3"
+                                            class="checkbox_list" checked>
+                                        県南部</label>
+                                @else
+                                    <label><input type="checkbox" name="area[]" id="south" value="3"
+                                            class="checkbox_list">
+                                        県南部</label>
+                                @endif
+                            @else
+                                <label><input type="checkbox" name="area[]" id="south" value="3"
+                                        class="checkbox_list">
+                                    県南部</label>
+                            @endif
+                            {{-- <label><input id="area_id" class="" type="checkbox" name="area[]"
+                                    value="3">県南部</label> --}}
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <label><input id="area_id" class="" type="checkbox" name="area[]"
-                                    value="3">県南部</label>
-                        </td>
+                    {{-- <tr>
+
                         <td>
                             <label><input id="area_id" class="" type="checkbox" name="area[]"
                                     value="4">全域</label>
                         </td>
-                    </tr>
+                    </tr> --}}
                 </table>
 
                 <h3 class="checkbox-title">設備</h3>
@@ -54,73 +100,159 @@
                 <table class="mobile_table" border="2" cellspacing="0">
                     <tr>
                         <td>
-                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1">観光案内</label>
+                            @if (isset($guide_icon) && $guide_icon == 1)
+                                <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1"
+                                        checked>観光案内</label>
+                            @else
+                                <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1">観光案内</label>
+                            @endif
                         </td>
                         <td>
-                            <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1">ショップ</label>
+                            @if (isset($shop_icon) && $shop_icon == 1)
+                                <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1"
+                                        checked>ショップ</label>
+                            @else
+                                <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1">ショップ</label>
+                            @endif
                         </td>
 
                     </tr>
                     <tr>
                         <td>
-                            <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon"
-                                    value="1">軽食・喫茶</label>
+                            @if (isset($lightmeal_icon) && $lightmeal_icon == 1)
+                                <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon" value="1"
+                                        checked>軽食・喫茶</label>
+                            @else
+                                <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon"
+                                        value="1">軽食・喫茶</label>
+                            @endif
                         </td>
                         <td>
-                            <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon"
-                                    value="1">レストラン</label>
+                            @if (isset($restaurant_icon) && $restaurant_icon == 1)
+                                <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon" value="1"
+                                        checked>レストラン</label>
+                            @else
+                                <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon"
+                                        value="1">レストラン</label>
+                            @endif
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (isset($experience_icon) && $experience_icon == 1)
+                                <label><input id="experience_icon" type="checkbox" name="experience_icon" value="1"
+                                        checked>体験施設</label>
+                            @else
+                                <label><input id="experience_icon" type="checkbox" name="experience_icon"
+                                        value="1">体験施設</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($disability_icon) && $disability_icon == 1)
+                                <label><input id="disability_icon" type="checkbox" name="disability_icon" value="1"
+                                        checked>身障者トイレ</label>
+                            @else
+                                <label><input id="disability_icon" type="checkbox" name="disability_icon"
+                                        value="1">身障者トイレ</label>
+                            @endif
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label><input id="experience_icon" type="checkbox" name="experience_icon"
-                                    value="1">体験施設</label>
+                            @if (isset($park_icon) && $park_icon == 1)
+                                <label><input id="park_icon" type="checkbox" name="park_icon" value="1"
+                                        checked>公園</label>
+                            @else
+                                <label><input id="park_icon" type="checkbox" name="park_icon" value="1">公園</label>
+                            @endif
                         </td>
                         <td>
-                            <label><input id="disability_icon" type="checkbox" name="disability_icon"
-                                    value="1">身障者トイレ</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label><input id="park_icon" type="checkbox" name="park_icon" value="1">公園</label>
-                        </td>
-                        <td>
-                            <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1">ベビーベッド</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
-                                    value="1">宿泊施設</label>
-                        </td>
-                        <td>
-                            <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1">温泉施設</label>
+                            @if (isset($bed_icon) && $bed_icon == 1)
+                                <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1"
+                                        checked>ベビーベッド</label>
+                            @else
+                                <label><input id="bed_icon" type="checkbox" name="bed_icon"
+                                        value="1">ベビーベッド</label>
+                            @endif
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label><input id="shower_icon" type="checkbox" name="shower_icon" value="1">シャワー</label>
+                            @if (isset($accommodation_icon) && $accommodation_icon == 1)
+                                <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
+                                        value="1" checked>宿泊施設</label>
+                            @else
+                                <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
+                                        value="1">宿泊施設</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($spa_icon) && $accommodation_icon == 1)
+                                <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1"
+                                        checked>温泉施設</label>
+                            @else
+                                <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1">温泉施設</label>
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (isset($shower_icon) && $shower_icon == 1)
+                                <label><input id="shower_icon" type="checkbox" name="shower_icon" value="1"
+                                        checked>シャワー</label>
+                            @else
+                                <label><input id="shower_icon" type="checkbox" name="shower_icon"
+                                        value="1">シャワー</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($observatory_icon) && $observatory_icon == 1)
+                                <label><input id="observatory_icon" type="checkbox" name="observatory_icon"
+                                        value="1" checked>展望台</label>
+                            @else
+                                <label><input id="observatory_icon" type="checkbox" name="observatory_icon"
+                                        value="1">展望台</label>
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (isset($ev_icon) && $ev_icon == 1)
+                                <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1"
+                                        checked>EV充電施設</label>
+                            @else
+                                <label><input id="ev_icon" type="checkbox" name="ev_icon"
+                                        value="1">EV充電施設</label>
+                            @endif
 
                         </td>
                         <td>
-                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon"
-                                    value="1">展望台</label>
+                            @if (isset($lan_icon) && $lan_icon == 1)
+                                <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1"
+                                        checked>無線LAN</label>
+                            @else
+                                <label><input id="lan_icon" type="checkbox" name="lan_icon"
+                                        value="1">無線LAN</label>
+                            @endif
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1">EV充電施設</label>
-                        </td>
+                            @if (isset($atm_icon) && $atm_icon == 1)
+                                <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1"
+                                        checked>ATM</label>
+                            @else
+                                <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1">ATM</label>
+                            @endif
                         <td>
-                            <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1">無線LAN</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1">ATM</label>
-                        <td>
-                            <label><input id="museum_icon" type="checkbox" name="museum_icon" value="1">美術館・博物館</label>
+                            @if (isset($museum_icon) && $museum_icon == 1)
+                                <label><input id="museum_icon" type="checkbox" name="museum_icon" value="1"
+                                        checked>美術館・博物館</label>
+                            @else
+                                <label><input id="museum_icon" type="checkbox" name="museum_icon"
+                                        value="1">美術館・博物館</label>
+                            @endif
                         </td>
 
                     </tr>
@@ -141,112 +273,246 @@
 
                 <table class="pc-table" border="2" cellspacing="0">
                     <tr>
-                        <td><label><input id="area_id" class="" type="checkbox" name="area[]"
-                                    value="1">県東部</label>
-                        </td>
                         <td>
+                            @if ($area_id != null)
+                                @if (in_array(1, $area_id))
+                                    <label><input type="checkbox" name="area[]" id="east" value="1"
+                                            class="checkbox_list" checked>
+                                        県東部</label>
+                                @else
+                                    <label><input type="checkbox" name="area[]" id="east" value="1"
+                                            class="checkbox_list">
+                                        県東部</label>
+                                @endif
+                            @else
+                                <label><input type="checkbox" name="area[]" id="east" value="1"
+                                        class="checkbox_list">
+                                    県東部</label>
+                            @endif
+
+                            {{--
                             <label><input id="area_id" class="" type="checkbox" name="area[]"
-                                    value="2">県西部</label>
+                                    value="1">県東部</label> --}}
                         </td>
                         <td>
-                            <label><input id="area_id" class="" type="checkbox" name="area[]"
-                                    value="3">県南部</label>
+                            @if ($area_id != null)
+                                @if (in_array(2, $area_id))
+                                    <label><input type="checkbox" name="area[]" id="west" value="2"
+                                            class="checkbox_list" checked>
+                                        県西部</label>
+                                @else
+                                    <label><input type="checkbox" name="area[]" id="west" value="2"
+                                            class="checkbox_list">
+                                        県西部</label>
+                                @endif
+                            @else
+                                <label><input type="checkbox" name="area[]" id="west" value="2"
+                                        class="checkbox_list">
+                                    県西部</label>
+                            @endif
+                            {{-- <label><input id="area_id" class="" type="checkbox" name="area[]"
+                                    value="2">県西部</label> --}}
                         </td>
                         <td>
+                            @if ($area_id != null)
+                                @if (in_array(3, $area_id))
+                                    <label><input type="checkbox" name="area[]" id="south" value="3"
+                                            class="checkbox_list" checked>
+                                        県南部</label>
+                                @else
+                                    <label><input type="checkbox" name="area[]" id="south" value="3"
+                                            class="checkbox_list">
+                                        県南部</label>
+                                @endif
+                            @else
+                                <label<label for="south" class="s_search_btn">><input type="checkbox" name="area[]"
+                                        id="south" value="3" class="checkbox_list">
+                                    県南部</label>
+                            @endif
+                            {{-- <label><input id="area_id" class="" type="checkbox" name="area[]"
+                                    value="3">県南部</label> --}}
+                        </td>
+                        {{-- <td>
                             <label><input id="area_id" class="" type="checkbox" name="area[]"
                                     value="4">全域</label>
-                        </td>
+                        </td> --}}
                     </tr>
                 </table>
 
                 <h3 class="checkbox-title">設備</h3>
 
                 <table class="pc-table" border="2" cellspacing=" 0">
-                    <td>
-                        <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1">観光案内</label>
-                    </td>
-                    <td>
-                        <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1">ショップ</label>
-                    </td>
-                    <td>
-                        <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon"
-                                value="1">軽食・喫茶</label>
-                    </td>
-                    <td>
-                        <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon"
-                                value="1">レストラン</label>
-                    </td>
-                    </tr>
                     <tr>
                         <td>
-                            <label><input id="experience_icon" type="checkbox" name="experience_icon"
-                                    value="1">体験施設</label>
+                            @if (isset($guide_icon) && $guide_icon == 1)
+                                <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1"
+                                        checked>観光案内</label>
+                            @else
+                                <label><input id="guide_icon" type="checkbox" name="guide_icon"
+                                        value="1">観光案内</label>
+                            @endif
                         </td>
                         <td>
-                            <label><input id="disability_icon" type="checkbox" name="disability_icon"
-                                    value="1">身障者トイレ</label>
+                            @if (isset($shop_icon) && $shop_icon == 1)
+                                <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1"
+                                        checked>ショップ</label>
+                            @else
+                                <label><input id="shop_icon" type="checkbox" name="shop_icon"
+                                        value="1">ショップ</label>
+                            @endif
                         </td>
                         <td>
-                            <label><input id="park_icon" type="checkbox" name="park_icon" value="1">公園</label>
-
+                            @if (isset($lightmeal_icon) && $lightmeal_icon == 1)
+                                <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon" value="1"
+                                        checked>軽食・喫茶</label>
+                            @else
+                                <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon"
+                                        value="1">軽食・喫茶</label>
+                            @endif
                         </td>
                         <td>
-                            <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1">ベビーベッド</label>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
-                                    value="1">宿泊施設</label>
-                        </td>
-                        <td>
-                            <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1">温泉施設</label>
-
-                        </td>
-                        <td>
-                            <label><input id="shower_icon" type="checkbox" name="shower_icon"
-                                    value="1">シャワー</label>
-
-                        </td>
-                        <td>
-                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon"
-                                    value="1">展望台</label>
-
+                            @if (isset($restaurant_icon) && $restaurant_icon == 1)
+                                <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon" value="1"
+                                        checked>レストラン</label>
+                            @else
+                                <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon"
+                                        value="1">レストラン</label>
+                            @endif
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1">EV充電施設</label>
+                            @if (isset($experience_icon) && $experience_icon == 1)
+                                <label><input id="experience_icon" type="checkbox" name="experience_icon" value="1"
+                                        checked>体験施設</label>
+                            @else
+                                <label><input id="experience_icon" type="checkbox" name="experience_icon"
+                                        value="1">体験施設</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($disability_icon) && $disability_icon == 1)
+                                <label><input id="disability_icon" type="checkbox" name="disability_icon" value="1"
+                                        checked>身障者トイレ</label>
+                            @else
+                                <label><input id="disability_icon" type="checkbox" name="disability_icon"
+                                        value="1">身障者トイレ</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($park_icon) && $park_icon == 1)
+                                <label><input id="park_icon" type="checkbox" name="park_icon" value="1"
+                                        checked>公園</label>
+                            @else
+                                <label><input id="park_icon" type="checkbox" name="park_icon" value="1">公園</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($bed_icon) && $bed_icon == 1)
+                                <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1"
+                                        checked>ベビーベッド</label>
+                            @else
+                                <label><input id="bed_icon" type="checkbox" name="bed_icon"
+                                        value="1">ベビーベッド</label>
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (isset($accommodation_icon) && $accommodation_icon == 1)
+                                <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
+                                        value="1" checked>宿泊施設</label>
+                            @else
+                                <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
+                                        value="1">宿泊施設</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($spa_icon) && $accommodation_icon == 1)
+                                <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1"
+                                        checked>温泉施設</label>
+                            @else
+                                <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1">温泉施設</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($shower_icon) && $shower_icon == 1)
+                                <label><input id="shower_icon" type="checkbox" name="shower_icon" value="1"
+                                        checked>シャワー</label>
+                            @else
+                                <label><input id="shower_icon" type="checkbox" name="shower_icon"
+                                        value="1">シャワー</label>
+                            @endif
+                        </td>
+                        <td>
+                            @if (isset($observatory_icon) && $observatory_icon == 1)
+                                <label><input id="observatory_icon" type="checkbox" name="observatory_icon"
+                                        value="1" checked>展望台</label>
+                            @else
+                                <label><input id="observatory_icon" type="checkbox" name="observatory_icon"
+                                        value="1">展望台</label>
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (isset($ev_icon) && $ev_icon == 1)
+                                <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1"
+                                        checked>EV充電施設</label>
+                            @else
+                                <label><input id="ev_icon" type="checkbox" name="ev_icon"
+                                        value="1">EV充電施設</label>
+                            @endif
 
                         </td>
                         <td>
-                            <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1">無線LAN</label>
+                            @if (isset($lan_icon) && $lan_icon == 1)
+                                <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1"
+                                        checked>無線LAN</label>
+                            @else
+                                <label><input id="lan_icon" type="checkbox" name="lan_icon"
+                                        value="1">無線LAN</label>
+                            @endif
+
                         </td>
-                        <td><label><input id="atm_icon" type="checkbox" name="atm_icon" value="1">ATM</label>
 
                         <td>
-                            <label><input id="museum_icon" type="checkbox" name="museum_icon"
-                                    value="1">美術館・博物館</label>
+                            @if (isset($atm_icon) && $atm_icon == 1)
+                                <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1"
+                                        checked>ATM</label>
+                            @else
+                                <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1">ATM</label>
+                            @endif
+
+                        <td>
+                            @if (isset($museum_icon) && $museum_icon == 1)
+                                <label><input id="museum_icon" type="checkbox" name="museum_icon" value="1"
+                                        checked>美術館・博物館</label>
+                            @else
+                                <label><input id="museum_icon" type="checkbox" name="museum_icon"
+                                        value="1">美術館・博物館</label>
+                            @endif
+
                         </td>
 
                     </tr>
                 </table>
 
-
-
                 <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
                 <p class="submit-btn">
-                    <input class="more-btn  btn-reset" type="reset" value="リセット">
+                    <input class="more-btn  btn-reset" type="reset" value="リセット"
+                        onclick="doReload('{{ route('ditailsearch') }}')">
                     <input class="more-btn btn-search" type="submit" value="検索">
                 </p>
             </form>
 
         </section>
+
+
         <!-- 検索エリア -->
         <!-- ボタン -->
         <h3 class="search_results">
-            検索件数:({{ $com }}件)
+            検索件数:({{ $count }}件)
         </h3>
         <div class="grid">
             @foreach ($search as $road)
@@ -320,6 +586,14 @@
                     </a>
                 </div>
             @endforeach
+        </div>
+        <br><br>
+        <div class="link">
+            @php
+                // print_r(request()->query());
+            @endphp
+            {{-- {{ $search->links('pagination::bootstrap-4') }} --}}
+            {{ $search->appends(request()->query())->links('pagination::bootstrap-4') }}
         </div>
     </main>
 @endsection
