@@ -80,9 +80,20 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p>{!! $goods->discription !!}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn">
+                                        <a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -96,10 +107,20 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{!! $goods->discription !!}</p>
-                                    <p class="blog-btn">
+
+                                    {{-- <p class="blog-btn">
                                         <a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -140,9 +161,16 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-                                    <p class="blog-btn"><a
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
                                 </div>
                             </div>
                         </section>
@@ -160,9 +188,19 @@
                                     <p>{{ $goods->price }}</p>
 
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -205,9 +243,19 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -221,9 +269,19 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -267,9 +325,19 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p>{!! $goods->discription !!}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -283,9 +351,19 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{!! $goods->discription !!}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -327,9 +405,19 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{!! $goods->discription !!}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
@@ -343,9 +431,19 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-                                    <p class="blog-btn"><a
+
+                                    {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
-                                    </p>
+                                    </p> --}}
+
+                                    @foreach ($blogs as $blog)
+                                        @if ($blog->special_goods_id == $goods->id)
+                                            <p class="blog-btn"><a
+                                                    href="{{ url('blog-detail') }}?special_goods_id={{ $goods->id }}">【ブログ】行ってみたんよへ</a>
+                                            </p>
+                                        @endif
+                                    @endforeach
+
                                 </div>
                             </div>
                         </section>
