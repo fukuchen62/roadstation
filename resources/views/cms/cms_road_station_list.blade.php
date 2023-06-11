@@ -1,6 +1,6 @@
 @extends('layouts.layout_back')
 
-@section('title', '釣徳コンテンツ管理システム')
+@section('title', '阿波道の駅管理システム')
 
 @section('subtitle', '道の駅')
 
@@ -17,7 +17,7 @@
     {{-- 以下はshowのところにはめ込む --}}
     <ul class="menubar">
         <li><a href="{{ route('cms-stationlist') }}">HOME</a></li>
-        {{-- <li><a href="./newsentry">新規登録</a></li> --}}
+        <li><a href="{{ route('cms-stationinput') }}">新規登録</a></li>
     </ul>
 
     {{-- 検索条件入力フォーム --}}
@@ -28,16 +28,28 @@
     <table class="info">
         <tr>
             <th width="5%">ID</th>
-            <th>カテゴリー名前</th>
+            <th>道の駅名</th>
+            <th>エリアID</th>
             <th>読み方</th>
+            <th>キャッチフレーズ</th>
+            <th>レビュー</th>
+            <th>概要</th>
+            <th>紹介文</th>
+            <th>投稿日時</th>
             <th width="100px">修正</th>
         </tr>
-        @foreach ($road_station_list as $item)
+        @foreach ($road_stations as $item)
             <tr>
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->station_name }}</td>
+                <td>{{ $item->area_id }}</td>
                 <td>{{ $item->ruby }}</td>
-                <td class="edit"><a href="{{ route('cms-stationlist', ['id' => $item->id]) }}">編集</a></td>
+                <td>{{ $item->catchphrase }}</td>
+                <td>{{ $item->review }}</td>
+                <td>{{ $item->overview }}</td>
+                <td>{{ $item->discription }}</td>
+                <td>{{ $item->created_at }}</td>
+                <td class="edit"><a href="{{ route('cms-stationedit', ['id' => $item->id]) }}">編集</a></td>
             </tr>
         @endforeach
     </table>

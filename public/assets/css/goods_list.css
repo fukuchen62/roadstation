@@ -17,7 +17,10 @@ h2 {
     margin-bottom: 60px;
     padding: 20px;
     text-align: center;
-    background-image: url(../images/hedline_yellow.png);
+    background-image: url(../images/illustrations/headline/goods_list_headline.png);
+    width: 1200px;
+    height: 150px;
+
     background-position: center;
     background-repeat: no-repeat;
     color: #B45A27;
@@ -245,6 +248,7 @@ h4 {
         max-width: 140px;
     }
 }
+
 @media screen and (min-width:485px) {
     .goods-photo {
         max-width: 170px;
@@ -278,111 +282,112 @@ h4 {
     }
 
     .blog-btn img {
-    max-width: 700px;
-    height: auto;
-    object-fit: cover;
+        max-width: 700px;
+        height: auto;
+        object-fit: cover;
     }
 
 }
-    /* デスクトップレイアウト */
-    @media screen and (min-width:980px) {
-        section {
+
+/* デスクトップレイアウト */
+@media screen and (min-width:980px) {
+    section {
         margin: 0 auto;
     }
 
 
 
-        .goods-photo {
-            max-width: 200px;
-        }
+    .goods-photo {
+        max-width: 200px;
+    }
 }
 
-    /* PC(デスクトップサイズ) */
-    @media screen and (min-width:1180px) {
+/* PC(デスクトップサイズ) */
+@media screen and (min-width:1180px) {
 
-        h3 {
-            font-size: 32px;
-        }
-
-        .goods-photo {
-            max-width: 255px;
-        }
-
-        .goods {
-            display: flex;
-            justify-content: center;
-            gap: 30px 20px;
-            flex-wrap: wrap;
-            text-align: center;
-        }
-
-        .goods-box {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .activity-photo {
-            max-width: 550px;
-            /* max-height: 380px; */
-            width: 100%;
-        }
-
-        .item-group {
-            display: flex;
-            max-width: 1200px;
-            width: 100%;
-            margin: 50px auto auto auto;
-        }
-
-        .detail-photo {
-            max-height: 450px;
-            margin-right: 50px;
-            margin-top: 0;
-        }
-
-        .item-text-group {
-            flex-direction: column;
-        }
-
-        .item-name {
-            max-width: 220px;
-            width: 100%;
-            margin-top: 100px;
-        }
-
-        .headline-name-comment {
-            text-align: start;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .headline-name-season {
-            text-align: start;
-            margin-top: 0;
-            font-weight: bold;
-        }
-
-        .season-text {
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .price-text {
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .conditions-text {
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .comment-text {
-            max-width: 1200px;
-            width: 100%;
-        }
+    h3 {
+        font-size: 32px;
     }
+
+    .goods-photo {
+        max-width: 255px;
+    }
+
+    .goods {
+        display: flex;
+        justify-content: center;
+        gap: 30px 20px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .goods-box {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .activity-photo {
+        max-width: 550px;
+        /* max-height: 380px; */
+        width: 100%;
+    }
+
+    .item-group {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        margin: 50px auto auto auto;
+    }
+
+    .detail-photo {
+        max-height: 450px;
+        margin-right: 50px;
+        margin-top: 0;
+    }
+
+    .item-text-group {
+        flex-direction: column;
+    }
+
+    .item-name {
+        max-width: 220px;
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .headline-name-comment {
+        text-align: start;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .headline-name-season {
+        text-align: start;
+        margin-top: 0;
+        font-weight: bold;
+    }
+
+    .season-text {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .price-text {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .conditions-text {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .comment-text {
+        max-width: 1200px;
+        width: 100%;
+    }
+}
 
 
 .displayNone {

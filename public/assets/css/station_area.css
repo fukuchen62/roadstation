@@ -75,7 +75,10 @@ dl {
 }
 
 .district {
-    background-image: url(../images/hedline_yellow.png);
+    background-image: url(../images/illustrations/headline/station_area_headline.png);
+    width: 1200px;
+    height: 150px;
+
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
@@ -164,10 +167,9 @@ dl {
     }
 
     .district {
-        background-image: url(../images/hedline_yellow.png);
-        background-repeat: no-repeat;
-        /* margin-top: 200px; */
-
+        background-image: url(../images/illustrations/headline/station_area_headline.png);
+        width: 1200px;
+        height: 150px;
     }
 }
 

@@ -3,7 +3,10 @@
 h2 {
     text-align: center;
     padding: 60px;
-    background-image: url(../images/hedline_yellow.png);
+    background-image: url(../images/illustrations/headline/);
+    width: 1200px;
+    height: 150px;
+
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;

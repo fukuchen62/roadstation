@@ -18,6 +18,7 @@ body {
 
 h1 {
     padding-left: 5px;
+    margin-right: 15px;
 }
 
 h2 {
@@ -72,7 +73,8 @@ a:hover {
 
 /* ↓もっと見るボタン */
 .btn {
-    padding: 20px 20px;
+    padding: 20px 100px;
+    border-radius: 50px;
     background-color: #A7D28D;
 }
 
@@ -335,7 +337,9 @@ footer {
         text-align: center;
         display: flex;
         justify-content: center;
-        background-image: url(../images/header/bg_header_green.png);
+        background-color: #fffbf1;
+
+        /* background-image: url(../images/header/bg_header_green.png); */
         background-position: center;
         background-size: cover;
         z-index: 999;
