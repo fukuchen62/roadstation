@@ -111,13 +111,14 @@ dt {
 
 .west-title {
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     /* padding: 20px 23px; */
-    border-bottom: dotted 10px #e7d955;
+    /* border-bottom: dotted 10px #e7d955; */
     font-size: 30px;
-    color: #B45A27;
-    /* padding: 1rem 0; */
-
+    color: #ffffff;
+    background-color: #96c97b;
+    border-radius: 20px;
+    padding: 1rem 0;
     margin: 30px auto 30px auto;
 
 
@@ -126,31 +127,23 @@ dt {
 
 .west-title::before {
     content: '';
-    /*何も入れない*/
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
     height: 50px;
-    /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/west1.png);
     background-repeat: no-repeat;
     background-size: contain;
     vertical-align: middle;
     margin-right: 10px;
-
-
 }
 
 
 .west-title::after {
     content: '';
-    /*何も入れない*/
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
     height: 50px;
-    /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/west2.png);
     background-repeat: no-repeat;
@@ -164,24 +157,23 @@ dt {
 
 .south-title {
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     /* padding: 20px 23px; */
-    border-bottom: dotted 10px #e7d955;
+    /* border-bottom: dotted 10px #e7d955; */
     font-size: 30px;
-    color: #B45A27;
-    /* padding: 1rem 0; */
+    color: #ffffff;
+    background-color: #96c97b;
+    border-radius: 20px;
+    padding: 1rem 0;
     margin: 30px auto 30px auto;
 }
 
 
 .south-title::before {
     content: '';
-    /*何も入れない*/
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
     height: 50px;
-    /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/south2.png);
     background-repeat: no-repeat;
