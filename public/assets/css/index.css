@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 基本情報 */
 h3 {
     font-weight: bold;
     text-align: center;
@@ -169,6 +170,7 @@ section {
     text-align: center;
 }
 
+/* 特産品特集 */
 .goods {
     display: flex;
     flex-wrap: wrap;
@@ -181,13 +183,15 @@ section {
     align-items: center;
 }
 
-.goods-1 {
+/* 画像のタイル */
+.image-tile {
     width: 120px;
     height: 120px;
     border-radius: 30px;
     object-fit: cover;
 }
 
+/* 文字のタイル */
 .goods-2 {
     width: 120px;
     height: 120px;
@@ -200,10 +204,12 @@ section {
     padding: 20px;
 }
 
+/* 文字の解説 */
 .goods-strapline {
     display: none;
 }
 
+/* ボタン */
 .goods-pcbtn {
     display: none;
 }
@@ -216,6 +222,7 @@ section {
     text-align: center;
 }
 
+/* 体験 */
 .activity {
     display: flex;
     flex-wrap: wrap;
@@ -227,18 +234,7 @@ section {
     margin-bottom: 30px;
 }
 
-.activityli {
-    width: 360px;
-    text-align: center;
-}
-
-.activity-1 {
-    width: 120px;
-    height: 120px;
-    border-radius: 30px;
-    object-fit: cover;
-}
-
+/* 文字のタイル */
 .activity-2 {
     width: 120px;
     height: 120px;
@@ -337,7 +333,7 @@ imgcontent-wrapper .heading {
 
 .blog-card {
     width: 100%;
-    height: auto;
+    height: 650px;
     padding: 20px;
     border-radius: 20px;
     justify-content: center;
@@ -385,6 +381,15 @@ imgcontent-wrapper .heading {
         /* margin-top: 100vh; */
     }
 
+    /* KV */
+    .top-kv video {
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+        object-position: center bottom;
+    }
+
+    /* ブログカードのカラム設定 */
     .blog-wrapper {
         display: flex;
         flex-direction: column;
@@ -399,19 +404,14 @@ imgcontent-wrapper .heading {
         padding-bottom: 10px;
     }
 
+    /* 特集見出し */
     .sp-h2 {
         color: #ffffff;
         font-size: 2.5rem;
         margin-top: 30%;
     }
 
-    .top-kv video {
-        width: 100%;
-        height: 90vh;
-        object-fit: cover;
-        object-position: center bottom;
-    }
-
+    /* ニュース */
     .news-box {
         display: flex;
         text-align: center;
@@ -534,23 +534,17 @@ imgcontent-wrapper .heading {
     }
 
     .goods {
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
+        width: 761px;
+        text-align: center;
         margin-bottom: 30px;
         justify-content: center;
         margin: 0 auto;
         margin-bottom: 30px;
-        align-items: center;
     }
 
-
-    .goodsli {
-        width: 761px;
-        text-align: center;
-    }
-
-    .goods-1 {
+    .image-tile {
         width: 253px;
         height: 253px;
         border-radius: 30px;
@@ -618,13 +612,6 @@ imgcontent-wrapper .heading {
     .activityli {
         width: 761px;
         text-align: center;
-    }
-
-    .activity-1 {
-        width: 253px;
-        height: 253px;
-        border-radius: 30px;
-        object-fit: cover;
     }
 
 
@@ -755,20 +742,17 @@ imgcontent-wrapper .heading {
         left: 30px;
     }
 
-
+    /* ニュースの囲み */
     .news-box {
         display: flex;
-        text-align: center;
-        justify-content: center;
-        background-color: #ffff;
         border-radius: 50%;
         padding: 30px;
-        margin: 0 auto;
+        margin: 100px auto;
         margin-bottom: 30px;
         width: 75%;
-        align-items: baseline;
     }
 
+    /* ニュースボタン */
     .news-pcbtn {
         text-align: center;
         border-radius: 50px;
@@ -781,11 +765,12 @@ imgcontent-wrapper .heading {
         display: inline-block;
     }
 
+    /* モバイル版：ニュースボタン */
     .mobilebtn {
         display: none;
     }
 
-
+    /* 東部、西部、南部のボタン位置 */
     .east {
         top: 20%;
         left: 57%;
@@ -801,30 +786,6 @@ imgcontent-wrapper .heading {
         left: 50%;
     }
 
-    .area {
-        text-align: center;
-    }
-
-
-    .station_detail {
-        text-align: center;
-        border-radius: 50px;
-        background-color: #B45A27;
-        color: #ffff;
-        font-size: 20px;
-        padding: 20px 30px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        display: inline-block;
-        margin-top: 5%;
-    }
-
-
-    .section-title {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
     .goods-wrapper {
         margin: 0 auto;
         width: 100%;
@@ -832,7 +793,6 @@ imgcontent-wrapper .heading {
         justify-content: center;
         /* margin-bottom: 50px; */
         text-align: center;
-
     }
 
     .goods {
@@ -847,13 +807,7 @@ imgcontent-wrapper .heading {
         align-items: center;
     }
 
-
-    .goodsli {
-        width: 761px;
-        text-align: center;
-    }
-
-    .goods-1 {
+    .image-tile {
         width: 330px;
         height: 330px;
         border-radius: 30px;
@@ -919,13 +873,6 @@ imgcontent-wrapper .heading {
     .activityli {
         width: 761px;
         text-align: center;
-    }
-
-    .activity-1 {
-        width: 330px;
-        height: 330px;
-        border-radius: 30px;
-        object-fit: cover;
     }
 
 
@@ -1006,7 +953,7 @@ imgcontent-wrapper .heading {
 
     .blog-card {
         width: 90%;
-        height: auto;
+        height: 650px;
         padding: 20px;
         border-radius: 20px;
         justify-content: center;
