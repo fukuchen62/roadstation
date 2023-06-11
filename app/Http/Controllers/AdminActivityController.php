@@ -80,9 +80,10 @@ class AdminActivityController extends Controller
         // ログインユーザーの情報取得
         $login_user = Auth::user();
 
-        // カテゴリー
+        // 各カテゴリー
         $blog_category_items = BlogCategory::All();
         $station_id_items = RoadStation::All();
+
         $data = [
             'login_user' => $login_user,
             'category_items' => $blog_category_items,
@@ -93,7 +94,7 @@ class AdminActivityController extends Controller
 
     /**
      * newsCreate function
-     * ニュース投稿処理
+     * アクティビティ新規投稿処理
      *
      * @param Request $request
      * @return void
@@ -116,7 +117,7 @@ class AdminActivityController extends Controller
         unset($form['_token']);
 
         // インスタンスのuser_idプロパティにログイン中のユーザーIDを代入
-        $activity->user_id = $login_user->id;
+        // $activity->user_id = $login_user->id;
 
         // インスタンスを保存
         $activity->fill($form)->save();
@@ -141,7 +142,8 @@ class AdminActivityController extends Controller
     }
 
     /**
-     * newsEdit function
+     * activityEdit function
+     * 編集画面表示
      *
      * @param Request $request
      * @return void
@@ -154,7 +156,7 @@ class AdminActivityController extends Controller
         // idによる編集するデータを取得
         $item = Activity::find($request->id);
 
-        // カテゴリー
+        // 各カテゴリー取得
         $blog_category_items = BlogCategory::All();
         $station_id_items = RoadStation::All();
 
@@ -171,8 +173,8 @@ class AdminActivityController extends Controller
     }
 
     /**
-     * newsUpdate function
-     * ニュース編集処理
+     * activityUpdate function
+     * アクティビティ編集処理
      *
      * @param Request $request
      * @return void
@@ -220,8 +222,8 @@ class AdminActivityController extends Controller
     }
 
     /**
-     * Undocumented function
-     * ニュースを削除
+     * activityDelete function
+     * アクティビティを削除
      *
      * @param Request $request
      * @return void
