@@ -206,7 +206,7 @@ class AdminRoadstationController extends Controller
 
         // 渡すデータ
         $data = [
-            'news_list' => $items,
+            'road_stations' => $items,
             'count' => $news_count,
             'login_user' => $login_user,
         ];
@@ -247,7 +247,7 @@ class AdminRoadstationController extends Controller
 
         // 渡すデータ
         $data = [
-            'news_list' => $items,
+            'road_stations' => $items,
             'count' => $news_count,
             'login_user' => $login_user,
         ];
