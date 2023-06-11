@@ -21,23 +21,11 @@ class NewsController extends Controller
      */
     public function newsListView(Request $request)
     {
-        if ($request->id == 1) {
+        if (isset($request->news_category_id)) {
 
-            $items = News::where('deleted_at', null)
+            $items = News::where('news_category_id', $request->news_category_id)
+                ->where('deleted_at', null)
                 ->where('is_show', 1)
-                ->where('news_category_id', 1)
-                ->orderby('id', 'DESC')
-                ->paginate(4);
-        } elseif ($request->id == 2) {
-            $items = News::where('deleted_at', null)
-                ->where('is_show', 1)
-                ->where('news_category_id', 2)
-                ->orderby('id', 'DESC')
-                ->paginate(4);
-        } elseif ($request->id == 3) {
-            $items = News::where('deleted_at', null)
-                ->where('is_show', 1)
-                ->where('news_category_id', 3)
                 ->orderby('id', 'DESC')
                 ->paginate(4);
         } else {
@@ -47,20 +35,43 @@ class NewsController extends Controller
                 ->paginate(4);
         }
 
+
+        // if ($request->news_category_id == 1) {
+
+        //     $items = News::where('deleted_at', null)
+        //         ->where('is_show', 1)
+        //         ->where('news_category_id', 1)
+        //         ->orderby('id', 'DESC')
+        //         ->paginate(4);
+        // } elseif ($request->news_category_id == 2) {
+        //     $items = News::where('deleted_at', null)
+        //         ->where('is_show', 1)
+        //         ->where('news_category_id', 2)
+        //         ->orderby('id', 'DESC')
+        //         ->paginate(4);
+        // } elseif ($request->news_category_id == 3) {
+        //     $items = News::where('deleted_at', null)
+        //         ->where('is_show', 1)
+        //         ->where('news_category_id', 3)
+        //         ->orderby('id', 'DESC')
+        //         ->paginate(4);
+        // } else {
+        //     $items = News::where('deleted_at', null)
+        //         ->where('is_show', 1)
+        //         ->orderby('id', 'DESC')
+        //         ->paginate(4);
+        // }
+
         $category = NewsCategory::all();
 
         $data = [
             'news' => $items,
+            // 'news_category' => $news_category,
             'news_categories' => $category,
         ];
 
         return view('fronts.news_list', $data);
     }
-
-
-
-
-
 
 
     /**
@@ -75,13 +86,6 @@ class NewsController extends Controller
         $item = News::where('id', $request->id)
             ->get();
 
-        // $id = $request->id;
-        // $item = News::find($id);
-
-        // $counts = News::where('is_show', 1)
-        //     ->latest($id)
-        //     ->get();
-
         $items = News::where('news_category_id', $request->news_category_id)
             ->wherenot('id', $request->id)
             ->where('is_show', 1)
@@ -90,11 +94,15 @@ class NewsController extends Controller
 
         $category = NewsCategory::all();
 
+        // $station_id = Blog::where('road_station_id', $request->road_station_id)
+        //     ->where('is_show', 1);
+
+
         $data = [
             'news' => $item,
             'categories' => $items,
             'news_categories' => $category,
-            // 'counts' => $counts,
+
         ];
 
         return view('fronts.news', $data);
