@@ -90,17 +90,202 @@
             <tr>
                 <th> <span>*</span> 郵便番号：</th>
                 <td>
-                    <textarea name="zip_code" id="content" cols="50" rows="5" required>{{ $road_stations->zip_code }}</textarea>
+                    <input type="text" name="zip_code" id="content" required value="{{ $road_stations->zip_code }}">
                 </td>
             </tr>
             <tr>
-                <th>アイキャッチ画像: </th>
-                <td><input type="text" name="picture" value="{{ $road_stations->picture }}"></td>
+                <th>住所: </th>
+                <td><input type="text" name="address" required value="{{ $road_stations->address }}"></td>
             </tr>
             <tr>
-                <th>関連道の駅: </th>
-                <td><input type="text" name="station_list" placeholder="1|2|a"
-                        value="{{ $road_stations->station_list }}"></td>
+                <th> <span>*</span> 営業時間：</th>
+                <td>
+                    <input type="text" name="business_hours" id="content" required
+                        value="{{ $road_stations->business_hours }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 定休日：</th>
+                <td>
+                    <input type="text" name="regular_holiday" id="content" required
+                        value="{{ $road_stations->regular_holiday }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 駐車場：</th>
+                <td>
+                    <input type="text" name="parking" id="content" required value="{{ $road_stations->parking }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 電話番号：</th>
+                <td>
+                    <input type="text" name="tel" id="content" required value="{{ $road_stations->tel }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 道の駅公式ＵＲＬ：</th>
+                <td>
+                    <input type="text" name="url" id="content" required value="{{ $road_stations->url }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> SNS：</th>
+                <td>
+                    <input type="text" name="sns" id="content" required value="{{ $road_stations->sns }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> マップURL：</th>
+                <td>
+                    <textarea name="map_url" id="" cols="30" rows="10" required>{{ $road_stations->map_url }}</textarea>
+                    {{-- <input type="text" name="zip_code" id="content" required value="{{ $road_stations->zip_code }}"> --}}
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 経度：</th>
+                <td>
+                    <input type="text" name="longitude" id="content" required value="{{ $road_stations->longitude }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 緯度：</th>
+                <td>
+                    <input type="text" name="latitude" id="content" required value="{{ $road_stations->latitude }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> KV画像1：</th>
+                <td>
+                    <input type="text" name="picture1" id="content" required value="{{ $road_stations->picture1 }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> KV画像2：</th>
+                <td>
+                    <input type="text" name="picture2" id="content" required value="{{ $road_stations->picture2 }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> KV画像2：</th>
+                <td>
+                    <input type="text" name="picture2" id="content" required value="{{ $road_stations->picture2 }}">
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> ATM: </th>
+                <td>
+                    <input type="boolean" name="atm_icon" value="1" value="{{ $road_stations->atm_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> ベビーベッド: </th>
+                <td>
+                    <input type="boolean" name="bed_icon" value="1" value="{{ $road_stations->bed_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> レストラン: </th>
+                <td>
+                    <input type="boolean" name="restaurant_icon" value="1"
+                        value="{{ $road_stations->restaurant_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 軽食・喫茶: </th>
+                <td>
+                    <input type="boolean" name="lightmeal_icon" value="1"
+                        value="{{ $road_stations->lightmeal_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 宿泊施設: </th>
+                <td>
+                    <input type="boolean" name="accommodation_icon" value="1"
+                        value="{{ $road_stations->accommodation_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 温泉施設: </th>
+                <td>
+                    <input type="boolean" name="spa_icon" value="1" value="{{ $road_stations->spa_icon }}"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 公園: </th>
+                <td>
+                    <input type="boolean" name="park_icon" value="1" value="{{ $road_stations->park_icon }}"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> EV充電施設: </th>
+                <td>
+                    <input type="boolean" name="ev_icon" value="1" value="{{ $road_stations->ev_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 無線LAN: </th>
+                <td>
+                    <input type="boolean" name="lan_icon" value="1" value="{{ $road_stations->lan_icon }}"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> シャワー: </th>
+                <td>
+                    <input type="boolean" name="shower_icon" value="1" value="{{ $road_stations->shower_icon }}"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 体験施設: </th>
+                <td>
+                    <input type="boolean" name="experience_icon" value="1"
+                        value="{{ $road_stations->experience_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 観光案内: </th>
+                <td>
+                    <input type="boolean" name="guide_icon" value="1" value="{{ $road_stations->guide_icon }}"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 身障者トイレ: </th>
+                <td>
+                    <input type="boolean" name="disability_icon" value="1"
+                        value="{{ $road_stations->disability_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> ショップ: </th>
+                <td>
+                    <input type="boolean" name="shop_icon" value="1" value="{{ $road_stations->shop_icon }}"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 展望台: </th>
+                <td>
+                    <input type="boolean" name="observatory_icon" value="1"
+                        value="{{ $road_stations->observatory_icon }}" required>
+                </td>
+            </tr>
+            <tr>
+                <th> <span>*</span> 美術館・博物館: </th>
+                <td>
+                    <input type="boolean" name="museum_icon" value="1" value="{{ $road_stations->museum_icon }}"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <th> 備考欄：</th>
+                <td>
+                    <textarea name="memo" id="content" cols="50" rows="5">{{ $road_stations->memo }}</textarea>
+                </td>
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
