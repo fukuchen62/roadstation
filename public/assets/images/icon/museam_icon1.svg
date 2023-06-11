@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #ccc;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.6px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m25,1.88c1.65,0,3,1.35,3,3v20c0,1.65-1.35,3-3,3H5c-1.65,0-3-1.35-3-3V4.88c0-1.65,1.35-3,3-3h20m0-2H5C2.24-.12,0,2.11,0,4.88v20c0,2.76,2.24,5,5,5h20c2.76,0,5-2.24,5-5V4.88c0-2.76-2.24-5-5-5h0Z"/>
+  <polyline class="cls-2" points="5.28 10 15 4.65 24.72 10.49"/>
+  <line class="cls-2" x1="7.28" y1="22.1" x2="22.72" y2="22.1"/>
+  <line class="cls-2" x1="5.28" y1="25.1" x2="24.72" y2="25.1"/>
+  <line class="cls-2" x1="7.22" y1="12.86" x2="7.22" y2="19.18"/>
+  <line class="cls-2" x1="11.11" y1="12.86" x2="11.11" y2="19.18"/>
+  <line class="cls-2" x1="18.89" y1="12.86" x2="18.89" y2="19.18"/>
+  <line class="cls-2" x1="22.78" y1="12.86" x2="22.78" y2="19.18"/>
+  <circle class="cls-1" cx="15" cy="9.28" r="1.6"/>
+</svg>
