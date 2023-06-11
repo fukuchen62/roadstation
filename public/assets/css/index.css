@@ -25,12 +25,15 @@ section {
 }
 
 /* キービジュアル */
+.top-kv {
+    z-index: -9999;
+}
+
 .top-kv video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     object-position: center bottom;
-    z-index: -999;
 }
 
 /* PC版：ナビゲーションメニュー */
