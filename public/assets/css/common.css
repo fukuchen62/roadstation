@@ -66,14 +66,14 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 100px;
-    background-color: #ccc;
+    background-color: #A7D28D;
     z-index: 999;
 }
 
 /* ↓もっと見るボタン */
 .btn {
     padding: 20px 20px;
-    background-color: #ccc;
+    background-color: #A7D28D;
 }
 
 /* PC版：ナビゲーションメニュー*/
@@ -289,7 +289,7 @@ footer {
 }
 
 /* PC(デスクトップサイズ) */
-@media screen and (min-width:900px) {
+@media screen and (min-width:1000px) {
 
     .nav-mobile {
         display: none;
