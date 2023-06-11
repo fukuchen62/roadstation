@@ -192,7 +192,7 @@ section {
 }
 
 /* 文字のタイル */
-.goods-2 {
+.goods-title {
     width: 120px;
     height: 120px;
     align-items: center;
@@ -235,7 +235,7 @@ section {
 }
 
 /* 文字のタイル */
-.activity-2 {
+.activity-title {
     width: 120px;
     height: 120px;
     border-radius: 30px;
@@ -534,14 +534,7 @@ imgcontent-wrapper .heading {
     }
 
     .goods {
-        display: flex;
-        flex-wrap: wrap;
         width: 761px;
-        text-align: center;
-        margin-bottom: 30px;
-        justify-content: center;
-        margin: 0 auto;
-        margin-bottom: 30px;
     }
 
     .image-tile {
@@ -552,7 +545,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .goods-2 {
+    .goods-title {
         width: 253px;
         height: 253px;
         align-items: center;
@@ -615,7 +608,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    .activity-2 {
+    .activity-title {
         width: 253px;
         height: 253px;
         border-radius: 30px;
@@ -684,7 +677,45 @@ imgcontent-wrapper .heading {
     }
 }
 
+
 @media screen and (min-width:901px) {
+
+    /* PC版：画像サイズ */
+    .goods-title {
+        width: 250px;
+        height: 250px;
+        align-items: center;
+        border-radius: 30px;
+        background-color: #ff8871;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    }
+
+    /* PC版：画像サイズ */
+    .image-tile {
+        width: 250px;
+        height: 250px;
+    }
+
+    .activity-title {
+        width: 250px;
+        height: 250px;
+        border-radius: 30px;
+        background-color: #fbae51;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    }
+
+
+}
+
+@media screen and (min-width:1000px) {
 
     .wrapper {
         padding: 0;
@@ -725,8 +756,6 @@ imgcontent-wrapper .heading {
         background-color: #fffcef;
         z-index: 999;
     }
-
-
 
     /*うどんたぬきアニメの設定 */
     .anime2 {
@@ -790,22 +819,14 @@ imgcontent-wrapper .heading {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 150px;
-        justify-content: center;
-        /* margin-bottom: 50px; */
-        text-align: center;
     }
 
     .goods {
-        display: flex;
-        flex-wrap: wrap;
+
         width: 100%;
-        text-align: center;
-        margin-bottom: 30px;
-        justify-content: center;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        align-items: center;
+
     }
+
 
     .image-tile {
         width: 330px;
@@ -815,23 +836,15 @@ imgcontent-wrapper .heading {
     }
 
 
-    .goods-2 {
+    /* PC版：画像サイズ */
+    .goods-title {
         width: 330px;
         height: 330px;
-        align-items: center;
-        border-radius: 30px;
-        background-color: #ff8871;
-        color: black;
-        text-align: center;
-        font-size: 20px;
-        padding: 20px;
-        position: relative;
     }
 
     .goods-strapline {
         text-align: center;
     }
-
 
     .pcbtn {
         margin-bottom: 50px;
@@ -866,7 +879,6 @@ imgcontent-wrapper .heading {
         justify-content: center;
         margin: 0 auto;
         margin-bottom: 30px;
-
     }
 
 
@@ -876,16 +888,9 @@ imgcontent-wrapper .heading {
     }
 
 
-    .activity-2 {
+    .activity-title {
         width: 330px;
         height: 330px;
-        border-radius: 30px;
-        background-color: #fbae51;
-        color: black;
-        text-align: center;
-        font-size: 20px;
-        padding: 20px;
-        position: relative;
     }
 
     .activity-strapline {
