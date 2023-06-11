@@ -15,12 +15,7 @@
 h2 {
     /* margin-top: 150px; */
     margin-bottom: 100px;
-
-
-
 }
-
-
 
 h4 {
     font-weight: bold;
@@ -48,26 +43,37 @@ dt {
 
 .east-title {
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     /* padding: 20px 23px; */
-    border-bottom: dotted 10px #e7d955;
+    /* border-bottom: dotted 10px #e7d955; */
     font-size: 30px;
-    color: #B45A27;
-    /* padding: 1rem 0; */
+    color: #ffffff;
+    background-color: #96c97b;
+    border-radius: 20px;
+    padding: 1rem 0;
     margin: 30px auto 30px auto;
 
-
+    /* 見出しのスタイル */
+    /* position: relative;
+    padding: 1rem;
+    outline: 2px solid rgba(128, 92, 33, 0.8);
+    outline-offset: -5px;
+    background-image: repeating-linear-gradient(45deg,
+            #dfd1ab 0 7px,
+            transparent 7px 12px);
+    background-repeat: no-repeat;
+    background-position: 10px 10px; */
 }
 
-
+/*
 .east-title::before {
     content: '';
-    /*何も入れない*/
+
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
+
     height: 50px;
-    /*画像の高さ*/
+
     padding: 10px;
     background-image: url(../images/illustrations/east1.png);
     background-repeat: no-repeat;
@@ -76,17 +82,17 @@ dt {
     margin-right: 10px;
 
 
-}
+} */
 
-
+/*
 .east-title::after {
     content: '';
-    /*何も入れない*/
+
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
+
     height: 50px;
-    /*画像の高さ*/
+
     padding: 10px;
     background-image: url(../images/illustrations/east2.png);
     background-repeat: no-repeat;
@@ -94,7 +100,7 @@ dt {
     vertical-align: middle;
     margin-left: 10px;
 
-}
+} */
 
 
 
@@ -105,13 +111,14 @@ dt {
 
 .west-title {
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     /* padding: 20px 23px; */
-    border-bottom: dotted 10px #e7d955;
+    /* border-bottom: dotted 10px #e7d955; */
     font-size: 30px;
-    color: #B45A27;
-    /* padding: 1rem 0; */
-
+    color: #ffffff;
+    background-color: #96c97b;
+    border-radius: 20px;
+    padding: 1rem 0;
     margin: 30px auto 30px auto;
 
 
@@ -120,31 +127,23 @@ dt {
 
 .west-title::before {
     content: '';
-    /*何も入れない*/
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
     height: 50px;
-    /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/west1.png);
     background-repeat: no-repeat;
     background-size: contain;
     vertical-align: middle;
     margin-right: 10px;
-
-
 }
 
 
 .west-title::after {
     content: '';
-    /*何も入れない*/
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
     height: 50px;
-    /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/west2.png);
     background-repeat: no-repeat;
@@ -158,29 +157,23 @@ dt {
 
 .south-title {
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     /* padding: 20px 23px; */
-    border-bottom: dotted 10px #e7d955;
+    /* border-bottom: dotted 10px #e7d955; */
     font-size: 30px;
-    color: #B45A27;
-    /* padding: 1rem 0; */
+    color: #ffffff;
+    background-color: #96c97b;
+    border-radius: 20px;
+    padding: 1rem 0;
     margin: 30px auto 30px auto;
-
-
-
-
 }
-
 
 
 .south-title::before {
     content: '';
-    /*何も入れない*/
     display: inline-block;
     width: 50px;
-    /*画像の幅*/
     height: 50px;
-    /*画像の高さ*/
     padding: 10px;
     background-image: url(../images/illustrations/south2.png);
     background-repeat: no-repeat;
@@ -294,16 +287,16 @@ dd img {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        background-image: url(../images/hedline_yellow.png);
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        width: 1000px;
+        height: 150px;
+
         background-size: cover;
         background-repeat: no-repeat;
         padding: 20px;
         color: #B45A27;
         text-align: center;
         display: inline-block;
-        width: 320px;
-        height: auto;
-        margin: 0 auto;
     }
 }
 
@@ -356,19 +349,15 @@ dd img {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        background-image: url(../images/hedline_yellow.png);
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        width: 1200px;
+        height: 150px;
+
         background-size: cover;
         background-repeat: no-repeat;
         padding: 20px;
         color: #B45A27;
         text-align: center;
-        display: inline-block;
-        width: 320px;
-        height: auto;
-        margin: 0 auto;
-
-
-
     }
 
 
