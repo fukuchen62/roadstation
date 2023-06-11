@@ -339,7 +339,7 @@ footer {
         justify-content: center;
         background-color: #fffbf1;
 
-        /* background-image: url(../images/header/bg_header_green.png); */
+        background-image: url(../images/index/headline_line.png);
         background-position: center;
         background-size: cover;
         z-index: 999;
