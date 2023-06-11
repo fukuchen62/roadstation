@@ -59,7 +59,8 @@
             @endforeach
 
             <div class="link">
-                {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }}
+                {{-- {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }} --}}
+                {{ $search->appends(request()->query())->links('pagination::bootstrap-4') }}
             </div>
 
         </div>
