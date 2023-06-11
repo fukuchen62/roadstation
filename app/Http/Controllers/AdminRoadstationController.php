@@ -30,7 +30,7 @@ class AdminRoadstationController extends Controller
      *
      * @return void
      */
-    public function index(Request $request)
+    public function stationIndex(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
