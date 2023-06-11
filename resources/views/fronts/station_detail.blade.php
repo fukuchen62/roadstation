@@ -81,7 +81,7 @@
                                     <p>{{ $goods->price }}</p>
                                     <p>{!! $goods->discription !!}</p>
                                     <p class="blog-btn"><a
-                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                            href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
                                     </p>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                                     <p class="com-wrap">{!! $goods->discription !!}</p>
                                     <p class="blog-btn">
                                         <a
-                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                            href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
                                     </p>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
                                     <p class="blog-btn"><a
-                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                            href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
                                     </p>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
 
                                     <p class="com-wrap">{{ $goods->discription }}</p>
                                     <p class="blog-btn"><a
-                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                            href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
                                     </p>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
                                     <p class="blog-btn"><a
-                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                            href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
                                     </p>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
                                     <p class="blog-btn"><a
-                                            href="{{ url('blog-detail') }}?id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
+                                            href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
                                     </p>
                                 </div>
                             </div>
@@ -391,6 +391,7 @@
 
 
             <div class="text frameborder harf">
+
                 <h3 class="item">基本情報</h3>
                 <h4 class="station-name deco-h4">道の駅&nbsp;{{ $station->station_name }}</h4>
 
@@ -422,7 +423,7 @@
                     <dt>駐車場：</dt>
                     <dd>{{ $station->parking }}
                     </dd>
-                    {{-- 6/11ここから --}}
+
                     <dt>設備：</dt>
                     <dd>
                         <div class="icon-wrapper">
@@ -531,28 +532,66 @@
                                     alt="美術館・博物館">
                             @endif
 
+                            @if ($station->lan_icon)
+                                <img title="無線LAN" src="{{ asset('assets/images/icon/lan_icon1.svg') }}"
+                                    alt="無線LAN">
+                            @else
+                                <img title="無線LAN" src="{{ asset('assets/images/icon/lan_icon0.svg') }}"
+                                    alt="無線LAN">
+                            @endif
 
-                            <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
-                                alt="">
+                            @if ($station->experience_icon)
+                                <img title="体験施設" src="{{ asset('assets/images/icon/experience_icon1.svg') }}"
+                                    alt="体験施設">
+                            @else
+                                <img title="体験施設" src="{{ asset('assets/images/icon/experience_icon0.svg') }}"
+                                    alt="体験施設">
+                            @endif
 
-                            <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
-                                alt="">
+                            @if ($station->guide_icon)
+                                <img title="観光案内" src="{{ asset('assets/images/icon/guide_icon1.svg') }}"
+                                    alt="観光案内">
+                            @else
+                                <img title="観光案内" src="{{ asset('assets/images/icon/guide_icon0.svg') }}"
+                                    alt="観光案内">
+                            @endif
 
-                            <img title="ここに説明が入ります" src="{{ asset('assets/images/icon/spa_icon1.svg') }}"
-                                alt="">
                         </div>
                     </dd>
                 </dl>
 
-                <p><strong><span class="yellow">★</span>お気に入りを押したらお気に入りページに登録されます！</strong></p>
-                <p class="blog-btn center"><a href="#">お気に入りに登録する</a></p>
+                {{-- お気に入り登録 --}}
+                @php
+                    $cookie = Cookie::get('id');
+                    $cookielist = explode(',', $cookie);
+                @endphp
+
+                @if (in_array($station->id, $cookielist))
+                    <p class="blog-btn center">
+                        <a href="{{ route('cookie', ['id' => $station->id]) }}">
+                            お気に入りに登録済み
+                        </a>
+                    </p>
+                @else
+                    <p>
+                        <strong>
+                            <span class="yellow">★</span>
+                            お気に入りを押したらお気に入りページに登録されます！
+                        </strong>
+                    </p>
+
+                    <p class="blog-btn center">
+                        <a href="{{ route('cookie', ['id' => $station->id]) }}">
+                            お気に入りに登録する
+                        </a>
+                    </p>
+                @endif
+
             </div>
 
             <!-- googlemap -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.533509598061!2d134.5772079762422!3d34.15827496212325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536fda4ddf71ff%3A0xc5ce5c88e1a48d83!2z6YGT44Gu6aeFIOOBj-OCi-OBj-OCi-OBquOCi-OBqA!5e0!3m2!1sja!2sjp!4v1685414674912!5m2!1sja!2sjp"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                title="道の駅くるくるなるとの地図" class="harf"></iframe>
+            {!! $station->map_url !!}
+
         </section>
     @endforeach
 

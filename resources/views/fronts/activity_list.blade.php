@@ -77,17 +77,17 @@
                 $id_list = explode('|', $blog_list);
             @endphp
 
-            <ul>
+            <dl class="roadstation-frame">
                 @foreach ($id_list as $id)
                     @php
                         $id = $activity->changeName($id);
                         $title = $activity->getBlogName($id);
                     @endphp
-                    <li class="roadstation-frame"><a
-                            href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
-                    </li>
+                    <dd class="roadstation-name"><a
+                            href="{{ url('blog-detail') }}?id={{ $id }}">♦{{ $title }}</a>
+                    </dd>
                 @endforeach
-            </ul>
+            </dl>
         </section>
     @endforeach
 
