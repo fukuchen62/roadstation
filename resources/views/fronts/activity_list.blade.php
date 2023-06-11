@@ -84,7 +84,7 @@
                         $title = $activity->getBlogName($id);
                     @endphp
                     <dd class="roadstation-name"><a
-                            href="{{ url('blog-detail') }}?id={{ $id }}">♦{{ $title }}</a>
+                            href="{{ url('blog-detail') }}?id={{ $id }}">{{ $title }}</a>
                     </dd>
                 @endforeach
             </dl>
