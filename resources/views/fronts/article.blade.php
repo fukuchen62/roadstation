@@ -17,6 +17,17 @@
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/article.css') }}">
+
+    <style>
+        /* 関連記事 */
+        /* @media screen and (min-width:901px) {
+        .relatedarticle1 {
+            margin-bottom: 60px;
+            width: 48%;
+        }
+        } */
+    </style>
+
 @endsection
 
 {{-- キービジュアル --}}
