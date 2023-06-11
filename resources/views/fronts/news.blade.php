@@ -4,178 +4,115 @@
 @section('title', '新着情報詳細ページ')
 
 @section('pageCss')
-    <style>
-        main {
-            margin: 30px;
-            overflow: hidden;
-        }
-
-        .detail {
-            width: 1300px;
-            height: auto;
-            float: left;
-            overflow: hidden;
-
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .discription {
-            margin: 10px;
-        }
-
-        span {
-            font-weight: bold;
-            padding: 10px;
-        }
-
-        .station {
-            font-weight: bold;
-            margin: 10px;
-        }
-
-        .cards {
-            /* display: flex; */
-            float: left;
-            width: 1200px;
-            height: auto;
-
-        }
-
-        .card {
-            border: 1px solid #949393;
-            padding: 20px;
-            margin: 40px 5px;
-            width: 400px;
-            height: auto;
-
-            float: left;
-        }
-
-        .category {
-            width: 350px;
-            height: 350px;
-        }
-
-        .news {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-top: 30px;
-            clear: both;
-        }
-
-        .categories {
-            float: right;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/article.css">
 @endsection
 
 @section('key_visual')
     <!-- キービジュアル -->
     <div class="kv">
-        <figure><img src="{{ asset('assets/images/goods_list/goods_list_header.jpg') }}" alt="特産品ページ"></figure>
+        <figure><img src="{{ asset('assets/images/news.list/news-kv.jpg') }}" alt="ニュース詳細ページ画像"></figure>
     </div>
 @endsection
 
 @section('content')
 
-    <div class="wrap">
+    <div class="blog-wrapper">
 
-        <div class="detail">
-            @foreach ($news as $new)
-                <h1>{{ $new->title }}</h1>
+        <section class="blog-main">
 
-                <div>
-                    @php
-                        $ts = strtotime($new->updated_at);
-                    @endphp
-                    <span class="news__area--data">
-                        {{ date('Y年n月j日', $ts) }}
-                    </span>
+            <p class="back-btn">
+                <a href="{{ route('news') }}">＜＜一覧へ戻る</a>
+            </p>
 
-                    <span>{{ $new->newsCategory->category_name }}</span>
+            <h3 class="blog-title">60文字以内の記事タイトル</h3>
+
+            <div class="update-information">
+                <p class="date">2023年6月10日</p>
+                <p class="category">グルメ</p>
+            </div>
+
+            <img class="blog-img" src="../assets/images/cat1.jpg" alt="">
+
+            <p class="blog-text">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+
+            <h3 class="roadstation-
+                        information">&lt;道の駅の情報&gt;</h3>
+
+            <p class="address">
+                <a href="https://www.sanrio.co.jp/specialsite/team-purin/">くるくるなるとの詳細ページはこちら</a>
+            </p>
+
+            <div class="before-next-mobilebtn">
+
+                <p><a href="">＜＜前の記事へ</a></p>
+
+                <p><a href="">次の記事へ＞＞</a></p>
+
+            </div>
+
+            <div class="before-next-pcbtn">
+
+                <p><a href="">＜＜前の記事へ</a></p>
+
+                <p><a href="">次の記事へ＞＞</a></p>
+            </div>
+
+            <h3 class="relatedarticle-title">関連記事</h3>
+
+            <div class="relatedarticle">
+
+                <div class="relatedarticle1">
+
+                    <a href=""><img class="relatedarticle-img" src="../storage/images/index.images/asiyu.jpg"
+                            alt="">
+
+                        <h4>60文字のタイトルが入ります。60文字のタイトルが入ります。60文字のタイトルが入ります。60文字のタイトルが入ります。</h4>
+
+                        <div class="update-information">
+                            <p class="date">2023年6月10日</p>
+
+                            <p class="category">グルメ</p>
+
+                        </div>
+
+                    </a>
+
                 </div>
 
-                <img src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+                <div class="relatedarticle1">
 
-                <p class="discription">{!! $new->discription !!}</p>
+                    <a href=""><img class="relatedarticle-img" src="../storage/images/index.images/asiyu.jpg"
+                            alt="">
+
+                        <h4>60文字のタイトルが入ります。60文字のタイトルが入ります。60文字のタイトルが入ります。60文字のタイトルが入ります。</h4>
 
 
+                        <div class="update-information">
 
+                            <p class="date">2023年6月10日</p>
 
-                <p class="station">関連道の駅詳細ページへ
-                    @php
-                        
-                        $station_list = $new->station_list;
-                        
-                        $id_list = explode('|', $station_list);
-                        
-                    @endphp
+                            <p class="category">グルメ</p>
 
-                    @foreach ($id_list as $id)
-                        @php
-                            $id = $new->changeName($id);
-                            $name = $new::getRoadstationName($id);
-                        @endphp
+                        </div>
 
-                        <a class="stationBtn" href="{{ url('station-detail') }}?id={{ $id }}">{{ $name }}
-                        </a>
-                    @endforeach
-                </p>
-
-                <div>
-                    @if ($new->previous() != null)
-                        <a href="{{ url('news-detail') }}?id={{ $new->previous()->id }}">前の記事</a>
-                    @endif
-                    @if ($new->next() != null)
-                        <a href="{{ url('news-detail') }}?id={{ $new->next()->id }}">次の記事</a>
-                    @endif
+                    </a>
                 </div>
-            @endforeach
-        </div>
 
-        <div class="cards">
+            </div>
 
-            <h2 class="news">関連記事</h2>
+        </section>
 
-            @foreach ($categories as $category)
-                <a href="{{ url('news-detail') }}?id={{ $category->id }}&news_category_id={{ $new->news_category_id }}">
-
-                    <div class="card">
-
-                        <img class="category" src="{{ asset('/storage/images/' . $category->picture) }}" alt="">
-
-                        <h2>{{ $category->title }} </h2>
-
-                        <p>{!! $category->overview !!}</p>
-
-                        <small>{{ $category->created_at }}</small>
-
-                        <span>
-                            {{ $category->newsCategory->category_name }}
-                        </span>
-
-                    </div>
-                </a>
-            @endforeach
-
-        </div>
-
-        <div class="categories">
-
-            <h2>カテゴリー</h2>
-
-            <ul>
-                @foreach ($news_categories as $category)
-                    <li><a href="{{ url('news') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
-                @endforeach
+        {{-- カテゴリー --}}
+        <section class="side">
+            <h3>カテゴリー一覧</h3>
+            <ul class="category_list">
+                <li><a href="">更新情報</a></li>
+                <li><a href="">イベント情報</a></li>
+                <li><a href="">道の駅news</a></li>
             </ul>
-
-        </div>
-
+        </section>
     </div>
 
 @endsection
