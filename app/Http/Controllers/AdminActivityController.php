@@ -233,8 +233,6 @@ class AdminActivityController extends Controller
         // ログインユーザーの情報取得
         $login_user = Auth::user();
 
-        // News::find($request->id)->delete();
-
         // 論理削除処理
         // deleted_atフィル―ドに現在の日時を代入
         $param = [
@@ -242,15 +240,15 @@ class AdminActivityController extends Controller
         ];
 
         // DBクリエターで更新処理
-        DB::table('activity')->where('id', $request->id)
+        DB::table('activities')->where('id', $request->id)
             ->update($param);
 
-        // ニュースを読み直す
+        // アクティビティを読み直す
         $items = Activity::where('deleted_at', null)
             ->orderBy('id', 'desc')
             ->get();
 
-        // ニュースの件数
+        // アクティビティの件数
         $activity_count = count($items);
 
         // 渡すデータ
