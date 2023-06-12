@@ -50,7 +50,6 @@ class RoadStation extends Model
         'shop_icon' => 'required|boolean',
         'observatory_icon' => 'required|boolean',
         'museum_icon' => 'required|boolean',
-
         'memo' => 'string|max:500',
         'is_show'     => 'required|boolean'
         // こういったものをroadstationに合わせる
