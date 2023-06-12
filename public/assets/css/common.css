@@ -237,8 +237,9 @@ footer {
 
 .footer-menu {
     width: 200px;
-    margin: 30px auto;
-    margin-bottom: 100px;
+    padding: 40px;
+    /* margin: 30px auto;
+    margin-bottom: 100px; */
 }
 
 .footer-menu li {
