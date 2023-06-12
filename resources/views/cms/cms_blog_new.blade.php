@@ -57,7 +57,7 @@
                 <td>
                     <select name="user_id">
                         @foreach ($users as $user)
-                            <option value="{{ $user->id }}" selected>{{ $user->name }}</option>
+                            <option value="{{ d$user->i }}" selected>{{ $user->name }}</option>
                         @endforeach
                     </select>
                 </td>
