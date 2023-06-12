@@ -38,7 +38,7 @@
             </div>
 
             <p class="width-row">
-                {!! $station->discription !!}
+                {{ $station->discription }}
             </p>
             <!-- 画像と文字を横に並べる。CSS -->
             <div class="flex">
@@ -79,7 +79,7 @@
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p>{!! $goods->discription !!}</p>
+                                    <p>{{ $goods->discription }}</p>
 
                                     {{-- <p class="blog-btn">
                                         <a
@@ -106,7 +106,7 @@
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p class="com-wrap">{!! $goods->discription !!}</p>
+                                    <p class="com-wrap">{{ $goods->discription }}</p>
 
                                     {{-- <p class="blog-btn">
                                         <a
@@ -324,7 +324,7 @@
                                 <div class="text  frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p>{!! $goods->discription !!}</p>
+                                    <p>{{ $goods->discription }}</p>
 
                                     {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
@@ -350,7 +350,7 @@
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p class="com-wrap">{!! $goods->discription !!}</p>
+                                    <p class="com-wrap">{{ $goods->discription }}</p>
 
                                     {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
@@ -404,7 +404,7 @@
                                 <div class="text  frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p class="com-wrap">{!! $goods->discription !!}</p>
+                                    <p class="com-wrap">{{ $goods->discription }}</p>
 
                                     {{-- <p class="blog-btn"><a
                                             href="{{ url('blog-detail') }}?road_station_id={{ $goods->road_station_id }}">【ブログ】行ってみたんよへ</a>
@@ -477,7 +477,7 @@
                         <h4 class="deco-h4">{{ $activity->activity_name }}</h4>
                         <p>料金 : {{ $activity->price }}<br>
                             利用条件：
-                            {!! $activity->conditions !!}
+                            {{ $activity->conditions }}
                     </div>
                 </section>
             </section>
