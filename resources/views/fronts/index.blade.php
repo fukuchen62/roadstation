@@ -32,7 +32,7 @@
         <section class="news-box">
             <div>
                 <h2 class="news-title">ニュース</h2>
-                <a class="pcbtn btn btn-border-shadow btn-border-shadow--color" href="{{ route('news') }}">もっと見る</a>
+                <a class="pcbtn btn" href="{{ route('news') }}">もっと見る</a>
             </div>
 
             <!-- 記事リスト -->
@@ -48,7 +48,7 @@
                 </ul>
                 @endforeach
             </ul>
-            <p class="news-mobilebtn btn btn-border-shadow btn-border-shadow--color"><a href="{{ route('news') }}">もっと見る</a></p>
+            <p class="news-mobilebtn btn"><a href="{{ route('news') }}">もっと見る</a></p>
         </section>
 
 
@@ -59,18 +59,18 @@
                 <a class="west" href="{{route('areasearch')}}?area_id=2">西部</a>
                 <a class="south" href="{{route('areasearch')}}?area_id=3">南部</a>
             </div>
-            <a class="btn btn-border-shadow btn-border-shadow--color" href="{{route('ditailsearch')}}">詳細検索</a>
+            <a href="{{route('ditailsearch')}}">詳細検索</a>
         </section>
 
         <section>
             <h2 class="section-title">こんなんあるで！</h2>
             <div class="goods-wrapper">
                 <ul class="goods">
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/mikan.jpg')}}" alt=""></li>
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/otaniyaki.jpg')}}" alt=""></li>
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/renkon.jpg')}}" alt=""></li>
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/sakana.jpg')}}" alt=""></li>
-                    <li class="goods-2">
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/otaniyaki.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/sakana.jpg')}}" alt=""></li>
+                    <li class="goods-title">
                         <h2 class="sp-h2">特産品</h2>
                         <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
 
@@ -81,25 +81,25 @@
                             もっと見る
                         </a>
                     </li>
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/sudati.jpg')}}" alt=""></li>
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/tikuwa.jpg')}}" alt=""></li>
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/wakame.jpg')}}" alt=""></li>
-                    <li><img class="goods-1" src="{{ asset('assets/images/index/yakiimo.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg')}}" alt=""></li>
                 </ul>
 
                 <a href="{{route('goods')}}">
-                    <p class="more-btn mobile-btn">もっと見る</p>
+                    <p class="btn mobile-btn">もっと見る</p>
                 </a>
             </div>
 
-
+            <h2 class="section-title">こんなんやってみ</h2>
             <div class="activity-wrapper">
                 <ul class="activity">
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/boat.jpg')}}" alt=""></li>
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/dmv.jpg')}}" alt=""></li>
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/aizometop.jpg')}}" alt=""></li>
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/zipline.jpg')}}" alt=""></li>
-                    <li class="activity-2">
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/aizometop.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg')}}" alt=""></li>
+                    <li class="activity-title">
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
 
@@ -114,25 +114,24 @@
                     </li>
 
 
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/hune.jpg')}}" alt=""></li>
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/asiyu.jpg')}}" alt=""></li>
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/udon.jpg')}}" alt=""></li>
-                    <li><img class="activity-1" src="{{ asset('assets/images/index/ropeway.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/asiyu.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg')}}" alt=""></li>
+                    <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg')}}" alt=""></li>
                 </ul>
                 <a href="">
-                    <p class="mobilebtn btn btn-border-shadow btn-border-shadow--color">もっと見る</p>
+                    <p class="mobilebtn btn">もっと見る</p>
                 </a>
             </div>
         </section>
 
-        <section class="blog">
-            <h2 class="section-title">行ってきたんよ</h2>
-    <div class="blog-main">
 
-    <div class="blog-wrapper">
+        <h2 class="section-title">行ってきたんよ</h2>
+        <div class="blog-main">
+        <div class="blog-wrapper">
         @foreach ($blog as $blog)
 
-        <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
+            <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
 
             <img class="card-img"
                         {{-- src="{{ asset('/storage/images/' . $blog->picture) }}" --}}
@@ -143,17 +142,19 @@
                         @php
                                 $ts = strtotime($blog->created_at);
                         @endphp
-                        <p>{{ date('Y年m月d日', $ts) }}　　　
-                            {{ $news->newsCategory->category_name }}</p>
+
+                        <div class="update-information">
+                        <p class="date">{{ date('Y年m月d日', $ts) }}</p>
+                        <p class="category">{{ $news->newsCategory->category_name }}</p>
+                        </div>
                         <p class="text">{!!$blog->overview!!}</p>
         </a>
         @endforeach
     </div>
     </div>
-        </section>
 
         <div class="blog-btn">
-            <a href="{{route('bloglist')}}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt=""></a>
+            <a href="{{route('bloglist')}}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログボタン"></a>
         </div>
 @endsection
 
