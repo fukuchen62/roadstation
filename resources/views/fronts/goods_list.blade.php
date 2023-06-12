@@ -137,10 +137,30 @@
                         $id_list = explode("|", $station_list);
                     @endphp
 
-                    @foreach ( $id_list as $id )
+                    @foreach ( $id_list as $id_item )
 
                         @php
-                                $name = $type::getRoadstationName($id);
+                            $id=$id_item;
+                            if ($id_item=='a') {
+                                $id=10;
+                            }else if($id_item=='b'){
+                                $id=11;
+                            }else if($id_item=='c'){
+                                $id=12;
+                            }else if($id_item=='d'){
+                                $id=13;
+                            }else if($id_item=='e'){
+                                $id=14;
+                            }else if($id_item=='f'){
+                                $id=15;
+                            }else if($id_item=='g'){
+                                $id=16;
+                            }else if($id_item=='h'){
+                                $id=17;
+                            }else if($id_item=='i'){
+                                $id=18;
+                            }
+                            $name = $type::getRoadstationName($id);
                         @endphp
                         <li class="roadstation-name">
                         <a class="" href="{{route('roadstation')}}?id={{$id}}">
