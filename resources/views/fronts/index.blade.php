@@ -62,7 +62,10 @@
         </section>
 
         <section>
-            <h2 class="section-title">こんなんあるで！</h2>
+            <div class="section-title01">
+                <h2>こんなんあるで！</h2>
+            </div>
+
             <div class="goods-wrapper">
                 <ul class="goods">
                     <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg')}}" alt=""></li>
@@ -91,7 +94,9 @@
                 </a>
             </div>
 
-            <h2 class="section-title">こんなんやってみ</h2>
+            <div class="section-title02">
+                <h2>こんなんやってみ！</h2>
+            </div>
             <div class="activity-wrapper">
                 <ul class="activity">
                     <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg')}}" alt=""></li>
@@ -125,7 +130,9 @@
         </section>
 
 
-        <h2 class="section-title">行ってきたんよ</h2>
+        <div class="section-title03">
+            <h2>行ってきたんよ！</h2>
+        </div>
         <div class="blog-main">
         <div class="blog-wrapper">
         @foreach ($blog as $blog)
