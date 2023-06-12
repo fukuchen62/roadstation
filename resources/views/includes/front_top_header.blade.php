@@ -59,8 +59,12 @@
 
     <div class="top-kv">
         <!-- <div>道の駅をあそびつくせ！</div> -->
-        <video autoplay muted playsinline loop src="{{ asset('assets/images/index/IMG_2833.MOV') }}">
+        {{-- <video autoplay muted playsinline loop src="{{ asset('assets/images/index/IMG_2833.MOV') }}">
+        </video> --}}
+
+        <video autoplay muted playsinline loop src="{{ asset('/storage/images/KV01_1_1.mp4') }}">
         </video>
+
     </div>
 
     <!-- g-nav pc -->
