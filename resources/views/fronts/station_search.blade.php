@@ -70,17 +70,14 @@
                             @if ($area_id != null)
                                 @if (in_array(3, $area_id))
                                     <label><input type="checkbox" name="area[]" id="south" value="3"
-                                            class="checkbox_list" checked>
-                                        県南部</label>
+                                            class="checkbox_list" checked>県南部</label>
                                 @else
                                     <label><input type="checkbox" name="area[]" id="south" value="3"
-                                            class="checkbox_list">
-                                        県南部</label>
+                                            class="checkbox_list">県南部</label>
                                 @endif
                             @else
                                 <label><input type="checkbox" name="area[]" id="south" value="3"
-                                        class="checkbox_list">
-                                    県南部</label>
+                                        class="checkbox_list">県南部</label>
                             @endif
                             {{-- <label><input id="area_id" class="" type="checkbox" name="area[]"
                                     value="3">県南部</label> --}}
@@ -325,7 +322,7 @@
                                         県南部</label>
                                 @endif
                             @else
-                                <label<label for="south" class="s_search_btn">><input type="checkbox" name="area[]"
+                                <label><input type="checkbox" name="area[]"
                                         id="south" value="3" class="checkbox_list">
                                     県南部</label>
                             @endif
