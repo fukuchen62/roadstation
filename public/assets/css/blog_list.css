@@ -82,17 +82,48 @@ p {
     object-fit: cover;
 }
 
+.category-title {
+    background-color: #A7D28D;
+    border-radius: 9px 9px 0 0;
+    text-align: center;
+}
+
 .category_list li {
     margin-top: 10px;
     padding: 20px 20px;
     font-weight: bold;
+    border-bottom: dotted 10px #af813a;
+
 }
+
+
+
 
 .side {
     width: 100%;
-    background-color: #a7d28d;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 8px 0 #70b27f;
+    border: groove 6px #A7D28D;
     color: #8c5243;
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
+    border-radius: 20px;
+}
+
+.category-name {
+    /* border-bottom: dotted 10px #af813a; */
+    width: 150px;
+    margin: 10px;
+
+
+}
+
+li:hover {
+    background-color: #A7D28D;
+    border-radius: 50px;
+    width: 100px;
+    text-align: center;
+
+
 }
 
 /* PC版のページネーションを表示 */
@@ -125,8 +156,25 @@ p {
     .side {
         width: 25%;
         height: 400px;
-        padding: 20px 10px;
+        /* padding: 20px 10px; */
         left: 70%;
+    }
+
+    .category_list li {
+        margin-top: 10px;
+        padding: 20px 20px;
+        font-weight: bold;
+        border-bottom: dotted 10px #af813a;
+
+    }
+
+    li:hover {
+        background-color: #A7D28D;
+        border-radius: 50px;
+        width: 100px;
+        text-align: center;
+
+
     }
 
 }
