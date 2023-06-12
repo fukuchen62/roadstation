@@ -45,8 +45,6 @@ class Roadstation2Controller extends Controller
             ->where('goods_category_id', 5)
             ->get();
 
-
-
         $pro = ProductType::where('station_list', $request->id)
             ->get();
 
