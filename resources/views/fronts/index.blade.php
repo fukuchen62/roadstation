@@ -134,8 +134,7 @@
             <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
 
                 <img class="card-img"
-                        {{-- src="{{ asset('/storage/images/' . $blog->picture) }}" --}}
-                        src="https://placehold.jp/300x200.png" alt="no-img">
+                src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
 
                 <h3>{!!$blog->title!!}</h3>
 

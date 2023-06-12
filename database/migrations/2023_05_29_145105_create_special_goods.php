@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('goods_name', 50)->nullable(false);
             $table->string('month', 30)->nullable(true);
             $table->string('season', 50)->nullable(true);
-            $table->text('discription', 300)->nullable(true);
+            $table->string('discription', 300)->nullable(true);
             $table->integer('road_station_id')->nullable(false);
             $table->string('blog_list', 20)->nullable(true);
             $table->string('picture', 200)->nullable(true);

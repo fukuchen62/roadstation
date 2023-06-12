@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('areas', function (Blueprint $table) {
             $table->integer('id');
-            $table->string('area_name', 10);
+            $table->string('area_name', 10)->nullable(false);
         });
     }
 

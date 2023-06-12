@@ -320,7 +320,7 @@ dt {
 
 .roadstation-name {
     display: inline-block;
-    text-align: center;
+    text-align: start;
 
     background-color: #d6e6ae;
     border-radius: 50px;
@@ -417,7 +417,7 @@ dt {
         .roadstation-name {
 
             display: inline-block;
-            text-align: center;
+            text-align: start;
 
             background-color: #d6e6ae;
             border-radius: 50px;
@@ -484,7 +484,7 @@ dt {
         .roadstation-name {
 
             display: inline-block;
-            text-align: center;
+            text-align: start;
 
             background-color: #d6e6ae;
             border-radius: 50px;
