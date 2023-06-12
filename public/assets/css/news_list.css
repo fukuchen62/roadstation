@@ -3,10 +3,7 @@
 h2 {
     text-align: center;
     padding: 60px;
-    /* background-image: url(../images/illustrations/headline/); */
-    width: 1200px;
-    height: 150px;
-
+    background-image: url(../images/illustrations/headline/blog_headline_mobile.png);
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
@@ -138,6 +135,14 @@ p {
 }
 
 @media screen and (min-width:1080px) {
+
+    h2 {
+        background-image: url(../images/illustrations/headline/blog_headline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 65px;
+        margin-bottom: 60px;
+    }
 
     /* ２カラムを囲う要素 */
     .blog-main {
