@@ -40,10 +40,6 @@ h4 {
 
 .attention {
     margin-bottom: 60px;
-    /* background-image: url(../images/illustrations/headline/activity_headline.png); */
-    width: 1200px;
-    height: 150px;
-
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
