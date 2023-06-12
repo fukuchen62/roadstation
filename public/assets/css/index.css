@@ -643,12 +643,50 @@ imgcontent-wrapper .heading {
         margin-top: 20px;
         color: #8C5243;
         font-weight: bold;
+
+
     }
 
     .sp-btn:hover {
-        transform: scale(1.1);
-        transition: 0.5s;
+        animation: poyo-yon 2.5s infinite;
         /* background-color: #fff4ba; */
+    }
+
+    /* アニメーション：ぽよん */
+    @keyframes poyo-yon {
+
+        0%,
+        40% {
+            transform: skew(0deg, 0deg);
+        }
+
+        5% {
+            transform: skew(5deg, 5deg);
+        }
+
+        10% {
+            transform: skew(-4deg, -4deg);
+        }
+
+        15% {
+            transform: skew(3deg, 3deg);
+        }
+
+        20% {
+            transform: skew(-2deg, -2deg);
+        }
+
+        25% {
+            transform: skew(1deg, 1deg);
+        }
+
+        30% {
+            transform: skew(-0.6deg, -0.6deg);
+        }
+
+        35% {
+            transform: skew(0.3deg, 0.3deg);
+        }
     }
 
     .goods-wrapper {
