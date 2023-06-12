@@ -73,9 +73,18 @@ a:hover {
 
 /* ↓もっと見るボタン */
 .btn {
+    font-weight: bold;
     padding: 20px 100px;
     border-radius: 50px;
     background-color: #A7D28D;
+    box-shadow: 0px 10px 0px -5px #70b27f;
+}
+
+.btn:hover {
+    position: relative;
+    top: 5px;
+    /* left: 5px; */
+    box-shadow: none;
 }
 
 /* PC版：ナビゲーションメニュー*/
@@ -243,6 +252,8 @@ footer {
     opacity: 0.8;
 }
 
+
+
 .copyright {
     font-size: 14px;
     padding-top: 40px;
@@ -278,6 +289,14 @@ footer {
         transform: rotate(5deg);
     }
 
+    /* カードの押し込み */
+    .blog-card:hover {
+        position: relative;
+        top: 5px;
+        left: 5px;
+        box-shadow: none;
+    }
+
     /* タブレット版：フッターメニュー */
     .footer-menu {
         width: 100%;
@@ -285,6 +304,7 @@ footer {
         display: flex;
         justify-content: space-evenly;
     }
+
 }
 
 /* PC(デスクトップサイズ) */

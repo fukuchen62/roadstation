@@ -41,10 +41,6 @@ section {
     position: relative;
     width: 100%;
     height: 100px;
-
-    /* background-image: url(../images/header/bg_header_green.png); */
-    background-size: cover;
-    background-position: center;
 }
 
 /* PC版：ナビゲーションメニューの固定 */
@@ -350,6 +346,8 @@ imgcontent-wrapper .heading {
     background-color: #ffff;
 }
 
+
+
 .blog-card img {
     width: 100%;
     height: auto;
@@ -364,9 +362,9 @@ imgcontent-wrapper .heading {
     width: 300px;
 }
 
-.blog-btn a:hover {
+/* .blog-btn a:hover {
     opacity: 0.7;
-}
+} */
 
 .blog-btn img {
     max-width: 320px;
@@ -384,7 +382,6 @@ imgcontent-wrapper .heading {
 
     .wrapper {
         padding: 0;
-        /* margin-top: 100vh; */
     }
 
     /* KV */
@@ -483,25 +480,65 @@ imgcontent-wrapper .heading {
         margin-top: 5%;
     }
 
-
-    .section-title {
-        text-align: center;
-        margin-bottom: 30px;
+    /* 見出しの設定 */
+    .section-title01 h2,
+    .section-title03 h2 {
+        position: absolute;
+        top: 40%;
+        left: 30%;
     }
 
-    /* section-titleの設定（仮）ここから */
-    .section-title {
-        position: relative;
-        padding: 1rem 0.5rem;
-        margin-bottom: 0.5rem;
+    /* こんなんあるで！ */
+    .section-title01 {
         border-top: 3px solid #A7D28D;
         font-weight: bold;
-        font-size: 26px;
         color: #8C5243;
-        background-image: url(../images/illustrations/headline/headline_07.png);
+
+        position: relative;
+        background-image: url(../images/index/index_headline_01.png);
+        max-width: 1200px;
+        height: 200px;
+        margin-bottom: 50px;
     }
 
-    .section-title:before {
+    /* こんなんやってみ！ */
+    .section-title02 {
+        border-top: 3px solid #A7D28D;
+        font-weight: bold;
+        color: #8C5243;
+
+        position: relative;
+        background-image: url(../images/index/index_headline_02.png);
+        background-repeat: no-repeat;
+
+        max-width: 1200px;
+        height: 210px;
+        margin-bottom: 50px;
+    }
+
+    .section-title02 h2 {
+        position: absolute;
+        top: 40%;
+        right: 30%;
+    }
+
+    /* 行ってきたんよ！ */
+    .section-title03 {
+        border-top: 3px solid #A7D28D;
+        font-weight: bold;
+        color: #8C5243;
+
+        position: relative;
+        background-image: url(../images/index/index_headline_03.png);
+        max-width: 1200px;
+        height: 200px;
+        margin-bottom: 50px;
+    }
+
+    /* ストライプの罫線 */
+    .section-title01:before,
+    .section-title02:before,
+    .section-title03:before {
         position: absolute;
         top: 100%;
         left: 0;
@@ -858,10 +895,10 @@ imgcontent-wrapper .heading {
         display: inline-block;
     }
 
-    .pcbtn:hover {
+    /* .pcbtn:hover {
         color: #ffffff;
         background-color: #fff7e2;
-    }
+    } */
 
     .goods-mobile-btn {
         display: none;
