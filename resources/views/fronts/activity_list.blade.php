@@ -45,7 +45,7 @@
                 </div>
             </div>
             <h4 class="headline text">＜利用条件＞</h4>
-            {!! $activity->conditions !!}
+            <p class="conditions-text">{{ $activity->conditions }}</p>
             <h4 class="headline-text">＜営業時間＞</h4>
             <p class="business-text">
                 {{ $activity->business_hours }}
