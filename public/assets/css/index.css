@@ -364,9 +364,9 @@ imgcontent-wrapper .heading {
     width: 300px;
 }
 
-.blog-btn a:hover {
+/* .blog-btn a:hover {
     opacity: 0.7;
-}
+} */
 
 .blog-btn img {
     max-width: 320px;
@@ -498,7 +498,7 @@ imgcontent-wrapper .heading {
         font-weight: bold;
         font-size: 26px;
         color: #8C5243;
-        background-image: url(../images/illustrations/headline/headline_07.png);
+        /* background-image: url(../images/illustrations/headline/headline_07.png); */
     }
 
     .section-title:before {
@@ -858,10 +858,10 @@ imgcontent-wrapper .heading {
         display: inline-block;
     }
 
-    .pcbtn:hover {
+    /* .pcbtn:hover {
         color: #ffffff;
         background-color: #fff7e2;
-    }
+    } */
 
     .goods-mobile-btn {
         display: none;

@@ -127,24 +127,24 @@ class BlogController extends Controller
                     ->where('is_show', 1)
                     ->where('blog_category_id', 1)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(4);
             } elseif ($request->id == 2) {
                 $items = Blog::where('deleted_at', null)
                     ->where('is_show', 1)
                     ->where('blog_category_id', 2)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(4);
             } elseif ($request->id == 3) {
                 $items = Blog::where('deleted_at', null)
                     ->where('is_show', 1)
                     ->where('blog_category_id', 3)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(4);
             } else {
                 $items = Blog::where('deleted_at', null)
                     ->where('is_show', 1)
                     ->orderby('id', 'DESC')
-                    ->Paginate(6);
+                    ->Paginate(4);
             }
 
             /**
