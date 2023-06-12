@@ -87,7 +87,7 @@ class Activity extends Model
      * ブログのis_showを取得し送るメソッド
      *アクティビティ一覧内のブログ記事を正しく表示するため作成
      * 作成者：小山
-     * 
+     *
      * @return void
      */
     public function getIs_show()
@@ -117,18 +117,21 @@ class Activity extends Model
      */
     public function getBlogName($id)
     {
-        $blog = Blog::find($id);
-
-        $title ='';
-        if ($blog->is_show == 1) {
-            $title = $blog->title;
+        $title = '';
+        if ($id >= 0) {
+            $blog = Blog::find($id);
+            if ($blog->is_show == 1) {
+                $title = $blog->title;
+            }
         }
+        return $title;
+
         // if($blog != null and $blog->is_show == 1 and            $blog->is_highlight == 1){
         //     $title = $blog->title;
         //     }else{
         //         $title = "該当するブログ記事はございません。";
         //     }
-        return $title;
+
     }
 
     /**
