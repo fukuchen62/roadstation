@@ -101,6 +101,10 @@
             s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+
+    {{-- MyUtilクラスの読み込み fukushima --}}
+    @inject('myUtil', 'App\Libs\MyUtil')
+
 </head>
 
 <body>
