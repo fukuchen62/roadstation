@@ -174,11 +174,12 @@ dl {
 @media screen and (min-width:601px) {
 
     .district {
+        color: #B45A27;
+        font-weight: bold;
+
         background-repeat: no-repeat;
         background-position: center;
-
         margin-bottom: 60px;
-        color: #B45A27;
         margin: 0 auto;
         background-image: url(../images/illustrations/headline/station_area_headline.png);
         background-position: center;
