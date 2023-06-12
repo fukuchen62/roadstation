@@ -1,6 +1,15 @@
 @charset "utf-8";
 
 
+h2 {
+    background-image: url(../images/illustrations/headline/station_list_headline_mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    margin-bottom: 60px;
+    background-size: contain;
+}
+
 .station-titlebox {
     text-align: center;
     margin-bottom: 60px;
@@ -12,10 +21,6 @@
     z-index: -1;
 }
 
-h2 {
-    /* margin-top: 150px; */
-    margin-bottom: 100px;
-}
 
 h4 {
     font-weight: bold;
@@ -160,27 +165,44 @@ dd img {
     margin-bottom: 10px;
 }
 
-@media screen and (min-width:601px) {
 
-    .stationlist-title {
-        text-align: center;
-        margin-bottom: 30px;
-        background-size: cover;
+@media screen and (min-width:601px) {
+    h2 {
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        background-position: center;
         background-repeat: no-repeat;
-        padding: 20px;
-        color: #B45A27;
-        text-align: center;
-        display: inline-block;
+        padding: 60px;
+        margin-bottom: 60px;
+        background-size: contain;
     }
+
 }
+
+.stationlist-title {
+    text-align: center;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #B45A27;
+    text-align: center;
+    display: inline-block;
+}
+
 
 
 @media screen and (min-width:761px) {
 
     h2 {
-        /* margin-top: 250px; */
-        margin-bottom: 30px;
+        color: #B45A27;
+        margin: 0 auto;
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 60px;
+
+
     }
+
 
     .stationlist-title {
         /* margin-top: 300px; */
@@ -206,17 +228,17 @@ dd img {
 @media screen and (min-width:901px) {
 
     h2 {
-        /* margin-top: 150px;
-        margin-bottom: 50px; */
-        background-repeat: no-repeat;
-        background-size: contain;
-        /* width: 300px;
-        height: 100px; */
-        padding: 20px;
         color: #B45A27;
         margin: 0 auto;
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 60px;
+
 
     }
+
+
 
 
     .stationlist-title {
@@ -225,9 +247,10 @@ dd img {
         margin-bottom: 30px;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 20px;
         color: #B45A27;
         text-align: center;
+        padding: 60px;
+
     }
 
 
@@ -239,6 +262,4 @@ dd img {
         gap: 30px;
         justify-items: center;
     }
-
-
 }
