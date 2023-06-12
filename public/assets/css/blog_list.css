@@ -90,11 +90,30 @@ p {
 
 .category_list li {
     margin-top: 10px;
-    padding: 20px 20px;
+    padding: 10px 10px;
     font-weight: bold;
-    border-bottom: dotted 10px #af813a;
+    /* border-bottom: dotted 10px #af813a; */
 
 }
+
+.category_list li:nth-child(odd):hover {
+    background-color: #A7D28D;
+    /* border-radius: 60% 50% 20% 60%; */
+    /* width: 150px; */
+    border-radius: 50px;
+    display: inline-block;
+
+
+}
+
+
+.category_list li:nth-child(even) {
+    border-bottom: dotted 5px #af813a;
+    margin: 0 10px;
+
+
+}
+
 
 
 
@@ -109,22 +128,9 @@ p {
     border-radius: 20px;
 }
 
-.category-name {
-    /* border-bottom: dotted 10px #af813a; */
-    width: 150px;
-    margin: 10px;
 
 
-}
 
-li:hover {
-    background-color: #A7D28D;
-    border-radius: 50px;
-    width: 100px;
-    text-align: center;
-
-
-}
 
 /* PC版のページネーションを表示 */
 .pc {
@@ -160,21 +166,7 @@ li:hover {
         left: 70%;
     }
 
-    .category_list li {
-        margin-top: 10px;
-        padding: 20px 20px;
-        font-weight: bold;
-        border-bottom: dotted 10px #af813a;
-
-    }
-
-    li:hover {
-        background-color: #A7D28D;
-        border-radius: 50px;
-        width: 100px;
-        text-align: center;
 
 
-    }
 
 }

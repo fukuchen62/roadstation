@@ -82,18 +82,55 @@ p {
     object-fit: cover;
 }
 
+.category-title {
+    background-color: #A7D28D;
+    border-radius: 9px 9px 0 0;
+    text-align: center;
+}
+
 .category_list li {
     margin-top: 10px;
-    padding: 20px 20px;
+    padding: 10px 10px;
     font-weight: bold;
+    /* border-bottom: dotted 10px #af813a; */
+
 }
+
+.category_list li:nth-child(odd):hover {
+    background-color: #A7D28D;
+    /* border-radius: 60% 50% 20% 60%; */
+    /* width: 150px; */
+    border-radius: 50px;
+    display: inline-block;
+
+
+}
+
+
+.category_list li:nth-child(even) {
+    border-bottom: dotted 5px #af813a;
+    margin: 0 10px;
+
+
+}
+
+
+
+
 
 .side {
     width: 100%;
-    background-color: #a7d28d;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 8px 0 #70b27f;
+    border: groove 6px #A7D28D;
     color: #8c5243;
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
+    border-radius: 20px;
 }
+
+
+
+
 
 /* PC版のページネーションを表示 */
 .pc {
