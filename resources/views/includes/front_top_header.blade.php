@@ -45,7 +45,7 @@
                 <li>
                     <a href="{{ route('bloglist') }}">
                         <img src="{{ asset('assets/images/menu_icon/blog_list_icon.png') }}" alt="ブログ"
-                            width="35" height="35">行ってみたんよ</a>
+                            width="35" height="35">行ってきたんよ</a>
                 </li>
                 <li>
                     <a href="{{ route('mypage') }}">
@@ -121,7 +121,7 @@
                         <img src="{{ asset('assets/images/menu_icon/blog_list_icon.png') }}" alt="ブログ"
                             width="35" height="35">
                     </div>
-                    行ってみたんよ
+                    行ってきたんよ
                 </a>
             </li>
             <li>

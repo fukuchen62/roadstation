@@ -59,7 +59,7 @@
                         <img src="{{ asset('assets/images/menu_icon/blog_list_icon.png') }}" alt=""
                             width="35" height="35">
                     </div>
-                    行ってみたんよ
+                    行ってきたんよ
                 </a>
             </li>
             <li>
@@ -141,7 +141,7 @@
                         <img src="{{ asset('assets/images/menu_icon/blog_list_icon.png') }}" alt=""
                             width="35" height="35">
 
-                        行ってみたんよ
+                        行ってきたんよ
                     </a>
                 </li>
                 <li>

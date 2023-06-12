@@ -50,7 +50,7 @@
             <li><a href="{{ route('bloglist') }}">
                     <img src="{{ asset('assets/images/menu_icon/blog_list_icon_w.png') }}" alt=""
                         width="20" height="20">
-                    行ってみたんよ</a></li>
+                    行ってきたんよ</a></li>
 
             <li>
                 <a href="{{ route('mypage') }}">
