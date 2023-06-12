@@ -126,7 +126,7 @@ h4 {
 }
 
 .roadstation-name {
-    width: 160px;
+    width: 100%;
     text-align: start;
     font-size: 1.2rem;
 }
