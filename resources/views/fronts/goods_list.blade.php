@@ -124,7 +124,7 @@
                     <div class="conditions-text">{!!$type->usage!!}</div>
                 </div>
             </div>
-            <h4 class="headline-name-comment"></h4>
+            <h4 class="headline-name-comment">＜概要＞</h4>
             <div class="comment-text"> {!!$type->discription!!}</div>
 
             <h3 class="headline-buy-place">買える道の駅</h3>

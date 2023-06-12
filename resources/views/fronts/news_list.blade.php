@@ -60,7 +60,6 @@
 
             <div class="link">
                 {{-- {{ $news->links('pagination::bootstrap-4') }} --}}
-
                 {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }}
 
             </div>
