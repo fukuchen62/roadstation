@@ -133,21 +133,21 @@
 
             <a href="{{route('blog')}}?id={{$blog->id}}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
 
-            <img class="card-img"
+                <img class="card-img"
                         {{-- src="{{ asset('/storage/images/' . $blog->picture) }}" --}}
                         src="https://placehold.jp/300x200.png" alt="no-img">
 
-                        <h3>{!!$blog->title!!}</h3>
+                <h3>{!!$blog->title!!}</h3>
 
                         @php
                                 $ts = strtotime($blog->created_at);
                         @endphp
 
-                        <div class="update-information">
+                <div class="update-information">
                         <p class="date">{{ date('Y年m月d日', $ts) }}</p>
                         <p class="category">{{ $news->newsCategory->category_name }}</p>
-                        </div>
-                        <p class="text">{!!$blog->overview!!}</p>
+                </div>
+                <p class="text">{!!$blog->overview!!}</p>
         </a>
         @endforeach
     </div>
