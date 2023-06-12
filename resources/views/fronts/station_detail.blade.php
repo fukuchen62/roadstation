@@ -32,9 +32,14 @@
 
             <!-- スライドショー -->
             <div class="slide-items">
-                <div><img src="{{ asset('assets/images/station/stations_3_1_1200_400.jpg .jpg') }}" alt=""></div>
+
+                <div><img src="{{ asset('/storage/images/' . $station->picture1) }}" alt=""></div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture2) }}" alt=""></div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture3) }}" alt=""></div>
+
+                {{-- <div><img src="{{ asset('assets/images/station/stations_3_1_1200_400.jpg .jpg') }}" alt=""></div>
                 <div><img src="{{ asset('assets/images/station/drive.jpg') }}" alt=""></div>
-                <div><img src="{{ asset('assets/images/station/stations_3_2_.jpg') }}" alt=""></div>
+                <div><img src="{{ asset('assets/images/station/stations_3_2_.jpg') }}" alt=""></div> --}}
             </div>
 
             <p class="width-row">
