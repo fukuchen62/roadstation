@@ -121,11 +121,11 @@
                     <p class="price-text">{{$type->price}}円</p>
 
                     <h4 class="headline-name">＜利用方法＞</h4>
-                    <div class="conditions-text">　{!!$type->usage!!}</div>
+                    <div class="conditions-text">{!!$type->usage!!}</div>
                 </div>
             </div>
             <h4 class="headline-name-comment"></h4>
-            <div class="comment-text">　{!!$type->discription!!}</div>
+            <div class="comment-text"> {!!$type->discription!!}</div>
 
             <h3 class="headline-buy-place">買える道の駅</h3>
 
