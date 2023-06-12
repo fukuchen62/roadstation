@@ -384,7 +384,6 @@ imgcontent-wrapper .heading {
 
     .wrapper {
         padding: 0;
-        /* margin-top: 100vh; */
     }
 
     /* KV */
@@ -489,16 +488,24 @@ imgcontent-wrapper .heading {
         margin-bottom: 30px;
     }
 
+    .section-title h2 {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+    }
+
     /* section-titleの設定（仮）ここから */
     .section-title {
-        position: relative;
-        padding: 1rem 0.5rem;
-        margin-bottom: 0.5rem;
         border-top: 3px solid #A7D28D;
         font-weight: bold;
-        font-size: 26px;
         color: #8C5243;
-        /* background-image: url(../images/illustrations/headline/headline_07.png); */
+
+        position: relative;
+        /* padding: 1rem 0.5rem; */
+        /* margin-bottom: 3rem; */
+        background-image: url(../images/illustrations/headline/index_headline.png);
+        max-width: 1200px;
+        height: 200px;
     }
 
     .section-title:before {
