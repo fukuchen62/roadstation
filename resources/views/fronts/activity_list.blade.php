@@ -45,7 +45,7 @@
                 </div>
             </div>
             <h4 class="headline text">＜利用条件＞</h4>
-            {!! $activity->conditions !!}
+            <p class="conditions-text">{{ $activity->conditions }}</p>
             <h4 class="headline-text">＜営業時間＞</h4>
             <p class="business-text">
                 {{ $activity->business_hours }}
@@ -91,9 +91,9 @@
         </section>
     @endforeach
 
-        <div class="blog-btn">
+    <div class="blog-btn">
 
-            {{-- 行ってきたんよボタンの表示部分 --}}
-            <a href="{{ url('blog') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログ記事一覧に遷移するボタン"></a>
-        </div>
+        {{-- 行ってきたんよボタンの表示部分 --}}
+        <a href="{{ url('blog') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログ記事一覧に遷移するボタン"></a>
+    </div>
 @endsection
