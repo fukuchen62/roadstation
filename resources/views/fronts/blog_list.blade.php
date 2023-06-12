@@ -30,13 +30,16 @@
 
         .text {
             /* overflow: hidden;
-                                            white-space: nowrap;
-                                            text-overflow: ellipsis;
+                                                                white-space: nowrap;
+                                                                text-overflow: ellipsis;
 
-                                            /*IE対策*/
+                                                                /*IE対策*/
             /* line-height: 1.5em;
-                                            max-height: 4.5em;  */
+                                                                max-height: 4.5em;  */
         }
+
+        .link h2 {}
+
 
         @media screen and (min-width:1080px) {
             nav {
