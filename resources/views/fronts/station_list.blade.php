@@ -1,12 +1,12 @@
 @extends('layouts.layout_front')
 
-@section('description', '一覧')
+@section('description', '道の駅一覧')
 
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
 {{-- タイトル --}}
-@section('title', '一覧')
+@section('title', '道の駅一覧')
 
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/station_list.css') }}">

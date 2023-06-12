@@ -203,7 +203,7 @@ dt {
 .stationlist-title {
     /* margin-top: 250px; */
     text-align: center;
-    background-image: url(../images/hedline_yellow.png);
+    /* background-image: url(../images/hedline_yellow.png); */
     background-position: center;
     background-repeat: no-repeat;
     color: #B45A27;
@@ -287,7 +287,7 @@ dd img {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        /* background-image: url(../images/illustrations/headline/station_list_headline.png); */
         width: 1000px;
         height: 150px;
 
@@ -349,7 +349,7 @@ dd img {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        /* background-image: url(../images/illustrations/headline/station_list_headline.png); */
         width: 1200px;
         height: 150px;
 
