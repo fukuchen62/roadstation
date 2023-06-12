@@ -356,8 +356,6 @@ imgcontent-wrapper .heading {
     background-color: #ffff;
 }
 
-
-
 .blog-card img {
     width: 100%;
     height: auto;
@@ -649,7 +647,6 @@ imgcontent-wrapper .heading {
 
     .sp-btn:hover {
         animation: poyo-yon 2.5s infinite;
-        /* background-color: #fff4ba; */
     }
 
     /* アニメーション：ぽよん */
