@@ -102,13 +102,14 @@ p {
     /* width: 150px; */
     border-radius: 50px;
     display: inline-block;
-    padding: 10px;
+
 
 }
 
 
 .category_list li:nth-child(even) {
-    border-bottom: dotted 10px #af813a;
+    border-bottom: dotted 5px #af813a;
+    margin: 0 10px;
 
 
 }
