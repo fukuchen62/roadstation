@@ -56,6 +56,12 @@ h4 {
     /* background-color: #ffff; */
     border-radius: 20px;
     padding: 30px;
+    background-color: #ffff;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    /* border: 3px #7b7b7b; */
+    border: groove 6px #cf9957;
+
+
 }
 
 .activity-delimiter-last {
@@ -63,6 +69,10 @@ h4 {
     /* background-color: #ffff; */
     border-radius: 20px;
     padding: 30px;
+    background-color: #fff;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    /* border: 3px #7b7b7b; */
+    border: groove 6px #cf9957;
 }
 
 .activity-photo {
@@ -144,6 +154,19 @@ h4 {
     margin-bottom: 5%;
 }
 
+.roadstation-name {
+    display: inline-block;
+    text-align: start;
+
+    background-color: #d6e6ae;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    /* height: 120px; */
+    /* max-width: 320px; */
+}
+
 .blog-btn a:hover {
     opacity: 0.7;
 }
@@ -153,6 +176,8 @@ h4 {
     height: auto;
     object-fit: cover;
 }
+
+
 
 @media screen and (min-width:901px) {
     .blog-btn {
@@ -248,4 +273,17 @@ h4 {
         width: 100%;
     }
 
+    .roadstation-name {
+        display: inline-block;
+        text-align: start;
+        background-color: #d6e6ae;
+        border-radius: 50px;
+        margin: auto;
+        margin-top: 20px;
+        padding: 15px;
+        /* height: 100px; */
+        width: 650px;
+
+
+    }
 }
