@@ -80,10 +80,6 @@ dl {
 }
 
 .district {
-    /* background-image: url(../images/illustrations/headline/station_area_headline.png); */
-    width: 1200px;
-    height: 150px;
-
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
@@ -169,12 +165,6 @@ dl {
         padding: 20px 30px;
         border-radius: 30px;
         font-size: 1.5rem;
-    }
-
-    .district {
-        /* background-image: url(../images/illustrations/headline/station_area_headline.png); */
-        width: 1200px;
-        height: 150px;
     }
 }
 
