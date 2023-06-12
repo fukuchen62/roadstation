@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* 背景 */
+
+
 /* 基本情報 */
 h3 {
     font-weight: bold;
@@ -66,18 +69,23 @@ section {
 
 /* ニュース */
 .news-title {
-    padding: 20px 30px;
+    padding: 10px 30px;
 }
 
 .news-box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
     text-align: center;
     background-color: #ffff;
     border: #ffebd8 2px solid;
-    border-radius: 50%;
+    border-radius: 50px;
 }
 
 .news-mobilebtn {
+    display: inline-block;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* PC版：ニュースボタン（非表示） */
@@ -86,6 +94,8 @@ section {
 }
 
 .article-list li {
+    padding: 10px;
+    text-align: left;
     padding-bottom: 10px;
 }
 
@@ -147,12 +157,6 @@ section {
 .south {
     top: 55%;
     left: 46%;
-}
-
-
-.section-title {
-    text-align: center;
-    margin-bottom: 30px;
 }
 
 /* 特産品 */
@@ -377,6 +381,76 @@ imgcontent-wrapper .heading {
     display: none;
 }
 
+/* ↓ここから、見出しの設定 */
+.section-title01 h2,
+.section-title03 h2 {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+/* こんなんあるで！ */
+.section-title01 {
+    border-top: 3px solid #A7D28D;
+    font-weight: bold;
+    color: #8C5243;
+
+    position: relative;
+    background-image: url(../images/index/index_headline_01.png);
+    max-width: 1200px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+/* こんなんやってみ！ */
+.section-title02 {
+    border-top: 3px solid #A7D28D;
+    font-weight: bold;
+    color: #8C5243;
+
+    position: relative;
+    background-image: url(../images/index/index_headline_02.png);
+    background-repeat: no-repeat;
+
+    max-width: 1200px;
+    height: 210px;
+    margin-bottom: 50px;
+}
+
+.section-title02 h2 {
+    position: absolute;
+    top: 40%;
+    right: 30%;
+}
+
+/* 行ってきたんよ！ */
+.section-title03 {
+    border-top: 3px solid #A7D28D;
+    font-weight: bold;
+    color: #8C5243;
+
+    position: relative;
+    background-image: url(../images/index/index_headline_03.png);
+    max-width: 1200px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+/* ストライプの罫線 */
+.section-title01:before,
+.section-title02:before,
+.section-title03:before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
+    content: '';
+}
+
+/* section-titleの設定（仮）ここまで */
+
 
 @media screen and (min-width:601px) {
 
@@ -417,13 +491,11 @@ imgcontent-wrapper .heading {
     /* ニュース */
     .news-box {
         display: flex;
-        text-align: center;
         background-color: #ffff;
-        border-radius: 50%;
         display: flex;
         justify-content: center;
         background-color: #ffff;
-        border-radius: 50%;
+        border-radius: 50px;
         padding: 30px;
         margin-bottom: 30px;
         gap: 5%;
@@ -480,75 +552,7 @@ imgcontent-wrapper .heading {
         margin-top: 5%;
     }
 
-    /* 見出しの設定 */
-    .section-title01 h2,
-    .section-title03 h2 {
-        position: absolute;
-        top: 40%;
-        left: 30%;
-    }
 
-    /* こんなんあるで！ */
-    .section-title01 {
-        border-top: 3px solid #A7D28D;
-        font-weight: bold;
-        color: #8C5243;
-
-        position: relative;
-        background-image: url(../images/index/index_headline_01.png);
-        max-width: 1200px;
-        height: 200px;
-        margin-bottom: 50px;
-    }
-
-    /* こんなんやってみ！ */
-    .section-title02 {
-        border-top: 3px solid #A7D28D;
-        font-weight: bold;
-        color: #8C5243;
-
-        position: relative;
-        background-image: url(../images/index/index_headline_02.png);
-        background-repeat: no-repeat;
-
-        max-width: 1200px;
-        height: 210px;
-        margin-bottom: 50px;
-    }
-
-    .section-title02 h2 {
-        position: absolute;
-        top: 40%;
-        right: 30%;
-    }
-
-    /* 行ってきたんよ！ */
-    .section-title03 {
-        border-top: 3px solid #A7D28D;
-        font-weight: bold;
-        color: #8C5243;
-
-        position: relative;
-        background-image: url(../images/index/index_headline_03.png);
-        max-width: 1200px;
-        height: 200px;
-        margin-bottom: 50px;
-    }
-
-    /* ストライプの罫線 */
-    .section-title01:before,
-    .section-title02:before,
-    .section-title03:before {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 10px;
-        background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
-        content: '';
-    }
-
-    /* section-titleの設定（仮）ここまで */
 
     .sp-btn {
         display: inline-block;
@@ -815,14 +819,9 @@ imgcontent-wrapper .heading {
         left: 30px;
     }
 
-    /* ニュースの囲み */
     .news-box {
-        display: flex;
-        border-radius: 50%;
-        padding: 30px;
-        margin: 100px auto;
-        margin-bottom: 30px;
-        width: 75%;
+        margin: 40px auto;
+        max-width: 800px;
     }
 
     /* ニュースボタン */
