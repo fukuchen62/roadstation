@@ -98,9 +98,9 @@
         </section>
         <div id="detail-top"></div>
 
-        <section class="detail-group">
+        <section>
             @foreach ($goods_type as $type )
-            <div class="any" id="{{'type-' . $type->id}}">
+            <div class="any detail-group" id="{{'type-' . $type->id}}">
             <h3 class="headline-item-name">{{$type->common_name}}</h3>
             <div class="item-group">
                 <img class="detail-photo" src="{{ asset('/storage/images/' . $type->picture) }}" alt="">
@@ -121,11 +121,11 @@
                     <p class="price-text">{{$type->price}}円</p>
 
                     <h4 class="headline-name">＜利用方法＞</h4>
-                    <p class="conditions-text">{!!$type->usage!!}</p>
+                    <div class="conditions-text">{!!$type->usage!!}</div>
                 </div>
             </div>
             <h4 class="headline-name-comment"></h4>
-            <p class="comment-text"> {!!$type->discription!!}</p>
+            <div class="comment-text"> {!!$type->discription!!}</div>
 
             <h3 class="headline-buy-place">買える道の駅</h3>
 
