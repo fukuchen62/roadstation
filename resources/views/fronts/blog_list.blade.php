@@ -30,17 +30,17 @@
 
         .text {
             /* overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
 
-                    /*IE対策*/
+                                            /*IE対策*/
             /* line-height: 1.5em;
-                    max-height: 4.5em;  */
+                                            max-height: 4.5em;  */
         }
 
         @media screen and (min-width:1080px) {
-            .link {
-                width: 70%;
+            nav {
+                width: 790px;
             }
         }
     </style>
@@ -89,6 +89,6 @@
     </div>
     {{-- ページネーション表示部分 --}}
     {{--  <div class="link">{{ $blogs->links('pagination::bootstrap-4') }}  --}}
-    {{ $search->appends(request()->query())->links('pagination::bootstrap-4') }}
+    {{ $blogs->appends(request()->query())->links('pagination::bootstrap-4') }}
     </div>
 @endsection
