@@ -22,6 +22,14 @@ h2 {
     width: 100%;
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 60px;
+    padding: 30px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #B45A27;
+    background-image: url(../images/illustrations/headline/goods_list_headline_mobile.png);
+
 }
 
 h3 {
@@ -42,7 +50,6 @@ h4 {
     margin-bottom: 60px;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
     color: #B45A27;
     text-align: center;
 }
@@ -83,6 +90,13 @@ h4 {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    text-align: center;
+}
+
+.station-namebox {
+    text-align: left;
+    margin-bottom: 30px;
+
 }
 
 .activity-name {
@@ -91,12 +105,26 @@ h4 {
 }
 
 .station-name {
-    width: 100%;
-    margin: 10px auto 20px auto;
+    display: inline-block;
+    /* width: 100%; */
+    padding: 10px 10px;
+    margin: 10px auto 10px auto;
     text-align: start;
     font-size: 1.2rem;
     /* border-bottom: double 4px #e7d955; */
+    background-color: #A7D28D;
+    box-shadow: 0px 10px 0px -5px #70b27f;
+    border-radius: 50px;
+
+
 }
+
+.station-name:hover {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
 
 .business-text {
     width: 100%;
@@ -152,8 +180,8 @@ h4 {
 .roadstation-name {
     display: inline-block;
     text-align: start;
-
-    background-color: #d6e6ae;
+    background-color: #A7D28D;
+    box-shadow: 0px 10px 0px -5px #70b27f;
     border-radius: 50px;
     margin: auto;
     margin-top: 20px;
@@ -161,6 +189,15 @@ h4 {
     /* height: 120px; */
     /* max-width: 320px; */
 }
+
+
+.roadstation-name:hover {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+
 
 .blog-btn a:hover {
     opacity: 0.7;
@@ -170,6 +207,24 @@ h4 {
     max-width: 320px;
     height: auto;
     object-fit: cover;
+}
+
+@media screen and (min-width:601px) {
+
+    h2 {
+        /* max-width: 220px; */
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 60px;
+        padding: 60px;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #B45A27;
+        background-image: url(../images/illustrations/headline/activity_headline.png);
+        background-size: contain;
+    }
 }
 
 
@@ -194,13 +249,22 @@ h4 {
     }
 
 
-    /* h2 {
+
+
+    h2 {
+        /* max-width: 220px; */
         width: 100%;
-        margin: 30px auto 30px auto;
         text-align: center;
-        font-size: 32px;
-        margin-top: 150px; */
-    /* } */
+        font-size: 2rem;
+        margin-bottom: 60px;
+        padding: 60px;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #B45A27;
+        background-image: url(../images/illustrations/headline/activity_headline.png);
+
+    }
 
     h3 {
         font-size: 32px;
@@ -271,7 +335,8 @@ h4 {
     .roadstation-name {
         display: inline-block;
         text-align: start;
-        background-color: #d6e6ae;
+        background-color: #A7D28D;
+        box-shadow: 0px 10px 0px -5px #70b27f;
         border-radius: 50px;
         margin: auto;
         margin-top: 20px;
