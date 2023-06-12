@@ -23,10 +23,7 @@ h4 {
     padding: 15px;
 }
 
-.stationlist-box {
-    text-align: center;
-    margin: 0 auto;
-}
+
 
 dl {
     text-align: start;
@@ -41,166 +38,51 @@ dt {
     padding-top: 10px;
 }
 
+/* 一覧を覆う要素 */
+.stationlist-box {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*  */
+.stationlist-box section {
+    margin-bottom: 200px;
+}
+
+/* エリアごとの見出し */
 .east-title {
     text-align: center;
     font-size: 30px;
     color: #ffffff;
-    background-color: #96c97b;
+    background-color: #cf9957;
     border-radius: 20px;
     padding: 1rem 0;
-    margin: 30px auto 30px auto;
-
-    /* 見出しのスタイル */
-    /* position: relative;
-    padding: 1rem;
-    outline: 2px solid rgba(128, 92, 33, 0.8);
-    outline-offset: -5px;
-    background-image: repeating-linear-gradient(45deg,
-            #dfd1ab 0 7px,
-            transparent 7px 12px);
-    background-repeat: no-repeat;
-    background-position: 10px 10px; */
+    margin: 60px auto;
 }
-
-/*
-.east-title::before {
-    content: '';
-
-    display: inline-block;
-    width: 50px;
-
-    height: 50px;
-
-    padding: 10px;
-    background-image: url(../images/illustrations/east1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    margin-right: 10px;
-
-
-} */
-
-/*
-.east-title::after {
-    content: '';
-
-    display: inline-block;
-    width: 50px;
-
-    height: 50px;
-
-    padding: 10px;
-    background-image: url(../images/illustrations/east2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    margin-left: 10px;
-
-} */
-
-
-
-
-
-
-
 
 .west-title {
     text-align: center;
-    /* display: inline-block; */
-    /* padding: 20px 23px; */
-    /* border-bottom: dotted 10px #e7d955; */
     font-size: 30px;
     color: #ffffff;
-    background-color: #96c97b;
+    background-color: #cf9957;
     border-radius: 20px;
     padding: 1rem 0;
     margin: 30px auto 30px auto;
-
-
-
 }
-
-.west-title::before {
-    content: '';
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    background-image: url(../images/illustrations/west1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-
-.west-title::after {
-    content: '';
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    background-image: url(../images/illustrations/west2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    margin-left: 10px;
-
-}
-
-
 
 .south-title {
     text-align: center;
-    /* display: inline-block; */
-    /* padding: 20px 23px; */
-    /* border-bottom: dotted 10px #e7d955; */
     font-size: 30px;
     color: #ffffff;
-    background-color: #96c97b;
+    background-color: #cf9957;
     border-radius: 20px;
     padding: 1rem 0;
     margin: 30px auto 30px auto;
 }
 
-
-.south-title::before {
-    content: '';
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    background-image: url(../images/illustrations/south2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-.south-title::after {
-    content: '';
-    /*何も入れない*/
-    display: inline-block;
-    width: 50px;
-    /*画像の幅*/
-    height: 50px;
-    /*画像の高さ*/
-    padding: 10px;
-    background-image: url(../images/illustrations/south1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    margin-left: 10px;
-}
-
-
-
 .stationlist-title {
-    /* margin-top: 250px; */
+    width: 100%;
     text-align: center;
-    /* background-image: url(../images/hedline_yellow.png); */
     background-position: center;
     background-repeat: no-repeat;
     color: #B45A27;
@@ -281,13 +163,8 @@ dd img {
 @media screen and (min-width:601px) {
 
     .stationlist-title {
-        /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        /* background-image: url(../images/illustrations/headline/station_list_headline.png); */
-        width: 1000px;
-        height: 150px;
-
         background-size: cover;
         background-repeat: no-repeat;
         padding: 20px;
@@ -346,10 +223,6 @@ dd img {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        /* background-image: url(../images/illustrations/headline/station_list_headline.png); */
-        width: 1200px;
-        height: 150px;
-
         background-size: cover;
         background-repeat: no-repeat;
         padding: 20px;
