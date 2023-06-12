@@ -54,8 +54,12 @@ dl {
     font-size: 1.1rem;
 }
 
+/* カードの押し込み */
 .area-btn:hover {
-    background-color: #a7d28d94;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    box-shadow: none;
 }
 
 /* 検索結果 */

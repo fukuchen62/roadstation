@@ -86,7 +86,6 @@ dd img {
 }
 
 
-
 form {
     background-color: #ffffff;
     padding: 20px 0;
@@ -197,17 +196,15 @@ dd {
     padding: 15px;
     width: 100px;
     margin: 20px;
-
-
+    /* ボタンの影 */
+    box-shadow: 0px 5px 0px 0px #70b27f;
 }
 
 
 .more-btn:hover {
     position: relative;
-    top: 2px;
-    left: 5px;
+    top: 5px;
     box-shadow: none;
-    opacity: 0.7;
 }
 
 
