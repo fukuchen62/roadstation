@@ -15,21 +15,24 @@ p {
 
 h2 {
     margin-bottom: 60px;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
     color: #B45A27;
+    background-image: url(../images/illustrations/headline/goods_list_headline_mobile.png);
+
 }
 
 h3 {
     max-width: 220px;
     width: 100%;
-    margin: 30px auto 30px auto;
+    margin: 50px auto 50px auto;
     text-align: center;
     font-size: 1.6rem;
     color: #B45A27;
     border-bottom: dotted 10px #e7d955;
+
 }
 
 h4 {
@@ -41,7 +44,8 @@ h4 {
 .headline-agricultural-products {
     text-align: center;
     padding: 1rem 0;
-    margin: 60px auto;
+    /* margin: 60px auto; */
+    /* margin-bottom: 30px; */
 }
 
 .headline-name {
@@ -77,11 +81,14 @@ h4 {
 }
 
 .goods {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     gap: 30px 20px;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
 }
 
 .goods-group {
@@ -182,23 +189,41 @@ h4 {
     text-align: center;
     color: #B45A27;
     border-bottom: dotted 10px #e7d955;
+    margin-bottom: 30px;
 }
 
 .roadstation-frame {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     margin-bottom: 50px;
+}
+
+.roadstation-name {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     text-align: center;
+    background-color: #A7D28D;
+    box-shadow: 0px 10px 0px -5px #70b27f;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 15px 15px;
+    margin: 5px;
+
+}
+
+.roadstation-name:hover {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
 }
 
 .roadstation-name {
     width: 160px;
 }
 
+/* 
 .name {
-    padding-top: 30px;
-}
+    padding-top: 15px;
+} */
 
 .blog-btn {
     text-align: center;
@@ -231,7 +256,38 @@ h4 {
     }
 }
 
+@media screen and (min-width:601px) {
+    h2 {
+        margin-bottom: 60px;
+        padding: 60px;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #B45A27;
+        background-image: url(../images/illustrations/headline/goods_list_headline.png);
+        background-size: contain;
+
+    }
+}
+
+
+
+
 @media screen and (min-width:620px) {
+
+    h2 {
+        margin-bottom: 60px;
+        padding: 60px;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #B45A27;
+        background-image: url(../images/illustrations/headline/goods_list_headline.png);
+        background-size: contain;
+
+    }
+
+
     .goods-photo {
         max-width: 230px;
     }
@@ -276,6 +332,18 @@ h4 {
 
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1180px) {
+
+    h2 {
+        margin-bottom: 60px;
+        padding: 60px;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #B45A27;
+        background-image: url(../images/illustrations/headline/goods_list_headline.png);
+
+
+    }
 
     h3 {
         font-size: 32px;
