@@ -118,12 +118,17 @@ class Activity extends Model
     public function getBlogName($id)
     {
         $blog = Blog::find($id);
-        if($blog != null and $blog->is_show == 1 and $blog->is_highlight == 1){
+
+        $title ='';
+        if ($blog->is_show == 1) {
             $title = $blog->title;
-            }else{
-                $title = "該当するブログ記事はございません。";
-            }
-            return $title;
+        }
+        // if($blog != null and $blog->is_show == 1 and            $blog->is_highlight == 1){
+        //     $title = $blog->title;
+        //     }else{
+        //         $title = "該当するブログ記事はございません。";
+        //     }
+        return $title;
     }
 
     /**
