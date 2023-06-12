@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('season', 50)->nullable(true);
             $table->text('discription', 300)->nullable(true);
             $table->integer('road_station_id')->nullable(false);
+            $table->string('blog_list', 20)->nullable(true);
             $table->string('picture', 200)->nullable(true);
             $table->string('price', 50)->nullable(true);
             $table->string('usage', 500)->nullable(true);
