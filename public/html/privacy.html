@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ページの紹介文">
+    <!-- ファビコンの設定を入れる -->
+
+    <title>道の駅詳細検索</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/station_detail.css">
+
+
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <!-- アイコンフォント -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- g-nav pc -->
+        <nav class="nav-pc">
+            <h1><a href="index.html"><img src="../assets/images/site_logo/logo.png" width="100" height="100"
+                        alt="とくしままるっと道の駅"></a></h1>
+
+            <ul>
+                <li>
+                    <a href="../html/station_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        道の駅一覧
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../html/station_area.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_area_icon.png" alt="" width="30" height="30">
+                        </div>
+                        エリア検索
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/station_detail.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/station_detail_icon.png" alt="" width="30" height="30">
+                        </div>
+                        詳細検索
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/goods_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/goods_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        特産品
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/activity_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/activity_list_icon.png" alt="" width="30" height="30">
+                        </div>
+                        体験
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/blog_list.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/blog_list_icon.png" alt="" width="35" height="35">
+                        </div>
+                        行ってきたんよ
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/like.html">
+                        <div>
+                            <img src="../assets/images/menu_icon/like_icon.png" alt="" width="30" height="30">
+                        </div>
+                        お気に入り
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- g-nav mobile -->
+        <nav id="wrapper">
+            <h1 class="site-logo mobile-logo"><a href="index.html"><img src="../assets/images/site_logo/logo.png"
+                        alt="とくしままるっと道の駅"></a></h1>
+
+            <div class="btn-gnavi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="global-navi">
+
+                <ul class="hamburger-menu">
+                    <li>
+                        <a href="../html/station_list.html">
+
+                            <img src="../assets/images/menu_icon/station_list_icon.png" alt="" width="30" height="30">
+
+                            道の駅一覧
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="../html/station_area.html">
+
+                            <img src="../assets/images/menu_icon/station_area_icon.png" alt="" width="30" height="30">
+
+                            エリア検索
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/station_detail.html">
+
+                            <img src="../assets/images/menu_icon/station_detail_icon.png" alt="" width="30" height="30">
+
+                            詳細検索
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/goods_list.html">
+
+                            <img src="../assets/images/menu_icon/goods_list_icon.png" alt="" width="30" height="30">
+
+                            特産品
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/activity_list.html">
+
+                            <img src="../assets/images/menu_icon/activity_list_icon.png" alt="" width="30" height="30">
+
+                            体験
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/blog_list.html">
+
+                            <img src="../assets/images/menu_icon/blog_list_icon.png" alt="" width="35" height="35">
+
+                            行ってきたんよ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/like.html">
+
+                            <img src="../assets/images/menu_icon/like_icon.png" alt="" width="30" height="30">
+
+                            お気に入り
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </nav>
+
+    </header>
+
+    <!-- キービジュアル -->
+    <div class="kv">
+
+        <figure><img src="../assets/images/station_detail/station_detail01.jpg" alt="" お好きな道の駅を検索してください。"></figure>
+
+    </div>
+
+    <main class="wrapper">
+<section>
+<h1>PRIVACY POLICY</h3>
+<h2>個人情報の取り扱いについて</h2>
+
+<p>本プライバシーポリシーは、「とくしま　まるっと　道の駅」（以下「本サイト」） の各種サービス（本サイトによる情報提供、お問い合わせ等）において、本サイトを利用する方々の個人情報およびそれに準ずる情報を取り扱う際に、本サイトが遵守する方針を示したものです。</p></section>
+<section>
+<h2>第１章・基本方針</h2>
+
+<p>本サイトでは、個人情報の重要性を認識し、個人情報を保護することが社会的責務であると考え、個人情報に関する法令を遵守し、本サイトで取り扱う個人情報の取得、利用、管理を適正に行います。 本サイトで収集した情報は、利用目的の範囲内で適切に取り扱います。</p></section>
+<section>
+<h2>第２章・収取する情報の範囲</h2>
+
+<p>サイトでは、インターネットドメイン名、IPアドレス、サイト内検索のクエリ情報、その他当サイトの閲覧等に係る情報を自動的に収集します。なお、クッキー（サーバ側で利用者を識別するために、サーバから利用者のブラウザに送信され、利用者のコンピュータに蓄積させる情報）は、使い勝手の向上を目的とする内容に限定するものであり、個人情報は一切含みません。</p></section>
+<section>
+<h2>第３条・利用目的</h2>
+
+<p>本サイトでは、お客様からのお問い合わせ時に、お客様の氏名、生年月日、住所、電話番号、メールアドレス等の個人情報をご提供いただく場合があります。その場合は、以下に示す利用目的のために、適正に利用するものと致します。</p></section>
+<section>
+<h2>第４条・情報管理</h2>
+
+<p>お客様からお預かりした個人情報は、不正アクセス、紛失、漏えい等が起こらないよう、慎重かつ適切に管理します。</p></section>
+<section>
+<h2>第５条・適用範囲</h2>
+
+<p>本プライバシーポリシーは、当サイトにおいてのみ適用されます。</p></section>
+<section>
+<h2>第６条・内容の変更について</h2>
+
+<p>本プライバシーポリシーの内容は、法令その他本プライバシーポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく、変更することができるものとします。本サイトが別途定める場合を除いて、変更後のプライバシーポリシーは本サイトに掲載したときから効力を生じるものとします。</p></section>
+<section>
+<h1>免責事項</h1>
+</section>
+<section>
+<h2>本サイトの情報の正確性について</h2>
+
+<p>本サイトのコンテンツや情報において、可能な限り正確な情報を掲載するよう努めています。しかし、誤情報が入り込んだり、情報が古くなったりすることもあります。必ずしも正確性を保証するものではありません。合法性や安全性なども保証しません。</p></section>
+<section>
+<h2>損害等の責任について</h2>
+
+<p>本サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。 また本サイトからリンクやバナーなどによって他のサイトに移動された場合、移動先サイトで提供される情報、サービス等について一切の責任も負いません。 本サイトの保守、火災、停電、その他の自然災害、ウィルスや第三者の妨害等行為による不可抗力によって、本サイトによるサービスが停止したことに起因して利用者に生じた損害についても、何ら責任を負うものではありません。</p></section>
+<section>
+<h2>本サイトで掲載している画像の著作権や肖像権等について</h2>
+
+<p>本サイトで掲載している画像の著作権や肖像権等は、各権利所有者に帰属します。万が一問題がある場合は、お問い合わせよりご連絡いただけますよう宜しくお願い致します。</p></section>
+<section>
+<h2>無断転載</h2>
+
+<p>本サイトに存在する、文章や画像、動画等の著作物の情報を無断転載することを禁止します。引用の範囲を超えるものについては、法的処置を行います。転載する際には、お問い合わせよりご連絡いただけますよう宜しくお願い致します。</p></section>
+    </main>
+
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fffbf1" fill-opacity="1" d="M0,96L60,112C120,128,240,160,360,149.3C480,139,600,85,720,80C840,75,960,117,1080,138.7C1200,160,1320,160,1380,160L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+            </path>
+        </svg>
+
+        <!-- topへ戻るボタン -->
+        <div class="scroll-top">
+            <a href="#"><img src="../assets/images/illustrations/Tanuki-top.png" alt="TOPへ戻るボタン"></a>
+        </div>
+
+        <!-- フッターメニュー -->
+        <div class="footer-menu">
+
+            <ul class="footer-menu-list">
+                <li><a href="../html/station_list.html">
+                        <img src="../assets/images/menu_icon/station_list_icon_w.png" alt="道の駅一覧アイコン" width="20" height="20">
+                        道の駅一覧</a></li>
+                <li><a href="../html/station_area.html">
+                        <img src="../assets/images/menu_icon/station_area_icon_w.png" alt="エリア検索アイコン" width="20" height="20">
+                        エリア検索</a></li>
+                <li><a href="../html/station_detail.html">
+                        <img src="../assets/images/menu_icon/station_detail_icon_w.png" alt="詳細検索アイコン" width="20" height="20">
+                        詳細検索</a></li>
+                <li><a href="../html/news_list.html">
+                        <img src="../assets/images/menu_icon/news_icon_w.png" alt="ニュースアイコン" width="20" height="20">
+                        ニュース</a></li>
+            </ul>
+
+            <ul class="footer-menu-list">
+                <li><a href="../html/goods_list.html">
+                        <img src="../assets/images/menu_icon/goods_list_icon_w.png" alt="特産品アイコン" width="20" height="20">
+                        特産品</a></li>
+                <li><a href="../html/activity_list.html">
+                        <img src="../assets/images/menu_icon/activity_list_icon_w.png" alt="体験アイコン" width="20" height="20">
+                        体験</a></li>
+                <li><a href="../html/blog_list.html">
+                        <img src="../assets/images/menu_icon/blog_list_icon_w.png" alt="ブログアイコン" width="20" height="20">
+                        行ってきたんよ</a></li>
+                <li><a href="../html/like.html">
+                        <img src="../assets/images/menu_icon/like_icon_w.png" alt="お気に入りアイコン" width="20" height="20">
+                        お気に入り</a></li>
+            </ul>
+            <ul>
+
+                <li><a href="#">
+                        このサイトについて</a></li>
+                <li><a href="#">
+                        お問い合わせ</a></li>
+                <li><a href="#">
+                        プライバシーポリシー</a></li>
+            </ul>
+
+        </div>
+
+        <p class="copyright">AllCopyRight©とくしま まるっと道の駅</p>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
