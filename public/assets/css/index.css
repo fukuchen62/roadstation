@@ -372,10 +372,6 @@ imgcontent-wrapper .heading {
     width: 300px;
 }
 
-/* .blog-btn a:hover {
-    opacity: 0.7;
-} */
-
 .blog-btn img {
     max-width: 320px;
     height: auto;
@@ -387,14 +383,6 @@ imgcontent-wrapper .heading {
     display: none;
 }
 
-/* ↓ここから、見出しの設定 */
-/* .section-title01 h2,
-.section-title03 h2 {
-    position: absolute;
-    top: 40%;
-    left: 30%;
-} */
-
 /* こんなんあるで！ */
 .section-title01 {
     text-align: center;
@@ -405,7 +393,7 @@ imgcontent-wrapper .heading {
     background-image: url(../images/index/index_headline_04.png);
     background-size: contain;
     background-position: center;
-    backgound-repeat: no-repeat;
+    background-repeat: no-repeat;
     padding: 100px;
     margin-bottom: 150px;
 }
