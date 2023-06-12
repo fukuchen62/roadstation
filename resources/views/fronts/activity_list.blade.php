@@ -91,9 +91,9 @@
         </section>
     @endforeach
 
-        <div class="blog-btn">
+    <div class="blog-btn">
 
-            {{-- 行ってきたんよボタンの表示部分 --}}
-            <a href="{{ url('blog') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログ記事一覧に遷移するボタン"></a>
-        </div>
+        {{-- 行ってきたんよボタンの表示部分 --}}
+        <a href="{{ url('blog') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログ記事一覧に遷移するボタン"></a>
+    </div>
 @endsection
