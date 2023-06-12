@@ -138,6 +138,9 @@
                         $id_list = explode('|', $station_list);
                     @endphp
 
+                    {{-- MyUtilクラスの読み込み fukushima --}}
+                    @inject('myUtil', 'App\Libs\MyUtil')
+
                     @foreach ($id_list as $id)
                         @php
                             //道の駅IDをアルファベットから数字に変換する fukushima

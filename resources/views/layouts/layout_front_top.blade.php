@@ -65,9 +65,6 @@
     {{-- トークンを読み込む --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- MyUtilクラスの読み込み fukushima --}}
-    @inject('myUtil', 'App\Libs\MyUtil')
-
 </head>
 
 <body>
