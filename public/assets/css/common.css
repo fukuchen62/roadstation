@@ -109,6 +109,7 @@ h3 {
     height: 100vh;
     padding: 100px;
     background-color: #fffbf1;
+    z-index: 100;
 }
 
 /* ハンバーガーメニューのリスト */
@@ -117,7 +118,13 @@ h3 {
     font-size: 24px;
     padding: 20px 20px;
     margin: 0 10px;
-    border-bottom: 2px dotted #732424;
+    border-bottom: 2px dotted #A7D28D;
+    background-color: #fff;
+}
+
+#wrapper nav ul li img {
+    display: inline-block;
+    text-align: center;
 }
 
 #wrapper nav ul li a {
@@ -135,15 +142,21 @@ h3 {
     box-sizing: border-box;
     cursor: pointer;
     -webkit-transition: all 400ms;
-    transition: all 400ms
+    transition: all 400ms;
+
+    /* ３本線の背景の設定 */
+    border: 30px solid #d8f0a2;
+    border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
+    background: #d8f0a2;
 }
+
 
 /* 三本線 */
 #wrapper .btn-gnavi span {
     position: absolute;
     width: 30px;
     height: 4px;
-    background: #b45a27;
+    background: #ffffff;
     border-radius: 10px;
     -webkit-transition: all 400ms;
     transition: all 400ms;
