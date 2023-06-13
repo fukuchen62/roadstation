@@ -258,39 +258,37 @@ p {
     display: inline-block;
 }
 
-.page-item:nth-of-type(1) {
-    font-size: 36px;
-    font-weight: bold;
-    background-color: #fff;
-}
-
-.page-item:nth-of-type(2) {
-    font-weight: bold;
-    color: #fff;
-}
-
-.page-item:nth-of-type(3) {
-    font-weight: bold;
-    color: #FFFBF1;
-}
-
-.page-item:nth-of-type(4) {
-    font-weight: bold;
-    color: #FFFBF1;
-}
-
-.page-item:nth-of-type(5) {
-    font-size: 36px;
-    font-weight: bold;
-    background-color: #fff;
-}
-
 .page-item {
     display: block;
     width: 32px;
     height: 32px;
     border-radius: 50%;
+}
+
+.page-item:nth-child(odd) {
     background-color: #5EB356;
+    color: #fff;
+    font-weight: bold;
+}
+
+.page-item:nth-child(even) {
+    background-color: #5EB356;
+    color: #fff;
+    font-weight: bold;
+}
+
+.page-item:nth-child(1) {
+    background-color: #FFFBF1;
+    color: #91471D;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page-item:nth-last-child(1) {
+    background-color: #FFFBF1;
+    color: #91471D;
+    font-size: 36px;
+    font-weight: bold;
 }
 
 /* ↑ページネーションの設定はここまで */
