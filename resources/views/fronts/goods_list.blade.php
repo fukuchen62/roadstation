@@ -177,6 +177,11 @@
                         $station_list = $type->station_list;
                         // 文字列から配列に変換
                         $id_list = explode("|", $station_list);
+                        // 配列から三野を削除
+                        for ($i = 0 ; $i < count($id_list); $i++){
+                        if ($id_list[$i] == 'b' or $id_list[$i] == 'delete'){
+    unset($id_list[$i]);}}
+                            $id_list = array_values($id_list);
                     @endphp
 
                     @foreach ( $id_list as $id_item )
@@ -206,7 +211,7 @@
                         @endphp
                         <li class="roadstation-name">
                         <a class="" href="{{route('roadstation')}}?id={{$id}}">
-                            <p class="name">{{$name}}</p>
+                        <p class="name">{{$name}}</p>
                         </a>
                         </li>
                     @endforeach
