@@ -142,10 +142,17 @@
     <div class="blog-main">
         <div class="blog-wrapper">
             @foreach ($blog as $blog)
+                @php
+                        $blogImg = $blog->picture;
+                @endphp
+
                 <a href="{{ route('blog') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}"
                     class="blog-card">
-
-                    <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
+                    @if ($blogImg!='')
+                        <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
+                    @else
+                        <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="no img">
+                    @endif
 
                     <h3>{!! $blog->title !!}</h3>
 
