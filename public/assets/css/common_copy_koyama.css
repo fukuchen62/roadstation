@@ -1,0 +1,433 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 基本設定 */
+body {
+    font-size: 16px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    color: #91471d;
+    background-color: #fffbf1;
+}
+
+h1 {
+    padding-left: 5px;
+    margin-right: 15px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: "Kiwi Maru", serif;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+/* コンテンツ内容 */
+.wrapper {
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    padding: 20px;
+}
+
+/* 各ページのキービジュアル（TOPを除く） */
+.kv {
+    z-index: -9999;
+}
+
+.kv img {
+    margin: 0 auto;
+    object-fit: cover;
+    /* position: absolute; */
+    width: 100%;
+    height: 120px;
+}
+
+/* サイトロゴ */
+.site-logo img {
+    position: fixed;
+    width: 80px;
+    height: auto;
+    padding-top: 5px;
+    z-index: 100;
+}
+
+.nav-mobile {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: #a7d28d;
+    z-index: 999;
+}
+
+/* ↓もっと見るボタン */
+.btn {
+    font-weight: bold;
+    padding: 20px 100px;
+    border-radius: 50px;
+    background-color: #a7d28d;
+    box-shadow: 0px 10px 0px -5px #70b27f;
+}
+
+.btn:hover {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+/* PC版：ナビゲーションメニュー*/
+.nav-pc {
+    display: none;
+}
+
+/* ナビゲーションメニューアイコン */
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #b45a27;
+    border-radius: 50%;
+    align-items: flex-end;
+}
+
+/* モバイル版：ハンバーガーメニュー */
+#wrapper nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fffbf1;
+    z-index: 100;
+}
+
+/* ハンバーガーメニューのリスト */
+#wrapper nav ul li {
+    color: #36725a;
+    font-size: 24px;
+    padding: 20px 20px;
+    margin: 0 10px;
+    border-bottom: 2px dotted #a7d28d;
+    background-color: #fff;
+}
+
+#wrapper nav ul li img {
+    display: inline-block;
+    text-align: center;
+}
+
+#wrapper nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#wrapper .btn-gnavi {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 200;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+
+    /* ３本線の背景の設定 */
+    border: 30px solid #d8f0a2;
+    border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
+    background: #d8f0a2;
+}
+
+/* 三本線 */
+#wrapper .btn-gnavi span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+#wrapper .btn-gnavi span:nth-child(1) {
+    top: 0;
+}
+
+#wrapper .btn-gnavi span:nth-child(2) {
+    top: 10px;
+}
+
+#wrapper .btn-gnavi span:nth-child(3) {
+    top: 20px;
+}
+
+#wrapper .btn-gnavi.open {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#wrapper .btn-gnavi.open span {
+    background: #b45a27;
+}
+
+#wrapper .btn-gnavi.open span:nth-child(1) {
+    width: 24px;
+    -webkit-transform: translate(-7px, 17px) rotate(45deg);
+    transform: translate(-7px, 17px) rotate(45deg);
+}
+
+#wrapper .btn-gnavi.open span:nth-child(3) {
+    width: 24px;
+    -webkit-transform: translate(-7px, -17px) rotate(-45deg);
+    transform: translate(-7px, -17px) rotate(-45deg);
+}
+
+/* ↑ここまでハンバーガーメニュー */
+
+/* ブログボタン */
+.blog-btn img {
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* topへ戻るボタン */
+.scroll-top {
+    /* ボタンを右下で固定位置にする */
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-top:hover {
+    animation: pikopiko 2s steps(2, start) infinite;
+}
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(20deg);
+    }
+
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+.scroll-top a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ここから↓ページネーション */
+/* .link {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.pagination {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.page-item {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.page-item:nth-child(odd) {
+    background-color: #5EB356;
+    color: #fff;
+    font-weight: bold;
+}
+
+.page-item:nth-child(even) {
+    background-color: #5EB356;
+    color: #fff;
+    font-weight: bold;
+}
+
+.page-item:nth-child(1) {
+    background-color: #FFFBF1;
+    color: #91471D;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page-item:nth-last-child(1) {
+    background-color: #FFFBF1;
+    color: #91471D;
+    font-size: 36px;
+    font-weight: bold;
+} */
+
+/* ↑ページネーションの設定はここまで */
+
+/* フッター */
+footer {
+    position: relative;
+    background-color: #5eb356;
+    width: 100%;
+}
+
+.footer-menu {
+    width: 200px;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.footer-menu li {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.footer-menu a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 14px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+@media screen and (min-width: 601px) {
+    .nav-mobile {
+        display: none;
+    }
+
+    /* PC版メニュー  */
+    .nav-pc ul {
+        height: 100px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding-right: 20px;
+        color: #36725a;
+    }
+
+    .nav-pc ul li:hover {
+        border-radius: 60% 50% 20% 60%;
+        background-color: #f0ffc9;
+        transition: all 0.3s ease-in;
+        transform: rotate(5deg);
+    }
+
+    /* カードの押し込み */
+    .blog-card:hover {
+        position: relative;
+        top: 5px;
+        left: 5px;
+        box-shadow: none;
+    }
+
+    /* タブレット版：フッターメニュー */
+    .footer-menu {
+        width: 100%;
+        /* min-width: 650px; */
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+/* PC(デスクトップサイズ) */
+@media screen and (min-width: 1000px) {
+    /* 各ページのKV */
+    .kv {
+        position: relative;
+        top: 100px;
+    }
+
+    .kv img {
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+    }
+
+    /* モバイル版：サイトロゴ */
+    .mobile-logo {
+        display: none;
+    }
+
+    /* モバイル版：ハンバーガーメニュー */
+    .btn-gnavi {
+        display: none;
+    }
+
+    #global-navi {
+        display: none;
+    }
+
+    /* コンテンツ */
+    .wrapper {
+        margin-top: 100px;
+        max-width: 1200px;
+        min-width: 320px;
+    }
+
+    /* PC版：ナビゲーションメニュー */
+    .nav-pc {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        background-color: #fffbf1;
+
+        background-image: url(../images/index/headline_line.png);
+        background-position: center;
+        background-size: cover;
+        z-index: 999;
+    }
+
+    .nav-pc li {
+        font-size: 20px;
+    }
+
+    .blog-btn img {
+        max-width: 700px;
+        height: auto;
+    }
+}
