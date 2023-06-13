@@ -57,7 +57,7 @@
                 <td>
                     <select name="user_id">
                         @foreach ($users as $user)
-                            <option value="{{ d$user->i }}" selected>{{ $user->name }}</option>
+                            <option value="{{ $user->id }}" selected>{{ $user->name }}</option>
                         @endforeach
                     </select>
                 </td>
@@ -76,15 +76,15 @@
             </tr>
             <tr>
                 <th> 道の駅ID: </th>
-                <td><input type="number" name="road_station_id" ></td>
+                <td><input type="number" name="road_station_id"></td>
             </tr>
             <tr>
                 <th> 特産品ID: </th>
-                <td><input type="text" name="special_goods_id" ></td>
+                <td><input type="text" name="special_goods_id"></td>
             </tr>
             <tr>
                 <th> 体験ID: </th>
-                <td><input type="text" name="activity_id" ></td>
+                <td><input type="text" name="activity_id"></td>
             </tr>
             <tr>
                 <th>アイキャッチ画像: </th>

@@ -18,6 +18,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
+<!-- ファビコン -->
+<link rel="shortcut icon" href="../assets/images/favicon/favicon.ico">
+
 <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 @endsection
 
