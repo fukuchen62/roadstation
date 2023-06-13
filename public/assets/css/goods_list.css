@@ -304,8 +304,8 @@ h4 {
     } */
 
     .goods {
-        /* display: grid;
-        grid-template-columns: repeat(3, minmax(px, 1fr)); */
+        /* /* display: grid; */
+        grid-template-columns: repeat(3, minmax(290px, 1fr));
         gap: 30px;
         /* text-align: center;
         margin: 0 auto; */
@@ -432,7 +432,7 @@ h4 {
     .roadstation-frame {
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+        grid-template-columns: repeat(5, minmax(135px, 1fr));
         gap: 25px;
         text-align: center;
     }
