@@ -19,7 +19,7 @@ use App\Models\user;
 
 class AdminBlogController extends Controller
 {
-        /**
+    /**
      * コンストラクタ
      */
     public function __construct()
@@ -53,7 +53,7 @@ class AdminBlogController extends Controller
                 ->get();
         } else {
             $items = Blog::where('deleted_at', null)
-                ->orderBy('id', 'desc')
+                ->orderBy('id', 'asc')
                 ->get();
         }
 
@@ -170,7 +170,7 @@ class AdminBlogController extends Controller
             'blog' => $item,
             'category_items' => $category_items,
             'login_user' => $login_user,
-            'users'=> $users,
+            'users' => $users,
         ];
 
         // ブレッドファイルを呼び出す
