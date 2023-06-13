@@ -202,6 +202,7 @@ h4 {
 .com-wrap {
     width: clamp(280px, 50vw, 380px);
     word-wrap: break-word;
+    margin-top: 20px;
 }
 
 .container {
@@ -210,8 +211,6 @@ h4 {
     margin: auto;
     gap: 20px;
 }
-
-
 
 .container img {
     border-radius: 20px;
@@ -233,7 +232,7 @@ h4 {
     font-size: clamp(12px, 5vw, 20px);
 }
 
-/* 
+/*
 .blog-btn a {
     display: inline-block;
     text-align: center;
