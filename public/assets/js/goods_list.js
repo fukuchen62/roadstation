@@ -10,7 +10,7 @@ $(document).ready(function () {
     // });
 
     $(".any").each(function (i, elem) {
-        console.log(i + ': ' + $(elem).text());
+        // console.log(i + ': ' + $(elem).text());
         $(elem).addClass('displayNone');
     });
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         const pos = btnid.indexOf('-');
         const id = btnid.substr(pos + 1);
-        console.log('ID:' + id);
+        // console.log('ID:' + id);
 
         const typeid = '#type-' + id;
 

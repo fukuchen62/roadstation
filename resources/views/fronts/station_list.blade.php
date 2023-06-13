@@ -33,8 +33,15 @@
                         @if ($road->area_id == 1)
                             <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                                 <div class="card">
-                                    <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
-                                        height="200px" alt="道の駅の画像">
+
+                                    @if ($road->picture1)
+                                        <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
+                                            height="200px" alt="道の駅の画像">
+                                    @else
+                                        <img src="{{ asset('/storage/images/no-image.png') }}" width="250px" height="200px"
+                                            alt="道の駅の画像">
+                                    @endif
+
                                     <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                                     <p>{!! $road->catchphrase !!}</p>
                                     <dl>
@@ -107,8 +114,15 @@
                         @if ($road->area_id == 2)
                             <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                                 <div class="card">
-                                    <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
-                                        height="200px" alt="道の駅の画像">
+
+                                    @if ($road->picture1)
+                                        <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
+                                            height="200px" alt="道の駅の画像">
+                                    @else
+                                        <img src="{{ asset('/storage/images/no-image.png') }}" width="250px"
+                                            height="200px" alt="道の駅の画像">
+                                    @endif
+
                                     <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                                     <p>{!! $road->catchphrase !!}</p>
                                     <dl>
@@ -182,8 +196,15 @@
                         @if ($road->area_id == 3)
                             <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
                                 <div class="card">
-                                    <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
-                                        height="200px" alt="道の駅の画像">
+
+                                    @if ($road->picture1)
+                                        <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
+                                            height="200px" alt="道の駅の画像">
+                                    @else
+                                        <img src="{{ asset('/storage/images/no-image.png') }}" width="250px"
+                                            height="200px" alt="道の駅の画像">
+                                    @endif
+
                                     <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                                     <p>{!! $road->catchphrase !!}</p>
                                     <dl>

@@ -61,11 +61,11 @@
         </ul>
 
         <ul>
-            <li><a href="">
+            <li><a href="{{ route('about') }}">
                     このサイトについて</a></li>
             <li><a href="">
                     お問い合わせ</a></li>
-            <li><a href="">
+            <li><a href="{{ route('privacy') }}">
                     プライバシーポリシー</a></li>
             <li><a href="{{ route('admintop') }}" target="_blank">
                     ログインページ</a></li>

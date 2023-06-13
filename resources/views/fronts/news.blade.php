@@ -38,7 +38,11 @@
                     <p class="category">{{ $new->newsCategory->category_name }}</p>
                 </div>
 
-                <img class="blog-img" src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+                @if ($new->picture)
+                    <img class="blog-img" src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+                @else
+                    <img class="blog-img" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+                @endif
 
                 <p class="blog-text">
                     {!! $new->discription !!}
