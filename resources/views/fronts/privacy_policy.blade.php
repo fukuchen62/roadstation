@@ -19,7 +19,10 @@
 @section('content')
 
 <section id="top">
-<h1>PRIVACY POLICY</h1><br>
+<div class="center">
+<h1 class="headline">PRIVACY POLICY</h1>
+</div>
+
 <h2>個人情報の取り扱いについて</h2>
 
 <p>本プライバシーポリシーは、「とくしま　まるっと　道の駅」（以下「本サイト」） の各種サービス（本サイトによる情報提供、お問い合わせ等）において、本サイトを利用する方々の個人情報およびそれに準ずる情報を取り扱う際に、本サイトが遵守する方針を示したものです。</p></section>

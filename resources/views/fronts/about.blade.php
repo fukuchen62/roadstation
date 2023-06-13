@@ -17,11 +17,15 @@
 
 {{-- メイン --}}
 @section('content')
+
+<section id="top">
 <div class="center">
-<h1 class="headline"  id="top">このサイトについて</h1>
+<h1 class="headline">このサイトについて</h1>
 </div>
 <br>
 <p>このサイトは、国の公的職業訓練制度に基づく、株式会社ＱＬＩＰ インターナショナル・ＷＥＢシステム開発実践科生『笑（ワラ）』班が、2023年に制作したウェブサイトです。（以下「本サイト」と言います）</p>
+</section>
+
 <section>
 <h2>サイト制作の経緯</h2><br>
 <p>新型コロナ初確認から３年。</p>
