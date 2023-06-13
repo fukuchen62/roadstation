@@ -39,8 +39,8 @@ h4 {
 /* カード内:直下の画像 */
 .card>img {
     border-radius: 20px;
-    width: 100%;
-    height: auto;
+    width: 280px;
+    height: 200px;
     object-fit: cover;
 }
 
