@@ -67,7 +67,7 @@
             <tr>
                 <th>利用方法: </th>
                 <td>
-                    <textarea name="usage" cols="50" rows="5" required> {{ $goods->usage }} </textarea>
+                    <textarea name="usage" cols="50" rows="5"> {{ $goods->usage }} </textarea>
                 </td>
             </tr>
             <tr>
