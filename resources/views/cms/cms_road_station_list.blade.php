@@ -29,11 +29,8 @@
         <tr>
             <th width="5%">ID</th>
             <th>道の駅名</th>
-            <th>エリアID</th>
-            <th>読み方</th>
             <th>キャッチフレーズ</th>
-            <th>レビュー</th>
-            <th>概要</th>
+            {{-- <th>レビュー</th> --}}
             <th>紹介文</th>
             <th>投稿日時</th>
             <th width="100px">修正</th>
@@ -42,11 +39,8 @@
             <tr>
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->station_name }}</td>
-                <td>{{ $item->area_id }}</td>
-                <td>{{ $item->ruby }}</td>
                 <td>{{ $item->catchphrase }}</td>
-                <td>{{ $item->review }}</td>
-                <td>{{ $item->overview }}</td>
+                {{-- <td>{{ $item->review }}</td> --}}
                 <td>{{ $item->discription }}</td>
                 <td>{{ $item->created_at }}</td>
                 <td class="edit"><a href="{{ route('cms-stationedit', ['id' => $item->id]) }}">編集</a></td>
