@@ -338,7 +338,7 @@ class AdminGoodsController extends Controller
 
         // ニュースを読み直す
         $items = SpecialGoods::where('deleted_at', null)
-            ->orderBy('id', 'desc')
+            ->orderBy('id', 'asc')
             ->get();
 
         // 特産品の件数
@@ -380,7 +380,7 @@ class AdminGoodsController extends Controller
 
         // ニュースを読み直す
         $items = ProductType::where('deleted_at', null)
-            ->orderBy('id', 'desc')
+            ->orderBy('id', 'asc')
             ->get();
 
         // 特産品の件数

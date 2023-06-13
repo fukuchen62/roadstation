@@ -198,7 +198,7 @@ class AdminRoadstationController extends Controller
 
         // ニュースを読み直す
         $items = RoadStation::where('deleted_at', null)
-            ->orderBy('id', 'desc')
+            ->orderBy('id', 'asc')
             ->get();
 
         // ニュースの件数

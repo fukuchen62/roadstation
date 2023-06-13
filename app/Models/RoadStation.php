@@ -15,7 +15,7 @@ class RoadStation extends Model
     public static $rules = array(
         'area_id' => 'required|integer',
         'station_name' => 'required|string|max:50',
-        // 'ruby' => 'required|string|max:100',
+        'ruby' => 'required|string|max:100',
         // 'catchphrase' => 'required|string|max:100',
         'review' => 'required|string|max:200',
         // 'overview'    => 'required|string|max:200',
@@ -31,7 +31,7 @@ class RoadStation extends Model
         // 'map_url' => 'required|string|max:500',
         // 'longitude' => 'required|string|max:50',
         // 'latitude' => 'required|string|max:50',
-        'picture1' => 'required|string|max:200',
+        // 'picture1' => 'required|string|max:200',
         // 'picture2' => 'required|string|max:200',
         // 'picture3' => 'required|string|max:200',
         'atm_icon' => 'required|boolean',
