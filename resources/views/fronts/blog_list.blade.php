@@ -16,26 +16,64 @@
     <style>
         .link {
             width: 100%;
-            margin-top: 16px;
+            margin-top: 32px;
         }
 
         .pagination {
             font-size: 1.5rem;
             text-align: center;
+            margin-top: 16px;
         }
 
         .pagination li {
             display: inline-block;
         }
 
+        .page-item:nth-of-type(1) {
+            font-size: 36px;
+            font-weight: bold;
+            background-color: #fff;
+        }
+
+        .page-item:nth-of-type(2) {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .page-item:nth-of-type(3) {
+            font-weight: bold;
+            color: #fffbf1;
+        }
+
+        .page-item:nth-of-type(4) {
+            font-weight: bold;
+            color: #fffbf1;
+        }
+
+        .page-item:nth-of-type(5) {
+            font-size: 36px;
+            font-weight: bold;
+            background-color: #fff;
+        }
+
+        .page-item {
+            display: block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #5eb356;
+        }
+
+
+
         .text {
             /* overflow: hidden;
-                                                                                white-space: nowrap;
-                                                                                text-overflow: ellipsis;
+                                                                                                                                                                                                                                                        white-space: nowrap;
+                                                                                                                                                                                                                                                        text-overflow: ellipsis;
 
-                                                                                /*IE対策*/
+                                                                                                                                                                                                                                                        /*IE対策*/
             /* line-height: 1.5em;
-                                                                                max-height: 4.5em;  */
+                                                                                                                                                                                                                                                        max-height: 4.5em;  */
         }
 
         .link h2 {}
