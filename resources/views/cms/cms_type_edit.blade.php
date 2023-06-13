@@ -8,7 +8,7 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/admin.css') }}">
+<link rel="stylesheet" href="{{asset('assets/css/admin.css')}}">
 @endsection
 
 
@@ -41,7 +41,7 @@
             <tr>
                 <th width="15%"> <span>*</span> カテゴリー名: </th>
                 <td>
-                    <select name="goods_category_id" class="selectcategory">
+                <select name="goods_category_id" class="selectcategory">
                         @foreach ($category_items as $item)
                             {{-- 選んでいる選択肢にselectedをつける --}}
                             @if ($item->id == $goods->goods_category_id)
@@ -65,7 +65,7 @@
             </tr>
 
             <tr>
-                <th>利用方法: </th>
+                <th> <span>*</span> 利用方法: </th>
                 <td>
                     <textarea name="usage" cols="50" rows="5" required> {{ $goods->usage }} </textarea>
                 </td>
@@ -85,9 +85,9 @@
             </tr>
 
             <tr>
-                <th width="15%">関連道の駅: 数字を|で区切って</th>
+                <th width="15%"> <span></span> 関連道の駅: 数字を|で区切って</th>
                 <td>
-                    <input type="text" name="station_list" value="{{ $goods->station_list }}">
+                    <input type="text" name="station_list"  value="{{ $goods->station_list }}">
                 </td>
             </tr>
 
@@ -111,8 +111,7 @@
                 $title = $goods->title;
                 $url = route('cms-typesremove', ['id' => $goods->id]);
             @endphp
-            <input type="submit"value="修正" class="submit_btn"
-                onclick="return saveComfirm('{{ $goods->common_name }}')">
+            <input type="submit"value="修正" class="submit_btn" onclick="return saveComfirm('{{ $goods->common_name }}')">
 
             <input type="button"value="削除" class="delete_btn"
                 onclick="return deleteComfirm('{{ $goods->common_name }}','{{ $url }}')">

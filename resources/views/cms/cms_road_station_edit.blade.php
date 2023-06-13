@@ -88,7 +88,7 @@
                 </td>
             </tr>
             <tr>
-                <th>郵便番号：</th>
+                <th> <span>*</span> 郵便番号：</th>
                 <td>
                     <input type="text" name="zip_code" id="content" required value="{{ $road_stations->zip_code }}">
                 </td>
@@ -98,58 +98,58 @@
                 <td><input type="text" name="address" required value="{{ $road_stations->address }}"></td>
             </tr>
             <tr>
-                <th>営業時間：</th>
+                <th> <span>*</span> 営業時間：</th>
                 <td>
                     <input type="text" name="business_hours" id="content" required
                         value="{{ $road_stations->business_hours }}">
                 </td>
             </tr>
             <tr>
-                <th>定休日：</th>
+                <th> <span>*</span> 定休日：</th>
                 <td>
                     <input type="text" name="regular_holiday" id="content" required
                         value="{{ $road_stations->regular_holiday }}">
                 </td>
             </tr>
             <tr>
-                <th>駐車場：</th>
+                <th> <span>*</span> 駐車場：</th>
                 <td>
                     <input type="text" name="parking" id="content" required value="{{ $road_stations->parking }}">
                 </td>
             </tr>
             <tr>
-                <th>電話番号：</th>
+                <th> <span>*</span> 電話番号：</th>
                 <td>
                     <input type="text" name="tel" id="content" required value="{{ $road_stations->tel }}">
                 </td>
             </tr>
             <tr>
-                <th>道の駅公式ＵＲＬ：</th>
+                <th> <span>*</span> 道の駅公式ＵＲＬ：</th>
                 <td>
                     <input type="text" name="url" id="content" required value="{{ $road_stations->url }}">
                 </td>
             </tr>
             <tr>
-                <th>SNS：</th>
+                <th> <span>*</span> SNS：</th>
                 <td>
                     <input type="text" name="sns" id="content" required value="{{ $road_stations->sns }}">
                 </td>
             </tr>
             <tr>
-                <th>マップURL：</th>
+                <th> <span>*</span> マップURL：</th>
                 <td>
                     <textarea name="map_url" id="" cols="30" rows="10" required>{{ $road_stations->map_url }}</textarea>
                     {{-- <input type="text" name="zip_code" id="content" required value="{{ $road_stations->zip_code }}"> --}}
                 </td>
             </tr>
             <tr>
-                <th>経度：</th>
+                <th> <span>*</span> 経度：</th>
                 <td>
                     <input type="text" name="longitude" id="content" required value="{{ $road_stations->longitude }}">
                 </td>
             </tr>
             <tr>
-                <th>緯度：</th>
+                <th> <span>*</span> 緯度：</th>
                 <td>
                     <input type="text" name="latitude" id="content" required value="{{ $road_stations->latitude }}">
                 </td>
@@ -161,13 +161,13 @@
                 </td>
             </tr>
             <tr>
-                <th>KV画像2：</th>
+                <th> <span>*</span> KV画像2：</th>
                 <td>
                     <input type="text" name="picture2" id="content" required value="{{ $road_stations->picture2 }}">
                 </td>
             </tr>
             <tr>
-                <th>KV画像3：</th>
+                <th> <span>*</span> KV画像3：</th>
                 <td>
                     <input type="text" name="picture3" id="content" required value="{{ $road_stations->picture2 }}">
                 </td>

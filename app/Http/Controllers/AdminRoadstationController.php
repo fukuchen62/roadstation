@@ -49,7 +49,7 @@ class AdminRoadstationController extends Controller
                 ->get();
         } else {
             $items = RoadStation::where('deleted_at', null)
-                ->orderBy('id', 'asc')
+                ->orderBy('id', 'desc')
                 ->get();
         }
 
