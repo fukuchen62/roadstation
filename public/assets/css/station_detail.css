@@ -21,8 +21,6 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px;
-
-
 }
 
 
@@ -41,8 +39,8 @@ h4 {
 /* カード内:直下の画像 */
 .card>img {
     border-radius: 20px;
-    width: 280px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
