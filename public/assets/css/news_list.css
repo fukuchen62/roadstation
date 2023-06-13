@@ -182,4 +182,9 @@ p {
         left: 70%;
     }
 
+    nav {
+        /* width: 790px; */
+        width: 71%;
+    }
+
 }
