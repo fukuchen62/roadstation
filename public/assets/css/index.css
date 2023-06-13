@@ -99,6 +99,11 @@ section {
     display: none;
 }
 
+.article-list {
+    align-items: baseline;
+    text-align: center;
+}
+
 .article-list li {
     /* padding: 10px; */
     text-align: left;
@@ -383,15 +388,17 @@ imgcontent-wrapper .heading {
 
 /* こんなんあるで！ */
 .section-title01 {
+    /* フォントの設定 */
     text-align: center;
     font-weight: bold;
     color: #8C5243;
 
+    /*  */
     position: relative;
-    background-image: url(../images/index/index_headline_04.png);
-    background-size: contain;
+    /* background-image: url(../images/index/index_headline_04.png); */
+    /* background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     padding: 100px;
     margin-bottom: 150px;
 }
@@ -1002,7 +1009,7 @@ imgcontent-wrapper .heading {
     }
 
     .pcbtn {
-        margin-top: 50px;
+        /* margin-top: 50px; */
         margin-bottom: 50px;
         display: inline-block;
     }

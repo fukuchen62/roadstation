@@ -23,23 +23,15 @@
 
 
     {{-- ★必要かチェック要 --}}
-    <!-- faviconを読み込む -->
-    <link rel="icon" href="{{ asset('assets/images/icon/favicon.ico') }}" id="favicon">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/icon/apple_touch_icon_180x180.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/icon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/icon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('assets/images/icon/site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ asset('assets/images/icon/safari-pinned-tab.svg') }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.ico') }}">
 
     {{-- ページタイトル --}}
     <title>@yield('title')</title>
 
 
     <!-- reset.cssファイルを読み込む -->
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel=" stylesheet" href="{{ asset('assets/css/reset.css') }}">
 
     <!-- 共通のCSSファイル -->
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
@@ -59,8 +51,7 @@
     <!-- フォント設定 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
 
     <!-- アイコンフォント -->
