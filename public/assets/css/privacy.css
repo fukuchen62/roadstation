@@ -8,6 +8,16 @@ section {
     margin-top: 30px;
 }
 
+.link {
+    color: blue;
+    text-decoration: underline;
+}
+
+.link:hover {
+    opacity: 0.5;
+}
+
+
 #top {
     padding-top: 100px;
 }
