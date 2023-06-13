@@ -31,4 +31,14 @@ class TopController extends Controller
 
         return view('fronts.index', $data);
     }
+
+    public function about(Request $request)
+    {
+        return view('fronts.about');
+    }
+
+    public function privacy(Request $request)
+    {
+        return view('fronts.privacy_policy');
+    }
 }
