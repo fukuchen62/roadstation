@@ -103,7 +103,7 @@
                 <td><input type="boolean" name="is_show" value="1" value="{{ $blog->is_show }}" required></td>
             </tr>
             <tr>
-                <th>特集記事フラグ: </th>
+                <th> <span>*</span> 特集記事フラグ: </th>
                 <td><input type="boolean" name="is_highlight" value="1" required></td>
             </tr>
         </table>

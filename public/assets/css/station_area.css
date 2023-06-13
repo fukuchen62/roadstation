@@ -92,6 +92,8 @@ dl {
     background-repeat: no-repeat;
     margin-bottom: 60px;
     padding: 30px;
+
+
 }
 
 
@@ -151,9 +153,12 @@ dd {
     cursor: pointer;
 }
 
-/* カード内容の要素 */
 .card a {
     display: block;
+}
+
+dl {
+    text-align: start;
 }
 
 .card:hover {
@@ -161,10 +166,6 @@ dd {
     top: 5px;
     left: 10px;
     box-shadow: none;
-}
-
-dl {
-    text-align: start;
 }
 
 .more {
