@@ -29,13 +29,9 @@ h3 {
     color: #B45A27;
 }
 
-/* カード内:直下の画像 */
-.card>img {
-    border-radius: 20px;
-    width: 280px;
-    height: 200px;
-    object-fit: cover;
-}
+
+
+
 
 .area_category {
     /* margin: 100px auto 0 auto; */
@@ -92,8 +88,6 @@ dl {
     background-repeat: no-repeat;
     margin-bottom: 60px;
     padding: 30px;
-
-
 }
 
 
@@ -145,16 +139,29 @@ dd {
     height: 620px;
     /* border: solid 1px; */
     text-align: center;
-    padding: 20px;
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 5px 5px 8px 0 #af813a;
     border: groove 6px #cf9957;
     cursor: pointer;
+    position: relative;
 }
 
 .card a {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/* カード内:直下の画像 */
+.card-img {
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
 }
 
 dl {
