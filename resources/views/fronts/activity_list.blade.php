@@ -31,7 +31,12 @@
     @foreach ($activities as $activity)
         <section class="activity-delimiter">
             <div class="activity-group">
-                <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
+                @if ($activity->picture1 != null)
+                    <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
+                @else
+                    <img class="activity-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+                @endif
+
                 <div class="activity-text-group">
                     <h3 class="activity-name">
                         {{ $activity->activity_name }}

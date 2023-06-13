@@ -91,7 +91,7 @@ h4 {
     flex-wrap: wrap;
     text-align: center; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 30px;
     text-align: center;
     margin: 0 auto;
@@ -268,17 +268,12 @@ h4 {
         background-size: contain;
     }
 
-    .roadstation-frame {
+    /* .roadstation-frame {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
         gap: 30px;
         text-align: center;
-    }
-
-
-
-
-
+    } */
 
 
 }

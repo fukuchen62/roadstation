@@ -28,9 +28,16 @@
             <ul class="goods">
             @foreach ($agricultural_products as $agricultural )
                 <li class="goods-group">
+                    @php
+                        $agriculturalImg = $agricultural->picture;
+                    @endphp
                     <a href="#detail-top" class="btns" id="{{'btn-' . $agricultural->id}}">
+                    @if ($agriculturalImg!='')
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="">
-                        <h4 class="goods-name">{{$agricultural->common_name}}</h4>
+                    @else
+                        <img class="goods-photo" src="{{ asset('/storage/images/no-image.png')}}" alt="no img">
+                    @endif
+                    <h4 class="goods-name">{{$agricultural->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -43,9 +50,16 @@
             <ul class="goods">
             @foreach ($seafood as $seafood )
                 <li class="goods-group">
+                    @php
+                        $seafoodImg = $seafood->picture;
+                    @endphp
                     <a href="#detail-top" class="btns" id="{{'btn-' . $seafood->id}}">
+                    @if ($seafoodImg!='')
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $seafood->picture) }}" alt="">
-                        <h4 class="goods-name">{{$seafood->common_name}}</h4>
+                    @else
+                        <img class="goods-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="no img">
+                    @endif
+                    <h4 class="goods-name">{{$seafood->common_name}}</h4>
                     </a>
                 </li>
             @endforeach
@@ -58,8 +72,15 @@
             <ul class="goods">
             @foreach ($craft as $craft )
                 <li class="goods-group">
+                    @php
+                        $craftImg = $craft->picture;
+                    @endphp
                     <a href="#detail-top" class="btns" id="{{'btn-' . $craft->id}}">
+                    @if ($craftImg!='')
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $craft->picture) }}" alt="">
+                    @else
+                        <img class="goods-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="no img">
+                    @endif
                         <h4 class="goods-name">{{$craft->common_name}}</h4>
                     </a>
                 </li>
@@ -73,8 +94,15 @@
             <ul class="goods">
             @foreach ($gourmet as $gourmet )
                 <li class="goods-group">
+                    @php
+                        $gourmetImg = $gourmet->picture;
+                    @endphp
                     <a href="#detail-top" class="btns" id="{{'btn-' . $gourmet->id}}">
+                    @if ($gourmetImg!='')
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $gourmet->picture) }}" alt="">
+                    @else
+                        <img class="goods-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="no img">
+                    @endif
                         <h4 class="goods-name">{{$gourmet->common_name}}</h4>
                     </a>
                 </li>
@@ -88,8 +116,15 @@
             <ul class="goods">
             @foreach ($others as $others )
                 <li class="goods-group">
+                    @php
+                        $othersImg = $others->picture;
+                    @endphp
                     <a href="#detail-top" class="btns" id="{{'btn-' . $others->id}}">
+                    @if ($gourmetImg!='')
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $others->picture) }}" alt="">
+                    @else
+                        <img class="goods-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+                    @endif
                         <h4 class="goods-name">{{$others->common_name}}</h4>
                     </a>
                 </li>
@@ -103,9 +138,16 @@
             <div class="any detail-group" id="{{'type-' . $type->id}}">
             <h3 class="headline-item-name">{{$type->common_name}}</h3>
             <div class="item-group">
-                <img class="detail-photo" src="{{ asset('/storage/images/' . $type->picture) }}" alt="">
-                <div class="item-text-group">
+                @php
+                        $picture = $type->picture;
+                @endphp
+                    @if ($picture!='')
+                        <img class="detail-photo" src="{{ asset('/storage/images/' . $type->picture) }}" alt="">
+                    @else
+                        <img class="detail-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="no img">
+                    @endif
 
+                <div class="item-text-group">
                     @php
                     //  配列$seasonsの中身を表示用に加工
                         $seasons = $type->season;
@@ -115,11 +157,11 @@
                         $month = str_replace("c",'12',$month);
                     @endphp
                     <h4 class="headline-name-season">＜旬の時期＞</h4>
-                    <p class="season-text">{{$month}}月</p>
-
-                    <h4 class="headline-name">＜参考価格＞</h4>
-                    <p class="price-text">{{$type->price}}円</p>
-
+                    @if ($month!='')
+                        <p class="season-text">{{$month}}月</p>
+                    @else
+                        <p class="season-text">年中お楽しみ頂けます</p>
+                    @endif
                     <h4 class="headline-name">＜利用方法＞</h4>
                     <div class="conditions-text">{!!$type->usage!!}</div>
                 </div>
