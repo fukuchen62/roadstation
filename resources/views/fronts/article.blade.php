@@ -21,11 +21,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-        .relatedarticle1 {
-            margin-bottom: 60px;
-            width: 48%;
-        }
-        } */
+            .relatedarticle1 {
+                margin-bottom: 60px;
+                width: 48%;
+            }
+            } */
     </style>
 
 @endsection
@@ -50,9 +50,13 @@
             {{--  <p>登録日時：{{ $blog['created_at']->format('Y年m月d日') }}</p>  --}}
             <div class="update-information">
                 <p class="date">{{ $blog['created_at']->format('Y年n月j日') }}</p>
-                    <p class="category">{{ $blog->blogCategory->getName() }}</p>
-            </div>   
-            <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+                <p class="category">{{ $blog->blogCategory->getName() }}</p>
+            </div>
+            @if ($blog->picture != null)
+                <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+            @else
+                <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+            @endif
             {{--  {!! $blog->content !!}  --}}
             <div>
                 @php
@@ -143,7 +147,7 @@
                         </a>
                     </div>
                 @endforeach
-                </div>
+            </div>
         </section>
         {{--  サイドバーのカテゴリーの表示部分  --}}
         <section class="side">
