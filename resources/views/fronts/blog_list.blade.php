@@ -30,12 +30,12 @@
 
         .text {
             /* overflow: hidden;
-                                                                    white-space: nowrap;
-                                                                    text-overflow: ellipsis;
+                                                                        white-space: nowrap;
+                                                                        text-overflow: ellipsis;
 
-                                                                    /*IE対策*/
+                                                                        /*IE対策*/
             /* line-height: 1.5em;
-                                                                    max-height: 4.5em;  */
+                                                                        max-height: 4.5em;  */
         }
 
         .link h2 {}
@@ -66,6 +66,9 @@
                 {{--  <div class="blog-card">  --}}
                 <a href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}"
                     class="blog-card">
+                    @if ($blog->picture != null)
+                    @else
+                    @endif
                     <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
                     <h3>{{ $blog->title }}</h3>
                     <div class="update-information">
