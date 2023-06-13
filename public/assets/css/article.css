@@ -60,7 +60,8 @@ a:hover {
     margin: 0 auto;
     margin-bottom: 20px;
     padding: 10px 20px;
-    background-color: #dfdfdf;
+    background-color: #A7D28D;
+    border-radius: 20px;
     /* display: inline-block; */
 }
 
@@ -68,6 +69,7 @@ a:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .relatedarticle-text {
@@ -291,7 +293,7 @@ a:hover {
 
     .relatedarticle {
         display: flex;
-        gap: 50px;
+        gap: 30px;
         margin-bottom: 50px;
     }
 
