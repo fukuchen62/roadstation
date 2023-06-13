@@ -11,7 +11,7 @@ html {
 /* 基本設定 */
 body {
     font-size: 16px;
-    font-family: 'Zen Maru Gothic', sans-serif;
+    font-family: "Zen Maru Gothic", sans-serif;
     color: #91471d;
     background-color: #fffbf1;
 }
@@ -23,7 +23,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    font-family: 'Kiwi Maru', serif;
+    font-family: "Kiwi Maru", serif;
 }
 
 h3 {
@@ -67,7 +67,7 @@ p {
     position: fixed;
     width: 100%;
     height: 100px;
-    background-color: #A7D28D;
+    background-color: #a7d28d;
     z-index: 999;
 }
 
@@ -76,7 +76,7 @@ p {
     font-weight: bold;
     padding: 20px 100px;
     border-radius: 50px;
-    background-color: #A7D28D;
+    background-color: #a7d28d;
     box-shadow: 0px 10px 0px -5px #70b27f;
 }
 
@@ -95,7 +95,7 @@ p {
 .icon {
     width: 30px;
     height: 30px;
-    background-color: #B45A27;
+    background-color: #b45a27;
     border-radius: 50%;
     align-items: flex-end;
 }
@@ -118,7 +118,7 @@ p {
     font-size: 24px;
     padding: 20px 20px;
     margin: 0 10px;
-    border-bottom: 2px dotted #A7D28D;
+    border-bottom: 2px dotted #a7d28d;
     background-color: #fff;
 }
 
@@ -129,7 +129,7 @@ p {
 
 #wrapper nav ul li a {
     text-decoration: none;
-    color: #000000
+    color: #000000;
 }
 
 #wrapper .btn-gnavi {
@@ -149,7 +149,6 @@ p {
     border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
     background: #d8f0a2;
 }
-
 
 /* 三本線 */
 #wrapper .btn-gnavi span {
@@ -241,9 +240,8 @@ p {
     color: black;
 }
 
-
 /* ここから↓ページネーション */
-.link {
+/* .link {
     width: 100%;
     margin-top: 32px;
 }
@@ -289,7 +287,7 @@ p {
     color: #91471D;
     font-size: 36px;
     font-weight: bold;
-}
+} */
 
 /* ↑ページネーションの設定はここまで */
 
@@ -316,8 +314,6 @@ footer {
     opacity: 0.8;
 }
 
-
-
 .copyright {
     font-size: 14px;
     padding-top: 40px;
@@ -334,8 +330,7 @@ footer {
     display: inline-block;
 }
 
-@media screen and (min-width:601px) {
-
+@media screen and (min-width: 601px) {
     .nav-mobile {
         display: none;
     }
@@ -372,14 +367,10 @@ footer {
         display: flex;
         justify-content: space-evenly;
     }
-
 }
 
 /* PC(デスクトップサイズ) */
-@media screen and (min-width:1000px) {
-
-
-
+@media screen and (min-width: 1000px) {
     /* 各ページのKV */
     .kv {
         position: relative;
@@ -439,5 +430,4 @@ footer {
         max-width: 700px;
         height: auto;
     }
-
 }
