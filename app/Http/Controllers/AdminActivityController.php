@@ -50,7 +50,7 @@ class AdminActivityController extends Controller
                 ->get();
         } else {
             $items = Activity::where('deleted_at', null)
-                ->orderBy('id', 'desc')
+                ->orderBy('id', 'asc')
                 ->get();
         }
 
