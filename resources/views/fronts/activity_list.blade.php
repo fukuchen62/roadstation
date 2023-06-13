@@ -13,6 +13,12 @@
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/activity_list.css') }}">
 
+    <style>
+        .dd{
+            
+        }
+    </style>
+
 @endsection
 
 {{-- キービジュアル --}}
@@ -78,6 +84,8 @@
                     </li>
                 </ul>
             @endif  --}}
+
+            
 
             @php
                 $blog_list = $activity->blog_list;
