@@ -61,13 +61,13 @@
 
             <tr>
                 <th>旬の月: 数字を|で区切って</th>
-                <td><input type="text" name="month" value="{{ $goods->month }}" required></td>
+                <td><input type="text" name="month" value="{{ $goods->month }}"></td>
             </tr>
 
             <tr>
                 <th>利用方法: </th>
                 <td>
-                    <textarea name="usage" cols="50" rows="5" required> {{ $goods->usage }} </textarea>
+                    <textarea name="usage" cols="50" rows="5"> {{ $goods->usage }} </textarea>
                 </td>
             </tr>
             <tr>
