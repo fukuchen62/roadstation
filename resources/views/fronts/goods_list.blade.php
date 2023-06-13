@@ -4,7 +4,7 @@
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
-@section('title', '特産品の選択画面')
+@section('title', '特産品一覧')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
@@ -155,13 +155,20 @@
                         $month = str_replace("a",'10',$month);
                         $month = str_replace("b",'11',$month);
                         $month = str_replace("c",'12',$month);
+
+                        $category = $type->goods_category_id;
                     @endphp
+
+                    @if ($category == 1 ||$category == 2)
                     <h4 class="headline-name-season">＜旬の時期＞</h4>
                     @if ($month!='')
                         <p class="season-text">{{$month}}月</p>
                     @else
                         <p class="season-text">年中お楽しみ頂けます</p>
                     @endif
+
+                    @endif
+
                     <h4 class="headline-name">＜利用方法＞</h4>
                     <div class="conditions-text">{!!$type->usage!!}</div>
                 </div>
