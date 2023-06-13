@@ -30,12 +30,12 @@
 
         .text {
             /* overflow: hidden;
-                                                                white-space: nowrap;
-                                                                text-overflow: ellipsis;
+                                                                    white-space: nowrap;
+                                                                    text-overflow: ellipsis;
 
-                                                                /*IE対策*/
+                                                                    /*IE対策*/
             /* line-height: 1.5em;
-                                                                max-height: 4.5em;  */
+                                                                    max-height: 4.5em;  */
         }
 
         .link h2 {}
@@ -63,18 +63,18 @@
 
             {{-- ブログ記事一覧の表示部分 表示する記事数はコントローラ内のwhere句（paginate）で指定 --}}
             @foreach ($blogs as $blog)
-                <div class="blog-card">
-                    <a
-                        href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}">
-                        <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
-                        <h3>{{ $blog->title }}</h3>
-                        <div class="update-information">
-                            <p class="date">{{ $blog['created_at']->format('Y年n月j日') }}</p>
-                            <p class="category">{{ $blog->blogCategory->getName() }}</p>
-                        </div>
-                        <p class="text">{!! $blog->overview !!}</p>
-                    </a>
-                </div>
+                {{--  <div class="blog-card">  --}}
+                <a href="{{ url('blog-detail') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}"
+                    class="blog-card">
+                    <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+                    <h3>{{ $blog->title }}</h3>
+                    <div class="update-information">
+                        <p class="date">{{ $blog['created_at']->format('Y年n月j日') }}</p>
+                        <p class="category">{{ $blog->blogCategory->getName() }}</p>
+                    </div>
+                    <p class="text">{!! $blog->overview !!}</p>
+                </a>
+                {{--  </div>  --}}
             @endforeach
 
         </div>
