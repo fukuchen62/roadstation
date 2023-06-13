@@ -51,22 +51,22 @@
                 </td>
             </tr>
             <tr>
-                <th> <span>*</span> 利用条件：</th>
+                <th>利用条件：</th>
                 <td>
-                    <textarea name="conditions" id="conditions" cols="50" rows="5" required>{{ $activity->conditions }}</textarea>
+                    <textarea name="conditions" id="conditions" cols="50" rows="5">{{ $activity->conditions }}</textarea>
                 </td>
             </tr>
             <tr>
-                <th><span>*</span> 営業時間: </th>
-                <td><input type="text" name="business_hours" value="{{ $activity->business_hours }}" required></td>
+                <th>営業時間: </th>
+                <td><input type="text" name="business_hours" value="{{ $activity->business_hours }}"></td>
             </tr>
             <tr>
-                <th><span>*</span>価格: </th>
-                <td><input type="text" name="price" value="{{ $activity->price }}" required></td>
+                <th>価格: </th>
+                <td><input type="text" name="price" value="{{ $activity->price }}"></td>
             </tr>
             <tr>
-                <th><span>*</span>画像１: </th>
-                <td><input type="text" name="picture1" value="{{ $activity->picture1 }}" required></td>
+                <th>画像１: </th>
+                <td><input type="text" name="picture1" value="{{ $activity->picture1 }}"></td>
             </tr>
             <tr>
                 <th>画像２: </th>
@@ -86,7 +86,7 @@
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ: </th>
-                <td><input type="boolean" name="is_show" value="1" value="{{ $activity->is_show }}" required></td>
+                <td><input type="boolean" name="is_show" value="{{ $activity->is_show }}" required></td>
             </tr>
         </table>
 

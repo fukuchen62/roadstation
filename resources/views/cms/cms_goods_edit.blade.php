@@ -41,7 +41,7 @@
             <tr>
                 <th width="15%"> <span>*</span> カテゴリー名: </th>
                 <td>
-                <select name="goods_category_id" class="selectcategory">
+                    <select name="goods_category_id" class="selectcategory">
                         @foreach ($category_items as $item)
                             {{-- 選んでいる選択肢にselectedをつける --}}
                             @if ($item->id == $goods->goods_category_id)
@@ -60,14 +60,14 @@
             </tr>
 
             <tr>
-                <th> <span>*</span> 旬の月: 数字を|で区切って</th>
-                <td><input type="text" name="month" value="{{ $goods->month }}" required></td>
+                <th>旬の月: 数字を|で区切って</th>
+                <td><input type="text" name="month" value="{{ $goods->month }}"></td>
             </tr>
 
             <tr>
-                <th> <span>*</span> 利用方法: </th>
+                <th>利用方法: </th>
                 <td>
-                    <textarea name="usage" cols="50" rows="5" required> {{ $goods->usage }} </textarea>
+                    <textarea name="usage" cols="50" rows="5"> {{ $goods->usage }} </textarea>
                 </td>
             </tr>
             <tr>
@@ -94,7 +94,7 @@
             <tr>
                 <th>価格:</th>
                 <td>
-                    <input type="number" name="price" value="{{ $goods->price }}">
+                    <input type="text" name="price" value="{{ $goods->price }}">
                 </td>
             </tr>
 
@@ -111,7 +111,8 @@
                 $title = $goods->title;
                 $url = route('cms-goodsremove', ['id' => $goods->id]);
             @endphp
-            <input type="submit"value="修正" class="submit_btn" onclick="return saveComfirm('{{ $goods->goods_name }}')">
+            <input type="submit"value="修正" class="submit_btn"
+                onclick="return saveComfirm('{{ $goods->goods_name }}')">
 
             <input type="button"value="削除" class="delete_btn"
                 onclick="return deleteComfirm('{{ $goods->goods_name }}','{{ $url }}')">
