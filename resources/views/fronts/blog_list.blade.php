@@ -14,6 +14,51 @@
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
 
     <style>
+        /** カテゴリー一覧 **/
+        /* .side {
+            width: 100%;
+            height: 320px;
+            background-color: #ffffff;
+            box-shadow: 5px 5px 8px 0 #70b27f;
+            border: groove 6px #A7D28D;
+            color: #8c5243;
+            border-radius: 24px;
+            padding: 20px;
+        }
+
+        .side h3{
+            font-size: 28px;
+        }
+        .side li{
+                font-size: 24px;
+                margin-top: 24px;
+            } */
+
+        /* @media screen and (min-width:430x){
+            .side{
+                width:80%;
+                margin: auto;
+            }
+
+        } */
+
+        /* @media screen and (min-width:768px){
+            .side{
+                width:50%;
+            } */
+
+            /* @media screen and (min-width:830px){
+            .side{
+                width:100%;
+            } */
+
+            /* @media screen and (min-width:1080px){
+            .side{
+                width:25%;
+            }
+            } */
+
+        /** ページネーション **/
         .link {
             width: 100%;
             margin-top: 32px;
