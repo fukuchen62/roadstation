@@ -49,4 +49,46 @@ class SpecialGoods extends Model
         $items = '<p>' . $this->goodsCategory->category_name . '</p>';
         return $items;
     }
+
+    /**
+     * changeName function
+     * アルファベットを数字に置き換え
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function changeName($id)
+    {
+        switch ($id) {
+            case 'a':
+                $id = 10;
+                break;
+            case 'b':
+                $id = 11;
+                break;
+            case 'c':
+                $id = 12;
+                break;
+            case 'd':
+                $id = 13;
+                break;
+            case 'e':
+                $id = 14;
+                break;
+            case 'f':
+                $id = 15;
+                break;
+            case 'g':
+                $id = 16;
+                break;
+            case 'h':
+                $id = 17;
+                break;
+            case 'i':
+                $id = 18;
+                break;
+        }
+
+        return $id;
+    }
 }

@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+
+h2 {
+    background-image: url(../images/illustrations/headline/station_list_headline_mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    margin-bottom: 60px;
+    background-size: contain;
+}
+
+.station-titlebox {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+.kv img {
+    object-position: center;
+    z-index: -1;
+}
+
+
+h4 {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+}
+
+
+
+dl {
+    text-align: start;
+}
+
+
+dd {
+    margin-bottom: 30px;
+}
+
+dt {
+    padding-top: 10px;
+}
+
+/* 一覧を覆う要素 */
+.stationlist-box {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*  */
+.stationlist-box section {
+    margin-bottom: 200px;
+}
+
+/* エリアごとの見出し */
+.east-title {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #cf9957;
+    border-radius: 20px;
+    padding: 1rem 0;
+    margin: 60px auto;
+}
+
+.west-title {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #cf9957;
+    border-radius: 20px;
+    padding: 1rem 0;
+    margin: 30px auto 30px auto;
+}
+
+.south-title {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #cf9957;
+    border-radius: 20px;
+    padding: 1rem 0;
+    margin: 30px auto 30px auto;
+}
+
+.stationlist-title {
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #B45A27;
+    /* display: inline-block; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.east {
+    margin-bottom: 80px;
+}
+
+.west {
+    margin-bottom: 80px;
+}
+
+.south {
+    margin-bottom: 80px;
+}
+
+/* カード内:直下の画像 */
+.card>img {
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+
+
+/* カードの設定 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.card {
+    width: 334px;
+    height: 620px;
+    /* border: solid 1px; */
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    /* border: 3px #7b7b7b; */
+    border: groove 6px #cf9957;
+}
+
+.card:hover {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    box-shadow: none;
+}
+
+
+dt {
+    padding-top: 10px;
+}
+
+dd {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* 施設アイコン */
+dd img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (min-width:601px) {
+    h2 {
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px;
+        margin-bottom: 60px;
+        background-size: contain;
+    }
+
+}
+
+.stationlist-title {
+    text-align: center;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #B45A27;
+    text-align: center;
+    display: inline-block;
+}
+
+.no_favorite {
+    height: auto;
+}
+
+.no_favorite p {
+    padding: 15px;
+}
+
+.favorite_p {
+    margin-top: 30px;
+}
+
+
+@media screen and (min-width:761px) {
+
+    h2 {
+        color: #B45A27;
+        margin: 0 auto;
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 60px;
+
+
+    }
+
+
+    .stationlist-title {
+        /* margin-top: 300px; */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+    /* カードの設定 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width:901px) {
+
+    h2 {
+        color: #B45A27;
+        margin: 0 auto;
+        background-image: url(../images/illustrations/headline/station_list_headline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 60px;
+
+
+    }
+
+
+
+
+    .stationlist-title {
+        /* margin-top: 300px; */
+        text-align: center;
+        margin-bottom: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #B45A27;
+        text-align: center;
+        padding: 60px;
+
+    }
+
+
+
+    /* カードの設定 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+}
