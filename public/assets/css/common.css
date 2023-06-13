@@ -245,12 +245,13 @@ p {
 /* ここから↓ページネーション */
 .link {
     width: 100%;
-    margin-top: 16px;
+    margin-top: 32px;
 }
 
 .pagination {
     font-size: 1.5rem;
     text-align: center;
+    margin-top: 16px;
 }
 
 .pagination li {
@@ -260,7 +261,7 @@ p {
 .page-item:nth-of-type(1) {
     font-size: 36px;
     font-weight: bold;
-    background-color: #FFFBF1;
+    background-color: #fff;
 }
 
 .page-item:nth-of-type(2) {
@@ -270,18 +271,18 @@ p {
 
 .page-item:nth-of-type(3) {
     font-weight: bold;
-    color: #fff;
+    color: #FFFBF1;
 }
 
 .page-item:nth-of-type(4) {
     font-weight: bold;
-    color: #fff;
+    color: #FFFBF1;
 }
 
 .page-item:nth-of-type(5) {
     font-size: 36px;
     font-weight: bold;
-    background-color: #FFFBF1;
+    background-color: #fff;
 }
 
 .page-item {
