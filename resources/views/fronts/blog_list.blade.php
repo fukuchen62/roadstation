@@ -2,7 +2,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトルの受け取り --}}
-@section('title', 'ブログ記事一覧')
+@section('title', 'ブログ一覧')
 
 {{-- CSS --}}
 @section('pageCss')
