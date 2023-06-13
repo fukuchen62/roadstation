@@ -55,7 +55,6 @@
             </tr>
             <tr>
                 <th> <span>*</span> 道の駅名: </th>
-                // 'catchphrase' => 'required|string|max:100',
                 <td><input type="text" name="station_name" value="{{ $road_stations->station_name }}"></td>
             </tr>
             <tr>
