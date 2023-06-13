@@ -370,7 +370,7 @@ footer {
     /* タブレット版：フッターメニュー */
     .footer-menu {
         width: 100%;
-        min-width: 650px;
+        /* min-width: 650px; */
         display: flex;
         justify-content: space-evenly;
     }
