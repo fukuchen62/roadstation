@@ -13,12 +13,12 @@ class ProductType extends Model
     public static $rules = array(
         'goods_category_id' => 'required|integer',
         'common_name'       => 'required|string|max:32',
-        'season'       => 'string|max:32',
-        'usage'    => 'max:500',
+        // 'season'       => 'string|max:32',
+        // 'usage'    => 'max:500',
         'discription'    => 'required',
         'picture'   => 'max:200',
-        'station_list'   => 'max:4',
-        'price'   => 'integer',
+        // 'station_list'   => 'max:4',
+        // 'price'   => 'integer',
         'is_show'     => 'required|boolean'
     );
     // 日本語エラーメッセージ
