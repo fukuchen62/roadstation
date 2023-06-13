@@ -32,7 +32,7 @@ p {
     font-size: 14px;
     margin-left: 10px;
     padding: 4px 8px;
-    background-color: #bdbdbd;
+    background-color: #e7d952;
     color: #ffff;
     border-radius: 10px;
 }
@@ -75,7 +75,7 @@ p {
 
 .blog-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 20px;
     object-fit: cover;
 }

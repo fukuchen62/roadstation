@@ -59,6 +59,24 @@ Route::get(
 
 // ---------------------- frontPage -----------------------
 
+// *********** アバウト ***********
+
+/**
+ *アバウトページを表示する
+ */
+Route::get(
+    'about',
+    'App\Http\Controllers\TopController@about'
+)->name('about');
+
+/**
+ *@プライバシーポリシーを表示する
+ */
+Route::get(
+    'privacy_policy',
+    'App\Http\Controllers\TopController@privacy'
+)->name('privacy');
+
 
 // *********** 道の駅テーブル ***********
 

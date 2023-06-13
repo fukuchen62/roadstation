@@ -322,8 +322,8 @@
                                         県南部</label>
                                 @endif
                             @else
-                                <label><input type="checkbox" name="area[]"
-                                        id="south" value="3" class="checkbox_list">
+                                <label><input type="checkbox" name="area[]" id="south" value="3"
+                                        class="checkbox_list">
                                     県南部</label>
                             @endif
                             {{-- <label><input id="area_id" class="" type="checkbox" name="area[]"
@@ -517,8 +517,15 @@
 
                     {{-- @if ($road->area_id == 3) --}}
                     <a href="{{ url('station-detail' . '?id=' . $road->id) }}">
-                        <img src="{{ asset('./storage/images/' . $road->picture1) }}" width="250px" height="200px"
-                            alt="道の駅写真">
+
+                        @if ($road->picture1)
+                            <img src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px" height="200px"
+                                alt="道の駅の画像">
+                        @else
+                            <img src="{{ asset('/storage/images/no-image.png') }}" width="250px" height="200px"
+                                alt="道の駅の画像">
+                        @endif
+
                         <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
                         <p>{{ $road->catchphrase }}</p>
                         <dl>

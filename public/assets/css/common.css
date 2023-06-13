@@ -30,9 +30,9 @@ h3 {
     font-size: 20px;
 }
 
-/* a:hover {
-    opacity: 0.7;
-} */
+p {
+    line-height: 1.5rem;
+}
 
 /* コンテンツ内容 */
 .wrapper {
@@ -284,6 +284,10 @@ footer {
 
 @media screen and (min-width:601px) {
 
+    .nav-mobile {
+        display: none;
+    }
+
     /* PC版メニュー  */
     .nav-pc ul {
         height: 100px;
@@ -322,9 +326,7 @@ footer {
 /* PC(デスクトップサイズ) */
 @media screen and (min-width:1000px) {
 
-    .nav-mobile {
-        display: none;
-    }
+
 
     /* 各ページのKV */
     .kv {
