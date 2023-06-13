@@ -16,13 +16,13 @@ class Activity extends Model
         'discription' => 'max:300',
         'business_hours'    => 'max:200',
         'price' => 'max:100',
-        'conditions'    => 'max:500',
+        // 'conditions'    => 'max:500',
         'road_station_id' => 'integer',
-        'blog_list'  => 'max:20',
+        // 'blog_list'  => 'max:20',
         'picture1'   => 'string|max:200',
-        'picture2'   => 'string|max:200',
-        'picture3'   => 'string|max:200',
-        'memo'       => 'string|max:500',
+        // 'picture2'   => 'string|max:200',
+        // 'picture3'   => 'string|max:200',
+        // 'memo'       => 'string|max:500',
         'is_show'    => 'required|boolean',
     );
     // 日本語エラーメッセージ

@@ -75,7 +75,7 @@ p {
 
 .blog-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 20px;
     object-fit: cover;
 }

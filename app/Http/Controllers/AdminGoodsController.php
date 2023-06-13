@@ -54,7 +54,7 @@ class AdminGoodsController extends Controller
                 ->get();
         } else {
             $items = SpecialGoods::where('deleted_at', null)
-                ->orderBy('id', 'desc')
+                ->orderBy('id', 'asc')
                 ->get();
         }
 
@@ -91,7 +91,7 @@ class AdminGoodsController extends Controller
                 ->get();
         } else {
             $items = ProductType::where('deleted_at', null)
-                ->orderBy('id', 'desc')
+                ->orderBy('id', 'asc')
                 ->get();
         }
 
