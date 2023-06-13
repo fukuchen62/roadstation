@@ -77,20 +77,20 @@
             <tr>
                 <th> <span>*</span> 内容：</th>
                 <td>
-                    <textarea name="discription" id="content" cols="50" rows="5" required>{{ $blog->discription }}</textarea>
+                    <textarea name="discription" id="content" cols="50" rows="5" required>{{ $blog->content }}</textarea>
                 </td>
             </tr>
             <th> 道の駅ID: </th>
-            <td><input type="number" name="road_station_id" ></td>
-        </tr>
-        <tr>
-            <th> 特産品ID: </th>
-            <td><input type="text" name="special_goods_id" ></td>
-        </tr>
-        <tr>
-            <th> 体験ID: </th>
-            <td><input type="text" name="activity_id" ></td>
-        </tr>
+            <td><input type="number" name="road_station_id"></td>
+            </tr>
+            <tr>
+                <th> 特産品ID: </th>
+                <td><input type="text" name="special_goods_id"></td>
+            </tr>
+            <tr>
+                <th> 体験ID: </th>
+                <td><input type="text" name="activity_id"></td>
+            </tr>
             <tr>
                 <th>アイキャッチ画像: </th>
                 <td><input type="text" name="picture" value="{{ $blog->picture }}"></td>
