@@ -75,7 +75,7 @@ section {
 
 /* ニュース */
 .news-title {
-    padding: 10px 30px;
+    padding-bottom: 10px;
 }
 
 .news-box {
@@ -395,19 +395,16 @@ imgcontent-wrapper .heading {
 
     /*  */
     position: relative;
-    /* background-image: url(../images/index/index_headline_04.png); */
-    /* background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; */
     padding: 100px;
     margin-bottom: 150px;
 }
 
 .headline-anime01 {
+    width: 10%;
     position: absolute;
     top: 15%;
     left: 10%;
-    width: 10%;
+
 
     /* ぽよん */
     animation: booboo 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards;
@@ -481,8 +478,6 @@ imgcontent-wrapper .heading {
     background-color: ccc;
 
     position: relative;
-    background-image: url(../images/index/index_headline_04.png);
-    background-repeat: no-repeat;
     padding: 100px;
     /* 背景のたぬみち */
     text-align: center;
@@ -498,7 +493,6 @@ imgcontent-wrapper .heading {
     color: #8C5243;
 
     position: relative;
-    background-image: url(../images/index/index_headline_04.png);
     padding: 100px;
     margin-bottom: 150px;
 }
@@ -944,6 +938,7 @@ imgcontent-wrapper .heading {
     .news-box {
         margin: 40px auto;
         max-width: 800px;
+        align-items: center;
     }
 
     /* ニュースボタン */
