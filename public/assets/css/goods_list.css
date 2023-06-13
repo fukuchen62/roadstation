@@ -4,10 +4,9 @@ html {
     overflow-x: hidden;
 }
 
-/* section { */
-/* margin: 0 auto; */
-/* margin: 0px 30px 0px 30px; */
-/* } */
+section {
+    margin: 0 auto;
+}
 
 p {
     color: #B45A27;
@@ -78,6 +77,11 @@ h4 {
     height: 10px;
     background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
     content: '';
+}
+
+.agricultural-products-goods {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .goods {
@@ -244,22 +248,7 @@ h4 {
     object-fit: cover;
 }
 
-/* 
-@media screen and (min-width:425px) {
-    .goods-photo {
-        max-width: 140px;
-    }
-}
 
-@media screen and (min-width:485px) {
-    .goods-photo {
-        max-width: 170px;
-    }
-
-    .item-name {
-        font-size: 2rem;
-    }
-} */
 
 @media screen and (min-width:601px) {
     h2 {
@@ -271,8 +260,21 @@ h4 {
         color: #B45A27;
         background-image: url(../images/illustrations/headline/goods_list_headline.png);
         background-size: contain;
-
     }
+
+    .roadstation-frame {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 30px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
 }
 
 
@@ -398,7 +400,26 @@ h4 {
 
 
     .goods-photo {
-        max-width: 290px;
+        max-width: 90%;
+    }
+
+    /* 
+    .roadstation-frame {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 30px;
+        text-align: center;
+    } */
+
+
+    .roadstation-name {
+        background-color: #A7D28D;
+        box-shadow: 0px 10px 0px -5px #70b27f;
+        border-radius: 50px;
+        display: inline-block;
+        padding: 15px 15px;
+        margin: 5px;
+
     }
 
     .blog-btn {
@@ -412,12 +433,3 @@ h4 {
     }
 
 }
-
-/* デスクトップレイアウト */
-/* @media screen and (min-width:980px) { */
-
-
-/* 
-
-/* PC(デスクトップサイズ) */
-/* @media screen and (min-width:1180px) { */
