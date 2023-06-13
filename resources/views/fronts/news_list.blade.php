@@ -36,7 +36,11 @@
 
                     <a href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}">
 
-                        <img class="card-img" src="{{ asset('/storage/images/' . $new->picture) }}" alt="no-img">
+                        @if ($new->pictire)
+                            <img class="card-img" src="{{ asset('/storage/images/' . $new->picture) }}" alt="no-img">
+                        @else
+                            <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="no-img">
+                        @endif
 
                         <h3>{{ $new->title }}</h3>
 
@@ -59,9 +63,7 @@
             @endforeach
 
             <div class="link">
-                {{-- {{ $news->links('pagination::bootstrap-4') }} --}}
                 {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }}
-
             </div>
 
         </div>
