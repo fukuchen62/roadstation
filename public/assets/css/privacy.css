@@ -17,12 +17,18 @@ section {
     opacity: 0.5;
 }
 
-
 #top {
     padding-top: 100px;
 }
 
-.headline {
+@media screen and (min-width:1001px) {
+
+    #top {
+        padding-top: 0px;
+    }
+}
+
+.title {
     padding: 20px;
     margin: 0 auto;
     border: solid black 1px;
@@ -33,11 +39,4 @@ section {
 .center {
     text-align: center;
     margin-bottom: 50px;
-}
-
-@media screen and (min-width:1001px) {
-
-    #top {
-        padding-top: 0px;
-    }
 }

@@ -20,7 +20,7 @@
 
 <section id="top">
 <div class="center">
-<h1 class="headline">PRIVACY POLICY</h1>
+<h1 class="title">PRIVACY POLICY</h1>
 </div>
 
 <h2>個人情報の取り扱いについて</h2>
