@@ -23,13 +23,15 @@
             font-size: 1.5rem;
             text-align: center;
             margin-top: 16px;
+            display: flex;
+            justify-content: space-around;
         }
 
-        .pagination li {
+        /* .pagination li {
             display: inline-block;
-        }
+        } */
 
-        .page-item:nth-of-type(1) {
+        /* .page-item:nth-of-type(1) {
             font-size: 36px;
             font-weight: bold;
             background-color: #fff;
@@ -62,26 +64,12 @@
             height: 32px;
             border-radius: 50%;
             background-color: #5eb356;
-        }
-
-
-
-        .text {
-            /* overflow: hidden;
-                                                                                                                                                                                                                                                        white-space: nowrap;
-                                                                                                                                                                                                                                                        text-overflow: ellipsis;
-
-                                                                                                                                                                                                                                                        /*IE対策*/
-            /* line-height: 1.5em;
-                                                                                                                                                                                                                                                        max-height: 4.5em;  */
-        }
-
-        .link h2 {}
-
+        } */
 
         @media screen and (min-width:1080px) {
             nav {
-                width: 790px;
+                /* width: 790px; */
+                width: 71%;
             }
         }
     </style>
@@ -133,7 +121,9 @@
 
     </div>
     {{-- ページネーション表示部分 --}}
-    {{--  <div class="link">{{ $blogs->links('pagination::bootstrap-4') }}  --}}
+    {{--  {{ $blogs->links('pagination::bootstrap-4') }}  --}}
+
+    <div class="link">
     {{ $blogs->appends(request()->query())->links('pagination::bootstrap-4') }}
     </div>
 @endsection
