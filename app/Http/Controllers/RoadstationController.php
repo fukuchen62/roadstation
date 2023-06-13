@@ -39,7 +39,9 @@ class RoadstationController extends Controller
     }
     public function stationListView(Request $request)
     {
-        $items = RoadStation::get();
+        $items = RoadStation::where('is_show', 1)
+            ->get();
+
         $data = [
             'road_stations' => $items,
         ];
