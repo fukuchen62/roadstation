@@ -4,42 +4,30 @@
 <head>
     <meta charset="UTF-8">
 
-
-    {{-- ★編集要 --}}
-    {{-- ディスカッション --}}
+    {{-- デディスクリプション --}}
     <!-- <meta name="description" content="@yield('description')"> -->
-    <meta name="description" content="休日や週末に徳島で魚を釣ってみたいけど…そんなあなたに「サイト名」。徳島県内の釣れる魚やおすすめスポットを初心者向けにわかりやすく発信中！">
+    <meta name="description" content="徳島県内の「道の駅」の検策、体験、グルメ、お土産、特産品、工芸品、レビューなど。アクティビティを体験したり実際に訪れて感じた事をテーマにしたブログは必見！">
 
-
-    {{-- ★編集要 --}}
     {{-- キーワード --}}
     <!-- <meta name="keywords" content="@yield('keywords')"> -->
-    <meta name="keywords" content="釣り、徳島、コース、初心者、ファミリー、フィッシング、海、川、遊び、スポット、アジ、イワシ">
-
+    <meta name="keywords" content="道の駅、検索、徳島、エリア検索、人気、道の駅一覧">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
 
-
-    {{-- ★必要かチェック要 --}}
     <!-- ファビコン -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.ico') }}">
 
     {{-- ページタイトル --}}
     <title>@yield('title')</title>
 
-
     <!-- reset.cssファイルを読み込む -->
     <link rel=" stylesheet" href="{{ asset('assets/css/reset.css') }}">
-
     <!-- 共通のCSSファイル -->
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
-
     {{-- 独自のCSSファイルを読み込む --}}
     @yield('pageCss')
-
-
 
     {{-- 独自のJSファイルを読み込む(道の駅詳細ページのみ) --}}
     @yield('pageJs1')
@@ -47,16 +35,14 @@
     <!-- jqueryライブラリ -->
     <script src="{{ asset('assets/js/vendor/jquery-3.6.3.min.js') }}"></script>
 
-
     <!-- フォント設定 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap"
+        rel="stylesheet">
 
     <!-- アイコンフォント -->
     <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
-
 
     {{-- トークンを読み込む --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
