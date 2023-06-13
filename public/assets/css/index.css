@@ -326,6 +326,10 @@ imgcontent-wrapper .heading {
     border-radius: 10px;
 }
 
+.blog-card a {
+    display: block;
+}
+
 /* 更新の日時とカテゴリー内容 */
 .update-information {
     display: flex;
