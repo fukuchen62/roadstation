@@ -9,20 +9,20 @@ class Blog extends Model
 {
     use HasFactory;
 
-protected $guarded = array('id');
+    protected $guarded = array('id');
     public static $rules = array(
         'blog_category_id' => 'required|integer',
         'title'       => 'required|string|max:60',
         'user_id'   => 'required|integer',
         'overview'    => 'max:200',
         'content'     => 'text',
-        'road_station_id'  => 'integer',
-        'special_goods_id' => 'max:50',
-        'activity_id' => 'max:50',
+        // 'road_station_id'  => 'integer',
+        // 'special_goods_id' => 'max:50',
+        // 'activity_id' => 'max:50',
         'picture'     => 'max:200',
-        'memo'        => 'string|max:500',
+        // 'memo'        => 'string|max:500',
         'is_show'     => 'required|boolean',
-        'is_highlight'     => 'required|boolean'
+        // 'is_highlight'     => 'required|boolean'
     );
     // 日本語エラーメッセージ
     public static $messages = [
@@ -33,23 +33,25 @@ protected $guarded = array('id');
 
 
 
-// *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
+    // *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
 
     /**
      * アクティビティとリレーション
      * （アクティビティ一覧にブログ記事を表示するため作成 / 作成者：小山）
-     * 
+     *
      */
-    public function activity(){
+    public function activity()
+    {
         return $this->hasone(activity::class);
     }
 
     /**
      * カテゴリーとリレーション
      * （ブログ記事一覧とブログ記事にカテゴリー名を表示するため作成 / 作成者：小山）
-     * 
+     *
      */
-    public function blogCategory(){
+    public function blogCategory()
+    {
 
         return $this->belongsTo('App\Models\BlogCategory');
     }
@@ -58,9 +60,10 @@ protected $guarded = array('id');
     /**
      * ロードステーションとリレーション
      * （ブログ記事に道の駅名を表示するため作成 / 作成者：小山）
-     * 
+     *
      */
-    public function roadStation(){
+    public function roadStation()
+    {
 
         return $this->belongsTo('App\Models\RoadStation');
     }
@@ -81,7 +84,8 @@ protected $guarded = array('id');
      *
      * @return void
      */
-    public function getName(){
+    public function getName()
+    {
         return $this->title;
     }
 
@@ -89,7 +93,7 @@ protected $guarded = array('id');
      * ブログのカテゴリーidを取得し送るメソッド
      * 関連記事の表示で使用するため作成
      * 作成者：小山
-     * 
+     *
      * @return void
      */
     public function getCategoryId()
@@ -100,9 +104,9 @@ protected $guarded = array('id');
     public static function getRoadstationName($id)
     {
         $item = Roadstation::find($id);
-        if($item != null){
+        if ($item != null) {
             $name = $item->station_name;
-        }else{
+        } else {
             $name = "NO name";
         }
         return $name;
@@ -110,11 +114,11 @@ protected $guarded = array('id');
 
     public function previous()
     {
-        return $this->where('id','<',$this->id)->where('is_show',1)->orderBy('id','desc')->first();
+        return $this->where('id', '<', $this->id)->where('is_show', 1)->orderBy('id', 'desc')->first();
     }
 
     public function next()
     {
-        return  $this->where('id', '>', $this->id)->where('is_show',1)->orderBy('id','asc')->first();
+        return  $this->where('id', '>', $this->id)->where('is_show', 1)->orderBy('id', 'asc')->first();
     }
 }
