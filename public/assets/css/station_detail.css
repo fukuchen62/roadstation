@@ -21,16 +21,11 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px;
-
-
 }
-
-
 
 h3 {
     padding: 10px 12px;
 }
-
 
 h4 {
     font-weight: bold;
@@ -47,13 +42,13 @@ h4 {
 }
 
 
-
 dl {
     text-align: start;
 }
 
 dd {
-    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 dt {
@@ -67,8 +62,6 @@ dd img {
     margin-bottom: 10px;
 }
 
-
-
 .search_results {
     font-size: 1.5rem;
     margin-top: 20px;
@@ -77,9 +70,6 @@ dd img {
     text-align: center;
     margin: 0 auto;
 }
-
-
-
 
 form {
     background-color: #ffffff;
@@ -98,7 +88,6 @@ form {
     justify-items: center;
 }
 
-
 .card {
     width: 334px;
     height: 620px;
@@ -110,17 +99,27 @@ form {
     box-shadow: 5px 5px 8px 0 #af813a;
     /* border: 3px #7b7b7b; */
     border: groove 6px #cf9957;
+
+    /* リンク */
+    position: relative;
     cursor: pointer;
 }
 
-
-dl {
-    text-align: start;
+.card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
 }
 
-dd {
-    margin-top: 5px;
-    margin-bottom: 10px;
+/* カード内:直下の画像 */
+.card-img {
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -129,10 +128,6 @@ dd {
     left: 10px;
     box-shadow: none;
 }
-
-
-
-
 
 .more {
     border: 1px solid;
@@ -145,7 +140,6 @@ dd {
     text-align: center;
 
 }
-
 
 .map {
     margin: 0 auto;
