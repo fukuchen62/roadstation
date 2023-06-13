@@ -110,6 +110,7 @@ form {
     box-shadow: 5px 5px 8px 0 #af813a;
     /* border: 3px #7b7b7b; */
     border: groove 6px #cf9957;
+    cursor: pointer;
 }
 
 
