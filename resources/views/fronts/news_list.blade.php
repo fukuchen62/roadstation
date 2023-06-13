@@ -6,14 +6,14 @@
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
 
-    <style>
+    {{-- <style>
         .link {
             margin: 0 auto;
             text-align: center;
             position: relative;
             left: 200px;
         }
-    </style>
+    </style> --}}
 @endsection
 
 @section('key_visual')
@@ -62,9 +62,9 @@
                 </div>
             @endforeach
 
-            <div class="link">
-                {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }}
-
+            <div>
+                {{-- {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }} --}}
+                {{ $news->appends(request()->query())->links('pagination::bootstrap-4') }}
             </div>
 
         </div>
