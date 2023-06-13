@@ -29,7 +29,9 @@
 {{-- メイン --}}
 @section('content')
     <main class="wrapper">
-        <h3 class="district">{{ $area->area_name }}</h3>
+
+        <h3 class="district">道の駅エリア検索</h3>
+
         <div class="area">
             {{-- aの場合下のようにしてやるとcontrollerに反映される。 --}}
             <a href="{{ route('areasearch') }}?area_id=1">
@@ -47,6 +49,7 @@
             </a>
         </div>
 
+        <h3 class="east-title">県{{ $area->area_name }}</h3>
 
         <h3 class="search_results">
             検索件数:({{ $com }}件)
