@@ -125,6 +125,11 @@ h4 {
 
 .detail-group {
     text-align: center;
+    background-color: #fff;
+    border: solid 3px #A7D28D;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 100px;
 }
 
 .detail-photo {
@@ -139,11 +144,11 @@ h4 {
     max-width: 260px;
     width: 100%;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
     position: relative;
     color: #B45A27;
     display: inline-block;
-    margin: 47px 0;
+    /* margin: 47px 0; */
     text-shadow: 0 0 2px white;
 }
 
