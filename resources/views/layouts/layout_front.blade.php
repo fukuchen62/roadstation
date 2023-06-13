@@ -24,7 +24,7 @@
 
     {{-- ★必要かチェック要 --}}
     <!-- ファビコン -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.ico')}}">
 
     {{-- ページタイトル --}}
     <title>@yield('title')</title>
