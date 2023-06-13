@@ -17,59 +17,91 @@
         .link {
             width: 100%;
             margin-top: 32px;
+            text-align: center;
         }
 
         .pagination {
-            font-size: 1.5rem;
-            text-align: center;
+            margin: auto;
             margin-top: 16px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        /* .pagination li {
-            display: inline-block;
-        } */
-
-        /* .page-item:nth-of-type(1) {
-            font-size: 36px;
-            font-weight: bold;
-            background-color: #fff;
-        }
-
-        .page-item:nth-of-type(2) {
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .page-item:nth-of-type(3) {
-            font-weight: bold;
-            color: #fffbf1;
-        }
-
-        .page-item:nth-of-type(4) {
-            font-weight: bold;
-            color: #fffbf1;
-        }
-
-        .page-item:nth-of-type(5) {
-            font-size: 36px;
-            font-weight: bold;
-            background-color: #fff;
-        }
-
-        .page-item {
+        .page-link {
             display: block;
-            width: 32px;
-            height: 32px;
             border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            margin: auto;
+        }
+
+        .page-item:nth-child(odd){
             background-color: #5eb356;
-        } */
+            border-radius: 50%;
+            color: #fffbf1;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .page-item:nth-child(even){
+            background-color: #5eb356;
+            border-radius: 50%;
+            color: #fffbf1;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .page-item:nth-of-type(1) {
+            background-color: #fffbf1;
+            color: #91471d;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .page-item:nth-last-of-type(1){
+            background-color: #fffbf1;
+            color: #91471d;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        @media screen and (min-width:768px){
+            .pagination{
+                /* width: 51%; */
+                width: 50%;
+            }
+        }
 
         @media screen and (min-width:1080px) {
             nav {
                 /* width: 790px; */
-                width: 71%;
+                /* width: 71%; */
+                margin: auto;
+            }
+
+            /* .pagination{
+                width: 51%;
+            } */
+
+            .page-link {
+            width: 44px;
+            height: 44px;
+            }
+
+            .page-item:nth-child(odd){
+                font-size: 32px;
+            }
+
+            .page-item:nth-child(even){
+                font-size: 32px;
+            }
+
+            .page-item:nth-of-type(1) {
+                font-size: 32px;
+            }
+
+            .page-item:nth-last-of-type(1){
+                font-size: 32px;
             }
         }
     </style>
