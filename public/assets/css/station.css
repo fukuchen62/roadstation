@@ -276,8 +276,8 @@ h4 {
 }
 
 
-.blog-btn::before {
-    /* position: absolute;
+/* .blog-btn::before { */
+/* position: absolute;
     right: calc(2em + 0.5px);
     transform: translateX(50%);
     width: 25px;
@@ -288,11 +288,11 @@ h4 {
 
 
 
-}
+/* } */
 
 
-.blog-btn ::after {
-    /* transform: rotate(45deg);
+/* .blog-btn ::after { */
+/* transform: rotate(45deg);
     width: 5px;
     height: 5px;
     border-top: 3px solid #a7d28d;
@@ -300,7 +300,7 @@ h4 {
     content: '';
     position: relative;
     left: -20px; */
-}
+/* } */
 
 /* .blog-btn-center:hover { */
 /* position: relative;
