@@ -407,11 +407,11 @@ h4 {
         margin: 50px auto auto auto;
     }
 
-    .detail-photo {
+    /* .detail-photo {
         max-height: 450px;
         margin-right: 50px;
         margin-top: 0;
-    }
+    } */
 
     .item-text-group {
         flex-direction: column;
