@@ -427,7 +427,7 @@ dt {
 
 /* PCグルメとお土産エリアを横に並べる */
 
-@media screen and (min-width:930px) {
+@media screen and (min-width:970px) {
     .container {
         flex-direction: row;
         align-items: center;
@@ -573,7 +573,7 @@ dt {
         width: 50%;
     }
 
-    /* 
+    /*
     .roadstation-name {
 
         display: inline-block;
