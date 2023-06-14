@@ -30,7 +30,7 @@ class ActivityController extends Controller
         $items = Activity::where('deleted_at', null)
                 ->where('is_show', 1)
                 ->orderby('created_at', 'DESC')
-                ->simplePaginate(5);
+                ->simplePaginate(6);
 
         /**
          * $dataに$itemを代入
