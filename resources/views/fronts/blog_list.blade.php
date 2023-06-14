@@ -16,47 +16,47 @@
     <style>
         /** カテゴリー一覧 **/
         /* .side {
-                                                        width: 100%;
-                                                        height: 320px;
-                                                        background-color: #ffffff;
-                                                        box-shadow: 5px 5px 8px 0 #70b27f;
-                                                        border: groove 6px #A7D28D;
-                                                        color: #8c5243;
-                                                        border-radius: 24px;
-                                                        padding: 20px;
-                                                    }
+                                                                        width: 100%;
+                                                                        height: 320px;
+                                                                        background-color: #ffffff;
+                                                                        box-shadow: 5px 5px 8px 0 #70b27f;
+                                                                        border: groove 6px #A7D28D;
+                                                                        color: #8c5243;
+                                                                        border-radius: 24px;
+                                                                        padding: 20px;
+                                                                    }
 
-                                                    .side h3{
-                                                        font-size: 28px;
-                                                    }
-                                                    .side li{
-                                                            font-size: 24px;
-                                                            margin-top: 24px;
-                                                        } */
+                                                                    .side h3{
+                                                                        font-size: 28px;
+                                                                    }
+                                                                    .side li{
+                                                                            font-size: 24px;
+                                                                            margin-top: 24px;
+                                                                        } */
 
         /* @media screen and (min-width:430x){
-                                                        .side{
-                                                            width:80%;
-                                                            margin: auto;
-                                                        }
+                                                                        .side{
+                                                                            width:80%;
+                                                                            margin: auto;
+                                                                        }
 
-                                                    } */
+                                                                    } */
 
         /* @media screen and (min-width:768px){
-                                                        .side{
-                                                            width:50%;
-                                                        } */
+                                                                        .side{
+                                                                            width:50%;
+                                                                        } */
 
         /* @media screen and (min-width:830px){
-                                                        .side{
-                                                            width:100%;
-                                                        } */
+                                                                        .side{
+                                                                            width:100%;
+                                                                        } */
 
         /* @media screen and (min-width:1080px){
-                                                        .side{
-                                                            width:25%;
-                                                        }
-                                                        } */
+                                                                        .side{
+                                                                            width:25%;
+                                                                        }
+                                                                        } */
 
         /** ページネーション **/
         .link {
@@ -126,8 +126,8 @@
             }
 
             /* .pagination{
-                                                            width: 51%;
-                                                        } */
+                                                                            width: 51%;
+                                                                        } */
 
             .page-link {
                 width: 44px;
@@ -193,8 +193,8 @@
 
         {{-- サイドバーのカテゴリー一覧の表示部分 --}}
         <section class="side">
-            <h3>カテゴリー一覧</h3>
-            <ul>
+            <h3 class="category-title">カテゴリー一覧</h3>
+            <ul class="category_list">
                 @foreach ($blog_categories as $category)
                     <li><a href="{{ url('blog') }}?category_id={{ $category->id }}">{{ $category->category_name }}
                             ({{ $category->getCount() }})
