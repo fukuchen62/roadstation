@@ -9,9 +9,6 @@ class BlogCategory extends Model
 {
     use HasFactory;
 
-
-
-
     // *********** ▼▼▼ 各テーブルとリレーション ▼▼▼ ***********
 
     /**
@@ -49,7 +46,8 @@ class BlogCategory extends Model
      *
      * @return void
      */
-    public function getName(){
+    public function getName()
+    {
         return $this->category_name;
     }
 
@@ -60,7 +58,21 @@ class BlogCategory extends Model
      *
      * @return void
      */
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
+    }
+
+    /**
+     * getCount function
+     * カテゴリ
+     *
+     * @return void
+     */
+    public function getCount()
+    {
+        $count = Blog::where('blog_category_id', $this->id)
+            ->count();
+        return $count;
     }
 }
