@@ -37,8 +37,8 @@ h2 {
 h3 {
     margin: 0 auto;
     font-family: 'Kiwi Maru', serif;
-    border-bottom: dotted 10px #e7d955;
-    width: 150px;
+    /* border-bottom: dotted 10px #e7d955;
+    width: 150px; */
     text-align: center;
     padding: 10px;
 
@@ -167,6 +167,11 @@ h4 {
 /* 画像と文字を重ねる */
 .overlap {
     position: relative;
+}
+
+.overlap h3 {
+    border-bottom: dotted 10px #e7d955;
+    width: 150px;
 }
 
 /* .overlap h3 { */
