@@ -50,12 +50,6 @@ class ProductType extends Model
         return $items;
     }
 
-    public function getCategoryName2()
-    {
-        $items = '<p>' . $this->goodsCategory->category_name . '</p>';
-        return $items;
-    }
-
     public static function getRoadstationName($id)
     {
         $item = RoadStation::find($id);
