@@ -1,10 +1,6 @@
 @extends('layouts.layout_front')
 
-@section('description', '道の駅詳細')
-
-@section('keywords', 'キーワード1,キーワード2・・・')
-
-@section('title', 'ページタイトル')
+@section('title', '道の駅詳細ページ | 徳島まるっと道の駅')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
@@ -626,7 +622,7 @@
                     <dt>SNS：</dt>
                     <dd><a href="{{ $station->sns }}">
                             @if ($station->sns == null)
-                                {{ '現在掲載はございません。' }}
+                                {{ '掲載はございません。' }}
                             @else
                                 {!! $station->sns !!}
                             @endif

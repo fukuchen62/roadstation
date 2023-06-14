@@ -1,10 +1,6 @@
 @extends('layouts.layout_front')
 
-@section('description', 'エリア検索')
-
-@section('keywords', 'キーワード1,キーワード2・・・')
-
-@section('title', 'エリア検索')
+@section('title', 'エリア検索 | 徳島まるっと道の駅')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
