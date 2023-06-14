@@ -244,10 +244,10 @@
                             <div class="container reverse">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
                                     alt="グルメ写真">
-                                <div class="text  frameborder">
+                                <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p>{{ $goods->discription }}</p>
+                                    <p class="com-wrap">{{ $goods->discription }}</p>
                                 </div>
                             </div>
                         </section>
