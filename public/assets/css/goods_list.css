@@ -426,6 +426,33 @@ h4 {
         margin-top: 100px;
     }
 
+    .headline-name-season {
+        text-align: start;
+        margin-top: 10px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .season-text {
+        margin-left: 10px;
+
+    }
+
+    .roadstation-name {
+        margin-left: 10px;
+
+
+    }
+
+    .conditions-text {
+        margin-left: 10px;
+    }
+
+    .headline-name-comment {
+        margin-top: 10px;
+    }
+
+
     /* .headline-name-comment {
         text-align: start;
         margin-top: 10px;
