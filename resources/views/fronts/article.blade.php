@@ -21,11 +21,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-            .relatedarticle1 {
-                margin-bottom: 60px;
-                width: 48%;
-            }
-            } */
+                                    .relatedarticle1 {
+                                        margin-bottom: 60px;
+                                        width: 48%;
+                                    }
+                                    } */
     </style>
 
 @endsection
@@ -134,7 +134,7 @@
             {{-- 関連記事の表示部分 --}}
             <h3 class="relatedarticle-title">関連記事</h3>
             <div class="relatedarticle">
-                @foreach ($categories as $category)
+                {{-- @foreach ($categories as $category)
                     <div class="relatedarticle1">
                         <a href="{{ url('blog-detail') }}?id={{ $category->id }}">
                             <img class="relatedarticle-img" src="{{ asset('/storage/images/' . $category->picture) }}"
@@ -146,15 +146,34 @@
                             </div>
                         </a>
                     </div>
+                @endforeach --}}
+
+                @foreach ($recommend_blogs as $item)
+                    <div class="relatedarticle1">
+                        <a href="{{ url('blog-detail') }}?id={{ $item->id }}">
+                            <img class="relatedarticle-img" src="{{ asset('/storage/images/' . $item->picture) }}"
+                                alt="ブログ記事の画像">
+                            <h4>{{ $item->title }}</h4>
+                            <div class="update-information">
+                                <p class="date">{{ $item['created_at']->format('Y年n月j日') }}</p>
+                                <p class="category">{{ $blog->blogcategory->category_name }}</p>
+                            </div>
+                        </a>
+                    </div>
                 @endforeach
             </div>
         </section>
+
         {{--  サイドバーのカテゴリーの表示部分  --}}
         <section class="side">
             <h3>カテゴリー一覧</h3>
             <ul class="category_list">
                 @foreach ($blog_categories as $category)
-                    <li><a href="{{ url('blog') }}?id={{ $category->id }}">{{ $category->category_name }}</a></li>
+                    <li><a href="{{ url('blog') }}?category_id={{ $category->id }}">{{ $category->category_name }}
+                            ({{ $category->getCount() }})
+                        </a>
+
+                    </li>
                 @endforeach
             </ul>
         </section>
