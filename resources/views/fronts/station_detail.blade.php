@@ -1,6 +1,6 @@
 @extends('layouts.layout_front')
 
-@section('title', '道の駅詳細ページ')
+@section('title', '道の駅詳細ページ | 徳島まるっと道の駅')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
