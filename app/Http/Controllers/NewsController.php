@@ -94,7 +94,7 @@ class NewsController extends Controller
         $category = NewsCategory::all();
 
         $data = [
-            'new' => $item,
+            'news_item' => $item,
             'categories' => $items,
             'news_categories' => $category,
         ];
