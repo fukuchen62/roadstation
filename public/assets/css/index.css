@@ -45,6 +45,10 @@ section {
     object-position: center bottom;
 }
 
+.topvideo {
+    width: 100%;
+}
+
 /* PC版：ナビゲーションメニュー */
 .nav-pc {
     position: relative;
@@ -1121,6 +1125,7 @@ imgcontent-wrapper .heading {
     .img-wrapper .text {
         margin: 0;
         font-size: 14px;
+        text-overflow: clip;
     }
 
     /* カードの設定 */
