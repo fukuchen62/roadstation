@@ -92,6 +92,13 @@
             </tr>
 
             <tr>
+                <th width="15%"> <span></span> 関連ブログ(1|2): </th>
+                <td>
+                    <input type="text" name="blog_list" value="{{ $goods->blog_list }}">
+                </td>
+            </tr>
+
+            <tr>
                 <th>価格:</th>
                 <td>
                     <input type="text" name="price" value="{{ $goods->price }}">
