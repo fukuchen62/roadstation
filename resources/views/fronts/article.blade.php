@@ -21,11 +21,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-                                        .relatedarticle1 {
-                                            margin-bottom: 60px;
-                                            width: 48%;
-                                        }
-                                        } */
+                                            .relatedarticle1 {
+                                                margin-bottom: 60px;
+                                                width: 48%;
+                                            }
+                                            } */
     </style>
 
 @endsection
@@ -172,7 +172,7 @@
                     <li><a href="{{ url('blog') }}?category_id={{ $category->id }}">{{ $category->category_name }}
                             ({{ $category->getCount() }})
                         </a>
-
+                    <li></li>
                     </li>
                 @endforeach
             </ul>
