@@ -333,7 +333,7 @@
                 <div class="flex f-width">
                     <img src="{{ asset('assets/images/illustrations/tanuki-activity2.png') }}" width="177"
                         height="135" alt="DMV" class="none">
-                    <div class="center overlap ">
+                    <div class="center overlap">
                         <img src="{{ asset('assets/images/h3-orange.png') }}" width="191" height="111"
                             alt="">
                         <h3 class="center width">体験</h3>
