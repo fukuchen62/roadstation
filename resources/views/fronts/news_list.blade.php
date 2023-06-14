@@ -1,7 +1,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトル --}}
-@section('title', 'news一覧ページ')
+@section('title', 'news一覧 | 徳島まるっと道の駅')
 
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
