@@ -49,6 +49,7 @@ dl {
     border-radius: 50px;
     padding: 10px 10px;
     font-size: 1.1rem;
+    white-space: nowrap;
 }
 
 /* カードの押し込み */

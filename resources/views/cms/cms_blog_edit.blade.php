@@ -80,7 +80,7 @@
             <tr>
                 <th> <span>*</span> 内容：</th>
                 <td>
-                    <textarea name="discription" id="content" cols="50" rows="5" required>{{ $blog->content }}</textarea>
+                    <textarea name="content" id="content" cols="50" rows="5" required>{{ $blog->content }}</textarea>
                 </td>
             </tr>
             <th> 道の駅ID: </th>
