@@ -196,11 +196,12 @@
             <h3 class="category-title">カテゴリー一覧</h3>
             <ul class="category_list">
                 @foreach ($blog_categories as $category)
-                    <li><a href="{{ url('blog') }}?category_id={{ $category->id }}">{{ $category->category_name }}
+                    <li class="category-name"><a
+                            href="{{ url('blog') }}?category_id={{ $category->id }}">{{ $category->category_name }}
                             ({{ $category->getCount() }})
                         </a>
-
                     </li>
+                    <li></li>
                 @endforeach
             </ul>
         </section>
