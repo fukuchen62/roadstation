@@ -398,7 +398,6 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -620,14 +619,15 @@
                     <dd><a href="{{ $station->url }}">{{ $station->url }}</a></dd>
 
                     <dt>SNS：</dt>
-                    <dd><a href="{{ $station->sns }}">
-                            @if ($station->sns == null)
-                                {{ '掲載はございません。' }}
-                            @else
+                    <dd>
+                        @if ($station->sns == null)
+                            {{ '掲載はございません。' }}
+                        @else
+                            <a href="{{ $station->sns }}">
                                 {!! $station->sns !!}
-                            @endif
-                        </a>
-
+                            </a>
+                        @endif
+                    </dd>
                     <dt>営業時間：</dt>
                     <dd>{{ $station->business_hours }}</dd>
 
