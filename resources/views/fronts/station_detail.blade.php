@@ -78,32 +78,7 @@
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p>{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
-
+                                    <p class="com-wrap">{{ $goods->discription }}</p>
                                 </div>
                             </div>
                         </section>
@@ -117,31 +92,6 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
-
                                 </div>
                             </div>
                         </section>
@@ -182,29 +132,6 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
                                 </div>
                             </div>
                         </section>
@@ -222,30 +149,6 @@
                                     <p>{{ $goods->price }}</p>
 
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
 
                                 </div>
                             </div>
@@ -289,31 +192,6 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
-
                                 </div>
                             </div>
                         </section>
@@ -327,31 +205,6 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
-
                                 </div>
                             </div>
                         </section>
@@ -391,33 +244,10 @@
                             <div class="container reverse">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
                                     alt="グルメ写真">
-                                <div class="text  frameborder">
+                                <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
-                                    <p>{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
+                                    <p class="com-wrap">{{ $goods->discription }}</p>
                                 </div>
                             </div>
                         </section>
@@ -431,31 +261,6 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
-
                                 </div>
                             </div>
                         </section>
@@ -497,31 +302,6 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
-
                                 </div>
                             </div>
                         </section>
@@ -535,31 +315,6 @@
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
                                     <p class="com-wrap">{{ $goods->discription }}</p>
-
-                                    @php
-                                        $blog_list = $goods->blog_list;
-                                        
-                                        $id_list = explode('|', $blog_list);
-                                    @endphp
-                                    @foreach ($id_list as $id)
-                                        @php
-                                            $id = $goods->changeName($id);
-                                        @endphp
-                                        @if ($id)
-                                            <h4 class="headline-activity-place">＜体験したブログ記事＞</h4>
-                                            <ul class="roadstation-frame">
-                                                <li class="roadstation-name">
-                                                    @foreach ($blogs as $blog)
-                                                        @if ($blog->id == $id)
-                                                            <a
-                                                                href="{{ url('blog-detail') }}?id={{ $id }}">{{ $blog->title }}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        @endif
-                                    @endforeach
-
                                 </div>
                             </div>
                         </section>
@@ -578,7 +333,7 @@
                 <div class="flex f-width">
                     <img src="{{ asset('assets/images/illustrations/tanuki-activity2.png') }}" width="177"
                         height="135" alt="DMV" class="none">
-                    <div class="center overlap ">
+                    <div class="center overlap">
                         <img src="{{ asset('assets/images/h3-orange.png') }}" width="191" height="111"
                             alt="">
                         <h3 class="center width">体験</h3>
