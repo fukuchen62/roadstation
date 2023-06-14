@@ -64,12 +64,8 @@ $(function () {
         if ($(this).hasClass("open")) {
             rightVal = -2000;
             $(this).removeClass("open");
-
-
         } else {
             $(this).addClass("open");
-
-
         }
         $("#global-navi").stop().animate({
             right: rightVal
