@@ -83,8 +83,7 @@ class NewsController extends Controller
      */
     public function newsMainView(Request $request)
     {
-        $item = News::where('id', $request->id)
-            ->get();
+        $item = News::find($request->id);
 
         $items = News::where('news_category_id', $request->news_category_id)
             ->wherenot('id', $request->id)
@@ -94,15 +93,10 @@ class NewsController extends Controller
 
         $category = NewsCategory::all();
 
-        // $station_id = Blog::where('road_station_id', $request->road_station_id)
-        //     ->where('is_show', 1);
-
-
         $data = [
-            'news' => $item,
+            'new' => $item,
             'categories' => $items,
             'news_categories' => $category,
-
         ];
 
         return view('fronts.news', $data);
