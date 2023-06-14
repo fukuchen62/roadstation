@@ -84,8 +84,8 @@ class News extends Model
      * changeName function
      * アルファベットを数字に置き換え
      *
-     * @param [type] $id
-     * @return void
+     * @param [string] $id
+     * @return string
      */
     public function changeName($id)
     {
