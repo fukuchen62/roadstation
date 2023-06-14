@@ -65,13 +65,11 @@ $(function () {
             rightVal = -2000;
             $(this).removeClass("open");
 
-            // bodyに「.active」class付け外し
-            $("body").toggleClass("active");
+
         } else {
             $(this).addClass("open");
 
-            // bodyに「.active」class付け外し
-            $("body").toggleClass("active");
+
         }
         $("#global-navi").stop().animate({
             right: rightVal
