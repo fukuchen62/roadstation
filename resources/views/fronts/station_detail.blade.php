@@ -1,10 +1,6 @@
 @extends('layouts.layout_front')
 
-@section('description', '道の駅詳細')
-
-@section('keywords', 'キーワード1,キーワード2・・・')
-
-@section('title', 'ページタイトル')
+@section('title', '道の駅詳細ページ')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
@@ -86,7 +82,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -124,7 +120,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -188,7 +184,7 @@
                                     <p class="com-wrap">{{ $goods->discription }}</p>
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -229,7 +225,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -296,7 +292,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -334,7 +330,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -402,7 +398,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -439,7 +435,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -505,7 +501,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
@@ -543,7 +539,7 @@
 
                                     @php
                                         $blog_list = $goods->blog_list;
-                                        
+
                                         $id_list = explode('|', $blog_list);
                                     @endphp
                                     @foreach ($id_list as $id)
