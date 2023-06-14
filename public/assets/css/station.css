@@ -318,9 +318,8 @@ dt {
 }
 
 /* roadstation-frame{
-    glid 
+    glid
 } */
-
 
 .roadstation-name {
     display: flex;
@@ -369,7 +368,11 @@ dt {
     opacity: 0.7;
 }
 
-
+.roadstation-name a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
