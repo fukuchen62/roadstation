@@ -204,7 +204,7 @@ class AdminActivityController extends Controller
 
         // ニュースを読み直す
         $items = Activity::where('deleted_at', null)
-            ->orderBy('id', 'desc')
+            ->orderBy('id', 'asc')
             ->get();
 
         // ニュースの件数

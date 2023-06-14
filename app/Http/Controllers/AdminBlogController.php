@@ -209,7 +209,7 @@ class AdminBlogController extends Controller
 
         // ブログを読み直す
         $items = Blog::where('deleted_at', null)
-            ->orderBy('id', 'desc')
+            ->orderBy('id', 'asc')
             ->get();
 
         // ブログの件数

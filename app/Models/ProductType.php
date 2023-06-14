@@ -16,7 +16,7 @@ class ProductType extends Model
         // 'season'       => 'string|max:32',
         // 'usage'    => 'max:500',
         'discription'    => 'required',
-        'picture'   => 'max:200',
+        // 'picture'   => 'max:200',
         // 'station_list'   => 'max:4',
         // 'price'   => 'integer',
         'is_show'     => 'required|boolean'

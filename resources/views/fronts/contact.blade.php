@@ -1,51 +1,22 @@
-{{-- @php
-
-    return [
-        'name.required' => '名前は必ず入力して下さい。',
-        'email.required' => 'メールアドレスは必ず入力して下さい。',
-        'email.email' => 'メールアドレスを入力して下さい。',
-        'title.required' => 'タイトルは必ず入力して下さい。',
-        'title.string' => 'タイトルは、文字で入力して下さい。',
-        'title.max' => 'タイトルは、50文字以内で入力して下さい。',
-        'content.required' => '内容は必ず入力して下さい。',
-        'content.string' => '内容は、文字で入力して下さい。',
-        'content.max' => '内容は、1000文字以内で入力して下さい。',
-    ];
-
-@endphp --}}
-
 @extends('layouts.layout_front')
 
 {{-- タイトル --}}
 @section('title', 'お問い合わせページ')
 
 @section('pageCss')
-    <style>
-        table {
-            border: 1px solid black;
-            width: 500px;
-            height: 500px;
-        }
-
-        tr {
-            border: 1px solid black;
-        }
-
-        td {
-            border: 1px solid black;
-
-        }
-
-        .error {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
-
+    <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 @endsection
 
+@section('key_visual')
+    <!-- キービジュアル -->
+    <div class="kv">
+        <figure><img src="{{ asset('assets/images/goods_list/goods_list_header.jpg') }}" alt="特産品ページ"></figure>
+    </div>
+@endsection
 
 @section('content')
+
+    <h2>お問い合わせ</h2>
 
     <form method="POST" action="{{ url('contact-check') }}">
         @csrf
@@ -84,7 +55,6 @@
                 </td>
             </tr>
 
-
             <tr>
                 <th>お問い合わせ内容</th>
                 <td>
@@ -94,8 +64,10 @@
 
         </table>
 
-        <button type="reset">書き直す</button>
-        <button type="submit">入力内容確認</button>
+        <div class="push">
+            <button type="reset">書き直す</button>
+            <button type="submit">入力内容確認</button>
+        </div>
 
     </form>
 

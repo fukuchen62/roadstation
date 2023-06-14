@@ -14,74 +14,139 @@
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
 
     <style>
+        /** カテゴリー一覧 **/
+        /* .side {
+            width: 100%;
+            height: 320px;
+            background-color: #ffffff;
+            box-shadow: 5px 5px 8px 0 #70b27f;
+            border: groove 6px #A7D28D;
+            color: #8c5243;
+            border-radius: 24px;
+            padding: 20px;
+        }
+
+        .side h3{
+            font-size: 28px;
+        }
+        .side li{
+                font-size: 24px;
+                margin-top: 24px;
+            } */
+
+        /* @media screen and (min-width:430x){
+            .side{
+                width:80%;
+                margin: auto;
+            }
+
+        } */
+
+        /* @media screen and (min-width:768px){
+            .side{
+                width:50%;
+            } */
+
+            /* @media screen and (min-width:830px){
+            .side{
+                width:100%;
+            } */
+
+            /* @media screen and (min-width:1080px){
+            .side{
+                width:25%;
+            }
+            } */
+
+        /** ページネーション **/
         .link {
             width: 100%;
             margin-top: 32px;
+            text-align: center;
         }
 
         .pagination {
-            font-size: 1.5rem;
-            text-align: center;
+            margin: auto;
             margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .page-link {
+            display: block;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            margin: auto;
         }
 
-        .pagination li {
-            display: inline-block;
+        .page-item:nth-child(odd){
+            background-color: #5eb356;
+            border-radius: 50%;
+            color: #fffbf1;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .page-item:nth-child(even){
+            background-color: #5eb356;
+            border-radius: 50%;
+            color: #fffbf1;
+            font-size: 40px;
+            font-weight: bold;
         }
 
         .page-item:nth-of-type(1) {
-            font-size: 36px;
+            background-color: #fffbf1;
+            color: #91471d;
+            font-size: 40px;
             font-weight: bold;
-            background-color: #fff;
         }
 
-        .page-item:nth-of-type(2) {
+        .page-item:nth-last-of-type(1){
+            background-color: #fffbf1;
+            color: #91471d;
+            font-size: 40px;
             font-weight: bold;
-            color: #fff;
         }
 
-        .page-item:nth-of-type(3) {
-            font-weight: bold;
-            color: #fffbf1;
+        @media screen and (min-width:768px){
+            .pagination{
+                /* width: 51%; */
+                width: 50%;
+            }
         }
-
-        .page-item:nth-of-type(4) {
-            font-weight: bold;
-            color: #fffbf1;
-        }
-
-        .page-item:nth-of-type(5) {
-            font-size: 36px;
-            font-weight: bold;
-            background-color: #fff;
-        }
-
-        .page-item {
-            display: block;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: #5eb356;
-        }
-
-
-
-        .text {
-            /* overflow: hidden;
-                                                                                                                                                                                                                                                        white-space: nowrap;
-                                                                                                                                                                                                                                                        text-overflow: ellipsis;
-
-                                                                                                                                                                                                                                                        /*IE対策*/
-            /* line-height: 1.5em;
-                                                                                                                                                                                                                                                        max-height: 4.5em;  */
-        }
-
-        .link h2 {}
-
 
         @media screen and (min-width:1080px) {
             nav {
-                width: 790px;
+                /* width: 790px; */
+                /* width: 71%; */
+                margin: auto;
+            }
+
+            /* .pagination{
+                width: 51%;
+            } */
+
+            .page-link {
+            width: 44px;
+            height: 44px;
+            }
+
+            .page-item:nth-child(odd){
+                font-size: 32px;
+            }
+
+            .page-item:nth-child(even){
+                font-size: 32px;
+            }
+
+            .page-item:nth-of-type(1) {
+                font-size: 32px;
+            }
+
+            .page-item:nth-last-of-type(1){
+                font-size: 32px;
             }
         }
     </style>
@@ -133,7 +198,9 @@
 
     </div>
     {{-- ページネーション表示部分 --}}
-    {{--  <div class="link">{{ $blogs->links('pagination::bootstrap-4') }}  --}}
+    {{--  {{ $blogs->links('pagination::bootstrap-4') }}  --}}
+
+    <div class="link">
     {{ $blogs->appends(request()->query())->links('pagination::bootstrap-4') }}
     </div>
 @endsection

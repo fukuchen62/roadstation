@@ -2,6 +2,7 @@
 
 h1 {
     font-size: 32px;
+    font-weight: bold;
 }
 
 section {
@@ -13,10 +14,13 @@ section {
 }
 
 .title {
-    border: solid black 1px;
+    background-color: #2db458;
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
     border-radius: 999px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: aliceblue;
 }
 
 .link {
@@ -31,6 +35,10 @@ section {
 
 #top {
     padding-top: 100px;
+}
+
+h2 {
+    border-bottom: 1px solid black;
 }
 
 @media screen and (min-width:1001px) {

@@ -2,7 +2,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトルの受け取り --}}
-@section('title', '注目アクティビティ | とくしま まるっと道の駅')
+@section('title', 'アクティビティ一覧 | とくしま まるっと道の駅')
 
 {{-- CSS --}}
 @section('pageCss')
@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/activity_list.css') }}">
 
     <style>
-        .dd{
-            
-        }
+        .dd {}
     </style>
 
 @endsection
@@ -85,7 +83,7 @@
                 </ul>
             @endif  --}}
 
-            
+
 
             @php
                 $blog_list = $activity->blog_list;
