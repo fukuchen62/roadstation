@@ -239,12 +239,12 @@ h4 {
     word-wrap: break-word;
 }
 
-.favorite {
-    border: dashed 3px #d6e6ae;
+/* .favorite { */
+/* border: dashed 3px #d6e6ae;
     background-color: #fff;
     border-radius: 20px;
-    padding: 20px;
-}
+    padding: 20px; */
+/* } */
 
 
 
@@ -259,8 +259,6 @@ h4 {
 .blog-btn {
     margin-top: 10px;
     font-size: clamp(12px, 5vw, 20px);
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     position: relative;
     width: 240px;
@@ -274,32 +272,34 @@ h4 {
     font-size: 1em;
     margin-bottom: 10px;
     text-align: center;
+
 }
 
 
 .blog-btn::before {
-    position: absolute;
+    /* position: absolute;
     right: calc(2em + 0.5px);
     transform: translateX(50%);
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background-color: #fff;
-    content: '';
+    content: ''; */
+
 
 
 }
 
 
 .blog-btn ::after {
-    transform: rotate(45deg);
+    /* transform: rotate(45deg);
     width: 5px;
     height: 5px;
     border-top: 3px solid #a7d28d;
     border-right: 3px solid #a7d28d;
     content: '';
     position: relative;
-    left: -20px;
+    left: -20px; */
 }
 
 /* .blog-btn-center:hover { */
@@ -371,7 +371,7 @@ dt {
 
 /* 星を黄色にする */
 .yellow {
-    color: #ffff00;
+    color: #fa670c;
 }
 
 .headline-activity-place {
