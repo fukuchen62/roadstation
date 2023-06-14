@@ -74,7 +74,7 @@
             <h3 class="category-title">カテゴリー一覧</h3>
             <ul class="category_list">
                 @foreach ($news_categories as $category)
-                    <li><a
+                    <li class="category-name"><a
                             href="{{ url('news') }}?news_category_id={{ $category->id }}">{{ $category->category_name }}</a>
                     </li>
                     <li></li>
