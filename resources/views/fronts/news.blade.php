@@ -26,26 +26,25 @@
 
             {{-- 記事本文 --}}
             {{-- @foreach ($news as $new) --}}
-            <h3 class="blog-title">{{ $new->title }}</h3>
+            <h3 class="blog-title">{{ $news_item->title }}</h3>
 
             <div class="update-information">
-
                 @php
-                    $ts = strtotime($new->updated_at);
+                    $ts = strtotime($news_item->updated_at);
                 @endphp
                 <p class="date"> {{ date('Y年n月j日', $ts) }}</p>
 
-                <p class="category">{{ $new->newsCategory->category_name }}</p>
+                <p class="category">{{ $news_item->newsCategory->category_name }}</p>
             </div>
 
-            @if ($new->picture)
-                <img class="blog-img" src="{{ asset('/storage/images/' . $new->picture) }}" alt="">
+            @if ($news_item->picture)
+                <img class="blog-img" src="{{ asset('/storage/images/' . $news_item->picture) }}" alt="">
             @else
                 <img class="blog-img" src="{{ asset('/storage/images/no-image.png') }}" alt="">
             @endif
 
             <p class="blog-text">
-                {!! $new->discription !!}
+                {!! $news_item->discription !!}
             </p>
 
             <h3 class="roadstation-
@@ -54,14 +53,14 @@
             <p class="address">
 
                 @php
-                    $station_list = $new->station_list;
+                    $station_list = $news_item->station_list;
                     $id_list = explode('|', $station_list);
                 @endphp
 
                 @foreach ($id_list as $id)
                     @php
-                        $id = $new->changeName($id);
-                        $name = $new::getRoadstationName($id);
+                        $id = $news_item->changeName($id);
+                        $name = $news_item::getRoadstationName($id);
                     @endphp
 
                     <a class="stationBtn" href="{{ url('station-detail') }}?id={{ $id }}">{{ $name }}
@@ -72,24 +71,24 @@
             {{-- 前後移動モバイル --}}
             <div class="before-next-mobilebtn">
 
-                @if ($new->previous() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $new->previous()->id }}">＜＜前の記事へ</a></p>
+                @if ($news_item->previous() != null)
+                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->previous()->id }}">＜＜前の記事へ</a></p>
                 @endif
 
-                @if ($new->next() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $new->next()->id }}">次の記事へ＞＞</a></p>
+                @if ($news_item->next() != null)
+                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->next()->id }}">次の記事へ＞＞</a></p>
                 @endif
 
             </div>
 
             {{-- 前後移動PC --}}
             <div class="before-next-pcbtn">
-                @if ($new->previous() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $new->previous()->id }}">＜＜前の記事へ</a></p>
+                @if ($news_item->previous() != null)
+                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->previous()->id }}">＜＜前の記事へ</a></p>
                 @endif
 
-                @if ($new->next() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $new->next()->id }}">次の記事へ＞＞</a></p>
+                @if ($news_item->next() != null)
+                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->next()->id }}">次の記事へ＞＞</a></p>
                 @endif
 
             </div>
@@ -104,7 +103,7 @@
                     <div class="relatedarticle1">
 
                         <a
-                            href="{{ url('news-detail') }}?id={{ $category->id }}&news_category_id={{ $new->news_category_id }}">
+                            href="{{ url('news-detail') }}?id={{ $category->id }}&news_category_id={{ $news_item->news_category_id }}">
 
                             <img class="relatedarticle-img" src="{{ asset('/storage/images/' . $category->picture) }}"
                                 alt="ニュース画像">
@@ -114,7 +113,7 @@
                             <div class="update-information">
 
                                 @php
-                                    $ts = strtotime($new->updated_at);
+                                    $ts = strtotime($news_item->updated_at);
                                 @endphp
                                 <p class="date">{{ date('Y年n月j日', $ts) }}</p>
 
