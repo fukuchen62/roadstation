@@ -223,33 +223,76 @@ h4 {
     align-content: center;
     justify-content: center;
     border-radius: 20px;
+    word-wrap: break-word;
 }
 
+.favorite {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.favorite-text {
+    text-align: center;
+    margin-bottom: 10px;
+
+}
 
 /* ボタン */
 
-.blog-btn p {
+.blog-btn-center {
+    margin-top: 10px;
     font-size: clamp(12px, 5vw, 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 240px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #a7d28d;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-/*
-.blog-btn a {
-    display: inline-block;
-    text-align: center;
 
-    background-color: #d6e6ae;
-    border-radius: 50px;
-    /* margin: auto; */
-/* margin-top: 20px; */
-/* padding: 15px; */
-/* height: 47px; */
-/* width: clamp(280px, 50vw, 380px); */
+.blog-btn-center::before {
+    position: absolute;
+    right: calc(2em + 0.5px);
+    transform: translateX(50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: '';
+
+
+}
+
+
+.blog-btn-center::after {
+    transform: rotate(45deg);
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #a7d28d;
+    border-right: 3px solid #a7d28d;
+    content: '';
+    position: relative;
+    left: -20px;
+}
+
+/* .blog-btn-center:hover { */
+/* position: relative;
+    top: 5px;
+    box-shadow: none; */
+/* opacity: 0.7; */
 /* } */
 
-/* .blog-btn a:hover {
-    background-color: #b45a27;
-    color: #d6e6ae; */
-/* } */
+
 
 .blog-img {
     display: block;
@@ -307,6 +350,8 @@ dt {
     height: 30px;
 }
 
+
+
 /* 星を黄色にする */
 .yellow {
     color: #ffff00;
@@ -318,9 +363,8 @@ dt {
 }
 
 /* roadstation-frame{
-    glid 
+    glid
 } */
-
 
 .roadstation-name {
     display: flex;
@@ -356,10 +400,13 @@ dt {
     transform: rotate(45deg);
     width: 5px;
     height: 5px;
-    margin-left: 10px;
-    border-top: 3px solid #a7d28d;
-    border-right: 3px solid #a7d28d;
+    /* margin-left: 10px; */
+    border-top: 5px solid #a7d28d;
+    border-right: 5px solid #a7d28d;
     content: '';
+    position: relative;
+    left: -20px;
+
 }
 
 .roadstation-name :hover {
@@ -369,13 +416,18 @@ dt {
     opacity: 0.7;
 }
 
+.roadstation-name a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
 
 /* PCグルメとお土産エリアを横に並べる */
 
-@media screen and (min-width:930px) {
+@media screen and (min-width:970px) {
     .container {
         flex-direction: row;
         align-items: center;
@@ -422,7 +474,7 @@ dt {
         border: 15px solid transparent;
         border-right: 15px solid #fff;
 
-        .roadstation-name {
+        /* .roadstation-name {
 
             display: inline-block;
             text-align: center;
@@ -434,7 +486,7 @@ dt {
             padding: 15px;
             height: 65px;
             width: clamp(280px, 50vw, 280px);
-        }
+        } */
     }
 
     /* グルメ画像など指定 */
@@ -454,7 +506,7 @@ dt {
             gap: 10px;
         }
 
-        .roadstation-name {
+        /* .roadstation-name {
 
             display: inline-block;
             text-align: start;
@@ -465,75 +517,75 @@ dt {
             margin-top: 20px;
             padding: 15px;
             height: 65px;
-            width: clamp(280px, 50vw, 280px);
-        }
+            width: clamp(280px, 50vw, 280px); */
+
+    }
+}
+
+@media screen and (min-width:930px) {
+
+    h2 {
+        margin-bottom: 14px;
     }
 
-    @media screen and (min-width:930px) {
-
-        h2 {
-            margin-bottom: 14px;
-        }
-
-        h3 {
-            font-size: 32px;
-        }
-
-        /* h3横の画像設定 */
-        .none {
-            display: block;
-        }
-
-        .sideways-off {
-            position: static;
-            margin-bottom: 0;
-        }
-
-        /* 吹き出しを横に並べる */
-        .flex {
-            display: flex;
-            align-items: center;
-        }
-
-        .map {
-            display: flex;
-            gap: 20px;
-        }
-
-        .flex2 {
-            align-items: stretch;
-        }
-
-        /* グルメ画像など指定 */
-        .img {
-            min-width: 500px;
-            min-height: 500px;
-        }
-
-        /* 地図設定 */
-        iframe {
-            margin-top: 0;
-            height: auto;
-        }
-
-        .harf {
-            width: 50%;
-        }
-
-
-        .roadstation-name {
-
-            display: inline-block;
-            text-align: start;
-
-            background-color: #d6e6ae;
-            border-radius: 50px;
-            margin: auto;
-            margin-top: 20px;
-            padding: 15px;
-            height: 65px;
-            width: clamp(280px, 50vw, 280px);
-            /* width: 550px; */
-        }
+    h3 {
+        font-size: 32px;
     }
+
+    /* h3横の画像設定 */
+    .none {
+        display: block;
+    }
+
+    .sideways-off {
+        position: static;
+        margin-bottom: 0;
+    }
+
+    /* 吹き出しを横に並べる */
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .map {
+        display: flex;
+        gap: 20px;
+    }
+
+    .flex2 {
+        align-items: stretch;
+    }
+
+    /* グルメ画像など指定 */
+    .img {
+        min-width: 500px;
+        min-height: 500px;
+    }
+
+    /* 地図設定 */
+    iframe {
+        margin-top: 0;
+        height: auto;
+    }
+
+    .harf {
+        width: 50%;
+    }
+
+    /*
+    .roadstation-name {
+
+        display: inline-block;
+        text-align: start;
+
+        background-color: #d6e6ae;
+        border-radius: 50px;
+        margin: auto;
+        margin-top: 20px;
+        padding: 15px;
+        height: 65px;
+        width: clamp(280px, 50vw, 280px);
+        /* width: 550px; */
+    /* } */
 }
