@@ -12,28 +12,30 @@ class MyUtil
     /**
      * charToNum function
      * アルファベットから数字に変換
+     * @param [string] $id
+     * @return void
      */
     static public function charToNum($id)
     {
         $item = $id;
-        // a以降は、数字に変換$id
-        if ($id == 'a') {
+        // a以降は、数字に変換
+        if ($item == 'a') {
             $item = 10;
-        } elseif ($id == "b") {
+        } else if ($item == 'b') {
             $item = 11;
-        } elseif ($id == 'c') {
+        } else if ($item == 'c') {
             $item = 12;
-        } elseif ($id == 'd') {
+        } else if ($item == 'd') {
             $item = 13;
-        } elseif ($id == 'e') {
+        } else if ($item == 'e') {
             $item = 14;
-        } elseif ($id == 'f') {
+        } else if ($item == 'f') {
             $item = 15;
-        } elseif ($item == 'g') {
+        } else if ($item == 'g') {
             $item = 16;
-        } elseif ($id == 'h') {
+        } else if ($item == 'h') {
             $item = 17;
-        } elseif ($id == 'i') {
+        } else if ($item == 'i') {
             $item = 18;
         }
         return $item;

@@ -21,11 +21,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-                                        .relatedarticle1 {
-                                            margin-bottom: 60px;
-                                            width: 48%;
-                                        }
-                                        } */
+                                            .relatedarticle1 {
+                                                margin-bottom: 60px;
+                                                width: 48%;
+                                            }
+                                            } */
     </style>
 
 @endsection
@@ -169,12 +169,11 @@
             <h3 class="category-title">カテゴリー一覧</h3>
             <ul class="category_list">
                 @foreach ($blog_categories as $category)
-                    <li class="category-name"><a
-                            href="{{ url('blog') }}?category_id={{ $category->id }}">{{ $category->category_name }}
+                    <li><a href="{{ url('blog') }}?category_id={{ $category->id }}">{{ $category->category_name }}
                             ({{ $category->getCount() }})
                         </a>
-                    </li>
                     <li></li>
+                    </li>
                 @endforeach
             </ul>
         </section>
