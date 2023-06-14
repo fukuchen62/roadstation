@@ -43,7 +43,7 @@
                                     <dl>
                                         <dt>営業時間：</dt>
                                         <dd>{{ $road->business_hours }}</dd>
-                                        <dt>〒{{ $road->zip_code }}</dt>
+                                        <dt>住所:</dt>
                                         <dd>{{ $road->address }}</dd>
                                         <dt>設備：</dt>
                                         <dd>
@@ -209,6 +209,8 @@
 
                                         <dt>〒{{ $road->zip_code }}</dt>
                                         <dd>{{ $road->address }}</dd>
+
+                                        <dt>設備：</dt>
                                         <dd>
                                             <img title="宿泊施設"
                                                 src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}"
