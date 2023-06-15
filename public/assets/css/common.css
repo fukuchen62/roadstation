@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.factory {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -223,6 +229,12 @@ p {
     align-items: center;
 }
 
+/* スクロールのたぬみちのサイズ */
+.scroll-top img {
+    width: 100px;
+    height: auto;
+}
+
 .scroll-top:hover {
     animation: pikopiko 2s steps(2, start) infinite;
 }
@@ -296,6 +308,13 @@ p {
 }
 
 @media screen and (min-width:768px) {
+
+    /* スクロールのたぬみちのサイズ */
+    .scroll-top img {
+        width: 120px;
+        height: auto;
+    }
+
     .pagination {
         /* width: 51%; */
         width: 50%;
