@@ -23,6 +23,11 @@ a:hover {
     margin-bottom: 40px;
 }
 
+.blog-main img {
+    width: 100%;
+    height: auto;
+}
+
 /* ブログタイトル */
 .blog-title {
     font-size: 24px;
