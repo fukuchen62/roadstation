@@ -223,6 +223,12 @@ p {
     align-items: center;
 }
 
+/* スクロールのたぬみちのサイズ */
+.scroll-top img {
+    width: 100px;
+    height: auto;
+}
+
 .scroll-top:hover {
     animation: pikopiko 2s steps(2, start) infinite;
 }
@@ -296,6 +302,13 @@ p {
 }
 
 @media screen and (min-width:768px) {
+
+    /* スクロールのたぬみちのサイズ */
+    .scroll-top img {
+        width: 120px;
+        height: auto;
+    }
+
     .pagination {
         /* width: 51%; */
         width: 50%;
@@ -396,6 +409,18 @@ footer {
         background-color: #f0ffc9;
         transition: all 0.3s ease-in;
         transform: rotate(5deg);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* カードの押し込み */
