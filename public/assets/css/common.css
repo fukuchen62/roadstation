@@ -135,7 +135,7 @@ p {
 
 #wrapper .btn-gnavi {
     position: fixed;
-    top: 20px;
+    top: 10px;
     right: 20px;
     width: 30px;
     height: 24px;
@@ -154,6 +154,7 @@ p {
 /* 三本線 */
 #wrapper .btn-gnavi span {
     position: absolute;
+    right: -16px;
     width: 30px;
     height: 4px;
     background: #ffffff;
@@ -163,15 +164,15 @@ p {
 }
 
 #wrapper .btn-gnavi span:nth-child(1) {
-    top: 0;
+    top: -10px;
 }
 
 #wrapper .btn-gnavi span:nth-child(2) {
-    top: 10px;
+    top: 0px;
 }
 
 #wrapper .btn-gnavi span:nth-child(3) {
-    top: 20px;
+    top: 10px;
 }
 
 #wrapper .btn-gnavi.open {
