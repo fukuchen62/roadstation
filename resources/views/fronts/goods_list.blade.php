@@ -28,10 +28,12 @@
             <ul class="goods">
             @foreach ($agricultural_products as $agricultural )
                 <li class="goods-group">
+                    {{-- if文に使うための画像パスデータを取得 --}}
                     @php
                         $agriculturalImg = $agricultural->picture;
                     @endphp
                     <a href="#detail-top" class="btns" id="{{'btn-' . $agricultural->id}}">
+                    {{-- 画像パスデータがある時は画像を表示、ない時はno-img画像を表示 --}}
                     @if ($agriculturalImg!='')
                         <img class="goods-photo" src="{{ asset('/storage/images/' . $agricultural->picture) }}" alt="">
                     @else
