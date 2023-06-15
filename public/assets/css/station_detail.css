@@ -129,12 +129,6 @@ form {
     box-shadow: none;
 }
 
-/* 設備アイコン */
-.factory {
-    position: absolute;
-    bottom: 0;
-}
-
 .more {
     border: 1px solid;
     padding: 5px 10px;
