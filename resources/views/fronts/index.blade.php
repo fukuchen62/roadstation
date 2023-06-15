@@ -41,10 +41,14 @@
         <ul class="article-list">
             @foreach ($news as $news)
                 <ul>
+                    {{-- 年月日の表示の基となるニュース作成時間データの取得 --}}
                     @php
                         $ts = strtotime($news->created_at);
                     @endphp
                     <li>
+                        {{-- 取得したidに応じたリンクを設置、
+                        作成時間を年月日形式で表示、
+                        ニュースカテゴリ―idからカテゴリーネームを取得 --}}
                         <a href="{{ route('newsdetail') }}?id={{ $news->id }}">{{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
                             {!! $news->title !!}</a>
                 </ul>
@@ -142,12 +146,14 @@
     <div class="blog-main">
         <div class="blog-wrapper">
             @foreach ($blog as $blog)
+                {{-- if文に使うための画像データを取得 --}}
                 @php
                         $blogImg = $blog->picture;
                 @endphp
 
                 <a href="{{ route('blog') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}"
                     class="blog-card">
+                    {{-- DBに画像パスデータがある場合その画像を表示、ない場合no-img画像を表示 --}}
                     @if ($blogImg!='')
                         <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
                     @else
@@ -156,10 +162,13 @@
 
                     <h3>{!! $blog->title !!}</h3>
 
+                    {{-- ブログ作成時間を取得 --}}
                     @php
                         $ts = strtotime($blog->created_at);
                     @endphp
 
+                    {{-- ブログ作成時間を年月日形式で表示
+                    ブログカテゴリーidからブログネームを取得して表示 --}}
                     <div class="update-information">
                         <p class="date">{{ date('Y年m月d日', $ts) }}</p>
                         <p class="category">{{ $blog->blogCategory->category_name }}</p>
