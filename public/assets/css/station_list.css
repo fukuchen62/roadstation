@@ -93,7 +93,6 @@ dt {
     color: #B45A27;
     /* display: inline-block; */
     margin: 0 auto;
-    /* padding: 20px; */
 }
 
 .east {
@@ -138,8 +137,10 @@ dt {
     box-shadow: 5px 5px 8px 0 #af813a;
     /* border: 3px #7b7b7b; */
     border: groove 6px #cf9957;
-    cursor: pointer;
 
+    /* リンク用の設定 */
+    position: relative;
+    cursor: pointer;
 }
 
 .card:hover {
