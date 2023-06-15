@@ -29,9 +29,9 @@ h3 {
     color: #B45A27;
 }
 
-
-
-
+p {
+    text-align: left;
+}
 
 .area_category {
     /* margin: 100px auto 0 auto; */

@@ -313,6 +313,12 @@ a.btn-border-shadow--color:before {
     color: black;
 }
 
+/* 設備アイコン */
+.factory {
+    position: absolute;
+    bottom: 0;
+}
+
 /* footer */
 footer {
     position: relative;
