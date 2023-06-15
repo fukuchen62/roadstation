@@ -129,7 +129,7 @@
                 <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt=""></li>
             </ul>
-            <a href="">
+            <a href="{{ route('activity') }}">
                 <p class="mobilebtn btn">もっと見る</p>
             </a>
         </div>
@@ -143,12 +143,12 @@
         <div class="blog-wrapper">
             @foreach ($blog as $blog)
                 @php
-                        $blogImg = $blog->picture;
+                    $blogImg = $blog->picture;
                 @endphp
 
                 <a href="{{ route('blog') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}"
                     class="blog-card">
-                    @if ($blogImg!='')
+                    @if ($blogImg != '')
                         <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
                     @else
                         <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="no img">
