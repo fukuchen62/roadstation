@@ -493,7 +493,6 @@
 
     </section>
 
-
     <!-- 検索エリア -->
     <!-- ボタン -->
     <h3 class="search_results">

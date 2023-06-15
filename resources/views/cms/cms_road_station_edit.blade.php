@@ -169,7 +169,7 @@
             <tr>
                 <th>KV画像3：</th>
                 <td>
-                    <input type="text" name="picture3" id="content" value="{{ $road_stations->picture2 }}">
+                    <input type="text" name="picture3" id="content" value="{{ $road_stations->picture3 }}">
                 </td>
             </tr>
             <tr>
