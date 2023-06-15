@@ -8,9 +8,9 @@ html {
     overflow-x: hidden;
 }
 
-p {
+/* p {
     text-align: center;
-}
+} */
 
 section {
     /* margin: 0 auto; */
@@ -99,20 +99,19 @@ h4 {
 
 }
 
-.activity-name {
+/* .activity-name {
     width: 100%;
     text-align: start;
-}
+} */
 
-.station-name {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.roadstation-name {
+
+    /* 文字幅 */
+    display: inline-block;
     position: relative;
-    width: 195px;
-    /* margin: 0 auto; */
-    padding: .5em 2em;
-    border: none;
+
+    padding: 15px 50px;
+
     border-radius: 25px;
     background-color: #a7d28d;
     color: #fff;
@@ -120,29 +119,38 @@ h4 {
     font-size: 1em;
     margin-bottom: 10px;
     margin-top: 15px;
-
 }
 
-
-.station-name::before {
+.roadstation-name::before {
     position: absolute;
-    right: calc(2em + 2.5px);
+    top: 10px;
+    right: 30px;
     transform: translateX(50%);
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: #fff;
     content: '';
 }
 
-.station-name::after {
+.roadstation-name::after {
     transform: rotate(45deg);
-    width: 5px;
-    height: 5px;
-    margin-left: 10px;
-    border-top: 3px solid #a7d28d;
-    border-right: 3px solid #a7d28d;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    border-top: 5px solid #a7d28d;
+    border-right: 5px solid #a7d28d;
     content: '';
+}
+
+.roadstation-name a {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
 }
 
 .station-name:hover {
@@ -200,63 +208,23 @@ h4 {
 
 .roadstation-name {
     /* width: 100%; */
-    text-align: left;
-    font-size: 1.2rem;
+    /* text-align: left;
+    font-size: 1.2rem; */
 }
 
-.roadstation-name {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row; */
-    display: inline-block;
-    position: relative;
-    /* width: 250px; */
-    /* margin: 0 auto; */
-    /* padding: 0.5em 2em; */
-    padding: 15px 55px;
-    border: none;
-    border-radius: 25px;
-    background-color: #a7d28d;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1em;
-    margin-bottom: 10px;
-    margin-top: 15px;
-}
-
-/* .roadstation-name::before {
-    position: absolute;
-    right: calc(1em + 2.5px);
-    transform: translateX(50%);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    content: '';
-}
-
-.roadstation-name::after {
-    transform: rotate(45deg);
-    width: 10px;
-    height: 10px;
-    margin-left: 10px;
-    border-top: 5px solid #a7d28d;
-    border-right: 5px solid #a7d28d;
-    content: '';
-} */
-
-
-
-
+/* display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row; */
+/* width: 250px; */
+/* margin: 0 auto; */
+/* padding: 0.5em 2em; */
 
 
 
 .roadstation-name:hover {
     opacity: 0.7;
 }
-
-
 
 .blog-btn a:hover {
     opacity: 0.7;
@@ -378,48 +346,16 @@ h4 {
         width: 100%;
     }
 
-    .roadstation-name {
-        /* display: flex;
-        justify-content: space-between;
-        align-items: center; */
-        position: relative;
-        /* width: 560px; */
-        /* margin: 0 auto; */
-        /* padding: 0.5em 2em; */
-        /* padding: 15px 15px; */
-        border: none;
-        border-radius: 25px;
-        background-color: #a7d28d;
-        color: #fff;
-        font-weight: 600;
-        font-size: 1em;
-        margin-bottom: 10px;
-        margin-top: 15px;
-    }
 
-    .roadstation-name::before {
-        position: absolute;
-        top: 10px;
-        right: 30px;
-        transform: translateX(50%);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #fff;
-        content: '';
-    }
+    /* display: flex;
+                    justify-content: space-between;
+                    align-items: center; */
+    /* width: 560px; */
+    /* margin: 0 auto; */
+    /* padding: 0.5em 2em; */
+    /* padding: 15px 15px; */
 
-    .roadstation-name::after {
-        transform: rotate(45deg);
-        position: absolute;
-        top: 20px;
-        right: 25px;
-        width: 10px;
-        height: 10px;
-        border-top: 5px solid #a7d28d;
-        border-right: 5px solid #a7d28d;
-        content: '';
-    }
+
 
 
 
