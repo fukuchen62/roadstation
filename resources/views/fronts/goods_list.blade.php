@@ -51,19 +51,10 @@
   border-right: 3px solid #a7d28d;
   content: "";
 }
-/* .roadstation-name a { */
-/* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; */
-/* } */
+
 
 .station-name:hover {
-  /* position: relative;
-    top: 5px;
-    box-shadow: none; */
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 </style>
