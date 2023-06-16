@@ -38,6 +38,7 @@ h2 {
 }
 
 h3 {
+    font-family: "Kiwi Maru", serif;
     font-size: 20px;
 }
 
@@ -347,6 +348,7 @@ svg {
     animation-name: bomn;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    animation: ease-out;
 }
 
 @keyframes bomn {
@@ -358,6 +360,9 @@ svg {
         transform: scale(1);
     }
 }
+
+/* ↑ぼんっアニメ */
+
 
 @media screen and (min-width:768px) {
 
@@ -404,6 +409,19 @@ svg {
     .page-item:nth-last-of-type(1) {
         font-size: 32px;
     }
+}
+
+/* フェードイン */
+.scroll-fade-up {
+    animation: bomn;
+    height: 20px;
+    width: 80%;
+}
+
+/* 左右からスライドイン */
+.scroll-fade-side {
+    animation: poyoyon;
+    width: 80%;
 }
 
 /* ↑ページネーションの設定はここまで */
