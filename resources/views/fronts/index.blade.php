@@ -106,7 +106,8 @@
             <ul class="activity">
                 <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="">
+                </li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt=""></li>
                 <li class="activity-title">
                     <h2 class="sp-h2">体験</h2>

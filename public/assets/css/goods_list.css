@@ -494,13 +494,13 @@ h4 {
     } */
 
 
-    .roadstation-frame {
+    /* .roadstation-frame {
 
-        /* display: grid;
+        display: grid;
         grid-template-columns: repeat(5, minmax(135px, 1fr));
         gap: 25px;
-        text-align: center; */
-    }
+        text-align: center;
+    } */
 
 
     /* .roadstation-name {

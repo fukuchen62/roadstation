@@ -80,7 +80,7 @@ h4 {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 20px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .activity-group {
@@ -100,9 +100,9 @@ h4 {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    /* width: 195px; */
-    margin: 10px 20px;
-    padding: 4px 10px;
+    /* width: 100%; */
+    margin: 10px;
+    padding: 10px 15px;
     border: none;
     border-radius: 25px;
     background-color: #a7d28d;
@@ -110,12 +110,17 @@ h4 {
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 30px;
+}
 
+
+
+.station-name a {
+    width: 100%;
 }
 
 .station-name::before {
     position: absolute;
-    right: calc(2em + -9px);
+    right: calc(2em + -5px);
     transform: translateX(50%);
     width: 25px;
     height: 25px;
@@ -139,6 +144,10 @@ h4 {
     opacity: 0.7;
 }
 
+.roadstation-frame {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* .activity-name {
     width: 100%;
@@ -150,9 +159,8 @@ h4 {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    /* width: 195px; */
-    margin: 10px 20px;
-    padding: 4px 10px;
+    margin: 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 25px;
     background-color: #a7d28d;
@@ -163,7 +171,7 @@ h4 {
 
 .roadstation-name::before {
     position: absolute;
-    right: calc(2em + -9px);
+    right: calc(2em + -4px);
     transform: translateX(50%);
     width: 25px;
     height: 25px;
@@ -176,8 +184,8 @@ h4 {
     transform: rotate(45deg);
     width: 10px;
     height: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 5px;
     border-top: 3px solid #a7d28d;
     border-right: 3px solid #a7d28d;
     content: '';
