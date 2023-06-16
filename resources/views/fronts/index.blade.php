@@ -72,9 +72,9 @@
         <div class="goods-wrapper">
             <ul class="goods">
                 <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/otaniyaki.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/sakana.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt=""></li>
                 <li class="goods-title">
                     <h2 class="sp-h2">特産品</h2>
                     <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
@@ -89,9 +89,9 @@
                     </a>
                 </li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.jpg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt=""></li>
             </ul>
 
             <a href="{{ route('goods') }}">
@@ -104,10 +104,10 @@
         </div>
         <div class="activity-wrapper">
             <ul class="activity">
-                <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.jpg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/aizometop.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt=""></li>
                 <li class="activity-title">
                     <h2 class="sp-h2">体験</h2>
                     <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
@@ -124,10 +124,10 @@
                 </li>
 
 
-                <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/asiyu.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg') }}" alt=""></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt=""></li>
             </ul>
             <a href="{{ route('activity') }}">
                 <p class="mobilebtn btn">もっと見る</p>
@@ -171,7 +171,7 @@
     </div>
 
     <div class="blog-btn">
-        <a href="{{ route('bloglist') }}"><img src="{{ asset('assets/images/blog-btn.png') }}" alt="ブログボタン"></a>
+        <a href="{{ route('bloglist') }}"><img src="{{ asset('assets/images/blog-btn01.png') }}" alt="ブログボタン"></a>
     </div>
 @endsection
 
