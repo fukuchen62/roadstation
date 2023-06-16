@@ -85,9 +85,9 @@
                         $title = $activity->getBlogName($id);
                     @endphp
                     @if ($title != '')
-                        <li class="roadstation-name">
-                            <a href="{{ url('blog-detail') }}?id={{ $id }}">
-                                <p class="name">{{ $title }}</p>
+                        <li>
+                            <a href="{{ url('blog-detail') }}?id={{ $id }}" class="roadstation-name name">
+                                {{ $title }}
                             </a>
                         </li>
                     @endif
