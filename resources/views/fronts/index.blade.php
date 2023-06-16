@@ -88,7 +88,7 @@
                         もっと見る
                     </a>
                 </li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpg') }}" alt=""></li>
+                <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg') }}" alt=""></li>
                 <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt=""></li>
