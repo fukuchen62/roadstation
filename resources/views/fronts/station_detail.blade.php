@@ -456,11 +456,9 @@
                 @endphp
 
                 @if (in_array($station->id, $cookielist))
-                    <p class="blog-btn center">
-                        <a href="{{ route('cookie', ['id' => $station->id]) }}">
+                        <a href="{{ route('cookie', ['id' => $station->id]) }}" class="blog-btn center">
                             お気に入りに登録済み
                         </a>
-                    </p>
                 @else
                     <p>
                         <strong>
@@ -469,11 +467,9 @@
                         </strong>
                     </p>
 
-                    <p class="blog-btn center">
-                        <a href="{{ route('cookie', ['id' => $station->id]) }}">
+                        <a href="{{ route('cookie', ['id' => $station->id]) }}" class="blog-btn center">
                             お気に入りに登録する
                         </a>
-                    </p>
                 @endif
 
             </div>

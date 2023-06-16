@@ -9,6 +9,56 @@
 {{-- 該当ページのCSS --}}
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/goods_list.css') }}">
+
+<style>
+
+.roadstation-frame{
+    justify-content: space-between;
+}
+.roadstation-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #a7d28d;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.roadstation-name::before {
+  position: absolute;
+  right: calc(2em + -4px);
+  transform: translateX(50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  content: "";
+}
+
+.roadstation-name::after {
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  margin-left: 20px;
+  margin-right: 5px;
+  border-top: 3px solid #a7d28d;
+  border-right: 3px solid #a7d28d;
+  content: "";
+}
+
+
+.station-name:hover {
+    opacity: 0.7;
+}
+
+</style>
+
 @endsection
 
 @section('key_visual')
@@ -224,9 +274,9 @@
                             }
                             $name = $type::getRoadstationName($id);
                         @endphp
-                        <li class="roadstation-name">
-                            <a class="" href="{{ route('roadstation') }}?id={{ $id }}">
-                                <p class="name">{{ $name }}</p>
+                        <li class="">
+                            <a class="roadstation-name name" href="{{ route('roadstation') }}?id={{ $id }}">
+                                {{ $name }}
                             </a>
                         </li>
                     @endforeach
