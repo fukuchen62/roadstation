@@ -12,9 +12,7 @@ h2 {
     background-repeat: no-repeat;
     padding: 60px;
     color: #B45A27;
-    background-image: url(../images/illustrations/headline/like_headline.png);
 }
-
 
 h3 {
     font-size: 20px;
@@ -28,6 +26,10 @@ h4 {
     text-align: center;
 }
 
+/* 「お気に入り」見出し */
+.stationlist-title {
+    background-image: url(../images/illustrations/headline/like_headline_mobile.png);
+}
 
 .title {
     text-align: center;
@@ -65,13 +67,17 @@ h4 {
     background-size: cover;
     vertical-align: middle;
     margin-left: 10px;
-
 }
 
 @media screen and (min-width:600px) {
     .attention {
         margin-top: 300px;
         margin-bottom: 30px;
+    }
+
+    /* 「お気に入り」見出し */
+    .stationlist-title {
+        background-image: url(../images/illustrations/headline/like_headline.png);
     }
 }
 
