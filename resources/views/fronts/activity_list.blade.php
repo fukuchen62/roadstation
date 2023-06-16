@@ -48,9 +48,9 @@
                     <h4 class="headline text">＜体験できる道の駅＞</h4>
 
                     <ul class="roadstation-frame">
-                        <li class="station-name">
+                        <li>
                             <a
-                                href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}">{{ $activity->roadstation->getName() }}</a>
+                                href="{{ url('station-detail') }}?id={{ $activity->roadStation->getId() }}" class="station-name name">{{ $activity->roadstation->getName() }}</a>
                         </li>
                     </ul>
 
