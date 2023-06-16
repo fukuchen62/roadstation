@@ -2,12 +2,19 @@
 
 
 h2 {
-    background-image: url(../images/illustrations/headline/station_list_headline_mobile.png);
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px;
     margin-bottom: 60px;
     background-size: contain;
+}
+
+/* 「お気に入り」見出し */
+.stationlist-title {
+    background-image: url(../images/illustrations/headline/like_headline_mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
 }
 
 .station-titlebox {
@@ -88,12 +95,9 @@ dt {
 .stationlist-title {
     width: 100%;
     text-align: center;
-    background-position: center;
-    background-repeat: no-repeat;
     color: #B45A27;
     /* display: inline-block; */
     margin: 0 auto;
-    padding: 20px;
 }
 
 .east {
@@ -168,12 +172,13 @@ dd img {
 
 @media screen and (min-width:601px) {
     h2 {
-        background-image: url(../images/illustrations/headline/station_list_headline.png);
-        background-position: center;
-        background-repeat: no-repeat;
         padding: 60px;
         margin-bottom: 60px;
         background-size: contain;
+    }
+
+    .stationlist-title {
+        background-image: url(../images/illustrations/headline/like_headline.png);
     }
 
 }
@@ -181,8 +186,6 @@ dd img {
 .stationlist-title {
     text-align: center;
     margin-bottom: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: #B45A27;
     text-align: center;
     display: inline-block;
@@ -206,12 +209,9 @@ dd img {
     h2 {
         color: #B45A27;
         margin: 0 auto;
-        background-image: url(../images/illustrations/headline/station_list_headline.png);
         background-position: center;
         background-repeat: no-repeat;
         margin-bottom: 60px;
-
-
     }
 
 
@@ -232,32 +232,19 @@ dd img {
 }
 
 
-
-
-
-
 @media screen and (min-width:901px) {
 
     h2 {
         color: #B45A27;
         margin: 0 auto;
-        background-image: url(../images/illustrations/headline/station_list_headline.png);
-        background-position: center;
-        background-repeat: no-repeat;
         margin-bottom: 60px;
-
-
     }
-
-
 
 
     .stationlist-title {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        background-size: cover;
-        background-repeat: no-repeat;
         color: #B45A27;
         text-align: center;
         padding: 60px;
