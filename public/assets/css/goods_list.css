@@ -204,12 +204,14 @@ h4 {
 }
 
 .roadstation-frame {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
     gap: 10px;
     text-align: center;
     margin-bottom: 30px;
-    justify-items: center;
+    justify-items: center; */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -225,29 +227,25 @@ h4 {
 } */
 
 
-
 .roadstation-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    width: 195px;
-    /* margin: 0 auto; */
-    padding: 18px 11px;
+    /* width: 195px; */
+    margin: 10px 20px;
+    padding: 4px 10px;
     border: none;
     border-radius: 25px;
     background-color: #a7d28d;
     color: #fff;
     font-weight: 600;
     font-size: 1em;
-    margin-bottom: 10px;
-    margin-top: 15px;
-
 }
 
 .roadstation-name::before {
     position: absolute;
-    right: calc(2em + -15.5px);
+    right: calc(2em + -9px);
     transform: translateX(50%);
     width: 25px;
     height: 25px;
@@ -258,12 +256,14 @@ h4 {
 
 .roadstation-name::after {
     transform: rotate(45deg);
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     margin-left: 10px;
+    margin-right: 10px;
     border-top: 3px solid #a7d28d;
     border-right: 3px solid #a7d28d;
     content: '';
+
 }
 
 .roadstation-name:hover {
@@ -273,7 +273,7 @@ h4 {
 
 .name {
     width: 100%;
-    padding-top: 15px;
+    padding: 15px;
 }
 
 .blog-btn {
@@ -496,10 +496,10 @@ h4 {
 
     .roadstation-frame {
 
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(5, minmax(135px, 1fr));
         gap: 25px;
-        text-align: center;
+        text-align: center; */
     }
 
 
