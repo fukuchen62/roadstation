@@ -31,6 +31,7 @@ section {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
 /* キービジュアル */
@@ -428,6 +429,9 @@ imgcontent-wrapper .heading {
     position: relative;
     padding: 60px 20px;
     margin-bottom: 150px;
+
+    /* 重ね順の調整 */
+    z-index: -999;
 }
 
 /* モバイル版：車 */
