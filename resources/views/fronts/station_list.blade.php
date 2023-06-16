@@ -95,6 +95,7 @@
                     </dl>
                     <div class="factory">
                         <dl>
+                            <dt>設備：</dt>
                             <dd>
                                 <img title="宿泊施設" src="{{ asset('assets/images/icon/accommodation_icon' . $road->accommodation_icon . '.svg') }}" alt="宿泊施設">
                                 <img title="ATM" src="{{ asset('assets/images/icon/atm_icon' . $road->atm_icon . '.svg') }}" alt="設備ATM">
