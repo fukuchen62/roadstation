@@ -10,8 +10,9 @@ h2 {
     margin-bottom: 30px;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 60px;
     color: #B45A27;
+    background-image: url(../images/illustrations/headline/like_headline.png);
 }
 
 
@@ -50,8 +51,6 @@ h4 {
     background-size: cover;
     vertical-align: middle;
     margin-right: 10px;
-
-
 }
 
 .title::after {

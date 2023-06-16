@@ -22,11 +22,11 @@ h2 {
 }
 
 h3 {
-    font-size: 1.7rem;
-    padding: 1rem 0;
+    /* font-size: 1.7rem;
+    padding: 1rem 0; */
     /* padding: 20px 20px; */
     /* background-color: #ccc; */
-    color: #B45A27;
+    /* color: #B45A27; */
 }
 
 p {
@@ -42,21 +42,31 @@ dl {
     text-align: start;
 }
 
+/* エリア選択ボタン */
+.area {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
 /* ボタン */
 .area-btn {
+    display: inline-block;
     background-color: #A7D28D;
     box-shadow: 0px 5px 0px 0 #70b27f;
     border-radius: 50px;
-    padding: 10px 10px;
+    padding: 20px 25px;
     font-size: 1.1rem;
     white-space: nowrap;
+    margin-top: 20px;
 }
 
 /* カードの押し込み */
 .area-btn:hover {
     position: relative;
     top: 5px;
-    left: 5px;
     box-shadow: none;
 }
 
@@ -91,19 +101,11 @@ dl {
     padding: 30px;
 }
 
-
-.area {
-    display: flex;
-    /* gap: 40px; */
-    margin: 0 auto;
-    /* padding: 80px; */
-    justify-content: space-evenly;
-}
-
-.area>h3 {
-    display: inline-block;
-    /* padding: 20px 30px; */
-    border-radius: 20px;
+/* 詳細検索ボタン */
+.detail-btn {
+    background-color: #f8ea6e;
+    box-shadow: 0px 5px 0px 0 #dba45c;
+    padding: 20px 40px;
 }
 
 dl {
@@ -194,8 +196,6 @@ dl {
     margin: 60px auto;
 }
 
-
-
 @media screen and (min-width:601px) {
 
     .district {
@@ -212,16 +212,20 @@ dl {
         margin-bottom: 60px;
         padding: 60px;
         background-size: contain;
-
-
     }
 
-
+    .area {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
 
     .area-btn {
-        padding: 20px 30px;
-        border-radius: 30px;
-        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    .detail-btn {
+        padding: 20px 20px;
     }
 }
 
@@ -250,22 +254,6 @@ dl {
         padding: 60px;
 
 
-    }
-
-
-    /* カードの設定 */
-
-
-    .area {
-        margin-top: 40px;
-        gap: 5%;
-        justify-content: center;
-    }
-
-    .area>h3 {
-        display: inline-block;
-        padding: 20px 30px;
-        border-radius: 50px;
     }
 
 }
