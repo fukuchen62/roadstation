@@ -668,7 +668,6 @@ imgcontent-wrapper .heading {
     }
 
 
-
     .sp-btn {
         display: inline-block;
         background-color: #fff;
@@ -730,7 +729,6 @@ imgcontent-wrapper .heading {
         justify-content: center;
         margin-bottom: 50px;
         text-align: center;
-
     }
 
     .goods {
@@ -878,6 +876,25 @@ imgcontent-wrapper .heading {
     }
 }
 
+@media screen and (min-width: 901px) {
+    .goods-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .activity-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        text-align: center;
+
+    }
+}
 
 @media screen and (min-width:901px) {
 
