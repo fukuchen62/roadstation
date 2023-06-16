@@ -1168,5 +1168,15 @@ imgcontent-wrapper .heading {
         justify-items: center;
     }
 
+    .blog-btn img {
+        max-width: 700px;
+        height: auto;
+        object-fit: cover;
+
+    }
+
+    .blog-btn a:hover {
+        opacity: 0.7;
+    }
 
 }
