@@ -17,7 +17,7 @@ h2 {
     background-position: center;
     color: #B45A27;
     margin: 0 auto;
-    background-image: url(../images/illustrations/headline/station_area_headline_mobile.png);
+    background-image: url(../images/illustrations/headline/station_detail_header_mobile.png);
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px;
@@ -206,7 +206,7 @@ form {
         background-position: center;
         color: #B45A27;
         margin: 0 auto;
-        background-image: url(../images/illustrations/headline/station_area_headline.png);
+        background-image: url(../images/illustrations/headline/station_detail_headline.png);
         background-position: center;
         background-repeat: no-repeat;
         margin-bottom: 60px;
@@ -254,7 +254,7 @@ form {
         background-position: center;
         color: #B45A27;
         margin: 0 auto;
-        background-image: url(../images/illustrations/headline/station_area_headline.png);
+        background-image: url(../images/illustrations/headline/station_detail_headline.png);
         background-position: center;
         background-repeat: no-repeat;
         margin-bottom: 60px;
