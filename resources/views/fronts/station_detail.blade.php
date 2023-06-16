@@ -56,14 +56,14 @@
                 <!-- 画像と文字を重ねる。CSS -->
                 {{-- タイトル --}}
                 <div class="flex f-width">
-                    <img src="{{ asset('assets/images/illustrations/tanuki-food4.png') }}" width="125" height="100"
-                        alt="美味しいすだち" class="none">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food4.png') }}" width="125" height="100"
+                        alt="美味しいすだち" class="none"> --}}
                     <div class="center overlap ">
-                        <img src="{{ asset('assets/images/h3-orange.png') }}" width="214" height="137" alt="">
+                        {{-- <img src="{{ asset('assets/images/h3-orange.png') }}" width="214" height="137" alt=""> --}}
                         <h3 class="center width absolute">農産物</h3>
                     </div>
-                    <img src="{{ asset('assets/images/illustrations/tanuki-food.png') }}" width="141" height="140"
-                        alt="道の駅のさつまいもを食べるたぬき" class="sideways sideways-off">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food.png') }}" width="141" height="140"
+                        alt="道の駅のさつまいもを食べるたぬき" class="sideways sideways-off"> --}}
                 </div>
                 @php
                     $count = 0;
@@ -107,15 +107,15 @@
         @if ($fish->isNotEmpty())
             <section class="width">
                 {{-- タイトル --}}
-                <div class="flex f-width">
+                {{-- <div class="flex f-width">
                     <img src="{{ asset('assets/images/illustrations/tanuki-food5.png') }}" width="125" height="125"
-                        alt="美味しいわかめ" class="none">
+                        alt="美味しいわかめ" class="none"> --}}
                     <div class="center overlap">
-                        <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137" alt="道の駅のお土産">
+                        {{-- <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137" alt="道の駅のお土産"> --}}
                         <h3 class="center width">水産物</h3>
                     </div>
-                    <img src="{{ asset('assets/images/illustrations/tanuki-food2.png') }}" width="141" height="140"
-                        alt="道の駅の魚を食べるたぬき" class="sideways sideways-off">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food2.png') }}" width="141" height="140"
+                        alt="道の駅の魚を食べるたぬき" class="sideways sideways-off"> --}}
                 </div>
 
                 @php
@@ -167,15 +167,15 @@
             <section class="width">
                 {{-- タイトル --}}
                 <div class="flex f-width">
-                    <img src="{{ asset('assets/images/illustrations/tanuki-food6.png') }}" width="118" height="114"
-                        alt="きれいな藍染" class="none">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food6.png') }}" width="118" height="114"
+                        alt="きれいな藍染" class="none"> --}}
                     <div class="center overlap ">
                         <img src="{{ asset('assets/images/h3-green.png') }}" width="214" height="137"
                             alt="道の駅のお土産">
                         <h3 class="center width">工芸品</h3>
                     </div>
-                    <img src="{{ asset('assets/images/illustrations/tanuki-food3.png') }}" width="141" height="140"
-                        alt="道の駅で買ったお椀でご飯を食べるたぬき" class="sideways sideways-off">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food3.png') }}" width="141" height="140"
+                        alt="道の駅で買ったお椀でご飯を食べるたぬき" class="sideways sideways-off"> --}}
                 </div>
 
                 @php
@@ -223,15 +223,15 @@
                 <!-- 画像と文字を重ねる。CSS -->
                 {{-- タイトル --}}
                 <div class="flex f-width">
-                    <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130"
-                        height="128" alt="美味しい飲み物" class="none">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-gourmet2.png') }}" width="130"
+                        height="128" alt="美味しい飲み物" class="none"> --}}
                     <div class="center overlap ">
-                        <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137"
-                            alt="">
+                        {{-- <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137"
+                            alt=""> --}}
                         <h3 class="center width absolute">グルメ</h3>
                     </div>
-                    <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145"
-                        height="126" alt="道の駅のソフトクリームを食べるたぬき" class="sideways sideways-off">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" width="145"
+                        height="126" alt="道の駅のソフトクリームを食べるたぬき" class="sideways sideways-off"> --}}
                 </div>
 
                 @php
@@ -277,15 +277,15 @@
             <section class="width">
                 {{-- タイトル --}}
                 <div class="flex f-width">
-                    <img src="{{ asset('assets/images/illustrations/tanuki-gift2.png') }}" width="150" height="135"
-                        alt="お土産を運ぶたぬき" class="none">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-gift2.png') }}" width="150" height="135"
+                        alt="お土産を運ぶたぬき" class="none"> --}}
                     <div class="center overlap ">
-                        <img src="{{ asset('assets/images/h3-green.png') }}" width="214" height="137"
-                            alt="道の駅のお土産">
+                        {{-- <img src="{{ asset('assets/images/h3-green.png') }}" width="214" height="137"
+                            alt="道の駅のお土産"> --}}
                         <h3 class="center width">その他</h3>
                     </div>
-                    <img src="{{ asset('assets/images/illustrations/tanuki-gift.png') }}" width="150" height="150"
-                        alt="美味しいお土産" class="sideways sideways-off">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-gift.png') }}" width="150" height="150"
+                        alt="美味しいお土産" class="sideways sideways-off"> --}}
                 </div>
 
                 @php
@@ -331,15 +331,15 @@
             <section class="width">
                 {{-- タイトル --}}
                 <div class="flex f-width">
-                    <img src="{{ asset('assets/images/illustrations/tanuki-activity2.png') }}" width="177"
-                        height="135" alt="DMV" class="none">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-activity2.png') }}" width="177"
+                        height="135" alt="DMV" class="none"> --}}
                     <div class="center overlap">
-                        <img src="{{ asset('assets/images/h3-orange.png') }}" width="191" height="111"
-                            alt="">
+                        {{-- <img src="{{ asset('assets/images/h3-orange.png') }}" width="191" height="111"
+                            alt=""> --}}
                         <h3 class="center width">体験</h3>
                     </div>
-                    <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" width="177"
-                        height="135" alt="DMV" class="sideways2 sideways-off">
+                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" width="177"
+                        height="135" alt="DMV" class="sideways2 sideways-off"> --}}
                 </div>
                 <section>
                     <img src="{{ asset('/storage/images/' . $activity->picture1) }}" class="activity  frameborder"
