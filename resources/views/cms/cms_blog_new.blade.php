@@ -55,11 +55,14 @@
                 <th> <span>*</span> ユーザーネーム: </th>
                 {{-- <td><input type="text" name="user_name" required></td> --}}
                 <td>
-                    <select name="user_id">
-                        @foreach ($users as $user)
+                    {{-- <select name="user_id"> --}}
+                    {{-- @foreach ($users as $user)
                             <option value="{{ $user->id }}" selected>{{ $user->name }}</option>
-                        @endforeach
-                    </select>
+                        @endforeach --}}
+                    {{-- </select> --}}
+
+                    <input type="text" name="user_name" required>
+
                 </td>
             </tr>
             <tr>
