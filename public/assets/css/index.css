@@ -57,6 +57,13 @@ section {
     height: 100px;
 }
 
+/* ヘッダー背景 */
+.header-bg {
+    position: absolute;
+
+
+}
+
 /* PC版：ナビゲーションメニューの固定 */
 .fixed {
     position: fixed;
