@@ -126,7 +126,7 @@ h4 {
     border: solid 3px #A7D28D;
     border-radius: 20px;
     padding: 30px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -270,10 +270,11 @@ h4 {
     opacity: 0.7;
 }
 
-/*
+
 .name {
+    width: 100%;
     padding-top: 15px;
-} */
+}
 
 .blog-btn {
     text-align: center;
@@ -408,6 +409,7 @@ h4 {
     } */
 
     .item-text-group {
+        margin: 0 20px;
         flex-direction: column;
     }
 
@@ -436,8 +438,6 @@ h4 {
 
     .roadstation-name {
         margin-left: 10px;
-
-
     }
 
     .conditions-text {
@@ -445,7 +445,7 @@ h4 {
     }
 
     .headline-name-comment {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
 
