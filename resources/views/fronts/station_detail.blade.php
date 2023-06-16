@@ -170,8 +170,8 @@
                     {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food6.png') }}" width="118" height="114"
                         alt="きれいな藍染" class="none"> --}}
                     <div class="center overlap ">
-                        <img src="{{ asset('assets/images/h3-green.png') }}" width="214" height="137"
-                            alt="道の駅のお土産">
+                        {{-- <img src="{{ asset('assets/images/h3-green.png') }}" width="214" height="137"
+                            alt="道の駅のお土産"> --}}
                         <h3 class="center width">工芸品</h3>
                     </div>
                     {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food3.png') }}" width="141" height="140"
