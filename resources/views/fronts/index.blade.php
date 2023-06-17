@@ -113,7 +113,8 @@
     <!-- 体験 -->
     <div class="section-title02">
         <!-- たぬみちのイラスト -->
-        <div class="headline-anime02"><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="300px" alt="イラスト"></div>
+        <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
+        </div>
 
         <h2 class="bomn">こんなんやってみ！</h2>
     </div>
