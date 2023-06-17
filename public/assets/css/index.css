@@ -8,7 +8,7 @@ body {
 
 /* 基本情報 */
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h3 {
@@ -710,11 +710,6 @@ imgcontent-wrapper .heading {
     content: '';
 } */
 
-/* section-titleの設定（仮）ここまで */
-
-.footer-line {
-    width: 100%;
-}
 
 @media screen and (min-width:601px) {
 

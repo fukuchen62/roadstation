@@ -177,4 +177,6 @@
         </ul>
     </nav>
 
+    <!-- ヘッダー背景 -->
+    <img class="header-bg" src="{{ asset('assets/images/header/header_bg.png') }}" alt="ヘッダー背景">
 </header>
