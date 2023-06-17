@@ -464,7 +464,7 @@
             @endphp
 
             @if (in_array($station->id, $cookielist))
-                <a class="blog-btn center" href="{{ route('cookie', ['id' => $station->id]) }}">お気に入りに登録済み</a>
+                <a class="blog-btn_color center" href="{{ route('cookie', ['id' => $station->id]) }}">お気に入りに登録済み</a>
             @else
                 <p class="
         favorite-text"><strong><span class="yellow">★</span>お気に入りを押したらお気に入りページに登録されます！</strong>
@@ -480,5 +480,6 @@
 
 {{-- 該当ページ専用JS --}}
 @section('pageJs2')
+    <script src="{{ asset('assets/js/station.js') }}"></script>
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
 @endsection
