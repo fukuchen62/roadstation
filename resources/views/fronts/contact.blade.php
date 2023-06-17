@@ -57,7 +57,7 @@
                 </tr>
 
                 <tr>
-                    <th>お問い合わせ内容</th>
+                    <th class="content">お問い合わせ内容</th>
                     <td>
                         <textarea name="content">{{ old('content') }}</textarea>
                     </td>

@@ -26,8 +26,8 @@ table th {
     width: 100%;
     text-align: center;
     font-weight: bold;
-    background-color: #1db73e;
-    color: aliceblue;
+    background-color: #d9e6c0;
+    color: #91471d;
     border: 1px solid #fff;
 }
 
@@ -39,6 +39,7 @@ table td {
 
 table td {
     display: block;
+    padding-top: 10px;
     width: 100%;
 }
 
@@ -78,6 +79,12 @@ button {
         width: 70%;
     }
 
+    table th,
+    table td {
+        padding: 20px;
+        vertical-align: middle;
+    }
+
     table tr {
         width: 100%;
         display: flex;
@@ -86,10 +93,14 @@ button {
     }
 
     table th {
-        display: inline;
         width: 50%;
-        vertical-align: middle;
+        padding: 30px 20px;
     }
+
+    .content {
+        padding: 100px 20px;
+    }
+
 }
 
 @media screen and (min-width:1001px) {
