@@ -824,7 +824,7 @@ imgcontent-wrapper .heading {
 
     /* ブログカードの設定 */
     .blog-main {
-        width: 75%;
+        width: 100%;
         margin: 0 auto;
     }
 
