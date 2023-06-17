@@ -304,12 +304,10 @@ p {
     left: -20px; */
 /* } */
 
-/* .blog-btn-center:hover { */
-/* position: relative;
-    top: 5px;
-    box-shadow: none; */
-/* opacity: 0.7; */
-/* } */
+.blog-btn:hover {
+
+    opacity: 0.7;
+}
 
 
 
@@ -432,9 +430,7 @@ dt {
 }
 
 .roadstation-name :hover {
-    /* position: relative;
-    top: 5px;
-    box-shadow: none; */
+
     opacity: 0.7;
 }
 
