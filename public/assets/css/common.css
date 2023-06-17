@@ -43,6 +43,7 @@ h3 {
 }
 
 p {
+    text-align: left;
     line-height: 1.5rem;
 }
 
@@ -558,7 +559,7 @@ footer {
         text-align: center;
         display: flex;
         justify-content: center;
-        /* background-color: #fffbf1; */
+        background-color: #fffbf1;
 
 
         z-index: 999;
