@@ -336,36 +336,36 @@
                 <tr>
                     <td>
                         @if (isset($guide_icon) && $guide_icon == 1)
-                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1"
-                                    checked>観光案内</label>
+                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1" checked>
+                                観光案内</label>
                         @else
-                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1">観光案内</label>
+                            <label><input id="guide_icon" type="checkbox" name="guide_icon" value="1"> 観光案内</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($shop_icon) && $shop_icon == 1)
-                            <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1"
-                                    checked>ショップ</label>
+                            <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1" checked>
+                                ショップ</label>
                         @else
-                            <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1">ショップ</label>
+                            <label><input id="shop_icon" type="checkbox" name="shop_icon" value="1"> ショップ</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($lightmeal_icon) && $lightmeal_icon == 1)
                             <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon" value="1"
-                                    checked>軽食・喫茶</label>
+                                    checked> 軽食・喫茶</label>
                         @else
-                            <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon"
-                                    value="1">軽食・喫茶</label>
+                            <label><input id="lightmeal_icon" type="checkbox" name="lightmeal_icon" value="1">
+                                軽食・喫茶</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($restaurant_icon) && $restaurant_icon == 1)
                             <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon" value="1"
-                                    checked>レストラン</label>
+                                    checked> レストラン</label>
                         @else
-                            <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon"
-                                    value="1">レストラン</label>
+                            <label><input id="restaurant_icon" type="checkbox" name="restaurant_icon" value="1">
+                                レストラン</label>
                         @endif
                     </td>
                 </tr>
@@ -373,35 +373,35 @@
                     <td>
                         @if (isset($experience_icon) && $experience_icon == 1)
                             <label><input id="experience_icon" type="checkbox" name="experience_icon" value="1"
-                                    checked>体験施設</label>
+                                    checked> 体験施設</label>
                         @else
-                            <label><input id="experience_icon" type="checkbox" name="experience_icon"
-                                    value="1">体験施設</label>
+                            <label><input id="experience_icon" type="checkbox" name="experience_icon" value="1">
+                                体験施設</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($disability_icon) && $disability_icon == 1)
                             <label><input id="disability_icon" type="checkbox" name="disability_icon" value="1"
-                                    checked>身障者トイレ</label>
+                                    checked> 身障者トイレ</label>
                         @else
-                            <label><input id="disability_icon" type="checkbox" name="disability_icon"
-                                    value="1">身障者トイレ</label>
+                            <label><input id="disability_icon" type="checkbox" name="disability_icon" value="1">
+                                身障者トイレ</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($park_icon) && $park_icon == 1)
-                            <label><input id="park_icon" type="checkbox" name="park_icon" value="1"
-                                    checked>公園</label>
+                            <label><input id="park_icon" type="checkbox" name="park_icon" value="1" checked>
+                                公園</label>
                         @else
-                            <label><input id="park_icon" type="checkbox" name="park_icon" value="1">公園</label>
+                            <label><input id="park_icon" type="checkbox" name="park_icon" value="1"> 公園</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($bed_icon) && $bed_icon == 1)
-                            <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1"
-                                    checked>ベビーベッド</label>
+                            <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1" checked>
+                                ベビーベッド</label>
                         @else
-                            <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1">ベビーベッド</label>
+                            <label><input id="bed_icon" type="checkbox" name="bed_icon" value="1"> ベビーベッド</label>
                         @endif
                     </td>
                 </tr>
@@ -409,74 +409,74 @@
                     <td>
                         @if (isset($accommodation_icon) && $accommodation_icon == 1)
                             <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
-                                    value="1" checked>宿泊施設</label>
+                                    value="1" checked> 宿泊施設</label>
                         @else
                             <label><input id="accommodation_icon" type="checkbox" name="accommodation_icon"
-                                    value="1">宿泊施設</label>
+                                    value="1"> 宿泊施設</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($spa_icon) && $accommodation_icon == 1)
-                            <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1"
-                                    checked>温泉施設</label>
+                            <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1" checked>
+                                温泉施設</label>
                         @else
-                            <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1">温泉施設</label>
+                            <label><input id="spa_icon" type="checkbox" name="spa_icon" value="1"> 温泉施設</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($shower_icon) && $shower_icon == 1)
-                            <label><input id="shower_icon" type="checkbox" name="shower_icon" value="1"
-                                    checked>シャワー</label>
+                            <label><input id="shower_icon" type="checkbox" name="shower_icon" value="1" checked>
+                                シャワー</label>
                         @else
-                            <label><input id="shower_icon" type="checkbox" name="shower_icon"
-                                    value="1">シャワー</label>
+                            <label><input id="shower_icon" type="checkbox" name="shower_icon" value="1">
+                                シャワー</label>
                         @endif
                     </td>
                     <td>
                         @if (isset($observatory_icon) && $observatory_icon == 1)
                             <label><input id="observatory_icon" type="checkbox" name="observatory_icon" value="1"
-                                    checked>展望台</label>
+                                    checked> 展望台</label>
                         @else
-                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon"
-                                    value="1">展望台</label>
+                            <label><input id="observatory_icon" type="checkbox" name="observatory_icon" value="1">
+                                展望台</label>
                         @endif
                     </td>
                 </tr>
                 <tr>
                     <td>
                         @if (isset($ev_icon) && $ev_icon == 1)
-                            <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1"
-                                    checked>EV充電施設</label>
+                            <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1" checked>
+                                EV充電施設</label>
                         @else
-                            <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1">EV充電施設</label>
+                            <label><input id="ev_icon" type="checkbox" name="ev_icon" value="1"> EV充電施設</label>
                         @endif
 
                     </td>
                     <td>
                         @if (isset($lan_icon) && $lan_icon == 1)
-                            <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1"
-                                    checked>無線LAN</label>
+                            <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1" checked>
+                                無線LAN</label>
                         @else
-                            <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1">無線LAN</label>
+                            <label><input id="lan_icon" type="checkbox" name="lan_icon" value="1"> 無線LAN</label>
                         @endif
 
                     </td>
 
                     <td>
                         @if (isset($atm_icon) && $atm_icon == 1)
-                            <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1"
-                                    checked>ATM</label>
+                            <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1" checked>
+                                ATM</label>
                         @else
-                            <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1">ATM</label>
+                            <label><input id="atm_icon" type="checkbox" name="atm_icon" value="1"> ATM</label>
                         @endif
 
                     <td>
                         @if (isset($museum_icon) && $museum_icon == 1)
-                            <label><input id="museum_icon" type="checkbox" name="museum_icon" value="1"
-                                    checked>美術館・博物館</label>
+                            <label><input id="museum_icon" type="checkbox" name="museum_icon" value="1" checked>
+                                美術館・博物館</label>
                         @else
-                            <label><input id="museum_icon" type="checkbox" name="museum_icon"
-                                    value="1">美術館・博物館</label>
+                            <label><input id="museum_icon" type="checkbox" name="museum_icon" value="1">
+                                美術館・博物館</label>
                         @endif
 
                     </td>
