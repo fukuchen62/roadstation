@@ -39,14 +39,14 @@
                 <td><input type="text" name="goods_name" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 旬の月: 数字を|で区切って</th>
-                <td><input type="text" name="month" placeholder="1|2|a" required></td>
+                <th> 旬の月: 数字を|で区切って</th>
+                <td><input type="text" name="month" placeholder="1|2|a"></td>
             </tr>
 
             <tr>
-                <th> <span>*</span> 利用方法: </th>
+                <th>利用方法: </th>
                 <td>
-                    <textarea name="usage" cols="50" rows="5" required></textarea>
+                    <textarea name="usage" cols="50" rows="5"></textarea>
                 </td>
             </tr>
 

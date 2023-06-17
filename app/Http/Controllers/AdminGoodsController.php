@@ -176,7 +176,7 @@ class AdminGoodsController extends Controller
         unset($form['_token']);
 
         // インスタンスのuser_idプロパティにログイン中のユーザーIDを代入
-        $goods->user_id = $login_user->id;
+        // $goods->user_id = $login_user->id;
 
         // インスタンスを保存
         $goods->fill($form)->save();

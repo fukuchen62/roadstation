@@ -176,6 +176,9 @@
                     </li>
                 @endforeach
             </ul>
+            <div class="side-img">
+                <img src="{{asset('assets/images/illustrations/tanuki-activity.png')}}" alt="">
+            </div>
         </section>
     </div>
 @endsection
