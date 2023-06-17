@@ -141,6 +141,10 @@
                     <li></li>
                 @endforeach
             </ul>
+
+            <div class="side-img">
+                <img src="{{asset('assets/images/illustrations/tanuki-gourmet.png')}}" alt="">
+            </div>
         </section>
     </div>
 

@@ -1,10 +1,10 @@
 @extends('layouts.layout_front')
 
 {{-- タイトル --}}
-@section('title', 'ニュース一覧ページ | 徳島まるっと道の駅')
+@section('title', 'ニュース一覧')
 
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/news_list.css') }}">
 
     {{-- <style>
         .link {
@@ -80,7 +80,9 @@
                     <li></li>
                 @endforeach
             </ul>
-
+            <div class="side-img">
+                <img src="{{asset('assets/images/illustrations/tanuki-gourmet.png')}}" alt="">
+            </div>
         </section>
 
     </div>
