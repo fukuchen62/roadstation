@@ -536,6 +536,7 @@ imgcontent-wrapper .heading {
 /* こんなんあるで！ */
 /* 見出しのふきだし */
 .section-title01,
+.section-title02,
 .section-title03 {
     display: flex;
     justify-content: space-around;
@@ -561,21 +562,6 @@ imgcontent-wrapper .heading {
     transform: rotate(-5deg);
 }
 
-.section-title02::before {
-    content: "";
-    width: 50%;
-    height: 5px;
-    border: #ffb844 3px dotted;
-
-    /* 位置 */
-    position: absolute;
-    bottom: 100px;
-    left: 150px;
-
-    transform: rotate(-5deg);
-}
-
-
 .section-title01:after,
 .section-title03:after {
     content: "";
@@ -591,6 +577,21 @@ imgcontent-wrapper .heading {
     transform: rotate(5deg);
 }
 
+.section-title02::before {
+    content: "";
+    width: 50%;
+    height: 5px;
+    border: #ffb844 3px dotted;
+
+    /* 位置 */
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+
+    transform: rotate(5deg);
+}
+
+
 .section-title02:after {
     content: "";
     width: 50%;
@@ -600,9 +601,9 @@ imgcontent-wrapper .heading {
     /* 位置 */
     position: absolute;
     top: 100px;
-    left: 150px;
+    right: 150px;
 
-    transform: rotate(5deg);
+    transform: rotate(-5deg);
 }
 
 .tanumiti-01 {
