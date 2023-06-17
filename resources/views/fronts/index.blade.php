@@ -152,11 +152,12 @@
 <!-- ブログ -->
 <div class="section-title03">
     <!-- 車のイラスト -->
-    <div class="headline-anime01"><img src="{{ asset('assets/images/illustrations/tanuki-gift.png') }}" width="200px" alt=""></div>
+    <!-- <div class="headline-anime01"><img src="{{ asset('assets/images/illustrations/tanuki-gift.png') }}" width="200px" alt=""></div> -->
 
-    <!-- たぬみちのイラスト -->
-    <div class="headline-anime02"><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt=""></div>
     <h2 class="bomn">行ってきたんよ！</h2>
+    <!-- たぬみちのイラスト -->
+    <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt=""></div>
+
 </div>
 
 <div class="blog-main">
