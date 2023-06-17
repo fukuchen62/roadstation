@@ -534,33 +534,9 @@ imgcontent-wrapper .heading {
 }
 
 /* こんなんあるで！ */
+/* 見出しのふきだし */
 .section-title01,
 .section-title03 {
-    width: 100%;
-
-    /* 背景イラスト */
-    width: 700px;
-    /* background: url(../images/index/section_headline_01.png); */
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    /* フォントの設定 */
-    text-align: center;
-    font-weight: bold;
-    color: #8C5243;
-
-    /* 位置調整 */
-    position: relative;
-    padding: 60px 20px;
-    /* margin-bottom: 150px; */
-
-    /* 重ね順の調整 */
-    z-index: -999;
-}
-
-/* 見出しのふきだし */
-.section-title01 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -648,7 +624,7 @@ imgcontent-wrapper .heading {
     left: 10%;
 
     /* ぽよん */
-    animation: booboo 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards;
+    /* animation: booboo 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards; */
 }
 
 @keyframes booboo {
@@ -682,7 +658,7 @@ imgcontent-wrapper .heading {
     width: 60%;
 
     /* ぽよん */
-    animation: poyoyon 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards;
+    /* animation: poyoyon 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards; */
 }
 
 /* たぬみち */
