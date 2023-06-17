@@ -137,7 +137,7 @@ a:hover {
 
 .side {
     width: 100%;
-    height: 400px;
+    height: auto;
     background-color: #ffffff;
     box-shadow: 5px 5px 8px 0 #70b27f;
     border: groove 6px #A7D28D;
@@ -147,6 +147,23 @@ a:hover {
 
 }
 
+
+
+.side-img {
+    width: auto;
+    height: auto;
+    text-align: center;
+
+    object-position: center;
+    align-items: center;
+
+
+}
+
+.side img {
+    width: 50%;
+    height: 50%;
+}
 
 
 /* カテゴリー */

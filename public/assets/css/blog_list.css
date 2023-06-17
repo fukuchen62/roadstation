@@ -126,6 +126,13 @@ p {
 
 }
 
+.category-name img {
+    width: 300px;
+    height: 300px;
+
+
+}
+
 
 
 
@@ -138,8 +145,34 @@ p {
     color: #8c5243;
     /* padding: 20px 10px; */
     border-radius: 20px;
-    height: 400px;
+    height: auto;
+
+
+
 }
+
+/* .side-img {
+    text-align: center;
+    width: 43%;
+    height: auto;
+} */
+
+.side-img {
+    width: auto;
+    height: auto;
+    text-align: center;
+
+    object-position: center;
+    align-items: center;
+
+
+}
+
+.side img {
+    width: 50%;
+    height: 50%;
+}
+
 
 @media screen and (min-width:601px) {
     h2 {
@@ -150,6 +183,7 @@ p {
         margin-bottom: 60px;
         background-size: contain;
     }
+
 
 }
 
