@@ -463,6 +463,11 @@ imgcontent-wrapper .heading {
     margin-bottom: 20px;
 }
 
+/* ブログ全体を囲う要素 */
+.blog-main {
+    text-align: center;
+}
+
 /* カードの設定 */
 .blog-wrapper {
     width: 100%;
@@ -1145,6 +1150,13 @@ imgcontent-wrapper .heading {
 }
 
 @media screen and (min-width: 901px) {
+
+    /* ヘッダー背景 */
+    .header-bg {
+        position: absolute;
+        bottom: 10vh;
+    }
+
     .goods-wrapper {
         margin: 0 auto;
         width: 100%;
