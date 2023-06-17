@@ -1165,8 +1165,14 @@ imgcontent-wrapper .heading {
 
 @media screen and (min-width: 901px) {
 
+    /* PC「こんなんやってみ」を表示 */
     .pc-title {
         display: block;
+    }
+
+    /* モバイル「こんなんやってみ」を非表示 */
+    .mobile-title {
+        display: none;
     }
 
     h2 {
