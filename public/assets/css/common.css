@@ -234,8 +234,8 @@ svg {
 .scroll-top {
     /* ボタンを右下で固定位置にする */
     position: fixed;
-    bottom: 60px;
-    right: 60px;
+    bottom: 20px;
+    right: 20px;
     border-radius: 50%;
     cursor: pointer;
 
