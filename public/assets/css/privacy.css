@@ -14,13 +14,24 @@ section {
 }
 
 .title {
-    background-color: #2db458;
+    /* background-color: #2db458;
     display: inline-block;
     padding: 20px;
     border-radius: 999px;
     margin-bottom: 10px;
     font-weight: bold;
-    color: aliceblue;
+    color: aliceblue; */
+
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 60px;
+    padding: 60px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #B45A27;
+    background-image: url(../images/illustrations/headline/activity_headline.png);
 }
 
 .link {
