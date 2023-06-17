@@ -1,10 +1,20 @@
 @charset "utf-8";
 
 h2 {
-    font-weight: bold;
+    /* font-weight: bold;
     text-align: center;
     margin-top: 50px;
-    border-bottom: 2px solid #1db73e;
+    border-bottom: 2px solid #1db73e; */
+
+    /* font-weight: bold; */
+    text-align: center;
+    padding: 60px;
+    background-image: url(../images/illustrations/headline/blog_headline_mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    margin-bottom: 60px;
+
 }
 
 table {
@@ -79,6 +89,13 @@ button:hover {
 }
 
 @media screen and (min-width: 750px) {
+    h2 {
+        background-image: url(../images/illustrations/headline/blog_headline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px;
+        margin-bottom: 60px;
+    }
 
     table {
         width: 70%;

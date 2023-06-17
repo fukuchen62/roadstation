@@ -250,7 +250,7 @@ section {
 
 /* 徳島のエリアマップ */
 .map {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 
     /* 検索ボタンの絶対配置範囲 */
@@ -262,13 +262,15 @@ section {
 .tokusimamap {
     margin: 0 auto;
     max-width: 360px;
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
 
 /* マップ上のボタン */
-.map a {
+.map .east,
+.map .west,
+.map .south {
     font-size: 1.5rem;
     position: absolute;
     padding: 4%;
@@ -277,7 +279,9 @@ section {
     transition: 0.5s;
 }
 
-.map a:hover {
+.map .east:hover,
+.map .west:hover,
+.map .south:hover {
     transform: scale(1.1);
 }
 
@@ -1096,7 +1100,10 @@ imgcontent-wrapper .heading {
         margin-bottom: 150px;
         justify-content: center;
         text-align: center;
+    }
 
+    .map {
+        width: 85%;
     }
 }
 
