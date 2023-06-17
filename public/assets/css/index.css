@@ -534,7 +534,8 @@ imgcontent-wrapper .heading {
 }
 
 /* こんなんあるで！ */
-.section-title01 {
+.section-title01,
+.section-title03 {
     width: 100%;
 
     /* 背景イラスト */
@@ -560,46 +561,72 @@ imgcontent-wrapper .heading {
 
 /* 見出しのふきだし */
 .section-title01 {
-
     display: flex;
-    gap: 40px;
-
-    position: relative;
-    width: 1000px;
-    height: 100px;
-    background: #ff8871;
-    text-align: center;
+    justify-content: space-around;
     align-items: center;
-    color: #FFFFFF;
-    font-size: 3rem;
-    font-weight: bold;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    margin: 0 auto;
-    margin-bottom: 100px;
+    width: 100%;
+
+    /* 位置 */
+    position: relative;
 }
 
-.section-title01:after {
-    border: solid transparent;
-    content: '';
-    height: 0;
-    width: 0;
-    pointer-events: none;
+.section-title01::before,
+.section-title03::before {
+    content: "";
+    width: 50%;
+    height: 5px;
+    border: #ffb844 3px dotted;
+
+    /* 位置 */
     position: absolute;
-    border-color: rgba(255, 146, 157, 0);
-    border-top-width: 20px;
-    border-bottom-width: 20px;
-    border-left-width: 15px;
-    border-right-width: 15px;
-    margin-left: -15px;
-    border-top-color: #ff8871;
-    top: 100%;
-    left: 50%;
+    bottom: 100px;
+    left: 150px;
+
+    transform: rotate(-5deg);
 }
 
-.section-title01::before {
-    width: 150px;
-    /* background-image: url(../images/illustrations/tanumiti_gurumet.gif); */
+.section-title02::before {
+    content: "";
+    width: 50%;
+    height: 5px;
+    border: #ffb844 3px dotted;
+
+    /* 位置 */
+    position: absolute;
+    bottom: 100px;
+    left: 150px;
+
+    transform: rotate(-5deg);
+}
+
+
+.section-title01:after,
+.section-title03:after {
+    content: "";
+    width: 50%;
+    height: 5px;
+    border: #ffb844 3px solid;
+
+    /* 位置 */
+    position: absolute;
+    top: 100px;
+    left: 150px;
+
+    transform: rotate(5deg);
+}
+
+.section-title02:after {
+    content: "";
+    width: 50%;
+    height: 5px;
+    border: #ffb844 3px solid;
+
+    /* 位置 */
+    position: absolute;
+    top: 100px;
+    left: 150px;
+
+    transform: rotate(5deg);
 }
 
 .tanumiti-01 {
@@ -704,22 +731,6 @@ imgcontent-wrapper .heading {
 
 }
 
-/* 行ってきたんよ！ */
-.section-title03 {
-    /* 背景イラスト */
-    /* background: url(../images/index/section_headline_01.png); */
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    text-align: center;
-    font-weight: bold;
-    color: #8C5243;
-
-    position: relative;
-    padding: 60px 20px;
-}
-
 @media screen and (min-width:401px) {
 
     /* ブログカード */
@@ -735,6 +746,10 @@ imgcontent-wrapper .heading {
         background-image: url(../images/index/bg.png);
         background-position: center center;
         background-size: cover;
+    }
+
+    h2 {
+        font-size: 3rem;
     }
 
     .wrapper {
