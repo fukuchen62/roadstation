@@ -34,34 +34,35 @@
         @endif
 
         <table>
-            <tr>
-                <th>お名前</th>
-                <td>
-                    <input type="text" name="name" value="{{ old('name') }}">
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>お名前</th>
+                    <td>
+                        <input type="text" name="name" value="{{ old('name') }}">
+                    </td>
+                </tr>
 
-            <tr>
-                <th>メールアドレス</th>
-                <td>
-                    <input type="email" name="email" value="{{ old('email') }}">
-                </td>
-            </tr>
+                <tr>
+                    <th>メールアドレス</th>
+                    <td>
+                        <input type="email" name="email" value="{{ old('email') }}">
+                    </td>
+                </tr>
 
-            <tr>
-                <th>タイトル</th>
-                <td>
-                    <input type="text" name="title" value="{{ old('title') }}">
-                </td>
-            </tr>
+                <tr>
+                    <th>タイトル</th>
+                    <td>
+                        <input type="text" name="title" value="{{ old('title') }}">
+                    </td>
+                </tr>
 
-            <tr>
-                <th>お問い合わせ内容</th>
-                <td>
-                    <textarea name="content">{{ old('content') }}</textarea>
-                </td>
-            </tr>
-
+                <tr>
+                    <th>お問い合わせ内容</th>
+                    <td>
+                        <textarea name="content">{{ old('content') }}</textarea>
+                    </td>
+                </tr>
+            </tbody>
         </table>
 
         <div class="push">
