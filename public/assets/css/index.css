@@ -1060,8 +1060,8 @@ imgcontent-wrapper .heading {
     }
 
     .blog-btn {
-        width: 400px;
-        margin: 0 auto;
+        width: 100%;
+        text-align: center;
     }
 }
 
