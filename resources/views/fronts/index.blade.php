@@ -45,7 +45,9 @@
                         $ts = strtotime($news->created_at);
                     @endphp
                     <li>
-                        <a href="{{ route('newsdetail') }}?id={{ $news->id }}">{{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
+                        <a
+                            href="{{ url('news-detail') }}?id={{ $news->id }}&news_category_id={{ $news->news_category_id }}">
+                            {{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
                             {!! $news->title !!}</a>
                 </ul>
             @endforeach
