@@ -149,6 +149,7 @@ $(function () {
 
 
 // フッターガタゴトアニメ
+
 $(document).ready(function () {
     $('.demo_wrap').on('animationend', function () {
         if ($(this).attr('data-order') === 'left') {
