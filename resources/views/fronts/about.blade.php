@@ -4,7 +4,7 @@
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
-@section('title', 'このサイトについて')
+@section('title', 'このサイトについて | 徳島まるっと道の駅')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')

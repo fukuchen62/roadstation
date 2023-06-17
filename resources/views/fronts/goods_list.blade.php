@@ -4,13 +4,13 @@
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
-@section('title', '徳島まるっと道の駅')
+@section('title', '特産品一覧ページ | 徳島まるっと道の駅')
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/goods_list.css') }}">
 
-<style>
+    {{-- <style>
 
 .roadstation-frame{
     justify-content: space-between;
@@ -52,12 +52,11 @@
   content: "";
 }
 
-
 .station-name:hover {
     opacity: 0.7;
 }
 
-</style>
+</style> --}}
 
 @endsection
 
