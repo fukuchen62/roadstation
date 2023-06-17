@@ -29,9 +29,9 @@
             <!-- スライドショー -->
             <div class="slide-items">
 
-                <div><img src="{{ asset('/storage/images/' . $station->picture1) }}" alt=""></div>
-                <div><img src="{{ asset('/storage/images/' . $station->picture2) }}" alt=""></div>
-                <div><img src="{{ asset('/storage/images/' . $station->picture3) }}" alt=""></div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture1) }}" alt="道の駅写真1"></div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture2) }}" alt="道の駅写真2"></div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture3) }}" alt="道の駅写真3"></div>
 
             </div>
 
@@ -110,11 +110,11 @@
                 {{-- <div class="flex f-width">
                     <img src="{{ asset('assets/images/illustrations/tanuki-food5.png') }}" width="125" height="125"
                         alt="美味しいわかめ" class="none"> --}}
-                    <div class="center overlap">
-                        {{-- <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137" alt="道の駅のお土産"> --}}
-                        <h3 class="center width">水産物</h3>
-                    </div>
-                    {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food2.png') }}" width="141" height="140"
+                <div class="center overlap">
+                    {{-- <img src="{{ asset('assets/images/h3-red.png') }}" width="214" height="137" alt="道の駅のお土産"> --}}
+                    <h3 class="center width">水産物</h3>
+                </div>
+                {{-- <img src="{{ asset('assets/images/illustrations/tanuki-food2.png') }}" width="141" height="140"
                         alt="道の駅の魚を食べるたぬき" class="sideways sideways-off"> --}}
                 </div>
 
@@ -448,36 +448,32 @@
                         </div>
                     </dd>
                 </dl>
-
-                {{-- お気に入り登録 --}}
-                @php
-                    $cookie = Cookie::get('id');
-                    $cookielist = explode(',', $cookie);
-                @endphp
-
-                @if (in_array($station->id, $cookielist))
-                        <a href="{{ route('cookie', ['id' => $station->id]) }}" class="blog-btn center">
-                            お気に入りに登録済み
-                        </a>
-                @else
-                    <p>
-                        <strong>
-                            <span class="yellow">★</span>
-                            お気に入りを押したらお気に入りページに登録されます！
-                        </strong>
-                    </p>
-
-                        <a href="{{ route('cookie', ['id' => $station->id]) }}" class="blog-btn center">
-                            お気に入りに登録する
-                        </a>
-                @endif
-
             </div>
 
             <!-- googlemap -->
             {!! $station->map_url !!}
 
         </section>
+
+        <div class="favorite">
+
+            {{-- お気に入り登録 --}}
+            @php
+                $cookie = Cookie::get('id');
+                $cookielist = explode(',', $cookie);
+            @endphp
+
+            @if (in_array($station->id, $cookielist))
+                <p class="blog-btn center"><a href="{{ route('cookie', ['id' => $station->id]) }}">お気に入りに登録済み</a></p>
+            @else
+                <p class="
+        favorite-text"><strong><span class="yellow">★</span>お気に入りを押したらお気に入りページに登録されます！</strong>
+                </p>
+
+                <p class="blog-btn center"><a href="{{ route('cookie', ['id' => $station->id]) }}">★お気に入りに登録する</a></p>
+            @endif
+
+        </div>
     @endforeach
 
 @endsection
