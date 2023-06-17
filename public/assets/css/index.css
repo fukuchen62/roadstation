@@ -534,76 +534,72 @@ imgcontent-wrapper .heading {
 }
 
 /* こんなんあるで！ */
-/* 見出しのふきだし */
 .section-title01,
 .section-title02,
 .section-title03 {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 40px;
     align-items: center;
     width: 100%;
 
     /* 位置 */
     position: relative;
+
+    padding: 60px 20px;
 }
 
+/* デスクトップ：見出し配置 */
 .section-title01::before,
 .section-title03::before {
     content: "";
-    width: 50%;
+    width: 100%;
     height: 5px;
     border: #ffb844 3px dotted;
 
     /* 位置 */
     position: absolute;
-    bottom: 100px;
-    left: 150px;
-
-    transform: rotate(-5deg);
+    bottom: 280px;
+    left: 0;
 }
 
 .section-title01:after,
 .section-title03:after {
     content: "";
-    width: 50%;
+    width: 100%;
     height: 5px;
     border: #ffb844 3px solid;
 
     /* 位置 */
     position: absolute;
-    top: 100px;
-    left: 150px;
-
-    transform: rotate(5deg);
+    top: 30px;
+    left: 0;
 }
 
 .section-title02::before {
     content: "";
-    width: 50%;
+    width: 100%;
     height: 5px;
     border: #ffb844 3px dotted;
 
     /* 位置 */
     position: absolute;
-    bottom: 100px;
-    right: 150px;
-
-    transform: rotate(5deg);
+    bottom: 280px;
+    right: 0;
 }
 
 
 .section-title02:after {
     content: "";
-    width: 50%;
+    width: 100%;
     height: 5px;
     border: #ffb844 3px solid;
 
     /* 位置 */
     position: absolute;
-    top: 100px;
-    right: 150px;
-
-    transform: rotate(-5deg);
+    top: 30px;
+    right: 0;
 }
 
 .tanumiti-01 {
@@ -701,7 +697,6 @@ imgcontent-wrapper .heading {
     background-color: ccc;
 
     position: relative;
-    padding: 60px 20px;
     /* 背景のたぬみち */
     text-align: center;
     /* margin-bottom: 150px; */
@@ -725,10 +720,6 @@ imgcontent-wrapper .heading {
         background-size: cover;
     }
 
-    h2 {
-        font-size: 3rem;
-    }
-
     .wrapper {
         padding: 0;
     }
@@ -744,6 +735,7 @@ imgcontent-wrapper .heading {
     .section-title01,
     .section-title02,
     .section-title03 {
+        flex-direction: row;
         padding: 100px;
     }
 
@@ -935,6 +927,67 @@ imgcontent-wrapper .heading {
         }
     }
 
+
+    /* デスクトップ：見出し配置 */
+    .section-title01::before,
+    .section-title03::before {
+        content: "";
+        width: 40%;
+        height: 5px;
+        border: #ffb844 3px dotted;
+
+        /* 位置 */
+        position: absolute;
+        bottom: 100px;
+        left: 150px;
+
+        transform: rotate(-5deg);
+    }
+
+    .section-title01:after,
+    .section-title03:after {
+        content: "";
+        width: 40%;
+        height: 5px;
+        border: #ffb844 3px solid;
+
+        /* 位置 */
+        position: absolute;
+        top: 100px;
+        left: 150px;
+
+        transform: rotate(5deg);
+    }
+
+    .section-title02::before {
+        content: "";
+        width: 40%;
+        height: 5px;
+        border: #ffb844 3px dotted;
+
+        /* 位置 */
+        position: absolute;
+        bottom: 100px;
+        right: 150px;
+
+        transform: rotate(5deg);
+    }
+
+
+    .section-title02:after {
+        content: "";
+        width: 40%;
+        height: 5px;
+        border: #ffb844 3px solid;
+
+        /* 位置 */
+        position: absolute;
+        top: 100px;
+        right: 150px;
+
+        transform: rotate(-5deg);
+    }
+
     .goods-wrapper {
         margin: 0 auto;
         width: 100%;
@@ -1100,6 +1153,10 @@ imgcontent-wrapper .heading {
 }
 
 @media screen and (min-width: 901px) {
+
+    h2 {
+        font-size: 3rem;
+    }
 
     /* ヘッダー背景 */
     .header-bg {
