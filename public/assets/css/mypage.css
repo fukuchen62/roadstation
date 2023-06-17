@@ -193,10 +193,12 @@ dd img {
 
 .no_favorite {
     height: auto;
+    margin: 0 auto;
 }
 
 .no_favorite p {
     padding: 15px;
+    text-align: center;
 }
 
 .favorite_p {
