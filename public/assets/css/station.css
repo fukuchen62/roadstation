@@ -51,7 +51,7 @@ h4 {
     font-family: 'Kiwi Maru', serif;
 }
 
-/* 
+/*
 .center {
     text-align: center;
     margin: 0 auto;
@@ -92,7 +92,7 @@ h4 {
     display: none;
 }
 
-/* 
+/*
 .absolute {
     position: absolute;
 } */
@@ -145,6 +145,7 @@ h4 {
     max-width: 100%;
     background: #fff;
     text-align: left;
+    border: 2px solid #fff174;
 }
 
 
