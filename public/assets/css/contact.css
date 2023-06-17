@@ -8,32 +8,44 @@ h2 {
 }
 
 table {
+    width: 100%;
     margin: 0 auto;
     margin-top: 60px;
 }
 
-th {
-    width: 200px;
-    text-align: left;
+table tbody {
+    width: 100%;
+}
+
+table tr {
+    width: 100%;
+}
+
+table th {
+    display: block;
+    width: 100%;
+    text-align: center;
     font-weight: bold;
-    background-color: #1db73e;
-    color: aliceblue;
+    background-color: #d9e6c0;
+    color: #91471d;
     border: 1px solid #fff;
 }
 
-th,
-td {
+table th,
+table td {
     padding: 20px;
     vertical-align: middle;
 }
 
-td {
-    width: 500px;
+table td {
+    display: block;
+    padding-top: 10px;
+    width: 100%;
 }
 
 input {
+    width: 100%;
     padding: 10px;
-    width: 400px;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 10px;
@@ -41,7 +53,7 @@ input {
 
 textarea {
     padding: 70px;
-    width: 400px;
+    width: 100%;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 10px;
@@ -59,6 +71,36 @@ button {
     border-radius: 10px;
     background-color: #ffd60a;
     font-weight: bold;
+}
+
+@media screen and (min-width: 750px) {
+
+    table {
+        width: 70%;
+    }
+
+    table th,
+    table td {
+        padding: 20px;
+        vertical-align: middle;
+    }
+
+    table tr {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    table th {
+        width: 50%;
+        padding: 30px 20px;
+    }
+
+    .content {
+        padding: 100px 20px;
+    }
+
 }
 
 @media screen and (min-width:1001px) {
