@@ -7,9 +7,6 @@
 {{-- CSS --}}
 @section('pageCss')
 
-    {{-- common CSS --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/blog_list.css') }}">
 
@@ -87,6 +84,9 @@
                     </li>
                 @endforeach
             </ul>
+            <div class="side-img">
+                <img src="{{asset('assets/images/illustrations/tanuki-activity.png')}}" alt="">
+            </div>
         </section>
 
     </div>
