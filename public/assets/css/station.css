@@ -41,14 +41,15 @@ h3 {
     width: 150px; */
     text-align: center;
     padding: 10px;
-
-
 }
-
 
 h4 {
     font-size: 20px;
     font-family: 'Kiwi Maru', serif;
+}
+
+p {
+    text-align: center;
 }
 
 /*
