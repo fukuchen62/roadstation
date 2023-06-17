@@ -2,7 +2,7 @@
 @extends('layouts.layout_front')
 
 {{-- タイトルの受け取り --}}
-@section('title', 'ブログ一覧 | 徳島まるっと道の駅')
+@section('title', 'ブログ一覧ページ | 徳島まるっと道の駅')
 
 {{-- CSS --}}
 @section('pageCss')
@@ -32,8 +32,8 @@
             }
 
             /* .pagination{
-                    width: 51%;
-                } */
+                        width: 51%;
+                    } */
     </style>
 @endsection
 
