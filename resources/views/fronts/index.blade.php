@@ -112,11 +112,14 @@
 
     <!-- 体験 -->
     <div class="section-title02">
+
+        <h2 class="bomn">こんなんやってみ！</h2>
+
         <!-- たぬみちのイラスト -->
         <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
         </div>
 
-        <h2 class="bomn">こんなんやってみ！</h2>
+        <h2 class="bomn pc-title">こんなんやってみ！</h2>
     </div>
     <div class="activity-wrapper">
         <ul class="activity">
