@@ -534,6 +534,11 @@ imgcontent-wrapper .heading {
 }
 
 /* こんなんあるで！ */
+/* 「こんなんやってみ」を非表示 */
+.pc-title {
+    display: none;
+}
+
 .section-title01,
 .section-title02,
 .section-title03 {
@@ -722,6 +727,12 @@ imgcontent-wrapper .heading {
 
     .wrapper {
         padding: 0;
+    }
+
+    /* ヘッダー背景 */
+    .header-bg {
+        position: absolute;
+        bottom: 10vh;
     }
 
     /* KV */
@@ -1154,15 +1165,15 @@ imgcontent-wrapper .heading {
 
 @media screen and (min-width: 901px) {
 
+    .pc-title {
+        display: block;
+    }
+
     h2 {
         font-size: 3rem;
     }
 
-    /* ヘッダー背景 */
-    .header-bg {
-        position: absolute;
-        bottom: 10vh;
-    }
+
 
     .goods-wrapper {
         margin: 0 auto;
