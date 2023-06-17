@@ -95,6 +95,9 @@ svg {
 
 /* ↓もっと見るボタン */
 .btn {
+    /* モバイルサイズ時の文字のレイアウト */
+    text-align: center;
+    display: inline-block;
     font-weight: bold;
     padding: 20px 100px;
     border-radius: 50px;
@@ -168,9 +171,9 @@ svg {
     transition: all 400ms;
 
     /* ３本線の背景の設定 */
-    border: 30px solid #d8f0a2;
+    border: 30px solid #f9a228;
     border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
-    background: #d8f0a2;
+    /* background: #d8f0a2; */
 }
 
 /* 三本線 */
@@ -203,7 +206,7 @@ svg {
 }
 
 #wrapper .btn-gnavi.open span {
-    background: #b45a27;
+    background: #ffffff;
 }
 
 #wrapper .btn-gnavi.open span:nth-child(1) {
