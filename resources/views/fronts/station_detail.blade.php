@@ -464,13 +464,13 @@
             @endphp
 
             @if (in_array($station->id, $cookielist))
-                <p class="blog-btn center"><a href="{{ route('cookie', ['id' => $station->id]) }}">お気に入りに登録済み</a></p>
+                <a class="blog-btn center" href="{{ route('cookie', ['id' => $station->id]) }}">お気に入りに登録済み</a>
             @else
                 <p class="
         favorite-text"><strong><span class="yellow">★</span>お気に入りを押したらお気に入りページに登録されます！</strong>
                 </p>
 
-                <p class="blog-btn center"><a href="{{ route('cookie', ['id' => $station->id]) }}">★お気に入りに登録する</a></p>
+                <a class="blog-btn center" href="{{ route('cookie', ['id' => $station->id]) }}">★お気に入りに登録する</a>
             @endif
 
         </div>
