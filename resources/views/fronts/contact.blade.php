@@ -66,7 +66,7 @@
         </table>
 
         <div class="push">
-            <button type="reset">書き直す</button>
+            <button type="reset">　クリア　 </button>
             <button type="submit">入力内容確認</button>
         </div>
 
