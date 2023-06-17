@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 /* 背景 */
 body {
     background-image: url(../images/index/bg.png)
@@ -53,15 +54,17 @@ section {
 /* PC版：ナビゲーションメニュー */
 .nav-pc {
     position: relative;
-    width: 100%;
     height: 100px;
+    width: 1000px;
+    border-radius: 200px;
+    background-color: #fff;
+    border-bottom: 5px solid #97b983;
 }
 
 /* ヘッダー背景 */
 .header-bg {
     position: absolute;
-
-
+    bottom: 0%;
 }
 
 /* PC版：ナビゲーションメニューの固定 */
@@ -73,6 +76,10 @@ section {
     z-index: 10;
 
     animation: DownAnime 0.5s forwards;
+
+    /* 固定時に変形 */
+    border: none;
+    border-radius: 0;
 }
 
 @keyframes DownAnime {
@@ -297,6 +304,7 @@ section {
 }
 
 .goods-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     margin-bottom: 150px;
@@ -353,6 +361,7 @@ section {
 
 /* 体験 */
 .activity-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     justify-content: center;
@@ -516,9 +525,20 @@ imgcontent-wrapper .heading {
     display: none;
 }
 
+/* 特産品ゾーンの背景 */
+/* .sp-goods {
+    background-color: #c6e7c6;
+} */
+
 /* こんなんあるで！ */
 .section-title01 {
     width: 100%;
+
+    /* 背景イラスト */
+    background: url(../images/index/section_headline_01.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 
     /* フォントの設定 */
     text-align: center;
@@ -528,7 +548,7 @@ imgcontent-wrapper .heading {
     /* 位置調整 */
     position: relative;
     padding: 60px 20px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 
     /* 重ね順の調整 */
     z-index: -999;
@@ -616,6 +636,12 @@ imgcontent-wrapper .heading {
 
 /* こんなんやってみ！ */
 .section-title02 {
+    /* 背景イラスト */
+    background: url(../images/index/section_headline_01.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
     text-align: center;
     font-weight: bold;
     color: #8C5243;
@@ -625,24 +651,30 @@ imgcontent-wrapper .heading {
     padding: 100px;
     /* 背景のたぬみち */
     text-align: center;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 
 }
 
 /* 行ってきたんよ！ */
 .section-title03 {
+    /* 背景イラスト */
+    background: url(../images/index/section_headline_01.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
     text-align: center;
     font-weight: bold;
     color: #8C5243;
 
     position: relative;
     padding: 100px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 
 /* ストライプの罫線 */
 
-.section-title01:after,
+/* .section-title01:after,
 .section-title02:after,
 .section-title03:after {
     position: absolute;
@@ -653,9 +685,9 @@ imgcontent-wrapper .heading {
     border-radius: 50px;
     background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
     content: '';
-}
+} */
 
-.section-title01:before,
+/* .section-title01:before,
 .section-title02:before,
 .section-title03:before {
     position: absolute;
@@ -666,7 +698,7 @@ imgcontent-wrapper .heading {
     border-radius: 50px;
     background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
     content: '';
-}
+} */
 
 /* section-titleの設定（仮）ここまで */
 
