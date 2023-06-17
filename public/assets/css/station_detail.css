@@ -89,7 +89,7 @@ form {
 }
 
 .card {
-    width: 334px;
+    width: 330px;
     height: 650px;
     /* border: solid 1px; */
     text-align: center;
@@ -244,6 +244,20 @@ form {
         left: 10px;
         box-shadow: none;
     }
+}
+
+
+@media screen and (min-width:630px) {
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-items: center;
+        padding: 10px 0;
+    }
+
 }
 
 

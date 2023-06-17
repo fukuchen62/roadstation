@@ -126,7 +126,7 @@ dt {
 }
 
 .card {
-    width: 334px;
+    width: 330px;
     height: 650px;
     /* border: solid 1px; */
     text-align: center;
@@ -173,6 +173,7 @@ dd img {
         background-image: url(../images/illustrations/headline/station_list_headline.png);
         background-position: center;
         background-repeat: no-repeat;
+        background-size: contain;
         padding: 60px;
         margin-bottom: 60px;
         background-size: contain;
@@ -183,12 +184,32 @@ dd img {
 .stationlist-title {
     text-align: center;
     margin-bottom: 30px;
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     color: #B45A27;
     text-align: center;
     display: inline-block;
 }
+
+@media screen and (min-width:630px) {
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-items: center;
+        padding: 10px 0;
+    }
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +263,7 @@ dd img {
         /* margin-top: 300px; */
         text-align: center;
         margin-bottom: 30px;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         color: #B45A27;
         text-align: center;
