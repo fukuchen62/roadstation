@@ -321,9 +321,12 @@ p {
 /* アクティビティ画像 */
 .activity {
     width: 100%;
-    max-height: 320px;
+    /* max-height: 320px; */
+    max-height: 600px;
     object-fit: cover;
-    object-position: 80% 25%;
+    /* object-fit: contain; */
+    /* object-position: 80% 25%; */
+    object-position: 60% 60%;
     margin-bottom: 30px;
     border-radius: 20px;
 }
