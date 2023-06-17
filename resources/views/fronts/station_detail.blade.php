@@ -480,6 +480,5 @@
 
 {{-- 該当ページ専用JS --}}
 @section('pageJs2')
-    <script src="{{ asset('assets/js/station.js') }}"></script>
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
 @endsection
