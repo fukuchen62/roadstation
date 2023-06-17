@@ -463,6 +463,11 @@ svg {
 
 /* ↑ガタゴトアニメ */
 
+.pc-footer {
+    display: none;
+}
+
+
 @media screen and (min-width:768px) {
 
     /* スクロールのたぬみちのサイズ */
@@ -474,6 +479,15 @@ svg {
     .pagination {
         /* width: 51%; */
         width: 50%;
+    }
+
+    /* フッターの表示 */
+    .pc-footer {
+        display: block;
+    }
+
+    .mobile-footer {
+        display: none;
     }
 }
 

@@ -145,9 +145,6 @@ section {
     padding-bottom: 10px;
 }
 
-.mobilebtn {
-    margin-top: 20px;
-}
 
 /* エリアマップを囲う要素 */
 .area-map {
@@ -535,11 +532,6 @@ imgcontent-wrapper .heading {
     display: none;
 }
 
-/* 特産品ゾーンの背景 */
-/* .sp-goods {
-    background-color: #c6e7c6;
-} */
-
 /* こんなんあるで！ */
 .section-title01 {
     width: 100%;
@@ -658,7 +650,7 @@ imgcontent-wrapper .heading {
     background-color: ccc;
 
     position: relative;
-    padding: 100px;
+    padding: 60px 20px;
     /* 背景のたぬみち */
     text-align: center;
     /* margin-bottom: 150px; */
@@ -678,8 +670,7 @@ imgcontent-wrapper .heading {
     color: #8C5243;
 
     position: relative;
-    padding: 100px;
-    /* margin-bottom: 150px; */
+    padding: 60px 20px;
 }
 
 /* ストライプの罫線 */
