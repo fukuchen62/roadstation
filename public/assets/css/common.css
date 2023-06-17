@@ -57,14 +57,12 @@ p {
 /* 各ページのキービジュアル（TOPを除く） */
 svg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    top: calc(50% - 200px);
+    left: calc(50% - 350px);
     opacity: 0.6;
-}
 
+    width: 700px;
+}
 
 .top-kv {
     position: relative;
@@ -373,7 +371,6 @@ svg {
 
 /* フッターアニメーション */
 .footer-line {
-    /* max-width: 1980px; */
     background: center;
 }
 
