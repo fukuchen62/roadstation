@@ -538,6 +538,7 @@ imgcontent-wrapper .heading {
     width: 100%;
 
     /* 背景イラスト */
+    width: 700px;
     /* background: url(../images/index/section_headline_01.png); */
     background-size: contain;
     background-position: center center;
@@ -557,9 +558,54 @@ imgcontent-wrapper .heading {
     z-index: -999;
 }
 
+/* 見出しのふきだし */
+.section-title01 {
+
+    display: flex;
+    gap: 40px;
+
+    position: relative;
+    width: 1000px;
+    height: 100px;
+    background: #ff8871;
+    text-align: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.section-title01:after {
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    position: absolute;
+    border-color: rgba(255, 146, 157, 0);
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    margin-left: -15px;
+    border-top-color: #ff8871;
+    top: 100%;
+    left: 50%;
+}
+
 .section-title01::before {
     width: 150px;
     /* background-image: url(../images/illustrations/tanumiti_gurumet.gif); */
+}
+
+.tanumiti-01 {
+    position: absolute;
+    top: 0;
+    right: 20%;
 }
 
 /* モバイル版：車 */
@@ -606,7 +652,7 @@ imgcontent-wrapper .heading {
     position: absolute;
     top: 25%;
     /* right: 15%; */
-    width: 10%;
+    width: 60%;
 
     /* ぽよん */
     animation: poyoyon 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards;
@@ -801,7 +847,7 @@ imgcontent-wrapper .heading {
 
     /* ブログカードの設定 */
     .blog-main {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -1046,10 +1092,6 @@ imgcontent-wrapper .heading {
         width: 80%;
     }
 
-    /* カードの設定 */
-    .blog-main {
-        margin: 0 auto;
-    }
 
     .blog-wrapper {
         width: 100%;
@@ -1092,6 +1134,12 @@ imgcontent-wrapper .heading {
 
     .map {
         width: 85%;
+    }
+
+    /* ブログカードの設定 */
+    .blog-main {
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
