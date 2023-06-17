@@ -14,7 +14,6 @@ h2 {
     background-repeat: no-repeat;
     color: #B45A27;
     background-image: url(../images/illustrations/headline/goods_list_headline_mobile.png);
-
 }
 
 h3 {
@@ -26,7 +25,6 @@ h3 {
     color: #B45A27;
     border-bottom: dotted 10px #e7d955;
     padding: 1rem 0;
-
 }
 
 h4 {
@@ -34,7 +32,9 @@ h4 {
     color: #B45A27;
 }
 
+
 /* カテゴリ見出し */
+
 .headline-agricultural-products {
     text-align: center;
     padding: 1rem 0;
@@ -104,7 +104,9 @@ h4 {
     text-align: center;
 }
 
+
 /* カードの押し込み */
+
 .goods-group:hover {
     position: relative;
     top: 5px;
@@ -226,7 +228,6 @@ h4 {
 
 } */
 
-
 .roadstation-name {
     display: flex;
     justify-content: space-between;
@@ -263,7 +264,6 @@ h4 {
     border-top: 3px solid #a7d28d;
     border-right: 3px solid #a7d28d;
     content: '';
-
 }
 
 .roadstation-name:hover {
@@ -272,7 +272,6 @@ h4 {
 
 
 /**************/
-
 
 .roadstation-frame {
     justify-content: space-between;
@@ -315,25 +314,9 @@ h4 {
     content: "";
 }
 
-
 .station-name:hover {
     opacity: 0.7;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .name {
     width: 100%;
@@ -343,6 +326,7 @@ h4 {
 .blog-btn {
     text-align: center;
     margin-bottom: 5%;
+    margin-top: 8%;
 }
 
 .blog-btn a:hover {
@@ -355,11 +339,9 @@ h4 {
     object-fit: cover;
 }
 
-
 .displayNone {
     display: none;
 }
-
 
 @media screen and (min-width:601px) {
     h2 {
@@ -379,7 +361,6 @@ h4 {
         gap: 30px;
         text-align: center; */
     /* } */
-
     /* .detail-group {
         text-align: center;
         background-color: #fff;
@@ -389,19 +370,13 @@ h4 {
         margin-top: 100px;
         margin-bottom: 50px;
     } */
-
 }
 
-
-
-
-
-
 @media screen and (min-width:901px) {
+
     /* section {
         margin: 0 auto;
     } */
-
     .goods {
         /* /* display: grid; */
         grid-template-columns: repeat(3, minmax(290px, 1fr));
@@ -413,7 +388,6 @@ h4 {
     /* .goods-photo {
         max-width: 90%;
     } */
-
     /* h2 {
         margin-bottom: 60px;
         padding: 60px;
@@ -425,11 +399,9 @@ h4 {
 
 
     } */
-
     /* h3 {
         font-size: 32px;
     } */
-
     /* .detail-group {
         text-align: center;
         background-color: #fff;
@@ -439,7 +411,6 @@ h4 {
         margin-top: 100px;
         margin-bottom: 50px; */
     /* } */
-
     /* .goods-photo {
         max-width: 90%;
     } */
@@ -450,15 +421,11 @@ h4 {
         width: 100%;
         margin: 0 auto;
     } */
-
-
     /* .activity-photo {
         max-width: 550px; */
     /* max-height: 380px; */
     /* width: 100%;
     } */
-
-
     .item-group {
         display: flex;
         max-width: 1200px;
@@ -471,12 +438,10 @@ h4 {
         margin-right: 50px;
         margin-top: 0;
     } */
-
     .item-text-group {
         margin: 0 20px;
         flex-direction: column;
     }
-
 
     .item-name {
         max-width: 220px;
@@ -497,7 +462,6 @@ h4 {
 
     .season-text {
         margin-left: 10px;
-
     }
 
     .roadstation-name {
@@ -512,13 +476,11 @@ h4 {
         margin-top: 20px;
     }
 
-
     /* .headline-name-comment {
         text-align: start;
         margin-top: 10px;
         font-weight: bold;
     } */
-
     /* .headline-name-season {
         text-align: start;
         margin-top: 0;
@@ -529,35 +491,27 @@ h4 {
         max-width: 600px;
         width: 100%;
     } */
-
     /* .price-text {
         max-width: 600px;
         width: 100%;
     } */
-
     /* .conditions-text {
         max-width: 600px;
         width: 100%;
     } */
-
     /*
     .comment-text {
         max-width: 1200px;
         width: 100%;
     } */
-
     /*
     #detail-top {
         height: 60px;
     } */
-
-
     /*
     .goods-photo {
         max-width: 90%;
     } */
-
-
     /* .roadstation-frame {
 
         display: grid;
@@ -565,8 +519,6 @@ h4 {
         gap: 25px;
         text-align: center;
     } */
-
-
     /* .roadstation-name {
         background-color: #A7D28D;
         box-shadow: 0px 10px 0px -5px #70b27f;
@@ -576,15 +528,12 @@ h4 {
         margin: 5px;
 
     } */
-
     /* .blog-btn {
         text-align: center; */
     /* } */
-
     .blog-btn img {
         max-width: 700px;
         height: auto;
         object-fit: cover;
     }
-
 }
