@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 
-/* 背景 */
+/* モバイル：背景 */
 body {
-    background-image: url(../images/index/bg.png)
+    background-image: url(../images/index/bg_small.png)
 }
 
 /* 基本情報 */
@@ -155,7 +155,7 @@ section {
 
 /* 木のアニメーション */
 .woods-01 {
-    width: 8%;
+    width: 12%;
     height: auto;
     position: absolute;
     top: -20%;
@@ -201,12 +201,12 @@ section {
 }
 
 .woods-02 {
-    width: 8%;
+    width: 12%;
     height: auto;
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 10%;
-    /* 木のアニメ */
+    /* アニメ */
     animation: poyooon 0.9s linear 0s 1;
 }
 
@@ -304,6 +304,14 @@ section {
 .sp-btn {
     display: none;
 }
+
+.anime1,
+.anime2,
+.anime3,
+.anime4 {
+    display: none;
+}
+
 
 .goods-wrapper {
     max-width: 1200px;
@@ -406,7 +414,7 @@ section {
 .anime3 {
     position: absolute;
     top: 80px;
-    left: 30px;
+    left: 20px;
 }
 
 .activity-strapline {
@@ -514,13 +522,6 @@ imgcontent-wrapper .heading {
     object-fit: cover;
 }
 
-.blog-btn {
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 5%;
-    width: 300px;
-}
-
 .blog-btn img {
     max-width: 320px;
     height: auto;
@@ -537,7 +538,7 @@ imgcontent-wrapper .heading {
     width: 100%;
 
     /* 背景イラスト */
-    background: url(../images/index/section_headline_01.png);
+    /* background: url(../images/index/section_headline_01.png); */
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -558,7 +559,7 @@ imgcontent-wrapper .heading {
 
 .section-title01::before {
     width: 150px;
-    background-image: url(../images/illustrations/tanumiti_gurumet.gif);
+    /* background-image: url(../images/illustrations/tanumiti_gurumet.gif); */
 }
 
 /* モバイル版：車 */
@@ -639,7 +640,7 @@ imgcontent-wrapper .heading {
 /* こんなんやってみ！ */
 .section-title02 {
     /* 背景イラスト */
-    background: url(../images/index/section_headline_01.png);
+    /* background: url(../images/index/section_headline_01.png); */
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -660,7 +661,7 @@ imgcontent-wrapper .heading {
 /* 行ってきたんよ！ */
 .section-title03 {
     /* 背景イラスト */
-    background: url(../images/index/section_headline_01.png);
+    /* background: url(../images/index/section_headline_01.png); */
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -673,36 +674,22 @@ imgcontent-wrapper .heading {
     padding: 60px 20px;
 }
 
-/* ストライプの罫線 */
+@media screen and (min-width:401px) {
 
-/* .section-title01:after,
-.section-title02:after,
-.section-title03:after {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    border-radius: 50px;
-    background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
-    content: '';
-} */
-
-/* .section-title01:before,
-.section-title02:before,
-.section-title03:before {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    border-radius: 50px;
-    background-image: repeating-linear-gradient(45deg, #A7D28D 0 2px, transparent 2px 4px);
-    content: '';
-} */
-
+    /* ブログカード */
+    .blog-card {
+        width: 80%;
+    }
+}
 
 @media screen and (min-width:601px) {
+
+    /* モバイル：背景 */
+    body {
+        background-image: url(../images/index/bg.png);
+        background-position: center center;
+        background-size: cover;
+    }
 
     .wrapper {
         padding: 0;
@@ -816,6 +803,11 @@ imgcontent-wrapper .heading {
     .blog-main {
         width: 100%;
         margin: 0 auto;
+    }
+
+    /* ブログカード */
+    .blog-card {
+        width: 100%;
     }
 
     .blog-wrapper {
@@ -939,18 +931,27 @@ imgcontent-wrapper .heading {
         position: relative;
     }
 
+    /* アニメの表示 */
+    .anime1,
+    .anime2,
+    .anime3,
+    .anime4 {
+        display: block;
+    }
+
     /* 芋ほりアニメの設定 */
     .anime1 {
         position: absolute;
-        top: 3px;
-        left: 200px;
+        top: 5px;
+        left: 230px;
+
     }
 
     /* 人参アニメの設定 */
     .anime4 {
         position: absolute;
-        top: 250px;
-        left: 14px;
+        top: 220px;
+        left: -35px;
     }
 
     .goods-strapline {
@@ -1059,7 +1060,8 @@ imgcontent-wrapper .heading {
     }
 
     .blog-btn {
-        width: 400px;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1175,14 +1177,14 @@ imgcontent-wrapper .heading {
     .anime2 {
         position: absolute;
         top: 10px;
-        left: 200px;
+        left: 220px;
     }
 
     /* うどんアニメの設定 */
     .anime3 {
         position: absolute;
         top: 80px;
-        left: 30px;
+        left: 0px;
     }
 
     .news-box {
