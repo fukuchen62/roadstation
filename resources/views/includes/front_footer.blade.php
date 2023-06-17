@@ -28,18 +28,22 @@
             <ul class="footer-menu-list">
 
                 <li><a href="{{ route('stationlist') }}">
-                        <img src="{{ asset('assets/images/menu_icon/station_list_icon_w.png') }}" alt="道の駅一覧" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/station_list_icon_w.png') }}" alt="道の駅一覧"
+                            width="20" height="20">
                         道の駅一覧</a></li>
 
                 <li><a href="{{ route('areasearch') }}">
-                        <img src="{{ asset('assets/images/menu_icon/station_area_icon_w.png') }}" alt="エリア検索" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/station_area_icon_w.png') }}" alt="エリア検索"
+                            width="20" height="20">
                         エリア検索</a></li>
 
                 <li><a href="{{ route('ditailsearch') }}">
-                        <img src="{{ asset('assets/images/menu_icon/station_detail_icon_w.png') }}" alt="詳細検索" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/station_detail_icon_w.png') }}" alt="詳細検索"
+                            width="20" height="20">
                         詳細検索</a></li>
                 <li><a href="{{ route('news') }}">
-                        <img src="{{ asset('assets/images/menu_icon/news_icon_w.png') }}" alt="ニュース" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/news_icon_w.png') }}" alt="ニュース" width="20"
+                            height="20">
                         ニュース</a></li>
 
             </ul>
@@ -47,36 +51,44 @@
             <ul class="footer-menu-list">
 
                 <li><a href="{{ route('goods') }}">
-                        <img src="{{ asset('assets/images/menu_icon/goods_list_icon_w.png') }}" alt="特産品" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/goods_list_icon_w.png') }}" alt="特産品"
+                            width="20" height="20">
                         特産品</a></li>
 
                 <li><a href="{{ route('activity') }}">
-                        <img src="{{ asset('assets/images/menu_icon/activity_list_icon_w.png') }}" alt="体験" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/activity_list_icon_w.png') }}" alt="体験"
+                            width="20" height="20">
                         体験</a></li>
 
                 <li><a href="{{ route('bloglist') }}">
-                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon_w.png') }}" alt="ブログ" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon_w.png') }}" alt="ブログ"
+                            width="20" height="20">
                         行ってきたんよ</a></li>
 
                 <li>
                     <a href="{{ route('mypage') }}">
-                        <img src="{{ asset('assets/images/menu_icon/like_icon_w.png') }}" alt="お気に入り" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/like_icon_w.png') }}" alt="お気に入り" width="20"
+                            height="20">
                         お気に入り</a>
                 </li>
             </ul>
 
             <ul>
-                <li><a href="{{ route('about') }}">
-                        <img src="{{ asset('assets/images/menu_icon/about-this-website_icon_w.png') }}" alt="このサイトについて" width="20" height="20">
-                        このサイトについて</a></li>
                 <li><a href="{{ route('contact') }}">
-                        <img src="{{ asset('assets/images/menu_icon/contact_icon_w.png') }}" alt="お問い合わせ" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/contact_icon_w.png') }}" alt="お問い合わせ"
+                            width="20" height="20">
                         お問い合わせ</a></li>
+                <li><a href="{{ route('about') }}">
+                        <img src="{{ asset('assets/images/menu_icon/about-this-website_icon_w.png') }}" alt="このサイトについて"
+                            width="20" height="20">
+                        このサイトについて</a></li>
                 <li><a href="{{ route('privacy') }}">
-                        <img src="{{ asset('assets/images/menu_icon/privacy-policy_icon_w.png') }}" alt="プライバシーポリシー" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/privacy-policy_icon_w.png') }}" alt="プライバシーポリシー"
+                            width="20" height="20">
                         プライバシーポリシー</a></li>
                 <li><a href="{{ route('admintop') }}" target="_blank">
-                        <img src="{{ asset('assets/images/menu_icon/login-page_icon_w.png') }}" alt="ログインページ" width="20" height="20">
+                        <img src="{{ asset('assets/images/menu_icon/login-page_icon_w.png') }}" alt="ログインページ"
+                            width="20" height="20">
                         ログインページ</a></li>
             </ul>
 
