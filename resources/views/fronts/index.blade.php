@@ -113,7 +113,7 @@
     <!-- 体験 -->
     <div class="section-title02">
 
-        <h2 class="bomn">こんなんやってみ！</h2>
+        <h2 class="bomn mobile-title">こんなんやってみ！</h2>
 
         <!-- たぬみちのイラスト -->
         <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
