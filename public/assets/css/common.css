@@ -586,6 +586,7 @@ svg {
     /* フッターの表示 */
     .pc-footer {
         display: block;
+        width: 100%;
     }
 
     .mobile-footer {
