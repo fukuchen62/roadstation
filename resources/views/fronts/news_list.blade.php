@@ -5,15 +5,6 @@
 
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/news_list.css') }}">
-
-    {{-- <style>
-        .link {
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            left: 200px;
-        }
-    </style> --}}
 @endsection
 
 @section('key_visual')
@@ -64,7 +55,7 @@
 
             <div>
                 {{-- {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }} --}}
-                {{ $news->appends(request()->query())->links('pagination::bootstrap-4') }}
+                {{-- {{ $news->appends(request()->query())->links('pagination::bootstrap-4') }} --}}
             </div>
 
         </div>
@@ -81,10 +72,15 @@
                 @endforeach
             </ul>
             <div class="side-img">
-                <img src="{{asset('assets/images/illustrations/tanuki-gourmet.png')}}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" alt="">
             </div>
         </section>
 
+    </div>
+
+    <div>
+        {{-- {{ $news->appends(Request::only('news_category_id'))->links('pagination::bootstrap-4') }} --}}
+        {{ $news->appends(request()->query())->links('pagination::bootstrap-4') }}
     </div>
 
 @endsection
