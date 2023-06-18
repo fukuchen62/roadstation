@@ -784,8 +784,10 @@ footer {
         text-align: center;
         display: flex;
         justify-content: center;
-        background-color: #fffbf1;
-
+        /* background-color: #fffbf1; */
+        background-image: url(../images/header/headline_bg.png);
+        background-position: center;
+        background-size: cover;
 
         z-index: 999;
     }
