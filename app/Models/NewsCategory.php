@@ -14,4 +14,17 @@ class NewsCategory extends Model
         $data = $this->category_name;
         return $data;
     }
+
+    /**
+     * getCount function
+     * カテゴリ
+     *
+     * @return void
+     */
+    public function getCount()
+    {
+        $count = News::where('news_category_id', $this->id)
+            ->count();
+        return $count;
+    }
 }
