@@ -21,6 +21,8 @@ class NewsController extends Controller
      */
     public function newsListView(Request $request)
     {
+        $count = 0;
+
         if (isset($request->news_category_id)) {
 
             $items = News::where('news_category_id', $request->news_category_id)
@@ -28,11 +30,21 @@ class NewsController extends Controller
                 ->where('is_show', 1)
                 ->orderby('id', 'DESC')
                 ->paginate(4);
+
+            // 件数を取得
+            $count = News::where('blog_category_id', $request->news_category_id)
+                ->where('deleted_at', null)
+                ->where('is_show', 1)
+                ->count();
         } else {
             $items = News::where('deleted_at', null)
                 ->where('is_show', 1)
                 ->orderby('id', 'DESC')
                 ->paginate(4);
+
+            $count = News::where('deleted_at', null)
+                ->where('is_show', 1)
+                ->count();
         }
 
 
@@ -66,8 +78,8 @@ class NewsController extends Controller
 
         $data = [
             'news' => $items,
-            // 'news_category' => $news_category,
             'news_categories' => $category,
+            'count' => $count,
         ];
 
         return view('fronts.news_list', $data);

@@ -136,14 +136,15 @@
             <ul class="category_list">
                 @foreach ($news_categories as $category)
                     <li class="category-name"><a
-                            href="{{ url('news') }}?news_category_id={{ $category->id }}">{{ $category->category_name }}</a>
+                            href="{{ url('news') }}?news_category_id={{ $category->id }}">{{ $category->category_name }}
+                            ({{ $category->getCount() }})</a>
                     </li>
                     <li></li>
                 @endforeach
             </ul>
 
             <div class="side-img">
-                <img src="{{asset('assets/images/illustrations/tanuki-gourmet.png')}}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" alt="">
             </div>
         </section>
     </div>
