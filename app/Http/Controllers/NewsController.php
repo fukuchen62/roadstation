@@ -32,7 +32,7 @@ class NewsController extends Controller
                 ->paginate(4);
 
             // 件数を取得
-            $count = News::where('blog_category_id', $request->news_category_id)
+            $count = News::where('news_category_id', $request->news_category_id)
                 ->where('deleted_at', null)
                 ->where('is_show', 1)
                 ->count();
