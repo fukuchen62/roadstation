@@ -160,7 +160,7 @@
 
     <h2 class="bomn">行ってきたんよ！</h2>
     <!-- たぬみちのイラスト -->
-    <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.gif') }}" width="200px" alt=""></div>
+    <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt=""></div>
 
 </div>
 
