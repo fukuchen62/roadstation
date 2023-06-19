@@ -568,6 +568,13 @@ svg {
         border-radius: 100%;
         opacity: 0;
     }
+
+
+}
+
+.mobile-footer {
+    position: relative;
+    top: 2px;
 }
 
 @media screen and (min-width:768px) {
@@ -733,6 +740,12 @@ footer {
         /* min-width: 650px; */
         display: flex;
         justify-content: space-evenly;
+    }
+
+    /* フッターの表示 */
+    .pc-footer {
+        position: relative;
+        top: 2px;
     }
 }
 
