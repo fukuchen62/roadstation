@@ -138,6 +138,7 @@ form {
 
 .submit-btn {
     text-align: center;
+    margin-top: 15px;
 
 }
 
@@ -349,6 +350,7 @@ form {
     .pc-table tr td {
         width: 26%;
         font-size: 20px;
+        padding: 8px;
     }
 
     .checkbox-title {
