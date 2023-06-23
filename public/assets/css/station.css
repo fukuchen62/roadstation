@@ -30,6 +30,7 @@ h2 {
     background-repeat: no-repeat;
     padding: 20px;
     color: #B45A27;
+    margin-top: 60px;
 }
 
 
@@ -146,7 +147,8 @@ p {
     max-width: 100%;
     background: #fff;
     text-align: left;
-    border: 2px solid #fff174;
+    border: 2px solid #e7d955;
+
 }
 
 
@@ -375,6 +377,8 @@ dd {
 
 dt {
     float: left;
+    line-height: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 
