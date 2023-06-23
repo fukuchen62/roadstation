@@ -249,7 +249,7 @@
             </table>
 
             <p class="submit-btn">
-                <input class="more-btn  btn-reset" type="reset" value="リセット"
+                <input class="reset-btn  btn-reset" type="reset" value="リセット"
                     onclick="doReload('{{ route('ditailsearch') }}')">
                 <input class="more-btn btn-search" type="submit" value="検索">
             </p>
@@ -486,7 +486,7 @@
 
             <!-- 先輩の道の駅サイトを参考にして、classの設定をする。 -->
             <p class="submit-btn">
-                <input class="more-btn  btn-reset" type="reset" value="リセット"
+                <input class="reset-btn  btn-reset" type="reset" value="リセット"
                     onclick="doReload('{{ route('ditailsearch') }}')">
                 <input class="more-btn btn-search" type="submit" value="検索">
             </p>

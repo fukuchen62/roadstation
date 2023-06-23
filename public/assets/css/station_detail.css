@@ -199,6 +199,27 @@ form {
     box-shadow: none;
 }
 
+.reset-btn {
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #f8ea6e;
+    /* ボタンの影 */
+    box-shadow: 0px 5px 0px 0 #dba45c;
+    padding: 15px;
+    width: 100px;
+    margin: 20px;
+
+
+}
+
+.reset-btn:hover {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+
+
 @media screen and (min-width:601px) {
     h2 {
         margin-bottom: 60px;
@@ -320,19 +341,19 @@ form {
 
     .pc-table {
         width: 800px;
-        margin: 0 20%;
+        margin: 0 15%;
         text-align: left;
     }
 
     /* セル内の幅設定 */
     .pc-table tr td {
-        width: 300px;
-        padding: 0.5rem 0;
+        width: 26%;
+        font-size: 20px;
     }
 
     .checkbox-title {
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         padding: 10px 0;
         width: 130px;
         margin: 20px auto;
