@@ -89,14 +89,18 @@
             <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg') }}" alt=""></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt=""></li>
             <li class="goods-title">
-                <h2 class="sp-h2 bomn">特産品</h2>
-                <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p>
+                <a href="{{ route('goods') }}">
+                    <h2 class="sp-h2 bomn">特産品</h2>
+                    <!-- <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p> -->
 
-                <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="" width="130px" height="130px" class="anime1">
+                    <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="" width="130px" height="130px" class="anime1">
 
-                <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="" width="80px" height="80px" class="anime4">
-                <a class="sp-btn" href="{{ route('goods') }}">
-                    もっと見る
+                    <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="" width="80px" height="80px" class="anime4">
+
+                    <!-- ボタン -->
+                    <div class="sp-btn">
+                        もっと見る
+                    </div>
                 </a>
             </li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt=""></li>
@@ -129,15 +133,17 @@
             </li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt=""></li>
             <li class="activity-title">
-                <h2 class="sp-h2">体験</h2>
-                <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
+                <a href=" {{ route('activity') }}">
+                    <h2 class="sp-h2">体験</h2>
+                    <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
 
-                <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="" width="100px" height="100px" class="anime2">
+                    <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="" width="100px" height="100px" class="anime2">
 
-                <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="" width="80px" height="80px" class="anime3">
+                    <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="" width="80px" height="80px" class="anime3">
 
-                <a class="sp-btn" href=" {{ route('activity') }}">
-                    もっと見る
+                    <div class="sp-btn">
+                        もっと見る
+                    </div>
                 </a>
             </li>
 

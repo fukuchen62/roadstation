@@ -845,7 +845,7 @@ imgcontent-wrapper .heading {
         margin-top: 5%;
     }
 
-
+    /* 特集ボタン「もっと見る」 */
     .sp-btn {
         display: inline-block;
         background-color: #fff;
@@ -860,6 +860,7 @@ imgcontent-wrapper .heading {
     .sp-btn:hover {
         animation: poyo-yon 2.5s infinite;
     }
+
 
     /* ブログカードの設定 */
     .blog-main {
@@ -1019,6 +1020,7 @@ imgcontent-wrapper .heading {
 
         transform: rotate(-5deg);
     }
+
 
     .goods-wrapper {
         margin: 0 auto;
