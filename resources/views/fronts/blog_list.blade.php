@@ -29,8 +29,8 @@
             }
 
             /* .pagination{
-                        width: 51%;
-                    } */
+                                width: 51%;
+                            } */
     </style>
 @endsection
 
@@ -51,6 +51,20 @@
                 @foreach ($blogs as $blog)
                     {{--  <div class="blog-card">  --}}
                     <a href="{{ url('blog-detail') }}?id={{ $blog->id }}" class="blog-card">
+
+                        @php
+                            $road_station_id = $blog->road_station_id;
+                            $id_list = explode('|', $road_station_id);
+                        @endphp
+
+                        @foreach ($id_list as $id)
+                            @php
+                                $name = $blog::getRoadstationName($id);
+                            @endphp
+
+                            <p class="station_name">{{ $name }}</p>
+                        @endforeach
+
                         @if ($blog->picture != null)
                             <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
                         @else
@@ -85,7 +99,7 @@
                 @endforeach
             </ul>
             <div class="side-img">
-                <img src="{{asset('assets/images/illustrations/tanuki-activity.png')}}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" alt="">
             </div>
         </section>
 

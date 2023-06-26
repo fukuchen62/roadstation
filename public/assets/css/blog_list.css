@@ -26,6 +26,10 @@ p {
     text-align: start;
 }
 
+.station_name {
+    margin-bottom: 10px;
+}
+
 /* カテゴリー */
 .category {
     display: inline-block;

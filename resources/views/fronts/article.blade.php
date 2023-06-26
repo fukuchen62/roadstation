@@ -19,11 +19,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-                                                        .relatedarticle1 {
-                                                            margin-bottom: 60px;
-                                                            width: 48%;
-                                                        }
-                                                        } */
+                                                                                    .relatedarticle1 {
+                                                                                        margin-bottom: 60px;
+                                                                                        width: 48%;
+                                                                                    }
+                                                                                    } */
     </style>
 
 @endsection
@@ -49,7 +49,23 @@
             <div class="update-information">
                 <p class="date">{{ $blog['created_at']->format('Y年n月j日') }}</p>
                 <p class="category">{{ $blog->blogCategory->getName() }}</p>
+
+                @php
+                    $road_station_id = $blog->road_station_id;
+                    $id_list = explode('|', $road_station_id);
+                @endphp
+
+                @foreach ($id_list as $id)
+                    @php
+                        $name = $blog::getRoadstationName($id);
+                    @endphp
+
+                    <a href="{{ url('station-detail') }}?id={{ $id }}">
+                        <p class="station_name">{{ $name }}</p>
+                    </a>
+                @endforeach
             </div>
+
             @if ($blog->picture != null)
                 <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
             @else
@@ -75,10 +91,10 @@
             <h3 class="roadstation-
                 information">＜ 道の駅情報 ＞</h3>
 
-            @php
+            {{-- @php
                 $road_station_id = $blog->road_station_id;
                 $id_list = explode('|', $road_station_id);
-            @endphp
+            @endphp --}}
 
             @foreach ($id_list as $id)
                 @php
