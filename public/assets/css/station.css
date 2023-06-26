@@ -377,6 +377,9 @@ p {
     text-align: center;
 }
 
+dl {
+    word-wrap: break-word;
+}
 
 dd {
     line-height: 1.5rem;
