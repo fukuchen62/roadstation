@@ -87,9 +87,9 @@
                     $name = $blog::getRoadstationName($id);
                 @endphp
 
-                <P class="address"><a
+                <p class="address"><a class="address-btn"
                         href="{{ url('station-detail') }}?id={{ $id }}">{{ $name }}の詳細はこちら</a>
-                </P>
+                </p>
                 {{--  <P>test:<a href="{{ url('station-detail') }}?id={{ $blog->road_station_id }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>  --}}
             @endforeach
 
