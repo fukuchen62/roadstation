@@ -378,9 +378,10 @@
                         @if ($station->sns == null)
                             {{ '掲載はございません。' }}
                         @else
-                            <a href="{{ $station->sns }}">
+                            {{-- <a href="{{ $station->sns }}">
                                 {!! $station->sns !!}
-                            </a>
+                            </a> --}}
+                            {!! $station->sns !!}
                         @endif
                     </dd>
                     <dt>営業時間：</dt>
