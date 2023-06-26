@@ -19,11 +19,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-                                                .relatedarticle1 {
-                                                    margin-bottom: 60px;
-                                                    width: 48%;
-                                                }
-                                                } */
+                                                        .relatedarticle1 {
+                                                            margin-bottom: 60px;
+                                                            width: 48%;
+                                                        }
+                                                        } */
     </style>
 
 @endsection
@@ -85,9 +85,13 @@
                     $name = $blog::getRoadstationName($id);
                 @endphp
 
-                <p class="address"><a class="address-btn"
+                <a class="address" href="{{ url('station-detail') }}?id={{ $id }}">
+                    <p class="address-btn">{{ $name }}の詳細はこちら</p>
+                </a>
+
+                {{-- <p class="address"><a class="address-btn"
                         href="{{ url('station-detail') }}?id={{ $id }}">{{ $name }}の詳細はこちら</a>
-                </p>
+                </p> --}}
                 {{--  <P>test:<a href="{{ url('station-detail') }}?id={{ $blog->road_station_id }}">{{ url('station-detail') }}?id={{ $blog->roadStation->getId() }}</a></P>  --}}
             @endforeach
 
