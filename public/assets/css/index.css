@@ -54,11 +54,11 @@ section {
 /* PC版：ナビゲーションメニュー */
 .nav-pc {
     position: relative;
-    height: 100px;
+    /* height: 100px;
     width: 1000px;
     border-radius: 200px;
     background-color: #fff;
-    border-bottom: 5px solid #97b983;
+    border-bottom: 5px solid #97b983; */
 }
 
 /* ヘッダー背景 */
@@ -753,6 +753,7 @@ imgcontent-wrapper .heading {
     /* ヘッダー背景 */
     .header-bg {
         position: absolute;
+        width: 100%;
         bottom: 10vh;
     }
 
@@ -1092,7 +1093,6 @@ imgcontent-wrapper .heading {
         margin-bottom: 150px;
         justify-content: center;
         text-align: center;
-
     }
 
     .activity {
@@ -1104,7 +1104,6 @@ imgcontent-wrapper .heading {
         justify-content: center;
         margin: 0 auto;
         margin-bottom: 30px;
-
     }
 
 
