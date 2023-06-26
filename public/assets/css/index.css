@@ -357,6 +357,19 @@ section {
     text-align: center;
     font-size: 20px;
     padding: 20px;
+
+    /* リンクの設定 */
+    position: relative;
+    cursor: pointer;
+}
+
+.goods-title a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%
 }
 
 /* 文字の解説 */
@@ -400,6 +413,15 @@ section {
     font-size: 20px;
     padding: 20px;
     position: relative;
+}
+
+.activity-title a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%
 }
 
 /*うどんたぬきアニメの設定 */
