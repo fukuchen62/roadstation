@@ -26,6 +26,11 @@ iframe {
     border-radius: 20px;
 }
 
+.text dl {
+    width: 100%;
+    word-break: break-all;
+}
+
 
 h2 {
     margin-bottom: 4px;
@@ -55,7 +60,7 @@ h4 {
 }
 
 p {
-    text-align: start;
+    text-align: center;
 }
 
 /*
@@ -208,7 +213,7 @@ p {
 .deco-h4::after {
     display: block;
     content: "";
-    width: clamp(280px, 49vw, 380px);
+    /* width: clamp(280px, 49vw, 380px); */
     height: 0;
     border-top: solid 3px #1ca10a;
     margin-top: 0.5rem;
