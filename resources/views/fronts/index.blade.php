@@ -57,8 +57,8 @@
 
 <section class="area-map">
     <!-- 木のイラスト -->
-    <img class="woods-01 scroll-fade-up" src="{{ asset('assets/images/index/wood_01.png') }}" alt="木のイラスト">
-    <img class="woods-02 scroll-fade-up" src=" {{ asset('assets/images/index/wood_02.png') }}" alt="木のイラスト">
+    <!-- <img class="woods-01 scroll-fade-up" src="{{ asset('assets/images/index/wood_01.png') }}" alt="木のイラスト">
+    <img class="woods-02 scroll-fade-up" src=" {{ asset('assets/images/index/wood_02.png') }}" alt="木のイラスト"> -->
     <div class="map">
 
         <div class="map">
@@ -84,10 +84,10 @@
 
     <div class="goods-wrapper">
         <ul class="goods">
-            <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt=""></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg') }}" alt="みかん"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt="鳴門金時"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg') }}" alt="れんこん"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt="鱧"></li>
             <li class="goods-title">
                 <a href="{{ route('goods') }}">
                     <h2 class="sp-h2 bomn">特産品</h2>
@@ -103,10 +103,11 @@
                     </div>
                 </a>
             </li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt=""></li>
+
+            <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt="すだち"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.jpg') }}" alt="柚子"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg') }}" alt="わかめ"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt="竹ちくわ"></li>
         </ul>
 
         <a href="{{ route('goods') }}">
@@ -127,11 +128,11 @@
     </div>
     <div class="activity-wrapper">
         <ul class="activity">
-            <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="">
+            <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt="DMV"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt="ジップライン"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="藍染め">
             </li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt=""></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt="ロープーウェイ"></li>
             <li class="activity-title">
                 <a href=" {{ route('activity') }}">
                     <h2 class="sp-h2">体験</h2>
@@ -148,10 +149,10 @@
             </li>
 
 
-            <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/asiyu.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg') }}" alt=""></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg') }}" alt=""></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg') }}" alt="ボート"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/asiyu.jpg') }}" alt="足湯"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg') }}" alt="船"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg') }}" alt="手打ちうどん"></li>
         </ul>
         <a href="{{ route('activity') }}">
             <p class="mobilebtn btn">もっと見る</p>
@@ -166,7 +167,7 @@
 
     <h2 class="bomn">行ってきたんよ！</h2>
     <!-- たぬみちのイラスト -->
-    <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt=""></div>
+    <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt="ブログを書くたぬきのイラスト"></div>
 
 </div>
 
@@ -181,7 +182,7 @@
             @if ($blogImg != '')
             <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
             @else
-            <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="no img">
+            <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="no-img">
             @endif
 
             <h3>{!! $blog->title !!}</h3>
