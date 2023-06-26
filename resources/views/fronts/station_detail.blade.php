@@ -364,8 +364,8 @@
                 <h4 class="station-name deco-h4">道の駅&nbsp;{{ $station->station_name }}</h4>
 
                 <dl>
-                    <dt>〒{{ $station->zip_code }}&nbsp;</dt>
-                    <dd>{{ $station->address }}</dd>
+                    <dt>住所：</dt>
+                    <dd>〒{{ $station->zip_code }}&nbsp;{{ $station->address }}</dd>
 
                     <dt>TEL：</dt>
                     <dd>{{ $station->tel }}</dd>
