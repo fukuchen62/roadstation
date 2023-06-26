@@ -12,20 +12,18 @@
 
 {{-- CSS --}}
 @section('pageCss')
-    {{-- common CSS --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
+
     {{-- 該当ページのCSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/article.css') }}">
 
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-                                            .relatedarticle1 {
-                                                margin-bottom: 60px;
-                                                width: 48%;
-                                            }
-                                            } */
+                                                .relatedarticle1 {
+                                                    margin-bottom: 60px;
+                                                    width: 48%;
+                                                }
+                                                } */
     </style>
 
 @endsection
@@ -177,7 +175,7 @@
                 @endforeach
             </ul>
             <div class="side-img">
-                <img src="{{asset('assets/images/illustrations/tanuki-activity.png')}}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" alt="">
             </div>
         </section>
     </div>
