@@ -352,7 +352,7 @@ section {
     height: 120px;
     align-items: center;
     border-radius: 30px;
-    background-color: #E99787;
+    background-color: #ff8871;
     color: black;
     text-align: center;
     font-size: 20px;
@@ -395,8 +395,7 @@ section {
     width: 120px;
     height: 120px;
     border-radius: 30px;
-    background-color: #E99787;
-    color: black;
+    background-color: #fbae51;
     text-align: center;
     font-size: 20px;
     padding: 20px;
@@ -1025,7 +1024,6 @@ imgcontent-wrapper .heading {
         height: 253px;
         align-items: center;
         border-radius: 30px;
-        background-color: #E99787;
         color: black;
         text-align: center;
         font-size: 20px;
@@ -1096,8 +1094,7 @@ imgcontent-wrapper .heading {
         width: 253px;
         height: 253px;
         border-radius: 30px;
-        background-color: #E99787;
-        color: black;
+
         text-align: center;
         font-size: 20px;
         padding: 20px;
@@ -1217,7 +1214,7 @@ imgcontent-wrapper .heading {
         height: 250px;
         align-items: center;
         border-radius: 30px;
-        background-color: #ff8871;
+
         color: black;
         text-align: center;
         font-size: 20px;
