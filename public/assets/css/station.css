@@ -13,6 +13,10 @@ section {
     padding-bottom: 20px;
 }
 
+.catchcopy {
+    text-align: center;
+}
+
 /* グーグルマップ */
 
 iframe {
@@ -47,10 +51,11 @@ h3 {
 h4 {
     font-size: 20px;
     font-family: 'Kiwi Maru', serif;
+    text-align: center;
 }
 
 p {
-    text-align: center;
+    text-align: start;
 }
 
 /*
@@ -69,6 +74,7 @@ p {
 
 .width-row {
     margin-bottom: 40px;
+    text-align: start;
 }
 
 .bottom {
@@ -166,6 +172,7 @@ p {
 .speech p {
     margin: 0;
     padding: 0;
+    text-align: start;
 }
 
 /* 画像と文字を重ねる */
@@ -220,6 +227,7 @@ p {
     width: clamp(280px, 50vw, 380px);
     word-wrap: break-word;
     margin-top: 20px;
+    text-align: start;
 }
 
 .container {

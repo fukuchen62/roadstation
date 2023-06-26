@@ -23,7 +23,7 @@
         <section class="width">
             <div class="station-title">
                 <h2>道の駅&nbsp;{{ $station->station_name }}</h2>
-                <p>{{ $station->catchphrase }}</p>
+                <p class="catchcopy">{{ $station->catchphrase }}</p>
             </div>
 
             <!-- スライドショー -->
