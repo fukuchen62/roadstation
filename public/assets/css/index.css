@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-
-/* モバイル：背景 */
-body {
-    background-image: url(../images/index/bg_small.png)
-}
-
 /* 基本情報 */
 h2 {
     font-size: 2rem;
@@ -582,57 +576,6 @@ imgcontent-wrapper .heading {
     padding: 60px 20px;
 }
 
-/* デスクトップ：見出し配置 */
-.section-title01::before,
-.section-title03::before {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px dotted;
-
-    /* 位置 */
-    position: absolute;
-    bottom: 280px;
-    left: 0;
-}
-
-.section-title01:after,
-.section-title03:after {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px solid;
-
-    /* 位置 */
-    position: absolute;
-    top: 30px;
-    left: 0;
-}
-
-.section-title02::before {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px dotted;
-
-    /* 位置 */
-    position: absolute;
-    bottom: 280px;
-    right: 0;
-}
-
-
-.section-title02:after {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px solid;
-
-    /* 位置 */
-    position: absolute;
-    top: 30px;
-    right: 0;
-}
 
 .tanumiti-01 {
     position: absolute;
@@ -747,7 +690,6 @@ imgcontent-wrapper .heading {
 
     /* モバイル：背景 */
     body {
-        background-image: url(../images/index/bg.png);
         background-position: center center;
         background-size: cover;
     }
@@ -967,68 +909,6 @@ imgcontent-wrapper .heading {
             transform: scale(1.0, 1.0) translate(0%, -100%);
         }
     }
-
-
-    /* デスクトップ：見出し配置 */
-    .section-title01::before,
-    .section-title03::before {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px dotted;
-
-        /* 位置 */
-        position: absolute;
-        bottom: 100px;
-        left: 150px;
-
-        transform: rotate(-5deg);
-    }
-
-    .section-title01:after,
-    .section-title03:after {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px solid;
-
-        /* 位置 */
-        position: absolute;
-        top: 100px;
-        left: 150px;
-
-        transform: rotate(5deg);
-    }
-
-    .section-title02::before {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px dotted;
-
-        /* 位置 */
-        position: absolute;
-        bottom: 100px;
-        right: 150px;
-
-        transform: rotate(5deg);
-    }
-
-
-    .section-title02:after {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px solid;
-
-        /* 位置 */
-        position: absolute;
-        top: 100px;
-        right: 150px;
-
-        transform: rotate(-5deg);
-    }
-
 
     .goods-wrapper {
         margin: 0 auto;
