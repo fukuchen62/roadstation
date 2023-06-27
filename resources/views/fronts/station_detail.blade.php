@@ -346,7 +346,7 @@
                         alt="アクティビティ写真">
                     <div class="text frameborder">
                         <h4 class="deco-h4">{{ $activity->activity_name }}</h4>
-                        <p>料金 : {{ $activity->price }}<br>
+                        <p class="com-wrap">料金 : {{ $activity->price }}<br>
                             利用条件：
                             {{ $activity->conditions }}
                     </div>
