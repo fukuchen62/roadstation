@@ -33,9 +33,10 @@
         <section class="activity-delimiter">
             <div class="activity-group">
                 @if ($activity->picture1 != null)
-                    <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}" alt="">
+                    <img class="activity-photo" src="{{ asset('/storage/images/' . $activity->picture1) }}"
+                        alt="{{ $activity->activity_name }}写真">
                 @else
-                    <img class="activity-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+                    <img class="activity-photo" src="{{ asset('/storage/images/no-image.png') }}" alt="画像無し">
                 @endif
 
                 <div class="activity-text-group">

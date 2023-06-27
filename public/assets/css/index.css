@@ -1112,6 +1112,10 @@ imgcontent-wrapper .heading {
 
 @media screen and (min-width:901px) {
 
+    h2 {
+        font-size: 2.5rem;
+    }
+
     /* PC版：画像サイズ */
     .goods-title {
         width: 250px;
