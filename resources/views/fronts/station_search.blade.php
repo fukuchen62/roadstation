@@ -515,7 +515,7 @@
                     @endif
 
                     <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
-                    <p>{{ $road->catchphrase }}</p>
+                    {{-- <p>{{ $road->catchphrase }}</p> --}}
                     <dl>
                         <dt>営業時間：</dt>
                         <dd>{{ $road->business_hours }}</dd>
