@@ -408,7 +408,9 @@ dt {
     padding-top: 10px;
 }
 
-
+.activity-text {
+    text-align: start;
+}
 
 .icon-wrapper img {
     width: 30px;
