@@ -29,8 +29,8 @@
             }
 
             /* .pagination{
-                                width: 51%;
-                            } */
+                                        width: 51%;
+                                    } */
     </style>
 @endsection
 
@@ -66,9 +66,10 @@
                         @endforeach
 
                         @if ($blog->picture != null)
-                            <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+                            <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}"
+                                alt="ブログ「{{ $blog->title }}」の写真">
                         @else
-                            <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+                            <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="画像無し">
                         @endif
                         <h3>{{ $blog->title }}</h3>
                         <div class="update-information">

@@ -19,11 +19,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-                                                                                    .relatedarticle1 {
-                                                                                        margin-bottom: 60px;
-                                                                                        width: 48%;
-                                                                                    }
-                                                                                    } */
+                                                                                        .relatedarticle1 {
+                                                                                            margin-bottom: 60px;
+                                                                                            width: 48%;
+                                                                                        }
+                                                                                        } */
     </style>
 
 @endsection
@@ -67,9 +67,10 @@
             </div>
 
             @if ($blog->picture != null)
-                <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="">
+                <img class="blog-img" src="{{ asset('/storage/images/' . $blog->picture) }}"
+                    alt="ブログ「{{ $blog->title }}」の写真">
             @else
-                <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+                <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="画像無し">
             @endif
             {{--  {!! $blog->content !!}  --}}
             <div>
