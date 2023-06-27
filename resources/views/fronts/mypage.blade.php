@@ -30,7 +30,7 @@
                         <a href="{{ url('station-detail' . '?id=' . $station->id) }}">
                             <div class="card">
                                 <img src="{{ asset('/storage/images/' . $station->picture1) }}" width="250px"
-                                    height="200px" alt="{{ $station->station_name }}の写真">
+                                    height="200px" alt="道の駅{{ $station->station_name }}の写真">
 
                                 <h4>道の駅&nbsp;{{ $station->station_name }}</h4>
                                 {{-- <p>{!! $station->catchphrase !!}</p> --}}
