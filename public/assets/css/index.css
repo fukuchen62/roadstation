@@ -123,6 +123,7 @@ section {
 
 .news-mobilebtn {
     display: inline-block;
+    padding: 20px 80px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;
@@ -137,14 +138,19 @@ section {
 .article-list {
     align-items: baseline;
     text-align: center;
+    line-height: 1.5rem;
 }
 
+/* 記事アンダーライン */
 .article-list li {
-    /* padding: 10px; */
-    /* text-align: left; */
-    padding-bottom: 10px;
+    border-bottom: 1px solid #e3c8c1;
+    padding: 20px 0;
 }
 
+/* 記事アンダーライン */
+.article-list li a span {
+    font-weight: bold;
+}
 
 /* エリアマップを囲う要素 */
 .area-map {
@@ -793,12 +799,13 @@ imgcontent-wrapper .heading {
         padding: 30px;
         margin-bottom: 30px;
         gap: 5%;
-        align-items: inherit;
+        align-items: center;
     }
 
     .pcbtn {
         display: block;
         width: 100%;
+        padding: 20px;
     }
 
 
@@ -1195,12 +1202,6 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-    h2 {
-        font-size: 3rem;
-    }
-
-
-
     .goods-wrapper {
         margin: 0 auto;
         width: 100%;
@@ -1262,6 +1263,11 @@ imgcontent-wrapper .heading {
         padding: 20px;
         position: relative;
     }
+
+    .article-list {
+        width: 65%;
+    }
+
 
 }
 
@@ -1327,6 +1333,11 @@ imgcontent-wrapper .heading {
         align-items: center;
     }
 
+    /* パソコン版：見出し幅 */
+    .news-left {
+        width: 35%;
+    }
+
     /* ニュースボタン */
     .news-pcbtn {
         text-align: center;
@@ -1390,8 +1401,7 @@ imgcontent-wrapper .heading {
     }
 
     .pcbtn {
-        /* margin-top: 50px; */
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
         display: inline-block;
     }
 
