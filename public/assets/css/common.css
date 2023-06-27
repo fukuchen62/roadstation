@@ -136,18 +136,18 @@ svg {
     height: 100%;
     padding: 20px;
     padding-top: 100px;
-    background-color: #fffbf1;
+    background-color: #ffcc33;
+    border-radius: 0 0 0 100px;
     z-index: 100;
 }
 
 /* ハンバーガーメニューのリスト */
 #wrapper nav ul li {
-    color: #36725a;
+    color: #000000;
     font-size: 24px;
     padding: 20px 20px;
     margin: 0 10px;
-    border-bottom: 2px dotted #a7d28d;
-    background-color: #fff;
+    border-bottom: 2px dotted #ffffff;
 }
 
 #wrapper nav ul li img {
@@ -685,6 +685,10 @@ footer {
 
 
 @media screen and (min-width: 601px) {
+
+    #wrapper nav {
+        width: 70%;
+    }
 
     /* 各ページのキービジュアル（TOPを除く） */
     svg {
