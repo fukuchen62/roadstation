@@ -134,7 +134,7 @@ h4 {
 
 .detail-photo {
     border-radius: 20px;
-    max-width: 550px;
+    max-width: 350px;
     width: 100%;
     margin: 20px auto;
     object-fit: cover;
