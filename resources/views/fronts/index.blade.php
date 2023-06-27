@@ -32,7 +32,7 @@
 {{-- メイン --}}
 @section('content')
 <section class="news-box">
-    <div>
+    <div class="news-left">
         <h2 class="news-title">ニュース</h2>
         <a class="pcbtn btn" href="{{ route('news') }}">もっと見る</a>
     </div>
@@ -47,7 +47,7 @@
             <li>
                 <a href="{{ url('news-detail') }}?id={{ $news->id }}&news_category_id={{ $news->news_category_id }}">
                     {{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
-                    {!! $news->title !!}</a>
+                    <span>{!! $news->title !!}</span></a>
         </ul>
         @endforeach
     </ul>
@@ -79,7 +79,7 @@
     <div class="section-title01">
         <h2 class="bomn">こんなんあるで！</h2>
         <!-- たぬみちのイラスト -->
-        <div><img src=" {{ asset('assets/images/illustrations/tanumiti_gurumet.gif') }}" width="200px" alt="イラスト"></div>
+        <!-- <div><img src=" {{ asset('assets/images/illustrations/tanumiti_gurumet.gif') }}" width="200px" alt="イラスト"></div> -->
     </div>
 
     <div class="goods-wrapper">
@@ -121,8 +121,8 @@
         <h2 class="bomn mobile-title">こんなんやってみ！</h2>
 
         <!-- たぬみちのイラスト -->
-        <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
-        </div>
+        <!-- <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
+        </div> -->
 
         <h2 class="bomn pc-title">こんなんやってみ！</h2>
     </div>
@@ -167,7 +167,7 @@
 
     <h2 class="bomn">行ってきたんよ！</h2>
     <!-- たぬみちのイラスト -->
-    <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt="ブログを書くたぬきのイラスト"></div>
+    <!-- <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt="ブログを書くたぬきのイラスト"></div> -->
 
 </div>
 

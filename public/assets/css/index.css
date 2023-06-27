@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-
-/* モバイル：背景 */
-body {
-    background-image: url(../images/index/bg_small.png)
-}
-
 /* 基本情報 */
 h2 {
     font-size: 2rem;
@@ -123,6 +117,7 @@ section {
 
 .news-mobilebtn {
     display: inline-block;
+    padding: 20px 80px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;
@@ -137,14 +132,19 @@ section {
 .article-list {
     align-items: baseline;
     text-align: center;
+    line-height: 1.5rem;
 }
 
+/* 記事アンダーライン */
 .article-list li {
-    /* padding: 10px; */
-    /* text-align: left; */
-    padding-bottom: 10px;
+    border-bottom: 1px solid #e3c8c1;
+    padding: 20px 0;
 }
 
+/* 記事アンダーライン */
+.article-list li a span {
+    font-weight: bold;
+}
 
 /* エリアマップを囲う要素 */
 .area-map {
@@ -576,57 +576,6 @@ imgcontent-wrapper .heading {
     padding: 60px 20px;
 }
 
-/* デスクトップ：見出し配置 */
-.section-title01::before,
-.section-title03::before {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px dotted;
-
-    /* 位置 */
-    position: absolute;
-    bottom: 280px;
-    left: 0;
-}
-
-.section-title01:after,
-.section-title03:after {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px solid;
-
-    /* 位置 */
-    position: absolute;
-    top: 30px;
-    left: 0;
-}
-
-.section-title02::before {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px dotted;
-
-    /* 位置 */
-    position: absolute;
-    bottom: 280px;
-    right: 0;
-}
-
-
-.section-title02:after {
-    content: "";
-    width: 100%;
-    height: 5px;
-    border: #ffb844 3px solid;
-
-    /* 位置 */
-    position: absolute;
-    top: 30px;
-    right: 0;
-}
 
 .tanumiti-01 {
     position: absolute;
@@ -741,7 +690,6 @@ imgcontent-wrapper .heading {
 
     /* モバイル：背景 */
     body {
-        background-image: url(../images/index/bg.png);
         background-position: center center;
         background-size: cover;
     }
@@ -793,12 +741,13 @@ imgcontent-wrapper .heading {
         padding: 30px;
         margin-bottom: 30px;
         gap: 5%;
-        align-items: inherit;
+        align-items: center;
     }
 
     .pcbtn {
         display: block;
         width: 100%;
+        padding: 20px;
     }
 
 
@@ -960,68 +909,6 @@ imgcontent-wrapper .heading {
             transform: scale(1.0, 1.0) translate(0%, -100%);
         }
     }
-
-
-    /* デスクトップ：見出し配置 */
-    .section-title01::before,
-    .section-title03::before {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px dotted;
-
-        /* 位置 */
-        position: absolute;
-        bottom: 100px;
-        left: 150px;
-
-        transform: rotate(-5deg);
-    }
-
-    .section-title01:after,
-    .section-title03:after {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px solid;
-
-        /* 位置 */
-        position: absolute;
-        top: 100px;
-        left: 150px;
-
-        transform: rotate(5deg);
-    }
-
-    .section-title02::before {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px dotted;
-
-        /* 位置 */
-        position: absolute;
-        bottom: 100px;
-        right: 150px;
-
-        transform: rotate(5deg);
-    }
-
-
-    .section-title02:after {
-        content: "";
-        width: 40%;
-        height: 5px;
-        border: #ffb844 3px solid;
-
-        /* 位置 */
-        position: absolute;
-        top: 100px;
-        right: 150px;
-
-        transform: rotate(-5deg);
-    }
-
 
     .goods-wrapper {
         margin: 0 auto;
@@ -1195,12 +1082,6 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-    h2 {
-        font-size: 3rem;
-    }
-
-
-
     .goods-wrapper {
         margin: 0 auto;
         width: 100%;
@@ -1262,6 +1143,11 @@ imgcontent-wrapper .heading {
         padding: 20px;
         position: relative;
     }
+
+    .article-list {
+        width: 65%;
+    }
+
 
 }
 
@@ -1327,6 +1213,11 @@ imgcontent-wrapper .heading {
         align-items: center;
     }
 
+    /* パソコン版：見出し幅 */
+    .news-left {
+        width: 35%;
+    }
+
     /* ニュースボタン */
     .news-pcbtn {
         text-align: center;
@@ -1390,8 +1281,7 @@ imgcontent-wrapper .heading {
     }
 
     .pcbtn {
-        /* margin-top: 50px; */
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
         display: inline-block;
     }
 

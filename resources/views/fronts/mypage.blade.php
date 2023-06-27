@@ -33,7 +33,7 @@
                                     height="200px" alt="道の駅の画像">
 
                                 <h4>道の駅&nbsp;{{ $station->station_name }}</h4>
-                                <p>{!! $station->catchphrase !!}</p>
+                                {{-- <p>{!! $station->catchphrase !!}</p> --}}
 
                                 <dl>
                                     <dt>営業時間：</dt>
