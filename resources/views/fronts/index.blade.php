@@ -59,7 +59,7 @@
     <section class="area-map">
         <!-- 木のイラスト -->
         <!-- <img class="woods-01 scroll-fade-up" src="{{ asset('assets/images/index/wood_01.png') }}" alt="木のイラスト">
-        <img class="woods-02 scroll-fade-up" src=" {{ asset('assets/images/index/wood_02.png') }}" alt="木のイラスト"> -->
+                    <img class="woods-02 scroll-fade-up" src=" {{ asset('assets/images/index/wood_02.png') }}" alt="木のイラスト"> -->
         <div class="map">
 
             <div class="map">
@@ -94,10 +94,10 @@
                         <h2 class="sp-h2 bomn">特産品</h2>
                         <!-- <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p> -->
 
-                        <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="" width="130px"
+                        <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="130px"
                             height="130px" class="anime1">
 
-                        <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="" width="80px"
+                        <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="jif画像にんじん" width="80px"
                             height="80px" class="anime4">
 
                         <!-- ボタン -->
@@ -125,7 +125,7 @@
 
             <!-- たぬみちのイラスト -->
             <!-- <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
-            </div> -->
+                        </div> -->
 
             <h2 class="bomn pc-title">こんなんやってみ！</h2>
         </div>
@@ -141,10 +141,10 @@
                         <h2 class="sp-h2">体験</h2>
                         <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
 
-                        <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="" width="100px"
+                        <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="動くキャラクター画像" width="100px"
                             height="100px" class="anime2">
 
-                        <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="" width="80px"
+                        <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="jif画像うどん" width="80px"
                             height="80px" class="anime3">
 
                         <div class="sp-btn">
@@ -200,9 +200,10 @@
                     @endforeach
 
                     @if ($blogImg != '')
-                        <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="no-img">
+                        <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}"
+                            alt="ブログ「{{ $blog->title }}」の写真">
                     @else
-                        <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="no-img">
+                        <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="画像無し">
                     @endif
 
                     <h3>{!! $blog->title !!}</h3>
