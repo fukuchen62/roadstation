@@ -508,10 +508,10 @@
 
                     @if ($road->picture1)
                         <img class="card-img" src="{{ asset('/storage/images/' . $road->picture1) }}" width="250px"
-                            height="200px" alt="道の駅の画像">
+                            height="200px" alt="{{ $road->station_name }}の画像">
                     @else
                         <img src="{{ asset('/storage/images/no-image.png') }}" width="250px" height="200px"
-                            alt="道の駅の画像">
+                            alt="画像無し">
                     @endif
 
                     <h4>道の駅&nbsp;{{ $road->station_name }}</h4>
