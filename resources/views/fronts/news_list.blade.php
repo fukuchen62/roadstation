@@ -30,7 +30,8 @@
                             href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}">
 
                             @if ($new->picture)
-                                <img class="card-img" src="{{ asset('/storage/images/' . $new->picture) }}" alt="no-img">
+                                <img class="card-img" src="{{ asset('/storage/images/' . $new->picture) }}"
+                                    alt="{{ $new->title }}の画像">
                             @else
                                 <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="no-img">
                             @endif
@@ -81,7 +82,7 @@
                 @endforeach
             </ul>
             <div class="side-img">
-                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" alt="キャラクター画像">
             </div>
         </section>
 

@@ -29,9 +29,12 @@
             <!-- スライドショー -->
             <div class="slide-items">
 
-                <div><img src="{{ asset('/storage/images/' . $station->picture1) }}" alt="道の駅写真1"></div>
-                <div><img src="{{ asset('/storage/images/' . $station->picture2) }}" alt="道の駅写真2"></div>
-                <div><img src="{{ asset('/storage/images/' . $station->picture3) }}" alt="道の駅写真3"></div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture1) }}" alt="{{ $station->station_name }}の写真1">
+                </div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture2) }}" alt="{{ $station->station_name }}の写真2">
+                </div>
+                <div><img src="{{ asset('/storage/images/' . $station->picture3) }}"
+                        alt="{{ $station->station_name }}の写真3"></div>
 
             </div>
 
@@ -74,7 +77,7 @@
                             <!-- 画像左と文字を横に並べる。CSS -->
                             <div class="container reverse">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
-                                    alt="農産物写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -87,7 +90,7 @@
                             <!-- 画像右と文字を横に並べる。CSS -->
                             <div class="container">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" width="5472" height="3648"
-                                    class="img frameborder" alt="農産物写真">
+                                    class="img frameborder" alt="{{ $goods->goods_name }}の写真">
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -127,7 +130,7 @@
                             <!-- 画像左と文字を横に並べる。CSS -->
                             <div class="container reverse">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
-                                    alt="水産物写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -140,7 +143,7 @@
                             <!-- 画像右と文字を横に並べる。CSS -->
                             <div class="container">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
-                                    alt="水産物写真">
+                                    alt="{{ $goods->goods_name }}の写真">
 
                                 <div class="text frameborder">
 
@@ -187,7 +190,7 @@
                             <!-- 画像左と文字を横に並べる。CSS -->
                             <div class="container reverse">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
-                                    alt="工芸品写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -200,7 +203,7 @@
                             <!-- 画像右と文字を横に並べる。CSS -->
                             <div class="container">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
-                                    alt="工芸品写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -243,7 +246,7 @@
                             <!-- 画像左と文字を横に並べる。CSS -->
                             <div class="container reverse">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
-                                    alt="グルメ写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -256,7 +259,7 @@
                             <!-- 画像右と文字を横に並べる。CSS -->
                             <div class="container">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img frameborder"
-                                    alt="グルメ写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -297,7 +300,7 @@
                             <!-- 画像左と文字を横に並べる。CSS -->
                             <div class="container reverse">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img  frameborder"
-                                    alt="その他写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text  frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -310,7 +313,7 @@
                             <!-- 画像右と文字を横に並べる。CSS -->
                             <div class="container">
                                 <img src="{{ asset('/storage/images/' . $goods->picture) }}" class="img  frameborder"
-                                    alt="その他写真">
+                                    alt="{{ $goods->goods_name }}の写真">
                                 <div class="text  frameborder">
                                     <h4 class="deco-h4">{{ $goods->goods_name }}</h4>
                                     <p>{{ $goods->price }}</p>
@@ -343,7 +346,7 @@
                 </div>
                 <section>
                     <img src="{{ asset('/storage/images/' . $activity->picture1) }}" class="activity  frameborder"
-                        alt="アクティビティ写真">
+                        alt="{{ $activity->activity_name }}の写真">
                     <div class="text frameborder">
                         <h4 class="deco-h4">{{ $activity->activity_name }}</h4>
                         <p class="activity-text">料金 : {{ $activity->price }}<br>
