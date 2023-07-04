@@ -10,7 +10,7 @@
 @section('key_visual')
     <!-- キービジュアル -->
     <div class="kv">
-        <figure><img src="{{ asset('assets/images/news.list/news-kv.jpg') }}" alt="ニュース詳細ページ画像"></figure>
+        <figure><img src="{{ asset('assets/images/news.list/news-kv.jpg') }}" alt="キービジュアル"></figure>
     </div>
 @endsection
 
@@ -38,9 +38,10 @@
             </div>
 
             @if ($news_item->picture)
-                <img class="blog-img" src="{{ asset('/storage/images/' . $news_item->picture) }}" alt="">
+                <img class="blog-img" src="{{ asset('/storage/images/' . $news_item->picture) }}"
+                    alt="{{ $news_item->title }}の画像">
             @else
-                <img class="blog-img" src="{{ asset('/storage/images/no-image.png') }}" alt="">
+                <img class="blog-img" src="{{ asset('/storage/images/no-image.png') }}" alt="画像無し">
             @endif
 
             <p class="blog-text">
@@ -137,14 +138,15 @@
                 @foreach ($news_categories as $category)
                     <li class="category-name"><a
                             href="{{ url('news') }}?news_category_id={{ $category->id }}">{{ $category->category_name }}
-                            ({{ $category->getCount() }})</a>
+                            ({{ $category->getCount() }})
+                        </a>
                     </li>
                     <li></li>
                 @endforeach
             </ul>
 
             <div class="side-img">
-                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-gourmet.png') }}" alt="キャラクター画像">
             </div>
         </section>
     </div>
