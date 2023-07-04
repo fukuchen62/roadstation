@@ -19,11 +19,11 @@
     <style>
         /* 関連記事 */
         /* @media screen and (min-width:901px) {
-                                                                                        .relatedarticle1 {
-                                                                                            margin-bottom: 60px;
-                                                                                            width: 48%;
-                                                                                        }
-                                                                                        } */
+                                                                                            .relatedarticle1 {
+                                                                                                margin-bottom: 60px;
+                                                                                                width: 48%;
+                                                                                            }
+                                                                                            } */
     </style>
 
 @endsection
@@ -196,7 +196,7 @@
                 @endforeach
             </ul>
             <div class="side-img">
-                <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" alt="キャラクター画像">
             </div>
         </section>
     </div>

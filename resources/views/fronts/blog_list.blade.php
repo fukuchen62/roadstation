@@ -29,8 +29,8 @@
             }
 
             /* .pagination{
-                                        width: 51%;
-                                    } */
+                                            width: 51%;
+                                        } */
     </style>
 @endsection
 
@@ -100,7 +100,7 @@
                 @endforeach
             </ul>
             <div class="side-img">
-                <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" alt="">
+                <img src="{{ asset('assets/images/illustrations/tanuki-activity.png') }}" alt="キャラクター画像">
             </div>
         </section>
 
