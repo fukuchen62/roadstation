@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+#east:hover {
+    opacity: 0.7;
+}
+
 .factory {
     text-align: left;
     position: absolute;
@@ -56,7 +60,7 @@ p {
 }
 
 /* 各ページのキービジュアル（TOPを除く） */
-svg {
+#kv {
     position: absolute;
     top: calc(50% - 35vh);
     left: calc(50% - 50vw);
@@ -691,7 +695,7 @@ footer {
     }
 
     /* 各ページのキービジュアル（TOPを除く） */
-    svg {
+    #kv {
         position: absolute;
         top: calc(50% - 200px);
         left: calc(50% - 350px);

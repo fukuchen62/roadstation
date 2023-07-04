@@ -53,7 +53,7 @@
     <div class="top-kv">
 
         <!-- kvロゴ -->
-        <svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1034.6 580.24" class="zoomIn">
+        <svg id="kv" data-name="kv" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1034.6 580.24" class="zoomIn">
             <defs>
                 <style>
                     .cls-1 {

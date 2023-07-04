@@ -8,229 +8,303 @@
 
 {{-- 該当ページのCSS --}}
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick-theme.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick-theme.css') }}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
-    <!-- フォント設定 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+<!-- フォント設定 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
-    <!-- ファビコン -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.ico') }}">
+<!-- ファビコン -->
+<link rel="shortcut icon" href="{{ asset('assets/images/favicon/favicon.ico') }}">
 
-    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 @endsection
 
 @section('key_visual')
-    <p class="catchcopy koresae">これさえ見れば徳島で</p>
-    <p class="catchcopy sakanaga">道の駅を楽しめる</p>
+<p class="catchcopy koresae">これさえ見れば徳島で</p>
+<p class="catchcopy sakanaga">道の駅を楽しめる</p>
 @endsection
 
 {{-- メイン --}}
 @section('content')
-    <section class="news-box">
-        <div class="news-left">
-            <h2 class="news-title">ニュース</h2>
-            <a class="pcbtn btn" href="{{ route('news') }}">もっと見る</a>
-        </div>
+<section class="news-box">
+    <div class="news-left">
+        <h2 class="news-title">ニュース</h2>
+        <a class="pcbtn btn" href="{{ route('news') }}">もっと見る</a>
+    </div>
 
-        <!-- 記事リスト -->
-        <ul class="article-list">
-            @foreach ($news as $news)
-                <ul>
-                    @php
-                        $ts = strtotime($news->created_at);
-                    @endphp
-                    <li>
-                        <a
-                            href="{{ url('news-detail') }}?id={{ $news->id }}&news_category_id={{ $news->news_category_id }}">
-                            {{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
-                            <span>{!! $news->title !!}</span></a>
-                </ul>
-            @endforeach
+    <!-- 記事リスト -->
+    <ul class="article-list">
+        @foreach ($news as $news)
+        <ul>
+            @php
+            $ts = strtotime($news->created_at);
+            @endphp
+            <li>
+                <a href="{{ url('news-detail') }}?id={{ $news->id }}&news_category_id={{ $news->news_category_id }}">
+                    {{ date('Y年m月d日', $ts) }}　　{{ $news->newsCategory->category_name }}<br>
+                    <span>{!! $news->title !!}</span></a>
         </ul>
-        <p class="news-mobilebtn btn"><a href="{{ route('news') }}">もっと見る</a></p>
-    </section>
+        @endforeach
+    </ul>
+    <p class="news-mobilebtn btn"><a href="{{ route('news') }}">もっと見る</a></p>
+</section>
 
 
-    <section class="area-map">
-        <!-- 木のイラスト -->
-        <!-- <img class="woods-01 scroll-fade-up" src="{{ asset('assets/images/index/wood_01.png') }}" alt="木のイラスト">
+<section class="area-map">
+    <!-- 木のイラスト -->
+    <!-- <img class="woods-01 scroll-fade-up" src="{{ asset('assets/images/index/wood_01.png') }}" alt="木のイラスト">
                     <img class="woods-02 scroll-fade-up" src=" {{ asset('assets/images/index/wood_02.png') }}" alt="木のイラスト"> -->
+    <!-- <div class="map">
+
         <div class="map">
-
-            <div class="map">
-                <img class="tokusimamap" src="{{ asset('assets/images/illustrations/tokushima_map.png') }}" alt="地図">
-                <a class="east" href="{{ route('areasearch') }}?area_id=1">東部</a>
-                <a class="west" href="{{ route('areasearch') }}?area_id=2">西部</a>
-                <a class="south" href="{{ route('areasearch') }}?area_id=3">南部</a>
-            </div>
-            <div>
-                <a class="btn" href="{{ route('ditailsearch') }}">詳細検索</a>
-            </div>
-
-    </section>
-
-    <!-- 特産品＆体験 -->
-    <!-- 特産品 -->
-    <section>
-        <div class="section-title01">
-            <h2 class="bomn">こんなんあるで！</h2>
-            <!-- たぬみちのイラスト -->
-            <!-- <div><img src=" {{ asset('assets/images/illustrations/tanumiti_gurumet.gif') }}" width="200px" alt="イラスト"></div> -->
+            <img class="tokusimamap" src="{{ asset('assets/images/illustrations/tokushima_map.png') }}" alt="地図">
+            <a class="east" href="{{ route('areasearch') }}?area_id=1">東部</a>
+            <a class="west" href="{{ route('areasearch') }}?area_id=2">西部</a>
+            <a class="south" href="{{ route('areasearch') }}?area_id=3">南部</a>
         </div>
 
-        <div class="goods-wrapper">
-            <ul class="goods">
-                <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg') }}" alt="みかん"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt="鳴門金時"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg') }}" alt="れんこん"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt="鱧"></li>
-                <li class="goods-title">
-                    <a href="{{ route('goods') }}">
-                        <h2 class="sp-h2 bomn">特産品</h2>
-                        <!-- <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p> -->
+    </div> -->
 
-                        <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="130px"
-                            height="130px" class="anime1">
+    <!-- エリア検索マップ -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768">
+        <defs>
+            <style>
+                .cls-1,
+                .cls-2 {
+                    fill: #fff;
+                }
 
-                        <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="jif画像にんじん" width="80px"
-                            height="80px" class="anime4">
+                .cls-3 {
+                    fill: #f99;
+                }
 
-                        <!-- ボタン -->
-                        <div class="sp-btn">
-                            もっと見る
-                        </div>
-                    </a>
-                </li>
+                .cls-4 {
+                    fill: #f96;
+                }
 
-                <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt="すだち"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.jpg') }}" alt="柚子"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg') }}" alt="わかめ"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt="竹ちくわ"></li>
-            </ul>
+                .cls-5 {
+                    fill: #f66;
+                }
 
-            <a href="{{ route('goods') }}">
-                <p class="btn mobile-btn">もっと見る</p>
-            </a>
-        </div>
+                .cls-5,
+                .cls-2,
+                .cls-6,
+                .cls-7 {
+                    font-family: YuGothic-Bold, 'Yu Gothic';
+                    font-size: 57px;
+                    font-weight: 700;
+                }
 
-        <!-- 体験 -->
-        <div class="section-title02">
+                .cls-8 {
+                    fill: #0c9;
+                    stroke: #fff;
+                    stroke-miterlimit: 10;
+                    stroke-width: .5px;
+                }
 
-            <h2 class="bomn mobile-title">こんなんやってみ！</h2>
+                .cls-6 {
+                    fill: #096;
+                }
 
-            <!-- たぬみちのイラスト -->
-            <!-- <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
+                .cls-7 {
+                    fill: #f63;
+                }
+            </style>
+        </defs>
+        <g id="east">
+            <path class="cls-8" d="m948.78,295.05c-3.82-5.11-4.49-11.85-4.84-18.23-1.51-26.91.02-54.45,9.33-79.74,3.53-9.6,8.15-18.78,11.41-28.47,5.79-17.2,7.17-35.55,7.53-53.7l-.81.34c-4.88-5.71-11.28-10.11-18.36-12.62-2.77-.98-5.81-1.68-8.62-.82-6.48,1.98-8.15,10.6-13.58,14.67-3.55,2.66-8.27,3.04-12.71,3.18-7.2.22-14.42.08-21.61-.44-3.31-.24-6.79-.53-9.79.88-1.99.93-3.57,2.52-5.26,3.91-4.89,4.02-10.99,6.55-17.29,7.18-5.08.5-10.36-.19-15.19,1.44-.93.32-1.86.73-2.56,1.43-.84.85-1.26,2.02-1.57,3.18-1.82,6.81-.72,14.09-2.03,21.02-1.31,6.93-6.59,14.2-13.62,13.68-4.04-.3-7.39-3.07-10.57-5.58-5.85-4.62-13.18-9-20.35-6.94-6.72,1.93-11.67,9.19-18.65,8.86l-.61.03c-12.53-2.77-25.06-5.53-37.6-8.3-4.67-1.03-9.48-2.12-13.4-4.88-3.61-2.54-7.42-6.64-11.54-5.07-1.44.55-2.53,1.72-3.57,2.85-3.9,4.21-8.51,8.52-13.6,10.97,1.23,3.37,2.07,6.86,2.21,10.44.68,17.69-15.18,31.42-20.54,48.3-3.41,10.74-2.41,22.32-1.37,33.54,1.2,13.04,2.41,26.08,3.61,39.11.31,3.36.68,6.88,2.62,9.64,1.61,2.28,4.17,6.29,6.64,7.6,7.81,4.17,20.46,3.65,29,6-14.2,17-18.94,32.67-19.48,47.39-.09,2.55-1.15,5.63.96,7.07.83.57,1.88.69,2.88.78,11.25,1,15.43-9.62,26.64-8.25,11.21,1.37,30.16,15.56,35.23,25.66,3.16,6.29,3.69,14.32,9.18,18.72,2.95,2.36,6.81,3.18,10.53,3.83,16.99,2.99,34.33,4.03,51.56,3.07,4.59-.25,9.78-.97,12.47-4.7,2.5-3.47,1.86-8.19,2.61-12.4,1.39-7.85,7.65-13.85,13.95-18.73,13.31-10.32,28.38-18.36,44.37-23.67,5.76-1.91,11.67-3.48,17.13-6.12,3.23-1.56,6.27-3.49,9.24-5.51,13.27-9.05,25.08-20.12,35.78-32.1-5.55-3.63-11.1-7.26-16.66-10.89-3.33-2.18-6.73-4.42-9.11-7.6Z" />
+            <text id="east-shadow" class="cls-6" transform="translate(764.18 288.53)">
+                <tspan x="0" y="0">東部</tspan>
+            </text>
+            <text id="east-2" data-name="east" class="cls-2" transform="translate(760.82 285.53)">
+                <tspan x="0" y="0">東部</tspan>
+            </text>
+        </g>
+        <g id="south">
+            <g>
+                <path class="cls-4" d="m598.69,511.6c5.25,14.2,13.23,29.87,27.96,33.35,7.18,1.7,14.8.08,22.02,1.61,12.13,2.57,21.34,14.98,20.28,27.34-.41,4.78-2.14,9.34-3.19,14.02-3.15,14.1.27,29.53,9.09,40.98,9.46,12.28,24.06,19.39,38.52,24.98,13.65,5.28,27.67,9.58,41.93,12.88.79.18,1.62.36,2.41.19,2.77-.61,2.93-4.39,3.09-7.21,1.2-21.38,35.03-27.62,38.75-48.71.83-4.68-.03-9.57,1.06-14.21,2.36-10.05,12.71-15.74,22.03-20.19,13.59-6.49,27.18-12.99,40.77-19.48,7.95-3.8,15.93-7.61,23.31-12.43,18.86-12.32,32.92-30.57,46.6-48.47l-.21-.71c11.74-17.27,33.29-24.97,53.89-28.41,2.75-.46,5.59-.89,8-2.29,5.85-3.41,7.44-11.37,12.72-15.62,3.09-2.49,7.11-3.44,10.61-5.3,3.5-1.87,6.74-5.42,6.04-9.32-.95-5.28-7.71-6.74-13.07-7.03-6.15-.33-12.3-.66-18.46-1-1.86-.1-3.89-.26-5.27-1.51-1.13-1.02-1.61-2.55-2.03-4.01-2.77-9.41-5.17-20.69,1.24-28.11,3.09-3.58,7.69-5.45,11.35-8.45,6.53-5.36,9.55-13.83,11.82-21.97,1.86-6.68,3.4-13.96.81-20.39-2.59-6.44-8.72-10.62-14.53-14.41-7.23-4.72-14.46-9.45-21.69-14.17-10.7,11.98-22.51,23.05-35.78,32.1-2.97,2.02-6.01,3.95-9.24,5.51-5.46,2.64-11.37,4.21-17.13,6.12-15.99,5.3-31.06,13.34-44.37,23.67-6.3,4.89-12.56,10.88-13.95,18.73-.75,4.21-.11,8.93-2.61,12.4-2.69,3.73-7.88,4.45-12.47,4.7-17.23.95-34.56-.08-51.56-3.07-3.72-.65-7.58-1.47-10.53-3.83-5.5-4.4-6.03-12.43-9.18-18.72-5.06-10.1-24.01-24.29-35.23-25.66-8.74-1.07-13.21,5.15-20.08,7.47l-.15,2.28c-2.48,7.21-6.47,13.89-11.62,19.51-1.24,1.35-2.61,2.68-4.31,3.36-1.8.71-3.8.64-5.73.62-22.24-.32-44.53,6.61-62.67,19.49-4.02,2.85-7.91,6.03-12.54,7.71-3.24,1.17-6.7,1.56-10.09,2.18-10.02,1.84-19.53,5.84-28.13,11.34,2.08,3.12,3.2,7.29,3.98,11.04,4.32,20.77,10.19,41.21,17.54,61.11Z" />
+                <path class="cls-1" d="m597.97,511.8c3.99,10.72,9.13,22.2,18.58,29.21,5.14,3.82,11.06,5.34,17.4,5.53,7.58.22,15.12-.43,21.86,3.7,5.54,3.39,9.75,8.95,11.54,15.19,2.15,7.47-.4,14.27-2.13,21.51-3.1,13.01-.76,27.13,6.31,38.48s19.31,19.42,31.67,25.02c14.34,6.51,29.55,11.39,44.79,15.3,1.95.5,3.9.98,5.85,1.44,1.46.34,3.08.88,4.56.33,2-.74,2.64-2.98,2.91-4.88.34-2.43.29-4.84.99-7.22.61-2.07,1.58-4.02,2.77-5.82,5.25-7.95,14.01-13.01,21.28-18.89s13.77-13.07,14.3-23.02c.22-4.08-.19-8.23,1.1-12.17,1.01-3.09,2.91-5.8,5.21-8.07,4.53-4.49,10.36-7.44,16.05-10.16,15.32-7.35,30.7-14.56,45.99-21.98,7.1-3.45,14.12-7.11,20.61-11.62,5.74-4,11.07-8.56,16.06-13.45,5.24-5.15,10.11-10.67,14.78-16.34,2.34-2.85,4.64-5.74,6.9-8.65.98-1.25,1.95-2.51,2.92-3.77,1.09-1.42,2.65-2.94,3.47-4.53.21-.4.19-.51.31-.88.04-.13-.19-.41-.16-.53,0-.02.45-.43.45-.43.89-1.53,2.24-2.95,3.42-4.27,2.19-2.43,4.61-4.65,7.2-6.65,5.32-4.1,11.33-7.27,17.57-9.73s12.54-4.2,19.01-5.54c6.12-1.26,12.92-1.34,17.33-6.38,3.93-4.5,5.7-10.74,11.06-13.92s12.79-4.12,14.92-10.68c1.68-5.17-2.52-8.8-7.03-10.11-2.83-.83-5.78-.97-8.7-1.12-4.25-.23-8.5-.46-12.74-.69-1.98-.11-4.19,0-6.13-.49-2.62-.66-3.38-2.66-4.06-4.99-.94-3.19-1.77-6.43-2.27-9.73-1.07-7.03-.33-14.46,5.44-19.3,2.7-2.27,5.91-3.83,8.7-5.99,2.47-1.92,4.53-4.29,6.21-6.92,3.64-5.71,5.66-12.47,7.26-19,1.64-6.73,2.37-14.09-1.3-20.31-3.3-5.6-9.02-9.24-14.33-12.71-6.98-4.56-13.96-9.12-20.94-13.69-.26-.17-.7-.12-.91.12-8.04,8.97-16.66,17.45-26.1,24.95-4.8,3.82-9.81,7.51-15.12,10.6s-11.44,5.08-17.45,6.98c-11.17,3.54-21.93,8.18-32.03,14.13-4.99,2.94-9.81,6.17-14.42,9.67-3.91,2.97-7.75,6.13-10.78,10.04s-4.72,8.22-5.14,13.17c-.25,2.88-.23,6.01-1.78,8.57s-4.45,3.78-7.31,4.36c-5.75,1.17-12,.91-17.83.9-6.33-.01-12.65-.29-18.95-.84s-13.02-1.4-19.47-2.55c-5.7-1.01-10.85-2.67-13.77-8.06-2.32-4.28-3.14-9.18-5.21-13.57-1.56-3.3-3.95-6.19-6.46-8.81-6.61-6.88-15-13.02-24-16.35-4.18-1.55-8.6-2.17-12.9-.68-4.68,1.61-8.42,5.07-13.08,6.73-.33.12-.53.37-.55.72-.28,4.26-2.52,8.28-4.66,11.92-1.32,2.25-2.79,4.4-4.41,6.44s-3.57,4.65-6.02,5.85-5.31.78-7.89.79-5.37.13-8.04.35c-4.91.4-9.79,1.14-14.59,2.21-10.04,2.24-19.77,5.92-28.76,10.92-9.18,5.09-16.88,13.16-27.47,15.13-5.97,1.11-11.78,2.23-17.49,4.4s-10.62,4.72-15.53,7.83c-.33.21-.49.67-.27,1.03,3.17,5,3.91,11.08,5.17,16.75,1.4,6.3,2.95,12.56,4.63,18.78,3.33,12.31,7.23,24.47,11.64,36.44.33.9,1.78.51,1.45-.4-4.51-12.24-8.48-24.67-11.87-37.27-1.67-6.23-3.2-12.5-4.59-18.79-1.22-5.55-2.03-11.38-5.13-16.27l-.27,1.03c9.6-6.08,19.91-9.88,31.09-11.8,5.45-.93,10.03-2.66,14.6-5.79s8.76-6.31,13.47-9.01c9.48-5.44,19.8-9.38,30.49-11.68,5.56-1.2,11.21-1.94,16.89-2.22,4.46-.22,10.2.97,14.13-1.64,4.32-2.88,7.73-8.22,10.28-12.63,2.2-3.81,4.38-7.92,4.68-12.35l-.55.72c4.18-1.49,7.59-4.35,11.61-6.14,4.31-1.93,8.73-1.62,13.08-.08,8.61,3.04,16.61,8.9,23.01,15.31,2.83,2.83,5.5,5.95,7.17,9.63,2.01,4.41,2.84,9.31,5.23,13.55s5.89,6.41,10.33,7.6c5.84,1.56,12.05,2.2,18.05,2.88,12.75,1.44,25.72,1.92,38.53,1.06,4.03-.27,8.62-.89,11.58-3.94,3.57-3.68,2.77-9.04,3.6-13.67,2.02-11.29,13.74-18.87,22.58-24.73,10.04-6.65,20.88-12.09,32.22-16.12,6.25-2.22,12.72-3.83,18.79-6.53s11.85-6.81,17.26-10.9c10.74-8.13,20.44-17.51,29.42-27.53l-.91.12c6.98,4.56,13.96,9.12,20.94,13.69,5.79,3.78,12.32,7.88,14.97,14.6,2.91,7.36.46,15.7-1.75,22.91-2.03,6.63-4.83,13.48-10.2,18.12-4.81,4.17-11.15,6.29-14.16,12.29-2.64,5.28-2.3,11.47-1.24,17.11.58,3.12,1.36,6.27,2.37,9.28.86,2.58,2.33,4.29,5.07,4.84,3.55.71,7.41.54,11.02.74,3.93.21,7.89.27,11.81.68,2.8.29,5.92.87,8.23,2.59,3.31,2.47,2.93,6.63.31,9.48-4.52,4.92-12.05,5.05-16.47,10.26-3.68,4.33-5.51,10.81-10.79,13.59-3.19,1.68-6.99,1.92-10.48,2.57-3.13.59-6.24,1.27-9.33,2.07-11.91,3.1-23.69,8-33.07,16.14-2.33,2.02-4.5,4.24-6.44,6.64-.69.85-2.25,2.34-2.51,3.38-.04.18-.03.41-.08.58-.04.15.2.38.16.53-.04.13-.68.67-.79.81-4.75,5.71-9.06,11.79-13.82,17.5-9.25,11.07-19.45,21.57-31.58,29.49-13.26,8.66-28.25,14.79-42.5,21.6-7.48,3.57-14.98,7.12-22.44,10.72-5.25,2.54-10.52,5.34-14.82,9.34s-6.92,9.19-7.26,15.22c-.21,3.76.13,7.56-.78,11.25-.53,2.17-1.43,4.23-2.58,6.15-4.82,8-13.26,13.21-20.46,18.83-6.6,5.15-13.65,11.35-15.16,20.03-.42,2.39.05,5.37-1.12,7.55-1.28,2.36-4.15,1.18-6.23.68-1.95-.47-3.9-.96-5.85-1.46-7.91-2.06-15.74-4.44-23.47-7.12-13.67-4.74-27.83-10.08-39.2-19.27-11.05-8.93-18.13-21.77-19.01-36.03-.47-7.54,1.36-14.33,3.16-21.56,1.49-5.97,1.59-11.85-.75-17.62-2.08-5.13-5.67-9.63-10.25-12.75-5.39-3.68-11.51-4.51-17.91-4.55-7.2-.05-14.13-.1-20.44-4.02-5.21-3.24-9.16-8.14-12.3-13.34s-5.47-10.69-7.56-16.31c-.33-.9-1.78-.51-1.45.4Z" />
+            </g>
+            <text id="south-shadow" class="cls-7" transform="translate(713.08 505.27)">
+                <tspan x="0" y="0">南部</tspan>
+            </text>
+            <text id="south-2" data-name="south" class="cls-2" transform="translate(710.49 503.27)">
+                <tspan x="0" y="0">南部</tspan>
+            </text>
+        </g>
+        <g id="west">
+            <g>
+                <path class="cls-3" d="m615.48,425.78c4.63-1.68,8.53-4.86,12.54-7.71,18.14-12.88,40.43-19.81,62.67-19.49,1.93.03,3.93.1,5.73-.62,1.71-.68,3.07-2.01,4.31-3.36,5.16-5.61,9.14-12.3,11.62-19.51l.15-2.28c-1.94.66-4.08,1-6.56.78-1-.09-2.05-.22-2.88-.78-2.1-1.44-1.05-4.52-.96-7.07.55-14.72,5.29-30.39,19.48-47.39-8.54-2.35-21.19-1.83-29-6-2.46-1.31-5.03-5.32-6.64-7.6-1.94-2.76-2.31-6.28-2.62-9.64-1.2-13.04-2.41-26.08-3.61-39.11-1.04-11.22-2.04-22.8,1.37-33.54,5.36-16.88,21.22-30.6,20.54-48.3-.14-3.59-.98-7.07-2.21-10.44-3.59,1.74-7.42,2.56-11.39,1.75-5.11-1.05-9.7-4.76-14.9-4.37-6.03.46-10.13,6.13-13.36,11.24-5.23,8.29-10.47,16.58-15.7,24.87-1.15,1.81-2.34,3.68-4.14,4.86-2.17,1.43-4.9,1.64-7.5,1.69-12.02.22-26.8-.86-33.05,9.42-1.52,2.51-2.37,5.55-4.65,7.39-1.98,1.6-4.65,1.97-7.11,2.63-8.58,2.31-15.54,8.66-23.91,11.65-16.51,5.91-36.92-4.34-42.04-21.11-.27-.88-.56-1.85-1.34-2.34-.77-.48-1.75-.32-2.64-.15-15.03,2.92-30.05,5.84-45.08,8.76-12.17,2.36-25.77,5.68-32.14,16.32-.78,1.3-1.53,2.78-2.94,3.33-.78.3-1.64.27-2.47.23-5.5-.25-10.99-.5-16.49-.75-2.04-.09-4.12-.18-6.08.4-2.56.77-4.64,2.6-6.63,4.39-8.97,8.06-17.95,16.12-26.92,24.19l.67,2.23c0,6.45-5.43,12.44-11.84,13.09-1.8.18-3.74.02-5.3.96-1.71,1.03-2.44,3.09-3.56,4.73-2.56,3.74-7.33,5.51-9.84,9.29-1.47,2.22-2.01,4.92-2.35,7.56-1.43,11.01.03,22.39,4.19,32.68,2.87,7.11,7.1,14.12,6.69,21.77-.53,9.82-8.38,17.4-13.4,25.86-1.16,1.95-2.19,4.05-2.31,6.32-.11,2.11.6,4.17,1.3,6.17,1.97,5.63,4.24,11.67,9.25,14.92,4.66,3.02,10.67,2.93,15.82,5.02,5.21,2.11,9.28,6.33,14.2,9.05,7.82,4.33,17.16,4.59,26.1,4.74l.76.58c3.98-.72,7.95-1.43,11.93-2.15,4.71-5.33,11.82-8.39,18.94-8.37,10.93.04,20.66,6.81,28.67,14.25,8.01,7.44,15.32,15.97,25.02,21s22.91,5.54,30.47-2.35c7.34-7.66,6.88-20.12,13.05-28.75,7.41,6.07,17.24,9.09,26.78,8.23,2.4-.22,4.84-.67,7.18-.1,2.58.63,4.48,2.28,5.92,4.45,8.6-5.5,18.11-9.49,28.13-11.34,3.39-.62,6.85-1.01,10.09-2.18Z" />
+                <path class="cls-1" d="m615.68,426.51c3.7-1.4,6.93-3.59,10.11-5.9,3.35-2.42,6.73-4.76,10.3-6.85,7.29-4.26,15.08-7.63,23.17-10.04,7.98-2.38,16.24-3.82,24.56-4.25,3.76-.2,7.88.41,11.57-.4s6.16-4.07,8.35-6.82c2.68-3.36,4.99-7.01,6.85-10.89.89-1.86,2.06-4.02,2.48-6.05.17-.79.12-1.67.18-2.48.03-.48-.51-.86-.95-.72-2.26.72-8.47,2.09-9.61-.94-.72-1.93.11-4.89.23-6.92.28-4.9,1.05-9.75,2.34-14.48,3.14-11.47,9.3-21.77,16.85-30.87.35-.42.25-1.1-.33-1.25-5.21-1.39-10.63-1.74-15.95-2.48-4.97-.69-11.42-1.4-15.05-5.24-1.85-1.95-3.8-4.45-4.99-6.88-1.53-3.13-1.62-6.77-1.93-10.17-.66-7.15-1.32-14.29-1.98-21.44s-1.36-14.03-1.92-21.05-.84-13.75.19-20.55c1.78-11.66,8.44-21.12,14.25-31.07,2.93-5.01,5.66-10.25,7.04-15.93,1.59-6.53.92-13.01-1.32-19.3-.17-.49-.64-.66-1.1-.45-3.49,1.63-7.29,2.46-11.11,1.6-3.08-.69-5.86-2.27-8.81-3.32-5.42-1.93-10.39-.76-14.46,3.28-4.62,4.59-7.74,10.8-11.19,16.25-2.08,3.29-4.16,6.59-6.24,9.88-1.92,3.05-3.66,6.57-6.1,9.25s-5.99,2.95-9.47,3c-2.69.04-5.38.03-8.07.09-5.12.13-10.44.45-15.3,2.21-4.55,1.65-8.15,4.6-10.37,8.92-1.55,3.02-2.77,5.85-6.22,7.08-2.83,1-5.77,1.46-8.55,2.64-5.92,2.51-11.12,6.41-16.97,9.07-5.09,2.31-10.6,3.19-16.16,2.53-10.55-1.25-20.62-7.72-25.63-17.16-.59-1.11-1.11-2.26-1.54-3.44s-.66-2.68-1.54-3.67c-1.75-1.97-5.43-.45-7.53-.04-7.64,1.48-15.27,2.97-22.91,4.45-7.23,1.4-14.47,2.73-21.68,4.23-5.44,1.14-10.88,2.53-15.96,4.82-4.75,2.14-9.15,5.18-12.24,9.43-.72.99-1.28,2.08-1.97,3.09-1.39,2.04-3.23,1.91-5.47,1.8-3.87-.18-7.75-.35-11.62-.53-3.35-.15-7.01-.7-10.23.47-2.81,1.02-5.03,3.18-7.22,5.14-5.8,5.21-11.59,10.41-17.39,15.62-2.9,2.6-5.8,5.21-8.69,7.81-.19.17-.27.49-.19.73.19.65.5,1.33.6,2,.21,1.43-.31,3.1-.85,4.41-1.23,2.98-3.59,5.49-6.49,6.89-1.57.75-3.2,1.04-4.92,1.16-1.43.1-2.89.16-4.19.84-2.6,1.36-3.39,4.63-5.36,6.65s-4.63,3.53-6.72,5.57c-2.2,2.15-3.37,4.82-3.95,7.82-1.35,7.04-1.15,14.5.02,21.55s3.9,13.84,6.84,20.54,5.02,13.9,2.18,21.22c-2.42,6.24-6.96,11.38-10.56,16.94-1.65,2.55-3.37,5.3-3.64,8.4-.29,3.4,1.3,6.86,2.49,9.97,2.13,5.54,5.13,10.91,10.83,13.35,3.01,1.29,6.26,1.78,9.42,2.54,3.54.86,6.64,2.33,9.64,4.4,2.83,1.96,5.5,4.17,8.52,5.84s6.05,2.69,9.28,3.38c3.49.76,7.06,1.09,10.61,1.27,1.65.08,3.3.13,4.94.16.82.02,1.11.07,1.77.32.35.13.44.23.83.27.88.09,2.11-.38,2.98-.54.99-.18,1.99-.36,2.98-.54s1.99-.36,2.98-.54c.9-.16,2.26-.16,3.07-.57,1.09-.55,2.04-2.02,3.01-2.81,1.4-1.14,2.95-2.11,4.57-2.91,6.42-3.18,13.73-3.22,20.42-.89,13.47,4.69,22.35,16.62,32.78,25.64,8.98,7.76,20.58,13.91,32.78,10.87,5.44-1.36,9.95-4.72,12.8-9.55,3.04-5.14,4.2-11.11,6.14-16.69,1-2.89,2.25-5.66,4-8.18l-1.18.15c5.39,4.34,11.83,7.22,18.7,8.2,3.49.5,6.91.42,10.41.06,4.46-.46,8,.34,10.65,4.16.22.32.66.5,1.03.27,5.74-3.64,11.86-6.66,18.32-8.79,3.15-1.04,6.37-1.86,9.63-2.47s6.81-1.05,10.09-2.18c.91-.31.52-1.76-.4-1.45-3.49,1.2-7.14,1.61-10.74,2.31-3.25.63-6.46,1.49-9.6,2.55-6.35,2.16-12.39,5.14-18.05,8.73l1.03.27c-1.65-2.37-3.82-4.28-6.72-4.86-3.81-.76-7.84.41-11.7.26-7.84-.31-15.47-3.21-21.57-8.12-.4-.32-.88-.28-1.18.15-6.57,9.43-5.5,23.9-15.59,30.87s-24.49,2.54-33.78-4.39c-10.61-7.92-18.54-18.97-30.04-25.77-10.5-6.21-23.64-7.47-33.62.52-1.08.86-2.1,2.35-3.42,2.79-1.97.65-4.29.77-6.34,1.14-1.34.24-3.46.99-4.65.66-.25-.07-.48-.31-.76-.39-.75-.22-1.83-.03-2.62-.05-7.12-.17-14.47-.61-21.06-3.57-5.91-2.65-10.37-7.72-16.41-10.14s-13.46-2-18.29-7.21c-2.21-2.38-3.65-5.38-4.84-8.37-1.29-3.27-3.21-7.25-2.55-10.83.59-3.26,2.83-6.24,4.67-8.92s3.61-5.06,5.31-7.66c3.23-4.95,5.88-10.47,5.61-16.52-.3-6.75-3.68-12.8-6.25-18.89-2.93-6.93-4.67-14.32-5.08-21.84-.19-3.58-.09-7.18.32-10.74s1.07-7.09,3.62-9.74c2.02-2.11,4.61-3.56,6.72-5.58.9-.86,1.67-1.82,2.32-2.89.99-1.62,1.8-3.54,3.76-4.17,1.45-.47,3.05-.31,4.54-.52,1.28-.18,2.51-.55,3.69-1.1,2.3-1.06,4.29-2.77,5.76-4.83s2.54-4.71,2.6-7.31c.02-.74-.19-1.31-.4-2.02-.03-.09-.33-.77-.27-.89-.26.45.99-.39.91-.34.49-.31.96-.87,1.4-1.26,5.89-5.29,11.78-10.58,17.67-15.87,2.85-2.56,5.63-5.25,8.6-7.68,1.41-1.15,2.97-2.2,4.75-2.65,1.94-.49,3.95-.36,5.93-.28,3.87.17,7.75.35,11.62.53,2.73.12,6.53,1.07,8.71-1.07.84-.82,1.37-1.9,1.98-2.89.85-1.37,1.83-2.64,2.94-3.8,1.95-2.04,4.24-3.7,6.7-5.08,5.12-2.87,10.86-4.48,16.56-5.76,14.74-3.3,29.69-5.84,44.52-8.72,1.85-.36,3.69-.74,5.54-1.08,1.38-.25,2.7-.15,3.26,1.36.27.72.46,1.47.73,2.19.86,2.3,2,4.5,3.4,6.53,2.89,4.2,6.76,7.69,11.16,10.26,8.81,5.13,19.75,6.54,29.29,2.64,5.93-2.42,11.11-6.27,16.88-9,3.12-1.48,6.35-2.08,9.6-3.15,2.55-.84,4.4-2.34,5.75-4.65,1.43-2.46,2.37-5.1,4.37-7.2,1.86-1.95,4.22-3.33,6.74-4.25,5.16-1.87,10.79-2.09,16.22-2.19,5.04-.08,11.77,1.01,16.01-2.32,2.45-1.92,3.96-4.96,5.59-7.55,2.15-3.4,4.29-6.8,6.44-10.2s4.16-6.59,6.24-9.88c1.77-2.81,3.5-5.67,5.75-8.13,2.06-2.25,4.62-4.2,7.73-4.6,3.45-.45,6.71,1.13,9.8,2.44,2.73,1.16,5.49,2.15,8.5,2.18s6.04-.86,8.82-2.16l-1.1-.45c2.22,6.23,2.86,12.59,1.19,19.03-1.41,5.45-4.07,10.46-6.9,15.29-5.85,9.97-12.47,19.5-14.26,31.18-1.03,6.7-.82,13.5-.3,20.24.55,7.14,1.28,14.26,1.94,21.38s1.37,14.79,2.05,22.19c.28,2.98.41,6.09,1.42,8.94.89,2.54,2.67,4.78,4.3,6.89s3.41,3.74,5.94,4.8c2.71,1.13,5.59,1.79,8.47,2.28,6.26,1.08,12.7,1.29,18.86,2.93l-.33-1.25c-6.71,8.09-12.37,17.06-15.84,27.03-1.51,4.33-2.57,8.8-3.2,13.34-.28,2.01-.48,4.02-.59,6.05s-.6,4.26-.37,6.3c.59,5.24,8.15,4.13,11.65,3.01l-.95-.72c-.05.72,0,1.51-.15,2.21-.4,1.86-1.49,3.85-2.31,5.56-1.65,3.44-3.64,6.71-5.95,9.74-2.61,3.42-5.46,7.19-10.06,7.49-3.9.26-7.83,0-11.74.28-15.25,1.13-30.23,5.56-43.64,12.9-3.82,2.09-7.5,4.43-11.04,6.98s-7.3,5.45-11.58,7.07c-.89.34-.51,1.79.4,1.45Z" />
+            </g>
+            <text id="west-shadow" class="cls-5" transform="translate(474.11 354.45)">
+                <tspan x="0" y="0">西部</tspan>
+            </text>
+            <text id="west-2" data-name="west" class="cls-2" transform="translate(470.85 349.95)">
+                <tspan x="0" y="0">西部</tspan>
+            </text>
+        </g>
+    </svg>
+    <div>
+        <a class="btn" href="{{ route('ditailsearch') }}">詳細検索</a>
+    </div>
+</section>
+
+<!-- 特産品＆体験 -->
+<!-- 特産品 -->
+<section>
+    <div class="section-title01">
+        <h2 class="bomn">こんなんあるで！</h2>
+        <!-- たぬみちのイラスト -->
+        <!-- <div><img src=" {{ asset('assets/images/illustrations/tanumiti_gurumet.gif') }}" width="200px" alt="イラスト"></div> -->
+    </div>
+
+    <div class="goods-wrapper">
+        <ul class="goods">
+            <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg') }}" alt="みかん"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt="鳴門金時"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg') }}" alt="れんこん"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt="鱧"></li>
+            <li class="goods-title">
+                <a href="{{ route('goods') }}">
+                    <h2 class="sp-h2 bomn">特産品</h2>
+                    <!-- <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p> -->
+
+                    <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="130px" height="130px" class="anime1">
+
+                    <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="jif画像にんじん" width="80px" height="80px" class="anime4">
+
+                    <!-- ボタン -->
+                    <div class="sp-btn">
+                        もっと見る
+                    </div>
+                </a>
+            </li>
+
+            <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt="すだち"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.jpg') }}" alt="柚子"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg') }}" alt="わかめ"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt="竹ちくわ"></li>
+        </ul>
+
+        <a href="{{ route('goods') }}">
+            <p class="btn mobile-btn">もっと見る</p>
+        </a>
+    </div>
+
+    <!-- 体験 -->
+    <div class="section-title02">
+
+        <h2 class="bomn mobile-title">こんなんやってみ！</h2>
+
+        <!-- たぬみちのイラスト -->
+        <!-- <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
                         </div> -->
 
-            <h2 class="bomn pc-title">こんなんやってみ！</h2>
-        </div>
-        <div class="activity-wrapper">
-            <ul class="activity">
-                <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt="DMV"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt="ジップライン"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="藍染め">
-                </li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt="ロープーウェイ"></li>
-                <li class="activity-title">
-                    <a href=" {{ route('activity') }}">
-                        <h2 class="sp-h2">体験</h2>
-                        <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
-
-                        <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="動くキャラクター画像" width="100px"
-                            height="100px" class="anime2">
-
-                        <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="jif画像うどん" width="80px"
-                            height="80px" class="anime3">
-
-                        <div class="sp-btn">
-                            もっと見る
-                        </div>
-                    </a>
-                </li>
-
-
-                <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg') }}" alt="ボート"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/asiyu.jpg') }}" alt="足湯"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg') }}" alt="船"></li>
-                <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg') }}" alt="手打ちうどん"></li>
-            </ul>
-            <a href="{{ route('activity') }}">
-                <p class="mobilebtn btn">もっと見る</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- ブログ -->
-    <div class="section-title03">
-        <!-- 車のイラスト -->
-        <!-- <div class="headline-anime01"><img src="{{ asset('assets/images/illustrations/tanuki-gift.png') }}" width="200px" alt=""></div> -->
-
-        <h2 class="bomn">行ってきたんよ！</h2>
-        <!-- たぬみちのイラスト -->
-        <!-- <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt="ブログを書くたぬきのイラスト"></div> -->
-
+        <h2 class="bomn pc-title">こんなんやってみ！</h2>
     </div>
+    <div class="activity-wrapper">
+        <ul class="activity">
+            <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt="DMV"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt="ジップライン"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="藍染め">
+            </li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt="ロープーウェイ"></li>
+            <li class="activity-title">
+                <a href=" {{ route('activity') }}">
+                    <h2 class="sp-h2">体験</h2>
+                    <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
 
-    <div class="blog-main">
-        <div class="blog-wrapper">
-            @foreach ($blog as $blog)
-                @php
-                    $blogImg = $blog->picture;
-                @endphp
+                    <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="動くキャラクター画像" width="100px" height="100px" class="anime2">
 
-                <a href="{{ route('blog') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}"
-                    class="blog-card">
+                    <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="jif画像うどん" width="80px" height="80px" class="anime3">
 
-                    @php
-                        $road_station_id = $blog->road_station_id;
-                        $id_list = explode('|', $road_station_id);
-                    @endphp
-
-                    @foreach ($id_list as $id)
-                        @php
-                            $name = $blog::getRoadstationName($id);
-                        @endphp
-
-                        <p class="station_name">{{ $name }}</p>
-                    @endforeach
-
-                    @if ($blogImg != '')
-                        <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}"
-                            alt="ブログ「{{ $blog->title }}」の写真">
-                    @else
-                        <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="画像無し">
-                    @endif
-
-                    <h3>{!! $blog->title !!}</h3>
-
-                    @php
-                        $ts = strtotime($blog->created_at);
-                    @endphp
-
-                    <div class="update-information">
-                        <p class="date">{{ date('Y年m月d日', $ts) }}</p>
-                        <p class="category">{{ $blog->blogCategory->category_name }}</p>
+                    <div class="sp-btn">
+                        もっと見る
                     </div>
-                    <p class="text">{!! $blog->overview !!}</p>
                 </a>
-            @endforeach
-        </div>
-    </div>
+            </li>
 
-    <div class="blog-btn">
-        <a href="{{ route('bloglist') }}"><img src="{{ asset('assets/images/blog-btn01.png') }}" alt="ブログボタン"></a>
+
+            <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg') }}" alt="ボート"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/asiyu.jpg') }}" alt="足湯"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg') }}" alt="船"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg') }}" alt="手打ちうどん"></li>
+        </ul>
+        <a href="{{ route('activity') }}">
+            <p class="mobilebtn btn">もっと見る</p>
+        </a>
     </div>
+</section>
+
+<!-- ブログ -->
+<div class="section-title03">
+    <!-- 車のイラスト -->
+    <!-- <div class="headline-anime01"><img src="{{ asset('assets/images/illustrations/tanuki-gift.png') }}" width="200px" alt=""></div> -->
+
+    <h2 class="bomn">行ってきたんよ！</h2>
+    <!-- たぬみちのイラスト -->
+    <!-- <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt="ブログを書くたぬきのイラスト"></div> -->
+
+</div>
+
+<div class="blog-main">
+    <div class="blog-wrapper">
+        @foreach ($blog as $blog)
+        @php
+        $blogImg = $blog->picture;
+        @endphp
+
+        <a href="{{ route('blog') }}?id={{ $blog->id }}&blog_category_id={{ $blog->blog_category_id }}" class="blog-card">
+
+            @php
+            $road_station_id = $blog->road_station_id;
+            $id_list = explode('|', $road_station_id);
+            @endphp
+
+            @foreach ($id_list as $id)
+            @php
+            $name = $blog::getRoadstationName($id);
+            @endphp
+
+            <p class="station_name">{{ $name }}</p>
+            @endforeach
+
+            @if ($blogImg != '')
+            <img class="card-img" src="{{ asset('/storage/images/' . $blog->picture) }}" alt="ブログ「{{ $blog->title }}」の写真">
+            @else
+            <img class="card-img" src="{{ asset('/storage/images/no-image.png') }}" alt="画像無し">
+            @endif
+
+            <h3>{!! $blog->title !!}</h3>
+
+            @php
+            $ts = strtotime($blog->created_at);
+            @endphp
+
+            <div class="update-information">
+                <p class="date">{{ date('Y年m月d日', $ts) }}</p>
+                <p class="category">{{ $blog->blogCategory->category_name }}</p>
+            </div>
+            <p class="text">{!! $blog->overview !!}</p>
+        </a>
+        @endforeach
+    </div>
+</div>
+
+<div class="blog-btn">
+    <a href="{{ route('bloglist') }}"><img src="{{ asset('assets/images/blog-btn01.png') }}" alt="ブログボタン"></a>
+</div>
 @endsection
 
 {{-- 該当ページ専用JS --}}
 @section('pageJs')
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 @endsection
