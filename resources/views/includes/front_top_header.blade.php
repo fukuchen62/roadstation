@@ -115,7 +115,7 @@
     <!-- g-nav pc -->
     <nav id="menu" class="nav-pc">
         <h1><a href="{{ route('top') }}">
-                <img src="{{ asset('assets/images/site_logo/logo.png') }}" width="95" height="95" alt="とくしままるっと道の駅"></a></h1>
+                <img src="{{ asset('assets/images/site_logo/logo.png') }}" width="80" height="80" alt="とくしままるっと道の駅"></a></h1>
 
         <ul>
             <li>
