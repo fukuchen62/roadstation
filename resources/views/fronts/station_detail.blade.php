@@ -345,7 +345,7 @@
                         height="135" alt="DMV" class="sideways2 sideways-off"> --}}
                 </div>
                 <section>
-                    <img src="{{ asset('/storage/images/' . $activity->picture1) }}" class="activity  frameborder"
+                    <img src="{{ asset('/storage/images/' . $activity->picture2) }}" class="activity  frameborder"
                         alt="{{ $activity->activity_name }}の写真">
                     <div class="text frameborder">
                         <h4 class="deco-h4">{{ $activity->activity_name }}</h4>
