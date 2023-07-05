@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <a href="{{ route('bloglist') }}">
-                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon_ws.svg') }}" alt="ブログ" width="35" height="35">ブログ</a>
+                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon_ws.svg') }}" alt="ブログ" width="30" height="30">ブログ</a>
                 </li>
                 <li>
                     <a href="{{ route('mypage') }}">
@@ -161,7 +161,7 @@
             <li>
                 <a href="{{ route('bloglist') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon.svg') }}" alt="ブログ" width="35" height="35">
+                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon.svg') }}" alt="ブログ" width="30" height="30">
                     </div>
                     ブログ
                 </a>
