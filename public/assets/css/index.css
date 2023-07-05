@@ -2,7 +2,7 @@
 
 /* 基本情報 */
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h3 {
@@ -304,22 +304,22 @@ section {
 }
 
 /* 特産品特集 */
-.goods {
-
+.goods,
+.activity {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
+}
 
-    /* display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-    justify-content: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    align-items: center; */
+@media screen and (min-width: 601px) {
+
+    .goods,
+    .activity {
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* 画像のタイル */
@@ -382,21 +382,15 @@ section {
 }
 
 /* 体験 */
-.activity {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-    justify-content: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
+/* .activity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+} */
 
 /* 文字のタイル */
 .activity-title {
-    width: 100px;
-    height: 100px;
     border-radius: 30px;
     background-color: #fbae51;
     text-align: center;
@@ -657,7 +651,7 @@ imgcontent-wrapper .heading {
     background-repeat: no-repeat;
 
     text-align: center;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #8C5243;
     background-color: ccc;
 
@@ -907,11 +901,7 @@ imgcontent-wrapper .heading {
         text-align: center;
     }
 
-    .goods {
-        max-width: 550px;
-        width: 100%;
-        margin: 0 auto;
-    }
+
 
     /* .image-tile {
         width: 100%;
@@ -970,7 +960,7 @@ imgcontent-wrapper .heading {
         text-align: center;
     } */
 
-    .activity {
+    /* .activity {
         display: flex;
         flex-wrap: wrap;
         width: 761px;
@@ -979,18 +969,16 @@ imgcontent-wrapper .heading {
         justify-content: center;
         margin: 0 auto;
         margin-bottom: 30px;
-    }
+    } */
 
 
     .activityli {
-        width: 761px;
+        /* width: 761px; */
         text-align: center;
     }
 
 
     .activity-title {
-        width: 253px;
-        height: 253px;
         border-radius: 30px;
 
         text-align: center;
@@ -1125,8 +1113,6 @@ imgcontent-wrapper .heading {
     } */
 
     .activity-title {
-        width: 250px;
-        height: 250px;
         border-radius: 30px;
         background-color: #fbae51;
         color: black;
@@ -1292,7 +1278,7 @@ imgcontent-wrapper .heading {
         text-align: center;
     } */
 
-    .activity {
+    /* .activity {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
@@ -1301,19 +1287,19 @@ imgcontent-wrapper .heading {
         justify-content: center;
         margin: 0 auto;
         margin-bottom: 30px;
-    }
+    } */
 
 
     .activityli {
-        width: 761px;
+        /* width: 761px; */
         text-align: center;
     }
 
 
-    .activity-title {
+    /* .activity-title {
         width: 330px;
         height: 330px;
-    }
+    } */
 
     .activity-strapline {
         text-align: center;

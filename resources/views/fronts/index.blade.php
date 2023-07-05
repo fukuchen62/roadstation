@@ -171,7 +171,7 @@
     <div class="activity-wrapper">
         <ul class="activity">
             <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt="DMV"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt="ジップライン"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.png') }}" alt="ジップライン"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/indigo.png') }}" alt="藍染め">
             </li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt="ロープーウェイ"></li>
