@@ -705,7 +705,7 @@ footer {
 
     /* PC版メニュー  */
     .nav-pc ul {
-        height: 100px;
+        height: 80px;
         display: flex;
         gap: 20px;
         align-items: center;

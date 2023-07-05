@@ -248,7 +248,7 @@ section {
 /* 徳島のエリアマップ */
 /* TOPページ */
 #area-map {
-    max-width: 600px;
+    max-width: 550px;
     margin-bottom: 20px;
 }
 
@@ -305,7 +305,13 @@ section {
 
 /* 特産品特集 */
 .goods {
-    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+
+    /* display: flex;
     flex-wrap: wrap;
     width: 100%;
     text-align: center;
@@ -313,12 +319,12 @@ section {
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 30px;
-    align-items: center;
+    align-items: center; */
 }
 
 /* 画像のタイル */
 .image-tile {
-    width: 100px;
+    width: 100%;
     height: auto;
     border-radius: 30px;
     object-fit: cover;
@@ -333,8 +339,8 @@ section {
 
 /* 文字のタイル */
 .goods-title {
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 100px; */
     align-items: center;
     border-radius: 30px;
     background-color: #ff8871;
@@ -783,11 +789,11 @@ imgcontent-wrapper .heading {
     .sp-btn {
         display: inline-block;
         background-color: #fff;
-        width: 200px;
         border-radius: 50px;
         padding: 10px;
         margin-top: 20px;
         color: #8C5243;
+        font-size: 1rem;
         font-weight: bold;
     }
 
@@ -902,7 +908,9 @@ imgcontent-wrapper .heading {
     }
 
     .goods {
-        width: 761px;
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     /* .image-tile {
@@ -1097,7 +1105,7 @@ imgcontent-wrapper .heading {
     }
 
     /* PC版：画像サイズ */
-    .goods-title {
+    /* .goods-title {
         width: 250px;
         height: 250px;
         align-items: center;
@@ -1108,7 +1116,7 @@ imgcontent-wrapper .heading {
         font-size: 20px;
         padding: 20px;
         position: relative;
-    }
+    } */
 
     /* PC版：画像サイズ */
     /* .image-tile {
@@ -1157,7 +1165,6 @@ imgcontent-wrapper .heading {
 
     .sp-h2 {
         color: #ffffff;
-        font-size: 4rem;
         margin-top: 30%;
     }
 
@@ -1253,10 +1260,10 @@ imgcontent-wrapper .heading {
 
 
     /* PC版：画像サイズ */
-    .goods-title {
+    /* .goods-title {
         width: 330px;
         height: 330px;
-    }
+    } */
 
     .goods-strapline {
         text-align: center;

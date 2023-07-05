@@ -127,7 +127,7 @@
     <div class="goods-wrapper">
         <ul class="goods">
             <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.png') }}" alt="みかん"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/narutokintoki.jpg') }}" alt="鳴門金時"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/narutokintoki.png') }}" alt="鳴門金時"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.png') }}" alt="れんこん"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt="鱧"></li>
             <li class="goods-title">
@@ -149,7 +149,7 @@
             <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.png') }}" alt="すだち"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.png') }}" alt="柚子"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.png') }}" alt="わかめ"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt="竹ちくわ"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.png') }}" alt="竹ちくわ"></li>
         </ul>
 
         <a href="{{ route('goods') }}">
