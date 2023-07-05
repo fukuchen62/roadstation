@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\News;
 use App\Models\NewsCategory;
+use App\Models\Blog;
 
 
 class NewsController extends Controller
@@ -105,10 +106,14 @@ class NewsController extends Controller
 
         $category = NewsCategory::all();
 
+        $blogs = Blog::where('id', $request->memo)
+            ->get();
+
         $data = [
             'news_item' => $item,
             'categories' => $items,
             'news_categories' => $category,
+            'blogs' => $blogs,
         ];
 
         return view('fronts.news', $data);

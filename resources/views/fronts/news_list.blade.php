@@ -27,7 +27,7 @@
                     <div class="blog-card">
 
                         <a
-                            href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}">
+                            href="{{ url('news-detail') }}?id={{ $new->id }}&news_category_id={{ $new->news_category_id }}&memo={{ $new->memo }}">
 
                             @if ($new->picture)
                                 <img class="card-img" src="{{ asset('/storage/images/' . $new->picture) }}"

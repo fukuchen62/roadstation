@@ -48,6 +48,22 @@
                 {!! $news_item->discription !!}
             </p>
 
+            {{-- 関連ブログ --}}
+            @if ($blogs)
+                @foreach ($blogs as $blog)
+                    <h3 class="roadstation-
+                        information">&lt; 関連ブログの情報&gt; </h3>
+
+                    <p class="address">
+
+                        <a class="stationBtn" href="{{ url('blog-detail') }}?id={{ $blog->id }}">{{ $blog->title }}
+                        </a>
+
+                    </p>
+                @endforeach
+            @endif
+
+            {{-- 関連道の駅 --}}
             <h3 class="roadstation-
                         information">&lt; 関連道の駅の情報&gt; </h3>
 
@@ -73,11 +89,15 @@
             <div class="before-next-mobilebtn">
 
                 @if ($news_item->previous() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->previous()->id }}">＜＜前の記事へ</a></p>
+                    <p><a
+                            href="{{ url('news-detail') }}?id={{ $news_item->previous()->id }}&news_category_id={{ $news_item->news_category_id }}&memo={{ $news_item->memo }}">＜＜前の記事へ</a>
+                    </p>
                 @endif
 
                 @if ($news_item->next() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->next()->id }}">次の記事へ＞＞</a></p>
+                    <p><a
+                            href="{{ url('news-detail') }}?id={{ $news_item->next()->id }}&news_category_id={{ $news_item->news_category_id }}&memo={{ $news_item->memo }}">次の記事へ＞＞</a>
+                    </p>
                 @endif
 
             </div>
@@ -85,11 +105,15 @@
             {{-- 前後移動PC --}}
             <div class="before-next-pcbtn">
                 @if ($news_item->previous() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->previous()->id }}">＜＜前の記事へ</a></p>
+                    <p><a
+                            href="{{ url('news-detail') }}?id={{ $news_item->previous()->id }}&news_category_id={{ $news_item->news_category_id }}&memo={{ $news_item->memo }}">＜＜前の記事へ</a>
+                    </p>
                 @endif
 
                 @if ($news_item->next() != null)
-                    <p><a href="{{ url('news-detail') }}?id={{ $news_item->next()->id }}">次の記事へ＞＞</a></p>
+                    <p><a
+                            href="{{ url('news-detail') }}?id={{ $news_item->next()->id }}&news_category_id={{ $news_item->news_category_id }}&memo={{ $news_item->memo }}">次の記事へ＞＞</a>
+                    </p>
                 @endif
 
             </div>
@@ -104,7 +128,7 @@
                     <div class="relatedarticle1">
 
                         <a
-                            href="{{ url('news-detail') }}?id={{ $category->id }}&news_category_id={{ $news_item->news_category_id }}">
+                            href="{{ url('news-detail') }}?id={{ $category->id }}&news_category_id={{ $news_item->news_category_id }}&memo={{ $news_item->memo }}">
 
                             <img class="relatedarticle-img" src="{{ asset('/storage/images/' . $category->picture) }}"
                                 alt="ニュース画像">
