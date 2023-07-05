@@ -307,7 +307,7 @@ section {
 .goods {
     display: flex;
     flex-wrap: wrap;
-    width: 360px;
+    width: 100%;
     text-align: center;
     margin-bottom: 30px;
     justify-content: center;
@@ -318,16 +318,23 @@ section {
 
 /* 画像のタイル */
 .image-tile {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: auto;
     border-radius: 30px;
     object-fit: cover;
 }
 
+@media screen and (min-width: 361px) {
+    .image-tile {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* 文字のタイル */
 .goods-title {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     align-items: center;
     border-radius: 30px;
     background-color: #ff8871;
@@ -362,7 +369,6 @@ section {
 
 /* 体験 */
 .activity-wrapper {
-    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     justify-content: center;
@@ -373,7 +379,7 @@ section {
 .activity {
     display: flex;
     flex-wrap: wrap;
-    width: 360px;
+    width: 100%;
     text-align: center;
     margin-bottom: 30px;
     justify-content: center;
@@ -383,8 +389,8 @@ section {
 
 /* 文字のタイル */
 .activity-title {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 30px;
     background-color: #fbae51;
     text-align: center;
@@ -858,8 +864,6 @@ imgcontent-wrapper .heading {
         margin-right: -25px;
     }
 
-
-
     /* ぴょん */
     .poyooon {
         animation: poyooon 0.9s linear 0s 1;
@@ -901,17 +905,15 @@ imgcontent-wrapper .heading {
         width: 761px;
     }
 
-    .image-tile {
-        width: 253px;
-        height: 253px;
+    /* .image-tile {
+        width: 100%;
+        height: auto;
         border-radius: 30px;
         object-fit: cover;
-    }
-
-
-    .goods-title {
-        width: 253px;
-        height: 253px;
+    } */
+    /* .goods-title {
+        width: 100%;
+        height: auto;
         align-items: center;
         border-radius: 30px;
         color: black;
@@ -919,7 +921,7 @@ imgcontent-wrapper .heading {
         font-size: 20px;
         padding: 20px;
         position: relative;
-    }
+    } */
 
     /* アニメの表示 */
     .anime1,
@@ -952,13 +954,13 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-    .activity-wrapper {
+    /* .activity-wrapper {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 150px;
         justify-content: center;
         text-align: center;
-    }
+    } */
 
     .activity {
         display: flex;
@@ -1069,13 +1071,13 @@ imgcontent-wrapper .heading {
         text-align: center;
     }
 
-    .activity-wrapper {
+    /* .activity-wrapper {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 150px;
         justify-content: center;
         text-align: center;
-    }
+    } */
 
     .map {
         width: 85%;
@@ -1109,10 +1111,10 @@ imgcontent-wrapper .heading {
     }
 
     /* PC版：画像サイズ */
-    .image-tile {
+    /* .image-tile {
         width: 250px;
         height: 250px;
-    }
+    } */
 
     .activity-title {
         width: 250px;
@@ -1234,22 +1236,20 @@ imgcontent-wrapper .heading {
         left: 50%;
     }
 
-    .goods-wrapper {
+    /* .goods-wrapper {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 150px;
-    }
-
-    .goods {
+    } */
+    /* .goods {
         width: 100%;
-    }
-
-    .image-tile {
-        width: 330px;
-        height: 330px;
+    } */
+    /* .image-tile {
+        width: 100%;
+        height: auto;
         border-radius: 30px;
         object-fit: cover;
-    }
+    } */
 
 
     /* PC版：画像サイズ */
@@ -1277,14 +1277,13 @@ imgcontent-wrapper .heading {
 
     }
 
-    .activity-wrapper {
+    /* .activity-wrapper {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 150px;
         justify-content: center;
         text-align: center;
-
-    }
+    } */
 
     .activity {
         display: flex;

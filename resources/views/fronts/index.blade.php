@@ -147,7 +147,7 @@
             </li>
 
             <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.png') }}" alt="すだち"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.jpg') }}" alt="柚子"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.png') }}" alt="柚子"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.png') }}" alt="わかめ"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt="竹ちくわ"></li>
         </ul>
