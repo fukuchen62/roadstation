@@ -121,7 +121,7 @@
             <li>
                 <a href="{{ route('stationlist') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/station_list_icon.png') }}" alt="道の駅一覧" width="30" height="30">
+                        <img src="{{ asset('assets/images/menu_icon/station_list_icon.svg') }}" alt="道の駅一覧" width="30" height="30">
                     </div>
                     道の駅一覧
                 </a>
@@ -129,7 +129,7 @@
             <li>
                 <a href="{{ route('areasearch') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/station_area_icon.png') }}" alt="エリア検索" width="30" height="30">
+                        <img src="{{ asset('assets/images/menu_icon/station_area_icon.svg') }}" alt="エリア検索" width="30" height="30">
                     </div>
                     エリア検索
                 </a>
@@ -137,7 +137,7 @@
             <li>
                 <a href="{{ route('ditailsearch') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/station_detail_icon.png') }}" alt="詳細検索" width="30" height="30">
+                        <img src="{{ asset('assets/images/menu_icon/station_detail_icon.svg') }}" alt="詳細検索" width="30" height="30">
                     </div>
                     詳細検索
                 </a>
@@ -145,7 +145,7 @@
             <li>
                 <a href="{{ route('goods') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/goods_list_icon.png') }}" alt="特産品" width="30" height="30">
+                        <img src="{{ asset('assets/images/menu_icon/goods_list_icon.svg') }}" alt="特産品" width="30" height="30">
                     </div>
                     特産品
                 </a>
@@ -153,7 +153,7 @@
             <li>
                 <a href="{{ route('activity') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/activity_list_icon.png') }}" alt="体験" width="30" height="30">
+                        <img src="{{ asset('assets/images/menu_icon/activity_list_icon.svg') }}" alt="体験" width="30" height="30">
                     </div>
                     体験
                 </a>
@@ -161,7 +161,7 @@
             <li>
                 <a href="{{ route('bloglist') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon.png') }}" alt="ブログ" width="35" height="35">
+                        <img src="{{ asset('assets/images/menu_icon/blog_list_icon.svg') }}" alt="ブログ" width="35" height="35">
                     </div>
                     ブログ
                 </a>
@@ -169,7 +169,7 @@
             <li>
                 <a href="{{ route('mypage') }}">
                     <div>
-                        <img src="{{ asset('assets/images/menu_icon/like_icon.png') }}" alt="お気に入り" width="30" height="30">
+                        <img src="{{ asset('assets/images/menu_icon/like_icon.svg') }}" alt="お気に入り" width="30" height="30">
                     </div>
                     お気に入り
                 </a>
