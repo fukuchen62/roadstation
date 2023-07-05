@@ -21,7 +21,7 @@
     </section>
 
     <div class="stationlist-box">
-        <h3 class="east-title">県東部</h3>
+        <h3 class="east-title">県東部 ({{ $count1 }}件)</h3>
         <section class="east">
             <div class="grid">
                 @foreach ($road_stations as $road)
@@ -105,7 +105,7 @@
                 @endforeach
             </div>
         </section>
-        <h3 class="west-title">県西部</h3>
+        <h3 class="west-title">県西部 ({{ $count2 }}件)</h3>
         <section class="west">
             <div class="grid">
                 @foreach ($road_stations as $road)
@@ -191,7 +191,7 @@
             </div>
         </section>
         {{-- </div> --}}
-        <h3 class="south-title">県南部</h3>
+        <h3 class="south-title">県南部 ({{ $count3 }}件)</h3>
         {{-- <div class="list_box"> --}}
         <section class="south">
             <div class="grid">

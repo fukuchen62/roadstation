@@ -12,6 +12,7 @@ use App\Models\Area;
 
 class RoadstationController extends Controller
 {
+    // 道の駅詳細ページ
     public function stationMainView(Request $request)
     {
         // $name = RoadStation::where('id', $request->id)->get();
@@ -37,23 +38,46 @@ class RoadstationController extends Controller
         // return view('fronts.station_detail', $data, $outName);
         return view('fronts.station_detail', $data);
     }
+
+    // 道の駅一覧ページ
     public function stationListView(Request $request)
     {
         $items = RoadStation::where('is_show', 1)
             ->get();
 
+        $count1  = RoadStation::where('area_id', 1)
+            ->where('is_show', 1)
+            ->where('deleted_at', null)
+            ->count();
+
+        $count2  = RoadStation::where('area_id', 2)
+            ->where('is_show', 1)
+            ->where('deleted_at', null)
+            ->count();
+
+        $count3  = RoadStation::where('area_id', 3)
+            ->where('is_show', 1)
+            ->where('deleted_at', null)
+            ->count();
+
         $data = [
             'road_stations' => $items,
+            'count1' => $count1,
+            'count2' => $count2,
+            'count3' => $count3,
         ];
+
         return view('fronts.station_list', $data);
     }
 
+    // 道の駅エリア検索ページ
     public function stationAreaSearch(Request $request)
     {
         $area_id = 1;
         if (isset($request->area_id)) {
             $area_id = $request->area_id;
         }
+
         $items = RoadStation::where('area_id', $area_id)
             ->where('is_show', 1)
             ->where('deleted_at', null)
@@ -80,6 +104,7 @@ class RoadstationController extends Controller
         return view('fronts.station_area', $data);
     }
 
+    // 道の駅詳細検索ページ
     public function stationDetailSearch(Request $request)
     {
         $area_id = '';
