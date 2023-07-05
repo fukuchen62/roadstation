@@ -246,58 +246,36 @@ section {
 }
 
 /* 徳島のエリアマップ */
-.map {
-    width: 100%;
-    margin: 0 auto;
-
-    /* 検索ボタンの絶対配置範囲 */
-    position: relative;
-    margin-bottom: 40px;
-}
-
-/* 地図のimg */
-.tokusimamap {
-    margin: 0 auto;
-    max-width: 360px;
-    width: 100%;
-    height: auto;
+/* TOPページ */
+#area-map {
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
-/* マップ上のボタン */
-.map .east,
-.map .west,
-.map .south {
-    font-size: 1.5rem;
-    position: absolute;
-    padding: 4%;
-    background-color: #ffffff;
-    border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
-    transition: 0.5s;
+#east:hover,
+#south:hover,
+#west:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }
 
-.map .east:hover,
-.map .west:hover,
-.map .south:hover {
-    transform: scale(1.1);
+.line {
+    fill: #fff;
 }
 
-/* 東部 */
-.east {
-    top: 20%;
-    left: 52%;
+.west-color {
+    fill: #f99;
 }
 
-/* 西部 */
-.west {
-    top: 30%;
-    left: 20%;
+.south-color {
+    fill: #f96;
 }
 
-/* 南部 */
-.south {
-    top: 55%;
-    left: 46%;
+.east-color {
+    fill: #0c9;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: .5px;
 }
 
 /* 特産品 */
