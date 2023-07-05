@@ -480,7 +480,18 @@ imgcontent-wrapper .heading {
 
 /* ブログ全体を囲う要素 */
 .blog-main {
+    margin: 0 auto;
     text-align: center;
+}
+
+@media screen and (min-width:601px) {
+
+    /* ブログカードの設定 */
+    .blog-main {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* カードの設定 */
@@ -494,7 +505,7 @@ imgcontent-wrapper .heading {
 /* ブログカード */
 .blog-card {
     width: 100%;
-    height: 550px;
+    height: 400px;
     padding: 20px;
     border-radius: 20px;
     justify-content: center;
@@ -522,7 +533,7 @@ imgcontent-wrapper .heading {
 /* 画像サイズ */
 .blog-card img {
     width: 100%;
-    height: 250px;
+    height: auto;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -796,11 +807,7 @@ imgcontent-wrapper .heading {
     }
 
 
-    /* ブログカードの設定 */
-    .blog-main {
-        width: 80%;
-        margin: 0 auto;
-    }
+
 
     /* ブログカード */
     .blog-card {
@@ -944,9 +951,10 @@ imgcontent-wrapper .heading {
         left: -35px;
     }
 
+    /*
     .goods-strapline {
         text-align: center;
-    }
+    } */
 
     .mobile-btn {
         display: none;
@@ -1058,14 +1066,14 @@ imgcontent-wrapper .heading {
         display: none;
     }
 
-    .goods-wrapper {
+    /* .goods-wrapper {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 150px;
         justify-content: center;
         margin-bottom: 50px;
         text-align: center;
-    }
+    } */
 
     /* .activity-wrapper {
         margin: 0 auto;
@@ -1079,11 +1087,7 @@ imgcontent-wrapper .heading {
         width: 85%;
     }
 
-    /* ブログカードの設定 */
-    .blog-main {
-        width: 100%;
-        margin: 0 auto;
-    }
+
 }
 
 @media screen and (min-width:901px) {
@@ -1250,10 +1254,10 @@ imgcontent-wrapper .heading {
         width: 330px;
         height: 330px;
     } */
-
+    /*
     .goods-strapline {
         text-align: center;
-    }
+    } */
 
     .pcbtn {
         /* margin-bottom: 50px; */
@@ -1267,7 +1271,6 @@ imgcontent-wrapper .heading {
 
     .goods-mobile-btn {
         display: none;
-
     }
 
     /* .activity-wrapper {
