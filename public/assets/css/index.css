@@ -247,9 +247,15 @@ section {
 
 /* 徳島のエリアマップ */
 /* TOPページ */
+#area-map {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
 #east:hover,
 #south:hover,
 #west:hover {
+    cursor: pointer;
     opacity: 0.7;
 }
 
