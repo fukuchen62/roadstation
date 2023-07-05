@@ -316,7 +316,7 @@ section {
 
     .goods,
     .activity {
-        max-width: 550px;
+        max-width: 600px;
         width: 100%;
         margin: 0 auto;
     }
@@ -539,7 +539,7 @@ imgcontent-wrapper .heading {
 }
 
 .blog-btn img {
-    max-width: 320px;
+    max-width: 400px;
     height: auto;
     object-fit: cover;
 }
@@ -1366,13 +1366,6 @@ imgcontent-wrapper .heading {
         display: grid;
         grid-template-columns: repeat(3, minmax(320px, 1fr));
         justify-items: center;
-    }
-
-    .blog-btn img {
-        max-width: 700px;
-        height: auto;
-        object-fit: cover;
-
     }
 
     .blog-btn a:hover {
