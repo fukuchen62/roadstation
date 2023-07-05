@@ -126,9 +126,9 @@
 
     <div class="goods-wrapper">
         <ul class="goods">
-            <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.jpg') }}" alt="みかん"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/yakiimo.jpg') }}" alt="鳴門金時"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.jpg') }}" alt="れんこん"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/mikan.png') }}" alt="みかん"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/narutokintoki.jpg') }}" alt="鳴門金時"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.png') }}" alt="れんこん"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt="鱧"></li>
             <li class="goods-title">
                 <a href="{{ route('goods') }}">
@@ -146,9 +146,9 @@
                 </a>
             </li>
 
-            <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.jpeg') }}" alt="すだち"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/sudati.png') }}" alt="すだち"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/yuzu.jpg') }}" alt="柚子"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.jpg') }}" alt="わかめ"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/wakame.png') }}" alt="わかめ"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/tikuwa.jpg') }}" alt="竹ちくわ"></li>
         </ul>
 
@@ -172,13 +172,13 @@
         <ul class="activity">
             <li><img class="image-tile" src="{{ asset('assets/images/index/dmv.JPG') }}" alt="DMV"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/zipline.jpg') }}" alt="ジップライン"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/activity_list/indigo.jpg') }}" alt="藍染め">
+            <li><img class="image-tile" src="{{ asset('assets/images/index/indigo.png') }}" alt="藍染め">
             </li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/ropeway.jpg') }}" alt="ロープーウェイ"></li>
             <li class="activity-title">
                 <a href=" {{ route('activity') }}">
                     <h2 class="sp-h2">体験</h2>
-                    <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p>
+                    <!-- <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p> -->
 
                     <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="動くキャラクター画像" width="100px" height="100px" class="anime2">
 
@@ -189,12 +189,13 @@
                     </div>
                 </a>
             </li>
-
-
-            <li><img class="image-tile" src="{{ asset('assets/images/index/boat.jpg') }}" alt="ボート"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/asiyu.jpg') }}" alt="足湯"></li>
-            <li><img class="image-tile" src="{{ asset('assets/images/index/hune.jpg') }}" alt="船"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/udon.jpg') }}" alt="手打ちうどん"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/ootaniyaki.jpg') }}" alt="大谷焼"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/ship.png') }}" alt="船"></li>
+            <li><img class="image-tile" src="{{ asset('assets/images/index/festival.jpg') }}" alt="まつり"></li>
+
+
+
         </ul>
         <a href="{{ route('activity') }}">
             <p class="mobilebtn btn">もっと見る</p>
