@@ -9,7 +9,7 @@
 
 @section('key_visual')
     <div class="kv">
-        <img class="sub-keyvisual" src="{{ asset('assets/images/station_detail/station_detail01.jpg') }}" alt="サブキービジュアル">
+        <img class="sub-keyvisual" src="{{ asset('assets/images/station_detail/station_detail.png') }}" alt="サブキービジュアル">
     </div>
 @endsection
 
