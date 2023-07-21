@@ -75,11 +75,14 @@ $(function () {
 
 // ヘッダーメニューの固定
 $(function () {
+    var pos = $('#menu').offset().top;
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 700) { //570px以上スクロールした固定
+        if ($(this).scrollTop() > pos) { //570px以上スクロールした固定
             $('#menu').addClass('fixed');
+            $("body").css("padding-top", height);
         } else {
             $('#menu').removeClass('fixed');
+            $("body").css("padding-top", 0);
         }
     });
 });
