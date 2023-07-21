@@ -131,7 +131,8 @@
     <!-- 特産品 -->
     <section>
         <div class="section-title01">
-            <h2 class="bomn">こんなんあるで！</h2>
+            {{-- <h2 class="bomn">こんなんあるで！</h2> --}}
+            <h2 class="goods-name"><span>こんなんあるで！</span></h2>
             <!-- たぬみちのイラスト -->
             <!-- <div><img src=" {{ asset('assets/images/illustrations/tanumiti_gurumet.gif') }}" width="200px" alt="イラスト"></div> -->
         </div>
@@ -175,13 +176,16 @@
         <!-- 体験 -->
         <div class="section-title02">
 
-            <h2 class="bomn mobile-title">こんなんやってみ！</h2>
+            {{-- <h2 class="bomn mobile-title">こんなんやってみ！</h2> --}}
+          
 
             <!-- たぬみちのイラスト -->
             <!-- <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
                                 </div> -->
 
-            <h2 class="bomn pc-title">こんなんやってみ！</h2>
+            {{-- <h2 class="bomn pc-title">こんなんやってみ！</h2> --}}
+            <h2 class="activity-name"><span>こんなんやってみ！</span></h2>
+
         </div>
         <div class="activity-wrapper">
             <ul class="activity">
@@ -225,7 +229,9 @@
         <!-- 車のイラスト -->
         <!-- <div class="headline-anime01"><img src="{{ asset('assets/images/illustrations/tanuki-gift.png') }}" width="200px" alt=""></div> -->
 
-        <h2 class="bomn">行ってきたんよ！</h2>
+        {{-- <h2 class="bomn">行ってきたんよ！</h2> --}}
+        <h2 class="blog-name"><span>行ってきたんよ！</span></h2>
+
         <!-- たぬみちのイラスト -->
         <!-- <div><img src="{{ asset('assets/images/illustrations/tanuki-blog.png') }}" width="200px" alt="ブログを書くたぬきのイラスト"></div> -->
 

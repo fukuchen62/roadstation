@@ -5,6 +5,200 @@ h2 {
     font-size: 1.5rem;
 }
 
+
+
+/* 「こんなんあるで！」のタイトル */
+
+.goods-name {
+    position: relative;
+    margin: 30px;
+    text-align: center;
+}
+
+.goods-name:before,
+.goods-name:after {
+    position: absolute;
+    z-index: 0;
+    bottom: -10px;
+    display: block;
+    content: "";
+    border: 1em solid #ff8871;
+    ;
+}
+
+.goods-name:before {
+    left: -30px;
+    border-left-width: 15px;
+    border-left-color: transparent;
+}
+
+.goods-name:after {
+    right: -30px;
+    border-right-width: 15px;
+    border-right-color: transparent;
+}
+
+.goods-name span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    background: #ff8871;
+    ;
+}
+
+.goods-name span:before,
+.goods-name span:after {
+    position: absolute;
+    bottom: -10px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    border-style: solid;
+    border-color: #ff8871 transparent transparent transparent;
+}
+
+.goods-name span:before {
+    left: 0;
+    border-width: 10px 0 0 10px;
+}
+
+.goods-name span:after {
+    right: 0;
+    border-width: 10px 10px 0 0;
+}
+
+
+
+/* 「こんなんやってみ！」のタイトル */
+.activity-name {
+    position: relative;
+    margin: 30px;
+    text-align: center;
+}
+
+.activity-name:before,
+.activity-name:after {
+    position: absolute;
+    z-index: 0;
+    bottom: -10px;
+    display: block;
+    content: "";
+    border: 1em solid #fbae51;
+    ;
+}
+
+.activity-name:before {
+    left: -30px;
+    border-left-width: 15px;
+    border-left-color: transparent;
+}
+
+.activity-name:after {
+    right: -30px;
+    border-right-width: 15px;
+    border-right-color: transparent;
+}
+
+.activity-name span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    background: #fbae51;
+    ;
+}
+
+.activity-name span:before,
+.activity-name span:after {
+    position: absolute;
+    bottom: -10px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    border-style: solid;
+    border-color: #fbae51 transparent transparent transparent;
+}
+
+.activity-name span:before {
+    left: 0;
+    border-width: 10px 0 0 10px;
+}
+
+.activity-name span:after {
+    right: 0;
+    border-width: 10px 10px 0 0;
+}
+
+/* 「行ってきたんよ！」のタイトル */
+
+.blog-name {
+    position: relative;
+    margin: 30px;
+    text-align: center;
+}
+
+.blog-name:before,
+.blog-name:after {
+    position: absolute;
+    z-index: 0;
+    bottom: -10px;
+    display: block;
+    content: "";
+    border: 1em solid #99D256;
+    ;
+}
+
+.blog-name:before {
+    left: -30px;
+    border-left-width: 15px;
+    border-left-color: transparent;
+}
+
+.blog-name:after {
+    right: -30px;
+    border-right-width: 15px;
+    border-right-color: transparent;
+}
+
+.blog-name span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    background: #99D256;
+    ;
+}
+
+.blog-name span:before,
+.blog-name span:after {
+    position: absolute;
+    bottom: -10px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    border-style: solid;
+    border-color: #99D256 transparent transparent transparent;
+}
+
+.blog-name span:before {
+    left: 0;
+    border-width: 10px 0 0 10px;
+}
+
+.blog-name span:after {
+    right: 0;
+    border-width: 10px 10px 0 0;
+}
+
+
+
 h3 {
     font-weight: bold;
     text-align: center;
@@ -19,7 +213,9 @@ h3 {
 
 section {
     margin-top: 50px;
+    margin-bottom: 80px;
 }
+
 
 /* サイトロゴの固定 */
 .site-logo {
@@ -558,7 +754,7 @@ imgcontent-wrapper .heading {
     /* 位置 */
     position: relative;
 
-    padding: 60px 20px;
+    /* padding: 60px 20px; */
 }
 
 
@@ -702,7 +898,7 @@ imgcontent-wrapper .heading {
     .section-title02,
     .section-title03 {
         flex-direction: row;
-        padding: 100px;
+        padding: 30px;
     }
 
     .article-list li {
