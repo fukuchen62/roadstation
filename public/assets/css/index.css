@@ -539,7 +539,7 @@ imgcontent-wrapper .heading {
 }
 
 .blog-btn img {
-    max-width: 400px;
+    width: 300px;
     height: auto;
     object-fit: cover;
 }
