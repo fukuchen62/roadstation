@@ -77,7 +77,7 @@ $(function () {
 $(function () {
     var pos = $('#menu').offset().top;
     $(window).scroll(function () {
-        if ($(this).scrollTop() > pos) { //570px以上スクロールした固定
+        if ($(this).scrollTop() > pos) { //ヘッダーの高さ以上スクロールしたら固定
             $('#menu').addClass('fixed');
             $("body").css("padding-top", height);
         } else {
