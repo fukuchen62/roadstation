@@ -29,6 +29,10 @@ section {
     z-index: 999;
 }
 
+.btn {
+    margin-top: 1rem;
+}
+
 /* キービジュアル */
 .top-kv {
     z-index: -9999;
@@ -538,11 +542,11 @@ imgcontent-wrapper .heading {
     object-fit: cover;
 }
 
-.blog-btn img {
+/* .blog-btn img {
     width: 300px;
     height: auto;
     object-fit: cover;
-}
+} */
 
 /* pcボタンの非表示 */
 .pcbtn {

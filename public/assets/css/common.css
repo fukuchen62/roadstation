@@ -225,11 +225,11 @@ p {
 /* ↑ここまでハンバーガーメニュー */
 
 /* ブログボタン */
-.blog-btn img {
+/* .blog-btn img {
     max-width: 320px;
     height: auto;
     object-fit: cover;
-}
+} */
 
 /* topへ戻るボタン */
 .scroll-top {
@@ -802,7 +802,7 @@ footer {
     }
 
     .blog-btn img {
-        max-width: 700px;
+        max-width: 500px;
         height: auto;
     }
 }
