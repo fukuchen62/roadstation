@@ -133,12 +133,11 @@
             <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.png') }}" alt="れんこん"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt="鱧"></li>
             <li class="goods-title">
+                <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="80px" height="80px" class="anime1">
+
                 <a href="{{ route('goods') }}">
                     <h2 class="sp-h2 bomn">特産品</h2>
                     <!-- <p class="goods-strapline">徳島には自然の恵みがいっぱいあるんじょ！</p> -->
-
-                    <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="130px" height="130px" class="anime1">
-
 
                     <!-- ボタン -->
                     <div class="sp-btn">
