@@ -127,6 +127,13 @@ button:hover {
 
 }
 
+.attention {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: x-large;
+}
+
 @media screen and (min-width:1001px) {
 
     #top {
