@@ -133,7 +133,7 @@
             <li><img class="image-tile" src="{{ asset('assets/images/index/renkon.png') }}" alt="れんこん"></li>
             <li><img class="image-tile" src="{{ asset('assets/images/index/hamo.png') }}" alt="鱧"></li>
             <li class="goods-title">
-                <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="80px" height="80px" class="anime1">
+                <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="70px" height="70px" class="anime1">
 
                 <a href="{{ route('goods') }}">
                     <h2 class="sp-h2 bomn">特産品</h2>
@@ -163,10 +163,6 @@
         {{-- <h2 class="bomn mobile-title">こんなんやってみ！</h2> --}}
 
 
-        <!-- たぬみちのイラスト -->
-        <!-- <div><img src="{{ asset('assets/images/illustrations/tanumiti_awaodori.gif') }}" width="200px" alt="イラスト">
-                                </div> -->
-
         {{-- <h2 class="bomn pc-title">こんなんやってみ！</h2> --}}
         <h2 class="activity-name"><span>こんなんやってみ！</span></h2>
 
@@ -181,9 +177,8 @@
             <li class="activity-title">
                 <a href=" {{ route('activity') }}">
                     <h2 class="sp-h2">体験</h2>
-                    <!-- <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p> -->
 
-                    <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="動くキャラクター画像" width="100px" height="100px" class="anime2">
+                    <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="動くキャラクター画像" width="80px" height="80px" class="anime2">
 
                     <div class="sp-btn">
                         もっと見る
