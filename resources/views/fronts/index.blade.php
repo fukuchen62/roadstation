@@ -139,7 +139,6 @@
 
                     <img src="{{ asset('assets/images/illustrations/anime1.gif') }}" alt="動くキャラクター画像" width="130px" height="130px" class="anime1">
 
-                    <img src="{{ asset('assets/images/illustrations/anime4.gif') }}" alt="jif画像にんじん" width="80px" height="80px" class="anime4">
 
                     <!-- ボタン -->
                     <div class="sp-btn">
@@ -186,8 +185,6 @@
                     <!-- <p class="activity-strapline">山！川！海！<br>徳島なら全部揃っとるで！</p> -->
 
                     <img src="{{ asset('assets/images/illustrations/anime2.gif') }}" alt="動くキャラクター画像" width="100px" height="100px" class="anime2">
-
-                    <img src="{{ asset('assets/images/illustrations/anime3.gif') }}" alt="jif画像うどん" width="80px" height="80px" class="anime3">
 
                     <div class="sp-btn">
                         もっと見る
