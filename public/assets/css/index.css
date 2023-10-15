@@ -283,7 +283,15 @@ section {
 .sp-h2 {
     color: #ffffff;
     font-size: 1.5rem;
-    margin-top: 30%;
+    margin-top: 15%;
+}
+
+@media screen and (min-width: 601px) {
+    .sp-h2 {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-top: 30%;
+    }
 }
 
 /* ニュース */
@@ -469,14 +477,6 @@ section {
     display: none;
 }
 
-.anime1,
-.anime2,
-.anime3,
-.anime4 {
-    display: none;
-}
-
-
 .goods-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -592,20 +592,6 @@ section {
     display: block;
     height: 100%;
     width: 100%
-}
-
-/*うどんたぬきアニメの設定 */
-.anime2 {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-/* うどんアニメの設定 */
-.anime3 {
-    position: absolute;
-    top: 80px;
-    left: 20px;
 }
 
 .activity-strapline {
@@ -1125,8 +1111,16 @@ imgcontent-wrapper .heading {
     /* 芋ほりアニメの設定 */
     .anime1 {
         position: absolute;
-        top: 0;
+        bottom: 0;
         right: 0;
+    }
+
+    @media screen and (min-width: 401px) {
+        .anime1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     }
 
     /*
@@ -1350,20 +1344,6 @@ imgcontent-wrapper .heading {
         width: 100%;
         background-color: #fffcef;
         z-index: 999;
-    }
-
-    /*うどんたぬきアニメの設定 */
-    .anime2 {
-        position: absolute;
-        top: 10px;
-        left: 220px;
-    }
-
-    /* うどんアニメの設定 */
-    .anime3 {
-        position: absolute;
-        top: 80px;
-        left: 0px;
     }
 
     .news-box {
